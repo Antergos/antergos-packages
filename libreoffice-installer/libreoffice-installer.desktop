@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Icon=document-save
+Type=Application
+Categories=Office;X-Red-Hat-Base;X-SuSE-Core-Office;X-MandrivaLinux-Office-Other;
+Exec=libreoffice-installer
+MimeType=application/vnd.openofficeorg.extension;
+Name=LibreOffice Installer
+Name[pt_BR]=LibreOffice Installer
+GenericName=Office Installer
+GenericName[en]=Office Installer
+Comment=Install office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
+Comment[en]=Install office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.

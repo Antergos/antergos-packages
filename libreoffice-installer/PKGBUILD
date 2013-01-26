@@ -1,0 +1,31 @@
+
+
+pkgname=libreoffice-installer
+pkgver=1.2.8
+pkgrel=1
+pkgdesc="GUI installer for LibreOffice"
+arch=('i686' 'x86_64')
+url="http://almin-soft.fsay.net"
+license=('GPL2')
+
+if [ "${CARCH}" = 'x86_64' ]; then
+	depends=('lib32-libx11' 'lib32-gcc-libs' 'lib32-libxft')
+elif [ "${CARCH}" = 'i686' ]; then
+	depends=('libx11' 'gcc-libs')
+fi
+
+options=('!strip')
+optdepends=()
+install=${pkgname}.install
+source=("libreoffice-installer.tar.bz2::http://almin-soft.fsay.net/data/files/archlibreofficeinstaller/download.php?get=archlibreofficeinstaller.tar.bz2"
+		"${pkgname}.desktop")
+md5sums=('5c3831bdea50568e1a3d9c9821761ba1'
+		 'dc8acd6e97fa664018f6710813854069')
+
+
+package() {
+	install -d $pkgdir/opt/libreoffice-installer
+	install -Dm755 $srcdir/archlibreofficeinstaller $pkgdir/opt/libreoffice-installer/${pkgname}
+	install -Dm644 $srcdir/${pkgname}.desktop $pkgdir/usr/share/applications/${pkgname}.desktop
+	install -d $pkgdir/usr/bin
+}

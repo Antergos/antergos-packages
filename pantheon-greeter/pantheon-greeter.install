@@ -1,0 +1,17 @@
+post_install() {
+  mkdir -p /usr/share/backgrounds
+  ln -s /usr/share/cinnarch/wallpapers/early_morning_by_kylekc.jpg /usr/share/backgrounds/cinnarch-default
+  glib-compile-schemas usr/share/glib-2.0/schemas
+  
+}
+
+
+post_remove() {
+  unlink /usr/share/backgrounds/cinnarch-default
+  glib-compile-schemas usr/share/glib-2.0/schemas
+}
+
+
+post_update(){
+	mkdir -p /usr/share/backgrounds
+}

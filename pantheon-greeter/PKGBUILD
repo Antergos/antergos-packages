@@ -1,0 +1,32 @@
+pkgname=pantheon-greeter
+pkgver=1.0
+pkgrel=8
+pkgdes="LightDM greeter from the ElementaryOS team written in Vala "
+arch=('i686' 'x86_64')
+url="https://launchpad.net/pantheon-greeter"
+license=('GPL')
+groups=('lightdm')
+depends=('granite>=0.1.1' 'libindicator3' 'clutter-gtk' 'cinnarch-wallpapers')
+makedepends=('vala')
+provides=('pantheon-greeter')
+install=${pkgname}.install
+source=("${pkgname}.tar.gz")
+md5sums=('2604776db789e5c4ae808936730828ca')
+
+
+build(){
+  cp -r "$srcdir/${pkgname}" "$srcdir/${pkgname}-build"
+  cd "$srcdir/${pkgname}-build"
+  [ -d build ] && rm -rf build
+  mkdir build
+  cd build
+  CFLAGS="$CFLAGS -lm -Wno-deprecated-declarations"
+  cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+  make ${MAKEFLAGS}
+}
+
+package(){
+	cd "${srcdir}/${pkgname}-build/build"
+
+	make DESTDIR="${pkgdir}" install
+}

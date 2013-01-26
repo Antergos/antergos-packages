@@ -1,0 +1,38 @@
+#Autor: Alexandre Minoshi(Almin-Soft Group)
+#Maintainer: Alexandre Minoshi
+
+pkgname=pacmanxg4
+pkgver=4.13.12
+pkgrel=1
+pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
+options=('!strip')
+arch=('i686' 'x86_64')
+url="http://almin-soft.fsay.net/index.php?pacmanxg/4x-series"
+license=('GPL2')
+if [ "${CARCH}" = 'x86_64' ]; then
+depends=('pacman' 'lib32-libx11' 'lib32-gcc-libs' 'lib32-libxft' 'wget')
+elif [ "${CARCH}" = 'i686' ]; then
+depends=('pacman' 'libx11' 'gcc-libs' 'wget')
+fi
+optdepends=('yaourt: AUR support' 'pkgtools: pkgfile utility check' 'repacman: rebuild package')
+install=${pkgname}.install
+source=("pacmanXG4.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanXG4.tar.bz2")
+
+
+package() {
+  install -d $pkgdir/opt/pacmanxg4
+  install -Dm755 pacmanxg $pkgdir/opt/pacmanxg4/pacmanxg
+  install -Dm755 langs/en.lang $pkgdir/opt/pacmanxg4/langs/en.lang
+  install -Dm755 langs/es.lang $pkgdir/opt/pacmanxg4/langs/es.lang
+  install -Dm755 langs/de.lang $pkgdir/opt/pacmanxg4/langs/de.lang
+  install -Dm755 langs/rus.lang $pkgdir/opt/pacmanxg4/langs/ru.lang
+  install -Dm755 dizz.sh $pkgdir/opt/pacmanxg4/dizz.sh
+  install -Dm755 sections.ini $pkgdir/opt/pacmanxg4/sections.ini
+  install -Dm755 sections.list $pkgdir/opt/pacmanxg4/sections.list
+  install -Dm644 icon.png $pkgdir/usr/share/pixmaps/pacmanxg.png
+  install -Dm644 pacmanxg4.desktop $pkgdir/usr/share/applications/pacmanxg4.desktop
+  install -d $pkgdir/usr/bin/
+}
+
+
+md5sums=('33b6d860cbaac65e18166b2ccba6d2ce')

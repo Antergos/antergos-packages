@@ -1,0 +1,13 @@
+
+## arg 1:  the new package version
+post_install() {
+ ln -s /opt/libreoffice-installer/archlibreofficeinstaller /usr/bin/libreoffice-installer  
+}
+
+
+## arg 1:  the old package version
+post_remove() {
+  unlink /usr/bin/libreoffice-installer  
+}
+
+# vim:set ts=2 sw=2 et:

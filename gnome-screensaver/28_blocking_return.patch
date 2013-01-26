@@ -1,0 +1,15 @@
+# Description: Correctly reply so the client doesn't block waiting
+# Upstream: https://bugzilla.gnome.org/show_bug.cgi?id=686400
+# Ubuntu: https://bugs.launchpad.net/gnome-screensaver/+bug/1067515
+diff -Nur gnome-screensaver-3.6.0/src/gs-listener-dbus.c gnome-screensaver-3.6.0.new/src/gs-listener-dbus.c
+--- gnome-screensaver-3.6.0/src/gs-listener-dbus.c	2012-10-18 16:05:54.393188619 +0200
++++ gnome-screensaver-3.6.0.new/src/gs-listener-dbus.c	2012-10-18 16:05:52.729188556 +0200
+@@ -726,7 +726,7 @@
+         }
+         if (dbus_message_is_method_call (message, GS_SERVICE, "SimulateUserActivity")) {
+                 g_signal_emit (listener, signals [SIMULATE_USER_ACTIVITY], 0);
+-                return DBUS_HANDLER_RESULT_HANDLED;
++                return send_success_reply (connection, message);
+         }
+         if (dbus_message_is_method_call (message, "org.freedesktop.DBus.Introspectable", "Introspect")) {
+                 return do_introspect (connection, message, local_interface);

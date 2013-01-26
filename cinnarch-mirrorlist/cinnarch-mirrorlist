@@ -1,0 +1,23 @@
+##
+## Cinnarch repository mirrorlist
+##
+
+# Autodetect your closest mirror
+Server = http://mirrors.cinnarch.com/$repo/$arch
+
+
+# China
+#Server = http://mirror.bjtu.edu.cn/cinnarch/$repo/$arch
+
+# France
+#Server = http://cinnarch.polymorf.fr/$repo/$arch
+
+# England
+#Server = http://www.mirrorservice.org/sites/repo.cinnarch.com/$repo/$arch
+
+# Germany
+#Server = http://cinnarch.limun.org/$repo/$arch
+
+# Spain
+#Server = http://softlibre.unizar.es/cinnarch/$repo/$arch
+#Server = http://www.terramedicsoft.com/cinnarch/$repo/$arch

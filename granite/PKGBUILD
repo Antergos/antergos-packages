@@ -1,0 +1,31 @@
+# Maintainer: Ner0
+
+pkgname=granite
+pkgver=0.1.1
+pkgrel=1
+pkgdesc="A development library for elementary development"
+arch=('i686' 'x86_64')
+url="https://launchpad.net/granite"
+license=('LGPL3')
+groups=('pantheon')
+depends=('glib2' 'gobject-introspection' 'gtk3' 'libgee' 'hicolor-icon-theme')
+makedepends=('cmake' 'vala')
+conflicts=('granite-bzr')
+provides=('granite')
+install=$pkgname.install
+source=('http://launchpad.net/granite/0.x/0.1.1/+download/granite-0.1.1.tar.gz')
+md5sums=('1bc0bc2df9176940097a26f3d031034a')
+
+
+build() {
+  cd "$pkgname-$pkgver"
+  mkdir build
+  cd build
+  cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+  make
+}
+
+package() {
+  cd "$pkgname-$pkgver/build"
+  make DESTDIR="$pkgdir/" install
+}

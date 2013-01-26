@@ -1,0 +1,24 @@
+Index: gnome-screensaver-3.5.5/src/gnome-screensaver.desktop.in
+===================================================================
+--- gnome-screensaver-3.5.5.orig/src/gnome-screensaver.desktop.in	2012-08-06 18:48:48.000000000 +0200
++++ gnome-screensaver-3.5.5/src/gnome-screensaver.desktop.in	2012-08-07 09:07:24.035630983 +0200
+@@ -7,6 +7,7 @@
+ OnlyShowIn=GNOME;
+ AutostartCondition=GNOME3 if-session gnome-fallback
+ NoDisplay=true
++X-GNOME-Autostart-Delay=20
+ X-GNOME-Autostart-Phase=Application
+ X-GNOME-Autostart-Notify=true
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+Index: gnome-screensaver-3.5.5/src/gnome-screensaver.desktop.in.in
+===================================================================
+--- gnome-screensaver-3.5.5.orig/src/gnome-screensaver.desktop.in.in	2012-07-21 21:40:14.000000000 +0200
++++ gnome-screensaver-3.5.5/src/gnome-screensaver.desktop.in.in	2012-08-07 09:07:24.035630983 +0200
+@@ -7,6 +7,7 @@
+ OnlyShowIn=GNOME;
+ AutostartCondition=GNOME3 if-session gnome-fallback
+ NoDisplay=true
++X-GNOME-Autostart-Delay=20
+ X-GNOME-Autostart-Phase=Application
+ X-GNOME-Autostart-Notify=true
+ X-GNOME-Bugzilla-Bugzilla=GNOME
