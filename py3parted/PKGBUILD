@@ -1,0 +1,25 @@
+# Alexandre Filgueira <alexfilgueira@cinnarch.com>
+
+pkgname=py3parted
+pkgver=0.1
+pkgrel=1
+pkgdesc="Python 3 module for GNU parted"
+url="https://github.com/cinnarch/py3parted"
+arch=('i686' 'x86_64')
+license=('GPL2')
+depends=('python' 'parted>=3.0')
+provides=('pyparted')
+source=(https://github.com/cinnarch/${pkgname}/archive/v${pkgver}.tar.gz)
+
+
+build() {
+  cd "${srcdir}"/${pkgname}-${pkgver}
+  python setup.py build
+}
+
+package() {
+  cd "${srcdir}"/${pkgname}-${pkgver}
+  python setup.py install --prefix=/usr --root="${pkgdir}" --optimize=1 --skip-build
+}
+
+md5sums=('c7cf5a6a214c55761958ff6cb28ba24d')
