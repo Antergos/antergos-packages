@@ -3,13 +3,13 @@
 #Contributor: shosca
 
 pkgname=lightdm
-pkgver=1.4.0
-pkgrel=8
+pkgver=1.5.0
+pkgrel=1
 pkgdesc="A lightweight display manager"
 arch=('i686' 'x86_64')
 url="https://launchpad.net/lightdm"
 license=('GPL3' 'LGPL3')
-source=("https://launchpad.net/lightdm/1.4/$pkgver/+download/$pkgname-$pkgver.tar.gz"
+source=("https://launchpad.net/lightdm/1.6/$pkgver/+download/$pkgname-$pkgver.tar.xz"
 	lightdm.rc
 	lightdm.service
 	lightdm.tmpfiles
@@ -77,7 +77,7 @@ package() {
   install -m644 ../lightdm.rules $pkgdir/usr/share/polkit-1/rules.d/lightdm.rules
 }
 
-md5sums=('622d9087ec773dd0626a250a5868f88c'
+md5sums=('e063b73aef31563b4e463a5bbb31b0fc'
          '6699eb35f65ff498d1d05e6782f4f902'
          '737c6f27488517c6320bfc797954b400'
          'b1e1baf7351ff58c7b3b9b204472f6bb'
