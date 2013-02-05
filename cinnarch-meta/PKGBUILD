@@ -1,7 +1,7 @@
 # Alexandre Filgueira <alexfilgueira@cinnarch.com>
 
 pkgname=cinnarch-meta
-pkgver=2013.01.31
+pkgver=2013.02.05
 pkgrel=1
 pkgdesc="Metapackage for Cinnarch installation"
 url="http://www.cinnarch.com"
@@ -103,11 +103,6 @@ depends=('haveged'
 		 'lightdm'
 		 'net-tools'
 		 'gnome-keyring'
-		 'xf86-input-synaptics'	
+		 'xf86-input-synaptics'
+		 'libgnomeui'
 )
-
-
-
-build() {
-  return 0
-}
