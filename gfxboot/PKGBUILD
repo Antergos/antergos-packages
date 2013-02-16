@@ -1,0 +1,46 @@
+# Contributor: fancris3 <fancris3 at gmail.com>
+# Contributor: Alessio Biancalana <dottorblaster@gmail.com>
+
+pkgname=gfxboot
+pkgver=4.5.0
+_pkgver=2.1.2
+pkgrel=3
+arch=('i686' 'x86_64')
+license=(GPL)
+install=gfxboot.install
+pkgdesc="Graphical Boot Logo tool"
+url="http://www.opensuse.org"
+depends=('perl-html-parser' 'freetype2' 'cpio' 'nasm')
+makedepends=('rpmextract')
+source=(http://download.opensuse.org/source/distribution/12.2/repo/oss/suse/src/${pkgname}-${pkgver}-${_pkgver}.src.rpm \
+	gfxboot.html)
+options=(docs)
+
+md5sums=('75b9cd2144ca0bed15bd7d0cdff55083'
+         'f824c5bc2f716f8029677cae6956c1c7')
+
+build() {
+  echo -e "\033[1;34m :: \033[1;39m Building ... please wait \033[1;0m"
+
+  rpmextract.sh ${pkgname}-${pkgver}-${_pkgver}.src.rpm 2>/dev/null
+
+  for i in $(find -name '*.tar.bz2');do tar -jxf $i;done
+  mv -f themes ${pkgname}-${pkgver}/
+
+  chown -R root:root ${pkgname}-${pkgver}
+
+  cd ${pkgname}-${pkgver}
+
+  make -s 2>/dev/null || return 1
+
+  make -s DESTDIR=$pkgdir installsrc || return 1
+
+  install -d -m 755 ${pkgdir}/usr/{sbin,share/man/man8,share/doc/gfxboot} || return 1
+  install -m 755 gfxboot gfxboot-compile gfxboot-font ${pkgdir}/usr/sbin || return 1
+  install -m 644 doc/gfxboot.8 ${pkgdir}/usr/share/man/man8/ || return 1
+  install -m 644 ../gfxboot.html ${pkgdir}/usr/share/doc/gfxboot || return 1
+
+}
+
+# alternative source download
+# source=(http://archpkg.rodp.net/src/${pkgname}-${pkgver}-${pkgrel}.src.rpm)

@@ -5,7 +5,7 @@
 
 pkgname=cinnamon
 pkgver=1.6.7
-pkgrel=6
+pkgrel=7
 pkgdesc="Linux desktop which provides advanced innovative features and a traditional user experience"
 arch=('i686' 'x86_64')
 url="http://cinnamon.linuxmint.com/"
@@ -24,17 +24,20 @@ source=("$pkgname.tar.gz::https://github.com/linuxmint/Cinnamon/tarball/$pkgver"
         "cinnamon-screensaver.desktop"
         "cinnamon2d-screensaver.desktop"
         "fix-cursor-change.patch"
-        "gnome-autogen.sh")
+        "gnome-autogen.sh"
+        "keyboard_applet.patch")
 md5sums=('ea73c6367d43d82c61f977477bf0c08c'
          'd55c079cdc8bec606f510f87b2a6f776'
          '5c6af851ab1cf7e9219f11d86353196a'
          '8d7a93a1eb0f1d44e4869abd342ed22a'
-         'a925691c9b57a6a884dcf07da057fd1f')
+         'a925691c9b57a6a884dcf07da057fd1f'
+         '49d09d8d07e7332cad819a735ad70bc8')
 
 build() {
   cd ${srcdir}/linuxmint-Cinnamon*
 
   patch -Np1 -i ${srcdir}/fix-cursor-change.patch
+  patch -Np1 -i ${srcdir}/keyboard_applet.patch
 
   cp ${srcdir}/gnome-autogen.sh .
   sed -i 's/\ --warn-all\ --warn-error//' src/Makefile.am
