@@ -17,7 +17,14 @@ Server = http://mirrors.cinnarch.com/$repo/$arch
 
 # Germany
 #Server = http://cinnarch.limun.org/$repo/$arch
+#Server = http://mirror.de.leaseweb.net/cinnarch
+
+# Netherlands
+#Server = http://mirror.nl.leaseweb.net/cinnarch
 
 # Spain
 #Server = http://softlibre.unizar.es/cinnarch/$repo/$arch
 #Server = http://www.terramedicsoft.com/cinnarch/$repo/$arch
+
+# USA
+#Server = http://mirror.us.leaseweb.net/cinnarch

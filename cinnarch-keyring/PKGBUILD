@@ -5,10 +5,10 @@
 
 pkgname=cinnarch-keyring
 pkgver=20120717
-pkgrel=3
+pkgrel=4
 pkgdesc='Cinnarch PGP keyring'
 arch=('any')
-groups=('base')
+groups=('cinnarch-base')
 url='http://www.cinnarch.com'
 license=('GPL')
 install="${pkgname}.install"

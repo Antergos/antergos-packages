@@ -1,11 +1,11 @@
 # Maintainer: Alexandre Filgueira <alexfilgueira@cinnarch.com>
 
 pkgname=cinnarch-mirrorlist
-pkgver=20130111
+pkgver=20130226
 pkgrel=1
 pkgdesc="Cinnarch mirrorlist for use by pacman"
 arch=('any')
-groups=('base')
+groups=('cinnarch-base')
 url="http://www.cinnarch.com/"
 license=('GPL')
 backup=(etc/pacman.d/cinnarch-mirrorlist)
@@ -17,4 +17,4 @@ build() {
   install -m644 $srcdir/cinnarch-mirrorlist $pkgdir/etc/pacman.d/
 }
 
-md5sums=('fda27583c789dc09636e2e43b977585e')
+md5sums=('8c1734b604bf0fd90ab06c30ffdf856e')
