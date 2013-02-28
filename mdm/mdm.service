@@ -1,0 +1,12 @@
+[Unit]
+Description=MDM Display Manager
+After=systemd-user-sessions.service
+
+[Service]
+ExecStart=/usr/sbin/mdm
+Restart=always
+IgnoreSIGPIPE=no
+BusName=org.freedesktop.DisplayManager
+
+[Install]
+Alias=display-manager.service

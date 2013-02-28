@@ -1,0 +1,21 @@
+pkgname=mdm
+
+post_install() {
+	getent group mdm >/dev/null 2>&1 || groupadd -g 121 mdm
+	getent passwd mdm > /dev/null 2>&1 || usr/sbin/useradd -c 'MATE Display Manager' -u 121 -g mdm -d /usr/lib/mdm -s /sbin/nologin mdm
+	passwd -l mdm > /dev/null
+	chown -R mdm:mdm /usr/lib/mdm > /dev/null
+    chmod 0750 /usr/lib/mdm > /dev/null
+
+	gtk-update-icon-cache -q -t -f usr/share/icons/hicolor
+}
+
+post_upgrade() {
+	post_install
+}
+
+post_remove() {
+	gtk-update-icon-cache -q -t -f usr/share/icons/hicolor
+	getent passwd mdm >/dev/null 2>&1 && userdel mdm
+	getent group mdm >/dev/null 2>&1 && groupdel mdm
+}

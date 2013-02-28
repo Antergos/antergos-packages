@@ -1,0 +1,62 @@
+# Maintainer: Alexandre Filgueira <alexfilgueira@cinnarch.com>
+
+pkgname=mdm
+pkgver=1.1.3
+pkgrel=1
+pkgdesc="MDM Display Manager for managing local and remote displays"
+url="https://github.com/linuxmint/mdm"
+arch=('i686' 'x86_64')
+license=('GPL2')
+depends=('pam' 'libdmx' 'libgnomecanvas' 'librsvg' 'gksu' 'dbus-glib' 'pango' 'libxml2' 'python2')
+makedepends=('pkgconfig' 'intltool' 'xtrans' 'xorg-server' 'gnome-doc-utils')
+options=('!libtool')
+install=$pkgname.install
+backup=('etc/pam.d/mdm' 'etc/pam.d/mdm-autologin' 'etc/mdm/custom.conf')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/mdm/archive/1.1.3.tar.gz"
+        "mdm.pam"
+        "mdm-autologin.pam"
+        "mdm.service"
+        "gnome-autogen.sh")
+sha256sums=('76ba9906ac837a67260f96a1824ce7e387c78d7ef469b3ceb8f93c2cc2bfefb0'
+            'd719bdebd195a40e1bbc1416788cc6b3b35e06a0dd064a60937c949acdcd53e6'
+            '6a8b286d1ffa04150b3cc401f64e6ddec778c7b65f5bfc831031b64345d7e6b2'
+            'd80ba1f1fe7999987b3f0d27ec3f38432fa29c7a2158e39d87145f4c644fc498'
+            '9ffc7f44f5ba5ffea6964614daf66e049ad1f68488ce34bc6e1565b799659d77')
+
+build() {
+	cd $pkgname-$pkgver
+
+    cp ${srcdir}/gnome-autogen.sh .
+    sed -i 's/gnome-autogen.sh/.\/gnome-autogen.sh/g' autogen.sh
+    chmod +x gnome-autogen.sh
+    sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac
+
+    ./autogen.sh --prefix=/usr \
+        --sysconfdir=/etc \
+        --libexecdir=/usr/lib/mdm \
+        --localstatedir=/var \
+        --disable-static \
+        --disable-schemas-compile \
+        --with-at-spi-registryd-directory=/usr/lib/at-spi2-core \
+        --with-check-accelerated-directory=/usr/lib/gnome-session \
+        --with-authentication-agent-directory=/usr/lib/polkit-gnome \
+        --disable-scrollkeeper \
+        --without-tcp-wrappers \
+        --disable-debug \
+        --without-console-kit \
+        --with-systemd
+
+    make
+}
+
+package() {
+	cd $pkgname-$pkgver
+
+    make DESTDIR="${pkgdir}" install
+
+    install -m644 "${srcdir}/mdm.pam" "${pkgdir}/etc/pam.d/mdm"
+    install -m644 "${srcdir}/mdm-autologin.pam" "${pkgdir}/etc/pam.d/mdm-autologin"
+    install -D -m644 ${srcdir}/mdm.service $pkgdir/usr/lib/systemd/system/mdm.service
+
+    find "${pkgdir}" -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
+}
