@@ -10,6 +10,7 @@ license=('GPL2')
 depends=('libdmx' 'libgnomecanvas' 'librsvg' 'gksu' 'webkitgtk2'\
          'python2' 'hicolor-icon-theme' )
 makedepends=('pkgconfig' 'intltool' 'xtrans' 'xorg-server' 'gnome-doc-utils')
+conflicts=('gdm')
 options=('!libtool')
 install=$pkgname.install
 backup=('etc/pam.d/mdm' 'etc/pam.d/mdm-autologin' 'etc/mdm/custom.conf')
@@ -55,4 +56,5 @@ package() {
     install -D -m644 ${srcdir}/mdm.service $pkgdir/usr/lib/systemd/system/mdm.service
 
     find "${pkgdir}" -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
+    rm $pkgdir/usr/share/xsessions/gnome.desktop
 }
