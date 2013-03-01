@@ -9,8 +9,8 @@ url="https://github.com/linuxmint/mdm"
 arch=('i686' 'x86_64')
 license=('GPL2')
 depends=('libdmx' 'libgnomecanvas' 'librsvg' 'gksu' 'webkitgtk2'\
-         'python2' 'hicolor-icon-theme' )
-makedepends=('pkgconfig' 'intltool' 'xtrans' 'xorg-server' 'gnome-doc-utils')
+         'python2' 'hicolor-icon-theme' 'zenity')
+makedepends=('pkgconfig' 'intltool' 'xorg-server' 'gnome-doc-utils' 'gnome-common')
 conflicts=('gdm')
 options=('!libtool')
 install=${pkgname}.install
