@@ -7,7 +7,7 @@ post_install() {
 	chown -R mdm:mdm /usr/lib/mdm > /dev/null
     chmod 0750 /usr/lib/mdm > /dev/null
 
-	gtk-update-icon-cache -q -t -f usr/share/icons/hicolor
+	gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor
 }
 
 post_upgrade() {
@@ -15,7 +15,7 @@ post_upgrade() {
 }
 
 post_remove() {
-	gtk-update-icon-cache -q -t -f usr/share/icons/hicolor
+	gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor
 	getent passwd mdm >/dev/null 2>&1 && userdel mdm
 	getent group mdm >/dev/null 2>&1 && groupdel mdm
 }

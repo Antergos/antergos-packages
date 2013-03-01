@@ -1,12 +1,13 @@
 [Unit]
 Description=MDM Display Manager
+Conflicts=getty@tty1.service
 After=systemd-user-sessions.service
 
 [Service]
 ExecStart=/usr/sbin/mdm
 Restart=always
 IgnoreSIGPIPE=no
-BusName=org.freedesktop.DisplayManager
+BusName=org.gnome.DisplayManager
 
 [Install]
 Alias=display-manager.service

@@ -7,7 +7,8 @@ pkgdesc="MDM Display Manager for managing local and remote displays"
 url="https://github.com/linuxmint/mdm"
 arch=('i686' 'x86_64')
 license=('GPL2')
-depends=('pam' 'libdmx' 'libgnomecanvas' 'librsvg' 'gksu' 'dbus-glib' 'pango' 'libxml2' 'python2')
+depends=('libdmx' 'libgnomecanvas' 'librsvg' 'gksu' 'webkitgtk2'\
+         'python2' 'hicolor-icon-theme' )
 makedepends=('pkgconfig' 'intltool' 'xtrans' 'xorg-server' 'gnome-doc-utils')
 options=('!libtool')
 install=$pkgname.install
@@ -18,13 +19,13 @@ source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/mdm/archive/1.1.3
         "mdm.service"
         "gnome-autogen.sh")
 sha256sums=('76ba9906ac837a67260f96a1824ce7e387c78d7ef469b3ceb8f93c2cc2bfefb0'
-            'd719bdebd195a40e1bbc1416788cc6b3b35e06a0dd064a60937c949acdcd53e6'
+            'efcd8bc6e50dcaac371d3da55172d79ae01b67538eb078b200bb83ea498d662f'
             '6a8b286d1ffa04150b3cc401f64e6ddec778c7b65f5bfc831031b64345d7e6b2'
-            'd80ba1f1fe7999987b3f0d27ec3f38432fa29c7a2158e39d87145f4c644fc498'
+            '3d37b22c7dd1b540c30300c718919e505c9b732b0aaddef237e6eb639bbc7cbb'
             '9ffc7f44f5ba5ffea6964614daf66e049ad1f68488ce34bc6e1565b799659d77')
 
 build() {
-	cd $pkgname-$pkgver
+    cd $pkgname-$pkgver
 
     cp ${srcdir}/gnome-autogen.sh .
     sed -i 's/gnome-autogen.sh/.\/gnome-autogen.sh/g' autogen.sh
@@ -36,21 +37,16 @@ build() {
         --libexecdir=/usr/lib/mdm \
         --localstatedir=/var \
         --disable-static \
-        --disable-schemas-compile \
-        --with-at-spi-registryd-directory=/usr/lib/at-spi2-core \
-        --with-check-accelerated-directory=/usr/lib/gnome-session \
-        --with-authentication-agent-directory=/usr/lib/polkit-gnome \
         --disable-scrollkeeper \
         --without-tcp-wrappers \
-        --disable-debug \
         --without-console-kit \
-        --with-systemd
+        --enable-secureremote=yes
 
     make
 }
 
 package() {
-	cd $pkgname-$pkgver
+    cd $pkgname-$pkgver
 
     make DESTDIR="${pkgdir}" install
 
