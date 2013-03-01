@@ -10,6 +10,7 @@ license=('GPL2')
 depends=('libdmx' 'libgnomecanvas' 'librsvg' 'gksu' 'webkitgtk2'\
          'python2' 'hicolor-icon-theme' )
 makedepends=('pkgconfig' 'intltool' 'xtrans' 'xorg-server' 'gnome-doc-utils')
+conflicts=('gdm')
 options=('!libtool')
 install=$pkgname.install
 backup=('etc/pam.d/mdm' 'etc/pam.d/mdm-autologin' 'etc/mdm/custom.conf')
