@@ -1,0 +1,19 @@
+# Maintainer: Alexandre Filgueira <alexfilgueira@cinnarch.com>
+
+pkgname=gtk-theme-evolve
+pkgver=20130108
+pkgrel=1
+pkgdesc="A simple and minimal light theme for GTK3. Also compatible with GTK 2.0 suing Murrine engine."
+url="http://satya164.deviantart.com/art/Evolve-GTK3-Theme-264780816"
+arch=('any')
+license=('GPL')
+depends=('gtk-engine-murrine')
+source=("${pkgname}-${pkgver}.zip::http://www.deviantart.com/download/264780816/evolve___gtk3_theme_by_satya164-d4dn66o.zip")
+sha256sums=('d0fc3673b85cdebb1f407888831d2840a2187a3b165fbcf086281c8c93e1c929')
+
+package() {
+    cd "$srcdir/"
+    mkdir -p "$pkgdir/usr/share/themes/Evolve"
+    cp -r Evolve/*  "$pkgdir/usr/share/themes/Evolve/"
+} 
+
