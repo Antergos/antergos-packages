@@ -1,36 +1,36 @@
 #Maintainer: Xyne <ac xunilhcra enyx, backwards>
 pkgname=pm2ml
-pkgver=2013.2
-pkgrel=2
+pkgver=2013.4
+pkgrel=1
 pkgdesc='Generate metalinks for downloading Pacman packages and databases.'
 arch=(any)
 license=(GPL)
 url="http://xyne.archlinux.ca/projects/pm2ml"
 depends=(python3 pyalpm)
-optdepends=('reflector: Reflector support' 'aria2: ppl script support.')
+optdepends=('python3-aur: AUR support' 'aria2: ppl script support.' 'reflector: Reflector support')
 backup=(etc/ppl.conf)
 source=(
-  http://xyne.archlinux.ca/projects/pm2ml/src/pm2ml-2013.2.tar.xz
-  http://xyne.archlinux.ca/projects/pm2ml/src/pm2ml-2013.2.tar.xz.sig
+  http://xyne.archlinux.ca/projects/pm2ml/src/pm2ml-2013.4.tar.xz
+  http://xyne.archlinux.ca/projects/pm2ml/src/pm2ml-2013.4.tar.xz.sig
 )
 sha512sums=(
-  bcd63eb44c2014dc4a70ae0f954bc12fe655b36d295da582266c4828990c7949c0a068b4d8b281bdbf09765e678025018ce8dc4146ecb9b997fba3593372762c
-  00251c11929f3321222b619f21b72926bd64ad86c2fc549c7f2306de242d23f07ed6ea3c6345b1c46d4d5250d6d97e137b29f855052fcff1485696f621631081
+  0d9a834a3a9e4487c985e0d6a49c22542ea1c4a1275a6207ac09ecf8272926908a72f81de1aa50c506b16f26ce2ae94bcc6f19fd6deb5e5c82a9046db76a941d
+  cc3aba1bb797eb9c3dd9fca534e7c64dc0125454b60e5e17c5fd6eba582ba864af33badaa2a2389d026ffd6a39611cb439dbdcdc9e99b9306e5126529792a6c8
 )
 md5sums=(
-  b45b01d334938143ff9dd266f32e9f0f
-  07c5a10816dd73bdc3eccff71d3343d4
+  d88e7728000c9f2a18460344e3fefa08
+  96a7896be0c7f23e410d5e57c5d5ddf9
 )
 
 package ()
 {
   cd "$srcdir/$pkgname-$pkgver"
   python3 setup.py install --root="$pkgdir"/ --optimize=1
-  install -D -m755 "$pkgname" "$pkgdir/usr/bin/$pkgname"
+  install -Dm755 "$pkgname" "$pkgdir/usr/bin/$pkgname"
   for foo_ in ppl pplsyu ppls; do
-    install -D -m755 "$foo_" "$pkgdir/usr/bin/$foo_"
+    install -Dm755 "$foo_" "$pkgdir/usr/bin/$foo_"
   done
-  install -D -m644 "ppl.conf" "$pkgdir/etc/ppl.conf"
+  install -Dm644 "ppl.conf" "$pkgdir/etc/ppl.conf"
 }
 
 # vim: set ts=2 sw=2 et:

@@ -2,7 +2,7 @@
 #Maintainer: Alexandre Minoshi
 
 pkgname=pacmanxg4
-pkgver=4.14.5
+pkgver=4.14.6
 pkgrel=1
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
@@ -37,4 +37,4 @@ package() {
 }
 
 
-md5sums=('ad3648cf88cfc5ae277e23c8f88970bd')
+md5sums=('3d462739e4977558984f45fa46cb93a3')
