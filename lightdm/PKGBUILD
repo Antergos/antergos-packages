@@ -3,7 +3,7 @@
 #Contributor: shosca
 
 pkgname=lightdm
-pkgver=1.5.0
+pkgver=1.5.1
 pkgrel=1
 pkgdesc="A lightweight display manager"
 arch=('i686' 'x86_64')
@@ -17,7 +17,7 @@ source=("https://launchpad.net/lightdm/1.6/$pkgver/+download/$pkgname-$pkgver.ta
 	lightdm-autologin.pam
 	lightdm.pam
 	lightdm.rules
-	lightdm-1.4.0-systemd_login1_power.patch
+	lightdm-1.5.0-systemd_login1_power.patch
 	lightdm-lock-screen-before-switch.patch)
 depends=('dbus-glib' 'libxklavier' 'pantheon-greeter')
 options=(!libtool)
@@ -38,7 +38,7 @@ backup=(etc/apparmor.d/lightdm-guest-session
 build() {
   cd $srcdir/$pkgname-$pkgver
 
-  patch -p1 -i ../lightdm-1.4.0-systemd_login1_power.patch
+  patch -p1 -i ../lightdm-1.5.0-systemd_login1_power.patch
   patch -p1 -i ../lightdm-lock-screen-before-switch.patch
 
    ./configure --prefix=/usr \
@@ -77,7 +77,7 @@ package() {
   install -m644 ../lightdm.rules $pkgdir/usr/share/polkit-1/rules.d/lightdm.rules
 }
 
-md5sums=('e063b73aef31563b4e463a5bbb31b0fc'
+md5sums=('e1b24757fdbd498af9e4af253f112754'
          '6699eb35f65ff498d1d05e6782f4f902'
          '737c6f27488517c6320bfc797954b400'
          'b1e1baf7351ff58c7b3b9b204472f6bb'
@@ -85,5 +85,5 @@ md5sums=('e063b73aef31563b4e463a5bbb31b0fc'
          '9e39da461e36f9d3fdd4447a80ebd878'
          'a5c60ec8739a698e4127b47ef417e517'
          '2a7326f4de1d949b8c96749b62cc5021'
-         '1aac33da4bb5d6c5bb2b8fa72ae922b9'
+         'da9ce685cd38df6b5891574aa3ecbb13'
          '43314fcf13397aaf2321a86d7ed9452c')

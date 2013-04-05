@@ -2,7 +2,7 @@
 #Maintainer: Alexandre Minoshi
 
 pkgname=pacmanxg4
-pkgver=4.13.12
+pkgver=4.14.5
 pkgrel=1
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
@@ -20,19 +20,21 @@ source=("pacmanXG4.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/downl
 
 
 package() {
-  install -d $pkgdir/opt/pacmanxg4
-  install -Dm755 pacmanxg $pkgdir/opt/pacmanxg4/pacmanxg
-  install -Dm755 langs/en.lang $pkgdir/opt/pacmanxg4/langs/en.lang
-  install -Dm755 langs/es.lang $pkgdir/opt/pacmanxg4/langs/es.lang
-  install -Dm755 langs/de.lang $pkgdir/opt/pacmanxg4/langs/de.lang
-  install -Dm755 langs/rus.lang $pkgdir/opt/pacmanxg4/langs/ru.lang
-  install -Dm755 dizz.sh $pkgdir/opt/pacmanxg4/dizz.sh
-  install -Dm755 sections.ini $pkgdir/opt/pacmanxg4/sections.ini
-  install -Dm755 sections.list $pkgdir/opt/pacmanxg4/sections.list
+  install -d $pkgdir/opt/pacmanxg
+  install -Dm755 pacmanxg $pkgdir/opt/pacmanxg/pacmanxg
+  install -Dm755 langs/en.lang $pkgdir/opt/pacmanxg/langs/en.lang
+  install -Dm755 langs/es.lang $pkgdir/opt/pacmanxg/langs/es.lang
+  install -Dm755 langs/de.lang $pkgdir/opt/pacmanxg/langs/de.lang
+  install -Dm755 langs/ru.lang $pkgdir/opt/pacmanxg/langs/ru.lang
+  install -Dm755 dizz.sh $pkgdir/opt/pacmanxg/dizz.sh
+  install -Dm755 ssx $pkgdir/opt/pacmanxg/ssx
+  install -Dm755 themes $pkgdir/opt/pacmanxg/themes  
+  install -Dm755 sections.ini $pkgdir/opt/pacmanxg/sections.ini
+  install -Dm755 sections.list $pkgdir/opt/pacmanxg/sections.list
   install -Dm644 icon.png $pkgdir/usr/share/pixmaps/pacmanxg.png
-  install -Dm644 pacmanxg4.desktop $pkgdir/usr/share/applications/pacmanxg4.desktop
+  install -Dm644 pacmanxg.desktop $pkgdir/usr/share/applications/pacmanxg.desktop
   install -d $pkgdir/usr/bin/
 }
 
 
-md5sums=('33b6d860cbaac65e18166b2ccba6d2ce')
+md5sums=('ad3648cf88cfc5ae277e23c8f88970bd')

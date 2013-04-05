@@ -1,7 +1,7 @@
-diff -up lightdm-1.4.0/liblightdm-gobject/power.c.systemd_login1_power lightdm-1.4.0/liblightdm-gobject/power.c
---- lightdm-1.4.0/liblightdm-gobject/power.c.systemd_login1_power	2011-12-08 19:51:23.000000000 -0600
-+++ lightdm-1.4.0/liblightdm-gobject/power.c	2013-01-10 22:34:41.782151231 -0600
-@@ -18,6 +18,7 @@
+diff -urp lightdm-1.5.0.original/liblightdm-gobject/power.c lightdm-1.5.0/liblightdm-gobject/power.c
+--- lightdm-1.5.0.original/liblightdm-gobject/power.c	2013-01-31 18:50:09.000000000 -0200
++++ lightdm-1.5.0/liblightdm-gobject/power.c	2013-02-11 15:25:02.087380645 -0200
+@@ -17,6 +17,7 @@
  
  static GDBusProxy *upower_proxy = NULL;
  static GDBusProxy *ck_proxy = NULL;
@@ -9,7 +9,7 @@ diff -up lightdm-1.4.0/liblightdm-gobject/power.c.systemd_login1_power lightdm-1
  
  static gboolean
  upower_call_function (const gchar *function, gboolean default_result, GError **error)
-@@ -148,6 +149,59 @@ ck_call_function (const gchar *function,
+@@ -147,6 +148,59 @@ ck_call_function (const gchar *function,
      return function_result;
  }
  
@@ -47,13 +47,13 @@ diff -up lightdm-1.4.0/liblightdm-gobject/power.c.systemd_login1_power lightdm-1
 +        return default_result;
 +
 +    if (g_variant_is_of_type (result, G_VARIANT_TYPE ("(b)")))
-+        g_variant_get (result, "(s)", &function_result);
++        g_variant_get (result, "(b)", &function_result);
 +
 +    /**
 +    * CanReboot, CanPowerOff returns a string "yes", "no", or "challenge", not a boolean as ConsoleKit
 +    **/
 +    if (g_variant_is_of_type (result, G_VARIANT_TYPE ("(s)"))) {
-+        g_variant_get (result, "(b)", str_result);
++        g_variant_get (result, "(s)", &str_result);
 +        if(g_strcmp0(str_result,true_result) == 0) {
 +            function_result = TRUE;
 +        }
@@ -69,7 +69,7 @@ diff -up lightdm-1.4.0/liblightdm-gobject/power.c.systemd_login1_power lightdm-1
  /**
   * lightdm_get_can_restart:
   *
-@@ -158,7 +212,11 @@ ck_call_function (const gchar *function,
+@@ -157,7 +211,11 @@ ck_call_function (const gchar *function,
  gboolean
  lightdm_get_can_restart (void)
  {
@@ -82,7 +82,7 @@ diff -up lightdm-1.4.0/liblightdm-gobject/power.c.systemd_login1_power lightdm-1
  }
  
  /**
-@@ -172,7 +230,11 @@ lightdm_get_can_restart (void)
+@@ -171,7 +229,11 @@ lightdm_get_can_restart (void)
  gboolean
  lightdm_restart (GError **error)
  {
@@ -95,7 +95,7 @@ diff -up lightdm-1.4.0/liblightdm-gobject/power.c.systemd_login1_power lightdm-1
  }
  
  /**
-@@ -185,7 +247,11 @@ lightdm_restart (GError **error)
+@@ -184,7 +246,11 @@ lightdm_restart (GError **error)
  gboolean
  lightdm_get_can_shutdown (void)
  {
@@ -108,7 +108,7 @@ diff -up lightdm-1.4.0/liblightdm-gobject/power.c.systemd_login1_power lightdm-1
  }
  
  /**
-@@ -199,5 +265,9 @@ lightdm_get_can_shutdown (void)
+@@ -198,5 +264,9 @@ lightdm_get_can_shutdown (void)
  gboolean
  lightdm_shutdown (GError **error)
  {
@@ -119,10 +119,10 @@ diff -up lightdm-1.4.0/liblightdm-gobject/power.c.systemd_login1_power lightdm-1
 +          function_result = ck_call_function ("Stop", TRUE, error);
 +    return function_result;
  }
-diff -up lightdm-1.4.0/liblightdm-qt/power.cpp.systemd_login1_power lightdm-1.4.0/liblightdm-qt/power.cpp
---- lightdm-1.4.0/liblightdm-qt/power.cpp.systemd_login1_power	2011-12-08 19:51:23.000000000 -0600
-+++ lightdm-1.4.0/liblightdm-qt/power.cpp	2013-01-10 22:57:15.458512125 -0600
-@@ -16,6 +16,7 @@
+diff -urp lightdm-1.5.0.original/liblightdm-qt/power.cpp lightdm-1.5.0/liblightdm-qt/power.cpp
+--- lightdm-1.5.0.original/liblightdm-qt/power.cpp	2013-01-31 18:55:46.000000000 -0200
++++ lightdm-1.5.0/liblightdm-qt/power.cpp	2013-02-11 14:30:35.217411175 -0200
+@@ -15,6 +15,7 @@
  #include <QtCore/QVariant>
  #include <QtDBus/QDBusInterface>
  #include <QtDBus/QDBusReply>
@@ -130,7 +130,7 @@ diff -up lightdm-1.4.0/liblightdm-qt/power.cpp.systemd_login1_power lightdm-1.4.
  
  #include "config.h"
  
-@@ -27,11 +28,13 @@ public:
+@@ -26,11 +27,13 @@ public:
      PowerInterfacePrivate();
      QScopedPointer<QDBusInterface> powerManagementInterface;
      QScopedPointer<QDBusInterface> consoleKitInterface;
@@ -145,7 +145,7 @@ diff -up lightdm-1.4.0/liblightdm-qt/power.cpp.systemd_login1_power lightdm-1.4.
  {
  }
  
-@@ -81,34 +84,53 @@ void PowerInterface::hibernate()
+@@ -80,34 +83,53 @@ void PowerInterface::hibernate()
  
  bool PowerInterface::canShutdown()
  {

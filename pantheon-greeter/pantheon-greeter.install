@@ -2,7 +2,8 @@ post_install() {
   mkdir -p /usr/share/backgrounds
   ln -s /usr/share/cinnarch/wallpapers/early_morning_by_kylekc.jpg /usr/share/backgrounds/cinnarch-default
   glib-compile-schemas usr/share/glib-2.0/schemas
-  
+  sed -i 's/#greeter-session=example-gtk-gnome/greeter-session=pantheon-greeter/' /etc/lightdm/lightdm.conf.pacnew
+  mv /etc/lightdm/lightdm.conf.pacnew /etc/lightdm/lightdm.conf
 }
 
 
@@ -14,4 +15,6 @@ post_remove() {
 
 post_update(){
 	mkdir -p /usr/share/backgrounds
+	sed -i 's/#greeter-session=example-gtk-gnome/greeter-session=pantheon-greeter/' /etc/lightdm/lightdm.conf.pacnew
+	mv /etc/lightdm/lightdm.conf.pacnew /etc/lightdm/lightdm.conf
 }
