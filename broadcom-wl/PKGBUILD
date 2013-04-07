@@ -21,13 +21,13 @@ sha1sums=('01aa32f9e85621253a3f15cf4361bb80d41da3e8'
           '89bf92286ede30dd85304c6c4e42e89cfdc0f60a'
           'ea7b67982ddc0f56fd3becb9914fd4458fe7d373'
           'e0366dd15ea5b25aae0f61bec6be7a203dfca7e4'
-          'df3cd65e24beed349a40abcf476bdaa82bbc57d3')
+          '64f99cde29168e7bd8508af30702c68f907556d9')
 [[ $CARCH = x86_64 ]] && sha1sums[0]='5bd78c20324e6a4aa9f3fafdc6f0155e884d5131'
 
 backup=('etc/modprobe.d/broadcom-wl.conf')
 install=install
 
-_extramodules=extramodules-3.7-ARCH
+_extramodules=extramodules-3.8-ARCH
 _kernver="$(cat /usr/lib/modules/${_extramodules}/version)"
 
 build() {
