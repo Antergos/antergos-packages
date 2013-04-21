@@ -1,2 +1,2 @@
 ## Description ##
-PKGBUILD's for cinnarch packages (cinnarch-repo and cinnarch-core)
+PKGBUILD's for antergos packages

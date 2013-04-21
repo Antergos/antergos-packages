@@ -1,21 +1,21 @@
 # Based on the file created for Arch Linux by:
 # Pierre Schmitz <pierre@archlinux.de>
 
-# Maintainer: Alex Filgueira <alexfilgueira@cinnarch.com>
+# Maintainer: Alex Filgueira <faidoc@gmail.com>
 
-pkgname=cinnarch-keyring
+pkgname=antergos-keyring
 pkgver=20120717
 pkgrel=4
 pkgdesc='Cinnarch PGP keyring'
 arch=('any')
-groups=('cinnarch-base')
-url='http://www.cinnarch.com'
+groups=('antergos-base')
+url='http://www.antergos.com'
 license=('GPL')
 install="${pkgname}.install"
 source=('Makefile'
-        'cinnarch.gpg'
-        'cinnarch-revoked'
-        'cinnarch-trusted')
+        'antergos.gpg'
+        'antergos-revoked'
+        'antergos-trusted')
 sha256sums=('4a0b37135d76bee36452e95a2f984a2162ed5b472fab3524a9962e631f2c02d9'
             '64d3f8eb2ea5099afa694c31d894b3481136402762a7c154489e4d45cd9853c6'
             'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'

@@ -1,9 +1,9 @@
 post_upgrade() {
 	if usr/bin/pacman-key -l >/dev/null 2>&1; then
-		usr/bin/pacman-key --populate cinnarch
+		usr/bin/pacman-key --populate antergos
 	else
 		echo " >>> Run \`pacman-key --init\` to set up your pacman keyring."
-		echo " >>> Then run \`pacman-key --populate cinnarch\` to install the Cinnarch keyring."
+		echo " >>> Then run \`pacman-key --populate antergos\` to install the Antergos keyring."
 	fi
 }
 
