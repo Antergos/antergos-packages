@@ -14,7 +14,7 @@ optdepends=('aurvote: vote for favorite packages from AUR'
       'rsync: retrieve PKGBUILD from official repositories')
 backup=('etc/yaourtrc')
 source=(http://mir.archlinux.fr/~tuxce/releases/$pkgname/$pkgname-$pkgver.tar.gz)
-md5sums=('972173967acd160c987c6dce15a431f8')
+sha256sums=('8c398dabe54b9a7b8eb9109456daf6fdc22cf63d67986ac0e21f56f9d3e45d4d')
 
 build() { 
   cd "$srcdir/$pkgname-$pkgver/"

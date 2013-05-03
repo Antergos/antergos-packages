@@ -1,16 +1,16 @@
 # Maintainer: Alexandre Filgueira <faidoc@gmail.com>
 
 pkgname=antergos-mirrorlist
-pkgver=20130226
+pkgver=20130427
 pkgrel=1
-pkgdesc="Cinnarch mirrorlist for use by pacman"
+pkgdesc="Antergos mirrorlist for use by pacman"
 arch=('any')
 groups=('antergos-base')
 url="http://www.antergos.com/"
 license=('GPL')
 backup=(etc/pacman.d/antergos-mirrorlist)
 source=(antergos-mirrorlist)
-md5sums=('8c1734b604bf0fd90ab06c30ffdf856e')
+sha256sums=('70c8fb7d43555c8e6ab8fd19e4c41baacf601e9fd363a4f3a402bb55bb8a4485')
 
 build() {
   mkdir -p $pkgdir/etc/pacman.d

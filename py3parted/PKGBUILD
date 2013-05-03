@@ -9,8 +9,8 @@ arch=('i686' 'x86_64')
 license=('GPL2')
 depends=('python' 'parted>=3.0')
 provides=('pyparted')
-source=(https://github.com/cinnarch/${pkgname}/archive/v${pkgver}.tar.gz)
-
+source=(https://github.com/antergos/${pkgname}/archive/v${pkgver}.tar.gz)
+sha256sums=('7c21e953a181dcca1043dbd68c9bf2bf677ddfa857d6203869fbb17572a465c4')
 
 build() {
   cd "${srcdir}"/${pkgname}-${pkgver}
@@ -22,4 +22,3 @@ package() {
   python setup.py install --prefix=/usr --root="${pkgdir}" --optimize=1 --skip-build
 }
 
-md5sums=('c7cf5a6a214c55761958ff6cb28ba24d')

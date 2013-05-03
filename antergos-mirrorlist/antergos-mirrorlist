@@ -1,9 +1,9 @@
 ##
-## Cinnarch repository mirrorlist
+## Antergos repository mirrorlist
 ##
 
 # Autodetect your closest mirror
-Server = http://mirrors.cinnarch.com/$repo/$arch
+Server = http://mirrors.antergos.com/$repo/$arch
 
 
 # China

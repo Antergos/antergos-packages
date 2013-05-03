@@ -1,0 +1,35 @@
+#Maintainer: Alex Filgueira <alexfilgueira@antergos.com>
+
+_pkgname=Cnchi
+pkgname=cnchi
+pkgver=0.2
+pkgrel=1
+pkgdesc='Graphical Installer for Antergos Linux'
+arch=(any)
+license=(GPL)
+url="https://github.com/Antergos/Cnchi"
+depends=(python pyalpm python-gobject python-dbus hdparm python-cairo libtimezonemap
+         py3parted hwinfo webkitgtk3)
+#source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/Cnchi/archive/v${pkgver}.tar.gz")
+source=("Cnchi.tar.gz")
+sha256sums=('d1873dd7c3e9f3f6d084f07fba7d13752333411521c8af94c4cc0ec6c49370ee')
+
+
+#install=${pkgname}.install
+
+build ()
+{
+  cd "$srcdir/$_pkgname"
+  # install -d ${pkgdir}/usr/share/cnchi
+  # install -Dm755 "${pkgname}.py" "$pkgdir/usr/share/cnchi/${pkgname}.py"
+
+  # for i in data scripts src ui; do
+  #   cp -R ${i} "${pkgdir}/usr/share/cnchi/"
+  # done
+  python setup.py build
+}
+
+package() {
+  cd ${srcdir}/${_pkgname}
+  python setup.py install --root=${pkgdir}
+}

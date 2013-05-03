@@ -1,14 +1,14 @@
 # Maintainer: Alexandre Filgueira <faidoc@gmail.com>
 
 pkgname=antergos-wallpapers
-pkgver=20130421
+pkgver=0.5
 pkgrel=1
-pkgdesc="The default wallpapers for Cinnarch"
+pkgdesc="The default wallpapers for Antergos"
 arch=('any')
 url="http://www.antergos.com"
 license=('CCPL:by-nc-sa')
-source=("http://www.antergos.com/antergos_build/${pkgname}-${pkgver}.tar.gz")
-md5sums=('5c53774923ecace0f61eec2597bc8829')
+source=("http://build.antergos.com/${pkgname}-${pkgver}.tar.gz")
+sha256sums=('43edc30f09778151886dd0e883a726c89382768efa019757e96db4f2db40d52f')
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
