@@ -2,7 +2,7 @@
 
 _pkgname=Cnchi
 pkgname=cnchi
-pkgver=0.2
+pkgver=0.2.1
 pkgrel=1
 pkgdesc='Graphical Installer for Antergos Linux'
 arch=(any)
@@ -11,22 +11,34 @@ url="https://github.com/Antergos/Cnchi"
 depends=(python pyalpm python-gobject python-dbus hdparm python-cairo libtimezonemap
          py3parted hwinfo webkitgtk3)
 source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/Cnchi/archive/v${pkgver}.tar.gz")
-sha256sums=('46d2352c28037ba6df5b08308cc50af5592fb0bd4dcdd7ab9db3d79f7eb21623')
+sha256sums=('2490db00b13dcd5487f13b5ed0abaa95e1a8ce6cdfbf860a94b0d6cd29099a71')
 
 
 build ()
 {
-  cd "$srcdir/$_pkgname"
+  cd "$srcdir/$_pkgname-${pkgver}"
 
 }
 
 package() {
-  cd ${srcdir}/${_pkgname}
-  
-  install -d ${pkgdir}/usr/share/cnchi
-  install -Dm755 "${pkgname}.py" "$pkgdir/usr/share/cnchi/${pkgname}.py"
+	cd ${srcdir}/${_pkgname}-${pkgver}
 
-  for i in data scripts src ui; do
-    cp -R ${i} "${pkgdir}/usr/share/cnchi/"
-  done
+	install -d ${pkgdir}/usr/share/locale/
+	install -d ${pkgdir}/usr/share/cnchi
+	install -Dm755 "${pkgname}.py" "$pkgdir/usr/share/cnchi/${pkgname}.py"
+	install -Dm755 "${pkgname}" "$pkgdir/usr/bin/cnchi"
+
+	for i in data scripts src ui; do
+		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
+	done
+
+  	for files in po/*; do
+    	if [ -f "$files" ] && [ "$files" != 'po/cnchi.pot' ]; then
+        	STRING_PO=`echo ${files#*/}`
+        	STRING=`echo ${STRING_PO%.po}`
+        	mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
+        	msgfmt $files -o ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/cnchi.mo
+        	echo "${STRING} installed..."
+    	fi
+	done
 }
