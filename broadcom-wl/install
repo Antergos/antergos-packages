@@ -1,9 +1,0 @@
-post_upgrade() {
-	cd lib/modules
-	for i in extramodules-*; do depmod $(cat "$i/version"); done
-	cd ../..
-}
-
-post_install() {
-	post_upgrade
-}
