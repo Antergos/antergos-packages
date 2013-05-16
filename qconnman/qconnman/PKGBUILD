@@ -1,0 +1,39 @@
+# Maintainer: Alex Filgueira <faidoc@gmail.com>
+
+pkgname=qconnman
+pkgver=20130512
+pkgrel=1
+pkgdesc='A Qt ConnMan management interface.'
+arch=('i686' 'x86_64')
+url='http://github.com/OSSystems/qconnman'
+license=('LGPL2')
+depends=('qt4' 'connman')
+makedepends=('git')
+
+_gitname="qconnman"
+_gitroot="https://bitbucket.org/ossystems/${_gitname}"
+
+build() {
+  cd "${srcdir}"
+  msg "Connecting to GIT server...."
+
+  if [ -d $_gitname ] ; then
+    cd $_gitname && git pull origin
+    msg "The local files are updated."
+    cd ..
+  else
+    git clone $_gitroot $_gitname
+  fi
+
+  msg "GIT checkout done or server timeout"
+
+  cd "${_gitname}"
+
+  qmake-qt4 PREFIX=/usr
+  make
+}
+
+package() {
+  cd "${srcdir}/${_gitname}"
+  make INSTALL_ROOT="${pkgdir}" install
+}

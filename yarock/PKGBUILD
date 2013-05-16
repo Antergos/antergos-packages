@@ -1,0 +1,19 @@
+# Maintainer: Košava <kosava@archlinux.us>
+pkgname=yarock
+pkgver=0.9.61
+pkgrel=1
+pkgdesc="Modern Music Player with collection browser based on cover art."
+arch=('i686' 'x86_64')
+url="https://launchpad.net/yarock"
+license=('GPL3')
+depends=('qt4' 'taglib' 'phonon' 'qjson')
+source=(https://launchpad.net/yarock/trunk/0.9.61/+download/Yarock_0.9.61_source.tar.gz yarock.desktop)
+sha256sums=('2c2ce6276a29a67f68d3abfa91f7603c69dab611ffbbb7d845d7545dd25a3dda'
+            'ab715917143592ad1e7546b25384adfeca7ab2f57c707c00ce9d81f75b46bd3a')
+
+build() {
+   cd $srcdir/Yarock_0.9.61_source
+   qmake-qt4 PREFIX="/usr/"
+   sed -i '18s/-m64 /-lX11 -lGL /' Makefile 
+   make INSTALL_ROOT=$pkgdir install
+}
