@@ -1,0 +1,24 @@
+pkgname=zukitwo-theme-openbox
+pkgver=20111021
+pkgrel=3
+pkgdesc="Openbox theme that match Zukitwo gtk theme."
+arch=(any)
+url="http://box-look.org/content/show.php/?content=146154"
+license=('Creative Commons by-sa')
+depends=('openbox')
+source=("http://box-look.org/CONTENT/content-files/146154-ZukiTwo-OB.obt")
+md5sums=("03daee7846c6a7c80d9e769352fb4755")
+
+__realname="ZukiTwo-OB"
+__dstname="Zukitwo"
+__obtname="146154-ZukiTwo-OB.obt"
+
+build() {
+	cd $srcdir
+	tar xf $__obtname
+}
+
+package() {
+	install -d $pkgdir/usr/share/themes/$__dstname
+	cp -r $srcdir/$__realname/openbox-3 $pkgdir/usr/share/themes/$__dstname
+}
