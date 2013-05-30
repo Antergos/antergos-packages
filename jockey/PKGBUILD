@@ -1,0 +1,39 @@
+#Maintainer: Alexandre Filgueira <faidoc at gmail dot com>
+# Contributor: Daniel Wallace <danielwallace at gtmanfred dot com>
+# Contributor: Mark Pustjens <pustjens@dds.nl
+# Contributor: PirateJonno <j@skurvy.no-ip.org>
+# Contributor: mrbit
+
+pkgname=jockey
+pkgver=0.9.7
+pkgrel=3
+pkgdesc="Jockey provides an user interface and desktop integration for installation and upgrade of third-party drivers."
+url="http://launchpad.net/jockey"
+arch=('any')
+license=('GPL')
+source=("http://launchpad.net/jockey/trunk/$pkgver/+download/${pkgname}-${pkgver}.tar.gz")
+depends=('python2' 'dbus-python' 'python2-xdg' 'polkit' 'packagekit' 'pygtk' \
+		'python2-notify' 'python2-pycurl' 'python2-gobject' 'python2-xkit' \
+		'lsb-release')
+makedepends=('python2-distutils-extra')
+md5sums=('bf4d6708f290510959f03c9e2cfd01a8')
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}/"
+
+    # python2 fix
+	find -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
+
+	python2 ./setup.py build --build-base ${srcdir}/build/ || return 1
+}
+
+package () {
+	cd "${srcdir}/${pkgname}-${pkgver}/"
+	python2 ./setup.py install --prefix=/usr --root=${pkgdir} \
+		--install-purelib=/usr/lib/python2.7/site-packages/ \
+		--no-compile -O0
+}
+
+
+
+
