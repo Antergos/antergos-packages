@@ -1,0 +1,11 @@
+--- Cnchi-0.2.1.orig/src/installation_thread.py	2013-05-14 17:59:01.000000000 +0200
++++ Cnchi-0.2.1/src/installation_thread.py	2013-05-30 01:06:37.601993333 +0200
+@@ -609,7 +609,7 @@
+             # ignore if exists
+             pass
+ 
+-        self.chroot(['/usr/sbin/grub-mkconfig', '-o', '/boot/grub/grub.cfg'])
++        self.chroot(['grub-mkconfig', '-o', '/boot/grub/grub.cfg'])
+         
+         self.chroot_umount()
+ 
