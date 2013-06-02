@@ -6,20 +6,20 @@
 
 pkgname=jockey
 pkgver=0.9.7
-pkgrel=3
+pkgrel=4
 pkgdesc="Jockey provides an user interface and desktop integration for installation and upgrade of third-party drivers."
 url="http://launchpad.net/jockey"
 arch=('any')
 license=('GPL')
-source=("http://launchpad.net/jockey/trunk/$pkgver/+download/${pkgname}-${pkgver}.tar.gz")
+source=("https://github.com/faidoc/jockey/archive/master.zip")
 depends=('python2' 'dbus-python' 'python2-xdg' 'polkit' 'packagekit' 'pygtk' \
 		'python2-notify' 'python2-pycurl' 'python2-gobject' 'python2-xkit' \
 		'lsb-release')
 makedepends=('python2-distutils-extra')
-md5sums=('bf4d6708f290510959f03c9e2cfd01a8')
+sha256sums=('c54333d0fa69510d08e32ac6436591958c5b72da45dac11bdc4b343ea7e659b3')
 
 build() {
-	cd "${srcdir}/${pkgname}-${pkgver}/"
+	cd "${srcdir}/${pkgname}-master/"
 
     # python2 fix
 	find -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
@@ -28,10 +28,15 @@ build() {
 }
 
 package () {
-	cd "${srcdir}/${pkgname}-${pkgver}/"
+	cd "${srcdir}/${pkgname}-master/"
 	python2 ./setup.py install --prefix=/usr --root=${pkgdir} \
 		--install-purelib=/usr/lib/python2.7/site-packages/ \
 		--no-compile -O0
+
+	install -d $pkgdir/usr/share/jockey/handlers/
+	install -d $pkgdir/usr/share/jockey/modaliases/
+	install -Dm644 examples/handlers/nvidia-antergos.py $pkgdir/usr/share/jockey/handlers/nvidia.py
+	install -Dm644 examples/modaliases/nvidia $pkgdir/usr/share/jockey/modaliases/nvidia
 }
 
 
