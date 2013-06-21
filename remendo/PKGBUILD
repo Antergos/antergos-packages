@@ -1,0 +1,53 @@
+# $Id$
+# Maintainer : Alexandre Filgueira <faidoc@gmail.com
+
+pkgbase=remendo
+pkgname=('remendo' 'remendo-gtk')
+pkgver=0.1
+pkgrel=1
+arch=('i686' 'x86_64')
+url="http://www.antergos.com"
+license=('GPL3')
+makedepends=('intltool')
+source=($pkgbase.tar.gz::https://github.com/Antergos/remendo/archive/v$pkgver.tar.gz
+        $pkgbase.sudoers
+        $pkgbase-gtk.desktop)
+sha256sums=('8e52331ca23ba0fa56b3dd2994988252554b9f2f3dc0e137f9878bde2f8923fc'
+            'efdba52f18bd3ed6dd888deadd542d22bc82f481a6ec24f05ff229c546d61351'
+            '6f20ea4e97383138daaee557b65216da461392896b0caf2416a2bd0bdcb07aa8')
+
+build() {
+  cd $pkgbase-$pkgver
+
+  ./autogen.sh --prefix=/usr
+  make
+  cd remendo-gtk
+  ./autogen.sh --prefix=/usr
+  make
+}
+package_remendo() {
+  pkgdesc="Handler daemon"
+  depends=('curl' 'libxml2')
+
+  cd $pkgbase-$pkgver
+
+  make -C remendo DESTDIR="$pkgdir" install
+  mkdir -p $pkgdir/var/lib/remendo
+  mkdir -p $pkgdir/etc/sudoers.d/
+  cp $srcdir/remendo.sudoers $pkgdir/etc/sudoers.d/20-remendo
+
+}
+
+package_remendo-gtk() {
+  pkgdesc="Event viewer for Remendo (GTK)"
+  depends=('gtk3' 'python' 'libxml2' 'remendo')
+
+  cd $pkgbase-$pkgver
+
+  make -C remendo-gtk DESTDIR="$pkgdir" install
+  #make -C po DESTDIR="$pkgdir" install
+
+  mkdir -p $pkgdir/etc/xdg/autostart
+  cp $srcdir/remendo-gtk.desktop $pkgdir/etc/xdg/autostart/
+
+}
