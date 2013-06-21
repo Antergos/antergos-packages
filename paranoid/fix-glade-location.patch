@@ -1,0 +1,11 @@
+--- paranoid.orig/paranoid.py	2013-06-06 12:31:54.762360000 +0200
++++ paranoid/paranoid.py	2013-06-06 12:34:55.859016605 +0200
+@@ -24,7 +24,7 @@
+ import re
+ import string
+ 
+-GUIFILE = os.path.join(os.path.dirname(os.path.realpath(__file__)), "paranoid.glade")
++GUIFILE = "/usr/share/paranoid/paranoid.glade"
+ COMPTON = os.getenv('HOME') + "/.config/compton.conf"
+ AUTOSTART = os.getenv('HOME') + "/.config/.composite_enabled"
+ newconf = False
