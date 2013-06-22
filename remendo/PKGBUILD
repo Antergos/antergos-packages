@@ -8,7 +8,7 @@ pkgrel=1
 arch=('i686' 'x86_64')
 url="http://www.antergos.com"
 license=('GPL3')
-makedepends=('intltool')
+makedepends=('intltool' 'pkg-config')
 source=($pkgbase.tar.gz::https://github.com/Antergos/remendo/archive/v$pkgver.tar.gz
         $pkgbase.sudoers
         $pkgbase-gtk.desktop)
@@ -40,7 +40,7 @@ package_remendo() {
 
 package_remendo-gtk() {
   pkgdesc="Event viewer for Remendo (GTK)"
-  depends=('gtk3' 'python' 'libxml2' 'remendo')
+  depends=('gtk3' 'python' 'python-gobject' 'libxml2' 'remendo')
 
   cd $pkgbase-$pkgver
 
