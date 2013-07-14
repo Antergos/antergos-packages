@@ -12,6 +12,9 @@ Server = http://mirrors.antergos.com/$repo/$arch
 # France
 #Server = http://cinnarch.polymorf.fr/$repo/$arch
 
+# Greece
+#Server = http://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
+
 # England
 #Server = http://www.mirrorservice.org/sites/repo.cinnarch.com/$repo/$arch
 
@@ -24,7 +27,6 @@ Server = http://mirrors.antergos.com/$repo/$arch
 
 # Spain
 #Server = http://softlibre.unizar.es/cinnarch/$repo/$arch
-#Server = http://www.terramedicsoft.com/cinnarch/$repo/$arch
 
 # USA
 #Server = http://mirror.us.leaseweb.net/cinnarch/$repo/$arch

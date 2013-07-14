@@ -2,31 +2,30 @@
 
 _pkgname=Cnchi
 pkgname=cnchi
-pkgver=0.2.1
-pkgrel=2
+pkgver=0.3
+pkgrel=1
 pkgdesc='Graphical Installer for Antergos Linux'
 arch=(any)
 license=(GPL)
 url="https://github.com/Antergos/Cnchi"
 depends=(python pyalpm python-gobject python-dbus hdparm python-cairo libtimezonemap
          py3parted hwinfo webkitgtk3)
-source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/Cnchi/archive/v${pkgver}.tar.gz"
-        "grub-mkconfig-nofullpath.patch")
-sha256sums=('2490db00b13dcd5487f13b5ed0abaa95e1a8ce6cdfbf860a94b0d6cd29099a71'
-            '94c433b7a9e0b83c53214b0a26712943d8968291e9439adfd271f2a92d7600f8')
+#source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/Cnchi/archive/v${pkgver}.tar.gz"
+#        "grub-mkconfig-nofullpath.patch")
+source=("Cnchi.tar.gz")
+#sha256sums=('2490db00b13dcd5487f13b5ed0abaa95e1a8ce6cdfbf860a94b0d6cd29099a71'
+#            '94c433b7a9e0b83c53214b0a26712943d8968291e9439adfd271f2a92d7600f8')
+sha256sums=('373808db0ab8ccf96a4731c4662b9c24a61b8fe4269d30024dcce91613b0f40b')
 
 
 build ()
 {
-  cd "$srcdir/$_pkgname-${pkgver}"
+  cd "$srcdir/$_pkgname"
 
 }
 
 package() {
-	cd ${srcdir}/${_pkgname}-${pkgver}
-
-  # Fix grub-mkconfig 
-  patch -Np1 -i ../grub-mkconfig-nofullpath.patch
+	cd ${srcdir}/${_pkgname}
 
 	install -d ${pkgdir}/usr/share/locale/
 	install -d ${pkgdir}/usr/share/cnchi
