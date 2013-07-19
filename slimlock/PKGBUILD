@@ -1,0 +1,26 @@
+# Maintainer: Diego <cdprincipe@gmail.com>
+# Contributor: Joel Burget <joelburget@gmail.com>
+
+pkgname=slimlock
+pkgver=0.12
+pkgrel=1
+pkgdesc="Unholy screen locker based on SLiM"
+arch=('i686' 'x86_64')
+url="http://programsthatsmellgood.com/slimlock/"
+license=('GPL2')
+depends=('slim' 'libxft' 'imlib2' 'pam' 'libxrandr')
+backup=('etc/slimlock.conf')
+source=("$pkgname-$pkgver.tar.gz"::"https://github.com/dannyn/slimlock/archive/v${pkgver}.tar.gz")
+sha1sums=('fcac9ae772940d53b3e86fb5f8ea547f3e850c76')
+
+build() {
+  cd "$pkgname-$pkgver"
+  make
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+  make DESTDIR="$pkgdir/" MANDIR=/usr/share/man install
+}
+
+
