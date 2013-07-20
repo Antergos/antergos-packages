@@ -2,13 +2,14 @@
 
 pkgname=hotot-qt
 pkgver=0.9.8.14
-pkgrel=1
+pkgrel=2
 pkgdesc="A lightweight & open source microblogging software (twitter identi.ca). Qt4 frontend."
 arch=('i686' 'x86_64')
 url="http://www.hotot.org/"
 license=('LGPL3')
 depends=('hotot-data' 'qtwebkit' 'qt4')
 makedepends=('cmake' 'intltool')
+options=('strip' 'debug')
 install="hotot-qt.install"
 source=("https://github.com/lyricat/Hotot/archive/$pkgver.tar.gz")
 md5sums=('7437f5132a50f7239e1b4bd09f410a17')
