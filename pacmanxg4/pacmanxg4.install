@@ -1,11 +1,11 @@
 
 ## arg 1:  the new package version
 post_install() {
- ln -s /opt/pacmanxg4/pacmanxg /usr/bin/pacmanxg  
+ ln -s /opt/pacmanxg/pacmanxg /usr/bin/pacmanxg  
 }
 
 post_upgrade() {
- ln -sf /opt/pacmanxg4/pacmanxg /usr/bin/pacmanxg  
+ ln -sf /opt/pacmanxg/pacmanxg /usr/bin/pacmanxg  
 }
 
 ## arg 1:  the old package version

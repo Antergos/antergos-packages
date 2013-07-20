@@ -2,22 +2,22 @@
 #Maintainer: Alexandre Minoshi
 
 pkgname=pacmanxg4
-pkgver=4.14.7
-pkgrel=1
+pkgver=4.14.12
+pkgrel=2
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
 arch=('i686' 'x86_64')
 url="http://almin-soft.fsay.net/index.php?pacmanxg/4x-series"
 license=('GPL2')
 if [ "${CARCH}" = 'x86_64' ]; then
-depends=('pacman' 'lib32-libx11' 'lib32-gcc-libs' 'lib32-libxft' 'wget')
+depends=('pacman' 'lib32-libx11' 'lib32-gcc-libs' 'lib32-libxft' 'wget' 'ssx' 'lib32-libxrender')
 elif [ "${CARCH}" = 'i686' ]; then
-depends=('pacman' 'libx11' 'gcc-libs' 'wget')
+depends=('pacman' 'libx11' 'gcc-libs' 'wget' 'ssx' 'libxrender')
 fi
 optdepends=('yaourt: AUR support' 'pkgtools: pkgfile utility check' 'repacman: rebuild package')
 install=${pkgname}.install
 source=("pacmanXG4.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanXG4.tar.bz2")
-md5sums=('03cc1ac34143db514c1df5bd36b1daaf')
+md5sums=('40c7a0c73b69cbd871f4afaee170ce05')
 
 package() {
   install -d $pkgdir/opt/pacmanxg
@@ -26,8 +26,9 @@ package() {
   install -Dm755 langs/es.lang $pkgdir/opt/pacmanxg/langs/es.lang
   install -Dm755 langs/de.lang $pkgdir/opt/pacmanxg/langs/de.lang
   install -Dm755 langs/ru.lang $pkgdir/opt/pacmanxg/langs/ru.lang
+  install -Dm755 langs/it.lang $pkgdir/opt/pacmanxg/langs/it.lang
+  install -Dm755 langs/fr.lang $pkgdir/opt/pacmanxg/langs/fr.lang
   install -Dm755 dizz.sh $pkgdir/opt/pacmanxg/dizz.sh
-  install -Dm755 ssx $pkgdir/opt/pacmanxg/ssx
   install -Dm755 themes $pkgdir/opt/pacmanxg/themes  
   install -Dm755 sections.ini $pkgdir/opt/pacmanxg/sections.ini
   install -Dm755 sections.list $pkgdir/opt/pacmanxg/sections.list
