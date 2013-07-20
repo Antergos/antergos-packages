@@ -1,8 +1,8 @@
 
 
 pkgname=libreoffice-installer
-pkgver=1.2.8
-pkgrel=1
+pkgver=1.2.10
+pkgrel=2
 pkgdesc="GUI installer for LibreOffice"
 arch=('i686' 'x86_64')
 url="http://almin-soft.fsay.net"
@@ -19,8 +19,8 @@ optdepends=()
 install=${pkgname}.install
 source=("libreoffice-installer.tar.bz2::http://almin-soft.fsay.net/data/files/archlibreofficeinstaller/download.php?get=archlibreofficeinstaller.tar.bz2"
 		"${pkgname}.desktop")
-md5sums=('5c3831bdea50568e1a3d9c9821761ba1'
-		 'dc8acd6e97fa664018f6710813854069')
+md5sums=('897ffef8057ceb3476116abe93a00438'
+         'dc8acd6e97fa664018f6710813854069')
 
 
 package() {
