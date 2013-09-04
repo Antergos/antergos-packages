@@ -2,7 +2,7 @@
 #Maintainer: Alexandre Minoshi
 
 pkgname=pacmanxg4
-pkgver=4.14.13.1
+pkgver=4.14.14
 pkgrel=1
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
@@ -17,7 +17,7 @@ fi
 optdepends=('yaourt: AUR support' 'pkgtools: pkgfile utility check' 'repacman: rebuild package')
 install=${pkgname}.install
 source=("pacmanXG4.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanXG4.tar.bz2")
-md5sums=('5b86c263be8aff40f58fa62c19835fe1')
+md5sums=('f544433015b8a95ba5d61fdd12da8932')
 
 package() {
   install -d $pkgdir/opt/pacmanxg
