@@ -1,0 +1,24 @@
+#Autor: Alexandre Minoshi(Almin-Soft Group)
+#Maintainer: Alexandre Minoshi
+
+pkgname=ssx
+pkgver=1.4
+pkgrel=1
+pkgdesc="A graphical frontend for su (X11)"
+options=('!strip')
+arch=('i686' 'x86_64')
+url="http://almin-soft.fsay.net/index.php?prochie-utility/ssx-hide/tags/ssx"
+license=('GPL2')
+if [ "${CARCH}" = 'x86_64' ]; then
+depends=('lib32-libx11' 'lib32-gcc-libs')
+elif [ "${CARCH}" = 'i686' ]; then
+depends=('libx11' 'gcc-libs')
+fi
+
+optdepends=('sudo: Give certain users the ability to run some commands as root')
+source=("ssx.tar.bz2::http://almin-soft.fsay.net/data/files/ssx/download.php?get=ssx.tar.bz2")
+
+package() {
+  install -Dm755 ssx $pkgdir/usr/bin/ssx
+}
+md5sums=('c1e002ea73a39835b7dc05f16e92af2d')
