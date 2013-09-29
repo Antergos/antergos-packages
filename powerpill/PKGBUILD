@@ -1,25 +1,25 @@
 #Maintainer: Xyne <ac xunilhcra enyx, backwards>
 pkgname=powerpill
-pkgver=2013.9
+pkgver=2013.9.19
 pkgrel=1
 pkgdesc='Pacman wrapper for parallel and segmented downloads.'
 arch=(any)
 license=(GPL)
 url="http://xyne.archlinux.ca/projects/powerpill"
 depends=(python3 pyalpm 'pm2ml>2012.12.12' reflector aria2)
-optdepends=('python3-threaded_servers: internal Pacserve support' 'rsync: Rsync download support')
+optdepends=('rsync: Rsync download support' 'python3-threaded_servers: internal Pacserve support')
 backup=(etc/powerpill/powerpill.json)
 source=(
-  http://xyne.archlinux.ca/projects/powerpill/src/powerpill-2013.9.tar.xz
-  http://xyne.archlinux.ca/projects/powerpill/src/powerpill-2013.9.tar.xz.sig
+  http://xyne.archlinux.ca/projects/powerpill/src/powerpill-2013.9.19.tar.xz
+  http://xyne.archlinux.ca/projects/powerpill/src/powerpill-2013.9.19.tar.xz.sig
 )
 sha512sums=(
-  b74e8cf18df8c006214d750d47b12ab8c532756eea15f2f75c537f266d733cdd46670ea3cdafbb3d157fd531b695837b13fab6791b3a1301d8931fa5beea8123
-  74d904bf0b564c3f8d0e628ca85b45eeff05b042be26e57f76406539603b0e9c97a8ae61305cf2933a3e2f56daa215098c91a55b8af7656880c38860848c51e2
+  4b0f8cd480c382ac268c18bad16d88579ea06cec0f75d27caabacd55576f6a6eba8cd3e2df31beac93f76ab9b2df269c4b81e8e9102768b5405db2dbd1e46c49
+  6d27f017cdb7c1acb2db3974a5fd053116ecad585f7b837f567e20d7f6f51616bef6d70246088324b41afef03638e36cf926a282a2b5701f22882bb6f2303ce0
 )
 md5sums=(
-  06a9eeabfc978f489c7263ebd2a5996e
-  95c1460d145de35607978caa6537664b
+  5703259b0be94bae81fb3125108a6ef8
+  dadabe56d052a906b4ebaac588e77cac
 )
 install=powerpill.install
 

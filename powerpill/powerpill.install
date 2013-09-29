@@ -1,10 +1,16 @@
 post_upgrade()
 {
-  oldver=$2
-  if [[ $(vercmp $oldver 2012.12.12.3) -le 0 ]]
+  newver="$1"
+  oldver="$2"
+  if [[ $(vercmp $oldver 2013.9) -le 0 ]]
   then
-    echo '==> WARNING: The following changes have been made to powerpill.json:
-             * rsync/server -> rsync/servers: this is now a list of servers
-             * rsync/db only: if true, Rsync will only be used for DB downloads'
+    cat <<'MSG'
+==> WARNING: Versions prior to 2013.9.19 downloaded explicitly specified
+             packages to the sync database directory when refreshing the
+             databases (e.g. "powerpill -Syu foo" would download foo to
+             /var/lib/pacman/sync/.) This has been corrected now but you
+             should run "rm /var/lib/pacman/sync/*.pkg.*" to remove any
+             extraneous packages.
+MSG
   fi
 }
