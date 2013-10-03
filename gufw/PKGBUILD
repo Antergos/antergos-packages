@@ -1,0 +1,39 @@
+# Contributer: Alucryd <alucryd at gmail dot com> 
+# Contributor: Jaroslav Lichtblau <dragonlord@aur.archlinux.org>
+# Contributor: Kessia 'even' Pinheiro <kessiapinheiro at gmail.com>
+# Contributor: peace4all <markspost at rocketmail dot com>
+# Maintainer Pablo Lezaeta <prflr88@gmail.com>
+
+pkgname=gufw
+pkgver=13.10.3
+pkgrel=1
+pkgdesc="An easy, intuitive way to manage your Linux firewall"
+arch=('any')
+url="http://gufw.org"
+license=('GPL3')
+depends=('dbus' 'dbus-python' 'gtk3' 'gnome-icon-theme-symbolic' 'webkitgtk' 'notification-daemon' 'polkit' 'python2-netifaces' 'python2-gobject' 'ufw')
+makedepends=('python2-distutils-extra' 'intltool')
+install=$pkgname.install
+source=("${pkgname}.tar.gz::https://launchpad.net/gui-ufw/gufw-13.10/13.10/+download/gui-ufw-13.10.3.tar.gz")
+
+prepare() {
+	cd "${srcdir}/gui-ufw-${pkgver}"
+
+	sed -i -e "s|#![ ]*/usr/bin/python$|#!/usr/bin/env python2|" \
+		-e "s|#![ ]*/usr/bin/env python$|#!/usr/bin/env python2|" \
+	$(find . -name '*.py')
+	sed -i "s|python ${LOCATIONS[${i}]}|python2 ${LOCATIONS[${i}]}|" bin/gufw
+	sed -i "s|python ${LOCATIONS[${i}]}|python2 ${LOCATIONS[${i}]}|" bin/gufw-pkexec
+}
+
+package(){
+	cd "${srcdir}/gui-ufw-${pkgver}"
+
+	python2 ./setup.py build install --root="${pkgdir}"
+
+	find "${pkgdir}" -type d | xargs chmod 755
+	find "${pkgdir}" -type f | xargs chmod 644
+	chmod -R 755 "${pkgdir}/usr/bin"
+}
+
+md5sums=('26997dc8b251aed1df00477d54d33d5c')
