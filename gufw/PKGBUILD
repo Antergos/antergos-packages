@@ -6,12 +6,14 @@
 
 pkgname=gufw
 pkgver=13.10.3
-pkgrel=1
+pkgrel=2
 pkgdesc="An easy, intuitive way to manage your Linux firewall"
 arch=('any')
 url="http://gufw.org"
 license=('GPL3')
-depends=('dbus' 'dbus-python' 'gtk3' 'gnome-icon-theme-symbolic' 'webkitgtk' 'notification-daemon' 'polkit' 'python2-netifaces' 'python2-gobject' 'ufw')
+depends=('dbus' 'python2-dbus' 'gtk3' 'gnome-icon-theme-symbolic' 'webkitgtk' 'notification-daemon' 'polkit' 'python2-netifaces' 'python2-gobject' 'ufw')
+optdepends=('polkit-gnome: run from the menu only in GNOME flashback and GNOME shell'
+'lxpolkit: run from the menu outside GNOME environments')
 makedepends=('python2-distutils-extra' 'intltool')
 install=$pkgname.install
 source=("${pkgname}.tar.gz::https://launchpad.net/gui-ufw/gufw-13.10/13.10/+download/gui-ufw-13.10.3.tar.gz")
