@@ -1,0 +1,22 @@
+# Maintainer: Marat "Morion" Talipov  <morion.self@gmail.com>
+
+pkgname=k-zukitwo
+pkgver=1.0
+pkgrel=2
+pkgdesc="A Zukitwo theme for KDE4"
+arch=('any')
+url="http://kde-look.org/content/show.php/?content=152500"
+license=('GPL')
+depends=('qtcurve-kde4')
+source=(http://kde-look.org/CONTENT/content-files/152500-K-Zukitwo.tar.gz)
+md5sums=('a0f37a1ddc0e166f6a2974a3edff3279')
+
+package() {
+  	cd "$srcdir"
+	install -dm 755 "${pkgdir}"/usr/
+	install -dm 755 "${pkgdir}"/usr/share
+	install -dm 755 "${pkgdir}"/usr/share/apps/
+	install -dm 755 "${pkgdir}"/usr/share/apps/QtCurve
+
+	install -m644 $srcdir/* "${pkgdir}"/usr/share/apps/QtCurve/
+}

@@ -1,0 +1,41 @@
+
+# Maintainer: Dustin Falgout <dustin@antergos.info>
+pkgname=lightdm-webkit-greeter
+pkgver=0.1.2
+pkgrel=6
+pkgdesc="LightDM greeter written in HTML/CSS/Java"
+arch=('i686' 'x86_64')
+url="https://launchpad.net/lightdm-webkit-greeter"
+license=('GPL3' 'LGPL3')
+depends=('lightdm' 'webkitgtk2')
+makedepends=('gnome-common' 'intltool')
+options=(!libtool)
+provides='lightdm-webkit-greeter'
+conflicts='lightdm-webkit-greeter-bzr'
+source=("http://launchpad.net/lightdm-webkit-greeter/trunk/$pkgver/+download/$pkgname-$pkgver.tar.gz")
+md5sums=(ff8247d5bbf3026140531061fbf1f51e) #generate with 'makepkg -g'
+
+build() {
+  cd $srcdir/$pkgname-$pkgver
+     LIBS+="-ljavascriptcoregtk-1.0" ./configure --prefix=/usr \
+     --sysconfdir=/etc --libexecdir=/usr/lib/lightdm
+   make
+   
+  # Set GTK+ Theme Property
+  sed -i '/^theme-name=/s/Ambiance/Zukitwo/' data/lightdm-webkit-greeter.conf
+
+  # Theme 'default' does not exist...
+  sed -i '/^webkit-theme=/s/default/antergos/' data/lightdm-webkit-greeter.conf
+
+  # this is Ubuntu branding... Replace it with something useful. ;)
+  sed -i '/^background=/s|/usr/share/backgrounds/warty-final-ubuntu.png|/usr/share/antergos/wallpapers/antergos-wallpaper.png|' data/lightdm-webkit-greeter.conf
+  # Replace Ubuntu font with Dejavusans
+  sed -i '/^font-name=/s|Ubuntu 11|DejaVuSans 11|' data/lightdm-webkit-greeter.conf
+
+}
+
+package() {
+  cd $srcdir/$pkgname-$pkgver
+  make DESTDIR=$pkgdir install 
+}
+
