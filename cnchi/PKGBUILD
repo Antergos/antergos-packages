@@ -2,17 +2,23 @@
 
 _pkgname=Cnchi
 pkgname=cnchi
-pkgver=0.3.2.1
+pkgver=0.4.1
 pkgrel=1
 pkgdesc='Graphical Installer for Antergos Linux'
 arch=(any)
 license=(GPL)
 url="https://github.com/Antergos/Cnchi"
 depends=(python pyalpm python-gobject python-dbus hdparm python-cairo libtimezonemap
-         py3parted hwinfo webkitgtk3)
-source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/Cnchi/archive/v${pkgver}.tar.gz")
-sha256sums=('804d2371ead77acf48f07e4d568a2e5efa21da9d65ff3791d12c38abc0ae7d81')
+         py3parted hwinfo webkitgtk3 upower)
+source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/Cnchi/archive/v${pkgver}.tar.gz"
+        'fix-translations.patch')
+sha256sums=('a1efc9fe6d589ccfc820b9ca172d4f6c2d6910d85b38eda02f69cb3ba07ef7c0'
+            '962032083411033811bc7f6b522f15db39bb1614ee559b40c56fce9b46055a26')
 
+
+prepare(){
+  patch -Np0 -i ../fix-translations.patch
+}
 
 build ()
 {
