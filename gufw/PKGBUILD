@@ -5,18 +5,19 @@
 # Maintainer Pablo Lezaeta <prflr88@gmail.com>
 
 pkgname=gufw
-pkgver=13.10.3
-pkgrel=2
+pkgver=14.04.0
+pkgrel=1
 pkgdesc="An easy, intuitive way to manage your Linux firewall"
 arch=('any')
 url="http://gufw.org"
 license=('GPL3')
-depends=('dbus' 'python2-dbus' 'gtk3' 'gnome-icon-theme-symbolic' 'webkitgtk' 'notification-daemon' 'polkit' 'python2-netifaces' 'python2-gobject' 'ufw')
+depends=('dbus' 'python2-dbus' 'gtk3' 'gnome-icon-theme-symbolic' 'webkitgtk' 'notification-daemon' 'polkit' 'python2-netifaces' 'ufw')
 optdepends=('polkit-gnome: run from the menu only in GNOME flashback and GNOME shell'
 'lxpolkit: run from the menu outside GNOME environments')
 makedepends=('python2-distutils-extra' 'intltool')
 install=$pkgname.install
-source=("${pkgname}.tar.gz::https://launchpad.net/gui-ufw/gufw-13.10/13.10/+download/gui-ufw-13.10.3.tar.gz")
+source=("${pkgname}.tar.gz::https://launchpad.net/gui-ufw/gufw-14.04/14.04/+download/gui-ufw-${pkgver}.tar.gz")
+md5sums=('3e2fe4b1db78f9f02acc6553a8d0f47c')
 
 prepare() {
 	cd "${srcdir}/gui-ufw-${pkgver}"
@@ -38,4 +39,3 @@ package(){
 	chmod -R 755 "${pkgdir}/usr/bin"
 }
 
-md5sums=('26997dc8b251aed1df00477d54d33d5c')

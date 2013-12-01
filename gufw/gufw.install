@@ -2,14 +2,18 @@ pkgname=gufw
 
 post_install() {
   gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor
+
   printf "\n"
   printf "Gufw needs DBUS service started to run correctly! \n"
+  ptintf "And python2-dbus have problems whiit this. \n"
   printf "## PLEASE READ BELOW ##\n"
   printf "1) A workaround was applied to /usr/lib/python2.7/sysconfig.py.\n"
   printf "   Please see: https://bugs.archlinux.org/task/30812 for more information\n"
   printf "2) Removing this package will reverse this workaround.\n"
   printf "3) This workaround will be needed after every python2 update/install,\n"
   printf "   simply re-install gufw package to re-apply the workaround.\n"
+  printf "If you know a more clean workaround o propper fix, please share it whit we. \n"
+
   sed -i "s|_EXEC_PREFIX = os.path.normpath(sys.exec_prefix)|_EXEC_PREFIX = '\/usr'|g" /usr/lib/python2.7/sysconfig.py
 }
 
@@ -19,5 +23,6 @@ post_upgrade() {
 
 post_remove() {
   gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor
+
   sed -i "s|_EXEC_PREFIX = '\/usr'|_EXEC_PREFIX = os.path.normpath(sys.exec_prefix)|g" /usr/lib/python2.7/sysconfig.py
 }
