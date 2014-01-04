@@ -1,0 +1,9 @@
+post_install()
+{
+	echo "Setting Antergos as default LightDM Theme"
+	sed -i 's|greeter-session=.*|greeter-session=lightdm-webkit-greeter|g' /etc/lightdm/lightdm.conf
+	sed -i 's|webkit-theme=.*|webkit-theme=antergos|g' /etc/lightdm/lightdm-webkit-greeter.conf
+	
+	echo "This version does not yet support choosing the session at login,"
+	echo "it must be changed in /etc/lightdm/lightdm.conf (user-session=SESSION)"
+}
