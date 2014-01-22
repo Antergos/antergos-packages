@@ -9,8 +9,8 @@
 # Contributor: Michalis Georgiou <mechmg93@gmail.comr>
 # Contributor: Alexander De Sousa <archaur.xandy21@spamgourmet.com>
 
-pkgname=ttf-google-fonts-git
-pkgver=20131111
+pkgname=ttf-google-fonts
+pkgver=20131228
 pkgrel=1
 pkgdesc="TrueType fonts from the Google Fonts project"
 arch=('any')
