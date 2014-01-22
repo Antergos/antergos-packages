@@ -2,7 +2,7 @@
 #Maintainer: Alexandre Minoshi
 
 pkgname=ssx
-pkgver=1.6
+pkgver=1.7
 pkgrel=1
 pkgdesc="A graphical frontend for su/sudo (X11)"
 options=('!strip')
@@ -21,4 +21,4 @@ source=("ssx.tar.bz2::http://almin-soft.fsay.net/data/files/ssx/download.php?get
 package() {
   install -Dm755 ssx $pkgdir/usr/bin/ssx
 }
-md5sums=('6bb04c44299a0c789cda5ceb4e81d6d8')
+md5sums=('88641bfefe42cc671e545bef5dd85687')
