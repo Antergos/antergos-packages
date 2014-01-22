@@ -2,22 +2,21 @@
 # Contributor: Jaroslav Lichtblau <dragonlord@aur.archlinux.org>
 # Contributor: Kessia 'even' Pinheiro <kessiapinheiro at gmail.com>
 # Contributor: peace4all <markspost at rocketmail dot com>
-# Maintainer Pablo Lezaeta <prflr88@gmail.com>
+# Maintainer: Pablo Lezaeta <prflr88@gmail.com>
 
 pkgname=gufw
-pkgver=14.04.0
+pkgver=14.04.1
 pkgrel=1
 pkgdesc="An easy, intuitive way to manage your Linux firewall"
 arch=('any')
 url="http://gufw.org"
 license=('GPL3')
-depends=('dbus' 'python2-dbus' 'gtk3' 'gnome-icon-theme-symbolic' 'webkitgtk' 'notification-daemon' 'polkit' 'python2-netifaces' 'ufw')
+depends=('dbus' 'python2-dbus' 'gtk3' 'gnome-icon-theme-symbolic' 'python2-gobject' 'webkitgtk' 'notification-daemon' 'polkit' 'python2-netifaces' 'ufw')
 optdepends=('polkit-gnome: run from the menu only in GNOME flashback and GNOME shell'
 'lxpolkit: run from the menu outside GNOME environments')
 makedepends=('python2-distutils-extra' 'intltool')
 install=$pkgname.install
 source=("${pkgname}.tar.gz::https://launchpad.net/gui-ufw/gufw-14.04/14.04/+download/gui-ufw-${pkgver}.tar.gz")
-md5sums=('3e2fe4b1db78f9f02acc6553a8d0f47c')
 
 prepare() {
 	cd "${srcdir}/gui-ufw-${pkgver}"
@@ -39,3 +38,4 @@ package(){
 	chmod -R 755 "${pkgdir}/usr/bin"
 }
 
+md5sums=('93ec5930e760673b35f7b578b9d4f626')
