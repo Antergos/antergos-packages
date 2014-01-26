@@ -1,0 +1,29 @@
+# $Id$
+# Maintainer: Gustau Castells <karasu@antergos.com>
+# Contributor:
+
+pkgname=antergos-slim-theme
+_pkgname=antergos-slim
+pkgver=1.0
+pkgrel=1
+pkgdesc="Antergos branded theme for the SLiM login manager"
+arch=('any')
+url="http://www.antergos.com/"
+license=('CCPL:cc-by-sa')
+optdepends=('slim: login manager providing theme support')
+install=theme.install
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/karasu/${pkgname}/archive/v${pkgver}.tar.gz")
+md5sums=('1931d309cfb91f27d977755de254465c')
+
+build()
+{
+	cd ${srcdir}/${pkgname}-${pkgver}
+}
+
+package()
+{
+	cd ${pkgdir}
+	mkdir -p usr/share/slim/themes
+	cd usr/share/slim/themes
+	echo "cp -dpr --no-preserve=ownership ${srcdir}/${pkgname}-${pkgver} ${_pkgname}"
+}

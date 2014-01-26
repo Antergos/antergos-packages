@@ -1,0 +1,6 @@
+post_install()
+{
+	echo "Setting Antergos as default SLIM theme"
+	sed -i 's|current_theme*|#current_theme|g' /etc/slim.conf
+        echo "current_theme antergos-slim" >> /etc/slim.conf	
+}
