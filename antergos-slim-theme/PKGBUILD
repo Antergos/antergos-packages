@@ -25,5 +25,5 @@ package()
 	cd ${pkgdir}
 	mkdir -p usr/share/slim/themes
 	cd usr/share/slim/themes
-	echo "cp -dpr --no-preserve=ownership ${srcdir}/${pkgname}-${pkgver} ${_pkgname}"
+	cp -dpr --no-preserve=ownership ${srcdir}/${pkgname}-${pkgver} ${_pkgname}
 }
