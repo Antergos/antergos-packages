@@ -1,0 +1,860 @@
+diff -Naur ./mintmenu.orig/usr/lib/linuxmint/mintMenu/mintMenu.py ./mintmenu/usr/lib/linuxmint/mintMenu/mintMenu.py
+--- ./mintmenu.orig/usr/lib/linuxmint/mintMenu/mintMenu.py	2012-11-18 14:40:40.945885541 -0500
++++ ./mintmenu/usr/lib/linuxmint/mintMenu/mintMenu.py	2012-11-18 14:40:53.612536192 -0500
+@@ -50,7 +50,7 @@
+ NAME = _("Menu")
+ PATH = os.path.abspath( os.path.dirname( sys.argv[0] ) )
+ 
+-ICON = "/usr/lib/linuxmint/mintMenu/visualisation-logo.png"
++ICON = "/usr/share/archlinux/icons/archlinux-icon-tango-16.svg"
+ 
+ sys.path.append( os.path.join( PATH , "plugins") )
+ 
+@@ -746,10 +746,10 @@
+         about = gtk.AboutDialog()
+         about.set_name("mintMenu")
+         import commands
+-        version = commands.getoutput("/usr/lib/linuxmint/common/version.py mintmenu")
++        version = "__version__"
+         about.set_version(version)
+         try:
+-            h = open('/usr/share/common-licenses/GPL','r')
++            h = open('/usr/share/licenses/common/GPL2/license.txt','r')
+             s = h.readlines()
+             gpl = ""
+             for line in s:
+diff -Naur ./mintmenu.orig/usr/lib/linuxmint/mintMenu/mintMenuConfig.glade ./mintmenu/usr/lib/linuxmint/mintMenu/mintMenuConfig.glade
+--- ./mintmenu.orig/usr/lib/linuxmint/mintMenu/mintMenuConfig.glade	2012-11-18 14:40:40.945885541 -0500
++++ ./mintmenu/usr/lib/linuxmint/mintMenu/mintMenuConfig.glade	2012-11-18 14:40:53.612536192 -0500
+@@ -1067,15 +1067,6 @@
+                       </packing>
+                     </child>
+                     <child>
+-                      <widget class="GtkCheckButton" id="use_apt">
+-                        <property name="label" translatable="yes">Search for packages to install</property>
+-                        <property name="visible">True</property>
+-                        <property name="can_focus">True</property>
+-                        <property name="receives_default">False</property>
+-                        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+-                        <property name="use_action_appearance">False</property>
+-                        <property name="draw_indicator">True</property>
+-                      </widget>
+                       <packing>
+                         <property name="right_attach">2</property>
+                         <property name="top_attach">6</property>
+diff -Naur ./mintmenu.orig/usr/lib/linuxmint/mintMenu/mintMenuConfig.py ./mintmenu/usr/lib/linuxmint/mintMenu/mintMenuConfig.py
+--- ./mintmenu.orig/usr/lib/linuxmint/mintMenu/mintMenuConfig.py	2012-11-18 14:40:40.942552212 -0500
++++ ./mintmenu/usr/lib/linuxmint/mintMenu/mintMenuConfig.py	2012-11-18 14:40:53.612536192 -0500
+@@ -53,7 +53,6 @@
+         wTree.get_widget("showAppComments").set_label(_("Show application comments"))
+         wTree.get_widget("showCategoryIcons").set_label(_("Show category icons"))
+         wTree.get_widget("hover").set_label(_("Hover"))
+-        wTree.get_widget("use_apt").set_label(_("Search for packages to install"))
+         wTree.get_widget("swapGeneric").set_label(_("Swap name and generic name"))
+ 
+         wTree.get_widget("label11").set_text(_("Border width:"))
+@@ -118,7 +117,6 @@
+ 
+         self.startWithFavorites = wTree.get_widget( "startWithFavorites" )
+         self.showAppComments = wTree.get_widget( "showAppComments" )
+-        self.useAPT = wTree.get_widget( "use_apt" )
+         self.showCategoryIcons = wTree.get_widget( "showCategoryIcons" )
+         self.showRecentPlugin = wTree.get_widget( "showRecentPlugin" )
+         self.showApplicationsPlugin = wTree.get_widget( "showApplicationsPlugin" )
+@@ -200,7 +198,6 @@
+ 
+         self.bindGconfValueToWidget( self.gconf, "bool", "start_with_favorites", self.startWithFavorites, "toggled", self.startWithFavorites.set_active, self.startWithFavorites.get_active )
+         self.bindGconfValueToWidget( self.gconfApplications, "bool", "show_application_comments", self.showAppComments, "toggled", self.showAppComments.set_active, self.showAppComments.get_active )
+-        self.bindGconfValueToWidget( self.gconfApplications, "bool", "use_apt", self.useAPT, "toggled", self.useAPT.set_active, self.useAPT.get_active )
+         self.bindGconfValueToWidget( self.gconfApplications, "bool", "show_category_icons", self.showCategoryIcons, "toggled", self.showCategoryIcons.set_active, self.showCategoryIcons.get_active )
+         self.bindGconfValueToWidget( self.gconfApplications, "bool", "categories_mouse_over", self.hover, "toggled", self.hover.set_active, self.hover.get_active )
+         self.bindGconfValueToWidget( self.gconfApplications, "bool", "swap_generic_name", self.swapGeneric, "toggled", self.swapGeneric.set_active, self.swapGeneric.get_active )
+diff -Naur ./mintmenu.orig/usr/lib/linuxmint/mintMenu/mintRemove.py ./mintmenu/usr/lib/linuxmint/mintMenu/mintRemove.py
+--- ./mintmenu.orig/usr/lib/linuxmint/mintMenu/mintRemove.py	2012-11-18 14:40:40.945885541 -0500
++++ ./mintmenu/usr/lib/linuxmint/mintMenu/mintRemove.py	2012-11-18 14:40:53.612536192 -0500
+@@ -42,21 +42,22 @@
+ 
+     def run(self):	
+ 	removePackages = string.split(self.package)
+-	cmd = ["sudo", "/usr/sbin/synaptic", "--hide-main-window",  \
+-	        "--non-interactive", "--parent-window-id", self.window_id]
+-	cmd.append("--progress-str")
+-	cmd.append("\"" + _("Please wait, this can take some time") + "\"")
+-	cmd.append("--finish-str")
+-	cmd.append("\"" + _("Application removed successfully") + "\"")
+-	f = tempfile.NamedTemporaryFile()
+-	for pkg in removePackages:
+-            f.write("%s\tdeinstall\n" % pkg)
+-        cmd.append("--set-selections-file")
+-        cmd.append("%s" % f.name)
+-        f.flush()
+-        comnd = Popen(' '.join(cmd), shell=True)
++	cmd = ["sudo", "mate-terminal", "-e",  \
++	        "\"/usr/lib/linuxmint/mintMenu/removescript", self.package, "\""]
++#	cmd.append("--progress-str")
++#	cmd.append("\"" + _("Please wait, this can take some time") + "\"")
++#	cmd.append("--finish-str")
++#	cmd.append("\"" + _("Application removed successfully") + "\"")
++	comnd = Popen(' '.join(cmd), shell=True)
++#	f = tempfile.NamedTemporaryFile()
++#	for pkg in removePackages:
++#	   cmd.append("%s" % f.name)
++#	   f.flush()
++#	   comnd = Popen(' '.join(cmd), shell=True)
++#            f.write("%s\tdeinstall\n" % pkg)
++#        cmd.append("--set-selections-file")
+ 	returnCode = comnd.wait()
+-	f.close()
++#	f.close()
+ 	gtk.main_quit()
+ 	sys.exit(0)
+ 		
+@@ -81,13 +82,14 @@
+         
+ 	
+ 	
+-	package = commands.getoutput("dpkg -S " + self.desktopFile)
+-	package = package[:package.find(":")]
+-	if package == "dpkg":
++#	package = commands.getoutput("dpkg -S " + self.desktopFile)
++	package = commands.getoutput("pacman -Qqo " + self.desktopFile)
++
++	if package[:6] == "error:":
+ 		warnDlg = gtk.Dialog(title="MintMenu", parent=None, flags=0, buttons=(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL))
+ 		warnDlg.add_button(gtk.STOCK_REMOVE, gtk.RESPONSE_OK)
+ 		warnDlg.vbox.set_spacing(10)
+-		warnDlg.set_icon_from_file("/usr/share/linuxmint/logo.png")
++		warnDlg.set_icon_from_file("/usr/share/archlinux/icons/archlinux-icon-tango-32.svg")
+ 		labelSpc = gtk.Label(" ")
+ 		warnDlg.vbox.pack_start(labelSpc)	
+ 		labelSpc.show()
+@@ -123,7 +125,7 @@
+ 	treeview.append_column(column1)
+ 
+ 	model = gtk.ListStore(str)
+-	dependenciesString = commands.getoutput("apt-get -s -q remove " + package + " | grep Remv")
++	dependenciesString = commands.getoutput("pacman -Rsp " + package + "|sed -e 's/-[0-9].*//'")
+ 	dependencies = string.split(dependenciesString, "\n")
+ 	for dependency in dependencies:
+ 		dependency = dependency.replace("Remv ", "")
+diff -Naur ./mintmenu.orig/usr/lib/linuxmint/mintMenu/plugins/applications.py ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/applications.py
+--- ./mintmenu.orig/usr/lib/linuxmint/mintMenu/plugins/applications.py	2012-11-18 14:40:40.945885541 -0500
++++ ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/applications.py	2012-11-18 14:40:53.615869521 -0500
+@@ -281,7 +281,6 @@
+         self.gconf.notifyAdd( "swap_generic_name", self.changeSwapGenericName )
+         self.gconf.notifyAdd( "show_category_icons", self.changeShowCategoryIcons )
+         self.gconf.notifyAdd( "show_application_comments", self.changeShowApplicationComments )
+-        self.gconf.notifyAdd( "use_apt", self.switchAPTUsage)
+         self.gconf.notifyAdd( "fav_cols", self.changeFavCols )
+ 
+         self.gconf.bindGconfEntryToVar( "int", "category_hover_delay", self, "categoryhoverdelay" )
+@@ -316,18 +315,12 @@
+             #for f in mymenu.directory.AppDirs:
+             #       self.menuFileMonitors.append( filemonitor.addMonitor(f, self.onMenuChanged, mymenu.directory.Filename ) )
+                         
+-        self.refresh_apt_cache()        
+         self.suggestions = []
+         self.current_suggestion = None
+         self.get_panel()
+         
+         self.wTree.get_widget("searchButton").connect( "button-release-event", self.searchPopup )        
+ 
+-    def refresh_apt_cache(self):
+-        if self.useAPT:
+-            os.system("mkdir -p %s/.linuxmint/mintMenu/" % home)
+-            os.system("/usr/lib/linuxmint/mintMenu/plugins/get_apt_cache.py > %s/.linuxmint/mintMenu/apt.cache &" % home)            
+-
+     def get_panel(self):
+         self.panel = None
+         self.panel_position = 0
+@@ -338,13 +331,6 @@
+                 self.panel = mateconf.client_get_default().get_string("/apps/panel/applets/" + applet + "/toplevel_id")
+                 self.panel_position = mateconf.client_get_default().get_int("/apps/panel/applets/" + applet + "/position") + 1
+       
+-    def apturl_install(self, widget, pkg_name):
+-		if os.path.exists("/usr/bin/apturl"):
+-			os.system("/usr/bin/apturl apt://%s &" % pkg_name)
+-		else:
+-			os.system("xdg-open apt://" + pkg_name + " &")    
+-		self.mintMenuWin.hide()
+-    
+     def __del__( self ):
+         print u"Applications plugin deleted"
+ 
+@@ -418,10 +404,6 @@
+             if isinstance( child, FavApplicationLauncher):
+                 child.setIconSize( self.faviconsize )
+                 
+-    def switchAPTUsage( self, client, connection_id, entry, args ):
+-        self.useAPT = entry.get_value().get_bool()        
+-        self.refresh_apt_cache()
+-
+     def changeShowApplicationComments( self, client, connection_id, entry, args ):
+         self.showapplicationcomments = entry.get_value().get_bool()
+         for child in self.applicationsBox:
+@@ -445,9 +427,6 @@
+             self.favoritesBox.remove( fav )
+             self.favoritesPositionOnGrid( fav )
+ 
+-    def RegenPlugin( self, *args, **kargs ):            
+-        self.refresh_apt_cache()
+-        
+         # save old config - this is necessary because the app will notified when it sets the default values and you don't want the to reload itself several times
+         oldcategories_mouse_over = self.categories_mouse_over
+         oldtotalrecent = self.totalrecent
+@@ -480,7 +459,6 @@
+         self.showcategoryicons = self.gconf.get( "bool", "show_category_icons", True )
+         self.categoryhoverdelay = self.gconf.get( "int", "category_hover_delay", 150 )
+         self.showapplicationcomments = self.gconf.get( "bool", "show_application_comments", True )
+-        self.useAPT = self.gconf.get( "bool", "use_apt", True )
+ 
+         self.lastActiveTab =  self.gconf.get( "int", "last_active_tab", 0 )
+         self.defaultTab = self.gconf.get( "int", "default_tab", -1 )
+@@ -637,144 +615,6 @@
+         #self.applicationsBox.add(self.last_separator)
+         #self.suggestions.append(self.last_separator)            
+ 
+-    def add_apt_filter_results(self, keyword):
+-        try:   
+-            # Wait to see if the keyword has changed.. before doing anything
+-            time.sleep(0.3)
+-            current_keyword = keyword
+-            gtk.gdk.threads_enter()
+-            try:
+-                current_keyword = self.searchEntry.get_text()
+-            finally:
+-                gtk.gdk.threads_leave()
+-            if keyword != current_keyword:
+-                return            
+-            found_packages = []
+-            found_in_name = []
+-            found_elsewhere = []
+-            keywords = keyword.split(" ")
+-            command = "cat %(home)s/.linuxmint/mintMenu/apt.cache" % {'home':home}
+-            for word in keywords:
+-                command = "%(command)s | grep %(word)s" % {'command':command, 'word':word}            
+-            pkgs = commands.getoutput(command)
+-            pkgs = pkgs.split("\n")
+-            num_pkg_found = 0
+-            for pkg in pkgs:
+-                values = string.split(pkg, "###")
+-                if len(values) == 4:
+-                    status = values[0]
+-                    if (status == "ERROR"):
+-                        print "Could not refresh APT cache"
+-                    elif (status == "CACHE"):
+-                        name = values[1]
+-                        summary = values[2]
+-                        description = values[3].replace("~~~", "\n")
+-                        package = PackageDescriptor(name, summary, description)
+-                        #See if all keywords are in the name (so we put these results at the top of the list)
+-                        some_found = False
+-                        some_not_found = False
+-                        for word in keywords:
+-                            if word in package.name:
+-                                some_found = True
+-                            else:
+-                                some_not_found = True
+-                        if some_found and not some_not_found:
+-                            found_in_name.append(package)
+-                        else:                        
+-                            found_elsewhere.append(package)                                        
+-                        num_pkg_found+=1
+-                    else:
+-                        print "Invalid status code: " + status
+-                if num_pkg_found >= 3:
+-                    break
+-            found_packages.extend(found_in_name)
+-            found_packages.extend(found_elsewhere)
+-            gtk.gdk.threads_enter()                                    
+-            try:
+-                if keyword == self.searchEntry.get_text() and len(found_packages) > 0:         
+-                    last_separator = gtk.EventBox()
+-                    last_separator.add(gtk.HSeparator())
+-                    last_separator.set_size_request(-1, 20)       
+-                    last_separator.type = "separator"   
+-                    self.mintMenuWin.SetPaneColors( [  last_separator ] )     
+-                    last_separator.show_all()
+-                    self.applicationsBox.add(last_separator)
+-                    self.suggestions.append(last_separator)
+-                    for pkg in found_packages:                        
+-                        name = pkg.name
+-                        for word in keywords: 
+-                            if word != "":             
+-                                name = name.replace(word, "<b>%s</b>" % word);
+-                        suggestionButton = SuggestionButton(gtk.STOCK_ADD, self.iconSize, "")
+-                        suggestionButton.connect("clicked", self.apturl_install, pkg.name)
+-                        suggestionButton.set_text(_("Install package '%s'") % name)
+-                        suggestionButton.set_tooltip_text("%s\n\n%s\n\n%s" % (pkg.name, pkg.summary, pkg.description))
+-                        suggestionButton.set_icon_size(self.iconSize)
+-                        self.applicationsBox.add(suggestionButton)
+-                        self.suggestions.append(suggestionButton)
+-                        #if cache != self.current_results:
+-                        #    self.current_results.append(pkg)
+-            finally:        
+-                gtk.gdk.threads_leave()            
+-                        
+-            #if len(found_packages) == 0:
+-            #    gtk.gdk.threads_enter()
+-            #    try:
+-            #        self.applicationsBox.remove(self.last_separator)
+-            #        self.suggestions.remove(self.last_separator)
+-            #    finally:
+-            #        gtk.gdk.threads_leave()           
+-                
+-        except Exception, detail:
+-            print detail           
+-
+-            
+-    def add_apt_filter_results_sync(self, cache, keyword):
+-        try:           
+-            found_packages = []           
+-            keywords = keyword.split(" ")
+-            if cache is not None:
+-                for pkg in cache:                      
+-                    some_found = False
+-                    some_not_found = False
+-                    for word in keywords:
+-                        if word in pkg.name:
+-                            some_found = True
+-                        else:
+-                            some_not_found = True
+-                    if some_found and not some_not_found:
+-                        found_packages.append(pkg)                     
+-                                                           
+-            if len(found_packages) > 0:         
+-                    last_separator = gtk.EventBox()
+-                    last_separator.add(gtk.HSeparator())
+-                    last_separator.set_size_request(-1, 20)       
+-                    last_separator.type = "separator"   
+-                    self.mintMenuWin.SetPaneColors( [  last_separator ] )     
+-                    last_separator.show_all()
+-                    self.applicationsBox.add(last_separator)
+-                    self.suggestions.append(last_separator)
+-            
+-            for pkg in found_packages:
+-                name = pkg.name
+-                for word in keywords:
+-                    if word != "":                    
+-                        name = name.replace(word, "<b>%s</b>" % word);
+-                suggestionButton = SuggestionButton(gtk.STOCK_ADD, self.iconSize, "")
+-                suggestionButton.connect("clicked", self.apturl_install, pkg.name)
+-                suggestionButton.set_text(_("Install package '%s'") % name)
+-                suggestionButton.set_tooltip_text("%s\n\n%s\n\n%s" % (pkg.name, pkg.summary.capitalize(), pkg.description))
+-                suggestionButton.set_icon_size(self.iconSize)
+-                self.applicationsBox.add(suggestionButton)
+-                self.suggestions.append(suggestionButton)
+-                        
+-            #if len(found_packages) == 0:
+-            #    self.applicationsBox.remove(self.last_separator)
+-            #    self.suggestions.remove(self.last_separator)
+-                
+-        except Exception, detail:
+-            print detail
+-            
+     def Filter( self, widget, category = None ):
+         self.filterTimer = None
+        
+@@ -794,28 +634,8 @@
+                     if (shown):
+                         showns = True
+                 
+-                if (not showns and os.path.exists("/usr/lib/linuxmint/mintInstall/icon.svg")):
+-                    if len(text) >= 3:
+-                        if self.current_suggestion is not None and self.current_suggestion in text:
+-                            # We're restricting our search... 
+-                            self.add_search_suggestions(text)
+-                            #if (len(self.current_results) > 0):
+-                                #self.add_apt_filter_results_sync(self.current_results, text)
+-                            #else:
+-                            thr = threading.Thread(name="mint-menu-apt-filter", group=None, target=self.add_apt_filter_results, args=([text]), kwargs={})
+-                            thr.start()  
+-                        else:
+-                            self.current_results = []  
+-                            self.add_search_suggestions(text) 
+-                            thr = threading.Thread(name="mint-menu-apt-filter", group=None, target=self.add_apt_filter_results, args=([text]), kwargs={})
+-                            thr.start()                                    
+-                        self.current_suggestion = text
+-                    else:
+-                        self.current_suggestion = None
+-                        self.current_results = []
+-                else:
+-                    self.current_suggestion = None
+-                    self.current_results = []
++                self.current_suggestion = None
++                self.current_results = []
+ 
+                 for i in self.categoriesBox.get_children():
+                     i.set_relief( gtk.RELIEF_NONE )
+@@ -1039,36 +859,36 @@
+         img = gtk.Image()
+         img.set_from_file('/usr/lib/linuxmint/mintMenu/search_engines/software.png')
+         menuItem.set_image(img)
+-        menuItem.connect("activate", self.search_mint_software)
++        menuItem.connect("activate", self.search_arch_software)
+         menu.append(menuItem)
+         
+         menuItem = gtk.ImageMenuItem(_("Find Tutorials"))
+         img = gtk.Image()
+-        img.set_from_file('/usr/lib/linuxmint/mintMenu/search_engines/tutorials.png')
++        img.set_from_file('/usr/lib/linuxmint/mintMenu/search_engines/ideas.png')
+         menuItem.set_image(img)
+-        menuItem.connect("activate", self.search_mint_tutorials)
++        menuItem.connect("activate", self.search_aur_software)
+         menu.append(menuItem)
+         
+-        menuItem = gtk.ImageMenuItem(_("Find Hardware"))
++        menuItem = gtk.ImageMenuItem(_("Find Bugs"))
+         img = gtk.Image()
+         img.set_from_file('/usr/lib/linuxmint/mintMenu/search_engines/hardware.png')
+         menuItem.set_image(img)
+-        menuItem.connect("activate", self.search_mint_hardware)
++        menuItem.connect("activate", self.search_arch_bugs)
+         menu.append(menuItem)
+         
+-        menuItem = gtk.ImageMenuItem(_("Find Ideas"))
++        menuItem = gtk.ImageMenuItem(_("Search Arch Wiki"))
+         img = gtk.Image()
+-        img.set_from_file('/usr/lib/linuxmint/mintMenu/search_engines/ideas.png')
++        img.set_from_file('/usr/lib/linuxmint/mintMenu/search_engines/tutorials.png')
+         menuItem.set_image(img)
+-        menuItem.connect("activate", self.search_mint_ideas)
++        menuItem.connect("activate", self.search_arch_wiki)
+         menu.append(menuItem)
+         
+-        menuItem = gtk.ImageMenuItem(_("Find Users"))
+-        img = gtk.Image()
+-        img.set_from_file('/usr/lib/linuxmint/mintMenu/search_engines/users.png')
+-        menuItem.set_image(img)
+-        menuItem.connect("activate", self.search_mint_users)
+-        menu.append(menuItem)
++#        menuItem = gtk.ImageMenuItem(_("Find Users"))
++#        img = gtk.Image()
++#        img.set_from_file('/usr/lib/linuxmint/mintMenu/search_engines/users.png')
++#        menuItem.set_image(img)
++#        menuItem.connect("activate", self.search_mint_users)
++#        menu.append(menuItem)
+         
+         menu.show_all()
+         #menu.popup( None, None, self.pos_func, 3, 0)
+@@ -1102,34 +922,34 @@
+         os.system("mate-dictionary \"" + text + "\" &")
+         self.mintMenuWin.hide()
+         
+-    def search_mint_tutorials(self, widget):
++    def search_aur_software(self, widget):
+         text = self.searchEntry.get_text()
+         text = text.replace(" ", "%20")
+-        os.system("xdg-open \"http://community.linuxmint.com/index.php/tutorial/search/0/" + text + "\" &")     
++        os.system("xdg-open \"http://aur.archlinux.org/packages.php?O=0&K=" + text + "\" &")     
+         self.mintMenuWin.hide()
+     
+-    def search_mint_ideas(self, widget):
++    def search_arch_wiki(self, widget):
+         text = self.searchEntry.get_text()
+         text = text.replace(" ", "%20")
+-        os.system("xdg-open \"http://community.linuxmint.com/index.php/idea/search/0/" + text + "\" &")     
++        os.system("xdg-open \"http://wiki.archlinux.org/index.php?title=Special:Search&search=" + text + "\" &")
+         self.mintMenuWin.hide()
+     
+-    def search_mint_users(self, widget):
+-        text = self.searchEntry.get_text()
+-        text = text.replace(" ", "%20")
+-        os.system("xdg-open \"http://community.linuxmint.com/index.php/user/search/0/" + text + "\" &")     
+-        self.mintMenuWin.hide()
++#    def search_mint_users(self, widget):
++#        text = self.searchEntry.get_text()
++#        text = text.replace(" ", "%20")
++#        os.system("xdg-open \"http://community.linuxmint.com/index.php/user/search/0/" + text + "\" &")     
++#        self.mintMenuWin.hide()
+     
+-    def search_mint_hardware(self, widget):
++    def search_arch_bugs(self, widget):
+         text = self.searchEntry.get_text()
+         text = text.replace(" ", "%20")
+-        os.system("xdg-open \"http://community.linuxmint.com/index.php/hardware/search/0/" + text + "\" &")     
++        os.system("xdg-open \"https://bugs.archlinux.org/index.php?string=" + text + "&project=0\" &")     
+         self.mintMenuWin.hide()
+         
+-    def search_mint_software(self, widget):
++    def search_arch_software(self, widget):
+         text = self.searchEntry.get_text()
+         text = text.replace(" ", "%20")
+-        os.system("xdg-open \"http://community.linuxmint.com/index.php/software/search/0/" + text + "\" &")     
++        os.system("xdg-open \"http://www.archlinux.org/packages/?q=" + text + "\" &")     
+         self.mintMenuWin.hide()
+         
+ 
+diff -Naur ./mintmenu.orig/usr/lib/linuxmint/mintMenu/plugins/easybuttons.py ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/easybuttons.py
+--- ./mintmenu.orig/usr/lib/linuxmint/mintMenu/plugins/easybuttons.py	2012-11-18 14:40:40.949218871 -0500
++++ ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/easybuttons.py	2012-11-18 14:40:53.615869521 -0500
+@@ -368,7 +368,7 @@
+     def execute( self, *args ):
+         if self.appExec:
+             if self.useTerminal:
+-                cmd = "x-terminal-emulator -e \"" + self.appExec + "\""
++                cmd = "mate-terminal -e \"" + self.appExec + "\""
+                 Execute(cmd)
+             else:
+                 Execute(self.appExec)
+diff -Naur ./mintmenu.orig/usr/lib/linuxmint/mintMenu/plugins/easygconf.py ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/easygconf.py
+--- ./mintmenu.orig/usr/lib/linuxmint/mintMenu/plugins/easygconf.py	2012-11-18 14:40:40.949218871 -0500
++++ ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/easygconf.py	2012-11-18 14:40:53.615869521 -0500
+@@ -62,7 +62,7 @@
+ 			return self.client.set_string( key, value )
+ 
+ 		if type == "int":
+-			return self.client.set_int( key, value )
++			return self.client.set_int( key, int(round(value)) )
+ 
+ 		if type == "color":
+ 			if self.evalColor( value ):
+diff -Naur ./mintmenu.orig/usr/lib/linuxmint/mintMenu/plugins/places.py ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/places.py
+--- ./mintmenu.orig/usr/lib/linuxmint/mintMenu/plugins/places.py	2012-11-18 14:40:40.949218871 -0500
++++ ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/places.py	2012-11-18 14:40:53.615869521 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import gtk
+ import gtk.glade
+@@ -158,6 +158,8 @@
+             Button2 = easyButton( "user-home", self.iconsize, [_("Home Folder")], -1, -1 )
+             if self.de == "mate":
+                 Button2.connect( "clicked", self.ButtonClicked, "caja %s " % home )
++            elif self.de == "xfce":
++                Button2.connect( "clicked", self.ButtonClicked, "exo-open --launch FileManager %s " % home )
+             else:
+                 Button2.connect( "clicked", self.ButtonClicked, "xdg-open %s " % home )
+             Button2.show()
+@@ -173,6 +175,8 @@
+                 Button3 = easyButton( "network-workgroup", self.iconsize, [_("Network")], -1, -1)
+             if self.de == "mate":
+                 Button3.connect( "clicked", self.ButtonClicked, "caja network:" )
++            if self.de == "xfce":
++                Button3.connect( "clicked", self.ButtonClicked, "exo-open --launch FileManager network:" )
+             else:
+                 Button3.connect( "clicked", self.ButtonClicked, "xdg-open network:" )
+             Button3.show()
+@@ -205,7 +209,7 @@
+         if ( self.showtrash == True ):
+             self.trashButton = easyButton( "user-trash", self.iconsize, [_("Trash")], -1, -1 )
+             if self.de == "xfce":
+-                self.trashButton.connect( "clicked", self.ButtonClicked, "thunar trash:" )
++                self.trashButton.connect( "clicked", self.ButtonClicked, "exo-open --launch FileManager trash:" )
+             elif self.de == "mate":
+                 self.trashButton.connect( "clicked", self.ButtonClicked, "caja trash:" )
+             else:
+@@ -222,6 +226,8 @@
+             path = path.replace("~", home)
+             if self.de == "mate":
+                 command = ( "caja \"" + path + "\"")
++            elif self.de == "xfce":
++                command = ( "exo-open --launch FileManager \"" + path + "\"")
+             else:
+                 command = ( "xdg-open \"" + path + "\"")
+             currentbutton = easyButton( "folder", self.iconsize, [self.customnames[index]], -1, -1 )
+@@ -255,6 +261,8 @@
+         self.mintMenuWin.hide()
+         if self.de == "mate":
+             os.system("caja %s &" % path)        
++        if self.de == "xfce":
++            os.system("exo-open --launch FileManager %s &" % path)   
+         else:
+             os.system("xdg-open %s &" % path)        
+ 
+diff -Naur ./mintmenu.orig/usr/lib/linuxmint/mintMenu/plugins/system_management.py ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/system_management.py
+--- ./mintmenu.orig/usr/lib/linuxmint/mintMenu/plugins/system_management.py	2012-11-18 14:40:40.945885541 -0500
++++ ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/system_management.py	2012-11-18 14:43:44.518986819 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import gtk
+ import gtk.glade
+@@ -50,7 +50,7 @@
+         self.gconf.notifyAdd( "show_lock_screen", self.RegenPlugin )
+         self.gconf.notifyAdd( "show_logout", self.RegenPlugin )
+         self.gconf.notifyAdd( "show_package_manager", self.RegenPlugin )
+-        self.gconf.notifyAdd( "show_software_manager", self.RegenPlugin )
++        self.gconf.notifyAdd( "show_root_terminal", self.RegenPlugin )
+         self.gconf.notifyAdd( "show_terminal", self.RegenPlugin )
+         self.gconf.notifyAdd( "show_quit", self.RegenPlugin )
+         self.gconf.notifyAdd( "allowScrollbar", self.RegenPlugin )
+@@ -103,7 +103,7 @@
+ 
+         # Check toggles
+ 
+-        self.showSoftwareManager = self.gconf.get( "bool", "show_software_manager", True )
++        self.showSoftwareManager = self.gconf.get( "bool", "show_root_terminal", True )
+         self.showPackageManager = self.gconf.get( "bool", "show_package_manager", True )
+         self.showControlCenter = self.gconf.get( "bool", "show_control_center", True )
+         self.showTerminal = self.gconf.get( "bool", "show_terminal", True )
+@@ -129,19 +129,22 @@
+     def do_standard_items( self ):
+ 
+         if ( self.showSoftwareManager == True ):
+-            if os.path.exists("/usr/lib/linuxmint/mintInstall/icon.svg"):
+-                Button1 = easyButton( "/usr/lib/linuxmint/mintInstall/icon.svg", self.iconsize, [_("Software Manager")], -1, -1 )
+-                Button1.connect( "clicked", self.ButtonClicked, "gksu mintinstall" )
+-                Button1.show()
+-                self.systemBtnHolder.pack_start( Button1, False, False )
+-                self.mintMenuWin.setTooltip( Button1, _("Browse and install available software") )
++            Button1 = easyButton( "gksu-root-terminal", self.iconsize, [_("Root Terminal")], -1, -1 )
++            if self.de == "xfce":
++                Button1.connect( "clicked", self.ButtonClicked, "exo-open --launch TerminalEmulator su -" )
++            else:
++                Button1.connect( "clicked", self.ButtonClicked, "gksu -l mate-terminal" )
++            Button1.show()
++            self.systemBtnHolder.pack_start( Button1, False, False )
++            self.mintMenuWin.setTooltip( Button1, _("Open a terminal as the root user") )
+ 
+         if ( self.showPackageManager == True ):
+-            Button2 = easyButton( "applications-system", self.iconsize, [_("Package Manager")], -1, -1 )
+-            Button2.connect( "clicked", self.ButtonClicked, "gksu /usr/sbin/synaptic" )
+-            Button2.show()
+-            self.systemBtnHolder.pack_start( Button2, False, False )
+-            self.mintMenuWin.setTooltip( Button2, _("Install, remove and upgrade software packages") )
++            if os.path.exists("/usr/bin/gpk-application"):
++                Button2 = easyButton( "pacman", self.iconsize, [_("Package Manager")], -1, -1 )
++                Button2.connect( "clicked", self.ButtonClicked, "/usr/bin/gpk-application" )
++                Button2.show()
++                self.systemBtnHolder.pack_start( Button2, False, False )
++                self.mintMenuWin.setTooltip( Button2, _("Install, remove and upgrade software packages using GNOME PackageKit") )
+ 
+         if ( self.showControlCenter == True ):
+             Button3 = easyButton( "gtk-preferences", self.iconsize, [_("Control Center")], -1, -1 )
+@@ -155,8 +158,13 @@
+ 
+         if ( self.showTerminal == True ):
+             Button4 = easyButton( "terminal", self.iconsize, [_("Terminal")], -1, -1 )
+-            if os.path.exists("/usr/bin/mate-terminal"):
+-                Button4.connect( "clicked", self.ButtonClicked, "mate-terminal" )
++            if self.de == "mate":
++                if os.path.exists("/usr/bin/mate-terminal"):
++                    Button4.connect( "clicked", self.ButtonClicked, "mate-terminal" )
++                else:
++                    Button4.connect( "clicked", self.ButtonClicked, "x-terminal-emulator" )
++            elif self.de == "xfce":
++                Button4.connect( "clicked", self.ButtonClicked, "exo-open --launch TerminalEmulator" )
+             else:
+                 Button4.connect( "clicked", self.ButtonClicked, "x-terminal-emulator" )
+             Button4.show()
+diff -Naur ./mintmenu.orig/usr/lib/linuxmint/mintMenu/plugins/system_management.py.orig ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/system_management.py.orig
+--- ./mintmenu.orig/usr/lib/linuxmint/mintMenu/plugins/system_management.py.orig	1969-12-31 19:00:00.000000000 -0500
++++ ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/system_management.py.orig	2012-11-02 11:00:37.000000000 -0400
+@@ -0,0 +1,203 @@
++#!/usr/bin/env python
++
++import gtk
++import gtk.glade
++import os
++import string
++import gettext
++
++from easybuttons import *
++from execute import Execute
++from easygconf import EasyGConf
++
++# i18n
++gettext.install("mintmenu", "/usr/share/linuxmint/locale")
++
++class pluginclass( object ):
++
++    def __init__( self, mintMenuWin, toggleButton, de ):
++
++        self.mintMenuWin = mintMenuWin
++        self.toggleButton = toggleButton
++        self.de = de
++
++        # Read GLADE file
++        gladefile                               = os.path.join( os.path.dirname( __file__ ), "system_management.glade" )
++        wTree                                   = gtk.glade.XML( gladefile, "mainWindow" )
++        self.systemBtnHolder    = wTree.get_widget( "system_button_holder" )
++        self.editableBtnHolder  = wTree.get_widget( "editable_button_holder" )
++        self.scrolledWindow = wTree.get_widget( "scrolledwindow2" )
++
++        # These properties are NECESSARY to maintain consistency
++
++        # Set 'window' property for the plugin (Must be the root widget)
++        self.window = wTree.get_widget( "mainWindow" )
++
++        # Set 'heading' property for plugin
++        self.heading = _("System")
++
++        # This should be the first item added to the window in glade
++        self.content_holder = wTree.get_widget( "System" )
++
++        # Items to get custom colors
++        self.itemstocolor = [ wTree.get_widget( "viewport2" ) ]
++
++        # Gconf stuff
++        self.gconf = EasyGConf( "/apps/mintMenu/plugins/system-management/" )
++
++        self.gconf.notifyAdd( "icon_size", self.RegenPlugin )
++        self.gconf.notifyAdd( "show_control_center", self.RegenPlugin )
++        self.gconf.notifyAdd( "show_lock_screen", self.RegenPlugin )
++        self.gconf.notifyAdd( "show_logout", self.RegenPlugin )
++        self.gconf.notifyAdd( "show_package_manager", self.RegenPlugin )
++        self.gconf.notifyAdd( "show_software_manager", self.RegenPlugin )
++        self.gconf.notifyAdd( "show_terminal", self.RegenPlugin )
++        self.gconf.notifyAdd( "show_quit", self.RegenPlugin )
++        self.gconf.notifyAdd( "allowScrollbar", self.RegenPlugin )
++        self.gconf.notifyAdd( "height", self.changePluginSize )
++        self.gconf.notifyAdd( "width", self.changePluginSize )
++        self.gconf.bindGconfEntryToVar( "bool", "sticky", self, "sticky" )
++
++        self.GetGconfEntries()
++
++        self.content_holder.set_size_request( self.width, self.height )
++
++    def destroy( self ):
++        self.gconf.notifyRemoveAll()
++
++    def wake (self) :
++        pass
++
++    def changePluginSize( self, client, connection_id, entry, args ):
++        self.allowScrollbar = self.gconf.get( "bool", "allowScrollbar", False)
++        if entry.get_key() == self.gconf.gconfDir+"width":
++            self.width = entry.get_value().get_int()
++        elif entry.get_key() == self.gconf.gconfDir+"height":
++            if (self.allowScrollbar == False):
++                self.height = -1
++                self.scrolledWindow.set_policy( gtk.POLICY_AUTOMATIC, gtk.POLICY_NEVER )
++            else:
++                self.scrolledWindow.set_policy( gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC )
++                self.height = entry.get_value().get_int()
++
++        self.content_holder.set_size_request( self.width, self.height )
++
++
++    def RegenPlugin( self, *args, **kargs ):
++        self.GetGconfEntries()
++        self.ClearAll()
++        self.do_standard_items()
++
++    def GetGconfEntries( self ):
++
++        self.width = self.gconf.get( "int", "width", 200 )
++        self.allowScrollbar = self.gconf.get( "bool", "allowScrollbar", False)
++        self.scrolledWindow.set_policy( gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC )
++        self.height = self.gconf.get( "int", "height", 180 )
++        self.content_holder.set_size_request( self.width, self.height )
++        if (self.allowScrollbar == False):
++            self.height = -1
++            self.scrolledWindow.set_policy( gtk.POLICY_AUTOMATIC, gtk.POLICY_NEVER )
++        self.content_holder.set_size_request( self.width, self.height )
++        self.iconsize = self.gconf.get( "int","icon_size", 16 )
++
++        # Check toggles
++
++        self.showSoftwareManager = self.gconf.get( "bool", "show_software_manager", True )
++        self.showPackageManager = self.gconf.get( "bool", "show_package_manager", True )
++        self.showControlCenter = self.gconf.get( "bool", "show_control_center", True )
++        self.showTerminal = self.gconf.get( "bool", "show_terminal", True )
++        self.showLockScreen = self.gconf.get( "bool", "show_lock_screen", True )
++        self.showLogout = self.gconf.get( "bool", "show_logout", True )
++        self.showQuit = self.gconf.get( "bool", "show_quit", True )
++
++        # Hide vertical dotted separator
++        self.hideseparator = self.gconf.get( "bool", "hide_separator", False )
++        # Plugin icon
++        self.icon = self.gconf.get( "string", 'icon', "preferences-system" )
++        # Allow plugin to be minimized to the left plugin pane
++        self.sticky = self.gconf.get( "bool", "sticky", False )
++        self.minimized = self.gconf.get( "bool", "minimized", False )
++
++    def ClearAll(self):
++        for child in self.systemBtnHolder.get_children():
++            child.destroy()
++        for child in self.editableBtnHolder.get_children():
++            child.destroy()
++
++    #Add standard items
++    def do_standard_items( self ):
++
++        if ( self.showSoftwareManager == True ):
++            if os.path.exists("/usr/lib/linuxmint/mintInstall/icon.svg"):
++                Button1 = easyButton( "/usr/lib/linuxmint/mintInstall/icon.svg", self.iconsize, [_("Software Manager")], -1, -1 )
++                Button1.connect( "clicked", self.ButtonClicked, "gksu mintinstall" )
++                Button1.show()
++                self.systemBtnHolder.pack_start( Button1, False, False )
++                self.mintMenuWin.setTooltip( Button1, _("Browse and install available software") )
++
++        if ( self.showPackageManager == True ):
++            Button2 = easyButton( "applications-system", self.iconsize, [_("Package Manager")], -1, -1 )
++            Button2.connect( "clicked", self.ButtonClicked, "gksu /usr/sbin/synaptic" )
++            Button2.show()
++            self.systemBtnHolder.pack_start( Button2, False, False )
++            self.mintMenuWin.setTooltip( Button2, _("Install, remove and upgrade software packages") )
++
++        if ( self.showControlCenter == True ):
++            Button3 = easyButton( "gtk-preferences", self.iconsize, [_("Control Center")], -1, -1 )
++            if self.de == "xfce":
++                Button3.connect( "clicked", self.ButtonClicked, "xfce4-settings-manager" )
++            else:
++                Button3.connect( "clicked", self.ButtonClicked, "mate-control-center" )
++            Button3.show()
++            self.systemBtnHolder.pack_start( Button3, False, False )
++            self.mintMenuWin.setTooltip( Button3, _("Configure your system") )
++
++        if ( self.showTerminal == True ):
++            Button4 = easyButton( "terminal", self.iconsize, [_("Terminal")], -1, -1 )
++            if os.path.exists("/usr/bin/mate-terminal"):
++                Button4.connect( "clicked", self.ButtonClicked, "mate-terminal" )
++            else:
++                Button4.connect( "clicked", self.ButtonClicked, "x-terminal-emulator" )
++            Button4.show()
++            self.systemBtnHolder.pack_start( Button4, False, False )
++            self.mintMenuWin.setTooltip( Button4, _("Use the command line") )
++
++        if self.de == "xfce":
++                Button6 = easyButton( "system-log-out", self.iconsize, [_("Logout")], -1, -1 )
++                Button6.connect( "clicked", self.ButtonClicked, "xfce4-session-logout" )
++                Button6.show()
++                self.systemBtnHolder.pack_start( Button6, False, False )
++                self.mintMenuWin.setTooltip( Button6, _("Log out or switch user") )
++        else:
++            if ( self.showLockScreen == True ):
++                Button5 = easyButton( "system-lock-screen", self.iconsize, [_("Lock Screen")], -1, -1 )
++                if os.path.exists("/usr/bin/mate-screensaver-command"):
++                    Button5.connect( "clicked", self.ButtonClicked, "mate-screensaver-command -l" )
++                else:
++                    Button5.connect( "clicked", self.ButtonClicked, "xdg-screensaver lock" )
++                Button5.show()
++                self.systemBtnHolder.pack_start( Button5, False, False )
++                self.mintMenuWin.setTooltip( Button5, _("Requires password to unlock") )
++
++            if ( self.showLogout == True ):
++                Button6 = easyButton( "system-log-out", self.iconsize, [_("Logout")], -1, -1 )
++                Button6.connect( "clicked", self.ButtonClicked, "mate-session-save --logout-dialog" )
++                Button6.show()
++                self.systemBtnHolder.pack_start( Button6, False, False )
++                self.mintMenuWin.setTooltip( Button6, _("Log out or switch user") )
++
++            if ( self.showQuit == True ):
++                Button7 = easyButton( "system-shutdown", self.iconsize, [_("Quit")], -1, -1 )
++                Button7.connect( "clicked", self.ButtonClicked, "mate-session-save --shutdown-dialog" )
++                Button7.show()
++                self.systemBtnHolder.pack_start( Button7, False, False )
++                self.mintMenuWin.setTooltip( Button7, _("Shutdown, restart, suspend or hibernate") )
++
++    def ButtonClicked( self, widget, Exec ):
++        self.mintMenuWin.hide()
++        if Exec:
++            Execute( Exec )
++
++    def do_plugin( self ):
++        self.do_standard_items()
+diff -Naur ./mintmenu.orig/usr/lib/matecomponent/servers/mintMenu.server ./mintmenu/usr/lib/matecomponent/servers/mintMenu.server
+--- ./mintmenu.orig/usr/lib/matecomponent/servers/mintMenu.server	2012-11-18 14:40:40.942552212 -0500
++++ ./mintmenu/usr/lib/matecomponent/servers/mintMenu.server	2012-11-18 14:40:53.615869521 -0500
+@@ -21,6 +21,6 @@
+         <oaf_attribute name="name" type="string" value="mintMenu"/>
+         <oaf_attribute name="description" type="string" value="Advanced Menu"/>
+         <oaf_attribute name="panel:category" type="string" value="Utilities"/>
+-        <oaf_attribute name="panel:icon" type="string" value="/usr/lib/linuxmint/mintMenu/mint-logo.svg"/>
++        <oaf_attribute name="panel:icon" type="string" value="/usr/share/archlinux/icons/archlinux-icon-tango-32.svg"/>
+ </oaf_server>
+ </oaf_info>

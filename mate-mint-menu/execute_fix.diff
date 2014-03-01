@@ -1,0 +1,12 @@
+diff -Naur ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/execute.py ./mintmenu.fix/usr/lib/linuxmint/mintMenu/plugins/execute.py
+--- ./mintmenu/usr/lib/linuxmint/mintMenu/plugins/execute.py	2012-05-09 08:40:53.000000000 -0400
++++ ./mintmenu.fix/usr/lib/linuxmint/mintMenu/plugins/execute.py	2012-09-13 01:04:30.256975277 -0400
+@@ -20,7 +20,7 @@
+ 			print "running manually..."
+ 			os.system(cmd + " &")
+ 			return True		
+-		cmd = cmd.split()
++	cmd = cmd.split()
+ 	cmd = RemoveArgs(cmd)
+ 	try:
+ 		os.chdir( os.path.expanduser( "~" ) )
