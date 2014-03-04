@@ -2,7 +2,7 @@
 
 pkgname=lightdm-webkit-theme-antergos
 _pkgname=antergos
-pkgver=1.1.4.1
+pkgver=1.1.6
 pkgrel=1
 pkgdesc="The official greeter theme of Antergos Linux"
 arch=('any')
@@ -11,7 +11,7 @@ license=('GPLv2')
 depends=('lightdm' 'lightdm-webkit-greeter' 'antergos-wallpapers')
 install=theme.install
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz")
-sha256sums=('473f15f89c18115a80048bc546b76f95e48a27d857cb07f7cc743346867fbdd1')
+sha256sums=('bdb081fcb75c0ae4fe7e73f592a0886e6bdf6f939b1283ea3585a2ca622ce42d')
 
 build()
 {

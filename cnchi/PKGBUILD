@@ -25,7 +25,8 @@ package() {
 	install -d ${pkgdir}/usr/share/locale/
 	install -d ${pkgdir}/usr/share/cnchi
 	install -Dm755 "${pkgname}.py" "$pkgdir/usr/share/cnchi/${pkgname}.py"
-	install -Dm755 "${pkgname}" "$pkgdir/usr/bin/cnchi"
+	install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/cnchi"
+	install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
 
 	for i in data scripts src ui; do
 		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
