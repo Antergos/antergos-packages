@@ -1,9 +1,9 @@
-#Autor: Alexandre Minoshi(Almin-Soft Group)
-#Maintainer: Alexandre Minoshi
+#Author: Alexandre Minoshi(Almin-Soft Group)
+#Maintainer: Antergos Developers <devs@antergos.com>
 
 pkgname=pacmanxg4
 pkgver=4.14.22
-pkgrel=2
+pkgrel=3
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
 arch=('i686' 'x86_64')
@@ -11,13 +11,16 @@ url="http://almin-soft.fsay.net/index.php?pacmanxg/4x-series"
 license=('GPL2')
 if [ "${CARCH}" = 'x86_64' ]; then
 depends=('pacman' 'lib32-libx11' 'lib32-gcc-libs' 'lib32-libxft' 'wget' 'ssx' 'lib32-libxrender')
+source=("pacmanXG464.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanXG464.tar.bz2")
+md5sums=('3d8244b9ca2a1c3faef068d9c43bc978')
 elif [ "${CARCH}" = 'i686' ]; then
 depends=('pacman' 'libx11' 'gcc-libs' 'wget' 'ssx' 'libxrender')
+source=("pacmanXG4.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanXG4.tar.bz2")
+md5sums=('011f0762d85c2bd4765d44ec785d0978')
 fi
 optdepends=('yaourt: AUR support' 'pkgtools: pkgfile utility check' 'repacman: rebuild package')
 install=${pkgname}.install
-source=("pacmanXG4.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanXG4.tar.bz2")
-md5sums=('011f0762d85c2bd4765d44ec785d0978')
+
 
 package() {
   install -d $pkgdir/opt/pacmanxg
