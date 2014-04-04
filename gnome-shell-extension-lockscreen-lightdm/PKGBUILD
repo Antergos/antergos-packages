@@ -1,8 +1,7 @@
 # Maintainer: Dustin Falgout <dustin@antergos.info>
 
 pkgname=gnome-shell-extension-lockscreen-lightdm
-_pkgname=antergos
-pkgver=1
+pkgver=1.0
 pkgrel=1
 pkgdesc="Lock screen button for use with LightDM"
 arch=('any')
@@ -12,8 +11,8 @@ depends=('gnome-shell-extensions' 'lightdm')
 install=lockscreen.install
 source=('extension.js'
         'metadata.json')
-md5sums=('ebf8cb64068df11dbd036080189a13c1'
-         '67578f9b0d7b678da4e531a1abd221e1')
+sha256sums=('9f2cd1fb6e33b118e2e42c61f9a8e89d14da792ab5c09924ee0a5ccb22670326'
+            '9e22ed0ca20bb148390bfd0bfc2aeb4a81d99363da7e32360626b4c53f133a37')
 
 build()
 {
@@ -23,8 +22,8 @@ build()
 package()
 {
 	cd ${pkgdir}
-	mkdir -p usr/share/gnome-shell/extensions/
-	cd usr/share/gnome-shell/extensions/
+	mkdir -p usr/share/gnome-shell/extensions/lockscreen@dev.antergos.com
+	cd usr/share/gnome-shell/extensions/lockscreen@dev.antergos.com
 	cp -dpr --no-preserve=ownership ${srcdir}/extension.js .
 	cp -dpr --no-preserve=ownership ${srcdir}/metadata.json .
 }
