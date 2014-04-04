@@ -1,0 +1,37 @@
+# Maintainer: Dustin Falgout <dustin@antergos.info>
+
+pkgname=lightdm-webkit-theme-antergos-git
+_gitname=lightdm-webkit-theme-antergos
+_pkgname=antergos
+pkgver=1.1.10.r2.g87bdbce
+pkgrel=1
+pkgdesc="The official greeter theme of Antergos Linux"
+arch=('any')
+url="http://www.antergos.com"
+license=('GPLv2')
+depends=('lightdm' 'lightdm-webkit-greeter' 'antergos-wallpapers')
+provides=('lightdm-webkit-theme-antergos')
+conflicts=('lightdm-webkit-theme-antergos')
+makedepends=('git')
+install=theme.install
+source=('git+http://github.com/Antergos/lightdm-webkit-theme-antergos.git')
+sha256sums=('SKIP')
+
+pkgver=$(git describe --long --tags | sed -r 's/([^-]*-g)/r\1/;s/-/./g')
+
+
+build()
+{
+	cd $_gitname
+}
+
+package()
+{
+	cd ${pkgdir}
+	mkdir -p usr/share/lightdm-webkit/themes
+	cd usr/share/lightdm-webkit/themes
+	cp -dpr --no-preserve=ownership ${srcdir}/lightdm-webkit-theme-antergos ${_pkgname}
+	msg "Removing .git files"
+	cd ${_pkgname}
+	rm -rf .gitignore
+}
