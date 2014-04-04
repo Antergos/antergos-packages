@@ -1,16 +1,16 @@
-# Alexandre Filgueira <alexfilgueira@cinnarch.com>
+# Alexandre Filgueira <alexfilgueira@antergos.com>
 
-pkgname=py3parted
-pkgver=0.1
+pkgname=pyparted
+pkgver=3.10
 pkgrel=1
 pkgdesc="Python 3 module for GNU parted"
-url="https://github.com/cinnarch/py3parted"
+url="https://fedorahosted.org/pyparted/"
 arch=('i686' 'x86_64')
 license=('GPL2')
 depends=('python' 'parted>=3.0')
 provides=('pyparted')
-source=(https://github.com/antergos/${pkgname}/archive/v${pkgver}.tar.gz)
-sha256sums=('7c21e953a181dcca1043dbd68c9bf2bf677ddfa857d6203869fbb17572a465c4')
+source=(https://fedorahosted.org/releases/p/y/pyparted/pyparted-${pkgver}.tar.gz)
+sha256sums=('bb8de71ba54983af84cf036002511cfb6d8fab4fc5e9a9be7236ecba6d24989f')
 
 build() {
   cd "${srcdir}"/${pkgname}-${pkgver}

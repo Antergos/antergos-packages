@@ -2,16 +2,16 @@
 
 _pkgname=Cnchi
 pkgname=cnchi
-pkgver=0.4.3
+pkgver=0.5.29
 pkgrel=1
 pkgdesc='Graphical Installer for Antergos Linux'
 arch=(any)
 license=(GPL)
 url="https://github.com/Antergos/Cnchi"
 depends=(python pyalpm python-gobject python-dbus hdparm python-cairo libtimezonemap
-         py3parted hwinfo webkitgtk3 upower)
+         pyparted hwinfo webkitgtk3 upower)
 source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/Cnchi/archive/v${pkgver}.tar.gz")
-sha256sums=('ba4f50e983a2398f5dd764614bc8612f0ce218ca72e154ba1761a4f8d25da730')
+sha256sums=('fe3dcd1ed334ec99ce5f694d70b670f3ea1754e9eed497e184f75195965cf3da')
 
 build ()
 {
