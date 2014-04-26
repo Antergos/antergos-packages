@@ -2,7 +2,7 @@
 
 pkgname=antergos-mirrorlist
 pkgver=20140426
-pkgrel=1
+pkgrel=2
 pkgdesc="Antergos mirrorlist for use by pacman"
 arch=('any')
 groups=('antergos-base')
@@ -10,7 +10,7 @@ url="http://www.antergos.com/"
 license=('GPL')
 backup=(etc/pacman.d/antergos-mirrorlist)
 source=(antergos-mirrorlist)
-sha256sums=('476c5b9b59d9ceccf74f1d80ab9dc7707ac235c248b99ab41fb99ef3a9b41221')
+sha256sums=('9cc75068ee96976556770e490bcb0dfe79ca5f228ff42d9f1cf81c78c38ada90')
 
 build() {
   mkdir -p $pkgdir/etc/pacman.d
