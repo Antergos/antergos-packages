@@ -1,20 +1,22 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
-pkgname=FaenzaFlattr
-pkgver=0.4
+pkgname=faenzaflatter-icon-theme-kde
+pkgver=0.6
 pkgrel=1
-pkgdesc="Flattr icon theme for KDE4 with KFaenza as fallback."
+pkgdesc="Flattr icon theme with KFaenza (KDE) as fallback."
 url="http://kde-look.org/content/show.php/FaenzaFlattr?content=164770"
 license=('CCPL')
 arch=('any')
 depends=('kfaenza-icon-theme')
-# Temporarily host source file until author sets up direct download link
-source=("http://antergos.info/FaenzaFlattr-0.4.7z")
-md5sums=('f212d9979ffa5f162ba240698c44df9b')
+provides=('faenzaflatter-icon-theme')
+conflicts=('faenzaflatter-icon-theme-gtk')
+source=('https://drive.google.com/uc?export=download&id=0BwlW9hKxf1tUYlNOajVFdEtnN1k')
+md5sums=('e9ce8a6c6fbdb22ce67466e8b9c62e18')
 options=(!strip)
 
 package() {
   install -d $pkgdir/usr/share/icons
+  rm -R $srcdir/FaenzaFlattr/.git
   cp -r $srcdir/FaenzaFlattr $pkgdir/usr/share/icons/
 
   cd ${pkgdir}/usr/share/icons/FaenzaFlattr
@@ -24,5 +26,6 @@ package() {
   find $pkgdir/usr -type f -exec chmod 644 {} \;
   find $pkgdir/usr -type d -exec chmod 755 {} \;
   find $pkgdir/usr -type f -name '.directory' -delete
+  find $pkgdir/usr -type f -name '.gitignore' -delete
 
 }
