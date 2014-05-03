@@ -2,12 +2,12 @@
 
 pkgname=gnome-shell-extension-lockscreen-lightdm
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Lock screen button for use with LightDM"
 arch=('any')
 url="http://www.antergos.com"
 license=('GPLv2')
-depends=('gnome-shell-extensions' 'lightdm')
+depends=('gnome-shell-extensions' 'lightdm' 'xscreensaver')
 install=lockscreen.install
 source=('extension.js'
         'metadata.json')
