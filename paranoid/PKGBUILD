@@ -27,12 +27,13 @@ build() {
   patch -Np1 -i ../fix-glade-location.patch
 
   python2 setup.py build
-
-  install -m644 $srcdir/paranoid.desktop $pkgdir/usr/share/applications/
 }
 
 package() {
   cd "$srcdir/$_gitname"
 
   python2 ./setup.py install --prefix=/usr --root=${pkgdir}
+  
+  install -d ${pkgdir}/usr/share/applications
+  install -m644 "$srcdir/${pkgname}.desktop" "$pkgdir/usr/share/applications"
 }
