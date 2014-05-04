@@ -1,0 +1,24 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=numix-icon-theme-square-kde
+pkgver=2014.05
+pkgrel=2
+pkgdesc="Square icon expansion theme from the Numix project"
+arch=('any')
+url='http://numixproject.org/'
+license=('GPL3')
+depends=('kfaenza-icon-theme' 'numix-icon-theme')
+provides=("${pkgname%-*}")
+conflicts=("${pkgname%-*}")
+options=('!strip')
+install="${pkgname}.install"
+source=("http://antergos.info/Numix-Square.tar.gz")
+sha256sums=('SKIP')
+
+
+package() {
+  cd ${srcdir}
+  sed -i 's|Inherits=Numix|Inherits=Numix,KFaenza|g' Numix-Square/index.theme
+  install -dm 755 "$pkgdir"/usr/share/icons
+  cp -dr --no-preserve='ownership' Numix-Square "$pkgdir"/usr/share/icons/
+}
