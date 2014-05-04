@@ -19,11 +19,11 @@ Server = http://mirrors.antergos.com/$repo/$arch
 #Server = http://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
 
 # England
-#Server = http://www.mirrorservice.org/sites/repo.cinnarch.com/$repo/$arch
+#Server = http://www.mirrorservice.org/sites/repo.antergos.com/$repo/$arch
 
 # Germany
 #Server = http://cinnarch.limun.org/$repo/$arch
-#Server = http://mirror.de.leaseweb.net/cinnarch/$repo/$arch
+#Server = http://mirror.de.leaseweb.net/antergos/$repo/$arch
 
 # Netherlands
 #Server = http://mirror.nl.leaseweb.net/cinnarch/$repo/$arch
@@ -34,7 +34,7 @@ Server = http://mirrors.antergos.com/$repo/$arch
 #Server = http://softlibre.unizar.es/cinnarch/$repo/$arch
 
 # USA
-#Server = http://mirror.us.leaseweb.net/cinnarch/$repo/$arch
+#Server = http://mirror.us.leaseweb.net/antergos/$repo/$arch
 #Server = http://repo.antergos.info/$repo/$arch
 #Server = http://mirror.umd.edu/antergos/$repo/$arch
 #Server = http://mirrors.acm.wpi.edu/antergos/$repo/$arch
