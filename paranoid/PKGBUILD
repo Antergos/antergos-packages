@@ -2,11 +2,11 @@
 
 pkgname=paranoid
 _gitname=paranoid
-pkgver=1.0.4
+pkgver=1.1.0
 pkgrel=1
 pkgdesc="GTK+3 configuration tool for compton."
 arch=(any)
-url="https://github.com/karasu/paranoid"
+url="https://github.com/semplice/paranoid"
 license=('GPL3')
 depends=('python2' 'gtk3' 'compton')
 makedepends=('git')
