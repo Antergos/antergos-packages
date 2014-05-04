@@ -2,7 +2,7 @@
 
 pkgname=paranoid
 _gitname=paranoid
-pkgver=1.1.0
+pkgver=1.1.1
 pkgrel=1
 pkgdesc="GTK+3 configuration tool for compton."
 arch=(any)
