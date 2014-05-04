@@ -10,7 +10,7 @@ url="https://github.com/karasu/paranoid"
 license=('GPL3')
 depends=('python2' 'gtk3' 'compton')
 makedepends=('git')
-source=("git://github.com/karasu/paranoid.git"
+source=("git://github.com/semplice/paranoid.git"
 		"fix-glade-location.patch")
 sha256sums=('SKIP'
             'e3a99709fae9befd5e708624e50520df14dd70ec927c4f311141bcd7fa402b11')
