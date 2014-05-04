@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=paranoid
+GenericName=paranoid
+Comment=Configuration tool for compton
+Exec=python2 /usr/bin/paranoid.py
+Icon=desktop-effects
+Terminal=False
+Type=Application
+Categories=System;
