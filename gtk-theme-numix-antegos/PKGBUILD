@@ -1,0 +1,26 @@
+# Maintainer: Antergos Devs 
+
+pkgname=gtk-theme-numix-antergos
+pkgver=2.ea4c2bd
+pkgrel=1
+pkgdesc= Official Numix GTK theme - Antergos edition.
+arch=('any')
+license=('GPL3')
+url=''
+depends=('gtk-engine-murrine')
+source=("")
+makedepends=('git')
+md5sums=('SKIP')
+
+pkgver() {
+  cd ${srcdir}/
+  echo $(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+}
+
+build() {
+	
+}
+
+package() {
+	
+}
