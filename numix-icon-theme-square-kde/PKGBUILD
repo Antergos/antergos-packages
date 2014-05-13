@@ -7,7 +7,8 @@ pkgdesc="Square icon expansion theme from the Numix project"
 arch=('any')
 url='http://numixproject.org/'
 license=('GPL3')
-depends=('kfaenza-icon-theme' 'numix-icon-theme')
+depends=('numix-icon-theme')
+optdepends('kfaenza-icon-theme: fallback icons')
 provides=("${pkgname%-*}")
 conflicts=("${pkgname%-*}")
 options=('!strip')
