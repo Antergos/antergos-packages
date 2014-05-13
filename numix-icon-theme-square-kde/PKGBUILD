@@ -8,12 +8,12 @@ arch=('any')
 url='http://numixproject.org/'
 license=('GPL3')
 depends=('numix-icon-theme')
-optdepends('kfaenza-icon-theme: fallback icons')
+optdepends=('kfaenza-icon-theme: fallback icons')
 provides=("${pkgname%-*}")
 conflicts=("${pkgname%-*}")
 options=('!strip')
 install="${pkgname}.install"
-source=("http://antergos.info/Numix-Square.tar.gz")
+source=("http://storage.antergos.com/numix/Numix-Square.tar.gz")
 sha256sums=('SKIP')
 
 

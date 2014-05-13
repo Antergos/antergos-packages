@@ -10,7 +10,7 @@
 
 _pkgname=mintmenu
 pkgname=mate-mint-menu
-pkgver=5.5.3
+pkgver=5.5.5
 pkgrel=1
 pkgdesc="Linux Mint Menu for MATE"
 arch=('any')
@@ -26,7 +26,7 @@ source=("${url}/mintmenu_${pkgver}.tar.gz"
         'execute_fix.diff'
         'removescript')
 install=${pkgname}.install
-sha256sums=('065dcacf0537de2251abc889ce258b548d2e955f6bef51cb1449b9e568f36c40'
+sha256sums=('aea868d9e6da23f3c033e56d1e2fdf187fdce613fd223748f6bbcfb25fe2dcfe'
             '1c37bb89e6feadeac4cae5a59de563b19df07611c3fb0d7dfd5fa2bc44a2dead'
             '9533d0f5416af1f2b8ef5097f06e39135278eef856994d859c4ee7ba57d6fcaa')
 
