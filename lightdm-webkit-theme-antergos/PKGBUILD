@@ -11,7 +11,7 @@ license=('GPLv2')
 depends=('lightdm' 'lightdm-webkit-greeter' 'antergos-wallpapers')
 install=theme.install
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
-sha256sums=('a1262514000cc1264f0e27802ef6e69246f036009592680645628a33429e8470')
+sha256sums=('abcc2d29e8a5f3bc39305c1a17ce4963f14cd7fa77e4a97703c3f39296300202')
 
 build()
 {
