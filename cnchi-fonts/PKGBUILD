@@ -1,0 +1,10 @@
+#Maintainer: Gustau Castells <karasu@antergos.com>
+
+pkgname=cnchi-fonts
+pkgver=0.1
+pkgrel=1
+pkgdesc='Graphical Installer Fonts'
+arch=(any)
+license=(GPL)
+depends=(ttf-aboriginal-sans ttf-indic-otf ttf-khmer ttf-myanmar3 ttf-tlwg divehi-fonts)
+source=()
