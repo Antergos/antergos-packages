@@ -1,0 +1,19 @@
+# $Id$
+# Maintainer: Gustau Castells <karasu@antergos.com>
+
+pkgname=ttf-opificio
+pkgver=1.0
+pkgrel=1
+pkgdesc="Opificio font is a sans serif font designed by monocromo. Opificio font family has 3 variants."
+arch=('any')
+url="http://www.studiomonocromo.it/opificio"
+license=('custom')
+depends=('unzip' 'fontconfig' 'xorg-fonts-encodings' 'xorg-mkfontscale' 'xorg-mkfontdir')
+install=ttf-opificio.install
+source=(${pkgname}.zip::http://img.dafont.com/dl/?f=opificio)
+md5sums=('ee030f5f6395d2536012cfbd84253e87')
+
+package() {
+  install -dm755 "${pkgdir}"/usr/share/fonts/TTF
+  install -m644 *.ttf "${pkgdir}"/usr/share/fonts/TTF/
+}
