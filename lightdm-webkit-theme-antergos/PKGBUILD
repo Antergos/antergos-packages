@@ -1,8 +1,8 @@
-# Maintainer: Dustin Falgout <dustin@antergos.info>
+# Maintainer: Antergos Devs <dev@antergos.com>
 
 pkgname=lightdm-webkit-theme-antergos
 _pkgname=antergos
-pkgver=2.0
+pkgver=2.0.1
 pkgrel=1
 pkgdesc="The official greeter theme of Antergos Linux"
 arch=('any')
