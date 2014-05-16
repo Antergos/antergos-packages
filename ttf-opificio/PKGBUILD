@@ -1,5 +1,4 @@
-# $Id$
-# Maintainer: Gustau Castells <karasu@antergos.com>
+# Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=ttf-opificio
 pkgver=1.0
