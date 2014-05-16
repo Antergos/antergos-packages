@@ -1,6 +1,6 @@
 # Maintainer: Janne Haapsaari <haaja@iki.fi>
 # Contributor: Christopher Krooß <didi2002 at web.de>
-# Contributor: Gustau Castells <karasu at antergos.com>
+# Contributor: Antergos Devs <devs@antergos.com>
 
 pkgname=gnome-shell-extension-dash-to-dock
 pkgver=v29
