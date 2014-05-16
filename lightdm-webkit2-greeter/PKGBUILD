@@ -1,0 +1,40 @@
+# Maintainer: Gustau Castells <karasu@antergos.com>
+
+pkgname=lightdm-webkit2-greeter
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="A lightweight display manager greeter"
+arch=('i686' 'x86_64')
+#url="https://launchpad.net/lightdm-webkit-greeter"
+url="https://github.com/karasu/lightdm-webkit2-greeter"
+license=('GPL3' 'LGPL3')
+#source=("http://launchpad.net/lightdm-webkit-greeter/trunk/$pkgver/+download/$pkgname-$pkgver.tar.gz")
+source=("$pkgname-$pkgver.tar.gz::https://github.com/karasu/lightdm-webkit2-greeter/archive/v${pkgver}.tar.gz")
+depends=('lightdm' 'webkitgtk' 'gtk-engines')
+options=(!libtool)
+makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool')
+sha256sums=('0291397919705173df04b411e1393729ee774214f208f1b1a707cecc8c34a4fc')
+
+build() {
+  cd $srcdir/$pkgname-$pkgver
+     LIBS+="-ljavascriptcoregtk-1.0" ./autogen.sh --prefix=/usr \
+     --sysconfdir=/etc --libexecdir=/usr/lib/lightdm
+   make
+   
+  # What is Ambiance? This should be a GTK+ 2.x theme, so we use Clearlooks here.
+  #sed -i '/^theme-name=/s/Ambiance/Clearlooks/' data/lightdm-webkit2-greeter.conf
+
+  # Theme 'default' does not exist...
+  sed -i '/^webkit-theme=/s/default/webkit/' data/lightdm-webkit2-greeter.conf
+
+  # this is Ubuntu branding... Replace it with something useful. ;)
+  sed -i '/^background=/s|/usr/share/backgrounds/warty-final-ubuntu.png||' data/lightdm-webkit2-greeter.conf
+  # Replace Ubuntu font with Dejavusans
+  sed -i '/^font-name=/s|Ubuntu 11|DejaVuSans 11|' data/lightdm-webkit2-greeter.conf
+
+}
+
+package() {
+  cd $srcdir/$pkgname-$pkgver
+  make DESTDIR=$pkgdir install 
+}
