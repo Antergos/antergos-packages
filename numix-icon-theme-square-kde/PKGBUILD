@@ -2,7 +2,7 @@
 
 pkgname=numix-icon-theme-square-kde
 pkgver=2014.05
-pkgrel=2
+pkgrel=3
 pkgdesc="Square icon expansion theme from the Numix project"
 arch=('any')
 url='http://numixproject.org/'
