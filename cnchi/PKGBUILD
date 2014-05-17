@@ -11,7 +11,7 @@ url="https://github.com/Antergos/Cnchi"
 depends=(python pyalpm python-gobject python-dbus hdparm python-cairo libtimezonemap
          pyparted hwinfo webkitgtk3 upower python-mako)
 source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/Cnchi/archive/v${pkgver}.tar.gz")
-sha256sums=('02e540ba8f4b670109f971f2967b5ac95f3626d57cebd96b856454478b735338')
+sha256sums=('7ebe0efc47abd04afb64fc8acfa4fe53f5edb1f3186560076d7b7401cb195e7d')
 
 build ()
 {
