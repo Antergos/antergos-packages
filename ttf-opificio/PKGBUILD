@@ -10,7 +10,7 @@ license=('custom')
 depends=('unzip' 'fontconfig' 'xorg-fonts-encodings' 'xorg-mkfontscale' 'xorg-mkfontdir')
 install=ttf-opificio.install
 source=(${pkgname}.zip::http://img.dafont.com/dl/?f=opificio)
-md5sums=('ee030f5f6395d2536012cfbd84253e87')
+sha256sums=('89606ba3cd126ad64afb73b6df9f49cf47d2075b01ade9747fa76fc3e4d22c0c')
 
 package() {
   install -dm755 "${pkgdir}"/usr/share/fonts/TTF

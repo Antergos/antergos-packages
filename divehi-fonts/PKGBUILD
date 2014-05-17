@@ -7,22 +7,11 @@ pkgrel=3
 pkgdesc="Divehi(thaana) fonts for archlinux"
 arch=('any')
 url="https://launchpad.net/~mvishah/+archive/ttf-dhivehi-fonts"
-license=('unknown')
-groups=()
+license=('GPL3')
 depends=('xorg-fonts-encodings' 'xorg-font-utils' 'fontconfig')
-makedepends=()
-checkdepends=()
-optdepends=()
-provides=()
-conflicts=()
-replaces=()
-backup=()
-options=()
 install=divehi-fonts.install
-changelog=
 source=("https://launchpad.net/~mvishah/+archive/ttf-dhivehi-fonts/+files/ttf-thaana-fonts_1.0-1_i386.deb")
-noextract=()
-md5sums=('81c32e76e82b17fc61f90da20b40569d')
+sha256sums=('4185f7ef5e1384374b6c349f6076e21a0ac131426df703afbf1ffc9205756f15')
 
 build() {
   cd "$srcdir"

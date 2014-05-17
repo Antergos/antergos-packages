@@ -10,11 +10,12 @@ license=('free')
 depends=('fontconfig' 'xorg-font-utils')
 source=(http://myanmar3source.googlecode.com/files/mm3_20-Jan-2011.ttf)
 install=$pkgname.install
+sha256sums=('d3f499ea4bc25ac62bd6b7adb0a53398e95da6c042cba8f662afe56157484472')
 
 package()
 {
   mkdir -p "${pkgdir}/usr/share/fonts/TTF"
   cp "${srcdir}/mm3_20-Jan-2011.ttf" "${pkgdir}/usr/share/fonts/TTF/mm3.ttf"
 }
-md5sums=('5187cd65099bfa0f281036f420bddc06')
+
 

@@ -6,20 +6,23 @@ pkgrel=3
 pkgdesc="Square icon expansion theme from the Numix project"
 arch=('any')
 url='http://numixproject.org/'
-license=('GPL3')
+license=('custom')
 depends=('numix-icon-theme')
 optdepends=('kfaenza-icon-theme: fallback icons')
-provides=("${pkgname%-*}")
-conflicts=("${pkgname%-*}")
 options=('!strip')
 install="${pkgname}.install"
-source=("http://storage.antergos.com/numix/Numix-Square.tar.gz")
-sha256sums=('SKIP')
+source=("http://storage.antergos.com/numix/numix-icon-theme-square.zip")
+sha256sums=('ffe043df0b7e0d06732c444d56d11da0d969e6906a5146e745203f3c1f558ac6')
 
 
 package() {
-  cd ${srcdir}
+  cd ${srcdir}/numix-icon-theme-square
+  pwd
   sed -i 's|Inherits=Numix|Inherits=Numix,KFaenza|g' Numix-Square/index.theme
   install -dm 755 "$pkgdir"/usr/share/icons
   cp -dr --no-preserve='ownership' Numix-Square "$pkgdir"/usr/share/icons/
+
+    # License
+  install -Dm 644 LICENSE \
+    "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
