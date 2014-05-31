@@ -1,8 +1,8 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme-square
-pkgver=2014.05
-pkgrel=3
+pkgver=2014.05.31
+pkgrel=1
 pkgdesc="Square icon expansion theme from the Numix project"
 arch=('any')
 url='http://numixproject.org/'
@@ -12,7 +12,7 @@ optdepends=('faenza-icon-theme: fallback icons')
 options=('!strip')
 install="${pkgname}.install"
 source=("http://storage.antergos.com/numix/numix-icon-theme-square.zip")
-sha256sums=('ffe043df0b7e0d06732c444d56d11da0d969e6906a5146e745203f3c1f558ac6')
+sha256sums=('36c3a4c4a9a8c73a2b03ee3ba0f4870b426e209eba997a106d0a66918f742bd3')
 
 
 package() {
