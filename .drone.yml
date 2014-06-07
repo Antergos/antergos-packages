@@ -4,3 +4,5 @@ env:
   - PKGS=(pacmanxg4 numix-frost-themes)
 script:
   - /run.sh
+cache:
+  - build.log
