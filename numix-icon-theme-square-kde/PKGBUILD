@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme-square-kde
-pkgver=2014.05.31
+pkgver=2014.07.02
 pkgrel=1
 pkgdesc="Square icon expansion theme from the Numix project"
 arch=('any')
@@ -11,7 +11,7 @@ depends=('numix-icon-theme')
 optdepends=('kfaenza-icon-theme: fallback icons')
 options=('!strip')
 install="${pkgname}.install"
-source=("http://storage.antergos.com/numix/numix-icon-theme-square.zip")
+source=("#dont try to build before updating source!! http://storage.antergos.com/numix/numix-icon-theme-square.zip")
 sha256sums=('36c3a4c4a9a8c73a2b03ee3ba0f4870b426e209eba997a106d0a66918f742bd3')
 
 
