@@ -1,2 +1,4 @@
 *~
 .lock
+.flag
+test.sh

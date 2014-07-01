@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme-square
-pkgver=2014.05.31
+pkgver=2014.07.02
 pkgrel=1
 pkgdesc="Square icon expansion theme from the Numix project"
 arch=('any')

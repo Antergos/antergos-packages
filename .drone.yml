@@ -1,8 +1,0 @@
-image: lots0logs/antbs
-env:
-  - DO_PKG=True
-  - PKGS=(pacmanxg4 numix-frost-themes)
-script:
-  - /run.sh
-cache:
-  - build.log
