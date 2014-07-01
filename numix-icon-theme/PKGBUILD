@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme
-pkgver=0.r157.d60c446
+pkgver=0.r159.7f88cbe
 pkgrel=1
 pkgdesc="Base icon theme from the Numix project"
 arch=('any')

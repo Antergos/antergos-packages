@@ -2,7 +2,7 @@
 #Maintainer: Alexandre Minoshi
 
 pkgname=ssx
-pkgver=1.9
+pkgver=2.1
 pkgrel=1
 pkgdesc="A graphical frontend for su/sudo (X11)"
 options=('!strip')
