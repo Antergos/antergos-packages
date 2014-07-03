@@ -4,10 +4,10 @@
 pkgname=grub2-editor
 _pkgname=kcm-grub2
 pkgver=0.6.4
-pkgrel=5
+pkgrel=6
 pkgdesc='A KDE Control Module for configuring the GRUB2 bootloader'
 arch=('i686' 'x86_64')
-url='http://kde-apps.org/content/show.php?content=139643'
+url='http://sourceforge.net/projects/kcm-grub2/'
 license=('GPL3')
 depends=('kdebase-runtime' 'grub' 'imagemagick' 'hwinfo')
 makedepends=('cmake' 'automoc4' 'gettext')
