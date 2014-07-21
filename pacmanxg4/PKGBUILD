@@ -2,7 +2,7 @@
 #Maintainer: Antergos Developers <devs@antergos.com>
 
 pkgname=pacmanxg4
-pkgver=4.15.1
+pkgver=4.15.2
 pkgrel=3
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
@@ -12,11 +12,11 @@ license=('GPL2')
 if [ "${CARCH}" = 'x86_64' ]; then
 depends=('pacman' 'lib32-libx11' 'lib32-gcc-libs' 'lib32-libxft' 'wget' 'ssx' 'lib32-libxrender')
 source=("pacmanXG464.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanXG464.tar.bz2")
-md5sums=('3d8244b9ca2a1c3faef068d9c43bc978')
+md5sums=('bf5d644acc4de7678cb8dcc9786b4541')
 elif [ "${CARCH}" = 'i686' ]; then
 depends=('pacman' 'libx11' 'gcc-libs' 'wget' 'ssx' 'libxrender')
 source=("pacmanXG4.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanXG4.tar.bz2")
-md5sums=('e232683d0cdca2df2822121a5f83410c')
+md5sums=('d44017533784f2a52a2720d2e58da940')
 fi
 optdepends=('yaourt: AUR support' 'pkgtools: pkgfile utility check' 'repacman: rebuild package')
 install=${pkgname}.install
