@@ -2,7 +2,7 @@
 
 pkgname=xfce4-whiskermenu-plugin
 pkgver=1.4.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Alternate Xfce menu"
 arch=('i686' 'x86_64')
 url="http://gottcode.org/${pkgname}/"
@@ -16,7 +16,7 @@ sha256sums=('0f75f4551357a19200d14aa4df69755291a9db1b6fd49ab7ac51fd795c0a87e2')
 
 build() {
   cd ${srcdir}/${pkgname}-${pkgver}
-  cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+  cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=lib
   make
 }
 
