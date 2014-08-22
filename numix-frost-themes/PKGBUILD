@@ -1,8 +1,8 @@
 # Maintainer: Antergos Devs 
 
 pkgname=numix-frost-themes
-pkgver=1.0
-pkgrel=2
+pkgver=1.1
+pkgrel=1
 pkgdesc='Official Numix GTK theme - Antergos edition'
 arch=('any')
 license=('GPL3')
@@ -10,7 +10,7 @@ url='http://numixproject.org/'
 depends=('gtk-engine-murrine')
 replaces='gtk-theme-numix-frost'
 source=("http://storage.antergos.com/numix/numix-frost.zip")
-sha256sums=('53667b6a7cd9dc83e589de2c2f79df431926fdf02356b682c959adf1a8ce0188')
+sha256sums=('aa80701638839f20bc83b8dc73b4ca64caa2d3017f3f72cb80b9bf02bef3653d')
 
 package() {
 
