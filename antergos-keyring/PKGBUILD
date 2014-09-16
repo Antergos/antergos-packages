@@ -4,7 +4,7 @@
 # Maintainer: Alex Filgueira <faidoc@gmail.com>
 
 pkgname=antergos-keyring
-pkgver=20130427
+pkgver=20140915
 pkgrel=1
 pkgdesc='Antergos PGP keyring'
 arch=('any')
@@ -17,9 +17,9 @@ source=('Makefile'
         'antergos-revoked'
         'antergos-trusted')
 sha256sums=('50eb363938b1ca31d22e702e6e5befc7010d7bacabe55ed884c6f5c4c001cf16'
-            '64d3f8eb2ea5099afa694c31d894b3481136402762a7c154489e4d45cd9853c6'
+            '7e0ead3e7642712fdf26f817fe0fea8e0a2db9cc89b2823ef90749918ee565a8'
             'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
-            'afd758bbbc85b34ed27154c3fb55851ac03261eeeacd0c8eb4ac8e5c06f4d3a1')
+            '49c399e9874cf806541565e4a9be15b82b20f58dfb0dbe258e949fe171424d73')
 
 package() {
 	#cd "${srcdir}/${pkgname}-${pkgver}"
