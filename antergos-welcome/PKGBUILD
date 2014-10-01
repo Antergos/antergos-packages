@@ -22,7 +22,7 @@ package() {
 
 	#install -d ${pkgdir}/usr/share/locale/
 	install -d ${pkgdir}/usr/share/antergos-welcome
-	install -Dm755 "src/${pkgname}.py" "${pkgdir}/usr/share/cnchi/${pkgname}.py"
+	install -Dm755 "src/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
 	#install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/cnchi"
 	#install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
 
