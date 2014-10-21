@@ -3,7 +3,7 @@
 
 pkgname=pacmanxg4-next
 pkgver=4.16.0
-pkgrel=4
+pkgrel=5
 _pkgvar=5
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
@@ -16,6 +16,7 @@ source=("pacmanXG464.tar.bz2::http://almin-soft.ru/data/files/pacmanxg/download.
 md5sums=('a821f4786c51cdf96ac815215af92877')
 elif [ "${CARCH}" = 'i686' ]; then
 source=("pacmanXG4.tar.bz2::http://almin-soft.ru/data/files/pacmanxg/download.php?get=pacmanxg4.16alfa.tar.bz2")
+md5sums=('c52781864201497a9db00f0d33ca4502')
 fi
 optdepends=('yaourt: AUR support' 'pkgtools: pkgfile utility check' 'repacman: rebuild packages')
 install=${pkgname}.install
