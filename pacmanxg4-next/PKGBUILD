@@ -3,7 +3,7 @@
 
 pkgname=pacmanxg4-next
 pkgver=4.16.0
-pkgrel=3
+pkgrel=4
 _pkgvar=5
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
@@ -59,7 +59,7 @@ EOF
   install -Dm755 shemas/* ${pkgdir}/opt/${pkgname}/shemas
   #install -Dm755 sections.ini ${pkgdir}/opt/${pkgname}/sections.ini
   #install -Dm755 sections.list ${pkgdir}/opt/${pkgname}/sections.list
-  install -Dm644 pacmanxg.png $pkgdir/usr/share/pixmaps/pacmanxg.png
+  #install -Dm644 pacmanxg.png $pkgdir/usr/share/pixmaps/pacmanxg.png
   install -Dm755 repacman ${pkgdir}/opt/${pkgname}/repacman
   install -Dm644 ../pacmanxg4-next.desktop $pkgdir/usr/share/applications/pacmanxg4-next.desktop
   install -d $pkgdir/usr/bin/
