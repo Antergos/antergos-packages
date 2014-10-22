@@ -2,8 +2,8 @@
 #Maintainer: Antergos Developers <devs@antergos.com>
 
 pkgname=pacmanxg4-next
-pkgver=4.16.0
-pkgrel=5
+pkgver=4.16.1
+pkgrel=1
 _pkgvar=5
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
@@ -36,7 +36,7 @@ Name=PacmanXG-Next
 Name[ru]=PacmanXG-Next
 GenericName=GUI for pacman and yaourt. Alpha/Beta version of the next major release.
 GenericName[ru]=Графическая оболочка для Pacman и Yaourt
-Exec=ssx pacmanxg4-next
+Exec=ssx /usr/bin/pacmanxg4-next
 Icon=pacmanxg.svg
 StartupNotify=false
 Terminal=false
