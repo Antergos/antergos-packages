@@ -3,7 +3,7 @@
 
 pkgname=pacmanxg4-next
 pkgver=4.16.1
-pkgrel=1
+pkgrel=2
 _pkgvar=5
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
@@ -12,11 +12,13 @@ url="http://almin-soft.fsay.net/index.php?pacmanxg/4x-series"
 license=('GPL2')
 depends=('pacman' 'libx11' 'gcc-libs' 'libxft' 'wget' 'ssx' 'libxrender')
 if [ "${CARCH}" = 'x86_64' ]; then
+_pkgcd=pacmanxg4.16alfa-x64
 source=("pacmanXG464.tar.bz2::http://almin-soft.ru/data/files/pacmanxg/download.php?get=pacmanxg4.16alfa-x64.tar.bz2")
-md5sums=('a821f4786c51cdf96ac815215af92877')
+md5sums=('b948a01d0a807d2b7a905234f1be11f8')
 elif [ "${CARCH}" = 'i686' ]; then
+_pkgcd=pacmanxg4.16alfa
 source=("pacmanXG4.tar.bz2::http://almin-soft.ru/data/files/pacmanxg/download.php?get=pacmanxg4.16alfa.tar.bz2")
-md5sums=('c52781864201497a9db00f0d33ca4502')
+md5sums=()
 fi
 optdepends=('yaourt: AUR support' 'pkgtools: pkgfile utility check' 'repacman: rebuild packages')
 install=${pkgname}.install
@@ -46,7 +48,7 @@ Name[ru_RU.UTF-8]=pacmanxg-next
 
 EOF
 
-  cd pacmanxg4.16alfa
+  cd ${_pkgcd}
   install -d $pkgdir/opt/${pkgname}
   install -Dm755 pacmanxg ${pkgdir}/opt/${pkgname}/pacmanxg
   install -Dm755 langs/en.lang ${pkgdir}/opt/${pkgname}/langs/en.lang
