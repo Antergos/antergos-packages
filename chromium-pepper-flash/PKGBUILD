@@ -10,20 +10,21 @@ url="http://www.google.com/chrome"
 license=('custom:chrome')
 conflicts=('chromium-pepper-flash-dev')
 install=chromium-pepper-flash.install
-source=('license.html::http://www.google.com/chrome/intl/en/eula_text.html'
-        "https://dl.google.com/linux/chrome/rpm/stable/${_arch}/google-chrome-${_channel}-${_verbld}.${_arch}.rpm")
+_verbld=38.0.2125.111-1
+_channel='stable'
 if [ "$CARCH" == x86_64 ]; then
 	_arch=x86_64
 	sha1sums=('SKIP'
 	          '2da222776f529e8ef8c4ff7755c22ac1f834e973')
+	source=('license.html::http://www.google.com/chrome/intl/en/eula_text.html'
+        "https://dl.google.com/linux/chrome/rpm/stable/${_arch}/google-chrome-${_channel}-${_verbld}.${_arch}.rpm")
 elif [ "$CARCH" == i686 ]; then
 	_arch=i386
 	sha1sums=('SKIP'
 	          '865b55efcfc20735d2f950573585aec516bacabc')
+	source=('license.html::http://www.google.com/chrome/intl/en/eula_text.html'
+        "https://dl.google.com/linux/chrome/rpm/stable/${_arch}/google-chrome-${_channel}-${_verbld}.${_arch}.rpm")
 fi
-_verbld=38.0.2125.111-1
-_channel='stable'
-
 package() {
 	install -d "${pkgdir}/usr/lib/PepperFlash"
 	install -m644 opt/google/chrome/PepperFlash/* "${pkgdir}/usr/lib/PepperFlash"
