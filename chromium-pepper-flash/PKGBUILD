@@ -14,10 +14,12 @@ source=(license.html::http://www.google.com/chrome/intl/en/eula_text.html)
 sha1sums=('SKIP')
 if [ "$CARCH" == x86_64 ]; then
 	_arch=x86_64
-	sha1sums+=('2da222776f529e8ef8c4ff7755c22ac1f834e973')
+	sha1sums+=('SKIP'
+	           '2da222776f529e8ef8c4ff7755c22ac1f834e973')
 elif [ "$CARCH" == i686 ]; then
 	_arch=i386
-	sha1sums+=('865b55efcfc20735d2f950573585aec516bacabc')
+	sha1sums+=('SKIP'
+	           '865b55efcfc20735d2f950573585aec516bacabc')
 fi
 _verbld=38.0.2125.111-1
 _channel='stable'
