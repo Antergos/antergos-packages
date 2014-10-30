@@ -1,0 +1,16 @@
+
+## arg 1:  the new package version
+#post_install() {
+ #ln -s /opt/pacmanxg-next/pacmanxg /usr/bin/pacmanxg4-next  
+#}
+
+#post_upgrade() {
+ #ln -sf /opt/pacmanxg-next/pacmanxg /usr/bin/pacmanxg4-next  
+#}
+
+## arg 1:  the old package version
+#post_remove() {
+  #unlink /usr/bin/pacmanxg4-next  
+#}
+
+# vim:set ts=2 sw=2 et:

@@ -1,0 +1,72 @@
+#Author: Alexandre Minoshi(Almin-Soft Group)
+#Maintainer: Antergos Developers <devs@antergos.com>
+
+pkgname=pacmanxg4-next
+pkgver=4.16.1
+pkgrel=3
+_pkgvar=5
+pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
+options=('!strip')
+arch=('i686' 'x86_64')
+url="http://almin-soft.fsay.net/index.php?pacmanxg/4x-series"
+license=('GPL2')
+depends=('pacman' 'libx11' 'gcc-libs' 'libxft' 'wget' 'ssx' 'libxrender')
+if [ "${CARCH}" = 'x86_64' ]; then
+_pkgcd=pacmanxg4.16alfa-x64
+source=("pacmanXG464.tar.bz2::http://almin-soft.ru/data/files/pacmanxg/download.php?get=pacmanxg4.16alfa-x64.tar.bz2")
+md5sums=('6a7a994bd75fb3deaf04a6b367e85e7e')
+elif [ "${CARCH}" = 'i686' ]; then
+_pkgcd=pacmanxg4.16alfa
+source=("pacmanXG4.tar.bz2::http://almin-soft.ru/data/files/pacmanxg/download.php?get=pacmanxg4.16alfa.tar.bz2")
+md5sums=('124cec043e38702bd40fdaf2ca25b147')
+fi
+optdepends=('yaourt: AUR support' 'pkgtools: pkgfile utility check' 'repacman: rebuild packages')
+install=${pkgname}.install
+
+
+package() {
+  # Set default icon
+  #sed -i 's|^Icon=/usr/share/pixmaps/pacmanxg.png|Icon=pacmanxg.svg|g;
+  #        s|PacmanXG$|PacmanXG Next|g;
+  #        s|GUI for pacman and yaourt|GUI for pacman and yaourt. Alpha/Beta version of the next major release.|g;
+  #        s|Exec=ssx pacmanxg|Exec=ssx pacmanxg-next|g;
+  #        s|Version=1.0|Version=4.16.0|g' pacmanxg.desktop
+  cat << EOF > pacmanxg4-next.desktop
+[Desktop Entry]
+Version=4.16.0
+Name=PacmanXG-Next
+Name[ru]=PacmanXG-Next
+GenericName=GUI for pacman and yaourt. Alpha/Beta version of the next major release.
+GenericName[ru]=Графическая оболочка для Pacman и Yaourt
+Exec=ssx /usr/bin/pacmanxg4-next
+Icon=pacmanxg.svg
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=System;PackageManager;Application;
+Name[ru_RU.UTF-8]=pacmanxg-next
+
+EOF
+
+  cd ${_pkgcd}
+  install -d $pkgdir/opt/${pkgname}
+  install -Dm755 pacmanxg ${pkgdir}/opt/${pkgname}/pacmanxg
+  install -Dm755 langs/en.lang ${pkgdir}/opt/${pkgname}/langs/en.lang
+  #install -Dm755 langs/es.lang ${pkgdir}/opt/${pkgname}/langs/es.lang
+  #install -Dm755 langs/de.lang ${pkgdir}/opt/${pkgname}/langs/de.lang
+  install -Dm755 langs/ru.lang ${pkgdir}/opt/${pkgname}/langs/ru.lang
+  #install -Dm755 langs/it.lang ${pkgdir}/opt/${pkgname}/langs/it.lang
+  #install -Dm755 langs/fr.lang ${pkgdir}/opt/${pkgname}/langs/fr.lang
+  install -Dm755 dizz.sh ${pkgdir}/opt/${pkgname}/dizz.sh
+  install -d ${pkgdir}/opt/${pkgname}/shemas
+  install -Dm755 shemas/* ${pkgdir}/opt/${pkgname}/shemas
+  #install -Dm755 sections.ini ${pkgdir}/opt/${pkgname}/sections.ini
+  #install -Dm755 sections.list ${pkgdir}/opt/${pkgname}/sections.list
+  #install -Dm644 pacmanxg.png $pkgdir/usr/share/pixmaps/pacmanxg.png
+  install -Dm755 repacman ${pkgdir}/opt/${pkgname}/repacman
+  install -Dm644 ../pacmanxg4-next.desktop $pkgdir/usr/share/applications/pacmanxg4-next.desktop
+  install -d $pkgdir/usr/bin/
+  install -Dm755 ../../pacmanxg4-next ${pkgdir}/usr/bin/pacmanxg4-next
+}
+
+

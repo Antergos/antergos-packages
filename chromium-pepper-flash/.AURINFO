@@ -1,0 +1,17 @@
+pkgbase = chromium-pepper-flash
+	pkgdesc = Google Chrome's Pepper Flash plugin for Chromium (stable version)
+	pkgver = 15.0.0.189
+	pkgrel = 1
+	epoch = 1
+	url = http://www.google.com/chrome
+	install = chromium-pepper-flash.install
+	arch = i686
+	arch = x86_64
+	license = custom:chrome
+	conflicts = chromium-pepper-flash-dev
+	source = license.html::http://www.google.com/chrome/intl/en/eula_text.html
+	source = https://dl.google.com/linux/chrome/rpm/stable//google-chrome-stable-38.0.2125.111-1..rpm
+	sha1sums = SKIP
+
+pkgname = chromium-pepper-flash
+
