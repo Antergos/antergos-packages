@@ -16,13 +16,13 @@ if [ "$CARCH" == x86_64 ]; then
 	_arch=x86_64
 	sha1sums=('SKIP'
 	          '2da222776f529e8ef8c4ff7755c22ac1f834e973')
-	source=('license.html::http://www.google.com/chrome/intl/en/eula_text.html'
+	source=('license.html'
         "https://dl.google.com/linux/chrome/rpm/stable/${_arch}/google-chrome-${_channel}-${_verbld}.${_arch}.rpm")
 elif [ "$CARCH" == i686 ]; then
 	_arch=i386
 	sha1sums=('SKIP'
 	          '865b55efcfc20735d2f950573585aec516bacabc')
-	source=('license.html::http://www.google.com/chrome/intl/en/eula_text.html'
+	source=('license.html'
         "https://dl.google.com/linux/chrome/rpm/stable/${_arch}/google-chrome-${_channel}-${_verbld}.${_arch}.rpm")
 fi
 package() {
