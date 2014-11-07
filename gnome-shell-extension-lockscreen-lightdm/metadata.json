@@ -4,7 +4,8 @@
   "name": "LightDM Lock Screen", 
   "shell-version": [
     "3.10", 
-    "3.12"
+    "3.12",
+    "3.14"
   ], 
   "url": "https://github.com/Antergos", 
   "uuid": "lockscreen@dev.antergos.com", 
