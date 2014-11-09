@@ -1,6 +1,6 @@
 pkgname=zukitwo-theme-openbox
 pkgver=20140604
-pkgrel=1
+pkgrel=2
 pkgdesc="Openbox theme that match Zukitwo gtk theme."
 arch=(any)
 url="http://box-look.org/content/show.php/?content=146154"
