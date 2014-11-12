@@ -13,12 +13,12 @@ source=(https://github.com/dcantrell/pyparted/archive/pyparted-${pkgver}.tar.gz)
 sha256sums=('0fc4d0fa3632bba15791f5c67d48ac63153ca4d15ac7e4e39c29337aaf13eea4')
 
 build() {
-  cd "${srcdir}"/${pkgname}-${pkgver}
+  cd "${srcdir}"/${pkgname}-${pkgname}-${pkgver}
   python setup.py build
 }
 
 package() {
-  cd "${srcdir}"/${pkgname}-${pkgver}
+  cd "${srcdir}"/${pkgname}-${pkgname}-${pkgver}
   python setup.py install --prefix=/usr --root="${pkgdir}" --optimize=1 --skip-build
 }
 
