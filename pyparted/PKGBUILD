@@ -9,7 +9,7 @@ arch=('i686' 'x86_64')
 license=('GPL2')
 depends=('python' 'parted>=3.0')
 provides=('pyparted')
-source=(https://github.com/dcantrell/pyparted/archive/pyparted-{pkgver}.tar.gz)
+source=(https://github.com/dcantrell/pyparted/archive/pyparted-${pkgver}.tar.gz)
 sha256sums=('bb8de71ba54983af84cf036002511cfb6d8fab4fc5e9a9be7236ecba6d24989f')
 
 build() {
