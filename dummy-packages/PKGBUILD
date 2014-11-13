@@ -3,7 +3,7 @@
 
 pkgname=('dummy-package' 'dummy-package-git')
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 arch=(any)
 url="http://www.antergos.com"
 license=('GPL3')
