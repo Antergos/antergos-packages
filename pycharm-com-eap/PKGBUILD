@@ -5,7 +5,7 @@
 pkgname=pycharm-com-eap
 _buildver=139.431
 _pkgver=4.0.0
-pkgver=${_pkgver}.${_buildver}
+pkgver=4.0.0.139.431
 pkgrel=1
 pkgdesc="Powerful Python and Django IDE, Early Access Program (EAP) build. Community edition."
 arch=(any)
