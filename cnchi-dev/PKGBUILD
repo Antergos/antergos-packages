@@ -10,7 +10,7 @@ license=(GPL)
 url="https://github.com/Antergos/Cnchi"
 depends=(python pyalpm python-gobject python-dbus hdparm python-cairo libtimezonemap
          pyparted hwinfo webkitgtk upower python-mako iso-codes encfs pam_encfs)
-source=("${_pkgname}-${pkgver}.tar.gz::git+/var/repo/CN")
+source=("${_pkgname}-${pkgver}.tar::file:///srv/antergos.org/cnchi.tar")
 sha256sums=('SKIP')
 
 build ()
