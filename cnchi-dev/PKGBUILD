@@ -10,7 +10,7 @@ license=(GPL)
 url="https://github.com/Antergos/Cnchi"
 depends=(python pyalpm python-gobject python-dbus hdparm python-cairo libtimezonemap
          pyparted hwinfo webkitgtk upower python-mako iso-codes encfs pam_encfs)
-source=("${_pkgname}-${pkgver}.tar::file:///srv/antergos.org/cnchi.tar")
+source=("cnchi.tar")
 sha256sums=('SKIP')
 
 build ()
@@ -23,8 +23,8 @@ package() {
 
 	install -d ${pkgdir}/usr/share/locale/
 	install -d ${pkgdir}/usr/share/cnchi
-	install -Dm755 "${_pkgname,,}.py" "$pkgdir/usr/share/cnchi/${_pkgname,,}.py"
-	install -Dm755 "${_pkgname,,}" "${pkgdir}/usr/bin/cnchi"
+	install -Dm755 ${_pkgname,,}.py $pkgdir/usr/share/cnchi/${_pkgname,,}.py
+	install -Dm755 ${_pkgname,,} "${pkgdir}/usr/bin/cnchi"
 	install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
 
 	for i in data scripts src ui; do
