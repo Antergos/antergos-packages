@@ -3,7 +3,7 @@
 _pkgname=Cnchi
 pkgname=cnchi
 pkgver=0.6.18
-pkgrel=1
+pkgrel=3
 pkgdesc='Graphical Installer for Antergos Linux'
 arch=(any)
 license=(GPL)
@@ -26,6 +26,7 @@ package() {
 	install -Dm755 "${pkgname}.py" "$pkgdir/usr/share/cnchi/${pkgname}.py"
 	install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/cnchi"
 	install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
+	install -Dm755 "update.info" "$pkgdir/usr/share/cnchi/update.info"
 
 	for i in data scripts src ui; do
 		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
