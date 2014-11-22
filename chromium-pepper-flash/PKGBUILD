@@ -2,15 +2,15 @@
 
 pkgname=chromium-pepper-flash
 pkgdesc="Google Chrome's Pepper Flash plugin for Chromium (stable version)"
-pkgver=15.0.0.189
-pkgrel=2
+pkgver=15.0.0.223
+pkgrel=1
 epoch=1
 arch=('i686' 'x86_64')
 url="http://www.google.com/chrome"
 license=('custom:chrome')
 conflicts=('chromium-pepper-flash-dev')
 install=chromium-pepper-flash.install
-_verbld=38.0.2125.111-1
+_verbld=39.0.2171.65-1
 _channel='stable'
 if [ "$CARCH" == x86_64 ]; then
 	_arch=x86_64
