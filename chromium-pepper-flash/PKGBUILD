@@ -15,13 +15,13 @@ _channel='stable'
 if [ "$CARCH" == x86_64 ]; then
 	_arch=x86_64
 	sha1sums=('SKIP'
-	          '2da222776f529e8ef8c4ff7755c22ac1f834e973')
+	          'SKIP')
 	source=('license.html'
         "https://dl.google.com/linux/chrome/rpm/stable/${_arch}/google-chrome-${_channel}-${_verbld}.${_arch}.rpm")
 elif [ "$CARCH" == i686 ]; then
 	_arch=i386
 	sha1sums=('SKIP'
-	          '5e53569c8c277f158999d71cc6e0de7e71cc2bfa')
+	          'SKIP')
 	source=('license.html'
         "https://dl.google.com/linux/chrome/rpm/stable/${_arch}/google-chrome-${_channel}-${_verbld}.${_arch}.rpm")
 fi
