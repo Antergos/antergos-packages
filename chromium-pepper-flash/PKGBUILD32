@@ -12,19 +12,11 @@ conflicts=('chromium-pepper-flash-dev')
 install=chromium-pepper-flash.install
 _verbld=39.0.2171.65-1
 _channel='stable'
-if [ "$CARCH" == x86_64 ]; then
-	_arch=x86_64
-	sha1sums=('SKIP'
-	          'SKIP')
-	source=('license.html'
-        "https://dl.google.com/linux/chrome/rpm/stable/${_arch}/google-chrome-${_channel}-${_verbld}.${_arch}.rpm")
-elif [ "$CARCH" == i686 ]; then
-	_arch=i386
-	sha1sums=('SKIP'
-	          'SKIP')
-	source=('license.html'
-        "https://dl.google.com/linux/chrome/rpm/stable/${_arch}/google-chrome-${_channel}-${_verbld}.${_arch}.rpm")
-fi
+
+_arch=i386
+sha1sums=('SKIP' '')
+source=('license.html' "https://dl.google.com/linux/chrome/rpm/stable/${_arch}/google-chrome-${_channel}-${_verbld}.${_arch}.rpm")
+
 package() {
 	install -d "${pkgdir}/usr/lib/PepperFlash"
 	install -m644 opt/google/chrome/PepperFlash/* "${pkgdir}/usr/lib/PepperFlash"
