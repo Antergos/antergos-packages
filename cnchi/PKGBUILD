@@ -15,11 +15,11 @@ sha256sums=('6ed81036ee6369b505042ffaa8a790ba19c0bb493aa3068a0e55385d9db8f643')
 
 build ()
 {
-  cd "$srcdir/$_pkgname-$pkgver"
+  cd "$srcdir/$_pkgname"-master
 }
 
 package() {
-	cd ${srcdir}/${_pkgname}-$pkgver
+	cd "${srcdir}/${_pkgname}"-master
 
 	install -d ${pkgdir}/usr/share/locale/
 	install -d ${pkgdir}/usr/share/cnchi
