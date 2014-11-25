@@ -3,9 +3,9 @@
 # Contributor: Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
 
 pkgname=pycharm-pro-eap
-_buildver=139.487
-_pkgver=4.0.0
-pkgver=4.0.0.139.487
+_buildver=139.556
+_pkgver=4.0.1
+pkgver=4.0.1.139.556
 pkgrel=1
 pkgdesc="Powerful Python and Django IDE, Early Access Program (EAP) build. Professional edition."
 arch=('any')
@@ -16,15 +16,15 @@ depends=("java-environment>=6")
 provides=("pycharm-eap" "pycharm-professional")
 conflicts=("pycharm-eap" "pycharm-community" "pycharm-professional")
 changelog=""
-#source=("http://download.jetbrains.com/python/pycharm-professional-${_buildver}.tar.gz")
-source=("http://download.jetbrains.com/python/pycharm-professional-4.0.tar.gz")
+source=("http://download.jetbrains.com/python/pycharm-professional-${_buildver}.tar.gz")
+#source=("http://download.jetbrains.com/python/pycharm-professional-4.0.tar.gz")
 md5sums=('25b638c5e7ed9025d866d6ce694255d2')
 
 package() {
   cd "${srcdir}"
   mkdir -p "${pkgdir}/opt/${pkgname}"
-  #cp -R "${srcdir}/pycharm-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
-  cp -R "${srcdir}/pycharm-4.0/"* "${pkgdir}/opt/${pkgname}"
+  cp -R "${srcdir}/pycharm-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
+  #cp -R "${srcdir}/pycharm-4.0/"* "${pkgdir}/opt/${pkgname}"
   if [[ $CARCH = 'i686' ]]; then
      rm -f "${pkgdir}/opt/${pkgname}/bin/libyjpagent-linux64.so"
      rm -f "${pkgdir}/opt/${pkgname}/bin/fsnotifier64"
@@ -49,8 +49,8 @@ EOF
   mkdir -p "${pkgdir}/usr/share/applications/"
   mkdir -p "${pkgdir}/usr/share/licenses/${pkgname}/"
   install -Dm644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/"
-  #cp -R ${srcdir}/pycharm-${_buildver}/license/* "${pkgdir}/usr/share/licenses/${pkgname}/"
-  cp -R ${srcdir}/pycharm-4.0/license/* "${pkgdir}/usr/share/licenses/${pkgname}/"
+  cp -R ${srcdir}/pycharm-${_buildver}/license/* "${pkgdir}/usr/share/licenses/${pkgname}/"
+  #cp -R ${srcdir}/pycharm-4.0/license/* "${pkgdir}/usr/share/licenses/${pkgname}/"
   ln -s "/opt/${pkgname}/bin/pycharm.sh" "${pkgdir}/usr/bin/pycharm-eap"
 }
 
