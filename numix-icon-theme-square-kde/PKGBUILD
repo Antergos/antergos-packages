@@ -3,6 +3,7 @@
 pkgname=numix-icon-theme-square-kde
 pkgver=2014.08.09
 pkgrel=1
+epoch=1
 pkgdesc="Square icon expansion theme from the Numix project"
 arch=('any')
 url='http://numixproject.org/'
@@ -11,7 +12,7 @@ depends=('numix-icon-theme')
 optdepends=('kfaenza-icon-theme: fallback icons')
 options=('!strip')
 install="${pkgname}.install"
-source=("numix-icon-theme-square.tar")
+source=("numix-icon-theme-square-kde.tar")
 sha256sums=('e31cbf9722fe3a66eec857a95b59ea3094854a6d33f430112e23aa108d4ceb77')
 
 
