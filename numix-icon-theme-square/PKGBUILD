@@ -14,6 +14,13 @@ install="${pkgname}.install"
 source=("numix-icon-theme-square.tar")
 sha256sums=('e31cbf9722fe3a66eec857a95b59ea3094854a6d33f430112e23aa108d4ceb77')
 
+pkgver() {
+	cd ${srcdir}/${pkgname}
+	revlist="$(git rev-list --count HEAD)"
+	revparse="$(git rev-parse --short HEAD)"
+	
+	printf 0.r%s.%s ${revlist} ${revparse}
+}
 
 package() {
   cd ${srcdir}/${pkgname}
