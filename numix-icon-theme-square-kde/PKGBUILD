@@ -16,7 +16,7 @@ sha256sums=('e31cbf9722fe3a66eec857a95b59ea3094854a6d33f430112e23aa108d4ceb77')
 
 
 pkgver() {
-	cd ${srcdir}/${pkgname}
+	cd ${srcdir:=$PWD}/${pkgname}
 	revlist="$(git rev-list --count HEAD)"
 	revparse="$(git rev-parse --short HEAD)"
 	
@@ -24,7 +24,7 @@ pkgver() {
 }
 
 package() {
-  cd ${srcdir}/numix-icon-theme-square
+  cd ${srcdir:=$PWD}/${pkgname}
   pwd
   sed -i 's|Inherits=Numix|Inherits=Numix,KFaenza|g' Numix-Square/index.theme
   install -dm 755 "$pkgdir"/usr/share/icons
