@@ -26,5 +26,5 @@ package() {
   cd ${pkgname}
   install -dm 755 "$pkgdir"/usr/share/icons
   cp -dr --no-preserve='ownership' Numix "$pkgdir"/usr/share/icons/
-  rm -R "$pkgdir"/usr/share/icons/Numix/.git
+  #rm -R "$pkgdir"/usr/share/icons/Numix/.git
 }
