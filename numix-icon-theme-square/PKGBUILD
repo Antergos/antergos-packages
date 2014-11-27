@@ -11,7 +11,7 @@ depends=('numix-icon-theme')
 optdepends=('faenza-icon-theme: fallback icons')
 options=('!strip')
 install="${pkgname}.install"
-source=("http://storage.antergos.com/numix/numix-icon-theme-square.zip")
+source=("numix-icon-theme-square.tar")
 sha256sums=('e31cbf9722fe3a66eec857a95b59ea3094854a6d33f430112e23aa108d4ceb77')
 
 
