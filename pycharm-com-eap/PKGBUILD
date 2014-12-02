@@ -3,9 +3,9 @@
 # Contributor: Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
 
 pkgname=pycharm-com-eap
-_buildver=139.574
-_pkgver=4.0.1
-pkgver=4.0.1.139.574
+_buildver=139.645
+_pkgver=4.0.2
+pkgver=4.0.2.139.645
 pkgrel=1
 pkgdesc="Powerful Python and Django IDE, Early Access Program (EAP) build. Community edition."
 arch=(any)
@@ -18,7 +18,7 @@ conflicts=("pycharm-eap" "pycharm-community" "pycharm-professional")
 changelog=""
 #source=("http://download.jetbrains.com/python/pycharm-community-${_buildver}.tar.gz")
 source=("http://download.jetbrains.com/python/pycharm-community-4.0.1.tar.gz")
-md5sums=('bd21fc070f605bac0e4cce7bc42b945c')
+md5sums=('2a19e15bf32c0369965a7df67050797b')
 
 package() {
   cd "${srcdir}"
