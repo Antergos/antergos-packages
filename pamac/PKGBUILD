@@ -1,73 +1,70 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
-# Contributor: Zeph <zeph33@gmail.com>
+# Contributor: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=pamac
-_pkgname=pamac
-pkgver=2.0rc2
-_pkgver=1.9.2
-pkgrel=1
+pkgver=2.0
+_pkgver=2.0
+pkgrel=2
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
-#_gitcommit="8ca909659ae82added54dd2f906b8c943df0480d"
-_gitcommit=""
+_gitcommit="1a1da95554c30c1b2aba5e810fa53176316fa6ee"
 pkgdesc="A Gtk3 frontend for libalpm"
-arch=(any)
-url="http://wiki.manjaro.org/index.php?title=Pamac"
+arch=('any')
+url="https://github.com/manjaro/pamac"
 license=('GPL3')
-depends=('glib2>=2.38' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'yaourt' 'vte3' 'gtk3>=3.12' 'libnotify' 'desktop-file-utils')
+depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'yaourt' 'vte3>=0.38' 'gtk3>=3.14' 'libnotify' 'desktop-file-utils')
 optdepends=('polkit-gnome: needed for authentification in Cinnamon, Gnome' 'lxsession: needed for authentification in Xfce, LXDE etc.')
 makedepends=('gettext' 'itstool' 'vala')
 backup=('etc/pamac.conf')
 provides=('pamac')
-conflicts=('pamac' 'pamac-aur')
+conflicts=('pamac-dev' 'pamac-aur')
 options=(!emptydirs)
 install=pamac.install
 
 if [ "${_gitcommit}" != "" ]; then
-  source=("pamac-$_pkgver-$pkgrel.tar.gz::https://github.com/guinux/pamac2/archive/$_gitcommit.tar.gz")
+  source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/$_gitcommit.tar.gz")
 else
-  source=("pamac-$_pkgver-$pkgrel.tar.gz::https://github.com/guinux/pamac2/archive/v$_pkgver.tar.gz")
-  sha256sums=('3589cc0757f4619f0e98e6c273c5b2b0c95f91d90314d4e1fb406189b6b633ff')
+  source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
+sha256sums=('e05fad72008917a2cc85874776d51bf26ac02c12c610597f4d32e520ba075de1')
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
-    cd "$srcdir/pamac2-$_gitcommit"
+    cd "$srcdir/pamac-$_gitcommit"
   else
-    cd "$srcdir/pamac2-$_pkgver"
+    cd "$srcdir/pamac-$_pkgver"
   fi
 
   # adjust version string
   cd src
-  sed -i -e "s|\"2.0\"|\"$pkgver\"|g" manager_window.vala  
+  sed -i -e "s|\"2.0\"|\"$pkgver-$pkgrel\"|g" manager_window.vala  
 }
 
 build() {
   if [ "$_gitcommit" != "" ]; then
-    cd "$srcdir/pamac2-$_gitcommit/src"
+    cd "$srcdir/pamac-$_gitcommit"
   else
-    cd "$srcdir/pamac2-$_pkgver/src"
+    cd "$srcdir/pamac-$_pkgver"
   fi
 
   # build
   make all
   
-  cd ..
   # create .mo translation files
-  mkdir -p mo
-  for i in `ls po | sed s'|.po||'` ; do
-    msgfmt -c "po/$i.po" -o "mo/$i.mo"
-  done
+  #mkdir -p mo
+  #for i in `ls po | sed s'|.po||'` ; do
+  #  msgfmt -c "po/$i.po" -o "mo/$i.mo"
+  #done
   
   # add translation in policy file
-  itstool -j "data/polkit/org.manjaro.pamac.policy" -o "data/polkit/org.manjaro.pamac.policy.out" `ls mo/*`
+  #itstool -j "data/polkit/org.manjaro.pamac.policy" -o "data/polkit/org.manjaro.pamac.policy.out" `ls mo/*`
 }
 
 package() {
   if [ "$_gitcommit" != "" ]; then
-    cd "$srcdir/pamac2-$_gitcommit"
+    cd "$srcdir/pamac-$_gitcommit"
   else
-    cd "$srcdir/pamac2-$_pkgver"
+    cd "$srcdir/pamac-$_pkgver"
   fi
 
   mkdir -p "${pkgdir}/usr/share/icons/hicolor"
@@ -90,12 +87,11 @@ package() {
   install -Dm644 "data/mime/x-alpm-package.xml" "${pkgdir}/usr/share/mime/packages/x-alpm-package.xml"
 
   # rename mo files only here else istool failed
-  for i in `ls mo | sed s'|.mo||'` ; do
+  for i in `cd po && ls *.mo | sed s'|.mo||'` ; do
     mkdir -p "${pkgdir}/usr/share/locale/$i/LC_MESSAGES/"
-    cp "mo/$i.mo" "${pkgdir}/usr/share/locale/$i/LC_MESSAGES/pamac.mo"
-  done  
+    cp "po/$i.mo" "${pkgdir}/usr/share/locale/$i/LC_MESSAGES/pamac.mo"
+  done
   
+  #install -Dm644 "data/polkit/org.manjaro.pamac.policy.out" "${pkgdir}/usr/share/polkit-1/actions/org.manjaro.pamac.policy"
   install -Dm644 "data/polkit/org.manjaro.pamac.policy" "${pkgdir}/usr/share/polkit-1/actions/org.manjaro.pamac.policy"
 }
-
-# vim:set ts=2 sw=2 et:
