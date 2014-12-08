@@ -13,19 +13,20 @@ optdepends=('ffmpeg: HTML5 H264 and mp3 playback')
 install=opera.install
 options=(!strip)
 
-if [[ "${CARCH}" == 'i686' ]]; then
-	# no i686 at this time!
-	_arch='i386'
-	source=()
-	sha256sums=()
-elif [[ "${CARCH}" == 'x86_64' ]]; then
-	_arch="${CARCH}"
+#if [[ "${CARCH}" == 'i686' ]]; then
+#	# no i686 at this time!
+#	_arch='i386'
+#	source=()
+#	sha256sums=()
+#elif [[ "${CARCH}" == 'x86_64' ]]; then
+	#_arch="${CARCH}"
+	_arch="x86_64"
 	source=("http://get.geo.opera.com/pub/${pkgname}/${pkgver}/linux/${pkgname}_${pkgver}_amd64.deb")
 	# alternative download
 	#source=("ftp://ftp.opera.com/pub/${pkgname}/${pkgver}/linux/${pkgname}_${pkgver}_amd64.deb")
 	#source=("http://deb.opera.com/${pkgname}/pool/non-free/o/${pkgname}/${pkgname}_${pkgver}_amd64.deb"
 	sha256sums=('3ac8bd65d940de51803ef96a0e5c1c9c553095de97ff1523ac978b076f742231')
-fi
+#fi
 
 prepare() {
 	cd ${srcdir}/
