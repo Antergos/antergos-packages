@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=gnome-shell-extension-panel-osd
-pkgver=0
+pkgver=0.r43
 pkgrel=1
 pkgdesc="A gnome-shell extension to place shell notifications under the panel instead of above the message-tray."
 arch=('any')
@@ -19,13 +19,15 @@ _archivename="${pkgname}"
 pkgver() {
 
 	cd "$srcdir/$_archivename"
-	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
+	printf "%s.r%s" "0" "$(git rev-list --count HEAD)"
 
 }
 
 
 prepare() {
     cd "$srcdir/$_archivename"
+    #sed -i 's|<default>50|<default>95|g' data/org.gnome.shell.extensions.panel-osd.gschema.xml.in
+    #sed -i 's|<default>100|<default>96|g' data/org.gnome.shell.extensions.panel-osd.gschema.xml.in
     
 }
 
