@@ -10,7 +10,7 @@ license=('GPL')
 depends=('gnome-shell' 'gnome-tweak-tool')
 makedepends=('gnome-common' 'intltool' 'pkg-config')
 provides=('gnome-shell-extension-panel-osd')
-source=("git+https://github.com/jenslody/${pkgname}.git")
+source=("git+https://github.com/jenslody/gnome-shell-extension-panel-osd.git")
 install=${pkgname}.install
 sha256sums=('SKIP')
 
