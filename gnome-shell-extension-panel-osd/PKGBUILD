@@ -2,7 +2,7 @@
 
 pkgname=gnome-shell-extension-panel-osd
 pkgver=0.r43
-pkgrel=1
+pkgrel=2
 pkgdesc="A gnome-shell extension to place shell notifications under the panel instead of above the message-tray."
 arch=('any')
 url="https://github.com/jenslody/gnome-shell-extension-panel-osd"
@@ -10,7 +10,7 @@ license=('GPL')
 depends=('gnome-shell' 'gnome-tweak-tool')
 makedepends=('gnome-common' 'intltool' 'pkg-config')
 provides=('gnome-shell-extension-panel-osd')
-source=("git+https://github.com/jenslody/gnome-shell-extension-panel-osd.git")
+source=("git+https://github.com/jenslody/${pkgname}.git")
 install=${pkgname}.install
 sha256sums=('SKIP')
 
@@ -26,19 +26,17 @@ pkgver() {
 
 prepare() {
     cd "$srcdir/$_archivename"
-    #sed -i 's|<default>50|<default>95|g' data/org.gnome.shell.extensions.panel-osd.gschema.xml.in
-    #sed -i 's|<default>100|<default>96|g' data/org.gnome.shell.extensions.panel-osd.gschema.xml.in
     
 }
 
 build() {
     cd "$srcdir/$_archivename"
-    ./autogen.sh
+     ./autogen.sh --prefix=/usr 
     make
 }
 
 package() {
     cd "$srcdir/$_archivename"
     mkdir -p "${pkgdir}/usr/share/gnome-shell/extensions" "${pkgdir}/usr/share/glib-2.0/schemas/"
-    make DESTDIR=${pkgdir}/usr/share/gnome-shell/extensions install
+    make DESTDIR=${pkgdir} install
 }
