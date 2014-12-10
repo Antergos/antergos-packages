@@ -10,11 +10,11 @@ license=('GPL')
 depends=('gnome-shell' 'gnome-tweak-tool')
 makedepends=('gnome-common' 'intltool' 'pkg-config')
 provides=('gnome-shell-extension-panel-osd')
-source=("$pkgname::https://github.com/jenslody/${pkgname}/archive/master.zip")
+source=("git+https://github.com/jenslody/${pkgname}.git")
 install=${pkgname}.install
-sha256sums=('53195acbb3127e8f81cefbe510e992a3c25f96f5de018e74170c3c64dd29a1ec')
+sha256sums=('SKIP')
 
-_archivename="${pkgname}-master"
+_archivename="${pkgname}"
 
 pkgver() {
 
