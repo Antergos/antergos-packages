@@ -1,0 +1,42 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=gnome-shell-extension-panel-osd
+pkgver=0
+pkgrel=1
+pkgdesc="A gnome-shell extension to place shell notifications under the panel instead of above the message-tray."
+arch=('any')
+url="https://github.com/jenslody/gnome-shell-extension-panel-osd"
+license=('GPL')
+depends=('gnome-shell' 'gnome-tweak-tool')
+makedepends=('gnome-common' 'intltool' 'pkg-config')
+provides=('gnome-shell-extension-panel-osd')
+source=("$pkgname::https://github.com/jenslody/${pkgname}/archive/master.zip")
+install=${pkgname}.install
+sha256sums=('53195acbb3127e8f81cefbe510e992a3c25f96f5de018e74170c3c64dd29a1ec')
+
+_archivename="${pkgname}-master"
+
+pkgver() {
+
+	cd "$srcdir/$_archivename"
+	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
+
+}
+
+
+prepare() {
+    cd "$srcdir/$_archivename"
+    
+}
+
+build() {
+    cd "$srcdir/$_archivename"
+    ./autogen.sh
+    make
+}
+
+package() {
+    cd "$srcdir/$_archivename"
+    mkdir -p "${pkgdir}/usr/share/gnome-shell/extensions" "${pkgdir}/usr/share/glib-2.0/schemas/"
+    make DESTDIR=${pkgdir}/usr/share/gnome-shell/extensions install
+}
