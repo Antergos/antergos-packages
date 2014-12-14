@@ -21,7 +21,7 @@ options=(!emptydirs)
 install=pamac.install
 
 if [ "${_gitcommit}" != "" ]; then
-  source=("git+$url")
+  source=("git+https://github.com/manjaro/pamac")
 else
   source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
