@@ -2,8 +2,8 @@
 #Maintainer: Antergos Developers <devs@antergos.com>
 
 pkgname=pacmanxg4
-pkgver=4.15.2
-pkgrel=3
+pkgver=4.16.1
+pkgrel=4
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
 arch=('i686' 'x86_64')
