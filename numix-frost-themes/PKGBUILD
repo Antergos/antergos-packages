@@ -2,7 +2,7 @@
 
 pkgname=numix-frost-themes
 pkgver=1.3
-pkgrel=1
+pkgrel=2
 pkgdesc='Official Numix GTK theme - Antergos edition'
 arch=('any')
 license=('GPL3')
@@ -14,7 +14,9 @@ sha256sums=('6288573b6e2b0d91d96fe27ef252aee4950fe181a38419aeb08497e666c61360')
 
 package() {
 
-cd "${srcdir}/numix-frost"
+cd "${srcdir}/numix-frost/Numix Frost"
+find Numix* -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/{}" \;
+cd "${srcdir}/numix-frost/Numix Frost Light"
 find Numix* -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/{}" \;
 	
 }
