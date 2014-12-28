@@ -1,0 +1,102 @@
+# Maintainer: Christian Hesse <mail@eworm.de>
+# Contributor: Jonathan Conder <jonno.conder@gmail.com>
+
+pkgbase='packagekit'
+pkgname='packagekit'
+pkgver=1.0.3
+pkgrel=3
+pkgdesc='A system designed to make installation and updates of packages easier regardless of your chosen linux distribution.'
+arch=('any')
+url='http://www.packagekit.org/'
+license=('GPL')
+depends=('dbus-glib' 'pacman>=4.2.0' 'polkit' 'shared-mime-info' 'sqlite' 'udev')
+optdepends=('networkmanager')
+makedepends=('dbus-glib' 'gobject-introspection' 'gtk-doc' 'intltool'
+	'networkmanager' 'pacman'  'pm-utils' 'polkit' 'python2' 'qt4'
+	'shared-mime-info' 'sqlite' 'udev' 'python')
+backup=('var/lib/PackageKit/transactions.db'
+	'etc/PackageKit/alpm.d/pacman.conf'
+	'etc/PackageKit/alpm.d/repos.list')
+install='packagekit.install'
+source=("http://www.freedesktop.org/software/PackageKit/releases/PackageKit-${pkgver}.tar.xz"
+	'0001-backends-alpm-update-for-pacman-4.2.0.patch')
+
+prepare() {
+	cd "$srcdir/PackageKit-$pkgver"
+
+	patch -Np1 < ${srcdir}/0001-backends-alpm-update-for-pacman-4.2.0.patch
+}
+
+build() {
+	cd "${srcdir}/PackageKit-${pkgver}"
+
+	export PYTHON=/usr/bin/python2
+	./autogen.sh --prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--libexecdir=/usr/lib/PackageKit \
+		--enable-strict \
+		--disable-static \
+		--disable-gtk-doc \
+		--disable-tests \
+		--disable-local \
+		--disable-browser-plugin \
+		--disable-gstreamer-plugin \
+		--disable-gtk-module \
+		--disable-command-not-found \
+		--disable-cron \
+		--disable-debuginfo-install \
+		--enable-pm-utils \
+		--disable-dummy \
+		--enable-alpm \
+		--with-default-backend=alpm
+	make
+}
+
+package() {
+  cd "${srcdir}/PackageKit-${pkgver}"
+
+  make DESTDIR="${pkgdir}" install
+
+  rm -rf "$pkgdir/usr/include/PackageKit/packagekit-qt"*
+  rm -rf "$pkgdir/usr/lib/libpackagekit-qt"*
+  rm -rf "$pkgdir/usr/lib/pkgconfig/packagekit-qt"*
+  rm -rf "$pkgdir/usr/lib/cmake"
+
+  rm -rf "$pkgdir/usr/lib/python"*
+  rm -rf "$pkgdir/usr/share/PackageKit/website"
+
+  touch "$pkgdir/var/log/PackageKit"
+}
+
+#package_packagekit-qt2() {
+#  depends=('packagekit' 'qt4')
+#  pkgdesc=('Qt bindings for PackageKit')
+#
+#  cd "$srcdir/PackageKit-$pkgver/lib/packagekit-qt2"
+#
+#  make DESTDIR="$pkgdir" install
+#}
+#
+#package_python2-packagekit() {
+#  depends=('packagekit' 'python2')
+#  pkgdesc=('Python 2 bindings for PackageKit')
+#  conflicts=('packagekit-python')
+#  replaces=('packagekit-python')
+#
+#  cd "$srcdir/PackageKit-$pkgver/lib/python"
+#
+#  make DESTDIR="$pkgdir" install
+#}
+#
+#package_python-packagekit() {
+#  depends=('packagekit' 'python')
+#  pkgdesc=('Python 3 bindings for PackageKit')
+#
+#  cd "$srcdir/PackageKit-$pkgver-python3/lib/python"
+#
+#  make DESTDIR="$pkgdir" install
+#}
+
+sha256sums=('88c652e0bb4e39e0e0d89ad50cff3cd91c67c923250199d16419606ee79b5eef'
+            'a9c17b003202bb5b84e69cc86620030a13260a5d4f0ae52db11a8bef25b87e0c')

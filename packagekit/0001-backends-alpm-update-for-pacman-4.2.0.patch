@@ -1,0 +1,203 @@
+From 47b9768f6db3012dcc39d920897b5e68c9dd8191 Mon Sep 17 00:00:00 2001
+From: Christian Hesse <mail@eworm.de>
+Date: Sun, 28 Dec 2014 01:33:12 +0100
+Subject: [PATCH 1/1] backends/alpm: update for pacman 4.2.0
+
+Signed-off-by: Christian Hesse <mail@eworm.de>
+---
+ backends/alpm/pk-alpm-transaction.c | 120 ++++++++++++++++++++++--------------
+ 1 file changed, 75 insertions(+), 45 deletions(-)
+
+diff --git a/backends/alpm/pk-alpm-transaction.c b/backends/alpm/pk-alpm-transaction.c
+index 41f0bd4..3dba4d6 100644
+--- a/backends/alpm/pk-alpm-transaction.c
++++ b/backends/alpm/pk-alpm-transaction.c
+@@ -287,40 +287,48 @@ pk_alpm_select_provider (const alpm_list_t *providers,
+ }
+ 
+ static void
+-pk_alpm_transaction_conv_cb (alpm_question_t question, gpointer data1,
+-				gpointer data2, gpointer data3, gint *result)
++pk_alpm_transaction_conv_cb (alpm_question_t * question)
+ {
+ 	PkBackendJob* job;
+ 	g_assert (pkalpm_current_job);
+ 	job = pkalpm_current_job;
+ 
+-	g_return_if_fail (result != NULL);
+-
+-	switch (question) {
++	switch (question->type) {
+ 	case ALPM_QUESTION_INSTALL_IGNOREPKG:
+-		pk_alpm_install_ignorepkg (job, data1, result);
++		pk_alpm_install_ignorepkg (job,
++				question->install_ignorepkg.pkg,
++				&question->install_ignorepkg.install);
+ 		break;
++	/* these actions are mostly harmless */
+ 	case ALPM_QUESTION_REPLACE_PKG:
++		g_debug ("safe question %d", question->type);
++		question->replace.replace = 1;
++		break;
+ 	case ALPM_QUESTION_CONFLICT_PKG:
++		g_debug ("safe question %d", question->type);
++		question->conflict.remove = 1;
++		break;
+ 	case ALPM_QUESTION_CORRUPTED_PKG:
+-//	case ALPM_QUESTION_LOCAL_NEWER:
+-		/* these actions are mostly harmless */
+-		g_debug ("safe question %d", question);
+-		*result = 1;
++		g_debug ("safe question %d", question->type);
++		question->corrupted.remove = 1;
+ 		break;
+ 	case ALPM_QUESTION_REMOVE_PKGS:
++		g_debug ("safe question %d", question->type);
++		question->remove_pkgs.skip = 1;
++		break;
+ 	/* TODO: handle keys better */
+ 	case ALPM_QUESTION_IMPORT_KEY:
+-		g_debug ("unsafe question %d", question);
+-		*result = 0;
++		g_debug ("unsafe question %d", question->type);
++		question->import_key.import = 0;
+ 		break;
+ 	case ALPM_QUESTION_SELECT_PROVIDER:
+-		pk_alpm_select_provider (data1, data2);
+-		*result = 0;
++		pk_alpm_select_provider (question->select_provider.providers,
++				question->select_provider.depend);
++		question->select_provider.use_index = 0;
+ 		break;
+ 
+ 	default:
+-		g_warning ("unknown question %d", question);
++		g_warning ("unknown question %d", question->type);
+ 		break;
+ 	}
+ }
+@@ -594,14 +602,14 @@ pk_alpm_transaction_optdepend_required (PkBackendJob *job, alpm_pkg_t *pkg,
+ }
+ 
+ static void
+-pk_alpm_transaction_event_cb (alpm_event_t event, gpointer data, gpointer old)
++pk_alpm_transaction_event_cb (alpm_event_t * event)
+ {
+ 	PkBackendJob* job;
+ 	job = pkalpm_current_job;
+ 	g_assert (job);
+ 
+ 	/* figure out backend status and process package changes */
+-	switch (event) {
++	switch (event->type) {
+ 	case ALPM_EVENT_CHECKDEPS_START:
+ 	case ALPM_EVENT_RESOLVEDEPS_START:
+ 		pk_alpm_transaction_dep_resolve (job);
+@@ -612,31 +620,51 @@ pk_alpm_transaction_event_cb (alpm_event_t event, gpointer data, gpointer old)
+ 	case ALPM_EVENT_DISKSPACE_START:
+ 		pk_alpm_transaction_test_commit (job);
+ 		break;
+-	case ALPM_EVENT_ADD_START:
+-		pk_alpm_transaction_add_start (job, data);
+-		break;
+-	case ALPM_EVENT_ADD_DONE:
+-		pk_alpm_transaction_add_done (job, data);
+-		break;
+-	case ALPM_EVENT_REMOVE_START:
+-		pk_alpm_transaction_remove_start (job, data);
+-		break;
+-	case ALPM_EVENT_REMOVE_DONE:
+-		pk_alpm_transaction_remove_done (job, data);
+-		break;
+-	case ALPM_EVENT_UPGRADE_START:
+-	case ALPM_EVENT_DOWNGRADE_START:
+-	case ALPM_EVENT_REINSTALL_START:
+-		pk_alpm_transaction_upgrade_start (job, data, old);
+-		break;
+-	case ALPM_EVENT_UPGRADE_DONE:
+-		pk_alpm_transaction_upgrade_done (job, data, old, 1);
+-		break;
+-	case ALPM_EVENT_DOWNGRADE_DONE:
+-		pk_alpm_transaction_upgrade_done (job, data, old, -1);
++	case ALPM_EVENT_PACKAGE_OPERATION_START:
++		switch(event->package_operation.operation) {
++			case ALPM_PACKAGE_INSTALL:
++				pk_alpm_transaction_add_start (job,
++						event->package_operation.newpkg);
++				break;
++			case ALPM_PACKAGE_UPGRADE:
++			case ALPM_PACKAGE_REINSTALL:
++			case ALPM_PACKAGE_DOWNGRADE:
++				pk_alpm_transaction_upgrade_start (job,
++						event->package_operation.newpkg,
++						event->package_operation.oldpkg);
++				break;
++			case ALPM_PACKAGE_REMOVE:
++				pk_alpm_transaction_remove_start (job,
++						event->package_operation.oldpkg);
++				break;
++		}
+ 		break;
+-	case ALPM_EVENT_REINSTALL_DONE:
+-		pk_alpm_transaction_upgrade_done (job, data, old, 0);
++	case ALPM_EVENT_PACKAGE_OPERATION_DONE:
++		switch(event->package_operation.operation) {
++			case ALPM_PACKAGE_INSTALL:
++				pk_alpm_transaction_add_done (job,
++						event->package_operation.newpkg);
++				break;
++			case ALPM_PACKAGE_UPGRADE:
++				pk_alpm_transaction_upgrade_done (job,
++						event->package_operation.newpkg,
++						event->package_operation.oldpkg, 1);
++				break;
++			case ALPM_PACKAGE_REINSTALL:
++				pk_alpm_transaction_upgrade_done (job,
++						event->package_operation.newpkg,
++						event->package_operation.oldpkg, 0);
++				break;
++			case ALPM_PACKAGE_DOWNGRADE:
++				pk_alpm_transaction_upgrade_done (job,
++						event->package_operation.newpkg,
++						event->package_operation.oldpkg, -1);
++				break;
++			case ALPM_PACKAGE_REMOVE:
++				pk_alpm_transaction_remove_done (job,
++						event->package_operation.oldpkg);
++				break;
++		}
+ 		break;
+ 	case ALPM_EVENT_INTEGRITY_START:
+ 	case ALPM_EVENT_KEYRING_START:
+@@ -650,14 +678,16 @@ pk_alpm_transaction_event_cb (alpm_event_t event, gpointer data, gpointer old)
+ 		pk_alpm_transaction_repackaging (job);
+ 		break;
+ 	case ALPM_EVENT_SCRIPTLET_INFO:
+-		pk_alpm_transaction_output (data);
++		pk_alpm_transaction_output (event->scriptlet_info.line);
+ 		break;
+ 	case ALPM_EVENT_RETRIEVE_START:
+ 		pk_alpm_transaction_download (job);
+ 		break;
+-	case ALPM_EVENT_OPTDEP_REQUIRED:
++	case ALPM_EVENT_OPTDEP_REMOVAL:
+ 		/* TODO: remove if this results in notification spam */
+-		pk_alpm_transaction_optdepend_required (job, data, old);
++		pk_alpm_transaction_optdepend_required (job,
++				event->optdep_removal.pkg,
++				event->optdep_removal.optdep);
+ 		break;
+ 	case ALPM_EVENT_CHECKDEPS_DONE:
+ 	case ALPM_EVENT_FILECONFLICTS_DONE:
+@@ -678,7 +708,7 @@ pk_alpm_transaction_event_cb (alpm_event_t event, gpointer data, gpointer old)
+ 		break;
+ 
+ 	default:
+-		g_debug ("unhandled event %d", event);
++		g_debug ("unhandled event %d", event->type);
+ 		break;
+ 	}
+ }
+-- 
+2.2.1
+
