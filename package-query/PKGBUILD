@@ -1,7 +1,7 @@
 # Contributor: tuxce <tuxce.net@gmail.com>
 pkgname=package-query
 pkgver=1.5
-pkgrel=2
+pkgrel=3
 pkgdesc="Query ALPM and AUR"
 arch=('any')
 url="https://github.com/archlinuxfr/package-query/"
