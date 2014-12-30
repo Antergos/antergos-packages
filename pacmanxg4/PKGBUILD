@@ -24,12 +24,7 @@ package() {
   sed -i 's|^Icon=/usr/share/pixmaps/pacmanxg.png|Icon=pacmanxg.svg|g' pacmanxg.desktop
   cd ${srcdir}
   install -d $pkgdir/opt/pacmanxg
-  install -Dm755 pacmanxg $pkgdir/opt/pacmanxg/pacmanxg
-  install -dm755 langs $pkgdir/opt/pacmanxg/langs
-  install -Dm755 dizz.sh $pkgdir/opt/pacmanxg/dizz.sh
-  install -dm755 themes $pkgdir/opt/pacmanxg/themes  
-  install -Dm644 pacmanxg.png $pkgdir/usr/share/pixmaps/pacmanxg.png
-  install -Dm644 pacmanxg.desktop $pkgdir/usr/share/applications/pacmanxg.desktop
+  find . -type f -exec install -Dm644 '{}' "$pkgdir/opt/pacmanxg/{}" \;
   install -d $pkgdir/usr/bin/
 }
 
