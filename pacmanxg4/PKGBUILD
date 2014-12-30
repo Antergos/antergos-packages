@@ -3,7 +3,7 @@
 
 pkgname=pacmanxg4
 pkgver=4.16.1
-pkgrel=6
+pkgrel=7
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
 arch=('i686' 'x86_64')
@@ -25,6 +25,8 @@ package() {
   cd ${srcdir}
   install -d $pkgdir/opt/pacmanxg
   find . -type f -exec install -Dm644 '{}' "$pkgdir/opt/pacmanxg/{}" \;
+  install -Dm644 pacmanxg.png $pkgdir/usr/share/pixmaps/pacmanxg.png
+  install -Dm644 pacmanxg.desktop $pkgdir/usr/share/applications/pacmanxg.desktop
   install -d $pkgdir/usr/bin/
 }
 
