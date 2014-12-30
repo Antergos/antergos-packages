@@ -3,7 +3,7 @@
 
 pkgname=pacmanxg4
 pkgver=4.16.1
-pkgrel=7
+pkgrel=8
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
 arch=('i686' 'x86_64')
@@ -23,11 +23,11 @@ package() {
   # Set default icon
   sed -i 's|^Icon=/usr/share/pixmaps/pacmanxg.png|Icon=pacmanxg.svg|g' pacmanxg.desktop
   cd ${srcdir}
-  install -d $pkgdir/opt/pacmanxg
-  find . -type f -exec install -Dm644 '{}' "$pkgdir/opt/pacmanxg/{}" \;
-  chmod a+x ${pkgdir}/opt/pacmanxg/pacmanxg
-  chmod a+x ${pkgdir}/opt/pacmanxg/repacman
-  chmod a+x ${pkgdir}/opt/pacmanxg/dizz.sh
+  install -d $pkgdir/opt/Almin-Soft/pacmanxg
+  find . -type f -exec install -Dm644 '{}' "$pkgdir/opt/Almin-Soft/pacmanxg/{}" \;
+  chmod a+x ${pkgdir}/opt/Almin-Soft/pacmanxg/pacmanxg
+  chmod a+x ${pkgdir}/opt/Almin-Soft/pacmanxg/repacman
+  chmod a+x ${pkgdir}/opt/Almin-Soft/pacmanxg/dizz.sh
   install -Dm644 pacmanxg.png $pkgdir/usr/share/pixmaps/pacmanxg.png
   install -Dm644 pacmanxg.desktop $pkgdir/usr/share/applications/pacmanxg.desktop
   install -d $pkgdir/usr/bin/
