@@ -3,21 +3,18 @@
 
 pkgname=pacmanxg4
 pkgver=4.16.1
-pkgrel=4
+pkgrel=5
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
 arch=('i686' 'x86_64')
 url="http://almin-soft.fsay.net/index.php?pacmanxg/4x-series"
 license=('GPL2')
-if [ "${CARCH}" = 'x86_64' ]; then
-depends=('pacman' 'lib32-libx11' 'lib32-gcc-libs' 'lib32-libxft' 'wget' 'ssx' 'lib32-libxrender')
-source=("pacmanXG464.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanXG464.tar.bz2")
-md5sums=('bf5d644acc4de7678cb8dcc9786b4541')
-elif [ "${CARCH}" = 'i686' ]; then
-depends=('pacman' 'libx11' 'gcc-libs' 'wget' 'ssx' 'libxrender')
-source=("pacmanXG4.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanXG4.tar.bz2")
-md5sums=('d44017533784f2a52a2720d2e58da940')
-fi
+depends_x86_64=('pacman' 'lib32-libx11' 'lib32-gcc-libs' 'lib32-libxft' 'wget' 'ssx' 'lib32-libxrender')
+source_x86_64=("pacmanXG464.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanXG464.tar.bz2")
+md5sums_x86_64=('bf5d644acc4de7678cb8dcc9786b4541')
+depends_i686=('pacman' 'libx11' 'gcc-libs' 'wget' 'ssx' 'libxrender')
+source_i686=("pacmanXG4.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanXG4.tar.bz2")
+md5sums_i686=('d44017533784f2a52a2720d2e58da940')
 optdepends=('yaourt: AUR support' 'pkgtools: pkgfile utility check' 'repacman: rebuild package')
 install=${pkgname}.install
 
