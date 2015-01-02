@@ -1,12 +1,11 @@
-# Maintainer: Antergos Developers <dev@antergos.com>
-# Contributor: Guillaume Benoit <guillaume@manjaro.org>
+# Maintainer: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=pamac
-pkgver=2.0
-_pkgver=2.0
-pkgrel=4
+pkgver=2.1
+_pkgver=2.1
+pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
-_gitcommit="8a3fa7ccb5854811220ad248a8ab4efb6c15117d"
+#_gitcommit="8a3fa7ccb5854811220ad248a8ab4efb6c15117d"
 pkgdesc="A Gtk3 frontend for libalpm"
 arch=('any')
 url="https://github.com/manjaro/pamac"
@@ -15,8 +14,8 @@ depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'yaourt' 'vte3
 optdepends=('polkit-gnome: needed for authentification in Cinnamon, Gnome' 'lxsession: needed for authentification in Xfce, LXDE etc.')
 makedepends=('gettext' 'itstool' 'vala')
 backup=('etc/pamac.conf')
-provides=('pamac')
-conflicts=('pamac-dev' 'pamac-aur')
+replaces=('pamac-aur')
+conflicts=('pamac-dev')
 options=(!emptydirs)
 install=pamac.install
 
@@ -26,7 +25,7 @@ else
   source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
-sha256sums=('600f334f9910595d12c48319ac6c53a375f92599f213d35820e043af7b8c6e1f')
+sha256sums=('8ea950314dd6e3974b2ce7ff770ca6bb70802ef23e4a37d4b715418dd3c58586')
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
@@ -37,7 +36,7 @@ prepare() {
 
   # adjust version string
   cd src
-  sed -i -e "s|\"2.0\"|\"$pkgver-$pkgrel\"|g" manager_window.vala  
+  sed -i -e "s|\"2.1\"|\"$pkgver-$pkgrel\"|g" manager_window.vala
 }
 
 build() {
@@ -49,15 +48,6 @@ build() {
 
   # build
   make all
-  
-  # create .mo translation files
-  #mkdir -p mo
-  #for i in `ls po | sed s'|.po||'` ; do
-  #  msgfmt -c "po/$i.po" -o "mo/$i.mo"
-  #done
-  
-  # add translation in policy file
-  #itstool -j "data/polkit/org.manjaro.pamac.policy" -o "data/polkit/org.manjaro.pamac.policy.out" `ls mo/*`
 }
 
 package() {
@@ -68,12 +58,13 @@ package() {
   fi
 
   mkdir -p "${pkgdir}/usr/share/icons/hicolor"
-  cp -r "data/icons/"* "${pkgdir}/usr/share/icons/hicolor" 
+  cp -r "data/icons/"* "${pkgdir}/usr/share/icons/hicolor"
+  cp -r "po/locale" "${pkgdir}/usr/share"
   install -Dm744 "src/pamac-daemon" "${pkgdir}/usr/bin/pamac-daemon"
   install -Dm755 "src/pamac-manager" "${pkgdir}/usr/bin/pamac-manager"
   install -Dm755 "src/pamac-updater" "${pkgdir}/usr/bin/pamac-updater"
   install -Dm755 "src/pamac-tray" "${pkgdir}/usr/bin/pamac-tray"
-  #install -Dm755 "src/pamac-refresh" "${pkgdir}/usr/bin/pamac-refresh"
+  install -Dm755 "src/pamac-refresh" "${pkgdir}/usr/bin/pamac-refresh"
   install -Dm755 "src/pamac-install" "${pkgdir}/usr/bin/pamac-install"
   install -Dm644 "data/applications/pamac-tray.desktop" "${pkgdir}/etc/xdg/autostart/pamac-tray.desktop"
   install -Dm644 "data/applications/pamac-manager.desktop" "${pkgdir}/usr/share/applications/pamac-manager.desktop"
@@ -83,15 +74,9 @@ package() {
   install -Dm644 "data/dbus/org.manjaro.pamac.conf" "${pkgdir}/etc/dbus-1/system.d/org.manjaro.pamac.conf"
   install -Dm644 "data/dbus/org.manjaro.pamac.service" "${pkgdir}/usr/share/dbus-1/system-services/org.manjaro.pamac.service"
   install -Dm644 "data/systemd/pamac.service" "${pkgdir}/usr/lib/systemd/system/pamac.service"
-  #install -Dm744 "data/networkmanager/99_update_pamac_tray" "${pkgdir}/etc/NetworkManager/dispatcher.d/99_update_pamac_tray"
-  install -Dm644 "data/mime/x-alpm-package.xml" "${pkgdir}/usr/share/mime/packages/x-alpm-package.xml"
-
-  # rename mo files only here else istool failed
-  for i in `cd po && ls *.mo | sed s'|.mo||'` ; do
-    mkdir -p "${pkgdir}/usr/share/locale/$i/LC_MESSAGES/"
-    cp "po/$i.mo" "${pkgdir}/usr/share/locale/$i/LC_MESSAGES/pamac.mo"
-  done
-  
-  #install -Dm644 "data/polkit/org.manjaro.pamac.policy.out" "${pkgdir}/usr/share/polkit-1/actions/org.manjaro.pamac.policy"
+  install -Dm744 "data/networkmanager/99_update_pamac_tray" "${pkgdir}/etc/NetworkManager/dispatcher.d/99_update_pamac_tray"
   install -Dm644 "data/polkit/org.manjaro.pamac.policy" "${pkgdir}/usr/share/polkit-1/actions/org.manjaro.pamac.policy"
+  install -Dm644 "data/mime/x-alpm-package.xml" "${pkgdir}/usr/share/mime/packages/x-alpm-package.xml"
 }
+
+# vim:set ts=2 sw=2 et:
