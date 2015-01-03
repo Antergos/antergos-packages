@@ -3,15 +3,17 @@
 pkgname=pamac
 pkgver=2.1
 _pkgver=2.1
-pkgrel=1
+pkgrel=2
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
-#_gitcommit="8a3fa7ccb5854811220ad248a8ab4efb6c15117d"
+_gitcommit="f9fc09070724c41e610941bb7dd89e20a911e836"
 pkgdesc="A Gtk3 frontend for libalpm"
-arch=('any')
+arch=('i686' 'x86_64')
 url="https://github.com/manjaro/pamac"
 license=('GPL3')
-depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'yaourt' 'vte3>=0.38' 'gtk3>=3.14' 'libnotify' 'desktop-file-utils')
-optdepends=('polkit-gnome: needed for authentification in Cinnamon, Gnome' 'lxsession: needed for authentification in Xfce, LXDE etc.')
+depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'yaourt' 'vte3>=0.38'
+         'gtk3>=3.14' 'libnotify' 'desktop-file-utils' 'pacman>=4.2' 'pacman<4.3')
+optdepends=('polkit-gnome: needed for authentification in Cinnamon, Gnome'
+            'lxsession: needed for authentification in Xfce, LXDE etc.')
 makedepends=('gettext' 'itstool' 'vala')
 backup=('etc/pamac.conf')
 replaces=('pamac-aur')
@@ -25,7 +27,7 @@ else
   source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
-sha256sums=('8ea950314dd6e3974b2ce7ff770ca6bb70802ef23e4a37d4b715418dd3c58586')
+sha256sums=('2df1a8007f3cc096e6c77967fc986b9bbcd06137f0614bb451d11da162cfc716')
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
