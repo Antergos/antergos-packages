@@ -3,7 +3,7 @@ pkgname=package-query
 pkgver=1.5
 pkgrel=3
 pkgdesc="Query ALPM and AUR"
-arch=('any')
+arch=('i686' 'x86_64')
 url="https://github.com/archlinuxfr/package-query/"
 license=('GPL')
 depends=('pacman>=4.1' 'curl' 'yajl>=2.0')
