@@ -2,7 +2,7 @@
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=pamac-dev
-pkgver=2.1.r239
+pkgver=2.1.r260
 _pkgver=2.1
 pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
@@ -22,13 +22,13 @@ install=pamac.install
 
 pkgver() {
 
-	cd "$srcdir/pamac-$_gitcommit"
+	cd "$srcdir/pamac"
 	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
 
 }
 
 if [ "${_gitcommit}" != "" ]; then
-  source=("pamac-$pkgver-$pkgrel.tar.gz::git+$url")
+  source=("git+https://github.com/manjaro/pamac")
 else
   source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
@@ -37,7 +37,7 @@ sha256sums=('SKIP')
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
-    cd "$srcdir/pamac-$_gitcommit"
+    cd "$srcdir/pamac"
   else
     cd "$srcdir/pamac-$_pkgver"
   fi
@@ -49,7 +49,7 @@ prepare() {
 
 build() {
   if [ "$_gitcommit" != "" ]; then
-    cd "$srcdir/pamac-$_gitcommit"
+    cd "$srcdir/pamac"
   else
     cd "$srcdir/pamac-$_pkgver"
   fi
@@ -60,7 +60,7 @@ build() {
 
 package() {
   if [ "$_gitcommit" != "" ]; then
-    cd "$srcdir/pamac-$_gitcommit"
+    cd "$srcdir/pamac"
   else
     cd "$srcdir/pamac-$_pkgver"
   fi
