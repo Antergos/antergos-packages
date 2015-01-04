@@ -20,67 +20,59 @@ conflicts=('pamac' 'pamac-aur')
 options=(!emptydirs)
 install=pamac.install
 
+pkgver() {
+
+	cd "$srcdir/pamac-$_gitcommit"
+	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
+
+}
+
 if [ "${_gitcommit}" != "" ]; then
-  source=("git+https://github.com/manjaro/pamac")
+  source=("pamac-$pkgver-$pkgrel.tar.gz::git+$url")
 else
   source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
 sha256sums=('SKIP')
 
-pkgver() {
-
-	cd "$srcdir/pamac"
-	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
-
-}
-
 prepare() {
   if [ "$_gitcommit" != "" ]; then
-    cd "$srcdir/pamac"
+    cd "$srcdir/pamac-$_gitcommit"
   else
     cd "$srcdir/pamac-$_pkgver"
   fi
 
   # adjust version string
   cd src
-  sed -i -e "s|\"2.0\"|\"$pkgver-$pkgrel\"|g" manager_window.vala  
+  sed -i -e "s|\"2.1\"|\"$pkgver-$pkgrel\"|g" manager_window.vala
 }
 
 build() {
   if [ "$_gitcommit" != "" ]; then
-    cd "$srcdir/pamac"
+    cd "$srcdir/pamac-$_gitcommit"
   else
     cd "$srcdir/pamac-$_pkgver"
   fi
 
   # build
   make all
-  
-  # create .mo translation files
-  #mkdir -p mo
-  #for i in `ls po | sed s'|.po||'` ; do
-  #  msgfmt -c "po/$i.po" -o "mo/$i.mo"
-  #done
-  
-  # add translation in policy file
-  #itstool -j "data/polkit/org.manjaro.pamac.policy" -o "data/polkit/org.manjaro.pamac.policy.out" `ls mo/*`
 }
 
 package() {
   if [ "$_gitcommit" != "" ]; then
-    cd "$srcdir/pamac"
+    cd "$srcdir/pamac-$_gitcommit"
   else
     cd "$srcdir/pamac-$_pkgver"
   fi
 
   mkdir -p "${pkgdir}/usr/share/icons/hicolor"
-  cp -r "data/icons/"* "${pkgdir}/usr/share/icons/hicolor" 
+  cp -r "data/icons/"* "${pkgdir}/usr/share/icons/hicolor"
+  cp -r "po/locale" "${pkgdir}/usr/share"
   install -Dm744 "src/pamac-daemon" "${pkgdir}/usr/bin/pamac-daemon"
   install -Dm755 "src/pamac-manager" "${pkgdir}/usr/bin/pamac-manager"
   install -Dm755 "src/pamac-updater" "${pkgdir}/usr/bin/pamac-updater"
   install -Dm755 "src/pamac-tray" "${pkgdir}/usr/bin/pamac-tray"
-  #install -Dm755 "src/pamac-refresh" "${pkgdir}/usr/bin/pamac-refresh"
+  install -Dm755 "src/pamac-refresh" "${pkgdir}/usr/bin/pamac-refresh"
   install -Dm755 "src/pamac-install" "${pkgdir}/usr/bin/pamac-install"
   install -Dm644 "data/applications/pamac-tray.desktop" "${pkgdir}/etc/xdg/autostart/pamac-tray.desktop"
   install -Dm644 "data/applications/pamac-manager.desktop" "${pkgdir}/usr/share/applications/pamac-manager.desktop"
@@ -90,15 +82,9 @@ package() {
   install -Dm644 "data/dbus/org.manjaro.pamac.conf" "${pkgdir}/etc/dbus-1/system.d/org.manjaro.pamac.conf"
   install -Dm644 "data/dbus/org.manjaro.pamac.service" "${pkgdir}/usr/share/dbus-1/system-services/org.manjaro.pamac.service"
   install -Dm644 "data/systemd/pamac.service" "${pkgdir}/usr/lib/systemd/system/pamac.service"
-  #install -Dm744 "data/networkmanager/99_update_pamac_tray" "${pkgdir}/etc/NetworkManager/dispatcher.d/99_update_pamac_tray"
-  install -Dm644 "data/mime/x-alpm-package.xml" "${pkgdir}/usr/share/mime/packages/x-alpm-package.xml"
-
-  # rename mo files only here else istool failed
-  for i in `cd po && ls *.mo | sed s'|.mo||'` ; do
-    mkdir -p "${pkgdir}/usr/share/locale/$i/LC_MESSAGES/"
-    cp "po/$i.mo" "${pkgdir}/usr/share/locale/$i/LC_MESSAGES/pamac.mo"
-  done
-  
-  #install -Dm644 "data/polkit/org.manjaro.pamac.policy.out" "${pkgdir}/usr/share/polkit-1/actions/org.manjaro.pamac.policy"
+  install -Dm744 "data/networkmanager/99_update_pamac_tray" "${pkgdir}/etc/NetworkManager/dispatcher.d/99_update_pamac_tray"
   install -Dm644 "data/polkit/org.manjaro.pamac.policy" "${pkgdir}/usr/share/polkit-1/actions/org.manjaro.pamac.policy"
+  install -Dm644 "data/mime/x-alpm-package.xml" "${pkgdir}/usr/share/mime/packages/x-alpm-package.xml"
 }
+
+# vim:set ts=2 sw=2 et:
