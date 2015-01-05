@@ -2,19 +2,19 @@
 #Maintainer: Antergos Developers <devs@antergos.com>
 
 pkgname=pacmanxg4
-pkgver=4.16.1
-pkgrel=8
+pkgver=4.16.2
+pkgrel=2
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
 arch=('i686' 'x86_64')
 url="http://almin-soft.fsay.net/index.php?pacmanxg/4x-series"
 license=('GPL2')
 depends_x86_64=('pacman' 'lib32-libx11' 'lib32-gcc-libs' 'lib32-libxft' 'wget' 'ssx' 'lib32-libxrender')
-source_x86_64=("pacmanXG464.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanxg4.16_64.tar.bz2")
-md5sums_x86_64=('bf5d644acc4de7678cb8dcc9786b4541')
+source_x86_64=("pacmanXG464.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanxg_64.tar.bz2")
+md5sums_x86_64=('1e7b009acd882e72d6012768adb131fc')
 depends_i686=('pacman' 'libx11' 'gcc-libs' 'wget' 'ssx' 'libxrender')
-source_i686=("pacmanXG4.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanxg4.16.tar.bz2")
-md5sums_i686=('d44017533784f2a52a2720d2e58da940')
+source_i686=("pacmanXG4.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanxg.tar.bz2")
+md5sums_i686=('5429486e1ba4ab058f9198d190dc8949')
 optdepends=('yaourt: AUR support' 'pkgtools: pkgfile utility check' 'repacman: rebuild package')
 install=${pkgname}.install
 
