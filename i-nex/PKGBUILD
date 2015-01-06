@@ -1,0 +1,49 @@
+# Maintainer: eloaders <eloaders at linux dot pl>
+
+pkgname=i-nex
+_gitname=I-Nex
+pkgver=7.4.0
+pkgrel=3
+pkgdesc="System information tool like hardinfo, sysinfo"
+arch=('i686' 'x86_64')
+url="http://i-nex.linux.pl/"
+license=('LGPL3')
+depends=('gambas3-runtime' 
+	 'gambas3-gb-image' 
+	 'gambas3-gb-form'
+         'gambas3-gb-desktop'
+         'gambas3-gb-qt4'
+         'gambas3-gb-desktop-x11'
+         'python2' 
+         'libcpuid'
+         'xorg-server-utils' 
+         'lsb-release' 
+         'curl'
+	 'procps-ng')
+makedepends=('gambas3-devel' 'gcc' 'imagemagick' 'git')
+source=(https://github.com/eloaders/${_gitname}/archive/${pkgver}.tar.gz)
+md5sums=('316632d04ef4708a4e9a816ec871ddea')
+provides=('i-nex-git' 'i-nex-bzr' 'i-nex-dev' 'i-nex')
+conflicts=('i-nex-git' 'i-nex-bzr' 'i-nex-dev')
+
+prepare() {
+  cd $_gitname-$pkgver
+  sed -i 's|python3$|python2|' pastebinit
+  # make it dynamic
+  sed -i -e 's|^STATIC.*|STATIC = false|' i-nex.mk
+  cd I-Nex
+  autoreconf -i
+}
+ 
+build() {
+  cd $_gitname-$pkgver
+  cd I-Nex
+  ./configure --prefix=/usr
+  cd ..
+  make
+}
+ 
+package() {
+  cd $_gitname-$pkgver
+  make install DESTDIR="$pkgdir"
+}
