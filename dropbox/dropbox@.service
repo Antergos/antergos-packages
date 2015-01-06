@@ -1,0 +1,16 @@
+[Unit]
+Description=Dropbox
+After=local-fs.target network.target systemd-user-sessions
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/dropbox
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+User=%I
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=multi-user.target
+
