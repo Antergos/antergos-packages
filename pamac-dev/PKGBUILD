@@ -20,13 +20,6 @@ conflicts=('pamac' 'pamac-aur')
 options=(!emptydirs)
 install=pamac.install
 
-pkgver() {
-
-	cd "$srcdir/pamac"
-	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
-
-}
-
 if [ "${_gitcommit}" != "" ]; then
   source=("git+https://github.com/manjaro/pamac")
 else
@@ -34,6 +27,13 @@ else
 fi
 
 sha256sums=('SKIP')
+
+pkgver() {
+
+	cd "$srcdir/pamac"
+	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
+
+}
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
