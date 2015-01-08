@@ -18,9 +18,9 @@ provides=("pycharm-eap" "pycharm-community")
 conflicts=("pycharm-eap" "pycharm-community" "pycharm-professional")
 changelog=""
 if [[ ${_eap} = "True" ]]; then
-	source=("http://download.jetbrains.com/python/pycharm-professional-${_buildver}.tar.gz")
+	source=("http://download.jetbrains.com/python/pycharm-community-${_buildver}.tar.gz")
 else
-	source=("http://download.jetbrains.com/python/pycharm-professional-${_pkgver}.tar.gz")
+	source=("http://download.jetbrains.com/python/pycharm-community-${_pkgver}.tar.gz")
 fi
 md5sums=('2a19e15bf32c0369965a7df67050797b')
 
@@ -56,11 +56,6 @@ EOF
   mkdir -p "${pkgdir}/usr/share/applications/"
   mkdir -p "${pkgdir}/usr/share/licenses/${pkgname}/"
   install -Dm644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/"
-   if [[ ${_eap} = "True" ]]; then
-  cp -R ${srcdir}/pycharm-community-${_buildver}/license/* "${pkgdir}/usr/share/licenses/${pkgname}/"
-  else
-   cp -R ${srcdir}/pycharm-community-4.0.3/license/* "${pkgdir}/usr/share/licenses/${pkgname}/"
-  fi
   ln -s "/opt/${pkgname}/bin/pycharm.sh" "${pkgdir}/usr/bin/pycharm-eap"
 }
 
