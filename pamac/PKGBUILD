@@ -3,9 +3,9 @@
 pkgname=pamac
 pkgver=2.1
 _pkgver=2.1
-pkgrel=6
+pkgrel=7
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
-_gitcommit="457b7b69c036c09c2ebb36d4f7b23867c170197c"
+_gitcommit="448ade9b51135870b24f7e2d12e4d989c41a39c2"
 pkgdesc="A Gtk3 frontend for libalpm"
 arch=('i686' 'x86_64')
 url="https://github.com/manjaro/pamac"
@@ -27,7 +27,7 @@ else
   source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
-sha256sums=('f052b8c6116ffd34ccef58a439ed3d4affc53c2afa95c6b5abbb77e9205b6b62')
+sha256sums=('4cafe18ff8e584dbf9fb3cbaf3f38e13b6c3470a5300338e2f2c8410965c9ccb')
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
