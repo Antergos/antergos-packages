@@ -28,6 +28,7 @@ fi
 
 sha256sums=('SKIP')
 
+
 pkgver() {
 
 	cd "$srcdir/pamac"
