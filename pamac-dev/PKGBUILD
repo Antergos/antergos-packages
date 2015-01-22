@@ -31,14 +31,14 @@ sha256sums=('SKIP')
 
 pkgver() {
 
-	cd "$srcdir/pamac"
+	cd "$srcdir/pamac-master"
 	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
 
 }
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
-    cd "$srcdir/pamac"
+    cd "$srcdir/pamac-master"
   else
     cd "$srcdir/pamac-$_pkgver"
   fi
@@ -50,7 +50,7 @@ prepare() {
 
 build() {
   if [ "$_gitcommit" != "" ]; then
-    cd "$srcdir/pamac"
+    cd "$srcdir/pamac-master"
   else
     cd "$srcdir/pamac-$_pkgver"
   fi
@@ -61,7 +61,7 @@ build() {
 
 package() {
   if [ "$_gitcommit" != "" ]; then
-    cd "$srcdir/pamac"
+    cd "$srcdir/pamac-master"
   else
     cd "$srcdir/pamac-$_pkgver"
   fi
