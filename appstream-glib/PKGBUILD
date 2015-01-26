@@ -8,7 +8,7 @@ arch=('i686' 'x86_64')
 url="https://github.com/hughsie/appstream-glib"
 license=('LGPLv2+')
 depends=('glib2' 'libyaml')
-makedepends=('gtk-doc' 'gobject-introspection')
+makedepends=('gtk-doc' 'gobject-introspection' 'intltool')
 replaces=("appstream-glib")
 _realver=0.3.1
 provides=("appstream-glib=$_realver")
@@ -16,7 +16,8 @@ source=("git://github.com/hughsie/appstream-glib.git")
 md5sums=('SKIP')
 
 pkgver() {
-	date +"%Y%m%d"
+	cd "$srcdir/$_pkgname"
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(date +'%Y%m%d')"
 }
 
 build() {
