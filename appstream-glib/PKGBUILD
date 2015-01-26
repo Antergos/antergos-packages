@@ -8,7 +8,7 @@ arch=('i686' 'x86_64')
 url="https://github.com/hughsie/appstream-glib"
 license=('LGPLv2+')
 depends=('glib2' 'libyaml' 'gnome-common' 'libsoup' 'gtk3' 'gdk-pixbuf2')
-makedepends=('gtk-doc' 'gobject-introspection' 'intltool')
+makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'git')
 replaces=("appstream-glib")
 _realver=0.3.1
 provides=("appstream-glib=$_realver")
