@@ -1,17 +1,17 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=lightdm-webkit2-greeter
-pkgver=0.0.1
-pkgrel=5
+pkgver=0.1
+pkgrel=1
 pkgdesc="A lightweight display manager greeter"
 arch=('any')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
 license=('GPL3' 'LGPL3')
-source=("$pkgname-$pkgver.tar.gz::https://github.com/antergos/lightdm-webkit2-greeter/archive/v${pkgver}.tar.gz")
-depends=('lightdm' 'webkitgtk' 'gtk-engines')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/antergos/lightdm-webkit2-greeter/archive/${pkgver}.tar.gz")
+depends=('lightdm' 'webkit2gtk' 'gtk-engines' 'gtk3' 'dbus-glib')
 options=(!libtool)
 makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common')
-sha256sums=('0291397919705173df04b411e1393729ee774214f208f1b1a707cecc8c34a4fc')
+sha256sums=('1289810df25285d96e6d27947b00cefe3cac1d1a981d6585906ff527c1b3f4e1')
 
 build() {
   cd $srcdir/$pkgname-$pkgver
