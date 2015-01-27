@@ -9,6 +9,7 @@ url="https://github.com/antergos/lightdm-webkit2-greeter"
 license=('GPL3' 'LGPL3')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/antergos/lightdm-webkit2-greeter/archive/${pkgver}.tar.gz")
 depends=('lightdm' 'webkit2gtk' 'gtk-engines' 'gtk3' 'dbus-glib')
+provides=('lightdm-webkit-greeter')
 options=(!libtool)
 makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common')
 sha256sums=('1289810df25285d96e6d27947b00cefe3cac1d1a981d6585906ff527c1b3f4e1')
