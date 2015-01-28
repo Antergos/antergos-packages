@@ -3,12 +3,12 @@
 
 pkgname=kfaenza-icon-theme
 pkgver=0.8.9
-pkgrel=4
+pkgrel=5
 pkgdesc="Faenza icon theme for KDE4"
 url="http://kde-look.org/content/show.php?content=143890"
 license=('GPL')
 arch=('any')
-depends=('kdebase-workspace')
+depends=()
 source=(
 	"http://pkgs.fedoraproject.org/repo/pkgs/kfaenza-icon-theme/kfaenza-icon-theme-${pkgver}.tar.gz/95e9f287da7a0fd76fb406d313eee77e/kfaenza-icon-theme-${pkgver}.tar.gz"
 	"kfaenza-icon-patch-0.3.tar.gz")
