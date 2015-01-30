@@ -2,8 +2,8 @@
 #Maintainer: Antergos Developers <devs@antergos.com>
 
 pkgname=pacmanxg4
-pkgver=4.16.2
-pkgrel=4
+pkgver=4.16.3
+pkgrel=3
 pkgdesc="Yet another GUI for pacman and yaourt. Depends neither GTK nor Qt, only X11"
 options=('!strip')
 arch=('i686' 'x86_64')
@@ -11,10 +11,10 @@ url="http://almin-soft.fsay.net/index.php?pacmanxg/4x-series"
 license=('GPL2')
 depends_x86_64=('pacman' 'lib32-libx11' 'lib32-gcc-libs' 'lib32-libxft' 'wget' 'ssx' 'lib32-libxrender')
 source_x86_64=("pacmanXG464.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanxg_64.tar.bz2")
-md5sums_x86_64=('1e7b009acd882e72d6012768adb131fc')
+md5sums_x86_64=('a3632a9221ef612ad3e049583ee6de09')
 depends_i686=('pacman' 'libx11' 'gcc-libs' 'wget' 'ssx' 'libxrender')
 source_i686=("pacmanXG4.tar.bz2::http://almin-soft.fsay.net/data/files/pacmanxg/download.php?get=pacmanxg.tar.bz2")
-md5sums_i686=('5429486e1ba4ab058f9198d190dc8949')
+md5sums_i686=('fe71326a86a4b18997eaf6f5349b347c')
 optdepends=('yaourt: AUR support' 'pkgtools: pkgfile utility check' 'repacman: rebuild package')
 install=${pkgname}.install
 
@@ -36,6 +36,8 @@ package() {
   install -Dm755 langs/ru.lang $pkgdir/opt/Almin-Soft/pacmanxg/langs/ru.lang
   install -Dm755 langs/el.lang $pkgdir/opt/Almin-Soft/pacmanxg/langs/el.lang
   install -Dm755 langs/pl.lang $pkgdir/opt/Almin-Soft/pacmanxg/langs/pl.lang
+  install -Dm755 langs/ca.lang $pkgdir/opt/Almin-Soft/pacmanxg/langs/ca.lang
+  install -Dm755 langs/pt-br.lang $pkgdir/opt/Almin-Soft/pacmanxg/langs/pt-br.lang
 
   install -Dm775 "themes/dusk (Chakra)" "$pkgdir/opt/Almin-Soft/themes/dusk (Chakra)"
   install -Dm775 "themes/Graybird-like (Bridge)" "$pkgdir/opt/Almin-Soft/themes/Graybird-like (Bridge)"
