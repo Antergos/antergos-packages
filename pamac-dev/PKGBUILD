@@ -29,8 +29,11 @@ fi
 sha256sums=('SKIP')
 
 pkgver() {
-
-	cd "$srcdir/pamac"
+  if [[ "${srcdir}" != '' ]]; then
+	  cd "$srcdir/pamac"
+	else
+	  cd pamac
+	fi
 	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
 
 }
