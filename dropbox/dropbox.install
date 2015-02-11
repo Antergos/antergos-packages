@@ -5,8 +5,9 @@ post_install() {
         rm -R "${HOME}/.dropbox-dist"
     fi
     install -dm0 "${HOME}/.dropbox-dist"
-    systemctl daemon-reload
-    systemctl enable dropbox@${SUDO_USER} || echo "To automatically run dropbox at startup: systemctl --user enable dropbox"
+    cp /usr/share/applications/dropbox.desktop "${HOME}/.config/autostart/"
+    #systemctl daemon-reload
+    #systemctl enable dropbox@${SUDO_USER} || echo "To automatically run dropbox at startup: systemctl --user enable dropbox"
     echo "You must run dropbox manually once in order to complete the setup wizard. \
     You should NOT select the autostart option within the dropbox client (it will be \
     started twice if you do)."
@@ -19,4 +20,5 @@ post_upgrade() {
 post_remove() {
   unlink -f /usr/bin/dropbox
   rm -R "${HOME}/.dropbox-dist"
+  rm -R "${HOME}/.config/dropbox.desktop"
 }
