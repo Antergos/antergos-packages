@@ -8,7 +8,7 @@ post_install()
 
 }
 
-post_update()
+post_upgrade()
 {
 	post_install
 }
