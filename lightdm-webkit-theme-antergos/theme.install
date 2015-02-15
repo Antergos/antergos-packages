@@ -3,8 +3,8 @@ post_install()
 	echo "Setting Antergos as default LightDM Theme"
 	sed -i 's|greeter-session=.*|greeter-session=lightdm-webkit2-greeter|g' /etc/lightdm/lightdm.conf
 	sed -i 's|#greeter-session=|greeter-session=|g' /etc/lightdm/lightdm.conf
-	sed -i 's|webkit-theme=.*|webkit-theme=antergos|g' /etc/lightdm/lightdm-webkit-greeter.conf
-	sed -i 's|#webkit-theme=|webkit-theme=|g' /etc/lightdm/lightdm-webkit-greeter.conf
+	sed -i 's|webkit-theme=.*|webkit-theme=antergos|g' /etc/lightdm/lightdm-webkit2-greeter.conf
+	sed -i 's|#webkit-theme=|webkit-theme=|g' /etc/lightdm/lightdm-webkit2-greeter.conf
 
 }
 
