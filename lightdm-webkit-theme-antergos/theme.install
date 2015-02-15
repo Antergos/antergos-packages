@@ -5,6 +5,7 @@ post_install()
 	sed -i 's|#greeter-session=|greeter-session=|g' /etc/lightdm/lightdm.conf
 	sed -i 's|webkit-theme=.*|webkit-theme=antergos|g' /etc/lightdm/lightdm-webkit-greeter.conf
 	sed -i 's|#webkit-theme=|webkit-theme=|g' /etc/lightdm/lightdm-webkit-greeter.conf
+	find /usr/share/lightdm-webkit -type d -exec chmod 755 {} \; 
 
 }
 
