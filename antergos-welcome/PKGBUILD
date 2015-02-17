@@ -20,16 +20,10 @@ build ()
 package() {
 	cd ${srcdir}/${_pkgname}-$pkgver
 
-	#install -d ${pkgdir}/usr/share/locale/
 	install -d ${pkgdir}/usr/share/antergos-welcome
 	install -Dm755 "src/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
-	#install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/cnchi"
-	#install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
 
-	#for i in data scripts src ui; do
-    #		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
-	#done
-
+	#install -d ${pkgdir}/usr/share/locale/
   	#for files in po/*; do
     #	if [ -f "$files" ] && [ "$files" != 'po/cnchi.pot' ]; then
     #    	STRING_PO=`echo ${files#*/}`
