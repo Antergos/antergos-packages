@@ -1,6 +1,0 @@
-#!/bin/bash
-
-cd /opt/pacmanxg4-next
-./pacmanxg &
-
-exit 0;

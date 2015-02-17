@@ -32,7 +32,7 @@ pkgver() {
   if [[ "${srcdir}" != '' ]]; then
 	  cd "$srcdir/pamac"
 	else
-	  cd pamac
+	  cd pamac-dev
 	fi
 	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
 
