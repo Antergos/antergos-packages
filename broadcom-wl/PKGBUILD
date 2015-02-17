@@ -43,7 +43,9 @@ prepare() {
 
 build() {
   cd "${srcdir}"
-
+  echo "kernmajor: ${_kernmajor}"
+  echo "extramodules: ${_extramodules}"
+  echo "kernver: ${_kernver}"
   make -C /usr/lib/modules/${_kernver}/build M=`pwd`
 }
 
