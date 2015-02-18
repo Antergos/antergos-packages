@@ -22,12 +22,11 @@ package() {
 	cd ${srcdir}/${_pkgname,,}
 
 	install -d ${pkgdir}/usr/share/locale/
-	install -d ${pkgdir}/usr/share/cnchi
-	install -Dm755 ${_pkgname,,}.py $pkgdir/usr/share/cnchi/${_pkgname,,}.py
-	install -Dm755 ${_pkgname,,} "${pkgdir}/usr/bin/cnchi"
+	install -d ${pkgdir}/usr/share/cnchi/cnchi
+	install -Dm755 bin/${_pkgname,,} "${pkgdir}/usr/bin/cnchi"
 	install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
 
-	for i in data scripts src ui; do
+	for i in data scripts cnchi ui grub2-theme; do
 		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
 	done
 
