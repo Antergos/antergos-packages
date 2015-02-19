@@ -1,6 +1,7 @@
 post_install() {
 
     ln -sf /opt/dropbox/dropbox /usr/bin/dropbox
+    ln -sf /opt/dropbox/dropboxd /usr/bin/dropboxd
     if [[ -d "${HOME}/.dropbox-dist" ]]; then
         rm -R "${HOME}/.dropbox-dist"
     fi
@@ -19,6 +20,7 @@ post_upgrade() {
 
 post_remove() {
   unlink -f /usr/bin/dropbox
+  unlink -f /usr/bin/dropboxd
   rm -R "${HOME}/.dropbox-dist"
   rm -R "${HOME}/.config/dropbox.desktop"
 }
