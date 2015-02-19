@@ -2,7 +2,7 @@
 
 _pkgname=antergos-welcome
 pkgname=antergos-welcome
-pkgver=0.0.1
+pkgver=0.0.2
 pkgrel=1
 pkgdesc='Welcome screen for Antergos Linux'
 arch=(any)
@@ -21,16 +21,8 @@ package() {
 	cd ${srcdir}/${_pkgname}-$pkgver
 
 	install -d ${pkgdir}/usr/share/antergos-welcome
-	install -Dm755 "src/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
 
-	#install -d ${pkgdir}/usr/share/locale/
-  	#for files in po/*; do
-    #	if [ -f "$files" ] && [ "$files" != 'po/cnchi.pot' ]; then
-    #    	STRING_PO=`echo ${files#*/}`
-    #    	STRING=`echo ${STRING_PO%.po}`
-    #    	mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
-    #    	msgfmt $files -o ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/cnchi.mo
-    #    	echo "${STRING} installed..."
-    # 	fi
-	#done
+	install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
+
+	cp -R data "${pkgdir}/usr/share/antergos-welcome/"
 }
