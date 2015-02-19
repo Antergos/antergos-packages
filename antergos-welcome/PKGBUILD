@@ -10,7 +10,7 @@ license=(GPL)
 url="https://github.com/Antergos/antergos-welcome"
 depends=(python python-gobject python-dbus webkitgtk3 python-simplejson)
 source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/antergos-welcome/archive/v${pkgver}.tar.gz")
-sha256sums=('be158abd18c6a0e3a50d5a7389094ec292470279a503f29272e12558ba30f238')
+sha256sums=('722d95b1c6fc23cc683d069941026c96d76a10c685bd6638d8afed150f9208f9')
 
 build ()
 {
