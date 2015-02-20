@@ -10,8 +10,8 @@ post_install() {
     #systemctl daemon-reload
     #systemctl enable dropbox@${SUDO_USER} || echo "To automatically run dropbox at startup: systemctl --user enable dropbox"
     echo "You must run dropbox manually once in order to complete the setup wizard. \
-    You should NOT select the autostart option within the dropbox client (it will be \
-    started twice if you do)."
+    #You should NOT select the autostart option within the dropbox client (it will be \
+    #started twice if you do)."
 }
 
 post_upgrade() {
