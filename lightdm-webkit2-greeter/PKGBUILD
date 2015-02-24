@@ -2,7 +2,7 @@
 
 pkgname=lightdm-webkit2-greeter
 pkgver=0.1.2
-pkgrel=3
+pkgrel=4
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('any')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
