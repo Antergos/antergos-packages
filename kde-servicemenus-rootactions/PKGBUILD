@@ -2,7 +2,7 @@
 # Contributor: Jan Valiska <jan.valiska@gmail.com>
 
 pkgname=kde-servicemenus-rootactions
-pkgver=2.8.2
+pkgver=2.8.3
 pkgrel=1
 pkgdesc="Allows admin users to perform several root only actions from dolphin via kdesu/kdesudo"
 arch=('any')

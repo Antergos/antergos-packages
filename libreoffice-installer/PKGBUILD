@@ -1,23 +1,22 @@
 
 
 pkgname=libreoffice-installer
-pkgver=1.4
+pkgver=1.4.1
 pkgrel=1
 pkgdesc="GUI installer for LibreOffice"
 arch=('i686' 'x86_64')
 url="http://almin-soft.fsay.net"
 license=('GPL2')
 
-if [ "${CARCH}" = 'x86_64' ]; then
-	depends=('lib32-libx11' 'lib32-gcc-libs' 'lib32-libxft')
-elif [ "${CARCH}" = 'i686' ]; then
-	depends=('libx11' 'gcc-libs')
-fi
+depends_x86_64=('lib32-libx11' 'lib32-gcc-libs' 'lib32-libxft')
+depends_i686=('libx11' 'gcc-libs')
 
 options=('!strip')
 optdepends=()
 install=${pkgname}.install
-source=("libreoffice-installer.tar.bz2::http://almin-soft.fsay.net/data/files/archlibreofficeinstaller/download.php?get=archlibreofficeinstaller.tar.bz2"
+source_i686=("libreoffice-installer.tar.bz2::http://almin-soft.fsay.net/data/files/archlibreofficeinstaller/download.php?get=archlibreofficeinstaller.tar.bz2"
+		"${pkgname}.desktop")
+source_x86_64=("libreoffice-installer.tar.bz2::http://almin-soft.fsay.net/data/files/archlibreofficeinstaller/download.php?get=archlibreofficeinstaller64.tar.bz2"
 		"${pkgname}.desktop")
 md5sums=('97bb803d4ab8647110af21209b81adb0'
          'dc8acd6e97fa664018f6710813854069')

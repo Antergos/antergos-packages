@@ -9,8 +9,8 @@ url="https://github.com/hughsie/appstream-glib"
 license=('LGPLv2+')
 depends=('glib2' 'libyaml' 'gnome-common' 'libsoup' 'gtk3' 'gdk-pixbuf2')
 makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'git')
-replaces=("appstream-glib")
-_realver=0.3.1
+conflicts=("appstream-glib")
+_realver=0.3.4
 provides=("appstream-glib=$_realver")
 source=("git://github.com/hughsie/appstream-glib.git")
 md5sums=('SKIP')
