@@ -4,10 +4,10 @@
 
 
 pkgname=pycharm-pro-eap
-_buildver=139.1001
-_pkgver=4.0.4
-_eap="False"
-pkgver=4.0.4.139.1001
+_buildver=139.1485
+_pkgver=4.0.5
+_eap="True"
+pkgver=4.0.5.139.1485
 pkgrel=1
 pkgdesc="Powerful Python and Django IDE, Early Access Program (EAP) build. Professional edition."
 arch=('any')
@@ -23,7 +23,7 @@ if [[ ${_eap} = "True" ]]; then
 else
 	source=("http://download.jetbrains.com/python/pycharm-professional-${_pkgver}.tar.gz")
 fi
-md5sums=('b59bf09ed42349452977e12ec0b3eebd')
+sha256sums=$(wget -q ${source}.sha256 && cat pycharm-community-${_buildver}.tar.gz.sha256 | cut -f1 -d" ")
 
 package() {
   cd "${srcdir}"
