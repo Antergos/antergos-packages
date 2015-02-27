@@ -26,7 +26,7 @@ source=("${url}/mintmenu_${pkgver}.tar.gz"
         'execute_fix.diff'
         'removescript')
 install=${pkgname}.install
-sha256sums=('35b08748dbf60149ac882d6bd52cf428b77b130f3bddce3dc756fb499a653d12'
+sha256sums=('587ba8334a43a707f82bd696e454ea6619f2a91b7803c4ea3a5005e829fe240b'
             '1c37bb89e6feadeac4cae5a59de563b19df07611c3fb0d7dfd5fa2bc44a2dead'
             '9533d0f5416af1f2b8ef5097f06e39135278eef856994d859c4ee7ba57d6fcaa')
 
