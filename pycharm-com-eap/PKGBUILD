@@ -19,10 +19,11 @@ conflicts=("pycharm-eap" "pycharm-community" "pycharm-professional")
 changelog=""
 if [[ ${_eap} = "True" ]]; then
 	source=("http://download.jetbrains.com/python/pycharm-community-${_buildver}.tar.gz")
+	sha256sums=$(wget -q "${source}.sha256" && cat "pycharm-community-${_buildver}.tar.gz.sha256" | cut -f1 -d" ")
 else
 	source=("http://download.jetbrains.com/python/pycharm-community-${_pkgver}.tar.gz")
+	sha256sums=$(wget -q "${source}.sha256" && cat "pycharm-community-${_pkgver}.tar.gz.sha256" | cut -f1 -d" ")
 fi
-sha256sums=$(wget -q ${source}.sha256 && cat pycharm-community-${_buildver}.tar.gz.sha256 | cut -f1 -d" ")
 
 package() {
   cd "${srcdir}"

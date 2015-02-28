@@ -4,7 +4,7 @@
 
 pkgname=gnome-shell-extension-dash-to-dock
 pkgver=v38
-pkgrel=2
+pkgrel=3
 epoch=1
 pkgdesc="A gnome-shell extension that transforms the dash into an intellihide dock"
 arch=('any')
@@ -22,7 +22,7 @@ _archivename="dash-to-dock-extensions.gnome.org-${pkgver}"
 prepare() {
     cd "$srcdir/$_archivename"
     sed -i 's/INSTALLBASE = ~\/.local\/share\/gnome-shell\/extensions/INSTALLBASE = ${DESTDIR}/' Makefile
-    sed -i 's|3.12|3.15|g' metadata.json
+    sed -i 's|"3.12"|"3.14", "3.15"|g' metadata.json
 }
 
 build() {
