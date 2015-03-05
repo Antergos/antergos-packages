@@ -3,7 +3,7 @@
 # Contributor: David Manouchehri <d@32t.ca>
 
 pkgname=dropbox
-pkgver=3.2.7
+pkgver=3.2.9
 pkgrel=1
 pkgdesc="A free service that lets you bring your photos, docs, and videos anywhere and share them easily."
 arch=("i686" "x86_64")
@@ -23,8 +23,8 @@ sha256sums=('e7d245f5d1a3d5322614b61400ae2913a8caef44bc86717ff7d8197a15dd7f01'
             'c39d63bcfc0d40002a5df052298feb79f2e8dd3d93da27ef31eb672b8d2fc70e'
             '4bb68229ad88ef2ef17f6eea4d22d31b4426e141899d9b2cc0dc939c225f6dc3'
             '8aae607dce2d673ac888d569d3fbfbeeb746add398fcc9c2b040d3f12dd1a7be')
-sha256sums_i686=('a5cdd5c2099db48c068584071a2604dad70de074821ac48a003bfea3445da4eb')
-sha256sums_x86_64=('532644437514ec0de742265c702c249af25aeefbcd0068d5775875d1107c8e2b')
+sha256sums_i686=('cc88b4e073bd6d76594374a5e08e6b5a99ad751a9aedd2557db1f4af03bdd7bb')
+sha256sums_x86_64=('d272aa65a352a3f8e75d0bde79ac897a5ae9b9b55d8fafcbb2e29e2ea7982e30')
 source_i686=("https://d1ilhw0800yew8.cloudfront.net/client/dropbox-lnx.x86-${pkgver}.tar.gz")
 source_x86_64=("https://d1ilhw0800yew8.cloudfront.net/client/dropbox-lnx.x86_64-${pkgver}.tar.gz")
 source+=("dropbox.png"
