@@ -10,7 +10,7 @@
 
 _pkgname=mintmenu
 pkgname=mate-mint-menu
-pkgver=5.6.1
+pkgver=5.6.2
 pkgrel=1
 pkgdesc="Linux Mint Menu for MATE"
 arch=('any')
@@ -20,8 +20,8 @@ depends=('mate-panel>=1.6.0' 'python2-gobject' 'python2-xdg' 'xdg-utils' 'python
 optdepends=('mate-menu-editor: for editing the mate menu'
             'mint-translations: translations files'
             'mate-screensaver: lock screen button'
-            'pacmanxg4-bin: package manager button'
-			'gksu: needed for package manager integration')
+            'pamac: package manager button'
+		'gksu: needed for package manager integration')
 source=("${url}/mintmenu_${pkgver}.tar.gz" 
         'execute_fix.diff'
         'removescript')
