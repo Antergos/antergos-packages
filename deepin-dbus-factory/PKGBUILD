@@ -1,0 +1,54 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgbase=deepin-dbus-factory
+_pkgbase=dbus-factory
+pkgname=('dde-go-dbus-factory'
+         'dde-qml-dbus-factory')
+pkgver=0.0.2.20141226160557
+_pkgver=0.0.2+20141226160557~7e89f03592
+pkgrel=1
+arch=('i686' 'x86_64')
+url="https://github.com/linuxdeepin/dbus-factory"
+license=('GPL3')
+makedepends=('go' 'go-dlib' 'qt5-webkit' 'qt5-quickcontrols' 'python2'
+             'bluez' 'bluez-libs' 'udisks2' 'upower' 'accountsservice'
+             'libdbus' 'deepin-dbus-generator')
+groups=('deepin')
+options=('staticlibs')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/dbus-factory/dbus-factory_0.0.2+20141226160557~7e89f03592.tar.gz"
+        "fix-arch.patch")
+sha256sums=('cb8cb6aa76b94fc6a647d4361bf02793c05a217f87ad23b76e0e5f0211dfe01e'
+            'b01823357e6a1c7178fade964a87c6e80ad55acb9f15e40f4e3d7edf9022c420')
+
+build() {
+  cd "${_pkgbase}-${_pkgver}"
+
+  patch -p1 -i ../fix-arch.patch
+
+  make -j$(expr $(nproc) \* 2 - 1) -l$(nproc)
+}
+
+package_dde-qml-dbus-factory() {
+  pkgdesc='QML DBus factory for DDE'
+  depends=('qt5-declarative')
+  optdepends=('udisks2: Disk Management Service'
+              'bluez: Daemons for the bluetooth protocol stack'
+              'upower: Abstraction for enumerating power devices'
+              'accountsservice: D-Bus interface for user account query and manipulation'
+              'polkit: Application development toolkit for controlling system-wide privileges'
+              'libdbus: DBus library'
+              'networkmanager: Network Management daemon')
+
+  cd "${_pkgbase}-${_pkgver}"
+
+  make DESTDIR="${pkgdir}" install-qml
+}
+
+package_dde-go-dbus-factory() {
+  pkgdesc='Go-lang DBus factory for DDE'
+
+  cd "${_pkgbase}-${_pkgver}"
+
+  make DESTDIR="${pkgdir}" install-golang
+}

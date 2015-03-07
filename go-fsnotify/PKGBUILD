@@ -1,0 +1,29 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+_pkgname=golang-fsnotify
+pkgname=go-fsnotify
+pkgver=0.0.git201400902.1
+pkgrel=1
+pkgdesc='File system notification for GO'
+arch=('any')
+url="https://github.com/howeyc/fsnotify"
+license=('GPL2')
+replaces=('golang-fsnotify')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/g/golang-fsnotify/golang-fsnotify_0.0~git201400902.orig.tar.xz")
+sha256sums=('671ccaba18c5d9a2681e53ac86cc4fe83912b8db5f5c57146bb91b8ccf3c66af')
+
+_gobuild_dir="${_pkgname}-build"
+_gopkg="github.com/howeyc/fsnotify"
+
+prepare() {
+  mkdir -p "${_gobuild_dir}"/src/"${_gopkg}"
+  cp -r "${srcdir}"/*.go "${_gobuild_dir}"/src/"${_gopkg}"/
+}
+
+package() {
+  depends=('go')
+
+  mkdir -p "${pkgdir}"/usr/lib/go/site/src
+  cp -r "${_gobuild_dir}"/src/* "${pkgdir}"/usr/lib/go/site/src/
+}

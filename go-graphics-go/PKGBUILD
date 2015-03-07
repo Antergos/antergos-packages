@@ -1,0 +1,36 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+_pkgname=golang-graphics-go
+pkgname=go-graphics-go
+pkgver=0.0.git20140903.1
+pkgrel=1
+pkgdesc='File system notification for GO'
+arch=('any')
+url="http://code.google.com/p/graphics-go/"
+license=('GPL2')
+replaces=('golang-graphics-go')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/g/golang-graphics-go/golang-graphics-go_0.0~git20140903.orig.tar.xz")
+sha256sums=('ae9471645f94a0ed070c5695ad087cff3de1bb01ba40f56ad786c6de75e06218')
+
+_gobuild_dir="${_pkgname}-build"
+_gopkg="code.google.com/p/graphics-go/graphics"
+
+prepare() {
+  mkdir -p "${_gobuild_dir}"/src/"${_gopkg}"
+  cp -r graphics/* "${_gobuild_dir}"/src/"${_gopkg}"/
+}
+
+#build() {
+#  #GOPATH="${srcdir}/${_gobuild_dir}" go install "${_gopkg}"
+#}
+
+package() {
+  depends=('go')
+
+  mkdir -p "${pkgdir}"/usr/lib/go/site/src
+
+  cp -r "${_gobuild_dir}"/src/* "${pkgdir}"/usr/lib/go/site/src/
+  rm -rf "${pkgdir}"/usr/lib/go/site/src/"${_gopkg}"/Makefile
+  #cp -r "${_gobuild_dir}"/pkg/* "${pkgdir}"/usr/lib/go/site/pkg/
+}

@@ -1,0 +1,32 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=go-dlib
+pkgver=0.0.4.20150108105637
+_pkgver=0.0.4+20150108105637~88ae48d3c8
+pkgrel=1
+pkgdesc='Go-lang bingdings for dlib'
+arch=('any')
+url="https://gitcafe.com/Deepin/go-lib"
+license=('GPL3')
+groups=('deepin-dev')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/g/go-dlib/go-dlib_0.0.4+20150108105637~88ae48d3c8.tar.gz")
+sha256sums=('307abef63fd1a13831ef3587e154d35a657536feae924f29e36101b8ac82cfc9')
+
+_gobuild_dir="${pkgname}-build"
+_gopkg="pkg.linuxdeepin.com/lib"
+
+prepare() {
+  mkdir -p "${_gobuild_dir}"/src/"${_gopkg}"
+  cp -r "${pkgname}-${_pkgver}"/* "${_gobuild_dir}"/src/"${_gopkg}"/
+  rm -rf "${_gobuild_dir}"/src/"${_gopkg}"/debian
+}
+
+package() {
+  depends=('go' 'go-xgb' 'go-gocheck' 'go-fsnotify' 'go-goconvey'
+           'gtk3' 'gdk-pixbuf2' 'libpulse' 'gdk-pixbuf2' 'glib2')
+
+  install -d "${pkgdir}"/usr/lib/go/site/src
+  cp -r "${_gobuild_dir}"/src/* "${pkgdir}"/usr/lib/go/site/src
+  find "${pkgdir}"/usr/lib/go/site/src -type d -name 'testdata' | xargs rm -rf
+}

@@ -1,0 +1,35 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=startdde
+pkgver=0.1.20141230181929
+_pkgver=0.1+20141230181929~b99e7b174d
+pkgrel=1
+pkgdesc="starter of deepin desktop environment"
+arch=('i686' 'x86_64')
+url="https://gitcafe.com/Deepin/startdde"
+license=('GPL3')
+depends=('dde-daemon' 'dde-workspace' 'deepin-compiz' 'libdeepin-webkit' 'cairo')
+makedepends=('cmake' 'coffee-script' 'python2' 'webkitgtk' 'go' 'sqlite'
+             'go-dlib' 'dde-go-dbus-factory' 'go-fsnotify' 'go-xgbutil'
+             'gstreamer0.10-base-plugins')
+groups=('deepin')
+options=(staticlibs)
+conflicts=('deepin-session')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/s/startdde/startdde_0.1+20141230181929~b99e7b174d.tar.gz")
+sha256sums=('c817aec6aeb2dfa1ca8e6feb0222a752dc8f6f16bc53a33b5a9c089f79256eb1')
+
+build() {
+  cd "${pkgname}-${_pkgver}"
+
+  # TODO: remove this after deepin 2014.2 released
+  sed '13s|GOPATH=/usr/share/gocode|GOPATH="/usr/lib/go:${GOPATH}"|' -i Makefile || die "sed failed"
+
+  make GOPATH="/usr/lib/go/site"
+}
+
+package() {
+  cd "${pkgname}-${_pkgver}"
+
+  make DESTDIR="${pkgdir}" install
+}

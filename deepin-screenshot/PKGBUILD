@@ -1,0 +1,56 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-screenshot
+pkgver=2.1.20141230110557
+_pkgver=2.1+20141230110557~a5861179f5
+pkgrel=1
+pkgdesc="Easy-to-use screenshot tool for linuxdeepin desktop environment"
+arch=('any')
+url="https://gitcafe.com/Deepin/deepin-screenshot"
+license=('GPL3')
+groups=('deepin-extra')
+install="${pkgname}.install"
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-screenshot/deepin-screenshot_2.1+20141230110557~a5861179f5.tar.gz")
+sha256sums=('3e5fdcafd6c9f503aae8520f8904123a53c2ad8cab0fb74bd7522a043c7a6c98')
+
+# Usage: _easycp dest files...
+_easycp () {
+  local dest=$1; shift
+  mkdir -p "${dest}"
+  cp -R -t "${dest}" "$@"
+}
+
+prepare() {
+  cd "${pkgname}-${_pkgver}"
+
+  # fix python version
+  find "${srcdir}" -iname "*.py" | xargs sed -i 's=\(^#! */usr/bin.*\)python *$=\1python2='
+}
+
+package() {
+  depends=('python2' 'gconf' 'python2-xlib' 'python2-wnck' 'python2-xdg'
+           'python2-scipy' 'python2-pycurl' 'deepin-ui')
+
+  cd "${pkgname}-${_pkgver}"
+
+  # TODO: waiting for Makefile
+  _easycp "${pkgdir}"/usr/share/deepin-screenshot/ src
+  _easycp "${pkgdir}"/usr/share/deepin-screenshot/ theme
+  _easycp "${pkgdir}"/usr/share/deepin-screenshot/ skin
+  _easycp "${pkgdir}"/usr/share/ locale
+
+  mkdir -p "${pkgdir}"/usr/share/applications/
+  install -m 0644 debian/deepin-screenshot.desktop "${pkgdir}"/usr/share/applications/
+
+  mkdir -p "${pkgdir}"/usr/bin
+  ln -s /usr/share/deepin-screenshot/src/screenshot.py "${pkgdir}"/usr/bin/deepin-screenshot
+
+  # remove .po
+  find "${pkgdir}" -name '*.po' -exec rm \{} \;
+find "${pkgdir}" -name '*.pot' -exec rm \{} \;
+}
+
+ # Local Variables:
+ # sh-basic-offset: 2
+ # End:

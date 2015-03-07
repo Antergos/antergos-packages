@@ -1,0 +1,48 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=dde-daemon
+pkgver=0.0.1.20150209101554
+_pkgver=0.0.1+20150209101554~660a820a61
+pkgrel=1
+pkgdesc='Go-lang bingdings for dde-daemon'
+arch=('i686' 'x86_64')
+url="https://gitcafe.com/Deepin/dde-daemon"
+license=('GPL3')
+depends=('dde-api' 'grub-theme-deepin' 'cairo' 'libcanberra' 'dbus'
+         'libdeepin-webkit' 'gtk3' 'glib2' 'gdk-pixbuf2' 'gstreamer0.10'
+         'libsystemd' 'acpid' 'libpulse' 'xcur2png' 'upower' 'bluez'
+         'polkit-gnome' 'metacity-ubuntu' 'network-manager-applet' 'xdotool'
+         'iso-codes' 'mobile-broadband-provider-info')
+makedepends=('go' 'go-dlib' 'dde-go-dbus-factory' 'go-xgb' 'go-gocheck'
+             'go-xgbutil' 'go-fsnotify' 'go-sqlite3' 'python2')
+groups=('deepin')
+install="${pkgname}.install"
+conflicts=('dde-daemon-gsd-input')
+options=(staticlibs)
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/dde-daemon/dde-daemon_0.0.1+20150209101554~660a820a61.tar.gz"
+        "fix-i686-compile.patch")
+sha256sums=('db271a63dc972c41a29bbbb6a30af897c4f7efe28e8ad3dbac37e061c508dd2c'
+            'SKIP')
+
+prepare() {
+  cd "${pkgname}-${_pkgver}"
+
+  # TODO: a temporary solution by disable datatime module of
+  # dde-session-daemon to avoid build issue for go1.4/i686
+  if test "$CARCH" == i686; then
+      patch -p1 -i ../fix-i686-compile.patch
+  fi
+}
+
+build() {
+  cd "${pkgname}-${_pkgver}"
+
+  make GOPATH="/usr/lib/go/site"
+}
+
+package() {
+  cd "${pkgname}-${_pkgver}"
+
+  make DESTDIR="${pkgdir}" install
+}

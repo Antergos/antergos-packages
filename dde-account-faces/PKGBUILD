@@ -1,0 +1,23 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=dde-account-faces
+pkgver=1.0.7.1
+_pkgver=1.0.7-1~trusty
+pkgrel=1
+pkgdesc='Deepin Account face Images'
+arch=('any')
+url="http://www.linuxdeepin.com/"
+license=('custom')
+groups=('deepin')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/dde-account-faces/dde-account-faces_1.0.7-1~trusty.tar.gz")
+sha256sums=('4dad343c3573ee7bdbfdf3c42371c530b53ec1b02f7642936844428690018066')
+
+package() {
+  depends=('accountsservice')
+
+  cd "${pkgname}-${_pkgver}"
+
+  install -dm 755 "${pkgdir}"/var/lib/AccountsService/icons
+  install -m 644 *.png "${pkgdir}"/var/lib/AccountsService/icons/
+}

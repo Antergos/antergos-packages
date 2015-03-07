@@ -1,0 +1,46 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+_pkgname=golang-gocheck
+pkgname=go-gocheck
+pkgver=0.0.bzr20131118.85.6
+pkgrel=8
+pkgdesc='Richer testing framework for Go libraries and applications to use'
+arch=('any')
+url="http://labix.org/gocheck"
+license=('BSD')
+replaces=('golang-gocheck')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/g/golang-gocheck/golang-gocheck_0.0~bzr20131118+85.orig.tar.gz"
+        "http://packages.linuxdeepin.com/deepin/pool/main/g/golang-gocheck/golang-gocheck_0.0~bzr20131118+85-6.debian.tar.gz")
+sha256sums=('71ba0752af3cd04a42a95ef68c098d251430281c8461272df259d52d6092f7da'
+            '3a50e3d0c4ccb9397f13c30a6f057187c419e3b362c6b90767ed0bec049108fc')
+
+_gobuild_dir="${_pkgname}-build"
+_gopkg="launchpad.net/gocheck"
+
+prepare() {
+  cd "${_pkgname}-${pkgver}"
+
+  # apply patches
+  patchdir="${srcdir}"/debian/patches
+  for f in $(< "${patchdir}"/series); do
+    echo "==> patching: ${f##*/}"
+    # ignore error if patch again
+    patch -Np1 -i $patchdir/$f || echo '==> patch error: ${f##*/}'
+  done
+
+  cd "${srcdir}"
+  mkdir -p "${_gobuild_dir}"/src/"${_gopkg}"
+  cp -r "${_pkgname}-${pkgver}"/* "${_gobuild_dir}"/src/"${_gopkg}"/
+}
+
+#build() {
+#  GOPATH="${srcdir}/${_gobuild_dir}" go install "${_gopkg}"
+#}
+
+package() {
+  depends=('go')
+
+  mkdir -p "${pkgdir}"/usr/lib/go/site/src
+  cp -r "${_gobuild_dir}"/src/* "${pkgdir}"/usr/lib/go/site/src/
+}

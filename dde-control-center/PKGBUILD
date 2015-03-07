@@ -1,0 +1,39 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=dde-control-center
+pkgver=0.1.20150211150410
+_pkgver=0.1+20150211150410~6b5195ef53
+pkgrel=1
+pkgdesc="New control center for linux deepin"
+arch=('i686' 'x86_64')
+url="https://gitcafe.com/Deepin/dde-control-center"
+license=('GPL3')
+depends=('dde-daemon' 'deepin-qml-widgets' 'dde-qml-dbus-factory'
+         'qt5-svg' 'qt5-declarative' 'qt5-graphicaleffects' 'qt5-quickcontrols')
+makedepends=('deepin-gettext-tools' 'qt5-tools')
+groups=('deepin')
+options=(staticlibs)
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/dde-control-center/dde-control-center_0.1+20150211150410~6b5195ef53.tar.gz")
+sha256sums=('89ce5952e15f2cebf5f8465ff26e7df788c025e62e4eb29f15d4d08f6e772207')
+
+prepare() {
+  cd "${pkgname}-${_pkgver}"
+
+  # fix python version
+  find -iname "*.py" | xargs sed -i 's=\(^#! */usr/bin.*\)python *$=\1python2='
+}
+
+build(){
+  cd "${pkgname}-${_pkgver}"
+
+  make
+}
+
+package() {
+  depends+=('deepin-artwork-themes' 'dde-account-faces')
+
+  cd "${pkgname}-${_pkgver}"
+
+  make DESTDIR="${pkgdir}" install
+}

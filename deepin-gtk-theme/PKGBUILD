@@ -1,0 +1,28 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-gtk-theme
+pkgver=14.07.20141223164347
+_pkgver=14.07+20141223164347~1b5a54ef99
+pkgrel=1
+pkgdesc="Deepin GTK Theme."
+arch=('any')
+url="https://gitcafe.com/Deepin/deepin-gtk-theme"
+license=('LGPL3')
+optdepends=('gtk-engine-murrine: for gtk2 themes')
+groups=('deepin')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-gtk-theme/deepin-gtk-theme_14.07+20141223164347~1b5a54ef99.tar.gz")
+sha256sums=('f5ff3f7ffbd795328dbc3640247012e7568c2474810e5b0e0ad9f0d6d1733789')
+
+package() {
+  depends=('gtk-engine-unico')
+
+  cd "${srcdir}/${pkgname}-${_pkgver}"
+
+  install -dm0755 "${pkgdir}"/usr/share/themes
+  cp -r Deepin "${pkgdir}"/usr/share/themes/Deepin-Legacy
+  cp -r Deepin-Dark "${pkgdir}"/usr/share/themes/Deepin
+  cp -r Deepin-Gray "${pkgdir}"/usr/share/themes/Deepin-Gray
+  sed -i 's/Deepin-Dark/Deepin/g' "${pkgdir}"/usr/share/themes/Deepin/index.theme
+  sed -i 's/Deepin/Deepin-Legacy/g' "${pkgdir}"/usr/share/themes/Deepin-Legacy/index.theme
+}

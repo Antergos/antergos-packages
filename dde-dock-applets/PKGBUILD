@@ -1,0 +1,31 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=dde-dock-applets
+pkgver=0.0.4.20150212175159
+_pkgver=0.0.4+20150212175159~4a7021531e
+pkgrel=1
+pkgdesc="New control center for linux deepin"
+arch=('i686' 'x86_64')
+url="https://gitcafe.com/Deepin/dde-dock-applets"
+license=('GPL3')
+depends=('dde-daemon' 'dde-api' 'deepin-qml-widgets' 'dde-qml-dbus-factory'
+         'gtk2' 'qt5-svg' 'qt5-declarative')
+makedepends=('deepin-gettext-tools' 'qt5-tools' 'python2')
+groups=('deepin')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/dde-dock-applets/dde-dock-applets_0.0.4+20150212175159~4a7021531e.tar.gz")
+sha256sums=('36773a670e3c0b74aad437eef644ab10a1b908e32df65fb8f650395723c415b8')
+
+build() {
+  cd "${pkgname}-${_pkgver}"
+
+  make
+}
+
+package() {
+  depends+=('deepin-artwork-themes')
+
+  cd "${pkgname}-${_pkgver}"
+
+  make DESTDIR="${pkgdir}" install
+}

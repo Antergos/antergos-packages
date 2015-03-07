@@ -1,0 +1,22 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-artwork
+pkgver=2014.4
+_pkgver=2014-4
+pkgrel=1
+pkgdesc='Deepin artwork themes (sounds)'
+arch=('any')
+license=('LGPL3')
+url="http://www.linuxdeepin.com/"
+groups=('deepin')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-artwork/deepin-artwork_2014-4.tar.gz")
+sha256sums=('2741f79faac75540277972bacd26f8d39211fd3862180508657965db195cb6ec')
+
+package() {
+  # TODO
+  cd "${srcdir}/${pkgname}-2014"
+
+  install -dm755 "${pkgdir}"/usr/share
+  cp -r usr/share/{pixmaps,sounds} "${pkgdir}"
+}

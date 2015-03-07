@@ -1,0 +1,101 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+# Contributor: Ryon Sherman <ryon.sherman@gmail.com>
+# Contributor: Iven Hsu <ivenvd AT gmail>
+# Contributor: Nathan Hulse <nat.hulse@gmail.com>
+
+pkgname=deepin-compiz
+_pkgname=compiz
+pkgver=0.9.99.5.git20140707164843
+_pkgver=0.9.99-5+git20140707164843~2e85d002e7
+_mainver=0.9.99
+pkgrel=1
+epoch=1
+pkgdesc='A forked compiz for Linux Deepin desktop environment'
+arch=('i686' 'x86_64')
+license=('GPL' 'LGPL' 'MIT')
+url="https://gitcafe.com/Deepin/deepin-compiz"
+groups=('deepin')
+depends=('gnome-settings-daemon' 'xorg-server' 'libxcomposite' 'startup-notification'
+         'librsvg' 'dbus' 'mesa' 'libxslt' 'fuse' 'glibmm' 'libxrender' 'libwnck'
+         'pygtk' 'desktop-file-utils' 'pyrex' 'protobuf' 'dconf' 'gtk2'
+         'metacity-ubuntu' 'gsettings-desktop-schemas')
+makedepends=('gettext' 'intltool' 'cmake' 'boost' 'glu')
+optdepends=('gnome-control-center: GNOME Control Center')
+provides=('compiz=0.9')
+conflicts=('compiz-bzr' 'compiz-core' 'compiz-fusion-plugins-main'
+           'compiz-fusion-plugins-extra' 'compiz-decorator-gtk'
+           'compiz-decorator-kde' 'libcompizconfig' 'compizconfig-python'
+           'compizconfig-backend-gconf' 'compiz-bcop' 'ccsm')
+replaces=('compiz-bzr' 'compiz-core' 'compiz-fusion-plugins-main'
+          'compiz-fusion-plugins-extra' 'compiz-decorator-gtk'
+          'compiz-decorator-kde' 'libcompizconfig' 'compizconfig-python'
+          'compizconfig-backend-gconf' 'compiz-bcop' 'ccsm')
+install='compiz.install'
+source=("http://packages.linuxdeepin.com/deepin/pool/main/c/compiz/compiz_0.9.99-5+git20140707164843~2e85d002e7.tar.gz"
+        'fix-boost-interfaces.patch')
+sha256sums=('4077a2f9d86da2781a48e90651b7a52482c6c2d4ac8e60b37d91208f4b9a4250'
+            '9b041e3ca5fe54984d064bab9c3c8fa623e8c0e752129c53c578922a48582845')
+
+prepare() {
+  cd "${_pkgname}-${_mainver}"
+
+  export PYTHON="/usr/bin/python2"
+
+  find -type f \( -name 'CMakeLists.txt' -or -name '*.cmake' \) -exec sed -e 's/COMMAND python/COMMAND python2/g' -i {} \;
+  find compizconfig/ccsm -type f -exec sed -e 's|^#!.*python|#!/usr/bin/env python2|g' -i {} \;
+
+  patch -p1 < ../fix-boost-interfaces.patch
+}
+
+build() {
+  cd "${_pkgname}-${_mainver}"
+
+  [[ -d build ]] && rm -rvf build/
+  mkdir build/
+  cd build/
+  cmake .. \
+        -DCMAKE_INSTALL_PREFIX="/usr" \
+        -DCMAKE_BUILD_TYPE="Release" \
+        -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 \
+        -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so \
+        -DCOMPIZ_BUILD_WITH_RPATH=FALSE \
+        -DCOMPIZ_PACKAGING_ENABLED=TRUE \
+        -DCOMPIZ_DISABLE_GS_SCHEMAS_INSTALL=OFF \
+        -DCOMPIZ_BUILD_TESTING=OFF \
+        -DUSE_GCONF=OFF \
+        -DUSE_GSETTINGS=ON \
+        -DCOMPIZ_DEFAULT_PLUGINS="ccp"
+
+  make
+}
+
+package() {
+  cd "${_pkgname}-${_mainver}/build"
+
+  make DESTDIR="${pkgdir}" install
+
+  # Stupid findcompiz_install needs COMPIZ_DESTDIR and install needs DESTDIR
+  # make findcompiz_install
+  CMAKE_DIR=$(cmake --system-information | grep '^CMAKE_ROOT' | awk -F\" '{print $2}')
+  install -dm755 "${pkgdir}${CMAKE_DIR}/Modules/"
+  install -m644 ../cmake/FindCompiz.cmake "${pkgdir}${CMAKE_DIR}/Modules/"
+
+  # Add documentation
+  install -dm755 "${pkgdir}/usr/share/doc/compiz/"
+  install ../{AUTHORS,NEWS,README} "${pkgdir}/usr/share/doc/compiz/"
+
+  # Amend XDG .desktop file to load the compizconfig plugin with compiz
+  sed -i 's/Exec\=compiz/Exec\=compiz ccp/' "${pkgdir}/usr/share/applications/compiz.desktop"
+
+  # Add the pesky gsettings schema files manually
+  if ls generated/glib-2.0/schemas/ | grep -qm1 .gschema.xml; then
+      install -dm755 "${pkgdir}/usr/share/glib-2.0/schemas/"
+      install -m644 generated/glib-2.0/schemas/*.gschema.xml "${pkgdir}/usr/share/glib-2.0/schemas/"
+  fi
+
+  # Setup xsession profile for deepin compiz
+  cd "${srcdir}/${_pkgname}-${_mainver}"
+  install -dm755 "${pkgdir}"/etc/X11/Xsession.d/
+  install -m644 debian/65compiz_profile-on-session "${pkgdir}"/etc/X11/Xsession.d/
+}

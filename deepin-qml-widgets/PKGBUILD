@@ -1,0 +1,32 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-qml-widgets
+pkgver=0.0.2.20150203171526
+_pkgver=0.0.2+20150203171526~feb6d6ad2f
+pkgrel=1
+pkgdesc='Deepin QML widgets'
+arch=('i686' 'x86_64')
+url="https://gitcafe.com/Deepin/deepin-qml-widgets"
+license=('GPL3')
+groups=('deepin')
+depends=('qt5-multimedia' 'qt5-webkit' 'qt5-imageformats'
+         'qt5-graphicaleffects' 'qt5-x11extras')
+conflicts=('dde-qml-gettext-plugin')
+provides=('dde-qml-gettext-plugin')
+replaces=('dde-qml-gettext-plugin')
+options=('!emptydirs')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-qml-widgets/deepin-qml-widgets_0.0.2+20150203171526~feb6d6ad2f.tar.gz")
+sha256sums=('eafadf1a7ca22999a9f682b95ddf4f15d00e52a085de2af41cbb755c7694f69e')
+
+build(){
+  cd "${pkgname}-${_pkgver}"
+
+  qmake && make
+}
+
+package() {
+  cd "${pkgname}-${_pkgver}"
+
+  make INSTALL_ROOT="${pkgdir}" install
+}

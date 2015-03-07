@@ -1,0 +1,37 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+_pkgname=golang-xgb
+pkgname=go-xgb
+pkgver=0.0.git20140510.1
+pkgrel=1
+pkgdesc='XGB is the X protocol Go language Binding.'
+arch=('any')
+url="https://github.com/BurntSushi/xgb"
+license=('GPL2')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/g/golang-xgb/golang-xgb_0.0~git20140510.orig.tar.xz")
+sha256sums=('36a267803598531443cdbc65a321f215924c98687b42b3bc28ef4e4bda0ce2e9')
+
+_gobuild_dir="${pkgname}-build"
+_gopkg="github.com/BurntSushi/xgb"
+
+prepare() {
+  mkdir -p "${_gobuild_dir}"/src/"${_gopkg}"
+  cp -r "${srcdir}"/{bigreq,composite,damage,dpms,dri2,examples,ge,glx,randr,record,render,res,screensaver,shape,shm,xcmisc,xevie,xf86dri,xf86vidmode,xfixes,xgbgen,xinerama,xprint,xproto,xselinux,xtest,xvmc,xv,*.go} "${_gobuild_dir}"/src/"${_gopkg}"/
+}
+
+#build() {
+# generate xcb code
+#cd "${srcdir}"/go-xgb-build/src/github.com/BurntSushi/xgb && make
+
+#GOPATH="${srcdir}/${_gobuild_dir}" go install "${_gopkg}"
+#GOPATH="${srcdir}/${_gobuild_dir}" go install "${_gopkg}"/{bigreq,composite,damage,dpms,dri2,ge,glx,randr,record,render,screensaver,shape,shm,xcmisc,xevie,xf86dri,xf86vidmode,xfixes,xinerama,xprint,xproto,xselinux,xtest,xv,xvmc}
+#}
+
+package() {
+  depends=('go' 'xcb-proto')
+
+  mkdir -p "${pkgdir}"/usr/lib/go/site/src
+  cp -r "${_gobuild_dir}"/src/* "${pkgdir}"/usr/lib/go/site/src/
+  #cp -r "${_gobuild_dir}"/pkg/* "${pkgdir}"/usr/lib/go/site/pkg/
+}
