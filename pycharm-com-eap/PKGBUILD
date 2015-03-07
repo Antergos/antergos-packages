@@ -13,6 +13,7 @@ arch=(any)
 options=('!strip')
 url="http://www.jetbrains.com/pycharm/"
 license=("custom")
+makedepends=("wget")
 depends=("java-environment>=6")
 provides=("pycharm-eap" "pycharm-community")
 conflicts=("pycharm-eap" "pycharm-community" "pycharm-professional")
