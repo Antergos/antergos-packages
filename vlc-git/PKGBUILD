@@ -84,6 +84,8 @@ prepare() {
 
 build() {
   cd "${srcdir}/${_name}"
+  
+  cd bootstrap
 
   CFLAGS+=" -I/usr/include/samba-4.0" CPPFLAGS+=" -I/usr/include/samba-4.0" \
   ./configure --prefix=/usr \
