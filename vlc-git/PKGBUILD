@@ -66,8 +66,13 @@ source=('git://git.videolan.org/vlc.git')
 md5sums=('SKIP')
 
 pkgver() {
-  cd "${srcdir}/${_name}"
-  git describe --long | sed -r 's/([^-]*-g)/r\1/;s/-/./g'
+	if [[ -d "${srcdir}/${_name}" ]]; then
+  		cd "${srcdir}/${_name}"
+  	else
+  		git clone git://git.videolan.org/vlc.git /tmp/vlc-git
+  		cd /tmp/vlc-git
+  	fi
+	git describe --long | sed -r 's/([^-]*-g)/r\1/;s/-/./g'
 }
 
 prepare() {
