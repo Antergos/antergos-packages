@@ -62,7 +62,7 @@ backup=('usr/share/vlc/lua/http/.hosts'
         'usr/share/vlc/lua/http/dialogs/.hosts')
 options=('!emptydirs')
 install="${_name}.install"
-source=('git://git.videolan.org/vlc.git')
+source=('git+http://repo.or.cz/r/vlc.git')
 md5sums=('SKIP')
 
 pkgver() {
