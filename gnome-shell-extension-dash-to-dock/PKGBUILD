@@ -18,8 +18,8 @@ source=("$pkgname::https://github.com/micheleg/dash-to-dock/archive/experimental
 install='gschemas.install'
 sha256sums=('53195acbb3127e8f81cefbe510e992a3c25f96f5de018e74170c3c64dd29a1ec')
 
-_archivename="dash-to-dock-extensions.gnome.org-${pkgver}"
-_archivename="experimental_gnome-3.16"
+#_archivename="dash-to-dock-extensions.gnome.org-${pkgver}"
+_archivename="dash-to-dock-experimental_gnome-3.16"
 
 prepare() {
     cd "$srcdir/$_archivename"
