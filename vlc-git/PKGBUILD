@@ -69,7 +69,7 @@ pkgver() {
 	if [[ -d "${srcdir}/${_name}" ]]; then
   		cd "${srcdir}/${_name}"
   	else
-  		git clone git://git.videolan.org/vlc.git /tmp/vlc-git
+  		git clone http://repo.or.cz/r/vlc.git /tmp/vlc-git
   		cd /tmp/vlc-git
   	fi
 	git describe --long | sed -r 's/([^-]*-g)/r\1/;s/-/./g'
