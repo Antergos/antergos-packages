@@ -85,7 +85,7 @@ prepare() {
 build() {
   cd "${srcdir}/${_name}"
   
-  cd bootstrap
+  ./bootstrap
 
   CFLAGS+=" -I/usr/include/samba-4.0" CPPFLAGS+=" -I/usr/include/samba-4.0" \
   ./configure --prefix=/usr \
@@ -107,7 +107,7 @@ build() {
 }
 
 package() {
-   cd "${srcdir}/${pkgname}-${pkgver}"
+  cd "${srcdir}/${_name}"
 
   make DESTDIR="${pkgdir}" install
 
