@@ -1,7 +1,6 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 
-
 pkgname=pamac-dev
 pkgver=2.1.r271
 _pkgver=2.2
