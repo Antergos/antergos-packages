@@ -1,0 +1,27 @@
+# Maintainer: Steve Ovens <steve_ovens [AT] linux DOT com>
+# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
+# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=grub-theme-deepin
+pkgver=0.5
+_srcdirname=grub-themes-deepin-0.5
+pkgrel=1
+pkgdesc='Grub2 themes from Linux Deepin'
+arch=('any')
+url="http://www.linuxdeepin.com/"
+license=('GPL3')
+provides=('grub-themes-deepin')
+conflicts=('grub-themes-deepin')
+replaces=('grub-themes-deepin')
+groups=('deepin')
+source=("http://deepin.mirror.gtcomm.net/pool/universe/g/grub-themes-deepin/grub-themes-deepin_0.5-9.tar.gz")
+sha256sums=('9c951864d49f58a253bc310342ec8d23fd78aa1683188a79a91e3f979091f842')
+
+package() {
+  depends=('grub')
+
+  cd "${_srcdirname}"
+
+  install -dm755 "${pkgdir}"/boot/grub/themes
+  cp -rf deepin-grub2-themes/deepin "${pkgdir}"/boot/grub/themes/
+}

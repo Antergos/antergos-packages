@@ -1,0 +1,12 @@
+--- gsettings-override	2014-05-16 09:50:32.000000000 +0200
++++ gsettings-override.new	2014-05-29 02:29:15.641161930 +0200
+@@ -142,9 +142,7 @@
+ gtk-key-theme='Default'
+ gtk-theme='Deepin'
+ icon-theme='Deepin'
+-menus-have-icons=true
+ gtk-im-module='fcitx'
+-automatic-mnemonics=false
+ 
+ [org.gnome.desktop.sound]
+ theme-name='LinuxDeepin'
