@@ -28,7 +28,6 @@ fi
 
 sha256sums=('SKIP')
 
-
 pkgver() {
   if [[ "${srcdir}" != '' ]]; then
 	  cd "$srcdir/pamac"
