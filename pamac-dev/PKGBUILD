@@ -1,9 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
-
 pkgname=pamac-dev
 pkgver=2.1.r271
-_pkgver=2.2
+_pkgver=2.2.2
 pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit="master"
@@ -28,12 +27,9 @@ fi
 
 sha256sums=('SKIP')
 
-
 pkgver() {
   if [[ "${srcdir}" != '' ]]; then
 	  cd "$srcdir/pamac"
-	else
-	  cd pamac-dev
 	fi
 	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
 

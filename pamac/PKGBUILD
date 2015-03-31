@@ -1,11 +1,11 @@
 # Maintainer: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=pamac
-pkgver=2.2
-_pkgver=2.2
-pkgrel=3
+pkgver=2.2.2
+_pkgver=2.2.2
+pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
-_gitcommit="43e1042e09beb5d1bf4b53fefde62de585747df2"
+#_gitcommit="147b8d04c8de6e401a4259edd635a770e20fc276"
 pkgdesc="A Gtk3 frontend for libalpm"
 arch=('i686' 'x86_64')
 url="https://github.com/manjaro/pamac"
@@ -24,10 +24,10 @@ install=pamac.install
 if [ "${_gitcommit}" != "" ]; then
   source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/$_gitcommit.tar.gz")
 else
-  source=("pamac-$pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
+  source=("pamac-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
 fi
 
-sha256sums=('3c8b769bc6485c477f0e87347b11af178d6b44280dde73decd78ee886537c233')
+sha256sums=('915c44a00e7ef3bd9f00c1827d067ddac9376275275888a1f8f4b377b2ab67b0')
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
@@ -37,7 +37,7 @@ prepare() {
   fi
 
   # adjust version string
-  cd src
+  cd "$srcdir/pamac-$pkgver/src"
   sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala
 }
 

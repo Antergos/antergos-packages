@@ -3,7 +3,7 @@
 # Contributor: Antergos Devs <devs@antergos.com>
 
 pkgname=gnome-shell-extension-dash-to-dock
-pkgver=v39rc1
+pkgver=v40a1
 pkgrel=1
 epoch=1
 pkgdesc="A gnome-shell extension that transforms the dash into an intellihide dock"
@@ -14,17 +14,19 @@ depends=('dconf')
 makedepends=('gnome-common' 'intltool')
 provides=('gnome-shell-extension-dash-to-dock')
 #source=("$pkgname::https://github.com/micheleg/dash-to-dock/archive/extensions.gnome.org-${pkgver}.tar.gz")
-source=("$pkgname::https://github.com/micheleg/dash-to-dock/archive/experimental_gnome-3.16.tar.gz")
+#source=("$pkgname::https://github.com/micheleg/dash-to-dock/archive/experimental_gnome-3.16.tar.gz")
+source=("$pkgname::https://github.com/micheleg/dash-to-dock/archive/master.tar.gz")
 install='gschemas.install'
 sha256sums=('53195acbb3127e8f81cefbe510e992a3c25f96f5de018e74170c3c64dd29a1ec')
 
 #_archivename="dash-to-dock-extensions.gnome.org-${pkgver}"
-_archivename="dash-to-dock-experimental_gnome-3.16"
+#_archivename="dash-to-dock-experimental_gnome-3.16"
+_archivename="dash-to-dock-master"
 
 prepare() {
     cd "$srcdir/$_archivename"
     sed -i 's/INSTALLBASE = ~\/.local\/share\/gnome-shell\/extensions/INSTALLBASE = ${DESTDIR}/' Makefile
-    sed -i 's|"3.12"|"3.14", "3.15"|g' metadata.json
+    sed -i 's|"3.12"|"3.14", "3.15", "3.16"|g' metadata.json
 }
 
 build() {
