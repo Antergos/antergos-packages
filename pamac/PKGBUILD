@@ -1,9 +1,9 @@
 # Maintainer: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=pamac
-pkgver=2.2.1
-_pkgver=2.2.1
-pkgrel=3
+pkgver=2.2.2
+_pkgver=2.2.2
+pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 #_gitcommit="147b8d04c8de6e401a4259edd635a770e20fc276"
 pkgdesc="A Gtk3 frontend for libalpm"
@@ -24,14 +24,10 @@ install=pamac.install
 if [ "${_gitcommit}" != "" ]; then
   source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/$_gitcommit.tar.gz")
 else
-  source=("pamac-$pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz"
-          "aur_update_check.patch::https://github.com/manjaro/pamac/commit/c578e6bee9e9275e4896ef6a361ae0f1f24ffe4e.patch"
-          "locked_db_improvment.patch::https://github.com/manjaro/pamac/commit/1058576cce00b296ba8b98e81bc27b4b01a268b9.patch")
+  source=("pamac-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
 fi
 
-sha256sums=('552041309a1af0dae44a6e1e72e299c9be671a06d8fdfa9209eb63b0aedd1dff'
-            'd218d3856f132fb78b1e499007f8701ffe4b271914ea6a96e413d4cab946893c'
-            'a0a50eb6eb11c9d26b3267b58966c3e55b3a6baf9af86ff5db26a17f90205b3b')
+sha256sums=('915c44a00e7ef3bd9f00c1827d067ddac9376275275888a1f8f4b377b2ab67b0')
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
@@ -42,8 +38,6 @@ prepare() {
 
   # adjust version string
   cd "$srcdir/pamac-$pkgver/src"
-  patch -Np2 -i "$srcdir/aur_update_check.patch"
-  patch -Np2 -i "$srcdir/locked_db_improvment.patch"
   sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala
 }
 
