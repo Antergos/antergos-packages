@@ -1,0 +1,26 @@
+diff -ruN a/deepin/index.theme b/deepin/index.theme
+--- a/deepin/index.theme	2014-12-23 01:54:23.000000000 +0100
++++ b/deepin/index.theme	2014-12-23 01:55:39.516366602 +0100
+@@ -1,7 +1,7 @@
+ [Icon Theme]
+ Name=Deepin
+ Comment=Default icon theme for linux deepin
+-Inherits=flattr,Faenza
++Inherits=Flattr,Faenza
+ 
+ Example=x-directory-normal
+ 
+diff -ruN a/Makefile b/Makefile
+--- a/Makefile	2014-12-23 01:53:30.000000000 +0100
++++ b/Makefile	2014-12-23 01:56:17.483034584 +0100
+@@ -4,8 +4,8 @@
+ 
+ build:
+ 	mkdir -p build
+-	python tools/convert.py deepin build
+-	python tools/convert.py deepin-2014 build
++	python2 tools/convert.py deepin build
++	python2 tools/convert.py deepin-2014 build
+ 
+ clean:
+ 	rm -rf build

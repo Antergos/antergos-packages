@@ -1,0 +1,34 @@
+# Maintainer: Steve Ovens <steve_ovens [AT] linux DOT com>
+# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
+# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-artwork-themes
+pkgver=14.04.3.20141204110221
+_srcdirname=deepin-artwork-themes-14.04.3+20141204110221~5bf78d7f42
+pkgrel=1
+pkgdesc='Deepin artwork themes'
+arch=('any')
+license=('LGPL3')
+url="https://gitcafe.com/Deepin/deepin-artwork-themes"
+makedepends=('python2')
+groups=('deepin')
+source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-artwork-themes/deepin-artwork-themes_14.04.3+20141204110221~5bf78d7f42.tar.gz")
+sha256sums=('ea51f533ff14552c06218b7e32637a908b1051106458f9e2a8f40449da764cb0')
+
+prepare() {
+  cd "${_srcdirname}"
+
+  # fix python version
+  find -iname "*.py" | xargs sed -i 's=\(^#! */usr/bin.*\)python *$=\1python2='
+}
+
+package() {
+  depends=('deepin-icon-theme')
+
+  cd "${_srcdirname}"
+
+  python2 convert.py
+
+  install -dm 755 "${pkgdir}"/usr/share/personalization
+  cp -R {preview,themes,thumbnail} "${pkgdir}"/usr/share/personalization/
+}

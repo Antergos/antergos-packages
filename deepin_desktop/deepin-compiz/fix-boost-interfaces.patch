@@ -1,0 +1,228 @@
+diff --git a/compizconfig/tests/compizconfig_backend_concept_test.h b/compizconfig/tests/compizconfig_backend_concept_test.h
+index 3598dab..6549a3a 100644
+--- a/compizconfig/tests/compizconfig_backend_concept_test.h
++++ b/compizconfig/tests/compizconfig_backend_concept_test.h
+@@ -78,7 +78,7 @@ class CCSBackendConceptTestEnvironmentFactory :
+ 	CCSBackendConceptTestEnvironmentInterface::Ptr
+ 	ConstructTestEnv ()
+ 	{
+-	    return boost::shared_static_cast <I> (boost::make_shared <I> ());
++	    return boost::static_pointer_cast <I> (boost::make_shared <I> ());
+ 	}
+ };
+ 
+diff --git a/gtk/window-decorator/tests/test_gwd_settings.cpp b/gtk/window-decorator/tests/test_gwd_settings.cpp
+index 4818d45..a691822 100644
+--- a/gtk/window-decorator/tests/test_gwd_settings.cpp
++++ b/gtk/window-decorator/tests/test_gwd_settings.cpp
+@@ -1478,7 +1478,7 @@ class GWDMockSettingsStorageFactoryWrapper :
+ };
+ 
+ INSTANTIATE_TEST_CASE_P (MockStorageUpdates, GWDSettingsTestStorageUpdates,
+-			 ::testing::Values (boost::shared_static_cast <GWDSettingsStorageFactoryWrapperInterface> (boost::make_shared <GWDMockSettingsStorageFactoryWrapper> ())));
++			 ::testing::Values (boost::static_pointer_cast <GWDSettingsStorageFactoryWrapperInterface> (boost::make_shared <GWDMockSettingsStorageFactoryWrapper> ())));
+ 
+ #ifdef USE_GSETTINGS
+ class GWDSettingsStorageGSettingsTest :
+@@ -1630,6 +1630,6 @@ class GWDSettingsStorageGSettingsFactoryWrapper :
+ };
+ 
+ INSTANTIATE_TEST_CASE_P (GSettingsStorageUpdates, GWDSettingsTestStorageUpdates,
+-			 ::testing::Values (boost::shared_static_cast <GWDSettingsStorageFactoryWrapperInterface> (boost::make_shared <GWDSettingsStorageGSettingsFactoryWrapper> ())));
++			 ::testing::Values (boost::static_pointer_cast <GWDSettingsStorageFactoryWrapperInterface> (boost::make_shared <GWDSettingsStorageGSettingsFactoryWrapper> ())));
+ 
+ #endif
+diff --git a/plugins/composite/src/pixmapbinding/tests/test-composite-pixmapbinding.cpp b/plugins/composite/src/pixmapbinding/tests/test-composite-pixmapbinding.cpp
+index 0602a8d..0fc90a5 100644
+--- a/plugins/composite/src/pixmapbinding/tests/test-composite-pixmapbinding.cpp
++++ b/plugins/composite/src/pixmapbinding/tests/test-composite-pixmapbinding.cpp
+@@ -167,7 +167,7 @@ TEST(CompositePixmapBinderTest, TestInitialBindSuccess)
+     EXPECT_CALL (msg, grabServer ());
+     EXPECT_CALL (msg, syncServer ()).Times (2);
+     EXPECT_CALL (mwag, getAttributes (_)).WillOnce (Invoke (&fwag, &FakeWindowAttributesGet::getAttributes));
+-    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::shared_static_cast <WindowPixmapInterface> (wp)));
++    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::static_pointer_cast <WindowPixmapInterface> (wp)));
+ 
+     EXPECT_CALL (*wp, pixmap ()).WillOnce (Return (1));
+ 
+@@ -214,7 +214,7 @@ TEST(CompositePixmapBinderTest, TestInitialBindSuccessNoRebind)
+     EXPECT_CALL (msg, grabServer ());
+     EXPECT_CALL (msg, syncServer ()).Times (2);
+     EXPECT_CALL (mwag, getAttributes (_)).WillOnce (Invoke (&fwag, &FakeWindowAttributesGet::getAttributes));
+-    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::shared_static_cast <WindowPixmapInterface> (wp)));
++    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::static_pointer_cast <WindowPixmapInterface> (wp)));
+ 
+     EXPECT_CALL (*wp, pixmap ()).WillOnce (Return (1));
+ 
+@@ -262,7 +262,7 @@ TEST(CompositePixmapBinderTest, TestRebindAfterRelease)
+     EXPECT_CALL (msg, grabServer ());
+     EXPECT_CALL (msg, syncServer ()).Times (2);
+     EXPECT_CALL (mwag, getAttributes (_)).WillOnce (Invoke (&fwag, &FakeWindowAttributesGet::getAttributes));
+-    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::shared_static_cast <WindowPixmapInterface> (wp)));
++    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::static_pointer_cast <WindowPixmapInterface> (wp)));
+ 
+     EXPECT_CALL (*wp, pixmap ()).WillOnce (Return (1));
+ 
+@@ -284,7 +284,7 @@ TEST(CompositePixmapBinderTest, TestRebindAfterRelease)
+     EXPECT_CALL (msg, grabServer ());
+     EXPECT_CALL (msg, syncServer ()).Times (2);
+     EXPECT_CALL (mwag, getAttributes (_)).WillOnce (Invoke (&fwag, &FakeWindowAttributesGet::getAttributes));
+-    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::shared_static_cast <WindowPixmapInterface> (wp)));
++    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::static_pointer_cast <WindowPixmapInterface> (wp)));
+ 
+     EXPECT_CALL (*wp, pixmap ()).WillOnce (Return (1));
+ 
+@@ -331,7 +331,7 @@ TEST(CompositePixmapBinderTest, TestNoRebindAfterReleaseWhenFrozen)
+     EXPECT_CALL (msg, grabServer ());
+     EXPECT_CALL (msg, syncServer ()).Times (2);
+     EXPECT_CALL (mwag, getAttributes (_)).WillOnce (Invoke (&fwag, &FakeWindowAttributesGet::getAttributes));
+-    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::shared_static_cast <WindowPixmapInterface> (wp)));
++    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::static_pointer_cast <WindowPixmapInterface> (wp)));
+ 
+     EXPECT_CALL (*wp, pixmap ()).WillOnce (Return (1));
+ 
+@@ -450,7 +450,7 @@ TEST(CompositePixmapBinderTest, TestInitialBindFailureNilPixmapReturned)
+     EXPECT_CALL (msg, grabServer ());
+     EXPECT_CALL (msg, syncServer ()).Times (2);
+     EXPECT_CALL (mwag, getAttributes (_)).WillOnce (Invoke (&fwag, &FakeWindowAttributesGet::getAttributes));
+-    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::shared_static_cast <WindowPixmapInterface> (wp)));
++    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::static_pointer_cast <WindowPixmapInterface> (wp)));
+ 
+     EXPECT_CALL (*wp, pixmap ()).WillOnce (Return (0));
+ 
+@@ -510,7 +510,7 @@ TEST(CompositePixmapBinderTest, TestInitialBindFailureWindowUnmappedSuccessOnRem
+     EXPECT_CALL (msg, grabServer ());
+     EXPECT_CALL (msg, syncServer ()).Times (2);
+     EXPECT_CALL (mwag, getAttributes (_)).WillOnce (Invoke (&fwag2, &FakeWindowAttributesGet::getAttributes));
+-    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::shared_static_cast <WindowPixmapInterface> (wp)));
++    EXPECT_CALL (mwpg, getPixmap ()).WillOnce (Return (boost::static_pointer_cast <WindowPixmapInterface> (wp)));
+ 
+     EXPECT_CALL (msg, ungrabServer ());
+ 
+diff --git a/plugins/decor/src/decor.cpp b/plugins/decor/src/decor.cpp
+index e004e1f..7dc869d 100644
+--- a/plugins/decor/src/decor.cpp
++++ b/plugins/decor/src/decor.cpp
+@@ -394,7 +394,7 @@ DecorScreen::getTexture (Pixmap pixmap)
+     X11PixmapDeletor::Ptr dl = boost::make_shared <X11PixmapDeletor> (screen->dpy ());
+     DecorPixmap::Ptr pm = boost::make_shared <DecorPixmap> (pixmap, dl);
+ 
+-    DecorTexture *texture = new DecorTexture (boost::shared_static_cast <DecorPixmapInterface> (pm));
++    DecorTexture *texture = new DecorTexture (boost::static_pointer_cast <DecorPixmapInterface> (pm));
+ 
+     if (!texture->status)
+     {
+@@ -1292,7 +1292,7 @@ DecorationList::findMatchingDecoration (unsigned int frameType,
+ 	if (d->frameType == frameType &&
+ 	    d->frameState == frameState &&
+ 	    d->frameActions == frameActions)
+-	    return boost::shared_static_cast <DecorationInterface> (d);
++	    return boost::static_pointer_cast <DecorationInterface> (d);
+     }
+ 
+     return DecorationInterface::Ptr ();
+@@ -2998,7 +2998,7 @@ DecorScreen::DecorScreen (CompScreen *s) :
+ 				   0,
+ 				   0,
+ 				   None,
+-				   boost::shared_array <decor_quad_t> (NULL),
++				   boost::shared_array <decor_quad_t> (),
+ 				   0,
+ 				   screen->root (),
+ 				   NULL)),
+diff --git a/plugins/decor/src/pixmap-requests/tests/pixmap-requests/src/test-decor-pixmap-requests.cpp b/plugins/decor/src/pixmap-requests/tests/pixmap-requests/src/test-decor-pixmap-requests.cpp
+index cbceba8..1fb2388 100644
+--- a/plugins/decor/src/pixmap-requests/tests/pixmap-requests/src/test-decor-pixmap-requests.cpp
++++ b/plugins/decor/src/pixmap-requests/tests/pixmap-requests/src/test-decor-pixmap-requests.cpp
+@@ -83,7 +83,7 @@ class MockDecorPixmapRequestor :
+ TEST(DecorPixmapRequestsTest, TestDestroyPixmapDeletes)
+ {
+     boost::shared_ptr <MockDecorPixmapDeletor> mockDeletor = boost::make_shared <MockDecorPixmapDeletor> ();
+-    DecorPixmap pm (1, boost::shared_static_cast<DecorPixmapDeletionInterface> (mockDeletor));
++    DecorPixmap pm (1, boost::static_pointer_cast<DecorPixmapDeletionInterface> (mockDeletor));
+ 
+     EXPECT_CALL (*(mockDeletor.get ()), postDeletePixmap (1)).WillOnce (Return (1));
+ }
+diff --git a/src/string/tests/printf/src/test-string-printf.cpp b/src/string/tests/printf/src/test-string-printf.cpp
+index f2b59b2..557bd81 100644
+--- a/src/string/tests/printf/src/test-string-printf.cpp
++++ b/src/string/tests/printf/src/test-string-printf.cpp
+@@ -94,17 +94,17 @@ CompString get_format (const CompString &fmt, Value::Ptr v)
+ {
+     if (fmt == "%i" || fmt == "%d")
+ 	return compPrintf(fmt.c_str(),
+-		(boost::shared_static_cast<TValue<int> >(v))->value());
++		(boost::static_pointer_cast<TValue<int> >(v))->value());
+     if (fmt == "%f")
+ 	return compPrintf(fmt.c_str(),
+-		(boost::shared_static_cast<TValue<float> >(v))->value());
++		(boost::static_pointer_cast<TValue<float> >(v))->value());
+     if (fmt == "%s")
+ 	return compPrintf(
+ 		fmt.c_str(),
+-		(boost::shared_static_cast<TValue<std::string> >(v))->value().c_str());
++		(boost::static_pointer_cast<TValue<std::string> >(v))->value().c_str());
+     if (fmt == "%x")
+ 	return compPrintf(fmt.c_str(),
+-		(boost::shared_static_cast<TValue<int> >(v))->value());
++		(boost::static_pointer_cast<TValue<int> >(v))->value());
+ 
+     return "not_reached";
+ }
+@@ -142,13 +142,13 @@ TEST(CompizString,PrintfTest)
+ 
+     ASSERT_EQ(s1, s2);
+ 
+-    formatValues["%i"] = boost::shared_static_cast <compiz::string::printf_test::Value> (compiz::string::printf_test::Value::Ptr (new compiz::string::printf_test::TValue<int> (6)));
++    formatValues["%i"] = boost::static_pointer_cast <compiz::string::printf_test::Value> (compiz::string::printf_test::Value::Ptr (new compiz::string::printf_test::TValue<int> (6)));
+     formatStrings["%i"] = CompString ("6");
+-    formatValues["%f"] = boost::shared_static_cast <compiz::string::printf_test::Value> (compiz::string::printf_test::Value::Ptr (new compiz::string::printf_test::TValue<float> (6.532)));
++    formatValues["%f"] = boost::static_pointer_cast <compiz::string::printf_test::Value> (compiz::string::printf_test::Value::Ptr (new compiz::string::printf_test::TValue<float> (6.532)));
+     formatStrings["%f"] = CompString ("6.532000");
+-    formatValues["%x"] = boost::shared_static_cast <compiz::string::printf_test::Value> (compiz::string::printf_test::Value::Ptr (new compiz::string::printf_test::TValue<int> (0x34fe5aa)));
++    formatValues["%x"] = boost::static_pointer_cast <compiz::string::printf_test::Value> (compiz::string::printf_test::Value::Ptr (new compiz::string::printf_test::TValue<int> (0x34fe5aa)));
+     formatStrings["%x"] = CompString ("34fe5aa");
+-    formatValues["%d"] = boost::shared_static_cast <compiz::string::printf_test::Value> (compiz::string::printf_test::Value::Ptr (new compiz::string::printf_test::TValue<int> (2)));
++    formatValues["%d"] = boost::static_pointer_cast <compiz::string::printf_test::Value> (compiz::string::printf_test::Value::Ptr (new compiz::string::printf_test::TValue<int> (2)));
+     formatStrings["%d"] = CompString ("2");
+ 
+     for (std::map <CompString, CompString>::iterator it = formatStrings.begin ();
+diff --git a/src/window.cpp b/src/window.cpp
+index 3778a0c..390b96a 100644
+--- a/src/window.cpp
++++ b/src/window.cpp
+@@ -3023,14 +3023,14 @@ PrivateWindow::restoreGeometry (XWindowChanges *xwc,
+ 
+ static bool isPendingRestack (compiz::X11::PendingEvent::Ptr p)
+ {
+-    compiz::X11::PendingConfigureEvent::Ptr pc = boost::shared_static_cast <compiz::X11::PendingConfigureEvent> (p);
++    compiz::X11::PendingConfigureEvent::Ptr pc = boost::static_pointer_cast <compiz::X11::PendingConfigureEvent> (p);
+ 
+     return pc->matchVM (CWStackMode | CWSibling);
+ }
+ 
+ static bool isExistingRequest (compiz::X11::PendingEvent::Ptr p, XWindowChanges &xwc, unsigned int valueMask)
+ {
+-    compiz::X11::PendingConfigureEvent::Ptr pc = boost::shared_static_cast <compiz::X11::PendingConfigureEvent> (p);
++    compiz::X11::PendingConfigureEvent::Ptr pc = boost::static_pointer_cast <compiz::X11::PendingConfigureEvent> (p);
+ 
+     return pc->matchRequest (xwc, valueMask);
+ }
+@@ -3256,7 +3256,7 @@ PrivateWindow::reconfigureXWindow (unsigned int   valueMask,
+ 	    wc.height = serverFrameGeometry.height ();
+ 
+ 	    compiz::X11::PendingEvent::Ptr pc =
+-		    boost::shared_static_cast<compiz::X11::PendingEvent> (compiz::X11::PendingConfigureEvent::Ptr (
++		    boost::static_pointer_cast<compiz::X11::PendingEvent> (compiz::X11::PendingConfigureEvent::Ptr (
+ 									      new compiz::X11::PendingConfigureEvent (
+ 										  screen->dpy (), priv->serverFrame, frameValueMask, &wc)));
+ 
+@@ -4047,7 +4047,7 @@ PrivateWindow::addWindowStackChanges (XWindowChanges *xwc,
+ 		if (serverFrame)
+ 		{
+ 		    compiz::X11::PendingEvent::Ptr pc =
+-			    boost::shared_static_cast<compiz::X11::PendingEvent> (compiz::X11::PendingConfigureEvent::Ptr (
++			    boost::static_pointer_cast<compiz::X11::PendingEvent> (compiz::X11::PendingConfigureEvent::Ptr (
+ 										      new compiz::X11::PendingConfigureEvent (
+ 											  screen->dpy (), serverFrame, valueMask, &lxwc)));
+ 
