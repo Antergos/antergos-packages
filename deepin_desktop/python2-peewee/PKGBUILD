@@ -1,4 +1,5 @@
-# Maintainer: juantascon
+# Maintainer: Steve Ovens <steve_ovens [AT] linux DOT com>
+# Contributor: juantascon
 # Submitter: Dennis Fink <the_metalgamer@hackerspace.lu>
 # Submitter: sevkin
 
@@ -9,7 +10,7 @@ pkgdesc="a little orm"
 url="https://pypi.python.org/pypi/peewee/"
 arch=('any')
 license=('MIT')
-depends=('python2')
+depends=('python2' 'python2-setuptools')
 optdepends=('python2-psycopg2' 'mysql-python')
 source=(http://pypi.python.org/packages/source/p/peewee/peewee-$pkgver.tar.gz)
 
