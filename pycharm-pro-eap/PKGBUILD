@@ -2,7 +2,6 @@
 # Contributor: Gifts <gifts.antichat@gmail.com>
 # Contributor: Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
 
-
 pkgname=pycharm-pro-eap
 _buildver=139.1648
 _pkgver=4.0.6
