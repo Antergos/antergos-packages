@@ -58,12 +58,9 @@ package() {
 
 	install -d ${pkgdir}/usr/share/locale/
 	install -d ${pkgdir}/usr/share/cnchi
-	install -Dm755 "${pkgname}.py" "$pkgdir/usr/share/cnchi/${pkgname}.py"
-	install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/cnchi"
-	install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
-	install -Dm755 "update.info" "$pkgdir/usr/share/cnchi/update.info"
+	install -Dm755 "bin/${pkgname}" "${pkgdir}/usr/bin/cnchi"
 
-	for i in data scripts src ui "grub2-theme"; do
+	for i in cnchi data "grub2-theme" scripts ui; do
 		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
 	done
 
