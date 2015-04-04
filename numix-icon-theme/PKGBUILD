@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme
-pkgver=0.r187.a37b25e
+pkgver=0.r522.90d71e6
 pkgrel=3
 pkgdesc="Base icon theme from the Numix project"
 arch=('any')
@@ -16,11 +16,11 @@ install="${pkgname}.install"
 source=("numix-icon-theme.tar")
 sha256sums=('SKIP')
 
-pkgver() {
-  cd ${pkgname}
+#pkgver() {
+#  cd ${pkgname}
 
-  printf "0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
-}
+#  printf "0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+#}
 
 package() {
   cd ${pkgname}
