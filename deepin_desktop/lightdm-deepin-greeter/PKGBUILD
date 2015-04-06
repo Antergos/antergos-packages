@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgbase=dde-workspace
-pkgname=dde-workspace
+pkgname=lightdm-deepin-greeter
 pkgver=2.1.20150202093855
 _srcdirname=deepin-desktop-environment-2.1+20150202093855~5b89873137
 pkgrel=1
@@ -41,24 +41,11 @@ build() {
 }
 
 package() {
-  pkgdesc="Linux Deepin desktop environment."
-  depends=('dde-control-center' 'deepin-menu' 'deepin-artwork'
-           'libdeepin-webkit' 'cairo' 'dbus-glib' 'python2')
-  optdepends=('lightdm-deepin-greeter')
-  replaces=("deepin-desktop-environment" "deepin-workspace")
-  install="${pkgbase}.install"
+  pkgdesc="Lightdm greeter for Linux Deepin desktop environment."
+  depends=('cairo' 'gtk3' 'libdeepin-webkit' 'lightdm' 'nodejs' 'python2')
 
-  cd "${_srcdirname}"/build
+  cd "${srcdir}"/${_srcdirname}-greeter/build/app/greeter
 
   make install DESTDIR="${pkgdir}"
-
-  install -dm755 "${pkgdir}"/{etc/{X11,sysctl.d},usr/share/backgrounds}
-
-  install -m644 ../debian/30-deepin-inotify-limit.conf "${pkgdir}"/etc/sysctl.d/
-  install -m755 ../debian/default-terminal "${pkgdir}"/usr/bin/
-  install -m644 "${srcdir}"/default-display-manager "${pkgdir}"/etc/X11/
-
-  ## add default background..
-  install -m644 ../resources/greeter/images/background/default_background.jpg "${pkgdir}"/usr/share/backgrounds/
+  chmod 0700 "${pkgdir}"/var/lib/polkit-1
 }
-
