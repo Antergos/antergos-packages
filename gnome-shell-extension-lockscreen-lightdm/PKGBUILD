@@ -2,7 +2,7 @@
 
 pkgname=gnome-shell-extension-lockscreen-lightdm
 pkgver=1.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Lock screen button for use with LightDM"
 arch=('any')
 url="http://www.antergos.com"

@@ -2,7 +2,7 @@
 
 pkgname=gnome-shell-extension-panel-osd
 pkgver=0.r43
-pkgrel=1
+pkgrel=2
 pkgdesc="A gnome-shell extension to place shell notifications under the panel instead of above the message-tray."
 arch=('any')
 url="https://github.com/jenslody/gnome-shell-extension-panel-osd"
@@ -26,6 +26,7 @@ pkgver() {
 
 prepare() {
     cd "$srcdir/$_archivename"
+    sed -i 's|3.15.91|3.16|g' data/metadata.json.in
     
 }
 
