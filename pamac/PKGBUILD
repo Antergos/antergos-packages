@@ -37,7 +37,7 @@ prepare() {
   fi
 
   # adjust version string
-  cd "$srcdir/pamac-$pkgver/src"
+  cd src
   sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala
 }
 
