@@ -2,7 +2,7 @@
 
 _pkgname=Cnchi
 pkgname=cnchi-dev
-pkgver=0.8rc4
+pkgver=0.9.0
 pkgrel=1
 pkgdesc='Antergos Installer - Development Version'
 arch=(any)
@@ -10,63 +10,34 @@ license=(GPL)
 url="https://github.com/Antergos/Cnchi"
 depends=(python pyalpm python-gobject python-dbus hdparm python-cairo libtimezonemap
          pyparted hwinfo webkitgtk upower python-mako iso-codes encfs pam_encfs)
-#source=("cnchi.tar")
-#sha256sums=('SKIP')
+source=("cnchi.tar")
+sha256sums=('SKIP')
 
-#pkgver() {
-#	cd ${srcdir}/${_pkgname,,}
-#	python cnchi/info.py
-#}
-
-#build ()
-#{
-#  cd $srcdir/${_pkgname,,}
-#}
-
-#package() {
-#	cd ${srcdir}/${_pkgname,,}
-
-#	install -d ${pkgdir}/usr/share/locale/
-#	install -d ${pkgdir}/usr/share/cnchi/cnchi
-#	install -Dm755 bin/${_pkgname,,} "${pkgdir}/usr/bin/cnchi"
-#	install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
-
-#	for i in data scripts cnchi ui grub2-theme; do
-#		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
-#	done
-
-#  	for files in po/*; do
-#    	if [ -f "$files" ] && [ "$files" != 'po/cnchi.pot' ]; then
-#        	STRING_PO=`echo ${files*/}`
-#        	STRING=`echo ${STRING_PO%.po}`
-#        	mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
-#        	msgfmt $files -o ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/cnchi.mo
-#        	echo "${STRING} installed..."
-#    	fi
-#	done
-#}
-source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/Cnchi/archive/master.tar.gz")
-sha256sums=('6ed81036ee6369b505042ffaa8a790ba19c0bb493aa3068a0e55385d9db8f643')
+pkgver() {
+	cd ${srcdir}/${_pkgname,,}
+	python cnchi/info.py
+}
 
 build ()
 {
-  cd "$srcdir/$_pkgname"-master
+  cd $srcdir/${_pkgname,,}
 }
 
 package() {
-	cd "${srcdir}/${_pkgname}"-master
+	cd ${srcdir}/${_pkgname,,}
 
 	install -d ${pkgdir}/usr/share/locale/
-	install -d ${pkgdir}/usr/share/cnchi
-	install -Dm755 "bin/cnchi" "${pkgdir}/usr/bin/cnchi"
+	install -d ${pkgdir}/usr/share/cnchi/cnchi
+	install -Dm755 bin/${_pkgname,,} "${pkgdir}/usr/bin/cnchi"
+	install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
 
-	for i in cnchi data "grub2-theme" scripts ui; do
+	for i in data scripts cnchi ui grub2-theme; do
 		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
 	done
 
   	for files in po/*; do
     	if [ -f "$files" ] && [ "$files" != 'po/cnchi.pot' ]; then
-        	STRING_PO=`echo ${files#*/}`
+        	STRING_PO=`echo ${files*/}`
         	STRING=`echo ${STRING_PO%.po}`
         	mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
         	msgfmt $files -o ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/cnchi.mo
