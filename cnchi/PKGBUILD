@@ -16,7 +16,7 @@ sha256sums=('6ed81036ee6369b505042ffaa8a790ba19c0bb493aa3068a0e55385d9db8f643')
 
 build ()
 {
-  cd "$srcdir/$_pkgname"-master
+  cd "$srcdir/${pkgname}-master"
 }
 
 package() {
