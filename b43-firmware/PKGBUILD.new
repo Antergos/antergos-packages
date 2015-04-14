@@ -1,0 +1,38 @@
+# Maintainer: Xavion <Xavion (dot) 0 (at) Gmail (dot) com>
+
+pkgname=b43-firmware
+pkgver=5.100.138
+pkgrel=2
+pkgdesc="Firmware for Broadcom B43 wireless networking chips"
+arch=("any")
+url="https://wireless.wiki.kernel.org/en/users/Drivers/b43"
+license=("GPL")
+depends=("linux>=3.2")
+makedepends=("b43-fwcutter>=015")
+options=(!emptydirs)
+source=(http://www.lwfinger.com/${pkgname}/broadcom-wl-${pkgver}.tar.bz2)
+
+build() {
+	# Messages
+	warning "If you encounter problems with v5.100, use the PKGBUILD.new file to install v6.30."
+	read -p "==> QUESTION: With this information in mind, do you wish to continue building v5.100? [y/N] " -n 1
+	if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+		echo ""
+		return 1
+	fi
+}
+
+package() {
+	cd "${srcdir}"/broadcom-wl-${pkgver}
+
+	# Directories
+	install -d "${pkgdir}"/usr/lib/firmware/
+
+	# Application
+	b43-fwcutter -w "${pkgdir}"/usr/lib/firmware/ linux/wl_apsta.o
+
+	# Messages
+	#msg "You should add 'b43' to the 'MODULES' array of your '/etc/rc.conf' file."
+}
+
+sha1sums=('21691a8c99c66f58d18f863ee43593d1633b454c')
