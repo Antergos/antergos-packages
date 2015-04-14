@@ -37,7 +37,7 @@ package() {
 
   	for files in po/*; do
     	if [ -f "$files" ] && [ "$files" != 'po/cnchi.pot' ]; then
-        	STRING_PO=`echo ${files*/}`
+        	STRING_PO=`echo ${files#*/}`
         	STRING=`echo ${STRING_PO%.po}`
         	mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
         	msgfmt $files -o ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/cnchi.mo
