@@ -9,7 +9,7 @@ license=('GPL3')
 url='http://numixproject.org/'
 depends=('gtk-engine-murrine')
 replaces='gtk-theme-numix-frost'
-source=("numix-frost.zip")
+source=("numix-frost-themes.zip")
 sha256sums=('6288573b6e2b0d91d96fe27ef252aee4950fe181a38419aeb08497e666c61360')
 
 package() {
