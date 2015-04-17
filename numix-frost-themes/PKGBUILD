@@ -1,7 +1,10 @@
 # Maintainer: Antergos Devs 
 
 pkgname=numix-frost-themes
-pkgver=1.4
+_pkgname=Numix-Frost
+_light=Numix-Frost-Light
+_branch=numix-frost-light
+pkgver=1.5
 pkgrel=1
 pkgdesc='Official Numix GTK theme - Antergos edition'
 arch=('any')
@@ -9,15 +12,18 @@ license=('GPL3')
 url='http://numixproject.org/'
 depends=('gtk-engine-murrine')
 replaces='gtk-theme-numix-frost'
-source=("numix-frost-themes.zip")
+source=("${pkgname}::git+http://github.com/lots0logs/Numix-Frost")
 sha256sums=('6288573b6e2b0d91d96fe27ef252aee4950fe181a38419aeb08497e666c61360')
 
 package() {
 
-cd "${srcdir}/numix-frost/Numix Frost"
-find *.idea -type d -exec rm -rf {} \;
-find Numix* -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/{}" \;
-cd "${srcdir}/numix-frost/Numix Frost Light"
-find Numix* -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/{}" \;
-	
+cd "${srcdir}/${pkgname}"
+install -d "${pkgdir}/usr/share/themes/${_pkgname}"
+install -d "${pkgdir}/usr/share/themes/${_light}"
+find . -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/$_pkgname/{}" \;
+git checkout "${_branch}"
+find . -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/$_light/{}" \;
+rm -rf "${pkgdir}/usr/share/themes/${_pkgname}/.idea" "${pkgdir}/usr/share/themes/${_pkgname}/.git"
+rm -rf "${pkgdir}/usr/share/themes/${_light}/.idea" "${pkgdir}/usr/share/themes/${_light}/.git"
+
 }
