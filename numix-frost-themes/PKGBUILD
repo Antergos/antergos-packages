@@ -13,7 +13,7 @@ license=('GPL3')
 url='http://numixproject.org/'
 depends=('gtk-engine-murrine')
 replaces='gtk-theme-numix-frost'
-source=("${pkgname}::git+http://github.com/lots0logs/Numix-Frost")
+source=("git+http://github.com/lots0logs/Numix-Frost")
 sha256sums=('SKIP')
 
 pkgver() {
