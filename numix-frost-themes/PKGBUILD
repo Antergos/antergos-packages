@@ -4,9 +4,9 @@ pkgname=numix-frost-themes
 _pkgname=Numix-Frost
 _light=Numix-Frost-Light
 _branch=numix-frost-light
-pkgver=1.5
+pkgver=1.6
 _pkgver=${pkgver}
-pkgrel=4
+pkgrel=1
 pkgdesc='Official Numix GTK theme - Antergos edition'
 arch=('any')
 license=('GPL3')
@@ -14,6 +14,7 @@ url='http://numixproject.org/'
 depends=('gtk-engine-murrine')
 replaces='gtk-theme-numix-frost'
 source=("git+http://github.com/lots0logs/Numix-Frost")
+install=theme.install
 sha256sums=('SKIP')
 
 pkgver() {
