@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgbase=dde-workspace
-pkgname=('dde-workspace' 'lightdm-deepin-greeter')
+pkgname=dde-workspace
 pkgver=2.1.20150202093855
 _srcdirname=deepin-desktop-environment-2.1+20150202093855~5b89873137
 pkgrel=1
@@ -62,12 +62,3 @@ package_dde-workspace() {
   install -m644 ../resources/greeter/images/background/default_background.jpg "${pkgdir}"/usr/share/backgrounds/
 }
 
-package_lightdm-deepin-greeter() {
-  pkgdesc="Lightdm greeter for Linux Deepin desktop environment."
-  depends=('cairo' 'gtk3' 'libdeepin-webkit' 'lightdm' 'nodejs' 'python2')
-
-  cd "${srcdir}"/${_srcdirname}-greeter/build/app/greeter
-
-  make install DESTDIR="${pkgdir}"
-  chmod 0700 "${pkgdir}"/var/lib/polkit-1
-}
