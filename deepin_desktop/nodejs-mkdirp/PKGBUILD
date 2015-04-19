@@ -18,6 +18,6 @@ package() {
   mkdir -p $_npmdir
   cd $_npmdir
   npm config set strict-ssl false
-  npm install --user root -g --prefix "$pkgdir/usr" $_npmname@$pkgver
+  npm install -g --prefix "$pkgdir/usr" $_npmname@$pkgver
   npm config set strict-ssl true
 }
