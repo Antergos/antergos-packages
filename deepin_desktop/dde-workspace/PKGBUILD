@@ -40,7 +40,7 @@ build() {
   cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release && make
 }
 
-package_dde-workspace() {
+package() {
   pkgdesc="Linux Deepin desktop environment."
   depends=('dde-control-center' 'deepin-menu' 'deepin-artwork'
            'libdeepin-webkit' 'cairo' 'dbus-glib' 'python2')
