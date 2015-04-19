@@ -3,7 +3,7 @@
 pkgname=pamac
 pkgver=2.3
 _pkgver=2.3
-pkgrel=2
+pkgrel=2.1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit="95fa57007618f73de9a93cd1362367488f369724"
 pkgdesc="A Gtk3 frontend for libalpm"

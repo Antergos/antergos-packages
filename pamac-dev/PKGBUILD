@@ -3,7 +3,7 @@
 pkgname=pamac-dev
 pkgver=2.3
 _pkgver=2.3
-pkgrel=1
+pkgrel=2
 
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit="master"
