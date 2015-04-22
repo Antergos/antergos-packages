@@ -5,7 +5,7 @@
 pkgname=go-sqlite3
 pkgver=0.0.git20140913
 _srcdirname=golang-go-sqlite3-0.0~git20140913
-pkgrel=1
+pkgrel=2
 pkgdesc='File system notification for GO'
 arch=('any')
 url="https://github.com/mattn/go-sqlite3"
