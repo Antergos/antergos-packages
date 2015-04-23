@@ -1,0 +1,12 @@
+post_install() {
+  echo "----------------------------------------------------------"
+  echo "> To enable automatic calibration at restart see"
+  echo "> http://wiki.github.com/tias/xinput_calibrator/making-calibration-values-permanent"
+  echo "----------------------------------------------------------"
+}
+
+post_upgrade() {
+  post_install
+}
+
+# vim:set ts=2 sw=2 et:
