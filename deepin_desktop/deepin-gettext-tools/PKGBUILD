@@ -5,7 +5,7 @@
 pkgname=deepin-gettext-tools
 pkgver=0.0.1.20141216200739
 _srcdirname=deepin-gettext-tools-0.0.1+20141216200739~6ba50ecb9c
-pkgrel=1
+pkgrel=2
 pkgdesc='Deepin Internationalization utilities'
 arch=('any')
 url="https://gitcafe.com/Deepin/deepin-gettext-tools"
