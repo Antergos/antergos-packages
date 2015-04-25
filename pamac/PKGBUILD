@@ -3,7 +3,7 @@
 pkgname=pamac
 pkgver=2.3
 _pkgver=2.3
-pkgrel=2.1
+pkgrel=3
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit="95fa57007618f73de9a93cd1362367488f369724"
 pkgdesc="A Gtk3 frontend for libalpm"
@@ -15,7 +15,7 @@ depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'yaourt' 'vte3
 optdepends=('polkit-gnome: needed for authentification in Cinnamon, Gnome'
             'lxsession: needed for authentification in Xfce, LXDE etc.')
 makedepends=('gettext' 'itstool' 'vala>=0.28')
-backup=('etc/pamac.conf')
+backup=('/etc/pamac.conf')
 replaces=('pamac-aur')
 conflicts=('pamac-dev')
 options=(!emptydirs)
