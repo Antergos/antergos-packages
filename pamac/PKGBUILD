@@ -15,7 +15,7 @@ depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'yaourt' 'vte3
 optdepends=('polkit-gnome: needed for authentification in Cinnamon, Gnome'
             'lxsession: needed for authentification in Xfce, LXDE etc.')
 makedepends=('gettext' 'itstool' 'vala>=0.28')
-backup=('/etc/pamac.conf')
+backup=('etc/pamac.conf')
 replaces=('pamac-aur')
 conflicts=('pamac-dev')
 options=(!emptydirs)
