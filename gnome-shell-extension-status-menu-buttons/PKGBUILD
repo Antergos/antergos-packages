@@ -1,7 +1,7 @@
 # Maintainer: Dustin Falgout <dustin@antergos.info>
 
 pkgname=gnome-shell-extension-status-menu-buttons
-pkgver=0.1
+pkgver=0.1.1
 pkgrel=1
 pkgdesc="Adds a hibernate, suspend, & lock button to the status menu."
 arch=('any')
