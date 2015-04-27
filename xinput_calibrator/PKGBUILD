@@ -25,5 +25,3 @@ package() {
   install scripts/xinput_calibrator{_get_hal_calibration.sh,_pointercal.sh} $pkgdir/usr/bin/ || return 1
   install -m 644 COPYING $pkgdir/usr/share/licenses/xinput_calibrator/LICENSE || return 1
 }
-
-# vim:set ts=2 sw=2 et:
