@@ -1,9 +1,9 @@
-post_install()
+pre_install()
 {
 	match=""
 	for desktop in gnome cinnamon xfce4 mate; do
 		if [[ ${XDG_SESSION_DESKTOP} = "${desktop}" ]] || [[ ${DESKTOP_SESSION} = "${desktop}" ]]; then
-			match=${desktop}
+			export match=${desktop}
 			break
 		fi
 	done
@@ -11,69 +11,110 @@ post_install()
 	if [[ ${match} != "" ]]; then
 		case ${match} in
 			gnome)
-				active=$(gsettings get org.gnome.desktop.interface gtk-theme)
-				activeWM=$(gsettings get org.gnome.desktop.wm.preferences theme)
-				activeSH=$(gsettings get org.gnome.shell.extensions.user-theme name)
+				export active="$(gsettings get org.gnome.desktop.interface gtk-theme)"
+				export activeWM="$(gsettings get org.gnome.desktop.wm.preferences theme)"
+				export activeSH="$(gsettings get org.gnome.shell.extensions.user-theme name)"
 				echo "${active} ${activeWM} ${activeSH}" > /dev/null
 				
+				;;
+			cinnamon)
+				export active="$(gsettings get org.cinnamon.desktop.interface gtk-theme)"
+				export activeWM="$(gsettings get org.cinnamon.desktop.wm.preferences theme)"
+				export activeSH="$(gsettings get org.cinnamon.theme name)"
+				echo "${active} ${activeWM} ${activeSH}" > /dev/null
+				
+				;;
+			xfce4)
+				export active="$(xfconf-query -c xsettings -p /Net/ThemeName)"
+				export activeWM="$(xfconf-query -c xfwm4 -p /general/theme)"
+				export activeSH=''
+				echo "${active} ${activeWM} ${activeSH}" > /dev/null
+				
+				;;
+			mate)
+				export active="$(gsettings get org.gnome.desktop.interface gtk-theme)"
+				export activeWM="$(gsettings get org.mate.Marco.general theme)"
+				export activeSH="$(gsettings get org.mate.interface gtk-theme)"
+				echo "${active} ${activeWM} ${activeSH}" > /dev/null
+				
+				;;
+			*)
+				export active=""
+				export activeWM=""
+				export activeSH=""
+				echo "${active} ${activeWM} ${activeSH}" > /dev/null
+				echo "If you are currently using Numix Frost or Numix Frost Light as your active theme, please note \
+					that the theme names no longer contain spaces. You must update your configuration accordingly. \
+					The themes names are now Numix-Frost and Numix-Frost-Light."
+				;;
+		esac
+
+	
+	fi
+}
+
+pre_upgrade() {
+	pre_install
+}
+
+post_install() {
+
+	if [[ "${active}" ]] && [[ '' != "${active}" ]] && [[ ${match} != "" ]]; then
+
+		case "${match}" in
+			gnome)
 				for check in "Numix Frost" "Numix Frost Light"; do
-					if [[ ${check} = "${active}" ]]; then
+					check="${check%\'}"
+					check="${check#\'}"
+					if [[ ${check} = *"${active}"* ]]; then
 						gsettings set org.gnome.desktop.interface gtk-theme "${check// /-}"
 					fi
-					if  [[ ${check} = "${activeWM}" ]]; then
+					if [[ ${check} = *"${activeWM}"* ]]; then
 						gsettings set org.gnome.desktop.wm.preferences theme "${check// /-}"
 					fi
-					if  [[ ${check} = "${activeSH}" ]]; then
+					if [[ ${check} = *"${activeSH}"* ]]; then
 						gsettings set org.gnome.shell.extensions.user-theme name "${check// /-}"
 					fi
 				done
 				;;
 			cinnamon)
-				active=$(gsettings get org.cinnamon.desktop.interface gtk-theme)
-				activeWM=$(gsettings get org.cinnamon.desktop.wm.preferences theme)
-				activeSH=$(gsettings get org.cinnamon.theme name)
-				echo "${active} ${activeWM} ${activeSH}"
-				
 				for check in "Numix Frost" "Numix Frost Light"; do
-					if [[ ${check} = "${active}" ]]; then
+					check="${check%\'}"
+					check="${check#\'}"
+					if [[ ${check} = *"${active}"* ]]; then
 						gsettings set org.cinnamon.desktop.interface gtk-theme "${check// /-}"
 					fi
-					if  [[ ${check} = "${activeWM}" ]]; then
+					if [[ ${check} = *"${activeWM}"* ]]; then
 						gsettings set org.cinnamon.desktop.wm.preferences theme "${check// /-}"
 					fi
-					if  [[ ${check} = "${activeSH}" ]]; then
+					if [[ ${check} = *"${activeSH}"* ]]; then
 						gsettings set org.cinnamon.theme name "${check// /-}"
 					fi
 				done
 				;;
-			xfce4)
-				active=$(xfconf-query -c xsettings -p /Net/ThemeName)
-				activeWM=$(xfconf-query -c xfwm4 -p /general/theme)
-				echo "${active} ${activeWM} ${activeSH}"
-				
+			xfce)
 				for check in "Numix Frost" "Numix Frost Light"; do
-					if [[ ${check} = "${active}" ]]; then
+					check="${check%\'}"
+					check="${check#\'}"
+					if [[ ${check} = *"${active}"* ]]; then
 						xfconf-query -c xsettings -p /Net/ThemeName -n -t string -s "${check// /-}"
 					fi
-					if  [[ ${check} = "${activeWM}" ]]; then
+					if [[ ${check} = *"${activeWM}"* ]]; then
 						xfconf-query -c xfwm4 -p /general/theme -n -t string -s "${check// /-}"
 					fi
 				done
 				;;
 			mate)
-				active=$(gsettings get org.gnome.desktop.interface gtk-theme)
-				activeWM=$(gsettings get org.mate.Marco.general theme)
-				activeSH=$(gsettings get org.mate.interface gtk-theme)
-				echo "${active} ${activeWM} ${activeSH}"
-				
 				for check in "Numix Frost" "Numix Frost Light"; do
-					if [[ ${check} = "${active}" ]]; then
+					check="${check%\'}"
+					check="${check#\'}"
+					if [[ ${check} = *"${active}"* ]]; then
 						gsettings set org.gnome.desktop.interface gtk-theme "${check// /-}"
 					fi
-					if  [[ ${check} = "${activeWM}" ]]; then
+					if [[ ${check} = *"${activeWM}"* ]]; then
 						gsettings set org.mate.Marco.general theme "${check// /-}"
 					fi
-					if  [[ ${check} = "${activeSH}" ]]; then
+					if [[ ${check} = *"${activeSH}"* ]]; then
 						gsettings set org.mate.interface gtk-theme "${check// /-}"
 					fi
 				done
