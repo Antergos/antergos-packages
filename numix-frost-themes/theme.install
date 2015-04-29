@@ -11,70 +11,70 @@ post_install()
 	if [[ ${match} != "" ]]; then
 		case ${match} in
 			gnome)
-				active=$(dbus-launch gsettings get org.gnome.desktop.interface gtk-theme)
-				activeWM=$(dbus-launch gsettings get org.gnome.desktop.wm.preferences theme)
-				activeSH=$(dbus-launch gsettings get org.gnome.shell.extensions.user-theme name)
+				active=$(gsettings get org.gnome.desktop.interface gtk-theme)
+				activeWM=$(gsettings get org.gnome.desktop.wm.preferences theme)
+				activeSH=$(gsettings get org.gnome.shell.extensions.user-theme name)
 				echo "${active} ${activeWM} ${activeSH}" > /dev/null
 				
 				for check in "Numix Frost" "Numix Frost Light"; do
 					if [[ ${check} = "${active}" ]]; then
-						dbus-launch gsettings set org.gnome.desktop.interface gtk-theme "${check// /-}"
+						gsettings set org.gnome.desktop.interface gtk-theme "${check// /-}"
 					fi
 					if  [[ ${check} = "${activeWM}" ]]; then
-						dbus-launch gsettings set org.gnome.desktop.wm.preferences theme "${check// /-}"
+						gsettings set org.gnome.desktop.wm.preferences theme "${check// /-}"
 					fi
 					if  [[ ${check} = "${activeSH}" ]]; then
-						dbus-launch gsettings set org.gnome.shell.extensions.user-theme name "${check// /-}"
+						gsettings set org.gnome.shell.extensions.user-theme name "${check// /-}"
 					fi
 				done
 				;;
 			cinnamon)
-				active=$(dbus-launch gsettings get org.cinnamon.desktop.interface gtk-theme)
-				activeWM=$(dbus-launch gsettings get org.cinnamon.desktop.wm.preferences theme)
-				activeSH=$(dbus-launch gsettings get org.cinnamon.theme name)
+				active=$(gsettings get org.cinnamon.desktop.interface gtk-theme)
+				activeWM=$(gsettings get org.cinnamon.desktop.wm.preferences theme)
+				activeSH=$(gsettings get org.cinnamon.theme name)
 				echo "${active} ${activeWM} ${activeSH}"
 				
 				for check in "Numix Frost" "Numix Frost Light"; do
 					if [[ ${check} = "${active}" ]]; then
-						dbus-launch gsettings set org.cinnamon.desktop.interface gtk-theme "${check// /-}"
+						gsettings set org.cinnamon.desktop.interface gtk-theme "${check// /-}"
 					fi
 					if  [[ ${check} = "${activeWM}" ]]; then
-						dbus-launch gsettings set org.cinnamon.desktop.wm.preferences theme "${check// /-}"
+						gsettings set org.cinnamon.desktop.wm.preferences theme "${check// /-}"
 					fi
 					if  [[ ${check} = "${activeSH}" ]]; then
-						dbus-launch gsettings set org.cinnamon.theme name "${check// /-}"
+						gsettings set org.cinnamon.theme name "${check// /-}"
 					fi
 				done
 				;;
 			xfce4)
-				active=$(dbus-launch xfconf-query -c xsettings -p /Net/ThemeName)
-				activeWM=$(dbus-launch xfconf-query -c xfwm4 -p /general/theme)
+				active=$(xfconf-query -c xsettings -p /Net/ThemeName)
+				activeWM=$(xfconf-query -c xfwm4 -p /general/theme)
 				echo "${active} ${activeWM} ${activeSH}"
 				
 				for check in "Numix Frost" "Numix Frost Light"; do
 					if [[ ${check} = "${active}" ]]; then
-						dbus-launch xfconf-query -c xsettings -p /Net/ThemeName -n -t string -s "${check// /-}"
+						xfconf-query -c xsettings -p /Net/ThemeName -n -t string -s "${check// /-}"
 					fi
 					if  [[ ${check} = "${activeWM}" ]]; then
-						dbus-launch xfconf-query -c xfwm4 -p /general/theme -n -t string -s "${check// /-}"
+						xfconf-query -c xfwm4 -p /general/theme -n -t string -s "${check// /-}"
 					fi
 				done
 				;;
 			mate)
-				active=$(dbus-launch gsettings get org.gnome.desktop.interface gtk-theme)
-				activeWM=$(dbus-launch gsettings get org.mate.Marco.general theme)
-				activeSH=$(dbus-launch gsettings get org.mate.interface gtk-theme)
+				active=$(gsettings get org.gnome.desktop.interface gtk-theme)
+				activeWM=$(gsettings get org.mate.Marco.general theme)
+				activeSH=$(gsettings get org.mate.interface gtk-theme)
 				echo "${active} ${activeWM} ${activeSH}"
 				
 				for check in "Numix Frost" "Numix Frost Light"; do
 					if [[ ${check} = "${active}" ]]; then
-						dbus-launch gsettings set org.gnome.desktop.interface gtk-theme "${check// /-}"
+						gsettings set org.gnome.desktop.interface gtk-theme "${check// /-}"
 					fi
 					if  [[ ${check} = "${activeWM}" ]]; then
-						dbus-launch gsettings set org.mate.Marco.general theme "${check// /-}"
+						gsettings set org.mate.Marco.general theme "${check// /-}"
 					fi
 					if  [[ ${check} = "${activeSH}" ]]; then
-						dbus-launch gsettings set org.mate.interface gtk-theme "${check// /-}"
+						gsettings set org.mate.interface gtk-theme "${check// /-}"
 					fi
 				done
 				;;
