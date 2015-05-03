@@ -11,7 +11,7 @@ license=('GPL3')
 depends=('light-locker' 'python-gobject' 'python-psutil')
 makedepends=('intltool')
 # source=("${url}/${pkgver%.*}/${pkgver}/+download/${pkgname}-${pkgver}.tar.bz2" "bugfix.patch")
-source=("$pkgname-$pkgver::git+${url}.git")
+source=("$pkgname-$pkgver::git+https://github.com/lots0logs/light-locker-settings.git")
 sha1sums=('87a1a0f34c5bd9f53b93d0a5f30153c1d5a34d69' '768641a1a50817f1664e148c0ddb4fc3d205570a')
 sha1sums=('SKIP')
 
