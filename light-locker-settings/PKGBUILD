@@ -3,7 +3,8 @@
 
 pkgname=light-locker-settings
 pkgver=1.5.1
-pkgrel=1
+_pkgver=${pkgver}
+pkgrel=2
 pkgdesc="Just a simple settings dialog for light-locker"
 arch=('any')
 url="https://github.com/lots0logs/${pkgname}"
@@ -20,7 +21,7 @@ sha1sums=('SKIP')
 #    patch -p1 -i $srcdir/bugfix.patch
 #}
 pkgver() {
-	echo ${pkgver}
+	echo ${_pkgver}
 }
 
 build() {
