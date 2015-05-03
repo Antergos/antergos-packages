@@ -19,7 +19,9 @@ sha1sums=('SKIP')
 #    cd $srcdir/$pkgname-$pkgver
 #    patch -p1 -i $srcdir/bugfix.patch
 #}
-
+pkgver() {
+	echo ${pkgver}
+}
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
