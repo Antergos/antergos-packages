@@ -120,11 +120,12 @@ post_install() {
 				done
 				;;
 			*)
-				echo "If you are currently using Numix Frost or Numix Frost Light as your active theme, please note \
-					that the theme names no longer contain spaces. You must update your configuration accordingly. \
-					The themes names are now Numix-Frost and Numix-Frost-Light."
+				echo " " > /dev/null
 				;;
 		esac
+		echo "If you are currently using Numix Frost or Numix Frost Light as your active theme, please note \
+			that the theme names no longer contain spaces. You must update your configuration accordingly. \
+			The themes names are now Numix-Frost and Numix-Frost-Light."
 	fi
 }
 
