@@ -2,23 +2,23 @@
 # Contributor: Rob McCathie <korrode AT gmail>
 
 pkgname=light-locker-settings
-pkgver=1.5.0
-pkgrel=2
+pkgver=1.5.1
+pkgrel=1
 pkgdesc="Just a simple settings dialog for light-locker"
 arch=('any')
-url="https://launchpad.net/${pkgname}"
+url="https://github.com/lots0logs/${pkgname}"
 license=('GPL3')
 depends=('light-locker' 'python-gobject' 'python-psutil')
 makedepends=('intltool')
-source=("${url}/${pkgver%.*}/${pkgver}/+download/${pkgname}-${pkgver}.tar.bz2"
-        "bugfix.patch")
-sha1sums=('87a1a0f34c5bd9f53b93d0a5f30153c1d5a34d69'
-          '768641a1a50817f1664e148c0ddb4fc3d205570a')
+# source=("${url}/${pkgver%.*}/${pkgver}/+download/${pkgname}-${pkgver}.tar.bz2" "bugfix.patch")
+source=("$pkgname-$pkgver::git+${url}.git")
+sha1sums=('87a1a0f34c5bd9f53b93d0a5f30153c1d5a34d69' '768641a1a50817f1664e148c0ddb4fc3d205570a')
+sha1sums=('SKIP')
 
-prepare() {
-    cd $srcdir/$pkgname-$pkgver
-    patch -p1 -i $srcdir/bugfix.patch
-}
+#prepare() {
+#    cd $srcdir/$pkgname-$pkgver
+#    patch -p1 -i $srcdir/bugfix.patch
+#}
 
 
 build() {
