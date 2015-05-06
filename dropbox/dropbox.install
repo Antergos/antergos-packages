@@ -1,17 +1,28 @@
+_notify_on_install() {
+
+	echo "You must run dropbox manually once in order to complete the setup wizard."
+}
+
+_post_install_upgrade() {
+
+	ln -sf /opt/dropbox/dropbox /usr/bin/dropbox
+	ln -sf /opt/dropbox/dropboxd /usr/bin/dropboxd
+	if [[ -d "${HOME}/.dropbox-dist" ]]; then
+		rm -R "${HOME}/.dropbox-dist"
+	fi
+	install -dm0 "${HOME}/.dropbox-dist"
+	cp /usr/share/applications/dropbox.desktop "${HOME}/.config/autostart/"
+}
+
 post_install() {
 
-    ln -sf /opt/dropbox/dropbox /usr/bin/dropbox
-    ln -sf /opt/dropbox/dropboxd /usr/bin/dropboxd
-    if [[ -d "${HOME}/.dropbox-dist" ]]; then
-        rm -R "${HOME}/.dropbox-dist"
-    fi
-    install -dm0 "${HOME}/.dropbox-dist"
-    cp /usr/share/applications/dropbox.desktop "${HOME}/.config/autostart/"
-    echo "You must run dropbox manually once in order to complete the setup wizard."
+	_post_install_upgrade
+	_notify_on_install
 }
 
 post_upgrade() {
-  post_install
+
+	_post_install_upgrade
 }
 
 post_remove() {
