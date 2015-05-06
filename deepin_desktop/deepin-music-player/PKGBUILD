@@ -3,8 +3,8 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-music-player
-pkgver=1.1.20150204093722
-_srcdirname=deepin-music-player-1.1+20150204093722~081154cf7b
+pkgver=1.1.20150413165956
+_srcdirname=deepin-music-player-1.1+20150413165956~fa225d345b
 pkgrel=1
 pkgdesc='Awesome music player with brilliant and tweakful UI Deepin-UI based.'
 arch=('any')
@@ -14,8 +14,8 @@ depends=('python2')
 makedepends=('deepin-gettext-tools')
 groups=('deepin-extra')
 install="${pkgname}.install"
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-music-player/deepin-music-player_1.1+20150204093722~081154cf7b.tar.gz")
-sha256sums=('ac8cf7b151a387c6ed3bfbfb9e6e4c92fee75c89d62124f6a38fb9d3ba7ff9af')
+source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-music-player/deepin-music-player_1.1+20150413165956~fa225d345b.tar.gz")
+sha256sums=('ff74ed6d7e574ce3fded5523429eafe172bb92f18acba1ef817960cd8c86b777')
 
 prepare() {
   cd "${_srcdirname}"

@@ -3,9 +3,9 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-qml-widgets
-pkgver=0.0.2.20150203171526
-_srcdirname=deepin-qml-widgets-0.0.2+20150203171526~feb6d6ad2f
-pkgrel=2
+pkgver=0.0.2.20150423102550
+_srcdirname=deepin-qml-widgets-0.0.2+20150423102550~daef82ffb6
+pkgrel=1
 pkgdesc='Deepin QML widgets'
 arch=('i686' 'x86_64')
 url="https://gitcafe.com/Deepin/deepin-qml-widgets"
@@ -17,9 +17,8 @@ conflicts=('dde-qml-gettext-plugin')
 provides=('dde-qml-gettext-plugin')
 replaces=('dde-qml-gettext-plugin')
 options=('!emptydirs')
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-qml-widgets/deepin-qml-widgets_0.0.2+20150203171526~feb6d6ad2f.tar.gz")
-sha256sums=('eafadf1a7ca22999a9f682b95ddf4f15d00e52a085de2af41cbb755c7694f69e')
-
+source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-qml-widgets/deepin-qml-widgets_0.0.2+20150423102550~daef82ffb6.tar.gz")
+sha256sums=('861340d0ca269f34cde2ddc2ed6262a4b966c269886f5d764686df8a3bc6e13d')
 
 build(){
   cd "${_srcdirname}"

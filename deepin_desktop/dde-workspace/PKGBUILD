@@ -4,8 +4,8 @@
 
 pkgbase=dde-workspace
 pkgname=dde-workspace
-pkgver=2.1.20150202093855
-_srcdirname=deepin-desktop-environment-2.1+20150202093855~5b89873137
+pkgver=2.1.20150413170547
+_srcdirname=deepin-desktop-environment-2.1+20150413170547~9fbb0869bf
 pkgrel=1
 arch=('i686' 'x86_64')
 url="https://gitcafe.com/Deepin/dde-workspace"
@@ -13,9 +13,9 @@ license=('GPL3')
 groups=('deepin')
 makedepends=('cmake' 'go' 'coffee-script' 'go-gettext-go' 'webkitgtk'
              'libdeepin-webkit' 'lightdm' 'cairo' 'dbus-glib' 'python2')
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-desktop-environment/deepin-desktop-environment_2.1+20150202093855~5b89873137.tar.gz"
+source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-desktop-environment/deepin-desktop-environment_2.1+20150413170547~9fbb0869bf.tar.gz"
         "default-display-manager")
-sha256sums=('5dbb5972e4920e0ebbf5f7128846ef8f2bfac52fa53673c360b4c261bc081ec1'
+sha256sums=('7facfb617b9323339c39a6ef870244f1382494293678a86c06aa4a4ce9ab7221'
             '3667d6cce9a00f0b8c8bc27250b2ceaf421382d3b4e687a5bcea4c64292030df')
 
 prepare() {
@@ -44,7 +44,7 @@ package() {
   pkgdesc="Linux Deepin desktop environment."
   depends=('dde-control-center' 'deepin-menu' 'deepin-artwork'
            'libdeepin-webkit' 'cairo' 'dbus-glib' 'python2')
-  optdepends=('lightdm-deepin-greeter')
+  optdepends=('lightdm-webkit-greeter')
   replaces=("deepin-desktop-environment" "deepin-workspace")
   install="${pkgbase}.install"
 

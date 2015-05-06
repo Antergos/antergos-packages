@@ -3,8 +3,8 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-gtk-theme
-pkgver=14.07.20141223164347
-_srcdirname=deepin-gtk-theme-14.07+20141223164347~1b5a54ef99
+pkgver=14.07.20150327153743
+_srcdirname=deepin-gtk-theme-14.07+20150327153743~2d420cb0b9
 pkgrel=1
 pkgdesc="Deepin GTK Theme."
 arch=('any')
@@ -12,8 +12,8 @@ url="https://gitcafe.com/Deepin/deepin-gtk-theme"
 license=('LGPL3')
 optdepends=('gtk-engine-murrine: for gtk2 themes')
 groups=('deepin')
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-gtk-theme/deepin-gtk-theme_14.07+20141223164347~1b5a54ef99.tar.gz")
-sha256sums=('f5ff3f7ffbd795328dbc3640247012e7568c2474810e5b0e0ad9f0d6d1733789')
+source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-gtk-theme/deepin-gtk-theme_14.07+20150327153743~2d420cb0b9.tar.gz")
+sha256sums=('377695a4a91c7334259ff6283d39ae7c55c21032d43293b8c7a5298cd8706407')
 
 package() {
   depends=('gtk-engine-unico')

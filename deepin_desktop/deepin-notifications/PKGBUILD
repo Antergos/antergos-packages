@@ -3,8 +3,8 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-notifications
-pkgver=0.3.20141216180805
-_srcdirname=deepin-notifications-0.3+20141216180805~a93d61767c
+pkgver=0.3.20150427175348
+_srcdirname=deepin-notifications-0.3+20150427175348~b2f1890574
 pkgrel=1
 pkgdesc="System notifications for linuxdeepin desktop environment."
 arch=('i686' 'x86_64')
@@ -13,8 +13,8 @@ license=('GPL3')
 groups=('deepin')
 depends=('qt5-declarative' 'qt5-svg')
 conflicts=('notify-osd')
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-notifications/deepin-notifications_0.3+20141216180805~a93d61767c.tar.gz")
-sha256sums=('79e34f468591630b10ad7b88d084c64aa265680d1c1597068b29fbdde028e0b5')
+source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-notifications/deepin-notifications_0.3+20150427175348~b2f1890574.tar.gz")
+sha256sums=('ddaedfa3a186c58957507f1d8de40d495804b1b6e3576f314b4835846569c289')
 
 build() {
   cd "${_srcdirname}"

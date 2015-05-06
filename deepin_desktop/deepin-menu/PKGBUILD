@@ -3,8 +3,8 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-menu
-pkgver=1.1.20141216195521
-_srcdirname=deepin-menu-1.1+20141216195521~1247e3bd11
+pkgver=1.1.20150415155150
+_srcdirname=deepin-menu-1.1+20150415155150~faffe35053
 pkgrel=1
 pkgdesc="Deepin menu service for building beautiful menus."
 arch=('i686' 'x86_64')
@@ -13,8 +13,8 @@ license=('GPL3')
 depends=('python2-pyqt5')
 makedepends=('python2-setuptools' 'qt5-declarative' 'qt5-x11extras')
 groups=('deepin')
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-menu/deepin-menu_1.1+20141216195521~1247e3bd11.tar.gz")
-sha256sums=('87c09a081be514788d6ff03fab53b10cfdb86461da52f4aa29872652b9eddbf7')
+source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-menu/deepin-menu_1.1+20150415155150~faffe35053.tar.gz")
+sha256sums=('9e7e8c95d02543b1be339d53a2a77a6a0b3797d6d9d49e1abf41f65d95b2f8e1')
 
 prepare() {
   cd "${_srcdirname}"
