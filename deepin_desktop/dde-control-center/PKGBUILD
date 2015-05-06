@@ -3,9 +3,9 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=dde-control-center
-pkgver=0.1.20150211150410
-_srcdirname=dde-control-center-0.1+20150211150410~6b5195ef53
-pkgrel=2
+pkgver=0.1.20150413164707
+_srcdirname=dde-control-center-0.1+20150413164707~6ec15a41de
+pkgrel=1
 pkgdesc="New control center for linux deepin"
 arch=('i686' 'x86_64')
 url="https://gitcafe.com/Deepin/dde-control-center"
@@ -15,8 +15,8 @@ depends=('dde-daemon' 'deepin-qml-widgets' 'dde-qml-dbus-factory'
 makedepends=('deepin-gettext-tools' 'qt5-tools')
 groups=('deepin')
 options=(staticlibs)
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/dde-control-center/dde-control-center_0.1+20150211150410~6b5195ef53.tar.gz")
-sha256sums=('89ce5952e15f2cebf5f8465ff26e7df788c025e62e4eb29f15d4d08f6e772207')
+source=("http://deepin.mirror.gtcomm.net/pool/main/d/dde-control-center/dde-control-center_0.1+20150413164707~6ec15a41de.tar.gz")
+sha256sums=('729a2c722bb788094e485c92120304078fa14005b36d60d5011b8b49c4cbfcf6')
 
 prepare() {
   cd "${_srcdirname}"
