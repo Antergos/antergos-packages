@@ -5,7 +5,7 @@
 pkgname=grub-theme-deepin
 pkgver=0.5
 _srcdirname=grub-themes-deepin-0.5
-pkgrel=1
+pkgrel=2
 pkgdesc='Grub2 themes from Linux Deepin'
 arch=('any')
 url="http://www.linuxdeepin.com/"
