@@ -1,0 +1,277 @@
+Index: trunk/src/battery/battery.c
+===================================================================
+--- trunk/src/battery/battery.c	(revision 652)
++++ trunk/src/battery/battery.c	(working copy)
+@@ -45,13 +45,15 @@
+ 
+ PangoFontDescription *bat1_font_desc;
+ PangoFontDescription *bat2_font_desc;
++char *bat1_format;
++char *bat2_format;
+ struct batstate battery_state;
+ int battery_enabled;
+ int percentage_hide;
+ static timeout* battery_timeout;
+ 
+-static char buf_bat_percentage[10];
+-static char buf_bat_time[20];
++static char buf_bat1[256];
++static char buf_bat2[256];
+ 
+ int8_t battery_low_status;
+ unsigned char battery_low_cmd_send;
+@@ -104,6 +106,8 @@
+ 	battery_timeout = 0;
+ 	bat1_font_desc = 0;
+ 	bat2_font_desc = 0;
++	bat1_format = 0;
++	bat2_format = 0;
+ 	battery_low_cmd = 0;
+ 	path_energy_now = 0;
+ 	path_energy_full = 0;
+@@ -119,6 +123,8 @@
+ 
+ void cleanup_battery()
+ {
++	if (bat1_format) g_free(bat1_format);
++	if (bat2_format) g_free(bat2_format);
+ 	if (bat1_font_desc) pango_font_description_free(bat1_font_desc);
+ 	if (bat2_font_desc) pango_font_description_free(bat2_font_desc);
+ 	if (path_energy_now) g_free(path_energy_now);
+@@ -134,7 +140,99 @@
+ #endif
+ }
+ 
++char* strncat(char* dest, const char* addendum, size_t limit)
++{
++	char* tmp = strdup(dest);
+ 
++	// Actually concatenate them.
++	snprintf(dest, limit, "%s%s", tmp, addendum);
++
++	free(tmp);
++	return dest;
++}
++
++char* battery_update_text(char* dest, size_t buf_size, char* format)
++{
++	if (!battery_enabled || dest == 0 || format == 0) return 0;
++	// We want to loop over the format specifier, replacing any known symbols with our battery data.
++	// First, erase anything already stored in the buffer.
++	// This ensures the string will always be null-terminated.
++	memset(dest, '\0', buf_size);
++	char *c = 0;
++	int o = 0;
++	char buf[20];
++
++	for (; o < strlen(format); o++)
++	{
++		c = &format[o];
++		// Format specification:
++		// %s :	State (charging, discharging, full, unknown)
++		// %m :	Minutes left (estimated).
++		// %h : Hours left (estimated).
++		// %t :	Time left. This is equivalent to the old behaviour; i.e. "(plugged in)" or "hrs:mins" otherwise.
++		// %p :	Percentage left. Includes the % sign.
++		if (*c == '%')
++		{
++			c++;
++			o++; // Skip the format control character.
++			switch (*c)
++			{
++			case 's':
++				// Append the appropriate status message to the string.
++				strncat(dest, 
++					(battery_state.state == BATTERY_CHARGING)? "Charging"
++					: (battery_state.state == BATTERY_DISCHARGING)? "Discharging"
++					: (battery_state.state == BATTERY_FULL)? "Full"
++					: "Unknown", buf_size);
++				break;
++			case 'm':
++				snprintf(buf, 20, "%02d", battery_state.time.minutes);
++				strncat(dest, buf, buf_size);
++				break;
++			case 'h':
++				snprintf(buf, 20, "%02d", battery_state.time.hours);
++				strncat(dest, buf, buf_size);
++				break;
++			case 'p':
++				snprintf(buf, 20, "%d%%", battery_state.percentage);
++				strncat(dest, buf, buf_size);
++				break;
++			case 't':
++				if (battery_state.state == BATTERY_FULL) {
++					snprintf(buf, 20, "(plugged in)");
++					strncat(dest, buf, buf_size);
++				}
++				else {
++					snprintf(buf, 20, "%02d:%02d remaining",
++						battery_state.time.hours, 
++						battery_state.time.minutes); 
++					strncat(dest, buf, buf_size);
++				}
++				break;
++
++			case '%':
++				// This is to prevent overflows.
++				// It will cause overly long strings to wrap around.
++				dest[strlen(dest) % (buf_size - 1)] = '%';
++				break;
++			default:
++				fprintf(stderr, "unrecognised format specifier '%%%c'.\n", *c);
++            dest[strlen(dest) % (buf_size - 1)] = *c;
++			}
++		}
++
++		else {
++			// Just add it to the buffer.
++			// This way of building things isn't terribly efficient, but we shouldn't be dealing with very long
++			// specifier strings, so it *should* be ok? There's a hard limit of 256 iterations anyway.
++			size_t p = strlen(dest);
++			dest[p % (buf_size - 1)] = *c;
++		}
++	}
++
++	return dest;
++}
++
+ void init_battery()
+ {
+ 	if (!battery_enabled) return;
+@@ -403,6 +501,12 @@
+ 	if(battery_state.percentage > 100) {
+ 		battery_state.percentage = 100;
+ 	}
++
++	// Refresh the text display too.
++	battery_update_text(buf_bat1, 256, bat1_format);
++	if (bat2_format != 0) {
++		battery_update_text(buf_bat2, 256, bat2_format);
++	}
+ }
+ 
+ 
+@@ -417,7 +521,7 @@
+ 	pango_layout_set_font_description(layout, bat1_font_desc);
+ 	pango_layout_set_width(layout, battery->area.width * PANGO_SCALE);
+ 	pango_layout_set_alignment(layout, PANGO_ALIGN_CENTER);
+-	pango_layout_set_text(layout, buf_bat_percentage, strlen(buf_bat_percentage));
++	pango_layout_set_text(layout, buf_bat1, strlen(buf_bat1));
+ 
+ 	cairo_set_source_rgba(c, battery->font.color[0], battery->font.color[1], battery->font.color[2], battery->font.alpha);
+ 
+@@ -425,14 +529,17 @@
+ 	cairo_move_to(c, 0, battery->bat1_posy);
+ 	pango_cairo_show_layout(c, layout);
+ 
+-	pango_layout_set_font_description(layout, bat2_font_desc);
+-	pango_layout_set_indent(layout, 0);
+-	pango_layout_set_text(layout, buf_bat_time, strlen(buf_bat_time));
+-	pango_layout_set_width(layout, battery->area.width * PANGO_SCALE);
++	if (bat2_format != 0)
++	{
++		pango_layout_set_font_description(layout, bat2_font_desc);
++		pango_layout_set_indent(layout, 0);
++		pango_layout_set_text(layout, buf_bat2, strlen(buf_bat2));
++		pango_layout_set_width(layout, battery->area.width * PANGO_SCALE);
+ 
+-	pango_cairo_update_layout(c, layout);
+-	cairo_move_to(c, 0, battery->bat2_posy);
+-	pango_cairo_show_layout(c, layout);
++		pango_cairo_update_layout(c, layout);
++		cairo_move_to(c, 0, battery->bat2_posy);
++		pango_cairo_show_layout(c, layout);
++	}
+ 
+ 	g_object_unref(layout);
+ }
+@@ -442,38 +549,34 @@
+ {
+ 	Battery *battery = obj;
+ 	Panel *panel = battery->area.panel;
+-	int bat_percentage_height, bat_percentage_width, bat_percentage_height_ink;
+-	int bat_time_height, bat_time_width, bat_time_height_ink;
++	int bat1_height = 0, bat1_width = 0, bat1_height_ink = 0;
++	int bat2_height = 0, bat2_width = 0, bat2_height_ink = 0;
+ 	int ret = 0;
+ 
+ 	battery->area.redraw = 1;
+-	
+-	snprintf(buf_bat_percentage, sizeof(buf_bat_percentage), "%d%%", battery_state.percentage);
+-	if(battery_state.state == BATTERY_FULL) {
+-		strcpy(buf_bat_time, "Full");
+-	} else {
+-		snprintf(buf_bat_time, sizeof(buf_bat_time), "%02d:%02d", battery_state.time.hours, battery_state.time.minutes);
++
++	get_text_size2(bat1_font_desc, &bat1_height_ink, &bat1_height, &bat1_width, panel->area.height, panel->area.width, buf_bat1, strlen(buf_bat1));
++	if (bat2_format != 0) {
++		get_text_size2(bat2_font_desc, &bat2_height_ink, &bat2_height, &bat2_width, panel->area.height, panel->area.width, buf_bat2, strlen(buf_bat2));
+ 	}
+-	get_text_size2(bat1_font_desc, &bat_percentage_height_ink, &bat_percentage_height, &bat_percentage_width, panel->area.height, panel->area.width, buf_bat_percentage, strlen(buf_bat_percentage));
+-	get_text_size2(bat2_font_desc, &bat_time_height_ink, &bat_time_height, &bat_time_width, panel->area.height, panel->area.width, buf_bat_time, strlen(buf_bat_time));
+ 
+ 	if (panel_horizontal) {
+-		int new_size = (bat_percentage_width > bat_time_width) ? bat_percentage_width : bat_time_width;
++		int new_size = (bat1_width > bat2_width) ? bat1_width : bat2_width;
+ 		new_size += (2*battery->area.paddingxlr) + (2*battery->area.bg->border.width);
+ 		if (new_size > battery->area.width || new_size < (battery->area.width-2)) {
+ 			// we try to limit the number of resize
+ 			battery->area.width =  new_size;
+-			battery->bat1_posy = (battery->area.height - bat_percentage_height - bat_time_height)/2;
+-			battery->bat2_posy = battery->bat1_posy + bat_percentage_height;
++			battery->bat1_posy = (battery->area.height - bat1_height - bat2_height)/2;
++			battery->bat2_posy = battery->bat1_posy + bat1_height;
+ 			ret = 1;
+ 		}
+ 	}
+ 	else {
+-		int new_size = bat_percentage_height + bat_time_height + (2 * (battery->area.paddingxlr + battery->area.bg->border.width));
++		int new_size = bat1_height + bat2_height + (2 * (battery->area.paddingxlr + battery->area.bg->border.width));
+ 		if (new_size > battery->area.height || new_size < (battery->area.height-2)) {
+ 			battery->area.height =  new_size;
+-			battery->bat1_posy = (battery->area.height - bat_percentage_height - bat_time_height - 2)/2;
+-			battery->bat2_posy = battery->bat1_posy + bat_percentage_height + 2;
++			battery->bat1_posy = (battery->area.height - bat1_height - bat2_height - 2)/2;
++			battery->bat2_posy = battery->bat1_posy + bat1_height + 2;
+ 			ret = 1;
+ 		}
+ 	}
+Index: trunk/src/battery/battery.h
+===================================================================
+--- trunk/src/battery/battery.h	(revision 652)
++++ trunk/src/battery/battery.h	(working copy)
+@@ -50,6 +50,8 @@
+ extern struct batstate battery_state;
+ extern PangoFontDescription *bat1_font_desc;
+ extern PangoFontDescription *bat2_font_desc;
++extern char *bat1_format;
++extern char *bat2_format;
+ extern int battery_enabled;
+ extern int percentage_hide;
+ 
+Index: trunk/src/config.c
+===================================================================
+--- trunk/src/config.c	(revision 652)
++++ trunk/src/config.c	(working copy)
+@@ -301,6 +301,21 @@
+ 		bat2_font_desc = pango_font_description_from_string (value);
+ #endif
+ 	}
++	else if (strcmp (key, "bat1_format") == 0) {
++#ifdef ENABLE_BATTERY
++		if (strlen(value) > 0) {
++			bat1_format = strdup (value);
++			battery_enabled = 1;
++		}
++#endif
++	}
++	else if (strcmp (key, "bat2_format") == 0) {
++#ifdef ENABLE_BATTERY
++		if (strlen(value) > 0) {
++			bat2_format = strdup (value);
++		}
++#endif
++	}
+ 	else if (strcmp (key, "battery_font_color") == 0) {
+ #ifdef ENABLE_BATTERY
+ 		extract_values(value, &value1, &value2, &value3);

@@ -1,0 +1,16 @@
+diff -ruN tint2-rev650.orig/src/systray/systraybar.c tint2-rev650/src/systray/systraybar.c
+--- tint2-rev650.orig/src/systray/systraybar.c	2012-08-16 07:57:52.331050399 +0800
++++ tint2-rev650/src/systray/systraybar.c	2012-08-16 08:00:55.032438446 +0800
+@@ -353,6 +353,12 @@
+ 	XErrorHandler old;
+ 	Panel *panel = systray.area.panel;
+ 	int hide = 0;
++	GSList *l;
++
++	for (l = systray.list_icons; l; l = l->next) {
++		if (((TrayWindow*)l->data)->tray_id == id)
++			return FALSE;
++	}
+ 
+ 	error = FALSE;
+ 	XWindowAttributes attr;
