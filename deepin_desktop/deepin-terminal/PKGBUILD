@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-terminal
-pkgver=1.1.20141230110750
+pkgver=1.1.20141230110751
 _srcdirname=deepin-terminal-1.1+20141230110750~bc441b7aae
 pkgrel=1
 pkgdesc='Awesome terminal for Linux Deepin'

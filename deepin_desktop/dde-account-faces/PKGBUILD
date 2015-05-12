@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=dde-account-faces
-pkgver=1.0.7
+pkgver=1.0.7.1
 _srcdirname=dde-account-faces-1.0.7
 pkgrel=1
 pkgdesc='Deepin Account face Images'

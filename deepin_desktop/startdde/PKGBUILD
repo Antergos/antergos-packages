@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=startdde
-pkgver=0.1.20141230181929
+pkgver=0.1.20141230181930
 _srcdirname=startdde-0.1+20141230181929~b99e7b174d
 pkgrel=1
 pkgdesc="starter of deepin desktop environment"

@@ -4,7 +4,7 @@
 
 _pkgname=qt5-systems
 pkgname=$_pkgname-git
-pkgver=v5.0.0.beta1.109.gee755a7
+pkgver=v5.0.0.beta1.109.gee755a8
 pkgrel=1
 pkgdesc="A cross-platform application and UI framework (QtSystems)"
 arch=("i686" "x86_64")

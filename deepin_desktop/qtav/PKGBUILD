@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=qtav
-pkgver=2.0.20150424100710
+pkgver=2.0.20150424100711
 _srcdirname=qtav-2.0+20150424100710
 pkgrel=1
 pkgdesc="qt multimedia framework"

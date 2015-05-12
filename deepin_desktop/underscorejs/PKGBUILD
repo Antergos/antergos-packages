@@ -2,7 +2,7 @@
 # Contributor:
 pkgname=underscorejs
 _script=underscore
-pkgver=1.8.2
+pkgver=1.8.2.1
 pkgrel=1
 pkgdesc="Underscore is a utility-belt library for JavaScript that provides a lot of the functional programming support that you would expect in Prototype.js (or Ruby), but without extending any of the built-in JavaScript objects."
 arch=(any)

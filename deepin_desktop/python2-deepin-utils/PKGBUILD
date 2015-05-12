@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=python2-deepin-utils
-pkgver=0.0.2.20140703165416
+pkgver=0.0.2.20140703165417
 _srcdirname=deepin-utils-0.0.2+20140703165416~8aaf2a6f00
 pkgrel=1
 pkgdesc='Basic utils for all project in Linux Deepin.'

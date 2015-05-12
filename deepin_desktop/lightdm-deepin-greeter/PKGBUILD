@@ -4,7 +4,7 @@
 
 pkgbase=dde-workspace
 pkgname=lightdm-deepin-greeter
-pkgver=2.1.20150202093855
+pkgver=2.1.20150202093856
 _srcdirname=deepin-desktop-environment-2.1+20150202093855~5b89873137
 pkgrel=1
 arch=('i686' 'x86_64')

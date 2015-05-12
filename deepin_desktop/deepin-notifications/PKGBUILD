@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-notifications
-pkgver=0.3.20150427175348
+pkgver=0.3.20150427175349
 _srcdirname=deepin-notifications-0.3+20150427175348~b2f1890574
 pkgrel=1
 pkgdesc="System notifications for linuxdeepin desktop environment."

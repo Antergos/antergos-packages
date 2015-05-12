@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=go-dlib
-pkgver=0.0.4.20150227094412
+pkgver=0.0.4.20150227094413
 _srcdirname=go-dlib-0.0.4+20150227094412~8e9523b66a
 pkgrel=1
 pkgdesc='Go-lang bingdings for dlib'

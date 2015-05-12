@@ -4,7 +4,7 @@
 
 pkgbase=dde-workspace
 pkgname=dde-workspace
-pkgver=2.1.20150413170547
+pkgver=2.1.20150413170548
 _srcdirname=deepin-desktop-environment-2.1+20150413170547~9fbb0869bf
 pkgrel=2
 arch=('i686' 'x86_64')

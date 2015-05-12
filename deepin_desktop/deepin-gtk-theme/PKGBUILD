@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-gtk-theme
-pkgver=14.07.20150327153743
+pkgver=14.07.20150327153744
 _srcdirname=deepin-gtk-theme-14.07+20150327153743~2d420cb0b9
 pkgrel=1
 pkgdesc="Deepin GTK Theme."

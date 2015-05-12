@@ -6,7 +6,7 @@
 # Contributor: Nathan Hulse <nat.hulse@gmail.com>
 
 pkgname=deepin-compiz
-pkgver=0.9.99.5.git20140707164843
+pkgver=0.9.99.5.git20140707164844
 _srcdirname=compiz-0.9.99
 pkgrel=1
 epoch=1

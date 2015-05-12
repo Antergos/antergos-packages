@@ -4,7 +4,7 @@
 
 _pkgname=golang-goconvey-dev
 pkgname=go-goconvey
-pkgver=1.5.0
+pkgver=1.5.0.1
 pkgrel=1
 pkgdesc='Go testing in the browser.'
 arch=('any')

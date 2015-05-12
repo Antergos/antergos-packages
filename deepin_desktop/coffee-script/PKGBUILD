@@ -10,7 +10,7 @@
 pkgname=coffee-script
 _pkgname=coffeescript
 pkgver=1.9.1
-pkgrel=1
+pkgrel=2
 pkgdesc='CoffeeScript is a little language that compiles into JavaScript.'
 arch=(any)
 url='http://coffeescript.org'

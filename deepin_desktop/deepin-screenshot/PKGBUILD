@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-screenshot
-pkgver=3.0.201504271302008
+pkgver=3.0.201504271302009
 _srcdirname=deepin-screenshot-3.0+20150427130200~34d48c47e58
 pkgrel=1
 pkgdesc="Easy-to-use screenshot tool for linuxdeepin desktop environment"

@@ -4,7 +4,7 @@
 
 _pkgname=golang-jamslam-freetype-go
 pkgname=go-jamslam-freetype-go
-pkgver=0.0.git20140903
+pkgver=0.0.git20140904
 pkgrel=1
 pkgdesc='File system notification for GO'
 arch=('any')

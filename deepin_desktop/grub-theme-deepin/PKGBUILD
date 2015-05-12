@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=grub-theme-deepin
-pkgver=0.5
+pkgver=0.5.1
 _srcdirname=grub-themes-deepin-0.5
 pkgrel=2
 pkgdesc='Grub2 themes from Linux Deepin'

@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-pygtk
-pkgver=2.24.0
+pkgver=2.24.0.1
 _srcdirname=pygtk-2.24.0
 pkgrel=6
 pkgdesc="Python bindings for the GTK widget set - with patches to fix memory leak for deepin-ui"

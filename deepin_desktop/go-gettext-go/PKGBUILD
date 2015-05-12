@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=go-gettext-go
-pkgver=0.0.git20140808
+pkgver=0.0.git20140809
 pkgrel=1
 pkgdesc="This package provides GNU gettext support."
 arch=('any')
