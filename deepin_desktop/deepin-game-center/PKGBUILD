@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-game-center
-pkgver=1.0.1.20141230144448
+pkgver=1.0.1.20141230144449
 _srcdirname=deepin-game-center-1.0.1+20141230144448~4e7bbbfda6
 pkgrel=1
 pkgdesc="Game center for Linuxdeepin"

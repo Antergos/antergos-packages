@@ -2,7 +2,7 @@
 
 pkgname=python2-jswebkit
 _srcname=python-jswebkit
-pkgver=0.0.3
+pkgver=0.0.3.1
 pkgrel=4
 pkgdesc='simple GTK+ HTML5 rich text editor'
 arch=('i686' 'x86_64')

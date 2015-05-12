@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=dde-dock-applets
-pkgver=0.0.4.20150427095046
+pkgver=0.0.4.20150427095047
 _srcdirname=dde-dock-applets-0.0.4+20150427095046~4311ed4614
 pkgrel=1
 pkgdesc="New control center for linux deepin"

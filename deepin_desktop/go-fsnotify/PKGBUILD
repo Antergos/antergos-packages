@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=go-fsnotify
-pkgver=0.0.git201400902
+pkgver=0.0.git201400903
 pkgrel=1
 pkgdesc='File system notification for GO'
 arch=('any')

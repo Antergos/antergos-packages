@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=go-gocheck
-pkgver=0.0.bzr20131118.85
+pkgver=0.0.bzr20131118.86
 _srcdirname=golang-gocheck-0.0~bzr20131118+85
 pkgrel=8
 pkgdesc='Richer testing framework for Go libraries and applications to use'
