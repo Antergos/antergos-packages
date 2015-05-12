@@ -3,13 +3,13 @@
 _pkgname=Cnchi
 pkgname=cnchi-dev
 pkgver=0.9.40
-pkgrel=1
+pkgrel=2
 pkgdesc='Antergos Installer - Development Version'
 arch=(any)
 license=(GPL)
 url="https://github.com/Antergos/Cnchi"
 depends=(python pyalpm python-gobject python-dbus python-requests python-cairo
-         pyparted webkitgtk upower python-mako iso-codes encfs pam_encfs)
+         python-parted webkitgtk upower python-mako iso-codes encfs pam_encfs)
 source=("cnchi.tar")
 sha256sums=('SKIP')
 

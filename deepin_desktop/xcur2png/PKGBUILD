@@ -3,7 +3,7 @@
 
 pkgname=xcur2png
 pkgver=0.7.1
-pkgrel=2
+pkgrel=3
 pkgdesc='Convert X cursors to PNG images'
 arch=('i686' 'x86_64')
 url="http://cli-apps.org/content/show.php/xcur2png?content=86010"

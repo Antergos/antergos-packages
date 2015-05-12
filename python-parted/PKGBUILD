@@ -1,0 +1,27 @@
+# Alexandre Filgueira <alexfilgueira@antergos.com>
+
+pkgname=python-parted
+pkgver=3.10.5
+pkgrel=1
+pkgdesc="Python 3 module for GNU parted"
+url="https://github.com/rhinstaller/pyparted"
+arch=('i686' 'x86_64')
+license=('GPL2')
+depends=('python' 'parted>=3.0')
+provides=('pyparted')
+conflicts=('pyparted')
+source=("https://github.com/rhinstaller/pyparted/archive/v${pkgver}.tar.gz")
+sha256sums=('8cbaf024fbbc73cdceab2eac0937035052da48295970fe9eaa84b19d8e353e19')
+
+build() {
+  cd "${srcdir}"/pyparted-${pkgver}
+  # python setup.py build
+  make
+}
+
+package() {
+  cd "${srcdir}"/pyparted-${pkgver}
+  #python setup.py install --prefix=/usr --root="${pkgdir}" --optimize=1 --skip-build
+  make install DESTDIR="${pkgdir}"
+}
+
