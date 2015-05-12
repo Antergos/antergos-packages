@@ -2,7 +2,7 @@
 # Contributor: Jarred Leonardo <jarredleonardo at googlemail dot com>
 
 pkgname=xcur2png
-pkgver=0.7.1.1
+pkgver=0.7.1
 pkgrel=3
 pkgdesc='Convert X cursors to PNG images'
 arch=('i686' 'x86_64')

@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-music-player
-pkgver=1.1.20150413165957
+pkgver=1.1.20150413165956
 _srcdirname=deepin-music-player-1.1+20150413165956~fa225d345b
 pkgrel=1
 pkgdesc='Awesome music player with brilliant and tweakful UI Deepin-UI based.'

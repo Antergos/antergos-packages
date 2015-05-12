@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=python2-deepin-ui
-pkgver=1.1.20141229194713
+pkgver=1.1.20141229194712
 _srcdirname=deepin-ui-1.1+20141229194712~5a86faec50
 pkgrel=1
 pkgdesc='UI toolkit for Linux Deepin'

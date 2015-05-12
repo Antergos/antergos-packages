@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-cursor-theme
-pkgver=2014.41
+pkgver=2014.4
 _srcdirname=deepin-cursor-theme-2014~4
 pkgrel=1
 pkgdesc='Cursor theme from Linux Deepin'

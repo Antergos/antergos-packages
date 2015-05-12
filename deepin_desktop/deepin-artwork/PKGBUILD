@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-artwork
-pkgver=2014.1
+pkgver=2014
 _srcdirname=deepin-artwork-2014
 pkgrel=1
 pkgdesc='Deepin artwork themes (sounds)'

@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-qml-widgets
-pkgver=0.0.2.20150423102551
+pkgver=0.0.2.20150423102550
 _srcdirname=deepin-qml-widgets-0.0.2+20150423102550~daef82ffb6
 pkgrel=1
 pkgdesc='Deepin QML widgets'

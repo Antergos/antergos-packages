@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-default-gsettings
-pkgver=0.2.20141216171822
+pkgver=0.2.20141216171821
 _srcdirname=deepin-default-gsettings-0.2+20141216171821~2cf686e3fa
 pkgrel=1
 pkgdesc='deepin default settings of gsettings'

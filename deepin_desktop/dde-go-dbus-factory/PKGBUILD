@@ -4,7 +4,7 @@
 
 pkgbase=deepin-dbus-factory
 pkgname=dde-go-dbus-factory
-pkgver=0.0.2.20141226160558
+pkgver=0.0.2.20141226160557
 _srcdirname=dbus-factory-0.0.2+20141226160557~7e89f03592
 pkgrel=1
 arch=('i686' 'x86_64')

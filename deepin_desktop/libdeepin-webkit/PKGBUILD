@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=libdeepin-webkit
-pkgver=1.8.2.2.20141124213859
+pkgver=1.8.2.2.20141124213858
 _srcdirname=deepin-webkit-1.8.2.2+20141124213858~2494240496
 pkgrel=2
 pkgdesc='A fork of webkit-gtk for Linux Deepin desktop eviroment'

@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=dde-daemon
-pkgver=0.0.1.201504151321382
+pkgver=0.0.1.20150415132138
 _srcdirname=dde-daemon-0.0.1+20150415132138~b7120bedfa
 pkgrel=1
 pkgdesc='Go-lang bingdings for dde-daemon'

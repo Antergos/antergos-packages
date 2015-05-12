@@ -4,7 +4,7 @@
 
 pkgname=deepin-vte
 _pkgname=vte
-pkgver=0.28.2.1
+pkgver=0.28.2
 _srcdirname=vte-0.28.2
 pkgrel=8
 epoch=1

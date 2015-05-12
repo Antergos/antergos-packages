@@ -4,7 +4,7 @@
 
 _pkgname=golang-xgb
 pkgname=go-xgb
-pkgver=0.0.git20140511
+pkgver=0.0.git20140510
 pkgrel=1
 pkgdesc='XGB is the X protocol Go language Binding.'
 arch=('any')

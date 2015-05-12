@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=dde-control-center
-pkgver=0.1.201504131647072
+pkgver=0.1.20150413164707
 _srcdirname=dde-control-center-0.1+20150413164707~6ec15a41de
 pkgrel=1
 pkgdesc="New control center for linux deepin"

@@ -2,7 +2,7 @@
 # Contributor: drakkan <[email protected]>
 
 pkgname=python2-setproctitle
-pkgver=1.1.8.1
+pkgver=1.1.8
 pkgrel=1
 pkgdesc="allows a python process to change its process title"
 arch=('i686' 'x86_64')

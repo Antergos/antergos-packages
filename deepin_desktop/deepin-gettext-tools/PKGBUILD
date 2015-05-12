@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-gettext-tools
-pkgver=0.0.1.20141216200740
+pkgver=0.0.1.20141216200739
 _srcdirname=deepin-gettext-tools-0.0.1+20141216200739~6ba50ecb9c
 pkgrel=1
 pkgdesc='Deepin Internationalization utilities'

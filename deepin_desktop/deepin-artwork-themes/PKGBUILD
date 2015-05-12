@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-artwork-themes
-pkgver=14.04.3.20141204110222
+pkgver=14.04.3.20141204110221
 _srcdirname=deepin-artwork-themes-14.04.3+20141204110221~5bf78d7f42
 pkgrel=1
 pkgdesc='Deepin artwork themes'

@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-movie
-pkgver=2.2.1.20150424170256
+pkgver=2.2.1.20150424170255
 _srcdirname=deepin-movie-2.2.1+20150424170255~9759b316cf
 pkgrel=1
 pkgdesc='deepin movie for linuxdeepin desktop environment'
