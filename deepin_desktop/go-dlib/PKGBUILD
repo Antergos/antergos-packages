@@ -5,12 +5,12 @@
 pkgname=go-dlib
 pkgver=0.0.4.20150227094412
 _srcdirname=go-dlib-0.0.4+20150227094412~8e9523b66a
-pkgrel=1
+pkgrel=2
 pkgdesc='Go-lang bingdings for dlib'
 arch=('any')
 url="https://gitcafe.com/Deepin/go-lib"
 license=('GPL3')
-groups=('deepin-dev')
+groups=('deepin')
 source=("http://deepin.mirror.gtcomm.net/pool/main/g/go-dlib/go-dlib_0.0.4+20150227094412~8e9523b66a.tar.gz")
 sha256sums=('622a76b47f7e2b242870e578accfa34b568903dc3cbfbc94e6196b61c28f3b19')
 
