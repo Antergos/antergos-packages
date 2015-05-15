@@ -2,8 +2,8 @@
 
 _pkgname=Cnchi
 pkgname=cnchi
-pkgver=0.8.118
-pkgrel=2
+pkgver=0.8.124
+pkgrel=1
 pkgdesc='Graphical Installer for Antergos Linux'
 arch=(any)
 license=(GPL)
