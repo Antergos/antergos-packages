@@ -1,0 +1,22 @@
+# Maintainer: OmeGa <omega {at} mailoo {dot} org>
+# Contributor: grimi <grimi at poczta dot fm>
+
+pkgname=zuki-themes
+pkgver=20150516
+pkgrel=1
+pkgdesc="Zuki themes for GTK3, GTK2, Metacity, xfwm4, Gnome Shell and Unity."
+arch=('any')
+url="https://github.com/lassekongo83/zuki-themes/"
+license=('GPL3')
+replaces=('zukitwo-themes')
+depends=('gtk-engine-murrine' 'gtk-engines' 'gnome-themes-standard')
+optdepends=('ttf-droid: Font family for the Gnome Shell theme')
+source=($pkgname-$pkgver.zip::https://github.com/lassekongo83/zuki-themes/archive/master.zip)
+sha1sums=('6e8896148b185b411be387972f40fda03b60844e')
+
+package() {
+  cd "$srcdir"
+  find Zuki* -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/{}" \;
+}
+
+# vim:set ts=2 sw=2 et:
