@@ -7,7 +7,7 @@ pkgdesc="The default wallpapers for Antergos"
 arch=('any')
 url="http://www.antergos.com"
 license=('CCPL:by-nc-sa')
-source=("http://antergos.com/${pkgname}-${pkgver}.tar.gz")
+source=("http://antergos.info/${pkgname}-${pkgver}.tar.gz")
 sha256sums=('e1044c42519f8bb116387b453121724adfa0be46ea76b3f153013db7d194a536')
 
 package() {
