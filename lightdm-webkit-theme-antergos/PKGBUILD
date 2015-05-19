@@ -2,8 +2,8 @@
 
 pkgname=lightdm-webkit-theme-antergos
 _pkgname=antergos
-pkgver=2.0.7
-pkgrel=2
+pkgver=2.0.8
+pkgrel=1
 pkgdesc="The official greeter theme of Antergos Linux"
 arch=('any')
 url="http://www.antergos.com"
