@@ -2,7 +2,7 @@
 
 pkgname=lightdm-webkit-theme-antergos
 _pkgname=antergos
-pkgver=2.0.8
+pkgver=2.1.0rc
 pkgrel=1
 pkgdesc="The official greeter theme of Antergos Linux"
 arch=('any')
