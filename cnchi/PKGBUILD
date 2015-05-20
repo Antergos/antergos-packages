@@ -3,7 +3,7 @@
 _pkgname=Cnchi
 pkgname=cnchi
 pkgver=0.8.136
-pkgrel=1
+pkgrel=2
 pkgdesc='Graphical Installer for Antergos Linux'
 arch=(any)
 license=(GPL)
@@ -25,6 +25,7 @@ package() {
 	install -d ${pkgdir}/usr/share/locale/
 	install -d ${pkgdir}/usr/share/cnchi
 	install -Dm755 "bin/${pkgname}" "${pkgdir}/usr/bin/cnchi"
+	install -Dm755 "${pkgname}.desktop" "${pkgdir}/usr/share/applications/cnchi.desktop"
 	for i in cnchi bin data scripts ui "grub2-theme"; do
 		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
 	done
