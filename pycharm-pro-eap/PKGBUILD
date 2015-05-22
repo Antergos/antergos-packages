@@ -3,10 +3,10 @@
 # Contributor: Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
 
 pkgname=pycharm-pro-eap
-_buildver=141.1199
+_buildver=141.1245
 _pkgver=4.5.1
-_eap="True"
-pkgver=4.5.1.141.1199
+_eap="False"
+pkgver=4.5.1.141.1245
 pkgrel=1
 pkgdesc="Powerful Python and Django IDE, Early Access Program (EAP) build. Professional edition."
 arch=('any')
