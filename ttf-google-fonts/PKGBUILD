@@ -11,30 +11,28 @@
 
 
 pkgname=ttf-google-fonts
-pkgver=20131228
+pkgver=20150316
 pkgrel=1
 pkgdesc="TrueType fonts from the Google Fonts project"
 arch=('any')
-url="https://github.com/w0ng/googlefontdirectory"
+url="https://github.com/google/fonts"
 license=('various')
-# see comment in package() function about why "cantarell-fonts" is a dependency
+# About why "cantarell-fonts" is a dependency see comment in package() function.
 depends=('cantarell-fonts'
          'fontconfig'
          'xorg-fonts-encodings'
          'xorg-mkfontdir'
          'xorg-mkfontscale')
 makedepends=('git')
-conflicts=('googlefontdirectory'
-           'adobe-source-code-pro-fonts'
+conflicts=('adobe-source-code-pro-fonts'
            'adobe-source-sans-pro-fonts'
+           'googlefontdirectory'
            'jsmath-fonts'
            'lohit-fonts'
            'oldstand-font'
+           'openarch_fonts'
+           'otf-bitter'
            'otf-goudy'
-           'ttf-google-webfonts'
-           'ttf-google-webfonts-hg'
-           'ttf-google-webfonts-git'
-           'ttf-google-fonts-hg'
            'ttf-andika'
            'ttf-anonymous-pro'
            'ttf-cantarell'
@@ -42,15 +40,22 @@ conflicts=('googlefontdirectory'
            'ttf-chromeos-fonts'
            'ttf-comfortaa'
            'ttf-droid'
+           'ttf-google-fonts-hg'
+           'ttf-google-webfonts'
+           'ttf-google-webfonts-git'
+           'ttf-google-webfonts-hg'
            'ttf-inconsolata'
            'ttf-kimberly_geswein_print'
+           'ttf-lato'
+           'ttf-lekton'
            'ttf-medievalsharp'
            'ttf-nova'
            'ttf-oldstandard'
            'ttf-opensans'
            'ttf-oxygen'
-           'ttf-pt-mono'
+           'ttf-oxygen-git'
            'ttf-ptsans'
+           'ttf-pt-mono'
            'ttf-pt-sans'
            'ttf-roboto'
            'ttf-sil-fonts'
@@ -58,14 +63,17 @@ conflicts=('googlefontdirectory'
            'ttf-source-code-pro'
            'ttf-source-sans-pro'
            'ttf-ubuntu-font-family'
-           'ttf-vollkorn')
+           'ttf-vollkorn'
+           'ttf-fira-mono'
+           'ttf-fira-sans'
+           'ttf-lato')
 provides=("${conflicts[@]}" 'ttf-font')
-source=("git://github.com/w0ng/googlefontdirectory.git")
+source=("git://github.com/google/fonts.git")
 md5sums=('SKIP')
 install=font.install
 
 # git variables
-_gitname="googlefontdirectory"
+_gitname="fonts"
 
 pkgver() {
   cd "$srcdir/$_gitname"

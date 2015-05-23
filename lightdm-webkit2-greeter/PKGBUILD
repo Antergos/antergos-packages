@@ -2,17 +2,19 @@
 
 pkgname=lightdm-webkit2-greeter
 pkgver=0.1.2
-pkgrel=8
+pkgrel=9
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
 license=('GPL3' 'LGPL3')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/antergos/lightdm-webkit2-greeter/archive/${pkgver}.tar.gz")
 depends=('lightdm' 'webkit2gtk' 'gtk-engines' 'gtk3' 'dbus-glib')
-provides=('lightdm-webkit2-greeter')
+provides=('lightdm-webkit2-greeter' 'lightdm-webkit-greeter')
 conflicts=('lightdm-webkit-greeter')
+replaces=('lightdm-webkit-greeter')
 options=(!libtool)
 install=greeter.install
+backup=("etc/lightdm/${pkgname}.conf")
 makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common')
 sha256sums=('1289810df25285d96e6d27947b00cefe3cac1d1a981d6585906ff527c1b3f4e1')
 
@@ -23,7 +25,7 @@ build() {
    make
    
   # What is Ambiance? This should be a GTK+ 2.x theme, so we use Clearlooks here.
-  sed -i '/^theme-name=/s/Ambiance/"Numix Frost Light"/' data/lightdm-webkit2-greeter.conf
+  sed -i '/^theme-name=/s/Ambiance/"Numix-Frost-Light"/' data/lightdm-webkit2-greeter.conf
 
   # Theme 'default' does not exist...
   sed -i '/^webkit-theme=/s/default/antergos/' data/lightdm-webkit2-greeter.conf
