@@ -2,7 +2,7 @@
 pkgname=appstream-glib-git
 _pkgname=appstream-glib
 pkgver=20140912
-pkgrel=1
+pkgrel=2
 pkgdesc="This library provides GObjects and helper methods to make it easy to read and write AppStream metadata."
 arch=('i686' 'x86_64')
 url="https://github.com/hughsie/appstream-glib"
@@ -12,7 +12,7 @@ makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'git')
 conflicts=("appstream-glib")
 _realver=0.3.6
 provides=("appstream-glib=$_realver")
-source=("git://github.com/hughsie/appstream-glib.git")
+source=("git+http://github.com/hughsie/appstream-glib.git")
 md5sums=('SKIP')
 
 pkgver() {
