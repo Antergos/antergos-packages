@@ -16,17 +16,17 @@ source=("git+http://github.com/hughsie/appstream-glib.git")
 md5sums=('SKIP')
 
 pkgver() {
-	cd "$srcdir/$_pkgname"
+	cd "$srcdir/$pkgname"
 	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(date +'%Y%m%d')"
 }
 
 build() {
-	cd "$srcdir/$_pkgname"
+	cd "$srcdir/$pkgname"
 	./autogen.sh --prefix=/usr --enable-alpm
 	make
 }
 
 package() {
-	cd "$srcdir/$_pkgname"
+	cd "$srcdir/$pkgname"
 	make DESTDIR="${pkgdir}" install
 }
