@@ -29,6 +29,7 @@ sha256sums=('5dc693cb57adce95cf917c94ee4e02fa8740e5cd5edbd8ee9cdeed81604aefd3'
             '3c4c7bb65d9e3b7d5569a14a45ebf08d2326250869645511dfa18d87b8eaf444'
             'da763a88b4ee2e889afffd189b877708ca34b704fe7e9b62c0cc2bd970564058'
             '566585873f38a79ec248b916645a2e081abec3c6d4df2c34339cde1f35375cc5')
+_allowed_in="staging"
 
 prepare() {
   cd ${srcdir}/Cinnamon*

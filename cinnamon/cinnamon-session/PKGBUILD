@@ -17,7 +17,7 @@ source=(${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-sessi
         timeout.patch)
 sha256sums=('b738fb4d1f8b93e2217b2c7e0d905e964e0ebde726a4cf5a28296e3eba7daab7'
             'ef421a14814c7858490b3a806568ab4ec8a0dc21d390e94f801771c1261bb24a')
-
+_allowed_in="staging"
 prepare() {
   cd $pkgname-$pkgver
 

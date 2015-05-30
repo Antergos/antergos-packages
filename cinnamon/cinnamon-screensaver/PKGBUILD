@@ -17,7 +17,7 @@ source=($pkgname-$pkgver.tar.gz::https://github.com/linuxmint/cinnamon-screensav
        cinnamon-screensaver.pam)
 sha256sums=('2e2417e3ed4be3c3744acb4110df7ff5427491fc5d93c8cada6bab2c725a3c15'
             'c34925177c883dc4935408a4679e984855b14ef18a208bb5c7c3e5be3817619a')
-
+_allowed_in="staging"
 build() {
   cd $pkgname-$pkgver
 

@@ -11,7 +11,7 @@ license=('GPL' 'LGPL')
 url="http://www.linuxmint.com"
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-menus/archive/${pkgver}.tar.gz")
 sha256sums=('8fe81ffe9818aa9412b4d89daf846f4c0c01f170838b121d4cba027a48068574')
-
+_allowed_in="staging"
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
   ./autogen.sh --prefix=/usr --sysconfdir=/etc \
