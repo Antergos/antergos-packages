@@ -1,0 +1,50 @@
+# Maintainer: Antergos Developers <dev@anteregos.com>
+
+pkgname=slimjet
+pkgver=4.0.7.1
+pkgdesc="Fast, smart and powerful browser based on Blink."
+url="http://www.slimjet.com"
+pkgrel=1
+arch=('i686' 'x86_64')
+license=('custom')
+depends=('gtk2' 'nss' 'alsa-lib' 'xdg-utils' 'bzip2' 'libevent' 'libxss' 'icu'
+         'libexif' 'libgcrypt' 'ttf-font' 'systemd' 'dbus' 'flac' 'snappy'
+         'speech-dispatcher' 'pciutils' 'libpulse' 'harfbuzz' 'libsecret'
+         'libvpx' 'perl' 'perl-file-basedir' 'desktop-file-utils'
+         'hicolor-icon-theme')
+optdepends=('kdebase-kdialog: needed for file dialogs in KDE'
+            'gnome-keyring: for storing passwords in GNOME keyring'
+            'kdeutils-kwalletmanager: for storing passwords in KWallet')
+install=$pkgname.install
+source=("$pkgname.desktop")
+source_i686=("http://www.slimjet.com/release/slimjet_i386.tar.xz")
+source_x86_64=("http://www.slimjet.com/release/slimjet_amd64.tar.xz")
+md5sums=('4638dcb2f222ef50e7cc002890a1aa97')
+md5sums_i686=('e85a9e6866ba59ea13bc36e1a36fcb6b')
+md5sums_x86_64=('2745be8c2186c14896042bc6a4aca03b')
+
+
+package() {
+  # Create directories
+  msg2 "Creating directory structure..."
+  mkdir -p "$pkgdir"/usr/bin
+  mkdir -p "$pkgdir"/usr/share/applications
+  mkdir -p "$pkgdir"/usr/share/licenses/slimjet
+  mkdir -p "$pkgdir"/usr/share/pixmap
+  mkdir -p "$pkgdir"/opt
+
+  msg2 "Moving stuff in place..."
+  # Install
+  cp -r slimjet/ "$pkgdir"/opt/$pkgname
+  # Desktops
+  install -m644 *.desktop "$pkgdir"/usr/share/applications/
+  cd slimjet
+  cp license.txt "$pkgdir"/usr/share/licenses/slimjet
+
+  # /usr/bin link
+  ln -s /opt/$pkgname/flashpeak-slimjet "$pkgdir"/usr/bin/$pkgname
+
+  # Icons
+  ln -s /opt/$pkgname/product_logo_128.png "$pkgdir"/usr/share/pixmap/$pkgname.png
+
+}

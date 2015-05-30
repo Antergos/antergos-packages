@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Slimjet
+Exec=/usr/bin/slimjet %U
+Terminal=false
+Icon=/usr/share/pixmap/slimjet.png
+Type=Application
+Categories=Application;Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;
