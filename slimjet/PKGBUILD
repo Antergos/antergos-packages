@@ -4,7 +4,7 @@ pkgname=slimjet
 pkgver=4.0.7.1
 pkgdesc="Fast, smart and powerful browser based on Blink."
 url="http://www.slimjet.com"
-pkgrel=1
+pkgrel=2
 arch=('i686' 'x86_64')
 license=('custom')
 depends=('gtk2' 'nss' 'alsa-lib' 'xdg-utils' 'bzip2' 'libevent' 'libxss' 'icu'
@@ -22,6 +22,7 @@ source_x86_64=("http://www.slimjet.com/release/slimjet_amd64.tar.xz")
 md5sums=('4638dcb2f222ef50e7cc002890a1aa97')
 md5sums_i686=('e85a9e6866ba59ea13bc36e1a36fcb6b')
 md5sums_x86_64=('2745be8c2186c14896042bc6a4aca03b')
+_allowed_in='main staging'
 
 
 package() {
@@ -34,6 +35,7 @@ package() {
   mkdir -p "$pkgdir"/opt
 
   msg2 "Moving stuff in place..."
+  sed -i 's|HERE="`dirname "$SLIMJET_WRAPPER"`"|HERE="/opt/slimjet"|g' slimjet/flashpeak-slimjet
   # Install
   cp -r slimjet/ "$pkgdir"/opt/$pkgname
   # Desktops
