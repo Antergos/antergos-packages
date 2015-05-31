@@ -29,7 +29,7 @@ prepare() {
   patch -Np1 -i ../desktop-theme.patch
 
   # Fix build
-  sed -i '/AC_SUBST(DISABLE_DEPRECATED_CFLAGS)/d' configure.in
+  #sed -i '/AC_SUBST(DISABLE_DEPRECATED_CFLAGS)/d' configure.in
 
   # Rename 'Files' app name to avoid having the same as nautilus
   sed -i 's/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in.in
