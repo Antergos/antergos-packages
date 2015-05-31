@@ -1,0 +1,46 @@
+# $Id: PKGBUILD 133853 2015-05-20 01:13:54Z faidoc $
+# Maintainer: Alexandre Filgueira <alexfilgueira@antergos.com>
+# Contributor: Adam Hani Schakaki <adam@schakaki.net>
+# Contributor: Ner0
+
+pkgname=muffin
+pkgver=2.6.1
+pkgrel=1
+pkgdesc="Cinnamon window manager based on Mutter"
+arch=('i686' 'x86_64')
+url="https://github.com/linuxmint/muffin"
+license=('GPL')
+depends=('clutter' 'gobject-introspection-runtime' 'cinnamon-desktop' 'libcanberra' 'libsm'
+         'startup-notification' 'zenity' 'dconf')
+makedepends=('intltool' 'gnome-doc-utils' 'gnome-common' 'gobject-introspection' 'gtk-doc') 
+options=('!emptydirs')
+install=$pkgname.install
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/muffin/archive/$pkgver.tar.gz")
+sha256sums=('61239f6dccae6ba2a3cf8b6682b6fe89247910e8978668fc9090d4d676822637')
+_allowed_in=('staging')
+prepare() {
+  cd ${pkgname}-${pkgver}
+
+}
+
+build() {
+  cd ${pkgname}-${pkgver}
+
+  PYTHON=python2 ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/muffin \
+  				 			 --localstatedir=/var --disable-static --disable-schemas-compile \
+                 --enable-compile-warnings=minimum
+  make
+}
+
+package() {
+  cd ${pkgname}-${pkgver}
+  make DESTDIR="$pkgdir/" install
+
+  # Remove unused stuff
+  make -C src DESTDIR="$pkgdir" uninstall-binPROGRAMS uninstall-desktopfilesDATA
+  make -C src/tools DESTDIR="$pkgdir" uninstall
+  make -C src/compositor/plugins DESTDIR="$pkgdir" uninstall
+  make -C doc/man DESTDIR="$pkgdir" uninstall
+}
+
+# vim:set ts=2 sw=2 et:
