@@ -27,6 +27,10 @@ build() {
   cd $pkgname-$pkgver
   ./autogen.sh --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
     --libexecdir=/usr/lib/$pkgname --disable-static
+    
+  # Workaround for make error until it is fixed upstream
+  cd libcinnamon-desktop/libgsystem && ln -sr '../$(libgsystem_srcpath)/.deps' .deps
+  cd ../../
   make
 }
 
