@@ -38,9 +38,8 @@ package() {
   sed -i 's|HERE="`dirname "$SLIMJET_WRAPPER"`"|HERE="/opt/slimjet"|g' slimjet/flashpeak-slimjet
   # Install
   cp -r slimjet/ "$pkgdir"/opt/$pkgname
-  chmod 4755 $pkgdir/opt/$pkgname/$pkgname-sandbox
   # Desktops
-  install -m644 *.desktop "$pkgdir"/usr/share/applications/
+  install -m644 "${srcdir}"/*.desktop "$pkgdir"/usr/share/applications/
   cd slimjet
   cp license.txt "$pkgdir"/usr/share/licenses/slimjet
 
