@@ -11,11 +11,11 @@ license=('MIT')
 depends=('procps-ng' 'rsync')
 conflicts=('firefox-sync' 'goanysync' 'go-anysync-git' 'iceweasel-sync'
 'tmpfs-store' 'tmpfs-sync' 'user-profile-sync-daemon')
-source=("http://repo-ck.com/source/$pkgname/$pkgname-$pkgver.tar.xz")
+source=("$pkgname-$pkgver.tar.gz::https://github.com/graysky2/$pkgname/archive/v$pkgver.tar.gz")
 backup=('etc/psd.conf')
 install=psd.install
 sha256sums=('229b30d4e5dead6ad47c9110b4716101a28e323061b97cfbe5037fd56fdda440')
-
+_allowed_in=('main' 'staging')
 build() {
   cd "$pkgname-$pkgver"
   make
