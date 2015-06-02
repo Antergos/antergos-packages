@@ -23,6 +23,7 @@ build() {
     cmake -DWITH_WEBKIT=1 \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DQT_QMAKE_EXECUTABLE=qmake-qt5 \
+        -DWITH_QT5=TRUE \
         "${srcdir}/${_realname}-${pkgver}"
     make
 }
