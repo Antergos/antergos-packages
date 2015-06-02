@@ -7,6 +7,7 @@ pkgver=2.4.7
 pkgrel=1
 pkgdesc="Clipboard manager with searchable and editable history."
 url="https://github.com/hluk/CopyQ"
+groups=('tools')
 depends=('qt5-base' 'libxtst' 'qt5-webkit')
 optdepends=('copyq-plugin-itemweb')
 makedepends=('cmake')
