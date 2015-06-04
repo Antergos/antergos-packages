@@ -1,9 +1,0 @@
-Package: mint-translations
-Version: 2015.02.23
-Architecture: all
-Maintainer: Clement Lefebvre <root@linuxmint.com>
-Installed-Size: 8815
-Section: admin
-Priority: optional
-Description: Translation files for Linux Mint
- Translation files for Linux Mint
