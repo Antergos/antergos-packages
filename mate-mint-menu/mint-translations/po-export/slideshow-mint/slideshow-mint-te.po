@@ -1,0 +1,324 @@
+# Telugu translation for linuxmint
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the linuxmint package.
+# Praveen Illa <mail2ipn@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-10-29 12:31+0000\n"
+"PO-Revision-Date: 2012-04-28 18:59+0000\n"
+"Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
+"Language-Team: Telugu <indlinux-telugu@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:10+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/chat.html:1
+msgid "Stay connected"
+msgstr "అనుసంధానమై ఉండండి"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/chat.html:8
+msgid ""
+"Keep in touch with your friends and contacts, by email, messenger or on your "
+"favorite social networks. Linux Mint provides all you need to interact with "
+"Twitter, Facebook, MSN, ICQ, GoogleTalk, AIM, Yahoo and many other networks."
+msgstr ""
+"ఈమెయిల్, సందేశకం లేదా మీ ఇష్టమైన సామాజిక నెట్‌వర్కుల ద్వారా మీ మిత్రులతో "
+"మరియు పరిచయాలతో టచ్‌లో ఉండండి. ట్విట్టర్, ఫేస్‌బుక్, MSN, ICQ, గూగుల్ టాక్, "
+"AIM, యాహూ మరియు ఇంకా చాలా నెట్‌వర్కులతో పరస్పరం కలుసుకొనుటకు మీకు "
+"కావలసినవాటిని లినక్స్ మింట్ సమకూర్చుతుంది."
+
+#. type: Content of: <div><div><div><h2>
+#: slideshows/mint/slides/chat.html:12 slideshows/mint/slides/music.html:12
+#: slideshows/mint/slides/office.html:12 slideshows/mint/slides/photos.html:12
+#: slideshows/mint/slides/video.html:12 slideshows/mint/slides/web.html:12
+msgid "Included software"
+msgstr "ఉంచబడిన సాఫ్ట్‍వేర్"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:16
+msgid "Thunderbird"
+msgstr "థండర్‌బర్డ్"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:20
+msgid "Pidgin"
+msgstr "పిడ్జిన్"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:24
+msgid "Xchat"
+msgstr "ఎక్స్ చాట్"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/customize.html:1
+msgid "Customize your desktop"
+msgstr "మీ డెస్క్‍టాప్‌ను మలచుకోండి"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/customize.html:8
+msgid ""
+"Make yourself at home and modify any aspect of your desktop. Choose from a "
+"large variety of themes, icons and backgrounds. Linux Mint is open and easy "
+"to customize."
+msgstr ""
+"మీ డెస్క్‍టాపు యొక్క ఏ అంశాన్నైనా మలచుకోండి. అత్యధిక రకములైన థీములను, "
+"ప్రతీకలను మరియు నేపథ్యాలను నుండి ఎంచుకోండి. లినక్స్ మింట్ అనేది బహిరంగం "
+"మరియు అనురూపించుకోవడం చాలా సులభం."
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/help.html:1
+msgid "Find help"
+msgstr "సహాయాన్ని కనుగొనండి"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/help.html:8
+msgid ""
+"If you're curious about something or if you're facing a problem, simply ask "
+"around. Linux Mint is the 4th most widely used operating system in the "
+"World. It comes with a user guide, a community website, a collection of "
+"tutorials, active forums and chat rooms and one of the most dynamic "
+"communities on the Internet."
+msgstr ""
+"ఒకవేళ మీకు దేనిమీదనైనా ఆసక్తివున్నా లేక ఒకవేళ మీరు ఏదైనా సమస్యను "
+"ఎదుర్కొంటున్నట్లయితే, పక్కవారిని అడగండి. లినక్స్ మింట్ ప్రపంచంలో అత్యధికంగా "
+"వాడే నిర్వహణ వ్యవస్థలలో 4వది. ఇందులో ఒక వాడుకరి మార్గదర్శకం, ఒక సంఘపు "
+"వెబ్‌సైటు, ట్యుటోరియల్స్ సేకరణ, క్రియాశీల చర్చావేదికలు మరియు చాట్ గదులు "
+"ఉంటాయి మరియు అంతర్జాలం నందు క్రియశీలక సంఘాలలో ఒకటి."
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/music.html:1
+msgid "Listen to music and CDs"
+msgstr "సంగీతం మరియు సీడీలను వినండి"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/music.html:8
+msgid ""
+"Enjoy your music with Banshee. Plug-in your MP3 player or extract songs from "
+"your audio CDs. Listen to podcasts and online radios. Discover new artists "
+"on Last.fm, the Internet Archive and the Amazon MP3 Store."
+msgstr ""
+"బన్‌షీతో మీ సంగీతాన్ని ఆనందించండి. మీ ఎంపీ3 ఆడకాన్ని అనుసంధానించండి లేదా మీ "
+"ఆడియో సీడీల నుండి పాటలను పొందండి. పోడ్‌కాస్టులు మరియు ఆన్‌లైన్ రేడియోలను "
+"వినండి. లాస్ట్ ఎఫ్ఎం, అంతర్జాల సంగ్రహం మరియు అమెజాన్ ఎంపీ3 దుఖాణం నందు కొత్త "
+"కళాకారులను కనుగొనండి."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/music.html:16
+msgid "Banshee"
+msgstr "బన్‌షీ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/music.html:20
+msgid "Audio codecs"
+msgstr "ఆడియో కొడెక్‌లు"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/office.html:1
+msgid "Be productive"
+msgstr "ఉత్పాదనం"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/office.html:8
+msgid ""
+"Use LibreOffice to create professional documents, spreadsheets and "
+"presentations that are fully compatible with Microsoft Office. Share "
+"printers or access them remotely."
+msgstr ""
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:16
+msgid "LibreOffice"
+msgstr "లిబ్రేఆఫీస్"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:20
+msgid "Microsoft Office Support"
+msgstr ""
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:24
+msgid "PDF Support"
+msgstr ""
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/photos.html:1
+msgid "Manage your photos"
+msgstr "మీ ఫొటోలను నిర్వహించండి"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/photos.html:8
+msgid ""
+"Organize, enjoy and share your photos with gThumb or Picasa. Export your "
+"albums to CD, to the Web, or to online services such as Flickr or PicasaWeb "
+"to share them with friends and family."
+msgstr ""
+"జిథంబ్ లేదా పికాసాతో మీ ఫోటోలను నిర్వహించండి, ఆనందించండి మరియు పంచుకోండి. "
+"స్నేహితులతోను మరియు కుటుంబంతో పంచుకొనుటకు మీ ఆల్బమ్‌లను సీడీ, జాలానికి , "
+"లేదా ఫ్లికర్ లేదా పికాసావెబ్ వంటి ఆన్‌లైన్ సేవలకు ఎగుమతిచేయండి."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/photos.html:16
+msgid "gThumb"
+msgstr "జిథంబ్"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/software.html:1
+msgid "Install software"
+msgstr "సాప్ట్‍వేర్ స్థాపించండి"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/software.html:8
+msgid ""
+"Browse through 30,000 free applications from the Software Manager. Enjoy "
+"screenshots and user reviews. Install software with one click of the mouse."
+msgstr ""
+"సాఫ్ట్‍వేర్ నిర్వాహకము ద్వారా 30,000 ఉచిత అనువర్తనాలను అన్వేషించండి. "
+"తెరపట్టులను మరియు వాడుకరి సమీక్షలను ఆస్వాదించండి. మౌస్ యొక్క ఒక నొక్కుతో "
+"సాఫ్ట్‍వేరుని స్థాపించండి."
+
+#. type: Content of: <div><div><div><h2>
+#: slideshows/mint/slides/software.html:12
+#: slideshows/mint/slides/windows.html:12
+msgid "Featured software"
+msgstr "విశిష్టత పొందిన సాప్ట్‍వేర్"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:16
+msgid "Filezilla"
+msgstr "ఫైల్‌జిల్లా"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:20
+msgid "Skype"
+msgstr "స్కైప్"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:24
+msgid "Audacity"
+msgstr "అడాసిటి"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:28
+msgid "Picasa"
+msgstr "పికాసా"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:32
+msgid "Google Earth"
+msgstr "గూగుల్ ఎర్త్"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/updates.html:1
+msgid "Keep your system up to date"
+msgstr "మీ వ్యవస్థను ఎప్పటికప్పుడు నవీకరిస్తూవుంచండి"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/updates.html:8
+msgid ""
+"Receive fixes and security updates all in one place, for the entire system, "
+"including the software you install."
+msgstr ""
+"మీరు స్థాపించిన సాఫ్ట్‍వేరుతో పాటు, మొత్తం వ్యవస్థకు స్థిరాలను మరియు భద్రతా "
+"నవీకరణలు అన్నిటినీ ఒకే చోట పొందండి."
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/video.html:1
+msgid "Watch videos and DVDs"
+msgstr "వీడియోలను మరియు డీవీడీలను వీక్షించండి"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/video.html:8
+msgid ""
+"Insert a DVD and enjoy a movie. Watch high-definition videos with VLC."
+msgstr ""
+"ఒక డీవీడీని చొప్పించండి మరియు చిత్రాన్ని ఆనందించండి. అధిక నాణ్యత వీడియోలను "
+"వియల్సీతో వీక్షించండి."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:16
+msgid "VLC"
+msgstr "వియల్సీ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:20
+msgid "Totem"
+msgstr "టోటెమ్"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:24
+msgid "Video codecs"
+msgstr "వీడియో కొడెక్‌లు"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/web.html:1
+msgid "Browse the web"
+msgstr "జాలములో విహరించండి"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/web.html:8
+msgid ""
+"Be fast and safe on the web with Mozilla Firefox. Enjoy Java, Flash and "
+"multimedia content."
+msgstr ""
+"మొజిల్లా ఫైర్‌ఫాక్సుతో జాలములో మరింత వేగంగా మరియు భద్రంగా ఉండండి. జావా, "
+"ఫ్లాష్ మరియు బహుళమాధ్యమ అంశాల్ని ఆస్వాదించండి."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:16
+msgid "Firefox"
+msgstr "ఫైర్‌ఫాక్స్"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:20
+msgid "Flash"
+msgstr "ఫ్లాష్"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:24
+msgid "Java"
+msgstr "జావా"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/welcome.html:1
+msgid "Welcome to Linux Mint"
+msgstr "లినక్స్ మింట్‌కు స్వాగతం"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/welcome.html:8
+msgid ""
+"Welcome and thank you for choosing Linux Mint. This slideshow will show you "
+"around while the system is being installed on your computer."
+msgstr ""
+"స్వాగతం, లినక్స్ మింట్ ఎంచుకున్నందుకు ధన్యవాదాలు. మీ కంప్యూటరు నందు వ్యవస్థ "
+"స్థాపించబడే వరకూ ఈ పలకప్రదర్శన ప్రదర్శించబడుతుంది."
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/windows.html:1
+msgid "Run Windows software"
+msgstr "విండోస్ సాప్ట్‍వేర్ నడపండి"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/windows.html:8
+msgid ""
+"Install Wine and run Windows software in Linux Mint. Or install Virtualbox, "
+"and run Windows itself within Linux Mint."
+msgstr ""
+"వైన్ స్థాపించి, విండోస్ సాఫ్ట్‍వేర్‌ని లినక్స్ మింట్‌లో నడుపండి. లేదా "
+"వర్ట్యువల్‌బాక్స్ స్థాపించి, విండోస్‌ని లినక్స్ మింట్‌లోపల నడుపండి."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/windows.html:16
+msgid "Wine"
+msgstr "వైన్"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/windows.html:20
+msgid "Virtualbox"
+msgstr "వర్ట్యువల్‌బాక్స్"

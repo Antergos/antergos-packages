@@ -1,0 +1,325 @@
+# Galician translation for linuxmint
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-10-29 12:31+0000\n"
+"PO-Revision-Date: 2013-11-12 11:13+0000\n"
+"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
+"Language-Team: Galician <gl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:10+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/chat.html:1
+msgid "Stay connected"
+msgstr "Mantéñase conectado"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/chat.html:8
+msgid ""
+"Keep in touch with your friends and contacts, by email, messenger or on your "
+"favorite social networks. Linux Mint provides all you need to interact with "
+"Twitter, Facebook, MSN, ICQ, GoogleTalk, AIM, Yahoo and many other networks."
+msgstr ""
+"Mantéñase en contacto cos seus amigos e coñecidos, por correo electrónico, "
+"mensaxeiro ou nas súas redes sociais preferidas. Linux Mint ofrece todo o "
+"necesario para interactuar con Twitter, Facebook, MSN, ICQ, GoogleTalk, AIM, "
+"Yahoo e moitas outras redes."
+
+#. type: Content of: <div><div><div><h2>
+#: slideshows/mint/slides/chat.html:12 slideshows/mint/slides/music.html:12
+#: slideshows/mint/slides/office.html:12 slideshows/mint/slides/photos.html:12
+#: slideshows/mint/slides/video.html:12 slideshows/mint/slides/web.html:12
+msgid "Included software"
+msgstr "Software incluído"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:16
+msgid "Thunderbird"
+msgstr "Thunderbird"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:20
+msgid "Pidgin"
+msgstr "Pidgin"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:24
+msgid "Xchat"
+msgstr "Xchat"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/customize.html:1
+msgid "Customize your desktop"
+msgstr "Personalice o seu escritorio"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/customize.html:8
+msgid ""
+"Make yourself at home and modify any aspect of your desktop. Choose from a "
+"large variety of themes, icons and backgrounds. Linux Mint is open and easy "
+"to customize."
+msgstr ""
+"Síntase cómodo e modifique calquera aspecto do seu escritorio. Escolla entre "
+"una gran variedade de temas, iconas e fondos. Linux Mint é aberto e doado de "
+"personalizar."
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/help.html:1
+msgid "Find help"
+msgstr "Atopar axuda"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/help.html:8
+msgid ""
+"If you're curious about something or if you're facing a problem, simply ask "
+"around. Linux Mint is the 4th most widely used operating system in the "
+"World. It comes with a user guide, a community website, a collection of "
+"tutorials, active forums and chat rooms and one of the most dynamic "
+"communities on the Internet."
+msgstr ""
+"Se ten curiosidade sobre algo ou se se atopa cun problema, só ten que "
+"preguntar por aí. Linux Mint é o cuarto sistema operativo máis utilizado do "
+"mundo. Ven cun manual de instrucións, un sitio web da comunidade, unha "
+"colección de tutoriais, foros activos e salas de conversas e unha das "
+"comunidades máis dinámicas en Internet."
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/music.html:1
+msgid "Listen to music and CDs"
+msgstr "Escoitar música e CD"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/music.html:8
+msgid ""
+"Enjoy your music with Banshee. Plug-in your MP3 player or extract songs from "
+"your audio CDs. Listen to podcasts and online radios. Discover new artists "
+"on Last.fm, the Internet Archive and the Amazon MP3 Store."
+msgstr ""
+"Goce da súa música con Banshee. Conecte o seu reprodutor de MP3 ou extraia "
+"as cancións dos seus CD. Escoite «podcasts» e radios en liña. Descubra novos "
+"artistas con Last.fm, The Internet Archive e con Amazon MP3 Store."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/music.html:16
+msgid "Banshee"
+msgstr "Banshee"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/music.html:20
+msgid "Audio codecs"
+msgstr "Códecs de son"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/office.html:1
+msgid "Be productive"
+msgstr "Sexa produtivo"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/office.html:8
+msgid ""
+"Use LibreOffice to create professional documents, spreadsheets and "
+"presentations that are fully compatible with Microsoft Office. Share "
+"printers or access them remotely."
+msgstr ""
+"Use LibreOffice para crear documentos profesionais, follas de cálculo e "
+"presentacións que sexan totalmente compatíbeis co  Microsoft Office. "
+"Impresoras compartidas ou accesíbeis remotamente."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:16
+msgid "LibreOffice"
+msgstr "LibreOffice"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:20
+msgid "Microsoft Office Support"
+msgstr "Compaibilidade co Microsoft Office"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:24
+msgid "PDF Support"
+msgstr "Compatibilidade con PDF"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/photos.html:1
+msgid "Manage your photos"
+msgstr "Administre as súas fotos"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/photos.html:8
+msgid ""
+"Organize, enjoy and share your photos with gThumb or Picasa. Export your "
+"albums to CD, to the Web, or to online services such as Flickr or PicasaWeb "
+"to share them with friends and family."
+msgstr ""
+"Organice, goce e comparta as súas fotos con gThumb ou Picasa. Exporte os "
+"seus albumes a CD, ao web ou a servizos en liña como Flickr ou PicasaWeb "
+"para compartilos con amigos e familiares."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/photos.html:16
+msgid "gThumb"
+msgstr "gThumb"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/software.html:1
+msgid "Install software"
+msgstr "Instalar software"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/software.html:8
+msgid ""
+"Browse through 30,000 free applications from the Software Manager. Enjoy "
+"screenshots and user reviews. Install software with one click of the mouse."
+msgstr ""
+"Navegar a través de 30.000 aplicativos gratuítos desde o Xestor de software. "
+"Goce de capturas de pantalla e de comentarios dos usuarios. Instale o "
+"software con un só clic do rato."
+
+#. type: Content of: <div><div><div><h2>
+#: slideshows/mint/slides/software.html:12
+#: slideshows/mint/slides/windows.html:12
+msgid "Featured software"
+msgstr "Software destacado"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:16
+msgid "Filezilla"
+msgstr "Filezilla"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:20
+msgid "Skype"
+msgstr "Skype"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:24
+msgid "Audacity"
+msgstr "Audacity"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:28
+msgid "Picasa"
+msgstr "Picasa"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:32
+msgid "Google Earth"
+msgstr "Google Earth"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/updates.html:1
+msgid "Keep your system up to date"
+msgstr "Manteña actualizado o seu sistema"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/updates.html:8
+msgid ""
+"Receive fixes and security updates all in one place, for the entire system, "
+"including the software you install."
+msgstr ""
+"Reciba correccións e actualizacións de seguranza nun só lugar, para todo o "
+"sistema, incluíndo o software que instalou vostede."
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/video.html:1
+msgid "Watch videos and DVDs"
+msgstr "Ver vídeos e DVD"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/video.html:8
+msgid ""
+"Insert a DVD and enjoy a movie. Watch high-definition videos with VLC."
+msgstr ""
+"Insira un DVD e goce dun filme. Ver vídeos de alta definición con VLC."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:16
+msgid "VLC"
+msgstr "VLC"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:20
+msgid "Totem"
+msgstr "Totem"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:24
+msgid "Video codecs"
+msgstr "Códecs de vídeo"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/web.html:1
+msgid "Browse the web"
+msgstr "Navegar pola web"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/web.html:8
+msgid ""
+"Be fast and safe on the web with Mozilla Firefox. Enjoy Java, Flash and "
+"multimedia content."
+msgstr ""
+"Sexa rápido e seguro na web con Mozilla Firefox. Goce de Java, Flash e dos  "
+"contidos multimedia."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:16
+msgid "Firefox"
+msgstr "Firefox"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:20
+msgid "Flash"
+msgstr "Flash"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:24
+msgid "Java"
+msgstr "Java"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/welcome.html:1
+msgid "Welcome to Linux Mint"
+msgstr "Benvido/a a Linux Mint"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/welcome.html:8
+msgid ""
+"Welcome and thank you for choosing Linux Mint. This slideshow will show you "
+"around while the system is being installed on your computer."
+msgstr ""
+"Benvido e grazas por escoller Linux Mint. Esta presentación mostraralle todo "
+"mentres o sistema se instala no seu computador."
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/windows.html:1
+msgid "Run Windows software"
+msgstr "Executar software de Windows"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/windows.html:8
+msgid ""
+"Install Wine and run Windows software in Linux Mint. Or install Virtualbox, "
+"and run Windows itself within Linux Mint."
+msgstr ""
+"Instalar Wine e executar software de Windows en Linux Mint. Ou instalar "
+"VirtualBox, e executar o propio Windows dentro de Linux Mint."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/windows.html:16
+msgid "Wine"
+msgstr "Wine"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/windows.html:20
+msgid "Virtualbox"
+msgstr "Virtualbox"

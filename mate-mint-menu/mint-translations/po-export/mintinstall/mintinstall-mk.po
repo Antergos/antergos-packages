@@ -1,0 +1,899 @@
+# Macedonian translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 17:21+0100\n"
+"PO-Revision-Date: 2010-10-09 21:31+0000\n"
+"Last-Translator: Dejan Noveski <Unknown>\n"
+"Language-Team: Macedonian <mk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:196
+#, python-format
+msgid "The package '%s' could not be installed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:198
+#, python-format
+msgid "The package '%s' could not be removed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:204
+msgid "Please check your connection to the Internet"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:215
+msgid "Another application is using APT:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:301
+#, python-format
+msgid "%d ongoing actions"
+msgstr "%d акции"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:311
+#, python-format
+msgid "Cancel the task: %s"
+msgstr "Откажи ја задачата: %s"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Waiting"
+msgstr "Чекам"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Downloading"
+msgstr "Преземам"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Running"
+msgstr "Се извршува"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:125
+msgid "Finished"
+msgstr "Завршено"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:335
+#, python-format
+msgid "Installing %s"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:337
+#, python-format
+msgid "Removing %s"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:339
+msgid "Updating cache"
+msgstr "Освежување на кешот"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:341
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:343
+msgid "No role set"
+msgstr "Нема улога"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:451
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:789
+#: usr/lib/linuxmint/mintInstall/splash.py:20
+#: usr/lib/linuxmint/mintInstall/splash.py:27
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:343 generate_desktop_files:24
+#: generate_desktop_files:35 generate_desktop_files:47
+msgid "Software Manager"
+msgstr "Менаџер на софтвер"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:472
+msgid "_File"
+msgstr "_Датотека"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:476
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:127
+msgid "Close"
+msgstr "Затвори"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:480
+msgid "_Edit"
+msgstr "_Уреди"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:484
+msgid "Preferences"
+msgstr "Преференци"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:488
+msgid "Search in packages summary (slower search)"
+msgstr "Пребарување во краткиот опис на пакетот (бавно пребарување)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:492
+msgid "Search in packages description (even slower search)"
+msgstr "Пребарување во описот на пакетот (уште побавно пребарување)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:496
+msgid "Open links using the web browser"
+msgstr "Отвори ги линковите со веб прелистувачот"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:500
+msgid "Search while typing"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:513
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:753
+msgid "Account information"
+msgstr "Информации за налогот"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:520
+msgid "Software sources"
+msgstr "Извори на софтвер"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:524
+msgid "_View"
+msgstr "_Поглед"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:528
+msgid "Available packages"
+msgstr "Достапни пакети"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:532
+msgid "Installed packages"
+msgstr "Инсталирани пакети"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:539
+msgid "_Help"
+msgstr "_Помош"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:543
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:787
+msgid "About"
+msgstr "За"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:589
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:599
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1118
+msgid "Categories"
+msgstr "Категории"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:590
+msgid "Please choose a category"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:591
+#, python-format
+msgid "%d packages are currently available"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:600
+msgid "Please choose a sub-category"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:621
+msgid "No ongoing actions"
+msgstr "Нема активни акции"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:622
+msgid "Active tasks:"
+msgstr "Активни задачи:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:625
+msgid "Show all results"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:755
+msgid "Your community account"
+msgstr "Вашиот кориснични налог во заедницата"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:757
+msgid "Fill in your account info to review applications"
+msgstr ""
+"Пополнете ги информациите за корисничкиот налог за рецензирање на апликации"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:759
+msgid "Username:"
+msgstr "Корисничко име:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:760
+msgid "Password:"
+msgstr "Лозинка:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:832
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1759
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1770
+msgid "B"
+msgstr "Б"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:834
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1761
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1772
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:836
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1763
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1774
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:838
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1765
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1776
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:860
+msgid "Icon"
+msgstr "Икона"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:864
+msgid "Application"
+msgstr "Апликација"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:871
+msgid "Score"
+msgstr "Резултат"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:893
+msgid "Task"
+msgstr "Задача"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:896
+msgid "Status"
+msgstr "Статус"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:899
+msgid "Progress"
+msgstr "Прогрес"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:996
+msgid "See more reviews"
+msgstr "Прегледај повеќе рецензии"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1038
+msgid "Screenshot"
+msgstr "Слика од екран"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1047
+msgid "Website"
+msgstr "Веб страна"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1055
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1067
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1780
+msgid "Reviews"
+msgstr "Прегледи"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1120
+msgid "Featured"
+msgstr "Избрани"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1123
+msgid "All Packages"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1125
+msgid "Internet"
+msgstr "Интернет"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1126
+msgid "Web"
+msgstr "Веб"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1128
+msgid "Email"
+msgstr "E-пошта"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1130
+msgid "Chat"
+msgstr "Разговор"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1132
+msgid "File sharing"
+msgstr "Софтвер за делење датотеки"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1135
+msgid "Sound and video"
+msgstr "Аудио и видео"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1138
+msgid "Graphics"
+msgstr "Графика"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1140
+msgid "3D"
+msgstr "3Д"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1142
+msgid "Drawing"
+msgstr "Цртање"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1144
+msgid "Photography"
+msgstr "Фотографија"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1146
+msgid "Publishing"
+msgstr "Издаваштво"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1148
+msgid "Scanning"
+msgstr "Скенирање"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1150
+msgid "Viewers"
+msgstr "Прегледувачи"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1153
+msgid "Office"
+msgstr "Канцелариски"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1155
+msgid "Games"
+msgstr "Игри"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1157
+msgid "Board games"
+msgstr "Игри на табла"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1159
+msgid "First-person shooters"
+msgstr "Акциони игри во прво лице"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1161
+msgid "Real-time strategy"
+msgstr "Стратегии во реално време"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1163
+msgid "Turn-based strategy"
+msgstr "Потезни стратегии"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1165
+msgid "Emulators"
+msgstr "Емулатори"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1167
+msgid "Simulation and racing"
+msgstr "Симулации и тркачки"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1170
+msgid "Accessories"
+msgstr "Услужни"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1172
+msgid "System tools"
+msgstr "Системски алатки"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1175
+msgid "Fonts"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1178
+msgid "Science and Education"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1181
+msgid "Programming"
+msgstr "Програмирање"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1380
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1853
+#, python-format
+msgid "%d reviews"
+msgstr "%d рецензии"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1416
+#, python-format
+msgid "%d packages"
+msgstr "%d пакети"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1661
+#, python-format
+msgid "Only results in category \"%s\" are shown."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1672
+msgid "Search results"
+msgstr "Резулатати од пребарувањето"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Hate it"
+msgstr "Го мразам"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Not a fan"
+msgstr "Не сум обожавател"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "So so"
+msgstr "Така-така"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Like it"
+msgstr "Ми се допаѓа"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Awesome!"
+msgstr "Одлично!"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1728
+msgid "Score:"
+msgstr "Резултат:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1729
+msgid "Submit"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1730
+msgid "Your review"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1778
+msgid "Size:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1779
+msgid "Version:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1781
+msgid "Your review:"
+msgstr "Ваша рецензија:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1782
+msgid "Details"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1784
+msgid "This will remove the following packages:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1785
+msgid "Cancel"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1786
+msgid "Confirm"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1790
+#, python-format
+msgid "%(localSize)s of disk space freed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1792
+#, python-format
+msgid "%(localSize)s of disk space required"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1795
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space freed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1797
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space required"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1800
+msgid "The following packages would be installed: "
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1802
+msgid "The following packages would be removed: "
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1805
+msgid "Impact on packages:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1823
+msgid "Remove"
+msgstr "Отстрани"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1825
+#: usr/bin/mint-search-apt:37
+msgid "Installed"
+msgstr "Инсталирано"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1829
+msgid "Not available"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1831
+msgid "Please use apt-get to install this package."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1834
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:207
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:442
+msgid "Install"
+msgstr "Инсталирај"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1836
+msgid "Not installed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1857
+msgid "Reviews:"
+msgstr "Рецензии:"
+
+#: usr/lib/linuxmint/mintInstall/splash.py:28
+#, python-format
+msgid "Gathering information for %d packages..."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:68
+msgid "Backing up your APT sources"
+msgstr "Правење резервна копија на APT изворите"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:92
+#: usr/lib/linuxmint/mintInstall/remove.py:48 usr/bin/mint-synaptic-install:14
+msgid "Please wait, this can take some time"
+msgstr "Ве молам причекајте. Акцијата може да потрае"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:94
+#: usr/bin/mint-synaptic-install:16
+msgid "Installation is complete"
+msgstr "Инсталацијата е завршена"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:121
+msgid "Restoring your APT sources"
+msgstr "Враќање на APT изворите"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:204
+msgid "Using the following repositories:"
+msgstr "Користејќи ги следниве складишта:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:209
+#, python-format
+msgid "Install %s?"
+msgstr "Инсталирај %s?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:212
+msgid "The following packages will be installed:"
+msgstr "Ќе се инсталираат следните пакети:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:223
+msgid "Default repositories"
+msgstr "Стандардни складишта"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:296
+#, python-format
+msgid "Upgrade %s?"
+msgstr "Надгради %s?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:298
+msgid "The following packages will be upgraded:"
+msgstr "Следните пакети ќе се надградат:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:299
+msgid "Upgrade"
+msgstr "Надгради"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:434
+msgid "Find Software"
+msgstr "Барај софтвер"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:437
+msgid "Go to the Linux Mint Software Portal"
+msgstr "Оди до Линукс Минт софтвер порталот"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:438
+msgid "Search for a .mint application"
+msgstr "Барај .mint апликација"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:439
+msgid "Go to the GetDeb Portal"
+msgstr "Оди до GetDeb порталот"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:440
+msgid "Search for a .deb package"
+msgstr "Барај .deb пакет"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:441
+msgid "Search"
+msgstr "Пребарување"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:443
+msgid "Show"
+msgstr "Прикажи"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:444
+msgid "Go to the Ubuntu repository"
+msgstr "Оди до Убунту складиштето"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:445
+msgid "Go to the Linux Mint repository"
+msgstr "Оди до Линукс Минт складиштето"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid "Your APT sources were corrupted."
+msgstr "Вашите APT извори беа оштетени."
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid ""
+"Your APT sources were not correctly restored after you last ran mintInstall. "
+"They now have been restored."
+msgstr ""
+"Вашите APT извори нне беа вратени по последното пуштање на mintInstall. Сега "
+"се вратени."
+
+#: usr/lib/linuxmint/mintInstall/remove.py:50
+msgid "Application removed successfully"
+msgstr "Апликацијата е успешно отстранета"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:104
+#, python-format
+msgid "Remove %s?"
+msgstr "Отстрани %s?"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:107
+msgid "The following packages will be removed:"
+msgstr "Следните пакети ќе бидат отстранети:"
+
+#: usr/bin/mint-search-apt:34
+msgid "No results"
+msgstr "Нема резултати"
+
+#: usr/bin/mint-search-apt:41
+msgid "Package"
+msgstr "Пакет"
+
+#: usr/bin/mint-search-apt:42
+msgid "Description"
+msgstr "Опис"
+
+#: usr/bin/mint-make-cmd:37 usr/bin/mint-make-cmd:38
+#, python-format
+msgid "Could not find package: %s"
+msgstr "Не може да се пронајде пакетот: %s"
+
+#: generate_desktop_files:24 generate_desktop_files:35
+#: generate_desktop_files:47
+msgid "Install new applications"
+msgstr "Инсталирај нови апликации"
+
+#~ msgid "Cancel change"
+#~ msgstr "Прекини ја промената"
+
+#~ msgid "These popular applications can be installed on your system:"
+#~ msgstr "Овие популарни апликации може да се инсталираат на Вашиот систем"
+
+#~ msgid "Featured applications"
+#~ msgstr "Одбрани апликации"
+
+#~ msgid "Size"
+#~ msgstr "Големина"
+
+#~ msgid "Cancel removal"
+#~ msgstr "Прекини отстранување"
+
+#~ msgid "Cancel installation"
+#~ msgstr "Прекини инсталација"
+
+#~ msgid "License:"
+#~ msgstr "Лиценца:"
+
+#~ msgid "Portal URL"
+#~ msgstr "URL на порталот"
+
+#~ msgid "Description:"
+#~ msgstr "Опис:"
+
+#~ msgid "Available version"
+#~ msgstr "Достапна верзија"
+
+#~ msgid "Installed version"
+#~ msgstr "Инсталирана верзија"
+
+#~ msgid "Repository"
+#~ msgstr "Складиште"
+
+#~ msgid ""
+#~ "The mint file for this application was not successfully downloaded. Click on "
+#~ "refresh to fix the problem."
+#~ msgstr ""
+#~ "Неуспешно симната минт датотека. Кликнете освежи за да се справите со "
+#~ "проблемот."
+
+#~ msgid "The changes are complete"
+#~ msgstr "Промените завршија"
+
+#~ msgid "Show:"
+#~ msgstr "Прикажи:"
+
+#~ msgid "Quick search:"
+#~ msgstr "Брзо пребарување:"
+
+#~ msgid "More info"
+#~ msgstr "Повеќе информации"
+
+#~ msgid "Category"
+#~ msgstr "Категорија"
+
+#, python-format
+#~ msgid ""
+#~ "%(applications)d applications listed, %(install)d to install, %(remove)d to "
+#~ "remove"
+#~ msgstr ""
+#~ "%(applications)d апликации излистани, %(install)d за инсталирање, %(remove)d "
+#~ "за отстранување"
+
+#~ msgid "Installed software"
+#~ msgstr "Инсталиран софтвер"
+
+#~ msgid "Your changes"
+#~ msgstr "Ваши промени"
+
+#~ msgid "All software"
+#~ msgstr "Цела листа софтвер"
+
+#~ msgid "Available software"
+#~ msgstr "Достапен софтвер"
+
+#~ msgid "Average rating"
+#~ msgstr "Средна оцена"
+
+#~ msgid "Views"
+#~ msgstr "Прегледи"
+
+#~ msgid "Added"
+#~ msgstr "Додадено"
+
+#~ msgid "Reviewer"
+#~ msgstr "Лектор"
+
+#~ msgid "Review"
+#~ msgstr "Преглед"
+
+#~ msgid "Rating"
+#~ msgstr "Оцена"
+
+#, python-format
+#~ msgid "%d categories loaded"
+#~ msgstr "%d вчитани категории"
+
+#~ msgid "Please refresh mintInstall by clicking on the Refresh button"
+#~ msgstr "Ве молиме освежете го mintInstall со кликање на Освежи коппчето"
+
+#, python-format
+#~ msgid "Downloading data for %s"
+#~ msgstr "Симнување податоци за %s"
+
+#~ msgid "Quit"
+#~ msgstr "Напушти"
+
+#~ msgid ""
+#~ "The data used by mintInstall is corrupted or out of date. Click on refresh "
+#~ "to fix the problem :"
+#~ msgstr ""
+#~ "Податоците кои ги користи mintInstall се оштетени или стари. Кликнете на "
+#~ "освежи за да се справите со проблемот:"
+
+#~ msgid "Software manager"
+#~ msgstr "Менаџер на софтвер"
+
+#~ msgid "Cancel all changes"
+#~ msgstr "Откажи ги сите промени"
+
+#, python-format
+#~ msgid "%d screenshots loaded"
+#~ msgstr "%d вчитани слики од екран"
+
+#, python-format
+#~ msgid "%d applications loaded"
+#~ msgstr "%d вчитани апликации"
+
+#, python-format
+#~ msgid "%d reviews loaded"
+#~ msgstr "%d вчитани прегледи"
+
+#~ msgid "First person shooters"
+#~ msgstr "First person shooters"
+
+#~ msgid "Real time strategy"
+#~ msgstr "Реално-временски стратегии"
+
+#~ msgid "All applications"
+#~ msgstr "Сите апликации"
+
+#~ msgid "Video players"
+#~ msgstr "Видео плеери"
+
+#~ msgid "Text editors"
+#~ msgstr "Уредувачи на текст"
+
+#~ msgid "Sound & Video"
+#~ msgstr "Звук и видео"
+
+#~ msgid "Simulation & racing"
+#~ msgstr "Симулации и трки"
+
+#~ msgid "Office suites"
+#~ msgstr "Канцелариски пакети"
+
+#~ msgid "Audio players"
+#~ msgstr "Аудио плеери"
+
+#~ msgid "Burning tools"
+#~ msgstr "Алатки за снимање оптички медиуми"
+
+#~ msgid "Scanning tools"
+#~ msgstr "Алатки за скенирање"
+
+#~ msgid "Tools"
+#~ msgstr "Алатки"
+
+#~ msgid "Image viewers"
+#~ msgstr "Прегледувачи на слики"
+
+#~ msgid "Photo"
+#~ msgstr "Фотографија"
+
+#~ msgid "Web browsers"
+#~ msgstr "Интернет прелистувачи"
+
+#~ msgid "Collection managers"
+#~ msgstr "Менаџери на колекции"
+
+#~ msgid "Finance"
+#~ msgstr "Финансиски"
+
+#~ msgid "Document viewers"
+#~ msgstr "Прегледувачи на документи"
+
+#~ msgid "2D"
+#~ msgstr "2Д"
+
+#~ msgid "Spreadsheets"
+#~ msgstr "Табеларни пресметки"
+
+#~ msgid "Word processors"
+#~ msgstr "Процесори на текст"
+
+#~ msgid "Graph and flowcharts"
+#~ msgstr "Графици"
+
+#~ msgid "Databases"
+#~ msgstr "Бази на податоци"
+
+#~ msgid "Internet Relay Chat"
+#~ msgstr "ИРЦ"
+
+#~ msgid "Instant messengers"
+#~ msgstr "Софтвер за размена на кратки пораки"
+
+#~ msgid "Mind mapping"
+#~ msgstr "Mind mapping"
+
+#~ msgid "Education"
+#~ msgstr "Едукација"
+
+#~ msgid "Firewall"
+#~ msgstr "Заштитен ѕид"
+
+#~ msgid "Drivers"
+#~ msgstr "Двигатели"
+
+#~ msgid "Upstream"
+#~ msgstr "Upstream"
+
+#~ msgid "P2P and torrent"
+#~ msgstr "P2P и torrent"
+
+#~ msgid "Package management"
+#~ msgstr "Менаџери на пакети"
+
+#~ msgid "Desktop components"
+#~ msgstr "Компоненти на работна површина"
+
+#~ msgid "FTP"
+#~ msgstr "FTP"
+
+#~ msgid "System Tools"
+#~ msgstr "Системски алатки"

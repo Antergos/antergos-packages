@@ -1,0 +1,531 @@
+# Basque translation for linuxmint
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-07-05 16:11+0100\n"
+"PO-Revision-Date: 2011-11-06 20:31+0000\n"
+"Last-Translator: Asier Iturralde Sarasola <Unknown>\n"
+"Language-Team: Basque <eu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:10+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:62
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:740
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:940
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1058
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1114
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1224
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1242
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1244
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1501
+msgid "Update Manager"
+msgstr "Eguneraketa-kudeatzailea"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:63
+msgid "Software Updates"
+msgstr "Software eguneraketak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:64
+msgid "Show and install available updates"
+msgstr "Erakutsi eta instalatu eguneraketa eskuragarriak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:92
+msgid "Downloading changelog..."
+msgstr "Aldaketa-egunkaria deskargatzen..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:118
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:129
+msgid "No changelog available"
+msgstr "Ez dago aldaketa-egunkaririk eskuragarri"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:129
+msgid ""
+"Click on Edit->Software Sources and tick the 'Source code' option to enable "
+"access to the changelogs"
+msgstr ""
+"Aldaketa-egunkarien atzipena gaitzeko klikatu Editatu->Software-jatorriak "
+"eta markatu 'Iturburu-kodea' aukera"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:242
+msgid "This upgrade will trigger additional changes"
+msgstr "Bertsio-berritze honek aldaketa gehigarriak abiaraziko ditu"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:251
+msgid "The following package will be removed:"
+msgstr "Ondorengo paketea kenduko da:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:253
+#, python-format
+msgid "The following %d packages will be removed:"
+msgstr "Ondorengo %d paketeak kenduko dira:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:281
+msgid "The following package will be installed:"
+msgstr "Ondorengo paketea instalatuko da:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:283
+#, python-format
+msgid "The following %d packages will be installed:"
+msgstr "Ondorengo %d paketeak instalatuko dira:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:324
+msgid "Installing updates"
+msgstr "Eguneraketak instalatzen"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:334
+msgid "Please wait, this can take some time"
+msgstr "Itxaron mesedez, baliteke honek denbora pixka bat behar izatea"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:336
+msgid "Update is complete"
+msgstr "Eguneraketa burutu da"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:366
+msgid "Please enter your password to restart the update manager"
+msgstr ""
+"Mesedez sartu zure pasahitza eguneraketa-kudeatzailea berrabiarazteko"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:371
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:438
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1495
+msgid "Checking for updates"
+msgstr "Eguneraketarik badagoen egiaztatzen"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:395
+msgid "Could not install the security updates"
+msgstr "Ezin izan dira instalatu segurtasun eguneraketak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:427
+msgid "Starting refresh..."
+msgstr "Freskatzea hasten..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:460
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:461
+msgid "Another application is using APT"
+msgstr "Beste aplikazio bat APT erabiltzen ari da"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:471
+msgid "Finding the list of updates..."
+msgstr "Eguneraketen zerrenda bilatzen..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:501
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:502
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:609
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:610
+msgid "Your system is up to date"
+msgstr "Zure sistema eguneratuta dago"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:514
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:515
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:632
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:636
+msgid "Could not refresh the list of packages"
+msgstr "Ezin izan da freskatu paketeen zerrenda"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:580
+msgid "A new version of the update manager is available"
+msgstr "Eguneraketa-kudeatzailearen bertsio berri bat eskuragarri dago"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:590
+#, python-format
+msgid "1 recommended update available (%(size)s)"
+msgstr "Gomendatutako eguneraketa 1 eskuragarri (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:592
+#, python-format
+msgid "1 recommended update available (%(size)s), 1 ignored"
+msgstr "Gomendatutako eguneraketa 1 eskuragarri (%(size)s), 1 ezikusia"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:594
+#, python-format
+msgid "1 recommended update available (%(size)s), %(ignored)d ignored"
+msgstr ""
+"Gomendatutako eguneraketa 1 eskuragarri (%(size)s), %(ignored)d ezikusiak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:597
+#, python-format
+msgid "%(recommended)d recommended updates available (%(size)s)"
+msgstr "Gomendatutako %(recommended)d eguneraketa eskuragarri (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:599
+#, python-format
+msgid "%(recommended)d recommended updates available (%(size)s), 1 ignored"
+msgstr ""
+"Gomendatutako %(recommended)d eguneraketa eskuragarri (%(size)s), 1 ezikusia"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:601
+#, python-format
+msgid ""
+"%(recommended)d recommended updates available (%(size)s), %(ignored)d ignored"
+msgstr ""
+"Gomendatutako %(recommended)d eguneraketa eskuragarri (%(size)s), "
+"%(ignored)d ezikusiak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:671
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:690
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1395
+msgid "No updates selected"
+msgstr "Ez da hautatu eguneraketarik"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:692
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1397
+#, python-format
+msgid "%(selected)d update selected (%(size)s)"
+msgstr "Eguneraketa %(selected)d  hautatuta (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:694
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1399
+#, python-format
+msgid "%(selected)d updates selected (%(size)s)"
+msgstr "%(selected)d  eguneraketa hautatuta (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:940
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1618
+msgid "Preferences"
+msgstr "Hobespenak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:942
+msgid "Auto-Refresh"
+msgstr "Freskatze automatikoa"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:943
+msgid "Refresh the list of updates every:"
+msgstr "Freskatu eguneraketen zerrenda maiztasun honekin:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:944
+msgid ""
+"Note: The list only gets refreshed while the update manager window is closed "
+"(system tray mode)."
+msgstr ""
+"Oharra: Eguneraketa-kudeatzailearen leihoa itxita dagoela soilik freskatzen "
+"da zerrenda (sistemaren erretilu modua)."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:946
+msgid "Update Method"
+msgstr "Eguneraketa metodoa"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:947
+msgid "Icons"
+msgstr "Ikonoak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:948
+msgid "Icon"
+msgstr "Ikonoa"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:949
+msgid "Status"
+msgstr "Egoera"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:950
+msgid "New Icon"
+msgstr "Ikono berria"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:951
+msgid "Busy"
+msgstr "Lanpetua"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:952
+msgid "System up-to-date"
+msgstr "Sistema eguneratuta"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:953
+msgid "Updates available"
+msgstr "Eguneraketak eskuragarri daude"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:954
+msgid "Error"
+msgstr "Errorea"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:955
+msgid "Unknown state"
+msgstr "Egoera ezezaguna"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:956
+msgid "Applying updates"
+msgstr "Eguneraketak aplikatzen"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:957
+msgid "Startup delay (in seconds):"
+msgstr "Abioko atzerapena (segundutan)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:958
+msgid "Internet check (domain name or IP address):"
+msgstr "Internet egiaztapena (domeinua edo IP helbidea):"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:959
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:999
+msgid "Ignored packages"
+msgstr "Ezikusitako paketeak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:961
+msgid ""
+"Include updates which require the installation or the removal of other "
+"packages"
+msgstr ""
+"Sartu beste pakete batzuk instalatzea edo kentzea eskatzen duten eguneraketak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:977
+msgid "minutes"
+msgstr "minutu"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:978
+msgid "hours"
+msgstr "ordu"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:979
+msgid "days"
+msgstr "egun"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1025
+msgid "Please enter a package name:"
+msgstr "Mesedez sartu pakete-izen bat:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1026
+msgid "Ignore a package"
+msgstr "Ezikusi pakete bat"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1030
+msgid "Package name:"
+msgstr "Paketearen izena:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1032
+msgid "All available upgrades for this package will be ignored."
+msgstr ""
+"Pakete honentzako eskuragarri dauden bertsio-berritze guztiei ezikusia "
+"egingo zaie."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1058
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1632
+msgid "History of updates"
+msgstr "Eguneraketen historia."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1061
+msgid "Date"
+msgstr "Data"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1064
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1529
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1642
+msgid "Package"
+msgstr "Paketea"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1067
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1533
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1648
+msgid "Old version"
+msgstr "Bertsio zaharra"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1070
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1537
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1654
+msgid "New version"
+msgstr "Bertsio berria"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1114
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1590
+msgid "Update Pack Info"
+msgstr "Eguneraketa-paketeen informazioa"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1117
+msgid "Your system configuration:"
+msgstr "Zure sistemaren konfigurazioa:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1118
+msgid "Current Update Pack available:"
+msgstr "Eguneraketa-paketea eskuragarri:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1119
+msgid "Latest Update Pack used by this system:"
+msgstr "Sistema honek erabiltzen duen azken eguneraketa-paketea:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1122
+msgid "Could not identify your APT sources"
+msgstr "Ezin izan dira identifikatu zure APT iturburuak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1123
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1124
+msgid "N/A"
+msgstr "Ez dago eskuragarri"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1160
+msgid "Your system is pointing to ftp.debian.org and debian.linuxmint.com"
+msgstr ""
+"Zure sistema ftp.debian.org eta debian.linuxmint.com-era zuzendua dago"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1160
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1164
+msgid "These repositories conflict with each others"
+msgstr "Biltegi hauen arteko gatazka dago"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1164
+msgid ""
+"Your system is pointing to debian.linuxmint.com/latest and "
+"debian.linuxmint.com/incoming"
+msgstr ""
+"Zure sistema debian.linuxmint.com/latest eta debian.linuxmint.com/incoming-"
+"era zuzendua dago"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1168
+msgid "Your system is not pointing to the Linux Mint repositories"
+msgstr "Zure sistema ez dago Linux Mint biltegietara zuzendua"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1168
+msgid ""
+"Add 'deb http://packages.linuxmint.com/ debian main upstream import' to your "
+"APT sources"
+msgstr ""
+"Gehitu 'deb http://packages.linuxmint.com/ debian main upstream import' zure "
+"APT iturburuei"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1172
+msgid "Your system is not pointing to any Debian repository"
+msgstr "Zure sistema ez dago inolako Debian biltegira zuzendua"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1172
+msgid ""
+"Add 'deb http://debian.linuxmint.com/latest testing main contrib non-free' "
+"to your APT sources"
+msgstr ""
+"Gehitu 'deb http://debian.linuxmint.com/latest testing main contrib non-"
+"free' zure APT iturburuei"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1176
+msgid "Your system is pointing directly to Debian"
+msgstr "Zure sistema zuzenean Debian-era zuzendua dago"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1176
+msgid "This is only recommended for experienced users"
+msgstr "Hau eskarmentudun erabiltzaileentzat baino ez da gomendagarria"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1179
+msgid ""
+"Your system is pointing to the 'Linux Mint Debian Incoming' repository"
+msgstr "Zure sistema 'Linux Mint Debian Incoming' biltegira zuzendua dago"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1179
+msgid "This is only recommend for experienced users"
+msgstr "Hau eskarmentudun erabiltzaileentzat baino ez da gomendagarria"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1182
+msgid "Your system is pointing to the 'Linux Mint Debian Latest' repository"
+msgstr "Zure sistema 'Linux Mint Debian Latest' biltegira zuzendua dago"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1224
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1227
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1635
+msgid "Information"
+msgstr "Informazioa"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1228
+msgid "Log file"
+msgstr "Egunkari fitxategia"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1229
+msgid "Permissions:"
+msgstr "Baimenak:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1230
+msgid "Process ID:"
+msgstr "Prozesuaren IDa:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1231
+msgid "Log file:"
+msgstr "Egunkari fitxategia:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1242
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1674
+msgid "About"
+msgstr "Honi buruz"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1323
+msgid "Please enter your password to start the update manager"
+msgstr "Mesedez, sartu zure pasahitza eguneraketa-kudeatzailea hasteko"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1402
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1404
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1406
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1408
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1427
+msgid "Ignore updates for this package"
+msgstr "Ezikusia egin pakete honentzako eguneraketei"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1524
+msgid "Upgrade"
+msgstr "Bertsio-berritu"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1541
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1660
+msgid "Size"
+msgstr "Tamaina"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1591
+msgid "Install Updates"
+msgstr "Instalatu eguneraketak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1592
+msgid "Refresh"
+msgstr "Freskatu"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1593
+msgid "Select All"
+msgstr "Hautatu dena"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1594
+msgid "Clear"
+msgstr "Garbitu"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1595
+msgid "Description"
+msgstr "Deskribapena"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1596
+msgid "Changelog"
+msgstr "Aldaketa-egunkaria"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1606
+msgid "_File"
+msgstr "_Fitxategia"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1610
+msgid "Close"
+msgstr "Itxi"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1614
+msgid "_Edit"
+msgstr "_Editatu"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1624
+msgid "Software sources"
+msgstr "Software-jatorriak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1628
+msgid "_View"
+msgstr "_Ikuspegia"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1638
+msgid "Visible columns"
+msgstr "Zutabe ikusgaiak"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1670
+msgid "_Help"
+msgstr "_Laguntza"

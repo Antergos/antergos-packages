@@ -1,0 +1,202 @@
+# Catalan translation for linuxmint
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-10-23 22:54+0200\n"
+"PO-Revision-Date: 2014-10-24 21:35+0000\n"
+"Last-Translator: Isidro Pisa <isidro@utils.info>\n"
+"Language-Team: Catalan <ca@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:13+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintLocale/add.py:41
+msgid "Add a New Language"
+msgstr "Afegeix un nou idioma"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:52
+msgid "Install / Remove Languages"
+msgstr "Instal·lar / desinstal·lar idiomes"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:157
+msgid "Some language packs are missing"
+msgstr "Manquen alguns paquets d'idiomes"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:161
+msgid "Fully installed"
+msgstr "Instal·lat completament"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:195
+#: usr/lib/linuxmint/mintLocale/install_remove.py:234
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:471
+msgid "Please wait, this can take some time"
+msgstr "Si us plau, espereu, això pot trigar un temps"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:197
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:473
+msgid "Installation is complete"
+msgstr "S'ha completat la instal·lació"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:236
+msgid "The related language packs were removed"
+msgstr "S'han desinstal·lat els paquets d'idioma relacionats"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:271
+msgid "Language Settings"
+msgstr "Configuració d'idioma"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:278
+msgid "Apply System-Wide"
+msgstr "Aplicar-ho a tot el sistema."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:282
+msgid "Install / Remove Languages..."
+msgstr "Instal·lar / suprimir idiomes..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:292
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:293
+msgid "Language"
+msgstr "Llengua"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:293
+msgid "Language, interface, date and time..."
+msgstr "Llengua, interfície, data i hora..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:295
+msgid "Region"
+msgstr "Regió"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:295
+msgid "Numbers, currency, addresses, measurement..."
+msgstr "Números, moneda, adreces, unitats de mesura..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:310
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:317
+msgid "Input method"
+msgstr "Mètode d'introducció"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:313
+msgid ""
+"Input methods are used to write symbols and characters which are not present "
+"on the keyboard. They are useful to write in Chinese, Japanese, Korean, "
+"Thai, Vietnamese..."
+msgstr ""
+"Els mètodes d'introducció s'utilitzen per introduir símbols i caràcters que "
+"no són al teclat. Són útils per escriure en xinès, japonès, coreà, "
+"taliandès, vietnamita..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:500
+msgid "None"
+msgstr "Cap"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:528
+msgid "Installed"
+msgstr "Instal·lat"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:538
+#, python-format
+msgid "%d missing components!"
+msgstr "Falten components de %d"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:539
+msgid "Install the missing components"
+msgstr "Instal·la els components que falten"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:544
+#, python-format
+msgid "%d optional components available"
+msgstr "Hi ha disponibles components opcionals per %d"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:545
+msgid "Install the optional components"
+msgstr "Instal·la els components opcionals"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:550
+msgid "Not installed"
+msgstr "No està instal·lat"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:551
+#, python-format
+msgid "Add support for %s"
+msgstr "Afegeix compatibilitat per a %s"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:558
+msgid "Not supported"
+msgstr "No suportat"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:568
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:569
+msgid "No locale defined"
+msgstr "No s'ha definit la configuració regional"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:638
+msgid "System locale"
+msgstr "Configuració local del sistema"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:643
+msgid "Language support"
+msgstr "Suport de llengues"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:643
+#, python-format
+msgid "%d languages installed"
+msgstr "S'han instal·lat les llengues %d"
+
+#: usr/lib/linuxmint/mintLocale/add.ui.h:1
+msgid "Install"
+msgstr "Instal · lar"
+
+#: usr/lib/linuxmint/mintLocale/add.ui.h:2
+msgid "Install the selected language"
+msgstr "Instal·lar l'idioma seleccionat"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:1
+msgid ""
+"<b><small>Note: Installing or upgrading language packs can trigger the "
+"installation of additional languages</small></b>"
+msgstr ""
+"<b><small>Nota: la instal·lació o actualització de paquets d'idioma pot "
+"llançar la instal·lació d'idiomes addicionals</small></b>"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:2
+msgid "Add..."
+msgstr "Afegir..."
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:3
+msgid "Add a new language"
+msgstr "Afegir un nou idioma"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:4
+msgid "Remove"
+msgstr "Suprimir"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:5
+msgid "Remove the selected language"
+msgstr "Suprimir l'idioma seleccionat"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:6
+msgid "Install language packs"
+msgstr "Instal·lar paquets d'idioma"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:7
+msgid ""
+"Install any missing language packs, translations files, dictionaries for the "
+"selected language"
+msgstr ""
+"Instal·lar paquets d'idioma, arxius de traduccions i diccionaris de l'idioma "
+"seleccionat"
+
+#: generate_desktop_files:24
+msgid "Languages"
+msgstr "Idiomes"
+
+#: generate_desktop_files:24
+msgid "Language settings"
+msgstr "Configuració d'idioma"

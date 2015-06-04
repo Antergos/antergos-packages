@@ -1,0 +1,370 @@
+# Amharic translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-08-30 16:37+0100\n"
+"PO-Revision-Date: 2013-09-15 21:32+0000\n"
+"Last-Translator: samson <Unknown>\n"
+"Language-Team: Amharic <am@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:30
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:14
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:24
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:73
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:103
+msgid "Upload Manager"
+msgstr "የመጫኛ አስተዳዳሪ"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:71
+#, python-format
+msgid "The upload to '%(service)s' was cancelled"
+msgstr "መጫን አልተቻለም '%(service)s' ተሰርዟል"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:83
+#, python-format
+msgid "Upload to '%s' failed: "
+msgstr "መጫን አልተቻለም '%s' ወድቋል: "
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:89
+#, python-format
+msgid "Successfully uploaded %(number)d files to '%(service)s'"
+msgstr "በሚገባ ተሳክቶ ተጭኗል %(number)d ፋይሎቹ ወደ '%(service)s'"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:91
+#, python-format
+msgid "Successfully uploaded 1 file to '%(service)s'"
+msgstr "ተሳክቶ ተጭኗል 1 ፋይል ወደ '%(service)s'"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:102
+msgid "Do you want to cancel this upload?"
+msgstr "በእርግጥ መጫኑን መሰረዝ ይፈልጋሉ?"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:103
+msgid "Cancel"
+msgstr "መሰረዝ"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:104
+msgid "Run in the background"
+msgstr "ከበስተ ጀርባ ማስኬድ"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:107
+msgid "Cancel upload?"
+msgstr "መጫኑን ልሰርዝ?"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:127
+#, python-format
+msgid "Uploading %(number)d files to %(service)s"
+msgstr "በመጫን ላይ %(number)d ፋይሎችን ወደ %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:128
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:236
+#, python-format
+msgid "%(percentage)s of %(number)d files - Uploading to %(service)s"
+msgstr "%(percentage)s ከ  %(number)d ፋይሎች - ከሚጫኑት ወደ %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:130
+#, python-format
+msgid "Uploading 1 file to %(service)s"
+msgstr "በመጫን ላይ 1 ፋይል ወደ %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:131
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:238
+#, python-format
+msgid "%(percentage)s of 1 file - Uploading to %(service)s"
+msgstr "%(percentage)s የ 1 ፋይል - ተጭኗል ወደ %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:149
+#, python-format
+msgid ""
+"%(size_so_far)s of %(total_size)s - %(time_remaining)s left (%(speed)s/sec)"
+msgstr ""
+"%(size_so_far)s ከ  %(total_size)s - %(time_remaining)s የቀረው (%(speed)s/sec)"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:151
+#, python-format
+msgid "%(size_so_far)s of %(total_size)s"
+msgstr "%(size_so_far)s ከ %(total_size)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:178
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "B"
+msgstr "ቢ"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:180
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "KB"
+msgstr "ኪሎ ቢት"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:182
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "MB"
+msgstr "ሜጋ ቢት"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:184
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "GB"
+msgstr "ጌጋ ቢት"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:191
+#, python-format
+msgid "%(hours)d hours, %(minutes)d minutes"
+msgstr "%(hours)d ሰአቶች , %(minutes)d ደቂቆች"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:193
+#, python-format
+msgid "1 hour, %d minutes"
+msgstr "1 ሰአት, %d ደቂቆች"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:195
+#, python-format
+msgid "%(minutes)d minutes, %(seconds)d seconds"
+msgstr "%(minutes)d ደቂቆች, %(seconds)d ሰኮንዶች"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:197
+#, python-format
+msgid "1 minute, %d seconds"
+msgstr "1 ደቂቃ, %d ሰኮንዶች"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:199
+#, python-format
+msgid "%d seconds"
+msgstr "%d ሰከንዶች"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:229
+#, python-format
+msgid "Unknown service: %s"
+msgstr "ያልታወቀ ግልጋሎት: %s"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "KiB"
+msgstr "ኪሎ ቢት"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "MiB"
+msgstr "ሚጋ ቢት"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "GiB"
+msgstr "ጊጋ ቢት"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:123
+msgid "File larger than service's maximum"
+msgstr "ፋይሉ በጣም ትልቅ ነው"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:133
+msgid "Could not get available space"
+msgstr "በቂ ቦታ ማግኘት አልተቻለም"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:136
+msgid "File larger than service's available space"
+msgstr "የፋይሉ መጠን ግልጋሎቱ ሊቀበለው ከሚችለው በላይ ነው"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:160
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:297
+msgid "File uploaded successfully."
+msgstr "ፋይል መጫኑ በሚገባ ተሳክቷል"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:179
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:222
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:257
+msgid "connection successfully established"
+msgstr "ግንኙነቱ በሚገባ ተመስርቷል"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:188
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:230
+msgid "Uploading the file..."
+msgstr "ፋይሉን በመጫን ላይ"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:212
+msgid "This service requires a password or private key."
+msgstr "ይህ ግልጋሎት የመግቢያ ቃል ወይም የግል ቁልፍ ይፈልጋል"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:264
+msgid "This service requires a password."
+msgstr "ይህ ግልጋሎት የመግቢያ ቃል ይፈልጋል"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:290
+msgid "URL:"
+msgstr "ዩአርኤል"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:334
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:338
+#, python-format
+msgid "%(1)s is not set in the config file found under %(2)s or %(3)s"
+msgstr "%(1)s አልተሰናዳም በተገኘው ማዋቀሪያ ፋይል ስር  %(2)s ወይም %(3)s"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:82
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:30
+msgid "Upload services"
+msgstr "የመጫኛ አገልግሎቶች"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:97
+msgid "Services:"
+msgstr "ግልጋሎት:"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:110
+msgid "Upload manager..."
+msgstr "የመጫኛ አስተዳዳሪ..."
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:176
+#, python-format
+msgid "Drag &amp; Drop here to upload to %s"
+msgstr "መጎተት & መጣል; ለመጫን እዚህ ይጣሉት ወደ %s"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:15
+msgid "Define upload services"
+msgstr "መግለጽ የመጫኛ አገልግሎቶች"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:47
+msgid "_File"
+msgstr "_ፋይል"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:51
+msgid "Close"
+msgstr "መዝጋት"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:55
+msgid "_Help"
+msgstr "_እርዳታ"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:59
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:69
+msgid "About"
+msgstr "ስለ"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:105
+msgid "<b>Please enter a name for the new upload service:</b>"
+msgstr "<b>እባክዎ ስም ያስገቡ ለአዲሱ መጫኛ አገልግሎት:</b>"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:109
+msgid "Service name:"
+msgstr "የአገልግሎት ስም:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:111
+msgid "<i>Try to avoid spaces and special characters...</i>"
+msgstr "<i>ክፍተት እና የተለዩ ባህሪዎችን ለማስወገድ ይሞክሩ...</i>"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:169
+#, python-format
+msgid "%s Properties"
+msgstr "%s ባህሪዎች"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:172
+msgid "Advanced settings"
+msgstr "የረቀቀ አቀማመጥ"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:173
+msgid "Check connection"
+msgstr "ግንኙነቱን ይመርምሩ"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:178
+msgid "Type:"
+msgstr "አይነት:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:179
+msgid "Host:"
+msgstr "ጋባዥ:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:180
+msgid "Port:"
+msgstr "ፖርት"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:181
+msgid "User:"
+msgstr "ተጠቃሚ:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:182
+msgid "Password:"
+msgstr "የመግቢያ ቃል"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:183
+msgid "Timestamp:"
+msgstr "ጊዜን ማተም"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:184
+msgid "Path:"
+msgstr "መንገድ"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:186
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:187
+msgid "Hostname or IP address, default: "
+msgstr "ነባር የጋባዥ ስም ወይም አይፒ አድራሻ "
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:190
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:191
+msgid "Remote port, default is 21 for FTP, 22 for SFTP and SCP"
+msgstr "የርቀት ፖርት ፡ ነባር 21 ለ ኤፍቲፒ , 22 ለ ኤስኤፍቲፒ እና ኤስሲፒ"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:194
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:195
+msgid "Username, defaults to your local username"
+msgstr "የተጠቃሚ ስም ፣ ነባር ተጠቃሚ ስም ወደ አካባቢ"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:198
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:199
+msgid ""
+"Password, by default: password-less SCP connection, null-string FTP "
+"connection, ~/.ssh keys used for SFTP connections"
+msgstr ""
+"Password, by default: password-less SCP connection, null-string FTP "
+"connection, ~/.ssh keys used for SFTP connections"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:202
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:203
+msgid "Timestamp format (strftime). By default:"
+msgstr "የጊዜ ማህተም አቀራረብ (የተጀመረበት ሰአት) ነባር"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:206
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:207
+msgid ""
+"Directory to upload to. <TIMESTAMP> is replaced with the current timestamp, "
+"following the timestamp format given. By default: ."
+msgstr ""
+"ዳይሬክቶሪን ለመጫን ወደ <TIMESTAMP> በአሁኑ የሰአት ማህተም ተተክቷል ፡ በነባር የሰአት ማህተም ፎርማት "
+"የተሰጠውን በመከተል"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:265
+msgid "Could not save configuration change"
+msgstr "የተዋቀረውን ለውጥ ማስቀመት አልተቻለም"
+
+#~ msgid "File Uploader"
+#~ msgstr "ፋይል መጫኛ"
+
+#~ msgid "Hostname:"
+#~ msgstr "የጋባዥ ስም"
+
+#~ msgid "Username:"
+#~ msgstr "የተጠቃሚ ስም"
+
+#, python-format
+#~ msgid "Upload to %s failed: "
+#~ msgstr "መጫን ወደ %s ወድቋል: "
+
+#, python-format
+#~ msgid "Uploading %(file)s to %(service)s"
+#~ msgstr "በመጫን ላይ %(file)s ወደ %(service)s"
+
+#, python-format
+#~ msgid "Upload to %s successful"
+#~ msgstr "መጫን ወደ %s ተሳክቷል"
+
+#, python-format
+#~ msgid "Uploading to %s"
+#~ msgstr "በመጫን ላይ ወደ %s"
+
+#~ msgid "Upload files on the Internet"
+#~ msgstr "መጫን ፋይሎችን ኢንተርኔት ላይ"
+
+#~ msgid "<i>Try to avoid spaces and funny characters...</i>"
+#~ msgstr "<i>ለማስወገድ ይሞክሩ ባዶ ቦታ እና አስቂኝ ባህሪዎች...</i>"

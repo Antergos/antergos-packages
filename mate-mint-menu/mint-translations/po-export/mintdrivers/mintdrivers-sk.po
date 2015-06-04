@@ -1,0 +1,116 @@
+# Slovak translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-05-09 21:57+0100\n"
+"PO-Revision-Date: 2014-05-10 21:03+0000\n"
+"Last-Translator: tibbi <tibbbi2@gmail.com>\n"
+"Language-Team: Slovak <sk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:33 generate_desktop_files:26
+msgid "Driver Manager"
+msgstr "Správca ovládačov"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:43
+msgid ""
+"Drivers cannot be installed.\n"
+"Please connect to the Internet or insert the Linux Mint installation DVD (or "
+"USB stick)."
+msgstr ""
+"Nie je možné nainštalovať ovládače.\n"
+"Prosím, pripojte sa na internet, alebo vložte inštalačné DVD (alebo USB) "
+"Linuxu Mint."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:126
+msgid "Applying changes..."
+msgstr "Aplikujú sa zmeny..."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:218
+msgid "Re_vert"
+msgstr "_Vrátiť"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:220
+msgid "_Apply Changes"
+msgstr "_Použiť zmeny"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:222
+msgid "_Cancel"
+msgstr "_Zrušiť"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:224
+msgid "_Restart..."
+msgstr "_Reštartovať..."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:307
+msgid "This device is using the recommended driver."
+msgstr "Toto zariadenie používa odporúčaný ovládač."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:308
+msgid "This device is using an alternative driver."
+msgstr "Toto zariadenie používa alternatívny ovládač."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:309
+msgid "This device is using a manually-installed driver."
+msgstr "Toto zariadenie používa ručne nainštalovaný ovládač."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:310
+msgid "This device is not working."
+msgstr "Toto zariadenie nefunguje."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:319
+msgid "Continue using a manually installed driver"
+msgstr "Naďalej používať ručne nainštalovaný ovládač."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:346
+msgid "recommended"
+msgstr "doporučené"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:346
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:348
+msgid "Version"
+msgstr "Verzia"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:370
+msgid "Do not use the device"
+msgstr "Nepoužívať zariadenie"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:388
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:389
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:419
+msgid "Unknown"
+msgstr "Neznáme"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:472
+msgid "You need to restart the computer to complete the driver changes."
+msgstr "Aby sa dokončili zmeny ovládačov, musíte reštartovať počítač."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:486
+#, python-format
+msgid "%(count)d proprietary driver in use."
+msgid_plural "%(count)d proprietary drivers in use."
+msgstr[0] "Používa sa %(count)d proprietárnych ovládačov."
+msgstr[1] "Používa sa %(count)d proprietárny ovládač."
+msgstr[2] "Používa sa %(count)d proprietárne ovládače."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:491
+msgid "No proprietary drivers are in use."
+msgstr "Nepoužívajú sa žiadne proprietárne ovládače."
+
+#: usr/bin/driver-manager:9
+msgid "Please enter your password to launch the driver manager"
+msgstr "Prosím vložte vaše heslo pre spustenie správcu ovládačov"
+
+#: generate_desktop_files:26
+msgid "Manage the drivers for your devices"
+msgstr "Správa ovládačov pre vaše zariadenia"

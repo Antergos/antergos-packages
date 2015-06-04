@@ -1,0 +1,898 @@
+# Danish translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 17:21+0100\n"
+"PO-Revision-Date: 2015-03-15 17:42+0000\n"
+"Last-Translator: Happyjens <happyjens@gmail.com>\n"
+"Language-Team: Danish <da@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:196
+#, python-format
+msgid "The package '%s' could not be installed"
+msgstr "Pakken '%s' kunne ikke installeres"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:198
+#, python-format
+msgid "The package '%s' could not be removed"
+msgstr "Pakken '%s' kunne ikke fjernes"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:204
+msgid "Please check your connection to the Internet"
+msgstr "Tjek venligst din forbindelse til internettet"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:215
+msgid "Another application is using APT:"
+msgstr "Et andet program anvender APT:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:301
+#, python-format
+msgid "%d ongoing actions"
+msgstr "%d igangværende handlinger"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:311
+#, python-format
+msgid "Cancel the task: %s"
+msgstr "Afbryd opgaven: %s"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Waiting"
+msgstr "Venter"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Downloading"
+msgstr "Henter"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Running"
+msgstr "Kører"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:125
+msgid "Finished"
+msgstr "Gennemført"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:335
+#, python-format
+msgid "Installing %s"
+msgstr "Installerer %s"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:337
+#, python-format
+msgid "Removing %s"
+msgstr "Fjerner %s"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:339
+msgid "Updating cache"
+msgstr "Opdaterer cache"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:341
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:343
+msgid "No role set"
+msgstr "Ingen rolle indstillet"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:451
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:789
+#: usr/lib/linuxmint/mintInstall/splash.py:20
+#: usr/lib/linuxmint/mintInstall/splash.py:27
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:343 generate_desktop_files:24
+#: generate_desktop_files:35 generate_desktop_files:47
+msgid "Software Manager"
+msgstr "Programhåndtering"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:472
+msgid "_File"
+msgstr "_Filer"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:476
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:127
+msgid "Close"
+msgstr "Luk"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:480
+msgid "_Edit"
+msgstr "_Redigér"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:484
+msgid "Preferences"
+msgstr "Indstillinger"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:488
+msgid "Search in packages summary (slower search)"
+msgstr "Søg i pakkeresuméer (langsommere søgning)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:492
+msgid "Search in packages description (even slower search)"
+msgstr "Søg i pakkebeskrivelser (endnu langsommere søgning)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:496
+msgid "Open links using the web browser"
+msgstr "Åbn henvisninger med browseren"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:500
+msgid "Search while typing"
+msgstr "Søg mens du skriver"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:513
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:753
+msgid "Account information"
+msgstr "Kontoinformation"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:520
+msgid "Software sources"
+msgstr "Programkilder"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:524
+msgid "_View"
+msgstr "_Vis"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:528
+msgid "Available packages"
+msgstr "Tilgængelige pakker"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:532
+msgid "Installed packages"
+msgstr "Installerede pakker"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:539
+msgid "_Help"
+msgstr "_Hjælp"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:543
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:787
+msgid "About"
+msgstr "Om"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:589
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:599
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1118
+msgid "Categories"
+msgstr "Kategorier"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:590
+msgid "Please choose a category"
+msgstr "Vælg venligst en kategori"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:591
+#, python-format
+msgid "%d packages are currently available"
+msgstr "%d pakker er i øjeblikket tilgængelige"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:600
+msgid "Please choose a sub-category"
+msgstr "Vælg venligst en underkategori"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:621
+msgid "No ongoing actions"
+msgstr "Ingen igangværende handlinger"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:622
+msgid "Active tasks:"
+msgstr "Aktive opgaver:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:625
+msgid "Show all results"
+msgstr "Vis alle fund"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:755
+msgid "Your community account"
+msgstr "Din fællesskabskonto"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:757
+msgid "Fill in your account info to review applications"
+msgstr "Udfyld din kontoinfomation for at kunne anmelde programmer"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:759
+msgid "Username:"
+msgstr "Brugernavn:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:760
+msgid "Password:"
+msgstr "Adgangskode:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:832
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1759
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1770
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:834
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1761
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1772
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:836
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1763
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1774
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:838
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1765
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1776
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:860
+msgid "Icon"
+msgstr "Ikon"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:864
+msgid "Application"
+msgstr "Program"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:871
+msgid "Score"
+msgstr "Karakter"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:893
+msgid "Task"
+msgstr "Opgave"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:896
+msgid "Status"
+msgstr "Status"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:899
+msgid "Progress"
+msgstr "Fremgang"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:996
+msgid "See more reviews"
+msgstr "Se flere anmeldelser"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1038
+msgid "Screenshot"
+msgstr "Skærmbillede"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1047
+msgid "Website"
+msgstr "Hjemmeside"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1055
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1067
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1780
+msgid "Reviews"
+msgstr "Anmeldelser"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1120
+msgid "Featured"
+msgstr "Udvalgte"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1123
+msgid "All Packages"
+msgstr "Alle pakker"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1125
+msgid "Internet"
+msgstr "Internet"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1126
+msgid "Web"
+msgstr "Web"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1128
+msgid "Email"
+msgstr "E-mail"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1130
+msgid "Chat"
+msgstr "Chat"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1132
+msgid "File sharing"
+msgstr "Fildeling"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1135
+msgid "Sound and video"
+msgstr "Lyd og video"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1138
+msgid "Graphics"
+msgstr "Grafik"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1140
+msgid "3D"
+msgstr "3D"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1142
+msgid "Drawing"
+msgstr "Tegneprogrammer"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1144
+msgid "Photography"
+msgstr "Foto"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1146
+msgid "Publishing"
+msgstr "Publicering"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1148
+msgid "Scanning"
+msgstr "Skanning"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1150
+msgid "Viewers"
+msgstr "Fremvisere"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1153
+msgid "Office"
+msgstr "Kontor"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1155
+msgid "Games"
+msgstr "Spil"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1157
+msgid "Board games"
+msgstr "Brætspil"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1159
+msgid "First-person shooters"
+msgstr "Førstepersons skydespil"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1161
+msgid "Real-time strategy"
+msgstr "Realtidsstrategi"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1163
+msgid "Turn-based strategy"
+msgstr "Turbaseret strategi"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1165
+msgid "Emulators"
+msgstr "Emulatorer"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1167
+msgid "Simulation and racing"
+msgstr "Simulation og kørsel"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1170
+msgid "Accessories"
+msgstr "Tilbehør"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1172
+msgid "System tools"
+msgstr "Systemværktøjer"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1175
+msgid "Fonts"
+msgstr "Skrifttyper"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1178
+msgid "Science and Education"
+msgstr "Videnskab og uddannelse"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1181
+msgid "Programming"
+msgstr "Programmering"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1380
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1853
+#, python-format
+msgid "%d reviews"
+msgstr "%d anmeldelser"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1416
+#, python-format
+msgid "%d packages"
+msgstr "%d pakker"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1661
+#, python-format
+msgid "Only results in category \"%s\" are shown."
+msgstr "Kun resultater i kategorien \"%s\" vises."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1672
+msgid "Search results"
+msgstr "Søgeresultater"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Hate it"
+msgstr "Hader det"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Not a fan"
+msgstr "Ikke fan"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "So so"
+msgstr "Tja..."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Like it"
+msgstr "Kan li' det"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Awesome!"
+msgstr "Fantastisk!"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1728
+msgid "Score:"
+msgstr "Karakter:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1729
+msgid "Submit"
+msgstr "Tilføj"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1730
+msgid "Your review"
+msgstr "Din vurdering"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1778
+msgid "Size:"
+msgstr "Størrelse:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1779
+msgid "Version:"
+msgstr "Version:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1781
+msgid "Your review:"
+msgstr "Din anmeldelse:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1782
+msgid "Details"
+msgstr "Detaljer:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1784
+msgid "This will remove the following packages:"
+msgstr "Dette vil fjerne følgende pakker:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1785
+msgid "Cancel"
+msgstr "Annullér"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1786
+msgid "Confirm"
+msgstr "Bekræft"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1790
+#, python-format
+msgid "%(localSize)s of disk space freed"
+msgstr "%(localSize)s diskplads frigjort"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1792
+#, python-format
+msgid "%(localSize)s of disk space required"
+msgstr "%(localSize)s af diskplads nødvendig"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1795
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space freed"
+msgstr "%(downloadSize)s til hentning, %(localSize)s diskplads frigjort"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1797
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space required"
+msgstr "%(downloadSize)s til hentning, %(localSize)s diskplads nødvendig"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1800
+msgid "The following packages would be installed: "
+msgstr "Følgende pakker vil blive installeret: "
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1802
+msgid "The following packages would be removed: "
+msgstr "Følgende pakker vil blive fjernet: "
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1805
+msgid "Impact on packages:"
+msgstr "Påvirkede pakker:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1823
+msgid "Remove"
+msgstr "Fjern"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1825
+#: usr/bin/mint-search-apt:37
+msgid "Installed"
+msgstr "Installeret"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1829
+msgid "Not available"
+msgstr "Ikke tilgængelig"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1831
+msgid "Please use apt-get to install this package."
+msgstr "Brug venligst apt-get for at installere denne pakke."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1834
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:207
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:442
+msgid "Install"
+msgstr "Installér"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1836
+msgid "Not installed"
+msgstr "Ikke installeret"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1857
+msgid "Reviews:"
+msgstr "Anmeldelser:"
+
+#: usr/lib/linuxmint/mintInstall/splash.py:28
+#, python-format
+msgid "Gathering information for %d packages..."
+msgstr "Samler information for %d pakker..."
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:68
+msgid "Backing up your APT sources"
+msgstr "Foretager sikkerhedskopiering af dine APT-kilder"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:92
+#: usr/lib/linuxmint/mintInstall/remove.py:48 usr/bin/mint-synaptic-install:14
+msgid "Please wait, this can take some time"
+msgstr "Vent venligst, dette kan tage noget tid"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:94
+#: usr/bin/mint-synaptic-install:16
+msgid "Installation is complete"
+msgstr "Installationen er færdig"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:121
+msgid "Restoring your APT sources"
+msgstr "Gendanner dine APT-kilder"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:204
+msgid "Using the following repositories:"
+msgstr "Anvender følgende programarkiver:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:209
+#, python-format
+msgid "Install %s?"
+msgstr "Installér %s?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:212
+msgid "The following packages will be installed:"
+msgstr "Følgende pakker vil blive installeret:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:223
+msgid "Default repositories"
+msgstr "Standard programarkiver"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:296
+#, python-format
+msgid "Upgrade %s?"
+msgstr "Opgradér %s?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:298
+msgid "The following packages will be upgraded:"
+msgstr "Følgende pakker vil blive opgraderet:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:299
+msgid "Upgrade"
+msgstr "Opgradér"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:434
+msgid "Find Software"
+msgstr "Find programmer"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:437
+msgid "Go to the Linux Mint Software Portal"
+msgstr "Gå til Linux Mints programportal"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:438
+msgid "Search for a .mint application"
+msgstr "Søg efter et .mint-program"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:439
+msgid "Go to the GetDeb Portal"
+msgstr "Gå til GetDeb-portalen"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:440
+msgid "Search for a .deb package"
+msgstr "Søg efter en .deb-pakke"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:441
+msgid "Search"
+msgstr "Søg"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:443
+msgid "Show"
+msgstr "Vis"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:444
+msgid "Go to the Ubuntu repository"
+msgstr "Gå til Ubuntus programarkiv"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:445
+msgid "Go to the Linux Mint repository"
+msgstr "Gå til Linux Mints programarkiv"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid "Your APT sources were corrupted."
+msgstr "Dine APT-kilder blev beskadiget."
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid ""
+"Your APT sources were not correctly restored after you last ran mintInstall. "
+"They now have been restored."
+msgstr ""
+"Dine APT-kilder blev ikke gendannet korrekt sidste gang mintInstall kørte. "
+"De er nu blevet gendannet."
+
+#: usr/lib/linuxmint/mintInstall/remove.py:50
+msgid "Application removed successfully"
+msgstr "Programmet blev fjernet"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:104
+#, python-format
+msgid "Remove %s?"
+msgstr "Fjern %s?"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:107
+msgid "The following packages will be removed:"
+msgstr "Følgende pakker vil blive fjernet:"
+
+#: usr/bin/mint-search-apt:34
+msgid "No results"
+msgstr "Ingen resultater"
+
+#: usr/bin/mint-search-apt:41
+msgid "Package"
+msgstr "Pakke"
+
+#: usr/bin/mint-search-apt:42
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: usr/bin/mint-make-cmd:37 usr/bin/mint-make-cmd:38
+#, python-format
+msgid "Could not find package: %s"
+msgstr "Kunne ikke finde pakken: %s"
+
+#: generate_desktop_files:24 generate_desktop_files:35
+#: generate_desktop_files:47
+msgid "Install new applications"
+msgstr "Installér nye programmer"
+
+#~ msgid "Description:"
+#~ msgstr "Beskrivelse:"
+
+#~ msgid "Size"
+#~ msgstr "Størrelse"
+
+#~ msgid "License:"
+#~ msgstr "Licens:"
+
+#~ msgid "Installed version"
+#~ msgstr "Installeret version"
+
+#~ msgid "Category"
+#~ msgstr "Kategori"
+
+#~ msgid "Added"
+#~ msgstr "Tilføjet"
+
+#~ msgid "Software manager"
+#~ msgstr "Programhåndtering"
+
+#~ msgid "Quit"
+#~ msgstr "Afslut"
+
+#~ msgid "All applications"
+#~ msgstr "Alle programmer"
+
+#~ msgid "Repository"
+#~ msgstr "Softwarekilde"
+
+#~ msgid "Available version"
+#~ msgstr "Tilgængelig version"
+
+#~ msgid "Reviewer"
+#~ msgstr "Anmelder"
+
+#~ msgid "Views"
+#~ msgstr "Visninger"
+
+#~ msgid "These popular applications can be installed on your system:"
+#~ msgstr "Du kan installere disse populære programmer på dit system:"
+
+#~ msgid "Average rating"
+#~ msgstr "Gennemsnitskarakter"
+
+#~ msgid "Review"
+#~ msgstr "Anmeldelse"
+
+#~ msgid "Rating"
+#~ msgstr "Karakter"
+
+#, python-format
+#~ msgid "%d screenshots loaded"
+#~ msgstr "%d skærmbilleder hentet"
+
+#, python-format
+#~ msgid "%d reviews loaded"
+#~ msgstr "%d anmeldelser hentet"
+
+#, python-format
+#~ msgid "%d applications loaded"
+#~ msgstr "%d programmer hentet"
+
+#~ msgid "Please refresh mintInstall by clicking on the Refresh button"
+#~ msgstr "Opdater venligst mintInstall ved at klikke på opdater-knappen"
+
+#, python-format
+#~ msgid "%d categories loaded"
+#~ msgstr "%d kategorier hentet"
+
+#, python-format
+#~ msgid "Downloading data for %s"
+#~ msgstr "Henter data til %s"
+
+#~ msgid "Featured applications"
+#~ msgstr "Udvalgte programmer"
+
+#~ msgid ""
+#~ "The data used by mintInstall is corrupted or out of date. Click on refresh "
+#~ "to fix the problem :"
+#~ msgstr ""
+#~ "De data mintInstall bruger er enten beskadigede eller forældede. Klik på "
+#~ "opdater for at løse problemet :"
+
+#~ msgid "Show:"
+#~ msgstr "Vis:"
+
+#~ msgid "Installed software"
+#~ msgstr "Installerede programmer"
+
+#~ msgid "All software"
+#~ msgstr "Alle programmer"
+
+#~ msgid "Available software"
+#~ msgstr "Tilgængelige programmer"
+
+#~ msgid "Cancel all changes"
+#~ msgstr "Fortryd alle ændringer"
+
+#~ msgid "Portal URL"
+#~ msgstr "Portal-adresse"
+
+#~ msgid "Quick search:"
+#~ msgstr "Hurtigsøgning:"
+
+#~ msgid "Your changes"
+#~ msgstr "Dine ændringer"
+
+#~ msgid "Cancel installation"
+#~ msgstr "Afbryd installation"
+
+#~ msgid "Cancel change"
+#~ msgstr "Annuller ændringer"
+
+#~ msgid "The changes are complete"
+#~ msgstr "Ændringerne er fuldført"
+
+#~ msgid "First person shooters"
+#~ msgstr "Første persons skydespil"
+
+#~ msgid "Sound & Video"
+#~ msgstr "Lyd og video"
+
+#~ msgid "Office suites"
+#~ msgstr "Kontorpakker"
+
+#~ msgid "Photo"
+#~ msgstr "Foto"
+
+#~ msgid "Web browsers"
+#~ msgstr "Webbrowsere"
+
+#~ msgid "Tools"
+#~ msgstr "Værktøjer"
+
+#~ msgid "Finance"
+#~ msgstr "Økonomi"
+
+#~ msgid "Document viewers"
+#~ msgstr "Dokument fremvisere"
+
+#~ msgid "2D"
+#~ msgstr "2D"
+
+#~ msgid "Spreadsheets"
+#~ msgstr "Regneark"
+
+#~ msgid "Databases"
+#~ msgstr "Databaser"
+
+#~ msgid "System Tools"
+#~ msgstr "Systemværktøjer"
+
+#~ msgid "Education"
+#~ msgstr "Undervisning"
+
+#~ msgid "Firewall"
+#~ msgstr "Firewall"
+
+#~ msgid "Drivers"
+#~ msgstr "Drivere"
+
+#~ msgid "P2P and torrent"
+#~ msgstr "P2P og torrent"
+
+#~ msgid "FTP"
+#~ msgstr "FTP"
+
+#~ msgid "Real time strategy"
+#~ msgstr "Realtids stategispil"
+
+#~ msgid "Graph and flowcharts"
+#~ msgstr "Grafer og diagrammer"
+
+#~ msgid "Internet Relay Chat"
+#~ msgstr "Internet Relay Chat"
+
+#~ msgid "Mind mapping"
+#~ msgstr "Mind mapping"
+
+#~ msgid "Instant messengers"
+#~ msgstr "Beskedtjenester"
+
+#~ msgid "Collection managers"
+#~ msgstr "Samlings håndtering"
+
+#~ msgid "Upstream"
+#~ msgstr "Upstream"
+
+#~ msgid "Simulation & racing"
+#~ msgstr "Simulation og ræs"
+
+#~ msgid "Cancel removal"
+#~ msgstr "Afbryd fjernelse"
+
+#~ msgid ""
+#~ "The mint file for this application was not successfully downloaded. Click on "
+#~ "refresh to fix the problem."
+#~ msgstr ""
+#~ "Dette programs mint-fil blev ikke hentet. Klik på opdater for at løse "
+#~ "problemet."
+
+#~ msgid "More info"
+#~ msgstr "Mere information"
+
+#, python-format
+#~ msgid ""
+#~ "%(applications)d applications listed, %(install)d to install, %(remove)d to "
+#~ "remove"
+#~ msgstr ""
+#~ "%(applications)d programmer vises, %(install)d skal installeres, %(remove)d "
+#~ "skal fjernes"
+
+#~ msgid "Text editors"
+#~ msgstr "Tekstredigering"
+
+#~ msgid "Video players"
+#~ msgstr "Videoafspillere"
+
+#~ msgid "Audio players"
+#~ msgstr "Lydafspillere"
+
+#~ msgid "Scanning tools"
+#~ msgstr "Skanningsværktøjer"
+
+#~ msgid "Image viewers"
+#~ msgstr "Billedfremvisere"
+
+#~ msgid "Word processors"
+#~ msgstr "Tekstbehandling"
+
+#~ msgid "Package management"
+#~ msgstr "Pakkehåndtering"
+
+#~ msgid "Desktop components"
+#~ msgstr "Skrivebordskomponenter"
+
+#~ msgid "Burning tools"
+#~ msgstr "Brændingsværktøjer"

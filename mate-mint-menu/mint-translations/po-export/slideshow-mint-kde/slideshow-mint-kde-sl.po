@@ -1,0 +1,324 @@
+# Slovenian translation for linuxmint
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-06-14 11:26+0300\n"
+"PO-Revision-Date: 2013-06-26 12:20+0000\n"
+"Last-Translator: Damir Jerovšek <Unknown>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/01-welcome.html:1
+msgid "Welcome to Linux Mint"
+msgstr "Dobrodošli v Linux Mint"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/01-welcome.html:8
+msgid ""
+"Welcome and thank you for choosing Linux Mint. This slideshow will show you "
+"around while the system is being installed on your computer."
+msgstr ""
+"Dobrodošli in hvala, ker ste izbrali Linux Mint. Predstavitev vas bo vodila "
+"po sistemu, ki se ravnokar namešča na vaš računalnik."
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/02-web.html:1
+msgid "Browse the web"
+msgstr "Brskajte po spletu"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/02-web.html:8
+msgid ""
+"Be fast and safe on the web with Mozilla Firefox. Enjoy Java, Flash and "
+"multimedia content."
+msgstr ""
+"Bodite hitri in varni na spletu z brskalnikom Mozilla Firefox. Uživajte v "
+"Javi, Flashu in predstavnih vsebinah."
+
+#. type: Content of: <div><div><div>
+#: slideshows/mint-kde/slides/02-web.html:11
+#: slideshows/mint-kde/slides/03-music.html:12
+#: slideshows/mint-kde/slides/04-video.html:11
+#: slideshows/mint-kde/slides/05-photos.html:12
+#: slideshows/mint-kde/slides/06-chat.html:11
+#: slideshows/mint-kde/slides/07-office.html:12
+msgid "Included software"
+msgstr "Priloženi programi"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:14
+msgid "Firefox"
+msgstr "Firefox"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:16
+msgid "Flash"
+msgstr "Flash"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:18
+msgid "Java"
+msgstr "Java"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/03-music.html:1
+msgid "Listen to music and CDs"
+msgstr "Poslušajte glasbo in zgoščenke"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/03-music.html:8
+msgid ""
+"Enjoy your music with Amarok. Plug-in your MP3 player or extract songs from "
+"your audio CDs. Listen to podcasts and online radios. Discover new artists "
+"on Last.fm, Jamendo, Magnatune and Librivox."
+msgstr ""
+"Uživajte v svoji glasbi z Amarokom. Vstavite svoj predvajalnik MP3-jev ali "
+"pa odpakirajte skladbe s svojih zvočnih CD-jev. Prisluhnite podcastom in "
+"spletnim radiem. Odkrijte nove izvajalce na Last.fm, Jamendo, Magnitude in "
+"Librivox."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/03-music.html:15
+msgid "Amarok"
+msgstr "Amarok"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/03-music.html:17
+msgid "Audio codecs"
+msgstr "Zvočni kodeki"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/04-video.html:1
+msgid "Watch videos and DVDs"
+msgstr "Glejte filme in DVD-je"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/04-video.html:8
+msgid ""
+"Insert a DVD and enjoy a movie. Watch high-definition videos with Kaffeine."
+msgstr ""
+"Vstavite DVD in uživajte v filmu. Glejte videe v visoki ločljivosti s "
+"Kaffeine."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:14
+msgid "Kaffeine"
+msgstr "Kaffeine"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:16
+msgid "VLC"
+msgstr "VLC"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:18
+msgid "Video codecs"
+msgstr "Video kodeki"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/05-photos.html:1
+msgid "Manage your photos"
+msgstr "Upravljajte s svojimi fotografijami"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/05-photos.html:8
+msgid ""
+"Organize, enjoy and share your photos with digikam. Export your albums to "
+"CD, to the Web, or to online services such as Flickr or PicasaWeb to share "
+"them with friends and family."
+msgstr ""
+"Organizirajte, uživajte in souporabljajte fotografije z digikam. Izvozite "
+"svoje albume na CD, splet ali povezane storitve, kot so Flickr ali Picassa "
+"in jih delite s svojimi prijatelji in družino."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/05-photos.html:15
+msgid "Digikam"
+msgstr "Digikam"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/06-chat.html:1
+msgid "Stay connected"
+msgstr "Ostanite povezani"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/06-chat.html:8
+msgid ""
+"Keep in touch with your friends and contacts, by email, messenger or on your "
+"favorite social networks. Linux Mint provides all you need to interact with "
+"Twitter, Facebook, MSN, ICQ, GoogleTalk, AIM, Yahoo and many other networks."
+msgstr ""
+"Ostanite v stiku s svojimi prijatelji in znanci, po e-pošti, s sporočili ali "
+"na svojem priljubljenem socialnem omrežju. Linux Mint ponuja vse, kar "
+"potrebujete za Twitter, Facebook, MSN, ICQ, GoogleTalk, AIM, Yahoo in "
+"številna druga omrežja."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:14
+msgid "Kmail"
+msgstr "Kmail"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:16
+msgid "Telepathy"
+msgstr "Telepathy"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:18
+msgid "Konversation"
+msgstr "Konversation"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/07-office.html:1
+msgid "Be productive"
+msgstr "Bodite produktivni"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/07-office.html:8
+msgid ""
+"Use LibreOffice to create professional documents, spreadsheets and "
+"presentations that are fully compatible with Microsoft Office. Archive "
+"documents, emails, or web pages to PDF. Send and receive files with Giver on "
+"the local network. Share printers or access them remotely."
+msgstr ""
+"Uporabite LibreOffice in ustvarite strokovne dokumente, preglednice in "
+"predstavitve, popolnoma združljive z Microsoft Office. Arhivirajte "
+"dokumente, elektronska sporočila, ali spletne strani v obliko PDF. "
+"Pošiljajte in sprejemajte datoteke v krajevnem omrežju s programom Giver. "
+"Souporabljajte tiskalnike ali pa dostopajte do njih na daljavo."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/07-office.html:15
+msgid "LibreOffice"
+msgstr "LibreOffice"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/07-office.html:17
+msgid "PDF Printer"
+msgstr "Tiskalnik PDF"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/08-software.html:1
+msgid "Install software"
+msgstr "Nameščanje programov"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/08-software.html:8
+msgid ""
+"Browse through 50,000 free applications from the Software Manager. Enjoy "
+"screenshots and user reviews. Install software with one click of the mouse."
+msgstr ""
+"Brskajte skozi 50.000 prostih programov v Upravljalniku programske opreme. "
+"Uživajte v zaslonskih slikah in ocenah uporabnikov. Namestite programsko "
+"opremo z enim miškinim klikom."
+
+#. type: Content of: <div><div><div>
+#: slideshows/mint-kde/slides/08-software.html:11
+#: slideshows/mint-kde/slides/09-windows.html:12
+msgid "Featured software"
+msgstr "Aktualni programi"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:14
+msgid "Filezilla"
+msgstr "Filezilla"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:16
+msgid "Skype"
+msgstr "Skype"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:18
+msgid "Inkscape"
+msgstr "Inkscape"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:20
+msgid "Google Earth"
+msgstr "Google Zemlja"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/09-windows.html:1
+msgid "Run Windows software"
+msgstr "Zaganjajte programe za sistem Windows"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/09-windows.html:8
+msgid ""
+"Install Wine and run Windows software in Linux Mint. Or install Virtualbox, "
+"and run Windows itself within Linux Mint."
+msgstr ""
+"Namestite Wine in zaganjajte programe za operacijski sistem Windows v Linux "
+"Mintu. Ali pa namestite Virtualbox in zaganjajte kar sistem Windows v okviru "
+"sistema Linux Mint."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/09-windows.html:15
+msgid "Wine"
+msgstr "Wine"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/09-windows.html:17
+msgid "Virtualbox"
+msgstr "Virtualbox"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/10-customize.html:1
+msgid "Customize your desktop"
+msgstr "Prilagodite svoje namizje"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/10-customize.html:8
+msgid ""
+"Make yourself at home and modify any aspect of your desktop. Choose from a "
+"large variety of themes, icons and backgrounds. Linux Mint is open and easy "
+"to customize."
+msgstr ""
+"Spoznajte se z okoljem in priredite celotno namizje po svojih željah. "
+"Izbirajte med različnimi temami, ikonami in ozadji. Linux Mint je odprt in "
+"preprost za prilagajanje."
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/11-updates.html:1
+msgid "Keep your system up to date"
+msgstr "Imejte svoj sistem posodobljen"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/11-updates.html:8
+msgid ""
+"Receive fixes and security updates all in one place, for the entire system, "
+"including the software you install."
+msgstr ""
+"Prejemajte popravke in varnostne posodobitve na enem mestu, za celoten "
+"sistem, vključno za programe, ki ste jih namestili sami."
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/12-help.html:1
+msgid "Find help"
+msgstr "Poiščite pomoč"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/12-help.html:8
+msgid ""
+"If you're curious about something or if you're facing a problem, simply ask "
+"around. Linux Mint is the 4th most widely used operating system in the "
+"World. It comes with a user guide, a community website, a collection of "
+"tutorials, active forums and chat rooms and one of the most dynamic "
+"communities on the Internet."
+msgstr ""
+"Če vas kaj zanima ali pa ste naleteli na težavo, povprašajte naokrog. Linux "
+"Mint je četrti najpogosteje uporabljani operacijski sistem na svetu. Z njim "
+"so na razpolago uporabniški vodič, spletna stran skupnosti, zbirka učnih "
+"navodil, aktivni forumi ter klepetalnice in ena izmed najbolj dinamičnih "
+"skupnosti na internetu."

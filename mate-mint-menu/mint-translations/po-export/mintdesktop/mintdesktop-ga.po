@@ -1,0 +1,210 @@
+# Irish translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-12-09 16:44+0000\n"
+"PO-Revision-Date: 2013-04-28 16:33+0000\n"
+"Last-Translator: Gearóid  Ó Maelearcaidh <gearoid@omaelearcaidh.com>\n"
+"Language-Team: Irish <ga@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:110
+msgid "Desktop"
+msgstr "Deasc"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:111
+msgid "Windows"
+msgstr "Fuinneoga"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:112
+msgid "Interface"
+msgstr "Comhéadan"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:113
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:160
+msgid "Terminal"
+msgstr "Teirminéal"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:154
+msgid "Desktop icons"
+msgstr "Deilbhín deisce"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:155
+msgid "Performance"
+msgstr "Feidhmiúchán"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:156
+msgid "Appearance"
+msgstr "Cuma"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:157
+msgid "Icons"
+msgstr "Deilbhíní"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:158
+msgid "Context menus"
+msgstr "Roghchláir comthéacs"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:159
+msgid "Toolbars"
+msgstr "Barra Uirlisí"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:161
+msgid "Window Manager"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:163
+msgid "Select the items you want to see on the desktop:"
+msgstr "Roghnaigh gach mír ar mhaith leat feiscint ar an deasc:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:165
+msgid "Computer"
+msgstr "Ríomhaire"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:166
+msgid "Home"
+msgstr "Baile"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:167
+msgid "Network"
+msgstr "Líonra"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:168
+msgid "Trash"
+msgstr "Bruscar"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:169
+msgid "Mounted Volumes"
+msgstr "Toirteanna Gléasta"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:171
+msgid "Don't show window content while dragging them"
+msgstr "Ná taispeáin inneachar fuinneoige agus iad a tharraingt"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:172
+msgid "Use compositing"
+msgstr "Bain úsáid as cló-eagraíocht"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:173
+msgid "Use system font in titlebar"
+msgstr "Bain úsáid as clófhoireann córais sa bharra teidil"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:174
+msgid "Show fortune cookies"
+msgstr "Taispeáin fianáin ratha"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:176
+msgid "Buttons layout:"
+msgstr "Leagan amach na gCnaipí:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:178
+msgid "Window manager:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:180
+msgid "Show icons on menus"
+msgstr "Taipeáin deilbhíní ar roghchláir"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:181
+msgid "Show icons on buttons"
+msgstr "Taispeáin deilbhíní ar chnaipí"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:182
+msgid "Show Input Methods menu in context menus"
+msgstr "Taispeáin Roghchláir na Modhanna ionchuir sna roghchláir comhthéacs"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:183
+msgid "Show Unicode Control Character menu in context menus"
+msgstr "Thaispeáin carachtar rialiúcháin Unicode i roghchláir comhthéacs"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:185
+msgid "Buttons labels:"
+msgstr "Lipéidí cnaipe:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:186
+msgid "Icon size:"
+msgstr "Méid na ndeilbhíní:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:210
+msgid "Small"
+msgstr "Beag"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:211
+msgid "Large"
+msgstr "Mór"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:217
+msgid "Traditional style (Right)"
+msgstr "Stíl traidisiúnta (Right)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:218
+msgid "Mac style (Left)"
+msgstr "Stíl Mac (Left)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:225
+msgid "Marco (stable and reliable)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:226
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:234
+msgid "Compiz (impressive desktop effects)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:228
+msgid ""
+"Log out and log back in for changes to take effect. If things go wrong, run "
+"'mate-wm-recovery' to switch back to Marco."
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:233
+msgid "Xfwm (stable and reliable)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:237
+msgid "Log out and log back in for changes to take effect."
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:246
+msgid "Text below items"
+msgstr "Téacs faoi mhíreanna"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:247
+msgid "Text beside items"
+msgstr "Téacs ar thaobh míreanna"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:248
+msgid "Icons only"
+msgstr "Deilbhíní amháin"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:249
+msgid "Text only"
+msgstr "Téacs amháin"
+
+#: generate_desktop_files:25
+msgid "Desktop Settings"
+msgstr "Socruithe na Deisce"
+
+#: generate_desktop_files:25
+msgid "Fine-tune desktop settings"
+msgstr "Mionchoigeartaigh ar shocruithe deisce"
+
+#~ msgid "Fine-tune Gnome settings"
+#~ msgstr "Mionchoigeartaigh Socruithe Gnome"
+
+#~ msgid "Desktop Configuration Tool"
+#~ msgstr "Uirlís Chumraíochta Deisce"
+
+#~ msgid "Desktop Items"
+#~ msgstr "Míreanna Deisce"
+
+#~ msgid "Gnome Settings"
+#~ msgstr "Socruithe Gnome"

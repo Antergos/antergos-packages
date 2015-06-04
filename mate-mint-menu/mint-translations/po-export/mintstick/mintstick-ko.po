@@ -1,0 +1,192 @@
+# Korean translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-09-19 10:09+0100\n"
+"PO-Revision-Date: 2014-10-28 02:53+0000\n"
+"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:13+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: lib/mintstick.py:276 lib/mintstick.py:278
+msgid "The USB stick was formatted successfully."
+msgstr "USB 스틱이 성공적으로 포맷되었습니다."
+
+#: lib/mintstick.py:281
+#, python-format
+msgid "An error occured while creating a partition on %s."
+msgstr "%s에 파티션을 만드는 동안 에러가 났습니다."
+
+#: lib/mintstick.py:283 lib/mintstick.py:370
+msgid "Authentication Error."
+msgstr "인증 오류입니다."
+
+#: lib/mintstick.py:285 lib/mintstick.py:372
+msgid "An error occurred."
+msgstr "에러가 났습니다."
+
+#: lib/mintstick.py:302
+msgid "Image:"
+msgstr "이미지:"
+
+#: lib/mintstick.py:303
+msgid "USB stick:"
+msgstr "USB 스틱"
+
+#: lib/mintstick.py:328
+#, python-format
+msgid "Writing %(VAR_FILE)s to %(VAR_DEV)s"
+msgstr "%(VAR_FILE)s 을 %(VAR_DEV)s 에 작성 중"
+
+#: lib/mintstick.py:329
+#, python-format
+msgid "Starting copy from %(VAR_SOURCE)s to %(VAR_TARGET)s"
+msgstr "%(VAR_SOURCE)s 를 %(VAR_TARGET)s 로 복사 시작하는 중"
+
+#: lib/mintstick.py:361 lib/mintstick.py:363
+msgid "The image was successfully written."
+msgstr "이미지가 성공적으로 작성되었습니다."
+
+#: lib/mintstick.py:366
+msgid "Not enough space on the USB stick."
+msgstr "USB 스틱에 공간이 모자랍니다."
+
+#: lib/mintstick.py:368
+msgid "An error occured while copying the image."
+msgstr "이미지를 복사하는 동안 에러가 났습니다."
+
+#: generate_additional_files.py:49 generate_additional_files.py:61
+#: share/mintstick/mintstick.glade.h:28
+msgid "USB Image Writer"
+msgstr "USB 이미지 라이터"
+
+#: generate_additional_files.py:49 generate_additional_files.py:61
+#: generate_additional_files.py:94
+msgid "Make a bootable USB stick"
+msgstr "부팅 USB 만들기"
+
+#: generate_additional_files.py:73 generate_additional_files.py:85
+#: share/mintstick/mintstick.glade.h:4
+msgid "USB Stick Formatter"
+msgstr "USB 포맷 장치"
+
+#: generate_additional_files.py:73 generate_additional_files.py:85
+#: generate_additional_files.py:104
+msgid "Format a USB stick"
+msgstr "USB 포맷하기"
+
+#: generate_additional_files.py:94
+msgid "Make bootable USB stick"
+msgstr "부팅 USB 만들기"
+
+#: generate_additional_files.py:104 share/mintstick/mintstick.glade.h:27
+msgid "Format"
+msgstr "포맷"
+
+#: share/mintstick/mintstick.glade.h:1
+msgid " "
+msgstr " "
+
+#: share/mintstick/mintstick.glade.h:2
+msgid ""
+"This will destroy all data on the USB stick, are you sure you want to "
+"proceed?"
+msgstr "이 작업은 USB 스틱안의 모든 데이터를 삭제합니다. 정말로 진행하시겠습니까?"
+
+#: share/mintstick/mintstick.glade.h:3
+msgid ""
+"Something went wrong, please see the details window for the exact error."
+msgstr "무언가 잘못되었습니다, 정확한 오류 확인을 위해 정보 창을 봐주세요."
+
+#: share/mintstick/mintstick.glade.h:5
+msgid "Format:"
+msgstr "포맷:"
+
+#: share/mintstick/mintstick.glade.h:6
+msgid "Select a USB stick"
+msgstr "USB 스틱을 선택해 주세요"
+
+#: share/mintstick/mintstick.glade.h:7
+msgid "as"
+msgstr "로"
+
+#: share/mintstick/mintstick.glade.h:8
+msgid ""
+"FAT32 \n"
+"   + Compatible everywhere.\n"
+"   -  Cannot handle files larger than 4GB.\n"
+"\n"
+"NTFS \n"
+"  + Compatible with Windows.\n"
+"   - Not compatible with Mac and most hardware devices.\n"
+"   - Occasional compatibility problems with Linux (NTFS is proprietary and "
+"reverse engineered).\n"
+"\n"
+"EXT4 \n"
+"\n"
+"  + Modern, stable, fast, journalized.\n"
+"  + Supports Linux file permissions.\n"
+"   - Not compatible with Windows, Mac and most hardware devices.\n"
+msgstr ""
+"FAT32 \n"
+"   + 모든 곳에 호환됨.\n"
+"   - 4GB 이상의 파일들은 읽을 수 없음.\n"
+"\n"
+"NTFS \n"
+"  + Compatible with Windows.\n"
+"   - Mac을 포함한 대개의 하드웨어 장치와는 호환되지 않음.\n"
+"   - 가끔 리눅스와 호환성 문제를 일으킴 (NTFS는 독점 및 리버스 엔지니어링 입니다).\n"
+"\n"
+"EXT4 \n"
+"  + 모던하며, 안정적이고, 빠르며, 저널 라이즈됨.\n"
+"  + 리눅스 파일 권한을 지원함.\n"
+"   - 윈도우, Mac, 대개의 하드웨어 장치와 호환되지 않음.\n"
+
+#: share/mintstick/mintstick.glade.h:23
+msgid "Volume label:"
+msgstr "볼륨 이름:"
+
+#: share/mintstick/mintstick.glade.h:24
+msgid "Choose a name for your USB Stick"
+msgstr "USB 스틱의 이름을 선택해 주세요"
+
+#: share/mintstick/mintstick.glade.h:25
+msgid "USB Stick"
+msgstr "USB 스틱"
+
+#: share/mintstick/mintstick.glade.h:26
+msgid "Details"
+msgstr "상세 정보"
+
+#: share/mintstick/mintstick.glade.h:29
+msgid "Write image:"
+msgstr "이미지 쓰기:"
+
+#: share/mintstick/mintstick.glade.h:30
+msgid "Select an image"
+msgstr "이미지를 선택하세요"
+
+#: share/mintstick/mintstick.glade.h:31
+msgid "Select Image"
+msgstr "이미지 선택"
+
+#: share/mintstick/mintstick.glade.h:32
+msgid "to"
+msgstr "에"
+
+#: share/mintstick/mintstick.glade.h:33
+msgid "Write"
+msgstr "쓰기"
+
+#: share/mintstick/mintstick.glade.h:34
+msgid "The image was written successfully."
+msgstr "이미지가 성공적으로 작성되었습니다."

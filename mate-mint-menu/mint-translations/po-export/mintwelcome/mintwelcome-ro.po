@@ -1,0 +1,207 @@
+# Romanian translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-08 10:39+0100\n"
+"PO-Revision-Date: 2014-06-06 06:49+0000\n"
+"Last-Translator: Flaviu <flaviu@gmx.com>\n"
+"Language-Team: Romanian <ro@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:24 generate_desktop_files:58
+#: generate_desktop_files:72
+msgid "Welcome Screen"
+msgstr "Bun venit"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:77
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did designing it. The links below will help you get started "
+"with your new operating system. Have a great time and don't hesitate to send "
+"us your feedback."
+msgstr ""
+"Bine ai venit şi îţi mulţumim că ai ales Linux Mint. Sperăm să-ţi facă "
+"plăcere să îl foloseşti la fel cum ne-a plăcut nouă să îl realizăm. "
+"Legăturile de mai jos te vor ajuta să porneşti la drum cu noul tău sistem de "
+"operare. Îţi dorim o experienţă plăcută şi nu ezita să ne trimiţi părerile "
+"tale."
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "New features"
+msgstr "Funcţii noi"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "See what is new in this release"
+msgstr "Vezi ce este nou în acestă lansare"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid "Important information"
+msgstr "Informație importantă"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid ""
+"Find out about important information, limitations, known issues and their "
+"solution"
+msgstr ""
+"Găsește informație importantă, restricții, probleme cunoscute și soluțiile "
+"lor"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "User guide (PDF)"
+msgstr "Ghidul utilizatorului (PDF)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "Learn all the basics to get started with Linux Mint"
+msgstr "Află toate elementele de bază pentru a începe lucrul cu Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data"
+msgstr "Recuperează date"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data or applications from a previous installation"
+msgstr "Recuperează date sau aplicații dintr-o instalare anterioară"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Software manager"
+msgstr "Manager de aplicații"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Install additional software"
+msgstr "Instalează aplicații adiționale"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat room"
+msgstr "Camera de discuţii"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat live with other users in the chat room"
+msgstr "Conversează în direct cu alți utilizatori în camera de chat"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Forums"
+msgstr "Forumuri"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Seek help from other users in the Linux Mint forums"
+msgstr "Caută ajutor de la alți utilizatori în forumurile Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Tutorials"
+msgstr "Tutoriale"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Find tutorials about Linux Mint"
+msgstr "Caută tutoriale despre Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid "Hardware database"
+msgstr "Bază de date de componente PC"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid ""
+"Find hardware that is compatible with Linux, or information about your "
+"hardware"
+msgstr ""
+"Caută hardware compatibil cu Linux sau informații despre hardware-ul tău"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Idea pool"
+msgstr "Fond de idei"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Submit new ideas to the development team"
+msgstr "Trimite idei noi echipei de dezvoltare"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Get involved"
+msgstr "Implicați-vă"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Find out how to get involved in the Linux Mint project"
+msgstr "Află cum poți să te implici în proiectul Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Donations"
+msgstr "Donaţii"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Make a donation to the Linux Mint project"
+msgstr "Fă o donație proiectului Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Sponsors"
+msgstr "Sponsori"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Apply to become a Linux Mint sponsor"
+msgstr "Aplică pentru a deveni sponsor Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:140
+msgid "Show this dialog at startup"
+msgstr "Afişează acest dialog la pornire"
+
+#: generate_desktop_files:58 generate_desktop_files:72
+msgid "Introduction to Linux Mint"
+msgstr "Introducere în Linux Mint"
+
+#: generate_desktop_files:86
+msgid "Install Multimedia Codecs"
+msgstr "Instalare Codecuri Multimedia"
+
+#: generate_desktop_files:86
+msgid "Add all the missing multimedia codecs"
+msgstr "Adaugă toate codecurile multimedia lipsă"
+
+#~ msgid "Find help"
+#~ msgstr "Găsiți ajutor"
+
+#~ msgid "Contribute to Linux Mint"
+#~ msgstr "Contribuiți la Linux Mint"
+
+#~ msgid "Browse the list of new features"
+#~ msgstr "Răsfoiți lista cu noile caracteristici"
+
+#~ msgid "Download the user guide (PDF)"
+#~ msgstr "Descărcați ghidul utilizatorului (PDF)"
+
+#~ msgid "Visit the forums"
+#~ msgstr "Vizitați forumurile"
+
+#~ msgid "Become a sponsor"
+#~ msgstr "Deveniți sponsor"
+
+#~ msgid "Make a donation"
+#~ msgstr "Faceți o donație"
+
+#~ msgid "Welcome to Linux Mint"
+#~ msgstr "Bine ați venit în Linux Mint"
+
+#~ msgid "Read the release notes"
+#~ msgstr "Citiţi notele de publicare"
+
+#~ msgid "Connect to the chat room"
+#~ msgstr "Conectați-vă la camera de discuții"
+
+#~ msgid ""
+#~ "Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+#~ "as much as we did making it. Please make yourself familiar with the new "
+#~ "features and the documentation and don't hesitate to send us your feedback."
+#~ msgstr ""
+#~ "Bine ați venit și vă mulțumim pentru că aţi ales Linux Mint. Sperăm că o să "
+#~ "vă facă plăcere să-l folosiți pe atât de mult pe cât ne-a plăcut nouă să-l "
+#~ "realizăm. Familiarizaţi-vă cu noua documentație și nu ezitați să ne "
+#~ "trimiteți părerea dumneavoastră."
+
+#, python-format
+#~ msgid "Discover %s"
+#~ msgstr "Descoperiţi %s"

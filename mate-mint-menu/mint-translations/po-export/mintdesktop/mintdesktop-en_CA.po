@@ -1,0 +1,204 @@
+# English (Canada) translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-12-09 16:44+0000\n"
+"PO-Revision-Date: 2013-08-01 00:18+0000\n"
+"Last-Translator: A_Bunny <Unknown>\n"
+"Language-Team: English (Canada) <en_CA@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:110
+msgid "Desktop"
+msgstr "Desktop"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:111
+msgid "Windows"
+msgstr "Windows"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:112
+msgid "Interface"
+msgstr "Interface"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:113
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:160
+msgid "Terminal"
+msgstr "Terminal"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:154
+msgid "Desktop icons"
+msgstr "Desktop icons"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:155
+msgid "Performance"
+msgstr "Performance"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:156
+msgid "Appearance"
+msgstr "Appearance"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:157
+msgid "Icons"
+msgstr "Icons"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:158
+msgid "Context menus"
+msgstr "Context menus"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:159
+msgid "Toolbars"
+msgstr "Toolbars"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:161
+msgid "Window Manager"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:163
+msgid "Select the items you want to see on the desktop:"
+msgstr "Select the items you want to see on the desktop:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:165
+msgid "Computer"
+msgstr "Computer"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:166
+msgid "Home"
+msgstr "Home"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:167
+msgid "Network"
+msgstr "Network"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:168
+msgid "Trash"
+msgstr "Trash"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:169
+msgid "Mounted Volumes"
+msgstr "Mounted Volumes"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:171
+msgid "Don't show window content while dragging them"
+msgstr "Do not show window content while dragging item"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:172
+msgid "Use compositing"
+msgstr "Use compositing"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:173
+msgid "Use system font in titlebar"
+msgstr "Use system font in titlebar"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:174
+msgid "Show fortune cookies"
+msgstr "Show fortune cookies"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:176
+msgid "Buttons layout:"
+msgstr "Buttons layout:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:178
+msgid "Window manager:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:180
+msgid "Show icons on menus"
+msgstr "Show icons on menus"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:181
+msgid "Show icons on buttons"
+msgstr "Show icons on buttons"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:182
+msgid "Show Input Methods menu in context menus"
+msgstr "Show Input Methods menu in context menus"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:183
+msgid "Show Unicode Control Character menu in context menus"
+msgstr "Show Unicode Control Character menu in context menus"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:185
+msgid "Buttons labels:"
+msgstr "Buttons labels:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:186
+msgid "Icon size:"
+msgstr "Icon size:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:210
+msgid "Small"
+msgstr "Small"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:211
+msgid "Large"
+msgstr "Large"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:217
+msgid "Traditional style (Right)"
+msgstr "Traditional style (Right)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:218
+msgid "Mac style (Left)"
+msgstr "Mac style (Left)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:225
+msgid "Marco (stable and reliable)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:226
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:234
+msgid "Compiz (impressive desktop effects)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:228
+msgid ""
+"Log out and log back in for changes to take effect. If things go wrong, run "
+"'mate-wm-recovery' to switch back to Marco."
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:233
+msgid "Xfwm (stable and reliable)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:237
+msgid "Log out and log back in for changes to take effect."
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:246
+msgid "Text below items"
+msgstr "Text below items"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:247
+msgid "Text beside items"
+msgstr "Text beside items"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:248
+msgid "Icons only"
+msgstr "Icons only"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:249
+msgid "Text only"
+msgstr "Text only"
+
+#: generate_desktop_files:25
+msgid "Desktop Settings"
+msgstr "Desktop Settings"
+
+#: generate_desktop_files:25
+msgid "Fine-tune desktop settings"
+msgstr "Fine-tune desktop settings"
+
+#~ msgid "Fine-tune Gnome settings"
+#~ msgstr "Fine-tune Gnome settings"
+
+#~ msgid "Desktop Configuration Tool"
+#~ msgstr "Desktop Configuration Tool"

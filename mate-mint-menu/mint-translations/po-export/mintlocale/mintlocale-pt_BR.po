@@ -1,0 +1,202 @@
+# Brazilian Portuguese translation for linuxmint
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-10-23 22:54+0200\n"
+"PO-Revision-Date: 2014-10-28 01:36+0000\n"
+"Last-Translator: Hugo Leonardo Leal Torres <hugoleal85@hotmail.com>\n"
+"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:13+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintLocale/add.py:41
+msgid "Add a New Language"
+msgstr "Adicionar um Novo Idioma"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:52
+msgid "Install / Remove Languages"
+msgstr "Instalar / Remover Idiomas"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:157
+msgid "Some language packs are missing"
+msgstr "Estão faltando alguns pacotes de idiomas"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:161
+msgid "Fully installed"
+msgstr "Totalmente instalado"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:195
+#: usr/lib/linuxmint/mintLocale/install_remove.py:234
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:471
+msgid "Please wait, this can take some time"
+msgstr "Por favor aguarde, isto pode levar algum tempo"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:197
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:473
+msgid "Installation is complete"
+msgstr "A instalação foi concluída"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:236
+msgid "The related language packs were removed"
+msgstr "O pacotes desse idioma foram removidos"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:271
+msgid "Language Settings"
+msgstr "Configurações de idioma"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:278
+msgid "Apply System-Wide"
+msgstr "Aplicar a todo o sistema"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:282
+msgid "Install / Remove Languages..."
+msgstr "Instalar / Remover idiomas..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:292
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:293
+msgid "Language"
+msgstr "Idioma"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:293
+msgid "Language, interface, date and time..."
+msgstr "Idioma, interface, data e hora..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:295
+msgid "Region"
+msgstr "Região"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:295
+msgid "Numbers, currency, addresses, measurement..."
+msgstr "Números, moeda, endereços, medidas..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:310
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:317
+msgid "Input method"
+msgstr "Método de entrada"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:313
+msgid ""
+"Input methods are used to write symbols and characters which are not present "
+"on the keyboard. They are useful to write in Chinese, Japanese, Korean, "
+"Thai, Vietnamese..."
+msgstr ""
+"Métodos de entrada são usados ​​para escrever símbolos e caracteres que não "
+"estão presentes no teclado. Eles são úteis para escrever em chinês, japonês, "
+"coreano, tailandês, vietnamita..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:500
+msgid "None"
+msgstr "Nenhum"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:528
+msgid "Installed"
+msgstr "Instalado"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:538
+#, python-format
+msgid "%d missing components!"
+msgstr "%d componentes em falta!"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:539
+msgid "Install the missing components"
+msgstr "Instale os componentes em falta"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:544
+#, python-format
+msgid "%d optional components available"
+msgstr "%d componentes opcionais disponíveis"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:545
+msgid "Install the optional components"
+msgstr "Instalar os componentes opcionais"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:550
+msgid "Not installed"
+msgstr "Não instalado"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:551
+#, python-format
+msgid "Add support for %s"
+msgstr "Adicionar suporte para %s"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:558
+msgid "Not supported"
+msgstr "Não suportado"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:568
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:569
+msgid "No locale defined"
+msgstr "Localidade não definida"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:638
+msgid "System locale"
+msgstr "Localização do sistema"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:643
+msgid "Language support"
+msgstr "Suporte a idiomas"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:643
+#, python-format
+msgid "%d languages installed"
+msgstr "%d idiomas instalados"
+
+#: usr/lib/linuxmint/mintLocale/add.ui.h:1
+msgid "Install"
+msgstr "Instalar"
+
+#: usr/lib/linuxmint/mintLocale/add.ui.h:2
+msgid "Install the selected language"
+msgstr "Instalar o idioma selecionado"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:1
+msgid ""
+"<b><small>Note: Installing or upgrading language packs can trigger the "
+"installation of additional languages</small></b>"
+msgstr ""
+"<b><small>Nota: Instalar ou atualizar pacotes de idiomas pode provocar a "
+"instalação de idiomas adicionais</small></b>"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:2
+msgid "Add..."
+msgstr "Adicionar..."
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:3
+msgid "Add a new language"
+msgstr "Adicionar um novo idioma"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:4
+msgid "Remove"
+msgstr "Remover"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:5
+msgid "Remove the selected language"
+msgstr "Remover o idioma selecionado"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:6
+msgid "Install language packs"
+msgstr "Instalar pacotes do idioma"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:7
+msgid ""
+"Install any missing language packs, translations files, dictionaries for the "
+"selected language"
+msgstr ""
+"Instalar qualquer pacote de idioma, arquivos de dicionário ou dicionário "
+"restante para o idioma selecionado."
+
+#: generate_desktop_files:24
+msgid "Languages"
+msgstr "Idiomas"
+
+#: generate_desktop_files:24
+msgid "Language settings"
+msgstr "Configurações de idioma"

@@ -1,0 +1,118 @@
+# Hungarian translation of mintdrivers.
+# Copyright (C) 2013 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mintdrivers package.
+# KAMI <kami911@gmail.com>, 2013-2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mintdrivers\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-09 21:57+0100\n"
+"PO-Revision-Date: 2014-05-11 20:00+0000\n"
+"Last-Translator: KAMI <kami911@gmail.com>\n"
+"Language-Team: Hungarian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+"Language: hu\n"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:33 generate_desktop_files:26
+msgid "Driver Manager"
+msgstr "Illesztőprogram-kezelő"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:43
+msgid ""
+"Drivers cannot be installed.\n"
+"Please connect to the Internet or insert the Linux Mint installation DVD (or "
+"USB stick)."
+msgstr ""
+"Az illesztőprogram nem telepíthető.\n"
+"Csatlakozzon az internethez vagy helyezze be a Linux Mint telepítő DVD-t "
+"vagy pendrive-ot."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:126
+msgid "Applying changes..."
+msgstr "Változtatások alkalmazása…"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:218
+msgid "Re_vert"
+msgstr "_Visszaállítás"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:220
+msgid "_Apply Changes"
+msgstr "Változtatások _alkalmazása"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:222
+msgid "_Cancel"
+msgstr "_Mégse"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:224
+msgid "_Restart..."
+msgstr "Új_raindítás…"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:307
+msgid "This device is using the recommended driver."
+msgstr "Az eszköz az ajánlott illesztőprogramot használja."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:308
+msgid "This device is using an alternative driver."
+msgstr "Az eszköz alternatív illesztőprogramot használ."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:309
+msgid "This device is using a manually-installed driver."
+msgstr "Az eszköz kézi telepítésű illesztőprogramot használ."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:310
+msgid "This device is not working."
+msgstr "Az eszköz nem működik."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:319
+msgid "Continue using a manually installed driver"
+msgstr "Kézi telepítésű illesztőprogram használatának folytatása"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:346
+msgid "recommended"
+msgstr "ajánlott"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:346
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:348
+msgid "Version"
+msgstr "Verzió"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:370
+msgid "Do not use the device"
+msgstr "Ne használja az eszközt"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:388
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:389
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:419
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:472
+msgid "You need to restart the computer to complete the driver changes."
+msgstr ""
+"Az illesztőprogram módosításának befejezéséhez újra kell indítania a "
+"számítógépet."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:486
+#, python-format
+msgid "%(count)d proprietary driver in use."
+msgid_plural "%(count)d proprietary drivers in use."
+msgstr[0] "%(count)d zárt illesztőprogram van használatban."
+msgstr[1] "%(count)d zárt illesztőprogram van használatban."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:491
+msgid "No proprietary drivers are in use."
+msgstr "Nincsenek használatban zárt illesztőprogramok."
+
+#: usr/bin/driver-manager:9
+msgid "Please enter your password to launch the driver manager"
+msgstr "Adja meg a jelszavát az illesztőprogram-kezelő indításához"
+
+#: generate_desktop_files:26
+msgid "Manage the drivers for your devices"
+msgstr "Az eszközökhöz tartozó illesztőprogramok kezelése"

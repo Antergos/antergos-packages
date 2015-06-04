@@ -1,0 +1,581 @@
+# Welsh translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-27 15:05+0300\n"
+"PO-Revision-Date: 2014-11-29 18:44+0000\n"
+"Last-Translator: Rhoslyn Prys <rprys@yahoo.com>\n"
+"Language-Team: Welsh <cy@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:48
+msgid "Menu"
+msgstr "Dewislen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:256
+msgid "Couldn't load plugin:"
+msgstr "Methu llwytho ategyn:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:328
+msgid "Couldn't initialize plugin"
+msgstr "Methu cychwyn ategyn:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:731
+msgid "Advanced MATE Menu"
+msgstr "Dewislen Uwch MATE"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:818
+msgid "Preferences"
+msgstr "Dewisiadau"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:821
+msgid "Edit menu"
+msgstr "Dewislen golygu"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:824
+msgid "Reload plugins"
+msgstr "Ail-lwytho ateion"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:827
+msgid "About"
+msgstr "Ynghylch"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:42
+msgid "Menu preferences"
+msgstr "Dewisiadau dewislen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:45
+msgid "Always start with favorites pane"
+msgstr "Cychwyn gyda'r ffenestr ffefrynnau"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:46
+msgid "Show button icon"
+msgstr "Dangs eicon botwm"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:47
+msgid "Use custom colors"
+msgstr "Defnyddio lliwiau cyfaddas"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:48
+msgid "Show recent documents plugin"
+msgstr "Dangos ategyn dogfennau diweddar"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:49
+msgid "Show applications plugin"
+msgstr "Dangos ategion rhaglenni"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:50
+msgid "Show system plugin"
+msgstr "Dangos ategion system"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:51
+msgid "Show places plugin"
+msgstr "Dangos ategion mannau"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:53
+msgid "Show application comments"
+msgstr "Dangos sylwadau rhaglenni"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:54
+msgid "Show category icons"
+msgstr "Dangos eiconau categori"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:55
+msgid "Hover"
+msgstr "Hofran"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:56
+msgid "Remember the last category or search"
+msgstr "Cofio'r categori neu chwilio diwethaf"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:57
+msgid "Search for packages to install"
+msgstr "Chwilio am becynnau i'w gosod"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:58
+msgid "Swap name and generic name"
+msgstr "Enw cyfnewidfa ac enw generig"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:60
+msgid "Border width:"
+msgstr "LLed border:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:61
+msgid "pixels"
+msgstr "picsel"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:63
+msgid "Opacity:"
+msgstr "Didreiddiad:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:66
+msgid "Button text:"
+msgstr "Testun botwm"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:67
+msgid "Options"
+msgstr "Dewisiadau"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:68
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:251
+msgid "Applications"
+msgstr "Rhaglenni"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:70
+msgid "Theme"
+msgstr "Thema"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:71
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:248
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:249
+msgid "Favorites"
+msgstr "Ffefrynnau"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:72
+msgid "Main button"
+msgstr "Prif fotwm"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:73
+msgid "Plugins"
+msgstr "Ategion"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:75
+msgid "Background:"
+msgstr "Cefndir:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:76
+msgid "Headings:"
+msgstr "Pennawdau:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:77
+msgid "Borders:"
+msgstr "Borderi"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:78
+msgid "Theme:"
+msgstr "Thema:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:82
+msgid "Number of columns:"
+msgstr "Nifer y colofnau:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:83
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:84
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:85
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:86
+msgid "Icon size:"
+msgstr "Maint eicon:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:87
+msgid "Hover delay (ms):"
+msgstr "Oedi wrth hofran (me):"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:88
+msgid "Button icon:"
+msgstr "Eicon botwm:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:89
+msgid "Search command:"
+msgstr "Gorchymyn chwilio"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:91
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:44
+msgid "Places"
+msgstr "Mannau"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:92
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:104
+msgid "Allow Scrollbar"
+msgstr "Caniatau'r Bar Sgrolio"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:93
+msgid "Show GTK Bookmarks"
+msgstr "Dangos Nodau Tudalen GTK"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:94
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:105
+msgid "Height:"
+msgstr "Uchder:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:95
+msgid "Toggle Default Places:"
+msgstr "Toglo Mannau Rhagosodedig:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:96
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:141
+msgid "Computer"
+msgstr "Cyfrifiadur"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:97
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:151
+msgid "Home Folder"
+msgstr "Plygell Cartref"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:98
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:164
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:166
+msgid "Network"
+msgstr "Rhwydwaith"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:99
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:189
+msgid "Desktop"
+msgstr "Penbwrdd"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:100
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:199
+msgid "Trash"
+msgstr "Sbwriel"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:101
+msgid "Custom Places:"
+msgstr "Mannau Cyfaddas:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:103
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:40
+msgid "System"
+msgstr "System"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:106
+msgid "Toggle Default Items:"
+msgstr "Toglo Eitemau Rhagosodedig"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:107
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:136
+msgid "Software Manager"
+msgstr "Rheolwr Meddalwedd"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:108
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:143
+msgid "Package Manager"
+msgstr "Rheolydd Pecynnau"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:109
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:150
+msgid "Control Center"
+msgstr "Canolfan Rheoli"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:110
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:160
+msgid "Terminal"
+msgstr "Terfynnell"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:111
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:177
+msgid "Lock Screen"
+msgstr "Cloi'r Sgrin"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:112
+msgid "Log Out"
+msgstr "Allgofnodi"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:113
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:194
+msgid "Quit"
+msgstr "Gadael"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:115
+msgid "Edit Place"
+msgstr "Golygu'r Fan"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:116
+msgid "New Place"
+msgstr "Man Newydd"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:117
+msgid "Select a folder"
+msgstr "Dewiswch blygell"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:147
+msgid "Keyboard shortcut:"
+msgstr "Llwybr byr bysellfwrdd"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:153
+msgid "Images"
+msgstr "Delweddau"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:271
+msgid "Name"
+msgstr "Enw"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:272
+msgid "Path"
+msgstr "Llwybr"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:287
+msgid "Desktop theme"
+msgstr "Thema Bwrdd Gwaith"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:426
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:457
+msgid "Name:"
+msgstr "Enw"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:427
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:458
+msgid "Path:"
+msgstr "Llwybr:"
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:197
+msgid ""
+"Click to set a new accelerator key for opening and closing the menu.  "
+msgstr ""
+"Cliciwch i osod bysell cyflymydd newydd ar gyfer agor a chau'r ddewislen.  "
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:198
+msgid "Press Escape or click again to cancel the operation.  "
+msgstr "Pwyswch Escape neu glicio eto i ddiddymu'r weithred.  "
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:199
+msgid "Press Backspace to clear the existing keybinding."
+msgstr "Pwyswch Backspace i glirio'r rhwymiad bysell gyfredol"
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:212
+msgid "Pick an accelerator"
+msgstr "Dewiswch gyflymydd"
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:265
+msgid "<not set>"
+msgstr "<heb ei osod>"
+
+#: usr/lib/linuxmint/mintMenu/plugins/recent.py:31
+msgid "Recent documents"
+msgstr "Dogfennau diweddar"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:246
+msgid "Search:"
+msgstr "Chwilio:"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:250
+msgid "All applications"
+msgstr "Pob rhaglen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:634
+#, python-format
+msgid "Search Google for %s"
+msgstr "Chwilio Google am %s"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:641
+#, python-format
+msgid "Search Wikipedia for %s"
+msgstr "Chwilio Wikipedia am %s"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:657
+#, python-format
+msgid "Lookup %s in Dictionary"
+msgstr "Chwilio am %s yn Dictionary"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:664
+#, python-format
+msgid "Search Computer for %s"
+msgstr "Chwilio'r Cyfrifiadur am %s"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:742
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:795
+#, python-format
+msgid "Install package '%s'"
+msgstr "Gosod pecyn '%s'"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:918
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:986
+msgid "Add to desktop"
+msgstr "Ychwanegu i'r bwrdd gwaith"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:919
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:987
+msgid "Add to panel"
+msgstr "Ychwanegu i'r panel"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:921
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:969
+msgid "Insert space"
+msgstr "Mewnosod bwlch"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:922
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:970
+msgid "Insert separator"
+msgstr "Mewnosod ymwahannydd"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:924
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:990
+msgid "Launch when I log in"
+msgstr "Cychwyn wrth i mi fewngofnodi"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:926
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:992
+msgid "Launch"
+msgstr "Cychwyn"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:927
+msgid "Remove from favorites"
+msgstr "Tynnu o'r ffefrynnau"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:929
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:996
+msgid "Edit properties"
+msgstr "Golygu priodweddau"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:968
+msgid "Remove"
+msgstr "Tynnu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:989
+msgid "Show in my favorites"
+msgstr "Dangos yn fy ffefrynnau"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:993
+msgid "Uninstall"
+msgstr "Dadosod"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:994
+msgid "Delete from menu"
+msgstr "Dileu o'r ddewislen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1048
+msgid "Search Google"
+msgstr "Chwilio Google"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1055
+msgid "Search Wikipedia"
+msgstr "Chwilio Wikipedia"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1065
+msgid "Lookup Dictionary"
+msgstr "Geiriadur Chwilio"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1072
+msgid "Search Computer"
+msgstr "Chwilio Cyfrifiadur"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1082
+msgid "Find Software"
+msgstr "Canfod Meddalwedd"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1089
+msgid "Find Tutorials"
+msgstr "Canfod Tiwtorialau"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1096
+msgid "Find Hardware"
+msgstr "Canfod Caledwedd"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1103
+msgid "Find Ideas"
+msgstr "Canfod Syniadau"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1110
+msgid "Find Users"
+msgstr "Canfod Defnyddwyr"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1577
+msgid ""
+"Couldn't save favorites. Check if you have write access to "
+"~/.linuxmint/mintMenu"
+msgstr ""
+"Methu cadw ffefrynnau, Gwiriwch os oes gennych hawl ysgrifennu i "
+"~/.linuxmint/mintMenu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1778
+msgid "All"
+msgstr "Popeth"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1778
+msgid "Show all applications"
+msgstr "Dangos pob rhaglen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:140
+msgid "Browse and install available software"
+msgstr "Pori a gosod y feddalwedd sydd ar gael"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:147
+msgid "Install, remove and upgrade software packages"
+msgstr "Gosod, tynnu a diweddaru meddalwedd"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:157
+msgid "Configure your system"
+msgstr "Ffurfweddu eich system"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:167
+msgid "Use the command line"
+msgstr "Defnyddio'r llinell orchymyn"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:170
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:187
+msgid "Logout"
+msgstr "Allgofnodi"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:174
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:191
+msgid "Log out or switch user"
+msgstr "Allgofnodi neu newid defnyddiwr"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:184
+msgid "Requires password to unlock"
+msgstr "Angen cyfrinair i'w ddatgloi"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:198
+msgid "Shutdown, restart, suspend or hibernate"
+msgstr "Diffodd, ailgychwyn, cysgu neu drwmgysgu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:148
+msgid ""
+"Browse all local and remote disks and folders accessible from this computer"
+msgstr ""
+"Pori'r holl ddisgiau a ffolderi pell a lleol asydd ar gael i'r cyfrifiadur"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:158
+msgid "Open your personal folder"
+msgstr "Agor eich ffolder bersonol"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:173
+msgid "Browse bookmarked and local network locations"
+msgstr "Pori lleoliadau o fewn nodau tudalen a c ar y rhwydwaith leol"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:196
+msgid "Browse items placed on the desktop"
+msgstr "Pori'r holl eitemau ar y bwrdd gwaith"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:210
+msgid "Browse deleted files"
+msgstr "Pori ffeiliau wedi eu dileu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:262
+msgid "Empty trash"
+msgstr "Gwagio'r sbwriel"
+
+#, python-format
+#~ msgid "Remove %s?"
+#~ msgstr "Tynnu %s?"
+
+#~ msgid "Based on USP from S.Chanderbally"
+#~ msgstr "Wed ei seilio ar USP gan S.Chanderbally"
+
+#~ msgid "Please wait, this can take some time"
+#~ msgstr "Arhoswch gall hyn gymryd peth amser"
+
+#~ msgid "Advanced Gnome Menu"
+#~ msgstr "Dewislen Gnome Uwch"
+
+#~ msgid "Application removed successfully"
+#~ msgstr "Rhaglen wedi ei dynnu'n llwyddiannus"
+
+#~ msgid "No matching package found"
+#~ msgstr "Heb ganfod pecyn sy'n cydweddu"
+
+#~ msgid "Do you want to remove this menu entry?"
+#~ msgstr "Hoffech ch dynnu'r cofnod dewislen yma?"
+
+#~ msgid "Packages to be removed"
+#~ msgstr "Pecynnau i'w tynnu"
+
+#~ msgid "The following packages will be removed:"
+#~ msgstr "Bydd y pecynnau canlynol yn cael eu tynnu:"

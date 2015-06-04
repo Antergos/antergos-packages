@@ -1,0 +1,195 @@
+# Kurdish translation for linuxmint
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-10-23 22:54+0200\n"
+"PO-Revision-Date: 2015-04-02 16:35+0000\n"
+"Last-Translator: Sipan Roj <sipanroj@live.com>\n"
+"Language-Team: Kurdish <ku@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:13+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintLocale/add.py:41
+msgid "Add a New Language"
+msgstr "Zimanek Nû lê zêde bike"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:52
+msgid "Install / Remove Languages"
+msgstr "Zimanan Sazbike / Jêbibe"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:157
+msgid "Some language packs are missing"
+msgstr "Çendek bestekên ziman windane"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:161
+msgid "Fully installed"
+msgstr "Giştî sazkirine"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:195
+#: usr/lib/linuxmint/mintLocale/install_remove.py:234
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:471
+msgid "Please wait, this can take some time"
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:197
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:473
+msgid "Installation is complete"
+msgstr "Sazkirin temam bu"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:236
+msgid "The related language packs were removed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:271
+msgid "Language Settings"
+msgstr "Mîhengên Ziman"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:278
+msgid "Apply System-Wide"
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:282
+msgid "Install / Remove Languages..."
+msgstr "Zimanan Sazbike / Rake..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:292
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:293
+msgid "Language"
+msgstr "Ziman"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:293
+msgid "Language, interface, date and time..."
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:295
+msgid "Region"
+msgstr "Herêm"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:295
+msgid "Numbers, currency, addresses, measurement..."
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:310
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:317
+msgid "Input method"
+msgstr "Şêweyê têketinê"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:313
+msgid ""
+"Input methods are used to write symbols and characters which are not present "
+"on the keyboard. They are useful to write in Chinese, Japanese, Korean, "
+"Thai, Vietnamese..."
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:500
+msgid "None"
+msgstr "Ne yek jî"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:528
+msgid "Installed"
+msgstr "Sazbûye"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:538
+#, python-format
+msgid "%d missing components!"
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:539
+msgid "Install the missing components"
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:544
+#, python-format
+msgid "%d optional components available"
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:545
+msgid "Install the optional components"
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:550
+msgid "Not installed"
+msgstr "Saznebûye"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:551
+#, python-format
+msgid "Add support for %s"
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:558
+msgid "Not supported"
+msgstr "Piştgirî ne daye"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:568
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:569
+msgid "No locale defined"
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:638
+msgid "System locale"
+msgstr "Herêma pergêlê"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:643
+msgid "Language support"
+msgstr "Piştgirtiya ziman"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:643
+#, python-format
+msgid "%d languages installed"
+msgstr "%d ziman sazbûne"
+
+#: usr/lib/linuxmint/mintLocale/add.ui.h:1
+msgid "Install"
+msgstr "Sazbike"
+
+#: usr/lib/linuxmint/mintLocale/add.ui.h:2
+msgid "Install the selected language"
+msgstr "Zimanên hilbijartî sazbike"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:1
+msgid ""
+"<b><small>Note: Installing or upgrading language packs can trigger the "
+"installation of additional languages</small></b>"
+msgstr ""
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:2
+msgid "Add..."
+msgstr "Zêde bike"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:3
+msgid "Add a new language"
+msgstr "Zimanek zêde bike"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:4
+msgid "Remove"
+msgstr "Rake"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:5
+msgid "Remove the selected language"
+msgstr "Zimanê hilbijartî rake"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:6
+msgid "Install language packs"
+msgstr "Bestekên ziman sazbike"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:7
+msgid ""
+"Install any missing language packs, translations files, dictionaries for the "
+"selected language"
+msgstr ""
+
+#: generate_desktop_files:24
+msgid "Languages"
+msgstr "Ziman"
+
+#: generate_desktop_files:24
+msgid "Language settings"
+msgstr "Mîhengên ziman"

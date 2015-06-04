@@ -1,0 +1,201 @@
+# Nepali translation for linuxmint
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-12-09 16:44+0000\n"
+"PO-Revision-Date: 2014-03-10 07:17+0000\n"
+"Last-Translator: Niroj Bista <nirooj56@outlook.com>\n"
+"Language-Team: Nepali <ne@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:110
+msgid "Desktop"
+msgstr "डेस्कटप"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:111
+msgid "Windows"
+msgstr "विन्डोज"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:112
+msgid "Interface"
+msgstr "इन्टरफेस"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:113
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:160
+msgid "Terminal"
+msgstr "टर्मिनल"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:154
+msgid "Desktop icons"
+msgstr "डेस्कटप आइकनहरु"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:155
+msgid "Performance"
+msgstr "कार्य प्रदर्शन"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:156
+msgid "Appearance"
+msgstr "देखावट"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:157
+msgid "Icons"
+msgstr "आइकन्स"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:158
+msgid "Context menus"
+msgstr "संदर्भ मेनुहरु"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:159
+msgid "Toolbars"
+msgstr "औजारपट्टीहरू"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:161
+msgid "Window Manager"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:163
+msgid "Select the items you want to see on the desktop:"
+msgstr "डेस्कटपमा देख्न चाहनुहुने सामग्रीहरु चुन्नुस"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:165
+msgid "Computer"
+msgstr "कम्प्युटर"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:166
+msgid "Home"
+msgstr "गृह"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:167
+msgid "Network"
+msgstr "नेटवर्क"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:168
+msgid "Trash"
+msgstr "टोकरी"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:169
+msgid "Mounted Volumes"
+msgstr "माउन्ट गरिएका भोलुमहरू"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:171
+msgid "Don't show window content while dragging them"
+msgstr "केहि सार्दा त्यसको सामग्री नदेखाउनुहोला"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:172
+msgid "Use compositing"
+msgstr "रचनाको प्रयोग गर्नुहोस् !"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:173
+msgid "Use system font in titlebar"
+msgstr "शीर्षक पट्टीमा सिस्टम फन्ट प्रयोग गर"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:174
+msgid "Show fortune cookies"
+msgstr "भाग्य कुकीज़ देखाऊ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:176
+msgid "Buttons layout:"
+msgstr "बटनहरुको लेआउट:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:178
+msgid "Window manager:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:180
+msgid "Show icons on menus"
+msgstr "मेनुहरुमा आइकनहरु देखाऊ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:181
+msgid "Show icons on buttons"
+msgstr "बटनहरुमा आइकनहरु देखाऊ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:182
+msgid "Show Input Methods menu in context menus"
+msgstr "सन्दर्भ मेनुमा इनपुट विधि मेनु देखाउनुहोस् !"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:183
+msgid "Show Unicode Control Character menu in context menus"
+msgstr "सन्दर्भ मेनुमा यूनिकोड नियन्त्रण क्यारेक्टर मेनु देखाउनुहोस् !"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:185
+msgid "Buttons labels:"
+msgstr "बटनका लाबेलहरु:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:186
+msgid "Icon size:"
+msgstr "आइकन आकार:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:210
+msgid "Small"
+msgstr "सानो"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:211
+msgid "Large"
+msgstr "ठूलो"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:217
+msgid "Traditional style (Right)"
+msgstr "परम्परागत शैली (दायिने)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:218
+msgid "Mac style (Left)"
+msgstr "माक शैली (देब्रे)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:225
+msgid "Marco (stable and reliable)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:226
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:234
+msgid "Compiz (impressive desktop effects)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:228
+msgid ""
+"Log out and log back in for changes to take effect. If things go wrong, run "
+"'mate-wm-recovery' to switch back to Marco."
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:233
+msgid "Xfwm (stable and reliable)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:237
+msgid "Log out and log back in for changes to take effect."
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:246
+msgid "Text below items"
+msgstr "सामग्रीका तल अक्षर"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:247
+msgid "Text beside items"
+msgstr "सामग्रीका संगै अक्षर"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:248
+msgid "Icons only"
+msgstr "आइकनहरु मात्र"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:249
+msgid "Text only"
+msgstr "अक्षरहरु मात्र"
+
+#: generate_desktop_files:25
+msgid "Desktop Settings"
+msgstr "डेस्कटप सेटिङहरु"
+
+#: generate_desktop_files:25
+msgid "Fine-tune desktop settings"
+msgstr "डेस्कटपक सेटिङहरु राम्रो बनाउ"
+
+#~ msgid "Desktop Configuration Tool"
+#~ msgstr "डेस्कटप कन्फिगर औजार"

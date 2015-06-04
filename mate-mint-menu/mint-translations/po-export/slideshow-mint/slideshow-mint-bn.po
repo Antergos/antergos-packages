@@ -1,0 +1,325 @@
+# Bengali translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-10-29 12:31+0000\n"
+"PO-Revision-Date: 2011-05-13 11:42+0000\n"
+"Last-Translator: Ayon Khan <ayonkhan@gmail.com>\n"
+"Language-Team: Bengali <bn@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:10+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/chat.html:1
+msgid "Stay connected"
+msgstr "সংযুক্ত থাকুন"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/chat.html:8
+msgid ""
+"Keep in touch with your friends and contacts, by email, messenger or on your "
+"favorite social networks. Linux Mint provides all you need to interact with "
+"Twitter, Facebook, MSN, ICQ, GoogleTalk, AIM, Yahoo and many other networks."
+msgstr ""
+"ই-মেইল, ম্যাসেঞ্জার অথবা আপনার পছন্দের যেকোন সামাজিক নেটওয়ার্কে বন্ধুদের "
+"সাখে সংযুক্ত থাকুন। লিনাক্স মিন্ট আপনাকে টুইটার, ফেসবুক, এমএসএন, আইসিকিউ, "
+"গুগলটক, এআইএম, ইয়াহু এবং আরও অন্যান্য নেটওয়ার্ক ব্যবহারের সুবিধা প্রদান করে।"
+
+#. type: Content of: <div><div><div><h2>
+#: slideshows/mint/slides/chat.html:12 slideshows/mint/slides/music.html:12
+#: slideshows/mint/slides/office.html:12 slideshows/mint/slides/photos.html:12
+#: slideshows/mint/slides/video.html:12 slideshows/mint/slides/web.html:12
+msgid "Included software"
+msgstr "প্রদও সফটওয়্যার"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:16
+msgid "Thunderbird"
+msgstr "থান্ডারবার্ড"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:20
+msgid "Pidgin"
+msgstr "পিজিন"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:24
+msgid "Xchat"
+msgstr "এক্সচ্যাট"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/customize.html:1
+msgid "Customize your desktop"
+msgstr "আপনার ডেস্কটপ কাস্টোমাইজ করুন"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/customize.html:8
+msgid ""
+"Make yourself at home and modify any aspect of your desktop. Choose from a "
+"large variety of themes, icons and backgrounds. Linux Mint is open and easy "
+"to customize."
+msgstr ""
+"আপনার ডেস্কটপকে নিশ্চিন্তে বিভিন্ন আকার-আকৃতিতে সাজান। থিম, আইকন এবং "
+"ব্যকগ্রাউন্ডসমূহের বিশাল সংগ্রহশালা থেকে নির্বাচন করুন। আর লিনাক্স মিন্ট "
+"কাস্টোমাইজ করা খুবই সহজ।"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/help.html:1
+msgid "Find help"
+msgstr "সাহায্য খুঁজুন"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/help.html:8
+msgid ""
+"If you're curious about something or if you're facing a problem, simply ask "
+"around. Linux Mint is the 4th most widely used operating system in the "
+"World. It comes with a user guide, a community website, a collection of "
+"tutorials, active forums and chat rooms and one of the most dynamic "
+"communities on the Internet."
+msgstr ""
+"আপনি যদি কোন কিছু সম্পর্কে কৌতূহলী হোন অথবা কোন সমস্যার সম্মুখীন হলে, "
+"আশেপাশে খুঁজে দেখুন। পৃথিবীর সর্বত্র হোম কম্পিউটারে ব্যবহৃত অপারেটিং "
+"সিস্টেমগুলোর মধ্যে লিনাক্স মিন্টের অবস্থান ৪র্থ। এর সাথে আপনি পাচ্ছেন একটি "
+"ব্যবহারকারী নির্দেশিকা, একটি কমিউনিটি ওয়েবসাইট, নির্দেশিকাসমূহের বিশাল "
+"সংগ্রহশালা, সক্রিয় ফোরাম, চ্যাট রুম এবং ইন্টারনেটে অন্যতম অগ্রসরমান একটি "
+"কমিউনিটি।"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/music.html:1
+msgid "Listen to music and CDs"
+msgstr "মিউজিক এবং সিডিতে গান শুনুন"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/music.html:8
+msgid ""
+"Enjoy your music with Banshee. Plug-in your MP3 player or extract songs from "
+"your audio CDs. Listen to podcasts and online radios. Discover new artists "
+"on Last.fm, the Internet Archive and the Amazon MP3 Store."
+msgstr ""
+"বানশির সাথে আপনার মিউজিক উপভোগ করুন। এমপিথ্রি প্লেয়ার প্লাগ-ইন করুন অথবা "
+"অডিও সিডি থেকে গান এক্সট্রাক্ট করুন। পডক্যাস্ট এবং অনলাইন রেডিও শুনুন। "
+"আবিষ্কার করুন নতুন সংঙ্গীত শিল্পীদের লাস্ট.এফএম, ইন্টারনেট আর্কাইভ এবং "
+"অ্যামাজন এমপিথ্রি স্টোর থেকে।"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/music.html:16
+msgid "Banshee"
+msgstr "বানশি"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/music.html:20
+msgid "Audio codecs"
+msgstr "অডিও কোডেকসমূহ"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/office.html:1
+msgid "Be productive"
+msgstr "সৃজনশীল হোন"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/office.html:8
+msgid ""
+"Use LibreOffice to create professional documents, spreadsheets and "
+"presentations that are fully compatible with Microsoft Office. Share "
+"printers or access them remotely."
+msgstr ""
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:16
+msgid "LibreOffice"
+msgstr "লিব্রেঅফিস"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:20
+msgid "Microsoft Office Support"
+msgstr ""
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:24
+msgid "PDF Support"
+msgstr ""
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/photos.html:1
+msgid "Manage your photos"
+msgstr "ছবি ব্যবস্থাপনা"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/photos.html:8
+msgid ""
+"Organize, enjoy and share your photos with gThumb or Picasa. Export your "
+"albums to CD, to the Web, or to online services such as Flickr or PicasaWeb "
+"to share them with friends and family."
+msgstr ""
+"জিথাম্ব বা পিকাসার মাধ্যমে আপনার ছবি গুছিয়ে রাখুন, উপভোগ এবং শেয়ার করুন। "
+"সিডি, ওয়েব কিংবা অনলাইন সেবাসমূহ যেমনঃ ফ্লিকার বা পিকাসাওয়েবে আপনার "
+"এ্যালবামসমূহ এক্সপোর্ট করুন।"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/photos.html:16
+msgid "gThumb"
+msgstr "জিথাম্ব"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/software.html:1
+msgid "Install software"
+msgstr "সফটওয়্যার ইনস্টল করুন"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/software.html:8
+msgid ""
+"Browse through 30,000 free applications from the Software Manager. Enjoy "
+"screenshots and user reviews. Install software with one click of the mouse."
+msgstr ""
+"সফটওয়্যার ম্যানেজারের মাধ্যমে ৩০,০০০ – এরও বেশি বিনামূল্য অ্যাপ্লিকেশন "
+"ব্রাউজ করুন। স্ক্রিনশট এবং ইউজার রিভিউ উপভোগ করুন। মাউসের একটি মাত্র ক্লিকে "
+"সফটওয়্যার ইনস্টল করুন।"
+
+#. type: Content of: <div><div><div><h2>
+#: slideshows/mint/slides/software.html:12
+#: slideshows/mint/slides/windows.html:12
+msgid "Featured software"
+msgstr "ফিচারর্ড সফটওয়্যার"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:16
+msgid "Filezilla"
+msgstr "ফাইলযিলা"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:20
+msgid "Skype"
+msgstr "স্কাইপ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:24
+msgid "Audacity"
+msgstr "অডাসিটি"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:28
+msgid "Picasa"
+msgstr "পিকাসা"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:32
+msgid "Google Earth"
+msgstr "গুগল আর্থ"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/updates.html:1
+msgid "Keep your system up to date"
+msgstr "আপনার সিস্টেম আপ টু ডেট রাখুন"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/updates.html:8
+msgid ""
+"Receive fixes and security updates all in one place, for the entire system, "
+"including the software you install."
+msgstr ""
+"সমগ্র সিস্টেমের জন্য ফিক্সেস এবং সিকিউরিটি আপডেটসমূহ গ্রহণ করুন একটি মাত্র "
+"জায়গা থেকেই, এমনকি যেই সফটওয়্যারগুলো আপনি নিজে ইনস্টল করেছেন সেগুলোর "
+"জন্যেও।"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/video.html:1
+msgid "Watch videos and DVDs"
+msgstr "ভিডিও এবং ডিভিডি দেখুন"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/video.html:8
+msgid ""
+"Insert a DVD and enjoy a movie. Watch high-definition videos with VLC."
+msgstr ""
+"ডিভিডি প্রবেশ করুন এবং মুভি উপভোগ করুন। ভিএলসির মাধ্যমে হাই-ডেফিনেশন মুভি "
+"দেখুন।"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:16
+msgid "VLC"
+msgstr "ভিএলসি"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:20
+msgid "Totem"
+msgstr "টোটেম"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:24
+msgid "Video codecs"
+msgstr "ভিডিও কোডেকসমূহ"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/web.html:1
+msgid "Browse the web"
+msgstr "ওয়েব ব্রাউজ করুন"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/web.html:8
+msgid ""
+"Be fast and safe on the web with Mozilla Firefox. Enjoy Java, Flash and "
+"multimedia content."
+msgstr ""
+"মোজিলা ফায়ারফক্সের মাধ্যমে দ্রুত এবং নিরাপদে ওয়েব ব্রাউজ করুন। জাভা, "
+"ফ্ল্যাশ এবং মাল্টিমিডিয়া কন্টেন্টসমূহ উপভোগ করুন।"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:16
+msgid "Firefox"
+msgstr "ফায়ারফক্স"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:20
+msgid "Flash"
+msgstr "ফ্ল্যাশ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:24
+msgid "Java"
+msgstr "জাভা"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/welcome.html:1
+msgid "Welcome to Linux Mint"
+msgstr "লিনাক্স মিন্টে স্বাগতম"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/welcome.html:8
+msgid ""
+"Welcome and thank you for choosing Linux Mint. This slideshow will show you "
+"around while the system is being installed on your computer."
+msgstr ""
+"স্বাগতম এবং লিনাক্স মিন্ট নির্বাচনের জন্য আপনাকে ধন্যবাদ। সিস্টেমে ইনস্টলের "
+"সময় এই স্লাইডশোটি আপনাকে লিনাক্স মিন্ট সম্পর্কে কিছুটা ধারণা দেবে।"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/windows.html:1
+msgid "Run Windows software"
+msgstr "উইন্ডোজের সফটওয়্যার চালান"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/windows.html:8
+msgid ""
+"Install Wine and run Windows software in Linux Mint. Or install Virtualbox, "
+"and run Windows itself within Linux Mint."
+msgstr ""
+"ওয়াইন ইনস্টল করে লিনাক্স মিন্টে উইন্ডোজের সফটওয়্যার চালান। অথবা লিনাক্স "
+"মিন্টে ভার্চুয়াল বক্স ইনস্টল করে সেটিতে উইন্ডোজ চালান।"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/windows.html:16
+msgid "Wine"
+msgstr "ওয়াইন"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/windows.html:20
+msgid "Virtualbox"
+msgstr "ভার্চুয়ালবক্স"

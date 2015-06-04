@@ -1,0 +1,616 @@
+# Polish translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-27 15:05+0300\n"
+"PO-Revision-Date: 2014-11-27 18:45+0000\n"
+"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
+"Language-Team: Polish <pl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:48
+msgid "Menu"
+msgstr "Menu"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:256
+msgid "Couldn't load plugin:"
+msgstr "Nie można załadować wtyczki:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:328
+msgid "Couldn't initialize plugin"
+msgstr "Nie można uruchomić wtyczki"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:731
+msgid "Advanced MATE Menu"
+msgstr "Zaawansowane menu MATE"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:818
+msgid "Preferences"
+msgstr "Właściwości"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:821
+msgid "Edit menu"
+msgstr "Edytuj menu"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:824
+msgid "Reload plugins"
+msgstr "Przeładuj wtyczki"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:827
+msgid "About"
+msgstr "O programie"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:42
+msgid "Menu preferences"
+msgstr "Właściwości menu"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:45
+msgid "Always start with favorites pane"
+msgstr "Zawsze uruchamiaj z panelem ulubionych"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:46
+msgid "Show button icon"
+msgstr "Pokaż ikonę przycisku"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:47
+msgid "Use custom colors"
+msgstr "Użyj własnych kolorów"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:48
+msgid "Show recent documents plugin"
+msgstr "Wtyczka wyświetlania ostatnio używanych dokumentów"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:49
+msgid "Show applications plugin"
+msgstr "Wtyczka wyświetlania programów"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:50
+msgid "Show system plugin"
+msgstr "Wtyczka wyświetlania systemu"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:51
+msgid "Show places plugin"
+msgstr "Wtyczka wyświetlania miejsc"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:53
+msgid "Show application comments"
+msgstr "Pokaż komentarze do programów"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:54
+msgid "Show category icons"
+msgstr "Pokaż ikony kategorii"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:55
+msgid "Hover"
+msgstr "Podświetlenie"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:56
+msgid "Remember the last category or search"
+msgstr "Pamiętaj ostatnią kategorię lub wyszukanie"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:57
+msgid "Search for packages to install"
+msgstr "Wyszukaj pakiety do instalacji"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:58
+msgid "Swap name and generic name"
+msgstr "Zmień nazwę i nazwę ogólną"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:60
+msgid "Border width:"
+msgstr "Szerokość obramowania:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:61
+msgid "pixels"
+msgstr "pikseli"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:63
+msgid "Opacity:"
+msgstr "Nieprzezroczystość:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:66
+msgid "Button text:"
+msgstr "Tekst przycisku:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:67
+msgid "Options"
+msgstr "Opcje"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:68
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:251
+msgid "Applications"
+msgstr "Programy"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:70
+msgid "Theme"
+msgstr "Motyw"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:71
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:248
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:249
+msgid "Favorites"
+msgstr "Ulubione"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:72
+msgid "Main button"
+msgstr "Przycisk główny"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:73
+msgid "Plugins"
+msgstr "Wtyczki"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:75
+msgid "Background:"
+msgstr "Tło:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:76
+msgid "Headings:"
+msgstr "Nagłówki:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:77
+msgid "Borders:"
+msgstr "Ramki:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:78
+msgid "Theme:"
+msgstr "Motyw:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:82
+msgid "Number of columns:"
+msgstr "Liczba kolumn:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:83
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:84
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:85
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:86
+msgid "Icon size:"
+msgstr "Rozmiar ikony:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:87
+msgid "Hover delay (ms):"
+msgstr "Opóżnienie podświetlenia (ms):"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:88
+msgid "Button icon:"
+msgstr "Ikona przycisku:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:89
+msgid "Search command:"
+msgstr "Polecenie szukania:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:91
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:44
+msgid "Places"
+msgstr "Miejsca"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:92
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:104
+msgid "Allow Scrollbar"
+msgstr "Umożliwiaj pasek przewijania"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:93
+msgid "Show GTK Bookmarks"
+msgstr "Pokaż zakładki GTK"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:94
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:105
+msgid "Height:"
+msgstr "Wysokość:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:95
+msgid "Toggle Default Places:"
+msgstr "Przełącznik domyślnej lokalizacji:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:96
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:141
+msgid "Computer"
+msgstr "Komputer"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:97
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:151
+msgid "Home Folder"
+msgstr "Katalog domowy"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:98
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:164
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:166
+msgid "Network"
+msgstr "Sieć"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:99
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:189
+msgid "Desktop"
+msgstr "Pulpit"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:100
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:199
+msgid "Trash"
+msgstr "Kosz"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:101
+msgid "Custom Places:"
+msgstr "Własne miejsca:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:103
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:40
+msgid "System"
+msgstr "System"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:106
+msgid "Toggle Default Items:"
+msgstr "Przełącznik domyślnych elementów:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:107
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:136
+msgid "Software Manager"
+msgstr "Menedżer oprogramowania"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:108
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:143
+msgid "Package Manager"
+msgstr "Menedżer pakietów"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:109
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:150
+msgid "Control Center"
+msgstr "Centrum sterowania"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:110
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:160
+msgid "Terminal"
+msgstr "Terminal"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:111
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:177
+msgid "Lock Screen"
+msgstr "Zablokuj ekran"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:112
+msgid "Log Out"
+msgstr "Wyloguj"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:113
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:194
+msgid "Quit"
+msgstr "Zakończ"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:115
+msgid "Edit Place"
+msgstr "Edytuj miejsce"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:116
+msgid "New Place"
+msgstr "Nowe miejsce"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:117
+msgid "Select a folder"
+msgstr "Wybierz katalog"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:147
+msgid "Keyboard shortcut:"
+msgstr "Skrót klawiszowy:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:153
+msgid "Images"
+msgstr "Obrazy"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:271
+msgid "Name"
+msgstr "Nazwa"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:272
+msgid "Path"
+msgstr "Ścieżka"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:287
+msgid "Desktop theme"
+msgstr "Motyw pulpitu"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:426
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:457
+msgid "Name:"
+msgstr "Nazwa:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:427
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:458
+msgid "Path:"
+msgstr "Ścieżka:"
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:197
+msgid ""
+"Click to set a new accelerator key for opening and closing the menu.  "
+msgstr ""
+"Kliknij, aby ustawić nowy klawisz skrótu do otwierania i zamykania menu.  "
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:198
+msgid "Press Escape or click again to cancel the operation.  "
+msgstr "Naciśnij Escape lub kliknij ponownie, aby anulować operację.  "
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:199
+msgid "Press Backspace to clear the existing keybinding."
+msgstr ""
+"Naciśnij klawisz Backspace, aby usunąć istniejącą kombinacje klawiszy."
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:212
+msgid "Pick an accelerator"
+msgstr "Wybierz akcelerator"
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:265
+msgid "<not set>"
+msgstr "<nie ustawiono>"
+
+#: usr/lib/linuxmint/mintMenu/plugins/recent.py:31
+msgid "Recent documents"
+msgstr "Ostatnio używane dokumenty"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:246
+msgid "Search:"
+msgstr "Szukaj:"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:250
+msgid "All applications"
+msgstr "Wszystkie programy"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:634
+#, python-format
+msgid "Search Google for %s"
+msgstr "Przeszukaj Google w poszukiwaniu %s"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:641
+#, python-format
+msgid "Search Wikipedia for %s"
+msgstr "Przeszukaj Wikipedię w poszukiwaniu %s"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:657
+#, python-format
+msgid "Lookup %s in Dictionary"
+msgstr "Wyszukaj %s w Słowniku"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:664
+#, python-format
+msgid "Search Computer for %s"
+msgstr "Przeszukaj komputer w poszukiwaniu %s"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:742
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:795
+#, python-format
+msgid "Install package '%s'"
+msgstr "Instaluj pakiet '%s'"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:918
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:986
+msgid "Add to desktop"
+msgstr "Dodaj do pulpitu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:919
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:987
+msgid "Add to panel"
+msgstr "Dodaj do panelu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:921
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:969
+msgid "Insert space"
+msgstr "Wstaw odstęp"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:922
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:970
+msgid "Insert separator"
+msgstr "Wstaw separator"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:924
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:990
+msgid "Launch when I log in"
+msgstr "Włącz po zalogowaniu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:926
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:992
+msgid "Launch"
+msgstr "Uruchom"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:927
+msgid "Remove from favorites"
+msgstr "Usuń z ulubionych"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:929
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:996
+msgid "Edit properties"
+msgstr "Modyfikuj właściwości"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:968
+msgid "Remove"
+msgstr "Usuń"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:989
+msgid "Show in my favorites"
+msgstr "Pokaż w moich ulubionych"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:993
+msgid "Uninstall"
+msgstr "Odinstaluj"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:994
+msgid "Delete from menu"
+msgstr "Usuń z menu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1048
+msgid "Search Google"
+msgstr "Szukaj w Google"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1055
+msgid "Search Wikipedia"
+msgstr "Szukaj w Wikipedii"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1065
+msgid "Lookup Dictionary"
+msgstr "Wyszukaj w słowniku"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1072
+msgid "Search Computer"
+msgstr "Szukaj komputera"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1082
+msgid "Find Software"
+msgstr "Znajdź oprogramowanie"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1089
+msgid "Find Tutorials"
+msgstr "Znajdź przewodniki"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1096
+msgid "Find Hardware"
+msgstr "Znajdź sprzęt"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1103
+msgid "Find Ideas"
+msgstr "Znajdź pomysły"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1110
+msgid "Find Users"
+msgstr "Znajdź użytkowników"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1577
+msgid ""
+"Couldn't save favorites. Check if you have write access to "
+"~/.linuxmint/mintMenu"
+msgstr ""
+"Nie można zapisać ulubionych. Sprawdź czy masz prawa zapisu do "
+"~/.linuxmint/mintMenu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1778
+msgid "All"
+msgstr "Wszystko"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1778
+msgid "Show all applications"
+msgstr "Pokaż wszystkie programy"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:140
+msgid "Browse and install available software"
+msgstr "Przeglądaj i instaluj dostępne oprogramowanie"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:147
+msgid "Install, remove and upgrade software packages"
+msgstr "Instalacja, usuwanie i aktualizacja pakietów z oprogramowaniem"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:157
+msgid "Configure your system"
+msgstr "Konfiguracja systemu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:167
+msgid "Use the command line"
+msgstr "Użyj wiersza poleceń"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:170
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:187
+msgid "Logout"
+msgstr "Wyloguj"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:174
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:191
+msgid "Log out or switch user"
+msgstr "Wyloguj lub zmień użytkownika"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:184
+msgid "Requires password to unlock"
+msgstr "Wymagane hasło do odblokowania"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:198
+msgid "Shutdown, restart, suspend or hibernate"
+msgstr "Wyłącz, zrestartuj, uśpij lub hibernuj"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:148
+msgid ""
+"Browse all local and remote disks and folders accessible from this computer"
+msgstr ""
+"Przeglądanie wszystkich lokalnych i zdalnych dysków oraz katalogów "
+"dostępnych z tego komputera"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:158
+msgid "Open your personal folder"
+msgstr "Otwiera osobisty katalog użytkownika"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:173
+msgid "Browse bookmarked and local network locations"
+msgstr "Przeglądanie zakładek i położeń w sieci lokalnej"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:196
+msgid "Browse items placed on the desktop"
+msgstr "Przeglądanie elementów na pulpicie"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:210
+msgid "Browse deleted files"
+msgstr "Przeglądaj usunięte pliki"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:262
+msgid "Empty trash"
+msgstr "Opróżnij kosz"
+
+#~ msgid "Show sidepane"
+#~ msgstr "Pokaż pasek boczny"
+
+#~ msgid "No matching package found"
+#~ msgstr "Nie znaleziono pasującego pakietu"
+
+#~ msgid "Do you want to remove this menu entry?"
+#~ msgstr "Czy chcesz usunąć wybrany wpis menu?"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Pokaż ostatnie dokumenty"
+
+#~ msgid "Colors"
+#~ msgstr "Kolory"
+
+#~ msgid "File not found"
+#~ msgstr "Plik nie odnaleziony"
+
+#, python-format
+#~ msgid "Show package '%s'"
+#~ msgstr "Pokaż pakiet '%s'"
+
+#~ msgid "Not a valid .menu file"
+#~ msgstr "To nie jest poprawny plik .menu"
+
+#~ msgid "Not a .menu file"
+#~ msgstr "To nie jest plik .menu"
+
+#~ msgid "Filter:"
+#~ msgstr "Filtr:"
+
+#, python-format
+#~ msgid "Search repositories for '%s'"
+#~ msgstr "Przeszukaj repozytoria w poszukiwaniu '%s'"
+
+#, python-format
+#~ msgid "Search portal for '%s'"
+#~ msgstr "Przeszukaj portal w poszukiwaniu '%s'"
+
+#~ msgid "Please wait, this can take some time"
+#~ msgstr "Proszę czekać, to może trochę potrwać"
+
+#~ msgid "Packages to be removed"
+#~ msgstr "Pakiety do usunięcia"
+
+#~ msgid "Based on USP from S.Chanderbally"
+#~ msgstr "Oparty na USP S. Chanderbally'ego"
+
+#~ msgid "Advanced Gnome Menu"
+#~ msgstr "Zaawansowane menu Gnome"
+
+#, python-format
+#~ msgid "Remove %s?"
+#~ msgstr "Usunąć %s?"
+
+#~ msgid "The following packages will be removed:"
+#~ msgstr "Następujące pakiety zostaną usunięte:"
+
+#~ msgid "Application removed successfully"
+#~ msgstr "Program usunięty pomyślnie"

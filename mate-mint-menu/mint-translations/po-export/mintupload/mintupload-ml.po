@@ -1,0 +1,380 @@
+# Malayalam translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-08-30 16:37+0100\n"
+"PO-Revision-Date: 2012-11-09 23:04+0000\n"
+"Last-Translator: praveenp <Unknown>\n"
+"Language-Team: Malayalam <ml@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:30
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:14
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:24
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:73
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:103
+msgid "Upload Manager"
+msgstr "അപ്‌ലോഡ്‌ മാനേജര്‍"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:71
+#, python-format
+msgid "The upload to '%(service)s' was cancelled"
+msgstr "'%(service)s' എന്നതിലോട്ടുള്ള അപ്‌ലോഡ് റദ്ദാക്കി"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:83
+#, python-format
+msgid "Upload to '%s' failed: "
+msgstr "'%s' എന്നതിലോട്ടുള്ള അപ്‌ലോഡ് പരാജയപ്പെട്ടു: "
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:89
+#, python-format
+msgid "Successfully uploaded %(number)d files to '%(service)s'"
+msgstr ""
+"%(number)d ഫയലുകൾ '%(service)s' എന്നതിലോട്ട് വിജയകരമായി അപ്‌ലോഡ് ചെയ്തു"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:91
+#, python-format
+msgid "Successfully uploaded 1 file to '%(service)s'"
+msgstr "'%(service)s' എന്നതിലേയ്ക്ക് ഒരു ഫയൽ വിജയകരമായി അപ്‌ലോഡ് ചെയ്തു"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:102
+msgid "Do you want to cancel this upload?"
+msgstr "ഈ അപ്‌ലോഡ് താങ്കൾക്ക് റദ്ദാക്കണമെന്നുണ്ടോ?"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:103
+msgid "Cancel"
+msgstr "റദ്ദാക്കുക"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:104
+msgid "Run in the background"
+msgstr "പിന്നാമ്പുറത്ത് പ്രവർത്തിക്കുക"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:107
+msgid "Cancel upload?"
+msgstr "അപ്‌ലോഡ് റദ്ദാക്കുക"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:127
+#, python-format
+msgid "Uploading %(number)d files to %(service)s"
+msgstr "%(number)d ഫയലുകൾ %(service)s എന്നതിലേയ്ക്ക് അപ്‌ലോഡ് ചെയ്യുന്നു"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:128
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:236
+#, python-format
+msgid "%(percentage)s of %(number)d files - Uploading to %(service)s"
+msgstr "%(number)d പ്രമാണങ്ങളുടെ %(percentage)s- %(service)s എന്നതിലോട്ട്"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:130
+#, python-format
+msgid "Uploading 1 file to %(service)s"
+msgstr "%(service)s എന്നതിലോട്ട് ഒരു ഫയൽ അപ്‌ലോഡ് ചെയ്യുന്നു"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:131
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:238
+#, python-format
+msgid "%(percentage)s of 1 file - Uploading to %(service)s"
+msgstr ""
+"ഒരു ഫയലിന്റെ %(percentage)s - %(service)s എന്നതിലോട്ട് അപ്‌ലോഡ് ചെയ്യുന്നു"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:149
+#, python-format
+msgid ""
+"%(size_so_far)s of %(total_size)s - %(time_remaining)s left (%(speed)s/sec)"
+msgstr ""
+"%(total_size)s എന്നതിൽ %(size_so_far)s പൂർത്തിയായി - %(time_remaining)s "
+"അവശേഷിക്കുന്നു (%(speed)s/സെക്.)"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:151
+#, python-format
+msgid "%(size_so_far)s of %(total_size)s"
+msgstr "%(total_size)s എന്നതിൽ %(size_so_far)s പൂർത്തിയായി"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:178
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:180
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:182
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:184
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:191
+#, python-format
+msgid "%(hours)d hours, %(minutes)d minutes"
+msgstr "%(hours)d മണിക്കൂറുകൾ, %(minutes)d മിനിറ്റുകൾ"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:193
+#, python-format
+msgid "1 hour, %d minutes"
+msgstr "ഒരു മണിക്കൂർ, %d മിനിറ്റുകൾ"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:195
+#, python-format
+msgid "%(minutes)d minutes, %(seconds)d seconds"
+msgstr "%(minutes)d മിനിറ്റുകൾ, %(seconds)d സെക്കൻഡുകൾ"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:197
+#, python-format
+msgid "1 minute, %d seconds"
+msgstr "ഒരു മിനിറ്റ്, %d സെക്കൻഡുകൾ"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:199
+#, python-format
+msgid "%d seconds"
+msgstr "%d സെക്കൻഡുകൾ"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:229
+#, python-format
+msgid "Unknown service: %s"
+msgstr "അപരിചിത സേവനം: %s"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "KiB"
+msgstr "KiB"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "MiB"
+msgstr "MiB"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "GiB"
+msgstr "GiB"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:123
+msgid "File larger than service's maximum"
+msgstr "ഫയലിന്റെ വലിപ്പം സെര്‍വിസിന്റെ പരിധിയേക്കാള്‍ കൂടുതല്‍ ആണ്"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:133
+msgid "Could not get available space"
+msgstr "ആവശ്യമായ സ്ഥലം ലഭ്യമായില്ല"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:136
+msgid "File larger than service's available space"
+msgstr "ഫയലിന്റെ വലിപ്പം സര്‍വീസില്‍ ലഭ്യമായ സ്ഥലത്തേക്കാള്‍ കൂടുതല്‍ ആണ്"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:160
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:297
+msgid "File uploaded successfully."
+msgstr "ഫയല്‍ വിജയകരമായി അപ്-ലോഡ് ചെയ്തു."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:179
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:222
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:257
+msgid "connection successfully established"
+msgstr "വിജയകരമായി ബന്ധം സ്ഥാപിക്കപെട്ടു"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:188
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:230
+msgid "Uploading the file..."
+msgstr "ഫയല്‍ അപ്-ലോഡ് ചെയ്യുന്നു..."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:212
+msgid "This service requires a password or private key."
+msgstr ""
+"ഈ സര്‍വീസിനു ഒരു പാസ് വേര്‍ഡ്‌ അല്ലെങ്കില്‍ സ്വകാര്യ താക്കോല്‍ ആവശ്യമാണ്."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:264
+msgid "This service requires a password."
+msgstr "ഈ സെര്‍വിസിനു ഒരു അടയാളവാക്ക് ആവശ്യമാണ്."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:290
+msgid "URL:"
+msgstr "യുആര്‍എല്‍:"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:334
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:338
+#, python-format
+msgid "%(1)s is not set in the config file found under %(2)s or %(3)s"
+msgstr ""
+"%(2)s അല്ലെങ്കില്‍ %(3)s നു കീഴെ കണ്ടെത്തിയ ക്രമീകരണ ഫയലില്‍ %(1)s "
+"ഉറപ്പിച്ചിട്ടില്ല"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:82
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:30
+msgid "Upload services"
+msgstr "അപ്‌ലോഡ്‌ സര്‍വിസുകള്‍"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:97
+msgid "Services:"
+msgstr "സര്‍വിസുകള്‍"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:110
+msgid "Upload manager..."
+msgstr "അപ്‌ലോഡ്‌ മാനേജര്‍..."
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:176
+#, python-format
+msgid "Drag &amp; Drop here to upload to %s"
+msgstr "%s  ലേക്ക് അപ്‌ലോഡ്‌ ചെയ്യുവാനായി ഇവിടേയ്ക്ക് വലിച്ചിടുക"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:15
+msgid "Define upload services"
+msgstr "അപ്‌ലോഡ്‌ സെര്‍വിസുകളെ നിര്‍വചിക്കുക"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:47
+msgid "_File"
+msgstr "ഫയല്‍"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:51
+msgid "Close"
+msgstr "അടയ്ക്കുക"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:55
+msgid "_Help"
+msgstr "_സഹായം"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:59
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:69
+msgid "About"
+msgstr "സംബന്ധിച്ചു്"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:105
+msgid "<b>Please enter a name for the new upload service:</b>"
+msgstr "<b>ദയവായി പുതിയ അപ്‌ലോഡ്‌ സര്‍വിസിനു ഒരു നാമം ചേര്‍ക്കുക:</b>"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:109
+msgid "Service name:"
+msgstr "സര്‍വിസ് നാമം"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:111
+msgid "<i>Try to avoid spaces and special characters...</i>"
+msgstr ""
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:169
+#, python-format
+msgid "%s Properties"
+msgstr "%s ഗുണഗണങ്ങള്‍"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:172
+msgid "Advanced settings"
+msgstr "വിപുല സജ്ജീകരണങ്ങൾ"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:173
+msgid "Check connection"
+msgstr "കണൿഷൻ പരിശോധിക്കുക"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:178
+msgid "Type:"
+msgstr "തരം:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:179
+msgid "Host:"
+msgstr "ഹോസ്റ്റ്:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:180
+msgid "Port:"
+msgstr "പോര്‍ട്ട്:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:181
+msgid "User:"
+msgstr "ഉപയോക്താവ്:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:182
+msgid "Password:"
+msgstr "അടയാളവാക്ക്:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:183
+msgid "Timestamp:"
+msgstr "നാള്‍വഴി:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:184
+msgid "Path:"
+msgstr "വഴി:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:186
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:187
+msgid "Hostname or IP address, default: "
+msgstr "ഹോസ്റ്റ്നെയിം അല്ലെങ്കില്‍ ഐപി വിലാസം, സ്വതവേ ഉള്ളത്(default): "
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:190
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:191
+msgid "Remote port, default is 21 for FTP, 22 for SFTP and SCP"
+msgstr ""
+"വിദൂര പോര്‍ട്ട്‌, സ്വതവേ ഉള്ളത്(default) FTP ക്ക് വേണ്ടി 21, SFTP, SCP "
+"എന്നിവയ്ക്ക് വേണ്ടി 22"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:194
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:195
+msgid "Username, defaults to your local username"
+msgstr ""
+"ഉപയോക്തൃനാമം, സ്വതവേ ഉള്ളത്(default) ആയി താങ്കളുടെ പ്രാദേശിക(ലോക്കല്‍) "
+"ഉപയോക്തൃനാമം ഉപയോഗിക്കപ്പെടും"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:198
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:199
+msgid ""
+"Password, by default: password-less SCP connection, null-string FTP "
+"connection, ~/.ssh keys used for SFTP connections"
+msgstr ""
+"തനതായ, അടയാളവാക്ക്: അടയാളവാക്ക്-ഇല്ലാത്ത SCP ബന്ധം, ശൂന്യ-നാട FTP ബന്ധം, "
+"SFTP ബന്ധങ്ങള്‍ക്കായി ഉപയോഗിക്കുന്ന ~/.ssh ചാവികള്‍"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:202
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:203
+msgid "Timestamp format (strftime). By default:"
+msgstr "നാള്‍വഴി രൂപകല്‍പന (strftime). സ്വതവേ ഉള്ളത്(default) ആയി:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:206
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:207
+msgid ""
+"Directory to upload to. <TIMESTAMP> is replaced with the current timestamp, "
+"following the timestamp format given. By default: ."
+msgstr ""
+"അപ്‌ലോഡ്‌ ചെയ്യേണ്ട തട്ട്. <TIMESTAMP> നു പകരമായി നിലവിലെ സമയമുദ്ര "
+"ഉപയോഗിക്കും, തന്നിരിക്കുന്ന സമയമുദ്രാ രൂപഘടന പിന്തുടരും. തനതായി: ."
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:265
+msgid "Could not save configuration change"
+msgstr "രൂപരേഖാ മാറ്റം രേഖപ്പെടുത്താന്‍ കഴിഞ്ഞില്ല"
+
+#, python-format
+#~ msgid "Upload to %s failed: "
+#~ msgstr "%s ലേക്കുള്ള അപ്-ലോഡ് പരാചയപ്പെട്ടു: "
+
+#, python-format
+#~ msgid "Uploading %(file)s to %(service)s"
+#~ msgstr "%(service)s ലേക്ക് %(file)s അപ്-ലോഡ് ചെയ്യുന്നു"
+
+#, python-format
+#~ msgid "Upload to %s successful"
+#~ msgstr "%s ലേക്കുള്ള അപ്-ലോഡ് വിജയിച്ചു"
+
+#, python-format
+#~ msgid "Uploading to %s"
+#~ msgstr "%s ലേക്ക് അപ്-ലോഡ് ചെയ്യുന്നു"
+
+#~ msgid "File Uploader"
+#~ msgstr "ഫയല്‍ അപ്-ലോഡര്‍"
+
+#~ msgid "Hostname:"
+#~ msgstr "ഹോസ്റ്റ്നെയിം:"
+
+#~ msgid "<i>Try to avoid spaces and funny characters...</i>"
+#~ msgstr "<i>സ്പെയിസും, തമാശ ചിഹ്നങ്ങളും ഒഴിവാക്കാന്‍ ശ്രെമിക്കുക...</i>"
+
+#~ msgid "Upload files on the Internet"
+#~ msgstr "ഇന്‍റര്‍നെറ്റില്‍ ഉള്ള ഫയലുകള്‍ അപ്‌ലോഡ്‌ ചെയ്യുക"
+
+#~ msgid "Username:"
+#~ msgstr "ഉപയോക്തൃനാമം:"

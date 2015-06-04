@@ -1,0 +1,965 @@
+# Slovenian translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-05-29 15:50+0200\n"
+"PO-Revision-Date: 2015-03-04 11:32+0000\n"
+"Last-Translator: Damir Jerovšek <Unknown>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:128
+msgid "Downloading changelog..."
+msgstr "Prenašanje dnevnika sprememb ..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:156
+msgid "No changelog available"
+msgstr "Dnevnik sprememb ni na voljo"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:254
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:423
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:176
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade_root.py:54
+msgid "Please wait, this can take some time"
+msgstr "Počakajte, to lahko traja nekaj časa ..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:257
+#, python-format
+msgid "The %s kernel was removed"
+msgstr "Jedro %s je bilo odstranjeno"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:259
+#, python-format
+msgid "The %s kernel was installed"
+msgstr "%s jedro je bilo nameščeno"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:331
+msgid "This upgrade will trigger additional changes"
+msgstr "Ta posodobitev bo sprožila dodatne spremembe"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:341
+msgid "The following package will be removed:"
+msgstr "Naslednji paket bo odstranjen:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:343
+#, python-format
+msgid "The following %d packages will be removed:"
+msgstr "Naslednjih %d paketov  bo odstranjenih:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:371
+msgid "The following package will be installed:"
+msgstr "Naslednji paket bo nameščen:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:373
+#, python-format
+msgid "The following %d packages will be installed:"
+msgstr "Naslednjih %d paketov bo nameščenih"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:414
+msgid "Installing updates"
+msgstr "Nameščanje posodobitev"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:425
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade_root.py:56
+msgid "Update is complete"
+msgstr "Posodobitev je končana"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:465
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:574
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2033
+msgid "Checking for updates"
+msgstr "Preverjanje za posodobitvami"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:489
+msgid "Could not install the security updates"
+msgstr "Varnostnih posodobitev ni mogoče namestiti"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:563
+msgid "Starting refresh..."
+msgstr "Začenjanje osveževanja ..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:612
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:613
+msgid "Another application is using APT"
+msgstr "APT uporablja že drug program."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:623
+msgid "Finding the list of updates..."
+msgstr "Iskanje seznama posodobitev ..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:659
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:660
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:873
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:874
+msgid "Your system is up to date"
+msgstr "Vaš sistem je že posodobljen."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:677
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:678
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:899
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:903
+msgid "Could not refresh the list of updates"
+msgstr "Seznama posodobitev ni bilo mogoče osvežiti"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:725
+msgid "Security update"
+msgstr "Varnostna posodobitev"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:727
+msgid ""
+"Software backport. Be careful when upgrading. New versions of sofware can "
+"introduce regressions."
+msgstr ""
+"Navzdol prikrojena programska oprema. Bodite previdni pri nadgrajevanjem. "
+"Nove različice programske opreme lahko predstavljajo morebitna nazadovanja."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:729
+msgid ""
+"Unstable software. Only apply this update to help developers beta-test new "
+"software."
+msgstr ""
+"Nestabilna programska oprema. To posodobitev uveljavite samo, če želite "
+"pomagati razvijalcem beta-preizkušati najnovejšo programsko opremo."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:731
+msgid "Software update"
+msgstr "Posodobitev programske opreme"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:844
+msgid "A new version of the update manager is available"
+msgstr "Na voljo je nova različica upravljalnika posodobitev"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:854
+#, python-format
+msgid "1 recommended update available (%(size)s)"
+msgstr "na voljo je 1 priporočena posodobitev (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:856
+#, python-format
+msgid "1 recommended update available (%(size)s), 1 ignored"
+msgstr "na voljo je 1 priporočena posodobitev (%(size)s), 1 prezrta"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:858
+#, python-format
+msgid "1 recommended update available (%(size)s), %(ignored)d ignored"
+msgstr ""
+"na voljo je 1 priporočena posodobitev (%(size)s), %(ignored)d prezrtih"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:861
+#, python-format
+msgid "%(recommended)d recommended updates available (%(size)s)"
+msgstr "na voljo je %(recommended)d priporočenih posodobitev (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:863
+#, python-format
+msgid "%(recommended)d recommended updates available (%(size)s), 1 ignored"
+msgstr ""
+"na voljo je %(recommended)d priporočenih posodobitev (%(size)s), 1 prezrta"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:865
+#, python-format
+msgid ""
+"%(recommended)d recommended updates available (%(size)s), %(ignored)d ignored"
+msgstr ""
+"na voljo je %(recommended)d priporočenih posodobitev (%(size)s), %(ignored)d "
+"prezrtih"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:938
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:957
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1934
+msgid "No updates selected"
+msgstr "Izbrana ni nobena posodobitev"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:959
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1936
+#, python-format
+msgid "%(selected)d update selected (%(size)s)"
+msgstr "izbrana %(selected)d posodobitev (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:961
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1938
+#, python-format
+msgid "%(selected)d updates selected (%(size)s)"
+msgstr "izbranih %(selected)d posodobitev (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:974
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1226
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1372
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1441
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1487
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1708
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1710
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2039 generate_desktop_files:24
+msgid "Update Manager"
+msgstr "Upravljalnik posodobitev"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1226
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2164
+msgid "Preferences"
+msgstr "Možnosti"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1228
+msgid "Levels"
+msgstr "Ravni"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1229
+msgid "Auto-Refresh"
+msgstr "Samoosvežitev"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1230
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2074
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2219
+msgid "Level"
+msgstr "Raven"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1231
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2141
+msgid "Description"
+msgstr "Opis"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1232
+msgid "Tested?"
+msgstr "Preizkušeno?"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1233
+msgid "Origin"
+msgstr "Izvor"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1234
+msgid "Safe?"
+msgstr "Varno?"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1235
+msgid "Visible?"
+msgstr "Vidno?"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1236
+msgid ""
+"Certified updates. Tested through Romeo or directly maintained by Linux Mint."
+msgstr ""
+"Potrjene posodobitve. Preizkušene skozi Romeo ali neposredno vzdrževano s "
+"strani Linux Minta."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1237
+msgid "Recommended updates. Tested and approved by Linux Mint."
+msgstr ""
+"Priporočene posodobitve. Preizkušene in odobrene s strani Linux Minta."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1238
+msgid "Safe updates. Not tested but believed to be safe."
+msgstr "Varne posodobitve. Nepreizkušene toda verjetno varne."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1239
+msgid "Unsafe updates. Could potentially affect the stability of the system."
+msgstr ""
+"Potencialno nevarne posodobitve. Lahko morda vpliva na stabilnost sistema."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1240
+msgid ""
+"Dangerous updates. Known to affect the stability of the systems depending on "
+"certain specs or hardware."
+msgstr ""
+"Nevarne posodobitve. Znane, da vplivajo na stabilnost sistemov, odvisno od "
+"določenih tehničnih podatkov ali strojne opreme."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1241
+msgid "Linux Mint"
+msgstr "Linux Mint"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1242
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1243
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1244
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1245
+msgid "Upstream"
+msgstr "Izvorni projekti"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1246
+msgid "Refresh the list of updates every:"
+msgstr "Osveži seznam posodobitev vsakih:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1247
+msgid ""
+"Note: The list only gets refreshed while the update manager window is closed "
+"(system tray mode)."
+msgstr ""
+"Opomba: seznam se osveži le takrat, ko je okno upravljalnika posodobitev "
+"zaprto (v načinu sistemske vrstice)."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1249
+msgid "Options"
+msgstr ""
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1250
+msgid "Icons"
+msgstr "Ikone"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1251
+msgid "Icon"
+msgstr "Ikona"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1252
+msgid "Status"
+msgstr "Stanje"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1253
+msgid "New Icon"
+msgstr "Nova ikona"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1254
+msgid "Busy"
+msgstr "Zaseden"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1255
+msgid "System up-to-date"
+msgstr "Sistem je povsem posodobljen"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1256
+msgid "Updates available"
+msgstr "Na voljo so posodobitve"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1257
+msgid "Error"
+msgstr "Napaka"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1258
+msgid "Unknown state"
+msgstr "Neznano stanje"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1259
+msgid "Applying updates"
+msgstr "Uveljavljanje posodobitev"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1260
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1314
+msgid "Ignored updates"
+msgstr "Prezrte posodobitve"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1262
+msgid ""
+"Include updates which require the installation of new packages or the "
+"removal of installed packages"
+msgstr ""
+"Vključi posodobitve, katere zahtevajo namestitev novih paketov ali "
+"odstranitev nameščenih paketov"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1263
+msgid "Hide the update manager after applying updates"
+msgstr ""
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1292
+msgid "Always show security updates"
+msgstr "Vedno pokaži varnostne posodobitve"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1293
+msgid "Always select and trust security updates"
+msgstr "Vedno izberi in zaupaj varnostnim posodobitvam"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1295
+msgid "minutes"
+msgstr "minute"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1296
+msgid "hours"
+msgstr "ure"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1297
+msgid "days"
+msgstr "dnevi"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1340
+msgid "Please specify the name of the update to ignore:"
+msgstr "Določite ime posodobitve za prezrtje:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1341
+msgid "Ignore an update"
+msgstr "Prezri posodobitev"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1345
+msgid "Name:"
+msgstr "Ime:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1372
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2200
+msgid "History of updates"
+msgstr "Zgodovina posodobitev"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1375
+msgid "Date"
+msgstr "Datum"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1378
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2070
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2225
+msgid "Package"
+msgstr "Paket"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1381
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2078
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2231
+msgid "Old version"
+msgstr "Stara različica"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1384
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2082
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2237
+msgid "New version"
+msgstr "Nova različica"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1441
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2206
+msgid "Information"
+msgstr "Podrobnosti"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1444
+msgid "Process ID:"
+msgstr "ID opravila:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1445
+msgid "Log file:"
+msgstr "Datoteka dnevnika:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1463
+#, python-format
+msgid "Are you sure you want to remove the %s kernel?"
+msgstr "Ali ste prepričani, da želite odstraniti %s jedro?"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1465
+#, python-format
+msgid "Are you sure you want to install the %s kernel?"
+msgstr "Ali ste prepričani, da želite namestiti %s jedro?"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1487
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2203
+msgid "Linux kernels"
+msgstr "Linux jedra"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1495
+msgid "Warning!"
+msgstr "Opozorilo!"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1496
+msgid ""
+"The Linux kernel is a critical part of the system. Regressions can lead to "
+"lack of networking, lack of sound, lack of graphical environment or even the "
+"inability to boot the computer. Only install or remove kernels if you're "
+"experienced with kernels, drivers, dkms and you know how to recover a non-"
+"booting computer."
+msgstr ""
+"Linuxovo jedro je ključni del sistema. Nazadovanja lahko vodijo v "
+"nedelovanje omreženja, manko zvoka, grafičnega okolja ali celo nezmožnost "
+"zagona računalnika. Namestite oz. odstranite jedra samo, če ste izkušeni z "
+"jedri, gonilniki, dkm-ji in veste, kako obnoviti nezaganljiv računalnik."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1497
+msgid "The following kernels are available:"
+msgstr "Naslednja jedra so na voljo:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1498
+msgid "More info..."
+msgstr "Več podrobnosti ..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1500
+msgid ""
+"Fixes can represent bug fixes, improvements in hardware support or security "
+"fixes."
+msgstr ""
+"Popravki lahko predstavljajo popravke hroščev, izboljšanja v podpori strojni "
+"opremi ali varnostne popravke."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1501
+msgid ""
+"Security fixes are important when local users represent a potential threat "
+"(in companies, libraries, schools or public places for instance) or when the "
+"computer can be threatened by remote attacks (servers for instance)."
+msgstr ""
+"Varnostni popravki so pomembni, ko krajevni uporabniki predstavljajo možno "
+"nevarnost (na primer v podjetjih, šolah ali javnih mestih) ali kadar je "
+"računalnik ogrožen zaradi oddaljenih napadov (npr. strežniki)."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1502
+msgid ""
+"Bug fixes and hardware improvements are important if one of your devices "
+"isn't working as expected and the newer kernel addresses that problem."
+msgstr ""
+"Popravki hroščev ali izboljšanja strojne opreme so pomembni, če ena od vaših "
+"naprav ne deluje po pričakovanjih in nova jedra odpravlja to težavo."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1503
+msgid ""
+"Regressions represent something which worked well and no longer works after "
+"an update. It is common in software development that a code change or even a "
+"bug fix introduces side effects and breaks something else. Because of "
+"regressions it is recommended to be selective when installing updates or "
+"newer kernels."
+msgstr ""
+"Nazadovanja predstavljajo nekaj, kar je včasih delovalo, po posodobitvi pa "
+"ne deluje več. Pri razvijanju programske opreme se pogosto dogaja, da "
+"sprememba kode ali celo popravek hrošča predstavi stranske učinke ter "
+"pokvari kar drugega. Zaradi takšnih nazadovanj je priporočljivo, da skrbno "
+"izberete posodobitve ali novejša jedra."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1505
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1528
+msgid "Fixes"
+msgstr "Popravki"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1506
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1532
+msgid "Regressions"
+msgstr "Nazadovanja"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1507
+msgid ""
+"Note: Only known fixes and regressions are mentioned. If you are aware of "
+"additional fixes or regressions, please contact the development team."
+msgstr ""
+"Opozorilo: omenjeni so samo znani popravki in nazadovanja. Če poznate "
+"dodatne popravke ali nazadovanja, vzpostavite stik z razvijalsko ekipo."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1512
+msgid "Version"
+msgstr "Različica"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1516
+msgid "Loaded"
+msgstr "Naloženo"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1520
+msgid "Recommended"
+msgstr "Priporočeno"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1524
+msgid "Installed"
+msgstr "Nameščeno"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1607
+msgid "Install"
+msgstr "Namesti"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1611
+msgid "Remove"
+msgstr "Odstrani"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1653
+#, python-format
+msgid "Remove the %s kernel"
+msgstr "Odstrani %s jedro"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1655
+msgid "This kernel cannot be removed because it is currently in use."
+msgstr "Tega jedra ni mogoče odstraniti, ker je trenutno v uporabi."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1659
+#, python-format
+msgid "Install the %s kernel"
+msgstr "Namesti %s jedro"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1661
+msgid "This kernel is not installable."
+msgstr "Tega jedra ni mogoče nameščati."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1708
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2274
+msgid "About"
+msgstr "O Programu"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1865
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1895
+#, python-format
+msgid "This update contains %d packages: "
+msgstr "Ta posodobitev vsebuje %d paketov: "
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1868
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1898
+msgid "This update contains 1 package: "
+msgstr "Ta posodobitev vsebuje 1 paket: "
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1941
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1943
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1945
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1947
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1976
+msgid "Ignore updates for this package"
+msgstr "Prezri posodobitve za ta paket"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2065
+msgid "Upgrade"
+msgstr "Nadgradnja"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2086
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2243
+msgid "Size"
+msgstr "Velikost"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2090
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2213
+msgid "Type"
+msgstr "Vrsta"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2137
+msgid "Install Updates"
+msgstr "Namesti posodobitve"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2138
+msgid "Refresh"
+msgstr "Osveži"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2139
+msgid "Select All"
+msgstr "Izberi vse"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2140
+msgid "Clear"
+msgstr "Počisti"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2142
+msgid "Changelog"
+msgstr "Dnevnik sprememb"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2152
+msgid "_File"
+msgstr "_Datoteka"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2156
+msgid "Close"
+msgstr "Zapri"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2160
+msgid "_Edit"
+msgstr "_Uredi"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2170
+msgid "Software sources"
+msgstr "Programski viri"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2192
+#, python-format
+msgid "Upgrade to %s"
+msgstr "Nadgradi na %s"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2196
+msgid "_View"
+msgstr "_Ogled"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2209
+msgid "Visible columns"
+msgstr "Vidni stolpci"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2251
+msgid "Show descriptions"
+msgstr "Pokaži opise"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2265
+msgid "_Help"
+msgstr "_Pomoč"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2269
+msgid "Contents"
+msgstr "Vsebina"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:18
+msgid "System Upgrade"
+msgstr "Nadgradnja sistema"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:30
+msgid "Introduction"
+msgstr "Uvod"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:34
+msgid ""
+"Your system is missing critical components. A package corresponding to your "
+"edition of Linux Mint should provide the virtual package 'mint-info' and the "
+"file /etc/linuxmint/info."
+msgstr ""
+"Vašemu sistemu manjkajo kritične enote. Paket, ki ustreza vaši izdaji Linux "
+"MInta, bi moral zagotoviti navidezni paket 'mint-info' in datoteko "
+"/etc/linuxmint/info."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:47
+msgid "No upgrades were found."
+msgstr "Ni najdenih nadgradenj."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:55
+msgid "A new version of Linux Mint is available!"
+msgstr "Na voljo je novejša različica Linux Minta!"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:65
+#, python-format
+msgid "An upgrade was found but it is not available yet for the %s edition."
+msgstr "Najdena je nadgradnja, toda ni še na voljo za različico %s."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:74
+msgid "Release notes"
+msgstr "Opombe o izdaji"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:81
+msgid ""
+"Please read the release notes before upgrading. They explain all the known "
+"issues, workarounds and solutions associated with the new version."
+msgstr ""
+"Pred nadgradnjo preberite opombe o izdaji. Pojasnjujejo vse znane napake, "
+"začasne rešitve ter rešitve, povezane z novo različico."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:85
+#, python-format
+msgid "Release notes for %s"
+msgstr "Opombe o izdaji za %s"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:89
+msgid "Click on the link to open the release notes."
+msgstr "Kliknite na povezavo za odprtje opomb o izdaji."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:97
+msgid "New features"
+msgstr "Nove zmožnosti"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:104
+msgid "Please look at the new features introduced in the new version."
+msgstr "Oglejte si nove zmožnosti, uvedene v novi različici."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:108
+#, python-format
+msgid "New features in %s"
+msgstr "Nove zmožnosti v %s"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:112
+msgid "Click on the link to browse the new features."
+msgstr "Kliknite na povezavo za ogled novih zmožnosti."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:120
+msgid "Requirements"
+msgstr "Zahteve"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:130
+#, python-format
+msgid "The package %s needs to be installed before upgrading."
+msgstr "Pred nadgradnjo se mora namestiti paket %s ."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:134
+#, python-format
+msgid "Install %s"
+msgstr "Namesti %s"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:139
+msgid "Click on the button to install the missing package."
+msgstr "Kliknite na gumb za namestitev manjkajočega paketa."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:153
+msgid ""
+"New releases provide bug fixes and new features but they also sometimes "
+"introduce new issues. Upgrading always represents a risk. Your data is safe "
+"but new issues can potentially affect your operating system."
+msgstr ""
+"Nove izdaje zagotavljajo popravke ter nove zmožnosti, toda včasih "
+"predstavljajo nove težave. Nadgradnje vedno predstavljajo tveganje. Vaši "
+"podatki so varni, toda nove težave lahko morebiti vplivajo na vaš "
+"operacijski sistem."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:157
+#, python-format
+msgid "I understand the risk. I want to upgrade to %s."
+msgstr "Razumem tveganje. Želim nadgraditi na %s."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:167
+msgid "Summary"
+msgstr "Povzetek"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:178
+msgid "The package was installed"
+msgstr "Paket je bil nameščen"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:270
+msgid ""
+"Your operating system was successfully upgraded. Please reboot your computer "
+"for all changes to take effect."
+msgstr ""
+"Vaš operacijski sistem je bil uspešno nadgrajen. Za uveljavitev vseh "
+"sprememb znova zaženite računalnik."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:279
+msgid ""
+"The upgrade did not succeed. Make sure you are connected to the Internet and "
+"try to upgrade again."
+msgstr ""
+"Nadgradnja ni uspela. Prepričajte se, da ste povezani z internetom ter "
+"poskusite ponovno nadgraditi."
+
+#: generate_desktop_files:24
+msgid "Show and install available updates"
+msgstr "Pokaži in namesti razpoložljive posodobitve"
+
+#: usr/bin/mint-release-upgrade-root:16
+msgid "Please enter your password to perform the upgrade"
+msgstr "Vnesite geslo za izvedbo nadgradnje"
+
+#~ msgid "Could not connect to the Internet"
+#~ msgstr "Ne morem vzpostaviti internetne povezave."
+
+#~ msgid "Downloading safety level rules..."
+#~ msgstr "Prenašam nivojska varnostna pravila."
+
+#, python-format
+#~ msgid "%d recommended updates available"
+#~ msgstr "Na voljo je %d priporočenih posodobitev."
+
+#~ msgid "Linux Mint or Romeo"
+#~ msgstr "Linux Mint ali Romeo."
+
+#~ msgid "Yes"
+#~ msgstr "Da"
+
+#~ msgid "Ubuntu or 3rd party"
+#~ msgstr "Ubuntu ali zunanji"
+
+#~ msgid "No"
+#~ msgstr "Ne"
+
+#~ msgid ""
+#~ "Note: The list only gets refreshed while the mintUpdate window is closed "
+#~ "(system tray mode)."
+#~ msgstr ""
+#~ "Pomni: Seznam se osveži le medtem, ko je okno mintUpdate zaprto(v načinu "
+#~ "sistemske vrstice)."
+
+#~ msgid "HTTP Proxy:"
+#~ msgstr "HTTP posredniški strežnik"
+
+#~ msgid "Manual proxy configuration"
+#~ msgstr "Ročna nastavitev posredniškega strežnika"
+
+#~ msgid "Use the same proxy for all protocols"
+#~ msgstr "Uporabi isti posredniški strežnik za vse protokole"
+
+#~ msgid "FTP Proxy:"
+#~ msgstr "FTP posredniški strežnik"
+
+#~ msgid "Gopher Proxy:"
+#~ msgstr "Gopher posredniški strežnik"
+
+#~ msgid "Port:"
+#~ msgstr "Vrata:"
+
+#~ msgid "Log file"
+#~ msgstr "Dnevniška datoteka"
+
+#~ msgid "Permissions:"
+#~ msgstr "Dovoljenja:"
+
+#~ msgid "Extra Info"
+#~ msgstr "Dodatne informacije"
+
+#~ msgid "Warnings"
+#~ msgstr "Opozorila"
+
+#~ msgid "Software Updates"
+#~ msgstr "Posodobitve programske opreme"
+
+#~ msgid ""
+#~ "Note: The dist-upgrade option, in addition to performing the function of "
+#~ "upgrade, also intelligently handles changing dependencies with new versions "
+#~ "of packages. Without this option, only the latest versions of any out-of-"
+#~ "date packages on your system are installed. Packages that are not yet "
+#~ "installed don't get installed automatically and newer versions of packages "
+#~ "which dependencies require such installations are simply ignored."
+#~ msgstr ""
+#~ "Pomni: Opcija \"posodobitev distribucije\" poleg funkcije same posodobitve "
+#~ "intelignetno obdeluje spreminjanje odvisnosti z novimi verzijami programskih "
+#~ "paketov. Brez vključene te možnosti, se na vaš sistem namestijo le zadnje "
+#~ "verzije zastarelih programskih paketov. Paketi, ki še niso nameščeni, se ne "
+#~ "nameščajo avtomatično in novejše verzije programskih paketov, katerih "
+#~ "odvisnosti potrebujejo takšno namestitev, se preposto ne upoštevajo."
+
+#, python-format
+#~ msgid "%(recommended)d recommended updates available, %(ignored)d ignored"
+#~ msgstr ""
+#~ "%(recommended)d priporočenih posodobitev je na voljo, %(ignored)d "
+#~ "neupoštevanih"
+
+#~ msgid "Checking the connection to the Internet..."
+#~ msgstr "Preverjam povezavo z Internetom..."
+
+#~ msgid "Could not download safety rules"
+#~ msgstr "Ne morem prenesti varnostnih pravil"
+
+#~ msgid "Startup delay (in seconds):"
+#~ msgstr "Zakasnitev zagona (v sekundah):"
+
+#~ msgid "Satisfy changing dependencies using dist-upgrade?"
+#~ msgstr ""
+#~ "Ali ste zadovoljni s spreminjanjem odvisnosti z uporabo posodobitve "
+#~ "distribucije?"
+
+#~ msgid "Package name:"
+#~ msgstr "Ime paketa:"
+
+#~ msgid "Please enter your password to start mintUpdate"
+#~ msgstr "Prosim vnesite geslo za zagon programa mintUpdate"
+
+#~ msgid "Proxy"
+#~ msgstr "Posredovalni strežnik"
+
+#~ msgid "Could not refresh the list of packages"
+#~ msgstr "Seznama paketov ni mogoče osvežiti."
+
+#~ msgid ""
+#~ "Unsafe packages. Could potentially affect the stability of the system."
+#~ msgstr "Nezanesljivi paketi. Morebiti lahko vplivajo na stabilnost sistema."
+
+#~ msgid "Safe packages. Not tested but believed to be safe."
+#~ msgstr "Varni paketi. Niso preizkušeni, vendar naj bi bili varni."
+
+#~ msgid ""
+#~ "Dangerous packages. Known to affect the stability of the systems depending "
+#~ "on certain specs or hardware."
+#~ msgstr ""
+#~ "Nevarni paketi. Glede na nekatera določila  ali strojno opremo je znano, da "
+#~ "vplivajo na stabilnost sistema."
+
+#~ msgid ""
+#~ "Certified packages. Tested through Romeo or directly maintained by Linux "
+#~ "Mint."
+#~ msgstr ""
+#~ "Potrjeni paketi. Preizkušeni skozi Romeo ali pa jih neposredno vzdržuje "
+#~ "Linux Mint."
+
+#~ msgid "Recommended packages. Tested and approved by Linux Mint."
+#~ msgstr "Priporočeni paketi. Preizkušeni in priporočeni s strani Linux Mint."
+
+#~ msgid "Update Method"
+#~ msgstr "Način posodabljanja"
+
+#~ msgid "Please enter a package name:"
+#~ msgstr "Vnesite ime paketa:"
+
+#~ msgid "Internet check (domain name or IP address):"
+#~ msgstr "Preverjanje interneta (domena ali naslov IP):"
+
+#~ msgid "Ignored packages"
+#~ msgstr "Prezrti paketi"
+
+#~ msgid "Ignore a package"
+#~ msgstr "Prezri paket"
+
+#~ msgid "All available upgrades for this package will be ignored."
+#~ msgstr "Vse razpoložljive posodobitve za ta paket bodo prezrte."

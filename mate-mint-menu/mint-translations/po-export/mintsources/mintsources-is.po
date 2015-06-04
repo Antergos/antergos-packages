@@ -1,0 +1,353 @@
+# Þýðing mintsources_mintsources-is.po á Icelandic
+# Icelandic translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+#
+# Sveinn í Felli <sveinki@nett.is>, 2013, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: mintsources_mintsources-is\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 10:14+0100\n"
+"PO-Revision-Date: 2014-11-03 14:36+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+"Language: is\n"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:33
+msgid "Adding PPAs is not supported"
+msgstr "Innsetning PPA-hugbúnaðarsafna er ekki stutt"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:40
+#: usr/lib/linuxmint/mintSources/mintSources.py:881
+#, python-format
+msgid "Cannot add PPA: '%s'."
+msgstr "Get ekki bætt við PPA: '%s'."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:44
+msgid "Adding private PPAs is not supported currently"
+msgstr "Innsetning einka PPA-hugbúnaðarsafna er ekki stutt í augnablikinu"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:47
+msgid "You are about to add the following PPA to your system:"
+msgstr "Þú ert að bæta eftirfarandi PPA-hugbúnaðarsöfnum við kerfið þitt:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:50
+#, python-format
+msgid " More info: %s"
+msgstr " Nánari upplýsingar: %s"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:54
+msgid "Press [ENTER] to continue or ctrl-c to cancel adding it"
+msgstr ""
+"Smelltu á [ENTER] til að halda áfram eða [ctrl-c] til að hætta við að bæta "
+"því við"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:58
+msgid "Unable to prompt for response.  Please run with -y"
+msgstr "Næ ekki að fá svar við kvaðningu. Keyrðu þetta með -y"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:257
+#: usr/lib/linuxmint/mintSources/mintSources.py:285
+msgid "Sources"
+msgstr "Uppruni"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:263
+msgid "CD-ROM (Installation Disc)"
+msgstr "CD-ROM (uppsetningadiskur)"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:304
+msgid ""
+"Linux Mint uses Romeo to publish packages which are not tested. Once these "
+"packages are tested, they are then moved to the official repositories. "
+"Unless you are participating in beta-testing, you should not enable this "
+"repository. Are you sure you want to enable Romeo?"
+msgstr ""
+"Linux Mint notar Romeo fyrir útgáfu pakka sem ekki er búið að prófa. Um leið "
+"og búið er að prófa þá, eru þeir fluttir yfir í opinberu hugbúnaðarsöfnin. "
+"Ef þú ert ekki þáttakandi í beta-prófunum ættirðu ekki að virkja þetta "
+"hugbúnaðarsafn. Ertu viss um að þú viljir virkja Romeo?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:310
+msgid ""
+"Backports are packages coming from newer Linux Mint releases. When backports "
+"are made available, the development team publishes an official announcement "
+"on http://blog.linuxmint.com. This announcement might include important "
+"information about the new features, design decisions or even known issues "
+"which relate to you. It is therefore strongly recommended to not enable "
+"backports until you have read this information. Are you sure you want to "
+"enable backports?"
+msgstr ""
+"Bakfærðir pakkar koma úr nýrri útgáfum Mint. Þegar bakfærðir pakkar verða "
+"aðgengilegir, birta forritarar opinbera tilkynningu um það á "
+"http://blog.linuxmint.com. Slíkar tilkynningar geta innihaldið mikilvægar "
+"upplýsingar um nýja eiginleika, hönnunarforsendur eða jafnvel þekkt vandamál "
+"sem gætu átt við þína útgáfu af Linux Mint. Þess vegna er eindregið mælt með "
+"að þú virkir ekki bakfærða pakka fyrr en þú ert búinn að lesa þessar "
+"upplýsingar. Ertu viss um að þú viljir virkja backport-hugbúnaðarsöfnin?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:366
+msgid "Other..."
+msgstr "Annað..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:388
+msgid "Select a mirror"
+msgstr "Veldu spegil"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:400
+msgid "Country"
+msgstr "Land"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:405
+msgid "URL"
+msgstr "Slóð (URL)"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:410
+msgid "Speed"
+msgstr "Hraði"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:447
+#: usr/lib/linuxmint/mintSources/mintSources.py:456
+msgid "kB/s"
+msgstr "kB/sek"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:450
+msgid "MB/s"
+msgstr "MB/sek"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:453
+msgid "GB/s"
+msgstr "GB/sek"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:540 generate_desktop_files:28
+#: generate_desktop_files:44
+msgid "Software Sources"
+msgstr "Hugbúnaðarupptök"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:557
+msgid "Backported packages"
+msgstr "Bakfærðir pakkar (backported)"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:559
+msgid "Unstable packages"
+msgstr "Óstöðugir pakkar"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:572
+#: usr/lib/linuxmint/mintSources/mintSources.py:1129
+msgid "No action required"
+msgstr "Engin aðgerð nauðsynleg"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:574
+msgid "Official repositories"
+msgstr "Opinber hugbúnaðarsöfn"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:575
+msgid "PPAs"
+msgstr "PPA hugbúnaðarsöfn"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:576
+msgid "Additional repositories"
+msgstr "Auka-hugbúnaðarsöfn"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:577
+msgid "Authentication keys"
+msgstr "Sannvottunarlyklar"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:578
+msgid "Maintenance"
+msgstr "Viðhald"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:580
+msgid "Mirrors"
+msgstr "Speglar"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:581
+msgid "Main"
+msgstr "Aðalval"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:582
+msgid "Base"
+msgstr "Grunnval"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:583
+#: usr/lib/linuxmint/mintSources/mintSources.py:584
+msgid "Select a faster server..."
+msgstr "Velja hraðari þjón..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:586
+msgid "Optional components"
+msgstr "Valfrjálsar einingar"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:587
+msgid "Source code"
+msgstr "Upprunakóði"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:589
+msgid "Add a new PPA..."
+msgstr "Bæta við nýju PPA-hugbúnaðarsafni..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:590
+#: usr/lib/linuxmint/mintSources/mintSources.py:594
+msgid "Edit URL..."
+msgstr "Breyta slóð..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:591
+#: usr/lib/linuxmint/mintSources/mintSources.py:595
+#: usr/lib/linuxmint/mintSources/mintSources.py:599
+msgid "Remove permanently"
+msgstr "Fjarlægja endanlega"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:593
+msgid "Add a new repository..."
+msgstr "Bæta við nýju hugbúnaðarsafni..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:597
+msgid "Import key file..."
+msgstr "Flytja inn lykilskrá..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:598
+msgid "Download a key..."
+msgstr "Ná í lykil..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:601
+msgid "Fix MergeList problems"
+msgstr "Laga vandamál með MergeList"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:602
+msgid ""
+"If you experience MergeList problems, click this button to solve the problem."
+msgstr ""
+"Ef þú verður var við vandamál varðandi MergeList, smelltu á þennan hnapp til "
+"að laga þetta."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:603
+msgid "Purge residual configuration"
+msgstr "Hreinsa stillingaleifar"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:604
+msgid ""
+"Packages sometimes leave configuration files on the system even after they "
+"are removed."
+msgstr ""
+"Stundum skilja pakkar eftir ýmsar stillingaskrár þót búið sé að fjarlægja þá."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:609
+msgid "Enable source code repositories"
+msgstr "Virkja hugbúnaðarsöfn með grunnkóða"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:619
+msgid ""
+"Warning: Backports and unstable packages can introduce regressions and "
+"negatively impact your system. Please do not enable these options in Linux "
+"Mint unless it was suggested by the development team."
+msgstr ""
+"Aðvörun: Bakfærðir- og óstöðugir pakkar geta leitt af sér afturför og önnur "
+"neikvæð áhrif á kerfið þitt. Ekki virkja þessa möguleika í Linux Mint nema "
+"að þróunarteymið hafi stungið upp á því."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:680
+#: usr/lib/linuxmint/mintSources/mintSources.py:704
+msgid "Enabled"
+msgstr "Virkt"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:686
+msgid "PPA"
+msgstr "PPA"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:710
+msgid "Repository"
+msgstr "Hugbúnaðarsafn"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:726
+msgid "Key"
+msgstr "Lykill"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:739
+msgid "Restore the default settings"
+msgstr "Endurheimta sjálfgefnar stillingar"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:740
+msgid "Restore the official repositories to their default settings"
+msgstr "Endurheimta sjálfgefnar stillingar hugbúnaðarsafna"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:805
+msgid "There is no more residual configuration on the system."
+msgstr "Ekki eru fleiri afgangs-stillingaskrár eftir á kerfinu."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:811
+msgid "The problem was fixed. Please reload the cache."
+msgstr "Vandamálið var leyst. Endurlestu nú skyndiminnið."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:837
+msgid "Open.."
+msgstr "Opna..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:853
+msgid ""
+"Please enter the 8 characters of the public key you want to download from "
+"keyserver.ubuntu.com:"
+msgstr ""
+"Settu inn 8 stafi fyrir dreifilykilinn sem þú vilt ná í frá "
+"keyserver.ubuntu.com:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:866
+msgid "Are you sure you want to permanently remove this key?"
+msgstr "Ertu viss um að þú viljir fjarlægja endanlega þennan lykil?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:874
+msgid "Please enter the name of the PPA you want to add:"
+msgstr "Skráðu inn heiti PPA-safnsins sem þú vilt bæta við:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:925
+msgid "Edit the URL of the PPA"
+msgstr "Breyta slóð PPA-safnsins"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:935
+msgid "Are you sure you want to permanently remove this PPA?"
+msgstr "Ertu viss um að þú viljir fjarlægja endanlega þetta PPA-safn?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:944
+msgid "Please enter the name of the repository you want to add:"
+msgstr "Skráðu inn heiti hugbúnaðarsafnsins sem þú vilt bæta við:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:963
+msgid "Edit the URL of the repository"
+msgstr "Breyta slóð hugbúnaðarsafnsins"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:973
+msgid "Are you sure you want to permanently remove this repository?"
+msgstr "Ertu viss um að þú viljir fjarlægja endanlega þetta hugbúnaðarsafn?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1123
+msgid "Update the cache"
+msgstr "Uppfæra skyndiminnið"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1124
+msgid "Click here to update your APT cache with your new sources"
+msgstr ""
+"Smelltu hér til að uppfæra APT-skyndiminnið miðað við nýju hugbúnaðarsöfnin"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1130
+msgid "Your APT cache is up to date"
+msgstr "APT skyndiminnið er uppfært með nýjustu upplýsingum"
+
+#: usr/bin/software-sources:9
+msgid "Please enter your password to configure the software sources"
+msgstr "Sláðu inn lykilorðið þitt til að stilla hugbúnaðarsöfnin"
+
+#: usr/bin/add-apt-repository:10
+msgid "Error: must run as root"
+msgstr "Villa: verður að keyra sem kerfisstjóri (root)"
+
+#: usr/bin/add-apt-repository:21
+msgid "Error: need a repository as argument"
+msgstr "Villa: þetta verður að vera hugbúnaðarsafn"
+
+#: generate_desktop_files:28 generate_desktop_files:44
+msgid "Configure the sources for installable software and updates"
+msgstr "Stilla upptök fyrir uppsetjanlegan hugbúnað og uppfærslur"

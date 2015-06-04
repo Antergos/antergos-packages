@@ -1,0 +1,616 @@
+# Dutch translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-27 15:05+0300\n"
+"PO-Revision-Date: 2014-11-27 14:22+0000\n"
+"Last-Translator: Pjotr12345 <Unknown>\n"
+"Language-Team: Dutch <nl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:48
+msgid "Menu"
+msgstr "Menu"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:256
+msgid "Couldn't load plugin:"
+msgstr "Kon invoegtoepassing niet laden:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:328
+msgid "Couldn't initialize plugin"
+msgstr "Kon invoegtoepassing niet initialiseren"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:731
+msgid "Advanced MATE Menu"
+msgstr "Geavanceerd MATE-menu"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:818
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:821
+msgid "Edit menu"
+msgstr "Menu bewerken"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:824
+msgid "Reload plugins"
+msgstr "Invoegtoepassingen herladen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:827
+msgid "About"
+msgstr "Over"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:42
+msgid "Menu preferences"
+msgstr "Menuvoorkeuren"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:45
+msgid "Always start with favorites pane"
+msgstr "Altijd starten met favorietenpaneel"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:46
+msgid "Show button icon"
+msgstr "Pictogramknop tonen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:47
+msgid "Use custom colors"
+msgstr "Aangepaste kleuren gebruiken"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:48
+msgid "Show recent documents plugin"
+msgstr "Invoegtoepassing 'Recente documenten' tonen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:49
+msgid "Show applications plugin"
+msgstr "Invoegtoepassing 'Toepassingen' tonen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:50
+msgid "Show system plugin"
+msgstr "Invoegtoepassing 'Systeem' tonen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:51
+msgid "Show places plugin"
+msgstr "Invoegtoepassing 'Locaties' tonen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:53
+msgid "Show application comments"
+msgstr "Toepassingscommentaren tonen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:54
+msgid "Show category icons"
+msgstr "Categoriepictogrammen tonen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:55
+msgid "Hover"
+msgstr "Muisover"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:56
+msgid "Remember the last category or search"
+msgstr "Onthoud de laatste categorie of zoekopdracht"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:57
+msgid "Search for packages to install"
+msgstr "Zoek naar pakketten om te installeren"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:58
+msgid "Swap name and generic name"
+msgstr "Naam wisselgeheugen (swap) en algemene naam"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:60
+msgid "Border width:"
+msgstr "Randbreedte:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:61
+msgid "pixels"
+msgstr "beeldpunten"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:63
+msgid "Opacity:"
+msgstr "Doorzichtigheid:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:66
+msgid "Button text:"
+msgstr "Knoptekst:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:67
+msgid "Options"
+msgstr "Opties"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:68
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:251
+msgid "Applications"
+msgstr "Toepassingen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:70
+msgid "Theme"
+msgstr "Thema"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:71
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:248
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:249
+msgid "Favorites"
+msgstr "Favorieten"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:72
+msgid "Main button"
+msgstr "Hoofdknop"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:73
+msgid "Plugins"
+msgstr "Invoegtoepassingen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:75
+msgid "Background:"
+msgstr "Achtergrond:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:76
+msgid "Headings:"
+msgstr "Titels:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:77
+msgid "Borders:"
+msgstr "Randen:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:78
+msgid "Theme:"
+msgstr "Thema:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:82
+msgid "Number of columns:"
+msgstr "Aantal kolommen:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:83
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:84
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:85
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:86
+msgid "Icon size:"
+msgstr "Pictogramgrootte:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:87
+msgid "Hover delay (ms):"
+msgstr "Muisover-wachttijd (ms):"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:88
+msgid "Button icon:"
+msgstr "Knoppictogram:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:89
+msgid "Search command:"
+msgstr "Zoekopdracht:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:91
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:44
+msgid "Places"
+msgstr "Locaties"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:92
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:104
+msgid "Allow Scrollbar"
+msgstr "Schuifbalk toestaan"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:93
+msgid "Show GTK Bookmarks"
+msgstr "GTK-bladwijzers tonen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:94
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:105
+msgid "Height:"
+msgstr "Hoogte:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:95
+msgid "Toggle Default Places:"
+msgstr "Standaardlocaties aan/uitzetten"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:96
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:141
+msgid "Computer"
+msgstr "Computer"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:97
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:151
+msgid "Home Folder"
+msgstr "Persoonlijke map"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:98
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:164
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:166
+msgid "Network"
+msgstr "Netwerk"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:99
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:189
+msgid "Desktop"
+msgstr "Bureaublad"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:100
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:199
+msgid "Trash"
+msgstr "Prullenbak"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:101
+msgid "Custom Places:"
+msgstr "Aangepaste locaties:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:103
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:40
+msgid "System"
+msgstr "Systeem"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:106
+msgid "Toggle Default Items:"
+msgstr "Standaardonderdelen aan/uitzetten:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:107
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:136
+msgid "Software Manager"
+msgstr "Softwarebeheer"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:108
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:143
+msgid "Package Manager"
+msgstr "Pakketbeheer"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:109
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:150
+msgid "Control Center"
+msgstr "Configuratiecentrum"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:110
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:160
+msgid "Terminal"
+msgstr "Terminalvenster"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:111
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:177
+msgid "Lock Screen"
+msgstr "Beeldscherm vergrendelen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:112
+msgid "Log Out"
+msgstr "Afmelden"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:113
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:194
+msgid "Quit"
+msgstr "Afsluiten"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:115
+msgid "Edit Place"
+msgstr "Locatie bewerken"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:116
+msgid "New Place"
+msgstr "Nieuwe locatie"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:117
+msgid "Select a folder"
+msgstr "Selecteer een map"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:147
+msgid "Keyboard shortcut:"
+msgstr "Sneltoets:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:153
+msgid "Images"
+msgstr "Afbeeldingen"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:271
+msgid "Name"
+msgstr "Naam"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:272
+msgid "Path"
+msgstr "Bestandpad"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:287
+msgid "Desktop theme"
+msgstr "Bureaubladthema"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:426
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:457
+msgid "Name:"
+msgstr "Naam:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:427
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:458
+msgid "Path:"
+msgstr "Bestandpad:"
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:197
+msgid ""
+"Click to set a new accelerator key for opening and closing the menu.  "
+msgstr ""
+"Klik om een nieuwe sneltoets in te stellen voor het openen en sluiten van "
+"het menu.  "
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:198
+msgid "Press Escape or click again to cancel the operation.  "
+msgstr "Om de bewerking te annuleren drukt u op Escape of klikt u opnieuw.  "
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:199
+msgid "Press Backspace to clear the existing keybinding."
+msgstr "Om de bestaande toetsbinding te verwijderen drukt u op Backspace."
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:212
+msgid "Pick an accelerator"
+msgstr "Kies een sneltoets"
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:265
+msgid "<not set>"
+msgstr "<niet ingesteld>"
+
+#: usr/lib/linuxmint/mintMenu/plugins/recent.py:31
+msgid "Recent documents"
+msgstr "Recente documenten"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:246
+msgid "Search:"
+msgstr "Zoeken:"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:250
+msgid "All applications"
+msgstr "Alle toepassingen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:634
+#, python-format
+msgid "Search Google for %s"
+msgstr "Op Google zoeken naar %s"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:641
+#, python-format
+msgid "Search Wikipedia for %s"
+msgstr "Op Wikipedia zoeken naar %s"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:657
+#, python-format
+msgid "Lookup %s in Dictionary"
+msgstr "%s opzoeken in woordenboek"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:664
+#, python-format
+msgid "Search Computer for %s"
+msgstr "Op computer zoeken naar %s"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:742
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:795
+#, python-format
+msgid "Install package '%s'"
+msgstr "Pakket '%s' installeren"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:918
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:986
+msgid "Add to desktop"
+msgstr "Toevoegen aan bureaublad"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:919
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:987
+msgid "Add to panel"
+msgstr "Toevoegen aan paneel"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:921
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:969
+msgid "Insert space"
+msgstr "Spatie invoegen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:922
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:970
+msgid "Insert separator"
+msgstr "Scheidingsteken invoegen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:924
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:990
+msgid "Launch when I log in"
+msgstr "Starten bij het aanmelden"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:926
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:992
+msgid "Launch"
+msgstr "Starten"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:927
+msgid "Remove from favorites"
+msgstr "Uit favorieten verwijderen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:929
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:996
+msgid "Edit properties"
+msgstr "Eigenschappen bewerken"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:968
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:989
+msgid "Show in my favorites"
+msgstr "In mijn favorieten tonen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:993
+msgid "Uninstall"
+msgstr "Deïnstalleren"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:994
+msgid "Delete from menu"
+msgstr "Uit menu verwijderen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1048
+msgid "Search Google"
+msgstr "Zoeken op Google"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1055
+msgid "Search Wikipedia"
+msgstr "Zoeken op Wikipedia"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1065
+msgid "Lookup Dictionary"
+msgstr "Woordenboek doorzoeken"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1072
+msgid "Search Computer"
+msgstr "In computer zoeken"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1082
+msgid "Find Software"
+msgstr "Software zoeken"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1089
+msgid "Find Tutorials"
+msgstr "Handleidingen zoeken"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1096
+msgid "Find Hardware"
+msgstr "Apparatuur zoeken"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1103
+msgid "Find Ideas"
+msgstr "Ideeën zoeken"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1110
+msgid "Find Users"
+msgstr "Gebruikers zoeken"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1577
+msgid ""
+"Couldn't save favorites. Check if you have write access to "
+"~/.linuxmint/mintMenu"
+msgstr ""
+"Favorieten konden niet worden opgeslagen. Controleer of u schrijfrechten "
+"heeft voor ~/.linuxmint/mintMenu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1778
+msgid "All"
+msgstr "Alle"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1778
+msgid "Show all applications"
+msgstr "Alle toepassingen tonen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:140
+msgid "Browse and install available software"
+msgstr "Beschikbare software doorbladeren en installeren"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:147
+msgid "Install, remove and upgrade software packages"
+msgstr "Softwarepakketten installeren, verwijderen en opwaarderen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:157
+msgid "Configure your system"
+msgstr "Uw systeem instellen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:167
+msgid "Use the command line"
+msgstr "Opdrachtregel gebruiken"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:170
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:187
+msgid "Logout"
+msgstr "Afmelden"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:174
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:191
+msgid "Log out or switch user"
+msgstr "Afmelden of van gebruiker wisselen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:184
+msgid "Requires password to unlock"
+msgstr "Heeft een wachtwoord nodig om scherm weer te ontgrendelen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:198
+msgid "Shutdown, restart, suspend or hibernate"
+msgstr "Afsluiten, herstarten, pauzestand of slaapstand"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:148
+msgid ""
+"Browse all local and remote disks and folders accessible from this computer"
+msgstr ""
+"Bladeren door lokale schijven, schijven op afstand en mappen die vanaf deze "
+"computer toegankelijk zijn"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:158
+msgid "Open your personal folder"
+msgstr "Persoonlijke  map openen"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:173
+msgid "Browse bookmarked and local network locations"
+msgstr "Bladeren door opgeslagen en lokale netwerklocaties"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:196
+msgid "Browse items placed on the desktop"
+msgstr "Bladeren door bestanden op het bureaublad"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:210
+msgid "Browse deleted files"
+msgstr "Bladeren door verwijderde bestanden"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:262
+msgid "Empty trash"
+msgstr "Prullenbak ledigen"
+
+#~ msgid "Colors"
+#~ msgstr "Kleuren"
+
+#~ msgid "Application removed successfully"
+#~ msgstr "Toepassing succesvol verwijderd"
+
+#~ msgid "File not found"
+#~ msgstr "Bestand niet gevonden"
+
+#~ msgid "Filter:"
+#~ msgstr "Filter:"
+
+#~ msgid "Based on USP from S.Chanderbally"
+#~ msgstr "Gebaseerd op USP van S.Chanderbally"
+
+#~ msgid "Show sidepane"
+#~ msgstr "Zijpaneel tonen"
+
+#, python-format
+#~ msgid "Remove %s?"
+#~ msgstr "%s verwijderen?"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Recente bestanden tonen"
+
+#, python-format
+#~ msgid "Show package '%s'"
+#~ msgstr "Pakket '%s' tonen"
+
+#~ msgid "The following packages will be removed:"
+#~ msgstr "De volgende pakketten zullen verwijderd worden:"
+
+#~ msgid "Do you want to remove this menu entry?"
+#~ msgstr "Wilt u dit menu-onderdeel verwijderen?"
+
+#, python-format
+#~ msgid "Search repositories for '%s'"
+#~ msgstr "Pakketbronnen doorzoeken naar '%s'"
+
+#~ msgid "Not a valid .menu file"
+#~ msgstr "Geen geldig menubestand"
+
+#~ msgid "Not a .menu file"
+#~ msgstr "Geen menubestand"
+
+#, python-format
+#~ msgid "Search portal for '%s'"
+#~ msgstr "Portaal zoeken voor '%s'"
+
+#~ msgid "No matching package found"
+#~ msgstr "Geen overeenkomstig pakket gevonden"
+
+#~ msgid "Packages to be removed"
+#~ msgstr "Te verwijderen pakketten"
+
+#~ msgid "Advanced Gnome Menu"
+#~ msgstr "Geavanceerd Gnomemenu"
+
+#~ msgid "Please wait, this can take some time"
+#~ msgstr "Een ogenblik geduld a.u.b., dit kan even duren"

@@ -1,0 +1,615 @@
+# Czech translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-27 15:05+0300\n"
+"PO-Revision-Date: 2014-11-28 18:19+0000\n"
+"Last-Translator: Ondřej Kolín <ondrej.kolin@gmail.com>\n"
+"Language-Team: Czech <cs@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:48
+msgid "Menu"
+msgstr "Menu"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:256
+msgid "Couldn't load plugin:"
+msgstr "Nelze nahrát plugin:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:328
+msgid "Couldn't initialize plugin"
+msgstr "Nelze spustit plugin"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:731
+msgid "Advanced MATE Menu"
+msgstr "Pokročilé menu MATE"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:818
+msgid "Preferences"
+msgstr "Nastavení"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:821
+msgid "Edit menu"
+msgstr "Upravit menu"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:824
+msgid "Reload plugins"
+msgstr "Znovu načíst pluginy"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:827
+msgid "About"
+msgstr "O aplikaci"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:42
+msgid "Menu preferences"
+msgstr "Nastavení menu"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:45
+msgid "Always start with favorites pane"
+msgstr "Vždy startovat s oknem oblíbených"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:46
+msgid "Show button icon"
+msgstr "Zobrazit ikonu tlačítka"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:47
+msgid "Use custom colors"
+msgstr "Použít vlastní barvy"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:48
+msgid "Show recent documents plugin"
+msgstr "Zobrazit zásuvný modul posledních dokumentů"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:49
+msgid "Show applications plugin"
+msgstr "Zobrazit aplikace"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:50
+msgid "Show system plugin"
+msgstr "Zobrazit systém"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:51
+msgid "Show places plugin"
+msgstr "Zobrazit místa"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:53
+msgid "Show application comments"
+msgstr "Zobrazit popis aplikací"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:54
+msgid "Show category icons"
+msgstr "Zobrazit ikony kategorií"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:55
+msgid "Hover"
+msgstr "Najetí myší"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:56
+msgid "Remember the last category or search"
+msgstr "Pamatovat si poslední kategorii, či hledání"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:57
+msgid "Search for packages to install"
+msgstr "Vyhledat balíčky k instalaci"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:58
+msgid "Swap name and generic name"
+msgstr "Přehodit název a obecný název"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:60
+msgid "Border width:"
+msgstr "Šířka okraje:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:61
+msgid "pixels"
+msgstr "pixelů"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:63
+msgid "Opacity:"
+msgstr "Neprůhlednost:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:66
+msgid "Button text:"
+msgstr "Text tlačítka:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:67
+msgid "Options"
+msgstr "Možnosti"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:68
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:251
+msgid "Applications"
+msgstr "Aplikace"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:70
+msgid "Theme"
+msgstr "Motiv"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:71
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:248
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:249
+msgid "Favorites"
+msgstr "Oblíbené"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:72
+msgid "Main button"
+msgstr "Hlavní tlačítko"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:73
+msgid "Plugins"
+msgstr "Zásuvné moduly"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:75
+msgid "Background:"
+msgstr "Pozadí:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:76
+msgid "Headings:"
+msgstr "Nadpisy:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:77
+msgid "Borders:"
+msgstr "Okraje:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:78
+msgid "Theme:"
+msgstr "Motiv:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:82
+msgid "Number of columns:"
+msgstr "Počet sloupců:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:83
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:84
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:85
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:86
+msgid "Icon size:"
+msgstr "Velikost ikony:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:87
+msgid "Hover delay (ms):"
+msgstr "Zpoždění najetí myši (ms):"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:88
+msgid "Button icon:"
+msgstr "Ikona tlačítka:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:89
+msgid "Search command:"
+msgstr "Příkaz hledání:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:91
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:44
+msgid "Places"
+msgstr "Místa"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:92
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:104
+msgid "Allow Scrollbar"
+msgstr "Povolit posuvník"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:93
+msgid "Show GTK Bookmarks"
+msgstr "Zobrazit GTK záložky"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:94
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:105
+msgid "Height:"
+msgstr "Výška:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:95
+msgid "Toggle Default Places:"
+msgstr "Přepnout výchozí místa"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:96
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:141
+msgid "Computer"
+msgstr "Počítač"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:97
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:151
+msgid "Home Folder"
+msgstr "Domovská složka"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:98
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:164
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:166
+msgid "Network"
+msgstr "Síť"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:99
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:189
+msgid "Desktop"
+msgstr "Plocha"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:100
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:199
+msgid "Trash"
+msgstr "Koš"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:101
+msgid "Custom Places:"
+msgstr "Uživatelská místa:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:103
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:40
+msgid "System"
+msgstr "Systém"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:106
+msgid "Toggle Default Items:"
+msgstr "Přepnout výchozí položky"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:107
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:136
+msgid "Software Manager"
+msgstr "Správce softwaru"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:108
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:143
+msgid "Package Manager"
+msgstr "Správce balíčků"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:109
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:150
+msgid "Control Center"
+msgstr "Ovládací centrum"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:110
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:160
+msgid "Terminal"
+msgstr "Terminál"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:111
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:177
+msgid "Lock Screen"
+msgstr "Zamknout obrazovku"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:112
+msgid "Log Out"
+msgstr "Odhlásit se"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:113
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:194
+msgid "Quit"
+msgstr "Ukončit"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:115
+msgid "Edit Place"
+msgstr "Upravit místo"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:116
+msgid "New Place"
+msgstr "Nové místo"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:117
+msgid "Select a folder"
+msgstr "Zvolte složku"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:147
+msgid "Keyboard shortcut:"
+msgstr "Klávesová zkratka:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:153
+msgid "Images"
+msgstr "Obrázky"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:271
+msgid "Name"
+msgstr "Název"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:272
+msgid "Path"
+msgstr "Cesta"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:287
+msgid "Desktop theme"
+msgstr "Motiv pracovní plochy"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:426
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:457
+msgid "Name:"
+msgstr "Název:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:427
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:458
+msgid "Path:"
+msgstr "Cesta:"
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:197
+msgid ""
+"Click to set a new accelerator key for opening and closing the menu.  "
+msgstr ""
+"Klepněte k zadání nové klávesové zkratky k otevření a zavření menu.  "
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:198
+msgid "Press Escape or click again to cancel the operation.  "
+msgstr "Zmáčkněte Escape, nebo klepněte znovu k ukončení této akce.  "
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:199
+msgid "Press Backspace to clear the existing keybinding."
+msgstr "Zmáčkněte backspace k smazání existující klávesové zkratky"
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:212
+msgid "Pick an accelerator"
+msgstr "Zvolte zkratku"
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:265
+msgid "<not set>"
+msgstr "<nenastaveno>"
+
+#: usr/lib/linuxmint/mintMenu/plugins/recent.py:31
+msgid "Recent documents"
+msgstr "Poslední dokumenty"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:246
+msgid "Search:"
+msgstr "Hledat:"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:250
+msgid "All applications"
+msgstr "Všechny aplikace"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:634
+#, python-format
+msgid "Search Google for %s"
+msgstr "Prohledat Google pro %s"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:641
+#, python-format
+msgid "Search Wikipedia for %s"
+msgstr "Prohledat Wikipedii pro %s"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:657
+#, python-format
+msgid "Lookup %s in Dictionary"
+msgstr "Vyhledat %s ve slovníku"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:664
+#, python-format
+msgid "Search Computer for %s"
+msgstr "Prohledat počítač pro %s"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:742
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:795
+#, python-format
+msgid "Install package '%s'"
+msgstr "Instalovat balíček '%s'"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:918
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:986
+msgid "Add to desktop"
+msgstr "Přidat na plochu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:919
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:987
+msgid "Add to panel"
+msgstr "Přidat do panelu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:921
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:969
+msgid "Insert space"
+msgstr "Vložit mezeru"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:922
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:970
+msgid "Insert separator"
+msgstr "Vložit oddělovač"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:924
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:990
+msgid "Launch when I log in"
+msgstr "Spustit při přihlášení"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:926
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:992
+msgid "Launch"
+msgstr "Spustit"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:927
+msgid "Remove from favorites"
+msgstr "Odebrat z oblíbených"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:929
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:996
+msgid "Edit properties"
+msgstr "Upravit vlastnosti"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:968
+msgid "Remove"
+msgstr "Odstranit"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:989
+msgid "Show in my favorites"
+msgstr "Zobrazit v oblíbených"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:993
+msgid "Uninstall"
+msgstr "Odinstalovat"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:994
+msgid "Delete from menu"
+msgstr "Odstranit z nabídky"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1048
+msgid "Search Google"
+msgstr "Vyhledávání Google"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1055
+msgid "Search Wikipedia"
+msgstr "Prohledat Wikipedii"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1065
+msgid "Lookup Dictionary"
+msgstr "Vyhledat ve slovníku"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1072
+msgid "Search Computer"
+msgstr "Hledat počítač"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1082
+msgid "Find Software"
+msgstr "Najít software"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1089
+msgid "Find Tutorials"
+msgstr "Najít návody"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1096
+msgid "Find Hardware"
+msgstr "Najít hardware"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1103
+msgid "Find Ideas"
+msgstr "Najít nápady"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1110
+msgid "Find Users"
+msgstr "Najít uživatele"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1577
+msgid ""
+"Couldn't save favorites. Check if you have write access to "
+"~/.linuxmint/mintMenu"
+msgstr ""
+"Nelze uložit oblíbené. Zkontrolujte, zda máte právo zápisu do "
+"~/.linuxmint/mintMenu"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1778
+msgid "All"
+msgstr "Vše"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1778
+msgid "Show all applications"
+msgstr "Zobrazit všechny aplikace"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:140
+msgid "Browse and install available software"
+msgstr "Procházet a instalovat dostupný software"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:147
+msgid "Install, remove and upgrade software packages"
+msgstr "Nainstalovat, odstranit a aktualizovat balíčky"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:157
+msgid "Configure your system"
+msgstr "Nastavení systému"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:167
+msgid "Use the command line"
+msgstr "Použít příkazový řádek"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:170
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:187
+msgid "Logout"
+msgstr "Odhlásit se"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:174
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:191
+msgid "Log out or switch user"
+msgstr "Odhlášení nebo změna uživatele"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:184
+msgid "Requires password to unlock"
+msgstr "Pro odemknutí je potřeba heslo"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:198
+msgid "Shutdown, restart, suspend or hibernate"
+msgstr "Vypnutí, restartování, uspání nebo zmrazení"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:148
+msgid ""
+"Browse all local and remote disks and folders accessible from this computer"
+msgstr ""
+"Procházet všechny místní a vzdálené disky a složky, dostupné z tohoto "
+"počítače"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:158
+msgid "Open your personal folder"
+msgstr "Otevřít osobní složku"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:173
+msgid "Browse bookmarked and local network locations"
+msgstr "Procházet založená a místní síťová umístění"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:196
+msgid "Browse items placed on the desktop"
+msgstr "Procházet položky na ploše"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:210
+msgid "Browse deleted files"
+msgstr "Procházet vymazané soubory"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:262
+msgid "Empty trash"
+msgstr "Vyprázdnit koš"
+
+#~ msgid "Colors"
+#~ msgstr "Barvy"
+
+#~ msgid "File not found"
+#~ msgstr "Soubor nebyl nalezen"
+
+#~ msgid "Not a valid .menu file"
+#~ msgstr "Není platným souborem .menu"
+
+#~ msgid "Not a .menu file"
+#~ msgstr "Není soubor .menu"
+
+#~ msgid "Filter:"
+#~ msgstr "Filtr:"
+
+#, python-format
+#~ msgid "Search repositories for '%s'"
+#~ msgstr "Hledat '%s' v repozitářích"
+
+#, python-format
+#~ msgid "Search portal for '%s'"
+#~ msgstr "Hledat '%s' na portálu"
+
+#~ msgid "Show sidepane"
+#~ msgstr "Zobrazit postranní panel"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Zobrazit poslední dokumenty"
+
+#~ msgid "Based on USP from S.Chanderbally"
+#~ msgstr "Založeno na USP od S.Chanderbally"
+
+#~ msgid "Do you want to remove this menu entry?"
+#~ msgstr "Chcete odstranit tuto položku menu?"
+
+#, python-format
+#~ msgid "Remove %s?"
+#~ msgstr "Odebrat %s?"
+
+#~ msgid "The following packages will be removed:"
+#~ msgstr "Následující balíčky budou odebrány:"
+
+#, python-format
+#~ msgid "Show package '%s'"
+#~ msgstr "Zobrazit balíček '%s'"
+
+#~ msgid "No matching package found"
+#~ msgstr "Odpovídající balíček nebyl nalezen"
+
+#~ msgid "Application removed successfully"
+#~ msgstr "Aplikace byla úspěšně odstraněna"
+
+#~ msgid "Packages to be removed"
+#~ msgstr "Balíčky k odebrání:"
+
+#~ msgid "Please wait, this can take some time"
+#~ msgstr "Vyčkejte prosím, tato akce může trvat delší dobu"
+
+#~ msgid "Advanced Gnome Menu"
+#~ msgstr "Rozšířené Gnome menu"

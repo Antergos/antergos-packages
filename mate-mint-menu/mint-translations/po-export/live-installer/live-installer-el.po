@@ -1,0 +1,764 @@
+# Greek translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-02-24 17:11+0100\n"
+"PO-Revision-Date: 2015-04-11 07:45+0000\n"
+"Last-Translator: Jim Spentzos <Unknown>\n"
+"Language-Team: Greek <el@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:10+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/live-installer/installer.py:69
+#, python-format
+msgid "Formatting %(partition)s as %(format)s ..."
+msgstr "Μορφοποίηση %(partition)s σε %(format)s ..."
+
+#: usr/lib/live-installer/installer.py:91
+#: usr/lib/live-installer/installer.py:102
+#, python-format
+msgid "Mounting %(partition)s on %(mountpoint)s"
+msgstr "Προσάρτηση του %(partition)s σε %(mountpoint)s"
+
+#: usr/lib/live-installer/installer.py:127
+msgid ""
+"ERROR: You must first manually mount your target filesystem(s) at /target to "
+"do a custom install!"
+msgstr ""
+"ΣΦΑΛΜΑ: Πρέπει πρώτα να προσαρτήσετε το σύστημα(τα) αρχείων στο /target για "
+"να κάνετε μια προσαρμοσμένη εγκατάσταση!"
+
+#: usr/lib/live-installer/installer.py:135
+msgid ""
+"ERROR: Something is wrong with the installation medium! This is usually "
+"caused by burning tools which are not compatible with LMDE (YUMI or other "
+"multiboot tools). Please burn the ISO image to DVD/USB using a different "
+"tool."
+msgstr ""
+"ΣΦΑΛΜΑ: Κάτι δεν πάει καλά με το μέσο εγκατάστασης! Αυτό προκαλείται συνήθως "
+"από τα εργαλεία εγγραφής που δεν είναι συμβατά με το LMDE (π.χ. το YUMI ή "
+"άλλα εργαλεία πολλαπλής εκκίνησης multiboot). Παρακαλώ εγγράψτε το αρχείο "
+"εικονικού δίσκου ISO σε ένα DVD/USB με ένα διαφορετικό εργαλείο."
+
+#: usr/lib/live-installer/installer.py:159
+msgid "Indexing files to be copied.."
+msgstr "Ευρετηρίαση αρχείων προς αντιγραφή..."
+
+#: usr/lib/live-installer/installer.py:179
+#, python-format
+msgid "Copying %s"
+msgstr "Αντιγραφή του %s"
+
+#: usr/lib/live-installer/installer.py:221
+#, python-format
+msgid "Restoring meta-information on %s"
+msgstr "Επαναφορά μετα-πληροφοριών σε %s"
+
+#: usr/lib/live-installer/installer.py:231
+msgid "Entering the system ..."
+msgstr "Είσοδος στο σύστημα..."
+
+#: usr/lib/live-installer/installer.py:273
+msgid "Removing live configuration (packages)"
+msgstr "Αφαίρεση \"ζωντανών\" ρυθμίσεων (πακέτων)"
+
+#: usr/lib/live-installer/installer.py:281
+msgid "Adding new user to the system"
+msgstr "Προσθήκη νέου χρήστη στο σύστημα"
+
+#: usr/lib/live-installer/installer.py:321
+msgid "Writing filesystem mount information to /etc/fstab"
+msgstr "Εγγραφή πληροφοριών προσάρτησης συστήματος αρχείων στο /etc/fstab"
+
+#: usr/lib/live-installer/installer.py:374
+msgid "Setting hostname"
+msgstr "Ορισμός hostname"
+
+#: usr/lib/live-installer/installer.py:393
+msgid "Setting locale"
+msgstr "Ρύθμιση εντοπιότητας"
+
+#: usr/lib/live-installer/installer.py:407
+msgid "Localizing packages"
+msgstr "Πακέτα γλωσσικής υποστήριξης"
+
+#: usr/lib/live-installer/installer.py:422
+msgid "Installing drivers"
+msgstr "Εγκατάσταση οδηγών"
+
+#: usr/lib/live-installer/installer.py:437
+msgid "Setting keyboard options"
+msgstr "Ρύθμιση επιλογών πληκτρολογίου"
+
+#: usr/lib/live-installer/installer.py:476
+msgid "Installing bootloader"
+msgstr "Εγκατάσταση προγράμματος εκκίνησης"
+
+#: usr/lib/live-installer/installer.py:485
+msgid ""
+"WARNING: The grub bootloader was not configured properly! You need to "
+"configure it manually."
+msgstr ""
+"ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Ο εκκινητης συτηματος δεν διαμορφωθηκε κανονικα!Πρεπει να τον "
+"διαμορφωσεις μονος σου."
+
+#: usr/lib/live-installer/installer.py:498
+msgid "Cleaning APT"
+msgstr "Καθαρισμός APT"
+
+#: usr/lib/live-installer/installer.py:522
+#: usr/lib/live-installer/frontend/gtk_interface.py:967
+msgid "Installation finished"
+msgstr "Η εγκατάσταση ολοκληρώθηκε"
+
+#: usr/lib/live-installer/installer.py:532
+msgid "Configuring bootloader"
+msgstr "Διαμορφωνεται ο  εκκινητης συστηματος"
+
+#: usr/lib/live-installer/installer.py:541
+msgid "Checking bootloader"
+msgstr "Ελέγχει τον εκκινητη συστηματος"
+
+#: usr/lib/live-installer/main.py:31
+msgid "Unexpected error"
+msgstr "Μη αναμενόμενο σφάλμα"
+
+#: usr/lib/live-installer/main.py:32
+msgid "The installer failed with the following error."
+msgstr "Ο βοηθός εγκατάστασης απέτυχε λόγω του ακόλουθου σφάλματος."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:75
+#: usr/lib/live-installer/frontend/gtk_interface.py:77
+#, python-format
+msgid "%s Installer"
+msgstr "Πρόγραμμα εγκατάστασης %s"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:92
+#: usr/lib/live-installer/frontend/gtk_interface.py:111
+msgid "Language"
+msgstr "Γλώσσα"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:93
+msgid "Timezone"
+msgstr "Ωρολογιακή ζώνη"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:94
+msgid "Keyboard layout"
+msgstr "Διάταξη πληκτρολογίου"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:95
+msgid "User info"
+msgstr "Πληροφορίες χρήστη"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:96
+msgid "Partitioning"
+msgstr "Κατάτμηση δίσκου"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:97
+msgid "Please make sure you wish to manage partitions manually"
+msgstr ""
+"Παρακαλώ βεβαιωθείτε ότι θέλετε να διαχειριστείτε χειροκίνητα τις κατατμήσεις"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:98
+msgid "Advanced options"
+msgstr "Επιλογές για προχωρημένους"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:99
+msgid "Summary"
+msgstr "Περίληψη"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:100
+msgid "Installing Linux Mint..."
+msgstr "Εγκαθιστώ το Linux Mint..."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:101
+msgid "Installation paused: please finish the custom installation"
+msgstr ""
+"Εγκατάσταση σε παύση: παρακαλώ ολοκληρώστε την προσαρμοσμένη εγκατάσταση"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:114
+msgid "Country"
+msgstr "Χώρα"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:126
+msgid "Click to change your picture"
+msgstr "Πατήστε για να αλλάξετε την φωτογραφία σας"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:128
+msgid "Take a photo..."
+msgstr "Λήψη φωτογραφίας…"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:131
+msgid "Browse for more pictures..."
+msgstr "Περιήγηση για περισσότερες εικόνες..."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:170
+msgid "Select timezone"
+msgstr "Επιλογή ζώνης ώρας"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:174
+msgid "Edit partitions"
+msgstr "Επεξεργασία κατατμήσεων"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:175
+msgid "Refresh"
+msgstr "Ανανέωση"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:176
+msgid "Expert mode"
+msgstr "Λειτουργία για προχωρημένους"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:220
+#: usr/lib/live-installer/frontend/gtk_interface.py:444
+msgid "Layout"
+msgstr "Διάταξη"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:226
+#: usr/lib/live-installer/frontend/gtk_interface.py:445
+msgid "Variant"
+msgstr "Παραλλαγή"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:235
+#: usr/lib/live-installer/frontend/gtk_interface.py:446
+msgid "Overview"
+msgstr "Επισκόπηση"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:239
+msgid "Calculating file indexes ..."
+msgstr "Υπολογισμός ευρετηρίων αρχείων ..."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:311
+msgid "Images"
+msgstr "Εικόνες"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:390
+msgid "Your full name"
+msgstr "Ονοματεπώνυμο"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:391
+msgid "Please enter your full name."
+msgstr "Παρακαλώ εισάγετε το πλήρες όνομά σας."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:392
+msgid "Your username"
+msgstr "Το όνομα χρήστη σας"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:393
+msgid "This is the name you will use to log in to your computer."
+msgstr "Θα χρησιμοποιείτε αυτό το όνομα για είσοδο στον υπολογιστή σας."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:394
+msgid "Your password"
+msgstr "Το συνθηματικό σας"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:395
+msgid "Please enter your password twice to ensure it is correct."
+msgstr ""
+"Παρακαλώ πληκτρολογήστε τον κωδικό πρόσβασής σας δύο φορές για να "
+"βεβαιωθείτε ότι είναι σωστός."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:396
+msgid "Hostname"
+msgstr "Hostname"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:397
+msgid "This hostname will be the computer's name on the network."
+msgstr "Αυτό το hostname θα είναι το όνομα του υπολογιστή στο δίκτυο."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:398
+msgid "Automatic login"
+msgstr "Αυτόματη είσοδος"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:399
+msgid ""
+"If enabled, the login screen is skipped when the system starts, and you are "
+"signed into your desktop session automatically."
+msgstr ""
+"Αν ενεργοποιηθεί, η οθόνη σύνδεσης θα παραλείπεται όταν ξεκινά το σύστημα "
+"και θα συνδέεστε αυτόματα στο λογαριασμό σας."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:400
+msgid "Log in automatically"
+msgstr "Αυτόματη είσοδος"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:403
+msgid "Your picture"
+msgstr "Η εικόνα ή φωτογραφία σας"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:404
+msgid ""
+"This picture represents your user account. It is used in the login screen "
+"and a few other places."
+msgstr ""
+"Αυτή η εικόνα αναπαριστά τον λογαριασμό χρήστη σας. Χρησιμοποιείτε στην "
+"οθόνη σύνδεση, καθώς και σε μερικά άλλα μέρη"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:407
+msgid "Selected timezone:"
+msgstr "Επιλογή ωρολογιακής ζώνης:"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:410
+msgid "Bootloader"
+msgstr "Πρόγραμμα Εκκίνησης"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:411
+msgid "Install GRUB"
+msgstr "Εγκατάσταση GRUB"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:412
+msgid "GRUB is a bootloader used to load the Linux kernel."
+msgstr ""
+"Ο GRUB είναι ένας εκκινητής συστήματος που χρησιμοποιείται για την φόρτωση "
+"του πυρήνα Linux."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:415
+msgid "Use this box to test your keyboard layout."
+msgstr ""
+"Χρησιμοποιήστε αυτό το πεδίο για να δοκιμάσετε τη διάταξη πληκτρολογίου σας."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:416
+msgid "Model"
+msgstr "Μοντέλο"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:419
+msgid ""
+"You have selected to manage your partitions manually, this feature is for "
+"ADVANCED USERS ONLY."
+msgstr ""
+"Επιλέξατε να διαχειριστείτε τις κατατμήσεις των δίσκων με το χέρι. ΑΥΤΗ Η "
+"ΛΕΙΤΟΥΡΓΙΑ ΕΙΝΑΙ ΓΙΑ ΑΤΟΜΑ ΠΟΥ ΞΕΡΟΥΝ ΤΙ ΑΚΡΙΒΩΣ ΚΑΝΟΥΝ"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:420
+msgid "Before continuing, please mount your target filesystem(s) at /target."
+msgstr ""
+"Πριν συνεχίσετε, παρακαλώ προσαρτήστε  το συστημα αρχείων προορισμού στο  "
+"/target."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:421
+msgid ""
+"Do NOT mount virtual devices such as /dev, /proc, /sys, etc on /target/."
+msgstr ""
+"ΔΕΝ θα πρέπει να προσαρτήσετε εικονικά συστήματα αρχείων όπως τα  /dev, "
+"/proc, /sys, etc μέσα στο /target/."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:422
+msgid ""
+"During the install, you will be given time to chroot into /target and "
+"install any packages that will be needed to boot your new system."
+msgstr ""
+"Κατά την εγκατάσταση, θα σας δοθεί χρόνος να εκτελέσετε chroot στο /target "
+"και να εγκαταστήσετε τυχόν πακέτα που θα χρειαστείτε για να εκκινήσετε το "
+"νέο σύστημά σας."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:423
+msgid ""
+"During the install, you will be required to write your own /etc/fstab."
+msgstr ""
+"Κατά την εγκατάσταση ΑΠΑΙΤΕΙΤΑΙ να γράψετε μόνος σας το δικό σας αρχείο "
+"/etc/fstab."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:424
+msgid ""
+"If you aren't sure what any of this means, please go back and deselect "
+"manual partition management."
+msgstr ""
+"Εάν δεν είστε σίγουρος για το τι σημαίνουν όλα αυτά, παρακαλώ πηγαίνετε πίσω "
+"και από-επιλέξτε την χειροκίνητη διαχείριση κατατμήσεων."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:427
+msgid ""
+"Please do the following and then click Forward to finish installation:"
+msgstr ""
+"Παρακαλώ κάντε τα ακόλουθα και πατήστε Επόμενο για να τελειώσει η "
+"εγκατάσταση:"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:428
+msgid ""
+"Create /target/etc/fstab for the filesystems as they will be mounted in your "
+"new system, matching those currently mounted at /target (without using the "
+"/target prefix in the mount paths themselves)."
+msgstr ""
+"Δημιουργία /target/etc/fstab για τα αρχεία συστήματος ενώ θα τοποθετούνται "
+"στο νέο σας σύστημα, που ταιριάζουν με αυτά που είναι αυτή τη στιγμή "
+"τοποθετημένα στο /target (χωρίς να χρησιμοποιείται το πρόθημα /target στις "
+"ίδιες τις διαδρομές τοποθέτησης)."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:429
+msgid ""
+"Install any packages that may be needed for first boot (mdadm, cryptsetup, "
+"dmraid, etc) by calling \"sudo chroot /target\" followed by the relevant apt-"
+"get/aptitude installations."
+msgstr ""
+"Εγκαταστήστε όλα τα πακέτα που απαιτούνται για την πρώτη εκκίνηση του "
+"υπολογιστή. Ενδεικτικά  mdadm, cryptsetup, dmraid, ... Για να το κάνετε αυτό "
+"πρώτα δώστε την εντολή \"sudo chroot /target\" και στην συνέχεια τις "
+"σχετικές εντολές για την εγκατάση apt-get installl ..."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:430
+msgid ""
+"Note that in order for update-initramfs to work properly in some cases (such "
+"as dm-crypt), you may need to have drives currently mounted using the same "
+"block device name as they appear in /target/etc/fstab."
+msgstr ""
+"Σημειώστε ότι για να λειτουργήσει κανονικά το update-initramfs σε μερικές "
+"περιπτώσεις (όπως το dm-crypt), ίσως χρειαστεί να έχετε προσαρτήσει οδηγούς "
+"που να χρησιμοποιούν το ίδιο όνομα συσκευής με αυτό με το οποίο εμφανίζονται "
+"στο /target/etc/fstab."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:431
+msgid ""
+"Double-check that your /target/etc/fstab is correct, matches what your new "
+"system will have at first boot, and matches what is currently mounted at "
+"/target."
+msgstr ""
+"Σιγουρευτείτε ότι το /target/etc/fstab σας είναι σωστό, ότι ταιριάζει με "
+"αυτό που θα έχει το νέο σας σύστημα στην πρώτη εκκίνηση και με αυτό που "
+"είναι προσαρτημένο αυτή τη στιγμή στο /target."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:435
+msgid "Device"
+msgstr "Συσκευή"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:436
+msgid "Type"
+msgstr "Τύπος"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:437
+msgid "Operating system"
+msgstr "Λειτουργικό σύστημα"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:438
+msgid "Mount point"
+msgstr "Σημείο φόρτωσης (mount point)"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:439
+msgid "Format as"
+msgstr "Μορφοποίηση ως"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:440
+msgid "Size"
+msgstr "Χωρητικότητα"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:441
+#: usr/lib/live-installer/partitioning.py:338
+msgid "Free space"
+msgstr "Ελεύθερος χώρος"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:467
+msgid "Quit?"
+msgstr "Έξοδος;"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:467
+msgid "Are you sure you want to quit the installer?"
+msgstr "Θέλετε σίγουρα να κλείσετε το βοηθό εγκατάστασης;"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:686
+msgid "Passwords do not match."
+msgstr "Οι κωδικοί πρόσβασης δεν ταιριάζουν."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:689
+msgid "Passwords match."
+msgstr "Οι κωδικοί πρόσβασης ταιριάζουν."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:714
+#: usr/lib/live-installer/frontend/gtk_interface.py:787
+#: usr/lib/live-installer/frontend/gtk_interface.py:800
+#: usr/lib/live-installer/frontend/gtk_interface.py:803
+#: usr/lib/live-installer/frontend/gtk_interface.py:813
+#: usr/lib/live-installer/frontend/gtk_interface.py:816
+#: usr/lib/live-installer/frontend/gtk_interface.py:821
+#: usr/lib/live-installer/frontend/gtk_interface.py:825
+#: usr/lib/live-installer/frontend/gtk_interface.py:829
+#: usr/lib/live-installer/partitioning.py:217
+msgid "Installation Tool"
+msgstr "Εργαλείο Εγκατάστασης"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:714
+msgid "Please choose a language"
+msgstr "Παρακαλώ επιλέξτε μια γλώσσα"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:754
+msgid "Please provide your full name."
+msgstr "Παρακαλώ πληκτρολογήστε το πλήρες όνομά σας."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:757
+msgid "Please provide a username."
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:760
+msgid "Please provide a password for your user account."
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:763
+msgid "Your passwords do not match."
+msgstr "Οι κωδικοί πρόσβασης δεν ταιριάζουν."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:766
+msgid "Please provide a hostname."
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:771
+msgid "Your username must be lower case."
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:775
+msgid "Your username may not contain whitespace characters."
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:780
+msgid "The hostname must be lower case."
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:784
+msgid "The hostname may not contain whitespace characters."
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:800
+msgid ""
+"Please indicate a filesystem to format the root (/) partition with before "
+"proceeding."
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:803
+msgid "Please select a root (/) partition."
+msgstr "Παρακαλώ επιλέξτε μια κατάτμηση ρίζας (/)."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:803
+msgid ""
+"A root partition is needed to install Linux Mint on.\n"
+"\n"
+" - Mount point: /\n"
+" - Recommended size: 30GB\n"
+" - Recommended filesystem format: ext4\n"
+" "
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:813
+msgid "The EFI partition is not bootable. Please edit the partition flags."
+msgstr ""
+"Η κατάτμηση EFI δεν είναι εκκινήσημη. Διορθώστε τις σημαίες της κατάτμησης."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:816
+msgid "The EFI partition is too small. It must be at least 100MB."
+msgstr ""
+"Το διαμέρισμα EFI είναι τόσο μικρό. Πρέπει να είναι τουλάχιστον 100MB."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:821
+#: usr/lib/live-installer/frontend/gtk_interface.py:825
+msgid "The EFI partition must be formatted as vfat."
+msgstr "Το διαμέρισμα EFI πρέπει να διαμορφωθεί ως vfat."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:829
+msgid "Please select an EFI partition."
+msgstr "Παρακαλώ επιλέξτε μια κατάτμηση EFI."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:829
+msgid ""
+"An EFI system partition is needed with the following requirements:\n"
+"\n"
+" - Mount point: /boot/efi\n"
+" - Partition flags: Bootable\n"
+" - Size: Larger than 100MB\n"
+" - Format: vfat or fat32\n"
+"\n"
+"To ensure compatibility with Windows we recommend you use the first "
+"partition of the disk as the EFI system partition.\n"
+" "
+msgstr ""
+"Χρειάζεται ένα διαμέρισμα δίσκου συστήματος EFI με τις ακόλουθες "
+"απαιτήσεις:\n"
+"\n"
+" - Σημείο προσάρτησης: /boot/efi\n"
+" - Ιδιότητα διαμερίσματος: Εκκινήσιμο\n"
+" - Μέγεθος: Μεγαλύτερο από 100MB\n"
+" - Μορφή: vfat ή fat32\n"
+"\n"
+"Για να εξασφαλίσετε συμβατότητα με τα Windows, προτείνουμε τη χρήση του "
+"πρώτου διαμερίσματος του δίσκου ως διαμέρισμα συστήματος EFI.\n"
+" "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:879
+msgid "Localization"
+msgstr "Εντοπιότητα"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:880
+msgid "Language: "
+msgstr "Γλώσσα: "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:881
+msgid "Timezone: "
+msgstr "Ώρα Ζώνης "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:882
+msgid "Keyboard layout: "
+msgstr "Διάταξη πληκτρολογίου "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:885
+msgid "User settings"
+msgstr "Ρυθμίσεις χρήστη"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:886
+msgid "Real name: "
+msgstr "Πραγματικό Όνομα: "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:887
+msgid "Username: "
+msgstr "Όνομα Χρήστη: "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:888
+msgid "Automatic login: "
+msgstr "Αυτόματη είσοδος: "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:888
+msgid "enabled"
+msgstr "ενεργοποιημένο"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:888
+msgid "disabled"
+msgstr "απενεργοποιημένο"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:889
+msgid "System settings"
+msgstr "Ρυθμίσεις συστήματος"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:890
+msgid "Hostname: "
+msgstr "Hostname: "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:891
+msgid "Filesystem operations"
+msgstr "Λειτουργίες συστήματος αρχείων"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:892
+#, python-format
+msgid "Install bootloader on %s"
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:892
+msgid "Do not install bootloader"
+msgstr "Να μην εγκατασταθεί πρόγραμμα εκκίνησης"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:894
+msgid "Use already-mounted /target."
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:898
+#, python-format
+msgid "Format %(path)s as %(filesystem)s"
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:901
+#, python-format
+msgid "Mount %(path)s as %(mount)s"
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:933
+#: usr/lib/live-installer/frontend/gtk_interface.py:937
+#: usr/lib/live-installer/frontend/gtk_interface.py:957
+#: usr/lib/live-installer/frontend/gtk_interface.py:965
+msgid "Installation error"
+msgstr "Σφάλμα εγκατάστασης"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:946
+msgid "Installation paused"
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:946
+msgid ""
+"The installation is now paused. Please read the instructions on the page "
+"carefully before clicking Forward to finish the installation."
+msgstr ""
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:967
+msgid ""
+"The installation is now complete. Do you want to restart your computer to "
+"use the new system?"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:129
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: usr/lib/live-installer/partitioning.py:134
+msgid "Assign to /"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:137
+msgid "Assign to /home"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:143
+msgid "Assign to /boot/efi"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:198
+msgid "B"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:198
+#: usr/lib/live-installer/partitioning.py:303
+msgid "kB"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:198
+#: usr/lib/live-installer/partitioning.py:303
+msgid "MB"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:198
+#: usr/lib/live-installer/partitioning.py:303
+msgid "GB"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:198
+#: usr/lib/live-installer/partitioning.py:303
+msgid "TB"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:203
+msgid "Removable:"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:218
+#, python-format
+msgid ""
+"No partition table was found on the hard drive: %s. Do you want the "
+"installer to create a set of partitions for you? Note: This will ERASE ALL "
+"DATA present on this disk."
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:336
+msgid "Logical partition"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:337
+msgid "Extended partition"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:341
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+#: usr/lib/live-installer/partitioning.py:436
+msgid "Edit partition"
+msgstr "Επεξεργασία κατάτμησης"
+
+#: usr/lib/live-installer/partitioning.py:437
+msgid "Device:"
+msgstr "Συσκευή:"
+
+#: usr/lib/live-installer/partitioning.py:439
+msgid "Format as:"
+msgstr ""
+
+#: usr/lib/live-installer/partitioning.py:440
+msgid "Mount point:"
+msgstr ""

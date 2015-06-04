@@ -1,0 +1,118 @@
+# Ukrainian translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-05-09 21:57+0100\n"
+"PO-Revision-Date: 2015-05-15 10:44+0000\n"
+"Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:33 generate_desktop_files:26
+msgid "Driver Manager"
+msgstr "Менеджер драйверів"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:43
+msgid ""
+"Drivers cannot be installed.\n"
+"Please connect to the Internet or insert the Linux Mint installation DVD (or "
+"USB stick)."
+msgstr ""
+"Драйвери не можуть бути встановлені.\n"
+"Будь ласка, під’єднайтеся до інтернету або вставте встановлювальний DVD диск "
+"Linux Mint (чи флешку)."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:126
+msgid "Applying changes..."
+msgstr "Застосування змін..."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:218
+msgid "Re_vert"
+msgstr "_Відновити"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:220
+msgid "_Apply Changes"
+msgstr "_Застосувати зміни"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:222
+msgid "_Cancel"
+msgstr "_Скасувати"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:224
+msgid "_Restart..."
+msgstr "_Перезавантажити..."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:307
+msgid "This device is using the recommended driver."
+msgstr "Цей пристрій використовує рекомендований драйвер."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:308
+msgid "This device is using an alternative driver."
+msgstr "Цей пристрій використовує альтернативний драйвер."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:309
+msgid "This device is using a manually-installed driver."
+msgstr "Цей пристрій використовує драйвер встановлений вручну."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:310
+msgid "This device is not working."
+msgstr "Цей пристрій не працює."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:319
+msgid "Continue using a manually installed driver"
+msgstr "Продовжити використовувати драйвер встановлений вручну"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:346
+msgid "recommended"
+msgstr "рекомендовані"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:346
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:348
+msgid "Version"
+msgstr "Версія"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:370
+msgid "Do not use the device"
+msgstr "Не використовувати пристрій"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:388
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:389
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:419
+msgid "Unknown"
+msgstr "Невідомо"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:472
+msgid "You need to restart the computer to complete the driver changes."
+msgstr ""
+"Потрібно перезавантажити комп'ютер, щоб завершити встановлення драйвера."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:486
+#, python-format
+msgid "%(count)d proprietary driver in use."
+msgid_plural "%(count)d proprietary drivers in use."
+msgstr[0] "Використовується %(count)d приватний драйвер."
+msgstr[1] "Використовується %(count)d приватних драйвери."
+msgstr[2] "Використовується %(count)d приватних драйверів."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:491
+msgid "No proprietary drivers are in use."
+msgstr "Приватні драйвери не використовуються ."
+
+#: usr/bin/driver-manager:9
+msgid "Please enter your password to launch the driver manager"
+msgstr "Будь ласка, уведіть Ваш пароль для запуску диспетчера драйверів"
+
+#: generate_desktop_files:26
+msgid "Manage the drivers for your devices"
+msgstr "Керуйте драйверами вашого пристрою"

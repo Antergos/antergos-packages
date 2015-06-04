@@ -1,0 +1,214 @@
+# translation of mintdesktop_mintdesktop-is.po to Icelandic
+# Icelandic translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+#
+# Sveinn í Felli <sveinki@nett.is>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: mintdesktop_mintdesktop-is\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-12-09 16:44+0000\n"
+"PO-Revision-Date: 2014-12-12 07:45+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic <rglug@rglug.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:110
+msgid "Desktop"
+msgstr "Skjáborð"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:111
+msgid "Windows"
+msgstr "Gluggar"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:112
+msgid "Interface"
+msgstr "Viðmót"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:113
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:160
+msgid "Terminal"
+msgstr "Skjáhermir"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:154
+msgid "Desktop icons"
+msgstr "Táknmyndir á skjáborði"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:155
+msgid "Performance"
+msgstr "Afköst"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:156
+msgid "Appearance"
+msgstr "Útlit"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:157
+msgid "Icons"
+msgstr "Táknmyndir"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:158
+msgid "Context menus"
+msgstr "Samhengisvalmyndir"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:159
+msgid "Toolbars"
+msgstr "Tækjaslár"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:161
+msgid "Window Manager"
+msgstr "Gluggastjóri"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:163
+msgid "Select the items you want to see on the desktop:"
+msgstr "Veldu þau atriði sem þú vilt sjá á skjáborðinu:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:165
+msgid "Computer"
+msgstr "Tölva"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:166
+msgid "Home"
+msgstr "Einkamappa"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:167
+msgid "Network"
+msgstr "Netkerfi"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:168
+msgid "Trash"
+msgstr "Rusl"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:169
+msgid "Mounted Volumes"
+msgstr "Tengdar gagnahirslur"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:171
+msgid "Don't show window content while dragging them"
+msgstr "Ekki sýna innihald glugga á meðan þeir eru dregnir"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:172
+msgid "Use compositing"
+msgstr "Nota skjásamsetningu"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:173
+msgid "Use system font in titlebar"
+msgstr "Nota kerfisletur í titilslá"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:174
+msgid "Show fortune cookies"
+msgstr "Birta málshætti"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:176
+msgid "Buttons layout:"
+msgstr "Útlit hnappa:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:178
+msgid "Window manager:"
+msgstr "Gluggastjóri:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:180
+msgid "Show icons on menus"
+msgstr "Sýna táknmyndir í valmyndum"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:181
+msgid "Show icons on buttons"
+msgstr "Sýnir táknmyndir á hnöppum"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:182
+msgid "Show Input Methods menu in context menus"
+msgstr "Sýna inntaksaðferðavalmynd í samhengisvalmyndum"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:183
+msgid "Show Unicode Control Character menu in context menus"
+msgstr "Sýna Unicode-stjórnstafavalmynd í samhengisvalmyndum"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:185
+msgid "Buttons labels:"
+msgstr "Merkingar á hnöppum:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:186
+msgid "Icon size:"
+msgstr "Stærð táknmynda:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:210
+msgid "Small"
+msgstr "Litlar"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:211
+msgid "Large"
+msgstr "Stórar"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:217
+msgid "Traditional style (Right)"
+msgstr "Hefðbundinn stíll (hægra megin)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:218
+msgid "Mac style (Left)"
+msgstr "Makkastíll (vinstra megin)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:225
+msgid "Marco (stable and reliable)"
+msgstr "Marco (stöðugt og áreiðanlegt)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:226
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:234
+msgid "Compiz (impressive desktop effects)"
+msgstr "Compiz (flottir skjáborðseffektar)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:228
+msgid ""
+"Log out and log back in for changes to take effect. If things go wrong, run "
+"'mate-wm-recovery' to switch back to Marco."
+msgstr ""
+"Skráðu þig út og síðan aftur inn til að breytingarnar taki gildi. Ef "
+"eitthvað fer úrskeiðis geturðu keyrt 'mate-wm-recovery' til að skipta til "
+"baka í Marco."
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:233
+msgid "Xfwm (stable and reliable)"
+msgstr "Xfwm (stöðugt og áreiðanlegt)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:237
+msgid "Log out and log back in for changes to take effect."
+msgstr "Skráðu þig út og síðan aftur inn svo að breytingar taki gildi."
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:246
+msgid "Text below items"
+msgstr "Texti fyrir neðan hluti"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:247
+msgid "Text beside items"
+msgstr "Texti við hliðina á hlutum"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:248
+msgid "Icons only"
+msgstr "Aðeins táknmyndir"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:249
+msgid "Text only"
+msgstr "Bara texti"
+
+#: generate_desktop_files:25
+msgid "Desktop Settings"
+msgstr "Skjáborðsstillingar"
+
+#: generate_desktop_files:25
+msgid "Fine-tune desktop settings"
+msgstr "Fínstilla skjáborðseiginleika"
+
+#~ msgid "Desktop Items"
+#~ msgstr "Skjáborðshlutir"
+
+#~ msgid "Desktop Configuration Tool"
+#~ msgstr "Skjáborðs stillinga tól"
+
+#~ msgid "Gnome Settings"
+#~ msgstr "Gnome stillingar"
+
+#~ msgid "Fine-tune Gnome settings"
+#~ msgstr "Fín pússa Gnome stillingar"

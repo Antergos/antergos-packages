@@ -1,0 +1,200 @@
+# Þýðing mintstick_mintstick-is.po á Icelandic
+# Icelandic translation for linuxmint
+# Copyright (c) 2013 Free Software Foundation
+# This file is distributed under the same license as the linuxmint package.
+#
+# Sveinn í Felli <sveinki@nett.is>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: mintstick_mintstick-is\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-09-19 10:09+0100\n"
+"PO-Revision-Date: 2013-09-20 12:07+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:13+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+"Language: is\n"
+
+#: lib/mintstick.py:276 lib/mintstick.py:278
+msgid "The USB stick was formatted successfully."
+msgstr "Það heppnaðist vel að forsníða USB-lykilinn."
+
+#: lib/mintstick.py:281
+#, python-format
+msgid "An error occured while creating a partition on %s."
+msgstr "Villa kom upp við að útbúa disksneið á %s."
+
+#: lib/mintstick.py:283 lib/mintstick.py:370
+msgid "Authentication Error."
+msgstr "Villa við auðkenningu."
+
+#: lib/mintstick.py:285 lib/mintstick.py:372
+msgid "An error occurred."
+msgstr "Villa kom upp."
+
+#: lib/mintstick.py:302
+msgid "Image:"
+msgstr "Diskmynd:"
+
+#: lib/mintstick.py:303
+msgid "USB stick:"
+msgstr "USB-lykill:"
+
+#: lib/mintstick.py:328
+#, python-format
+msgid "Writing %(VAR_FILE)s to %(VAR_DEV)s"
+msgstr "Skrifa %(VAR_FILE)s á %(VAR_DEV)s"
+
+#: lib/mintstick.py:329
+#, python-format
+msgid "Starting copy from %(VAR_SOURCE)s to %(VAR_TARGET)s"
+msgstr "Hef afritun frá %(VAR_SOURCE)s yfir á %(VAR_TARGET)s"
+
+#: lib/mintstick.py:361 lib/mintstick.py:363
+msgid "The image was successfully written."
+msgstr "Það heppnaðist vel að skrifa diskmyndina."
+
+#: lib/mintstick.py:366
+msgid "Not enough space on the USB stick."
+msgstr "Ekki nógu mikið pláss eftir á USB-lyklinum."
+
+#: lib/mintstick.py:368
+msgid "An error occured while copying the image."
+msgstr "Villa kom upp við að afrita diskmyndina."
+
+#: generate_additional_files.py:49 generate_additional_files.py:61
+#: share/mintstick/mintstick.glade.h:28
+msgid "USB Image Writer"
+msgstr "USB-diskmyndaskrifari"
+
+#: generate_additional_files.py:49 generate_additional_files.py:61
+#: generate_additional_files.py:94
+msgid "Make a bootable USB stick"
+msgstr "Búa til ræsanlegan USB-lykil"
+
+#: generate_additional_files.py:73 generate_additional_files.py:85
+#: share/mintstick/mintstick.glade.h:4
+msgid "USB Stick Formatter"
+msgstr "USB-forsníðingatól"
+
+#: generate_additional_files.py:73 generate_additional_files.py:85
+#: generate_additional_files.py:104
+msgid "Format a USB stick"
+msgstr "Forsníða USB-lykil"
+
+#: generate_additional_files.py:94
+msgid "Make bootable USB stick"
+msgstr "Búa til ræsanlegan USB-lykil"
+
+#: generate_additional_files.py:104 share/mintstick/mintstick.glade.h:27
+msgid "Format"
+msgstr "Snið"
+
+#: share/mintstick/mintstick.glade.h:1
+msgid " "
+msgstr " "
+
+#: share/mintstick/mintstick.glade.h:2
+msgid ""
+"This will destroy all data on the USB stick, are you sure you want to "
+"proceed?"
+msgstr ""
+"Þetta mun eyða öllum gögnum á USB-lyklinum, ertu viss um að þú viljir halda "
+"áfram?"
+
+#: share/mintstick/mintstick.glade.h:3
+msgid ""
+"Something went wrong, please see the details window for the exact error."
+msgstr ""
+"Því miður fór eitthvað úrskeiðis, skoðaðu nánari útlistun á villum í "
+"lýsingarglugganum."
+
+#: share/mintstick/mintstick.glade.h:5
+msgid "Format:"
+msgstr "Forsnið:"
+
+#: share/mintstick/mintstick.glade.h:6
+msgid "Select a USB stick"
+msgstr "Veldu USB-lykil"
+
+#: share/mintstick/mintstick.glade.h:7
+msgid "as"
+msgstr "sem"
+
+#: share/mintstick/mintstick.glade.h:8
+msgid ""
+"FAT32 \n"
+"   + Compatible everywhere.\n"
+"   -  Cannot handle files larger than 4GB.\n"
+"\n"
+"NTFS \n"
+"  + Compatible with Windows.\n"
+"   - Not compatible with Mac and most hardware devices.\n"
+"   - Occasional compatibility problems with Linux (NTFS is proprietary and "
+"reverse engineered).\n"
+"\n"
+"EXT4 \n"
+"\n"
+"  + Modern, stable, fast, journalized.\n"
+"  + Supports Linux file permissions.\n"
+"   - Not compatible with Windows, Mac and most hardware devices.\n"
+msgstr ""
+"FAT32 \\n\n"
+"   + Allstaðar samhæft.\\n\n"
+"   -  Meðhöndlar ekki skrár stærri en 4GB.\\n\n"
+"\\n\n"
+"NTFS \\n\n"
+"  + Samhæft við Windows.\\n\n"
+"   - Ekki samhæft við Mac eða megnið af vélbúnaði.\\n\n"
+"   - Einstaka samhæfingarvandamál við Linux (NTFS er séreignarbúnaður sem \n"
+"þarf að afturábakvinna til að virki annarsstaðar).\\n\n"
+"\\n\n"
+"EXT4 \\n\n"
+"\\n\n"
+"  + Nútímalegt, stöðugt, hraðvirkt, dagbókarfært.\\n\n"
+"  + Styður skráaheimildakerfi Linux.\\n\n"
+"   - Ekki samhæft við Windows, Mac eða megnið af vélbúnaði..\\n\n"
+
+#: share/mintstick/mintstick.glade.h:23
+msgid "Volume label:"
+msgstr "Heiti á gagnahirslu:"
+
+#: share/mintstick/mintstick.glade.h:24
+msgid "Choose a name for your USB Stick"
+msgstr "Veldu nafn á USB-lykilinn þinn"
+
+#: share/mintstick/mintstick.glade.h:25
+msgid "USB Stick"
+msgstr "USB-lykill"
+
+#: share/mintstick/mintstick.glade.h:26
+msgid "Details"
+msgstr "Nánar"
+
+#: share/mintstick/mintstick.glade.h:29
+msgid "Write image:"
+msgstr "Skrifa diskmynd:"
+
+#: share/mintstick/mintstick.glade.h:30
+msgid "Select an image"
+msgstr "Veldu diskmynd"
+
+#: share/mintstick/mintstick.glade.h:31
+msgid "Select Image"
+msgstr "Veldu diskmynd"
+
+#: share/mintstick/mintstick.glade.h:32
+msgid "to"
+msgstr "til"
+
+#: share/mintstick/mintstick.glade.h:33
+msgid "Write"
+msgstr "Skrifa"
+
+#: share/mintstick/mintstick.glade.h:34
+msgid "The image was written successfully."
+msgstr "Það heppnaðist vel að skrifa diskmyndina."

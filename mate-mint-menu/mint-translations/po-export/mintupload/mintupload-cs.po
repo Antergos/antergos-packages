@@ -1,0 +1,371 @@
+# Czech translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-08-30 16:37+0100\n"
+"PO-Revision-Date: 2013-10-06 21:27+0000\n"
+"Last-Translator: Ondřej Kolín <ondrej.kolin@gmail.com>\n"
+"Language-Team: Czech <cs@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:30
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:14
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:24
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:73
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:103
+msgid "Upload Manager"
+msgstr "Správce nahrávání"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:71
+#, python-format
+msgid "The upload to '%(service)s' was cancelled"
+msgstr "Nahrání do '%(service)s' bylo zrušeno"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:83
+#, python-format
+msgid "Upload to '%s' failed: "
+msgstr "Nahrání do '%s' selhalo: "
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:89
+#, python-format
+msgid "Successfully uploaded %(number)d files to '%(service)s'"
+msgstr "Úspěšně nahráno %(number)d souborů do '%(service)s'"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:91
+#, python-format
+msgid "Successfully uploaded 1 file to '%(service)s'"
+msgstr "Úspěšně nahrán 1 soubor do '%(service)s'"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:102
+msgid "Do you want to cancel this upload?"
+msgstr "Chcete zrušit toto nahrávání?"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:103
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:104
+msgid "Run in the background"
+msgstr "Spustit na pozadí"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:107
+msgid "Cancel upload?"
+msgstr "Zrušit nahrávání?"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:127
+#, python-format
+msgid "Uploading %(number)d files to %(service)s"
+msgstr "Nahrávání %(number)d souborů do %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:128
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:236
+#, python-format
+msgid "%(percentage)s of %(number)d files - Uploading to %(service)s"
+msgstr "%(percentage)s z %(number)d souborů - Nahrávání do %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:130
+#, python-format
+msgid "Uploading 1 file to %(service)s"
+msgstr "Nahrávám 1 soubor do  %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:131
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:238
+#, python-format
+msgid "%(percentage)s of 1 file - Uploading to %(service)s"
+msgstr "%(percentage)s 1 souboru - Nahrávám do %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:149
+#, python-format
+msgid ""
+"%(size_so_far)s of %(total_size)s - %(time_remaining)s left (%(speed)s/sec)"
+msgstr ""
+"%(size_so_far)s z %(total_size)s - zbývá %(time_remaining)s (%(speed)s/sec)"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:151
+#, python-format
+msgid "%(size_so_far)s of %(total_size)s"
+msgstr "%(size_so_far)s z %(total_size)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:178
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:180
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "KB"
+msgstr "kB"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:182
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:184
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:191
+#, python-format
+msgid "%(hours)d hours, %(minutes)d minutes"
+msgstr "%(hours)d hodin, %(minutes)d minut"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:193
+#, python-format
+msgid "1 hour, %d minutes"
+msgstr "1 hodina, %d minut"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:195
+#, python-format
+msgid "%(minutes)d minutes, %(seconds)d seconds"
+msgstr "%(minutes)d minut, %(seconds)d sekund"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:197
+#, python-format
+msgid "1 minute, %d seconds"
+msgstr "1 minuta, %d sekund"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:199
+#, python-format
+msgid "%d seconds"
+msgstr "%d sekund"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:229
+#, python-format
+msgid "Unknown service: %s"
+msgstr "Neznámá služba: %s"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "KiB"
+msgstr "kB"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "MiB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "GiB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:123
+msgid "File larger than service's maximum"
+msgstr "Soubor je větší než maximálně možný"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:133
+msgid "Could not get available space"
+msgstr "Nelze získat dostatečný prostor"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:136
+msgid "File larger than service's available space"
+msgstr "Soubor je větší než prostor k dispozici"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:160
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:297
+msgid "File uploaded successfully."
+msgstr "Soubor byl úspěšně nahrán."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:179
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:222
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:257
+msgid "connection successfully established"
+msgstr "spojení bylo úspěšně navázáno"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:188
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:230
+msgid "Uploading the file..."
+msgstr "Nahrávání souboru..."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:212
+msgid "This service requires a password or private key."
+msgstr "Služba vyžaduje heslo nebo soukromý klíč."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:264
+msgid "This service requires a password."
+msgstr "Tato služba vyžaduje heslo."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:290
+msgid "URL:"
+msgstr "URL adresa:"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:334
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:338
+#, python-format
+msgid "%(1)s is not set in the config file found under %(2)s or %(3)s"
+msgstr ""
+"%(1)s není nastaven v konfiguračním souboru nalezeném v %(2)s or %(3)s"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:82
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:30
+msgid "Upload services"
+msgstr "Nahrávací služby"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:97
+msgid "Services:"
+msgstr "Služby:"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:110
+msgid "Upload manager..."
+msgstr "Správce nahrávání..."
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:176
+#, python-format
+msgid "Drag &amp; Drop here to upload to %s"
+msgstr "Přetáhněte sem pro nahrání do %s"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:15
+msgid "Define upload services"
+msgstr "Definovat nahrávací služby"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:47
+msgid "_File"
+msgstr "_Soubor"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:51
+msgid "Close"
+msgstr "Zavřít"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:55
+msgid "_Help"
+msgstr "_Nápověda"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:59
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:69
+msgid "About"
+msgstr "O aplikaci"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:105
+msgid "<b>Please enter a name for the new upload service:</b>"
+msgstr "<b>Vložte název pro novou nahrávací službu:</b>"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:109
+msgid "Service name:"
+msgstr "Název služby:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:111
+msgid "<i>Try to avoid spaces and special characters...</i>"
+msgstr "<i>Vyhněte se použití mezer a speciálních znaků...</i>"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:169
+#, python-format
+msgid "%s Properties"
+msgstr "Vlastnosti %s"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:172
+msgid "Advanced settings"
+msgstr "Pokročilá nastavení"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:173
+msgid "Check connection"
+msgstr "Zkontrolovat připojení"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:178
+msgid "Type:"
+msgstr "Typ:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:179
+msgid "Host:"
+msgstr "Hostitel:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:180
+msgid "Port:"
+msgstr "Port:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:181
+msgid "User:"
+msgstr "Uživatel:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:182
+msgid "Password:"
+msgstr "Heslo:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:183
+msgid "Timestamp:"
+msgstr "Časová značka:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:184
+msgid "Path:"
+msgstr "Cesta:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:186
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:187
+msgid "Hostname or IP address, default: "
+msgstr "Název nebo IP hostitele, přednastaveno: "
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:190
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:191
+msgid "Remote port, default is 21 for FTP, 22 for SFTP and SCP"
+msgstr "Vzdálený port, přednastaveno je 21 pro FTP, 22 pro SFTP a SCP"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:194
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:195
+msgid "Username, defaults to your local username"
+msgstr "Uživatelské jméno, přednastaveno je vaše lokální uživatelské jméno"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:198
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:199
+msgid ""
+"Password, by default: password-less SCP connection, null-string FTP "
+"connection, ~/.ssh keys used for SFTP connections"
+msgstr ""
+"Heslo, přednastaveno: SCP spojení bez hesla, prázdný textový řetězec pro FTP "
+"spojení, ~/.ssh klíče, použité pro SFTP spojení"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:202
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:203
+msgid "Timestamp format (strftime). By default:"
+msgstr "Formát časové značky (strftime). Přednastaveno:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:206
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:207
+msgid ""
+"Directory to upload to. <TIMESTAMP> is replaced with the current timestamp, "
+"following the timestamp format given. By default: ."
+msgstr ""
+"Adresář pro nahrávání. <TIMESTAMP> bude nahrazen aktuálním časem ve formátu "
+"podle daného nastavení. Přednastaveno:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:265
+msgid "Could not save configuration change"
+msgstr "Nebylo možné uložit změnu konfigurace"
+
+#~ msgid "File Uploader"
+#~ msgstr "Nahrávání souborů"
+
+#~ msgid "Hostname:"
+#~ msgstr "Název hostitele:"
+
+#~ msgid "Username:"
+#~ msgstr "Uživatelské jméno:"
+
+#, python-format
+#~ msgid "Upload to %s failed: "
+#~ msgstr "Nahrávání do %s selhalo: "
+
+#, python-format
+#~ msgid "Uploading %(file)s to %(service)s"
+#~ msgstr "Nahrávání %(file)s do %(service)s"
+
+#, python-format
+#~ msgid "Uploading to %s"
+#~ msgstr "Nahrávání do %s"
+
+#~ msgid "Upload files on the Internet"
+#~ msgstr "Nahrát soubory na internet"
+
+#, python-format
+#~ msgid "Upload to %s successful"
+#~ msgstr "Nahrávání do %s bylo úspěšné"
+
+#~ msgid "<i>Try to avoid spaces and funny characters...</i>"
+#~ msgstr "<i>Pokuste se nepoužívat mezery a nezvyklé znaky...</i>"

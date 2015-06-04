@@ -1,0 +1,373 @@
+# Indonesian translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-08-30 16:37+0100\n"
+"PO-Revision-Date: 2013-10-02 07:39+0000\n"
+"Last-Translator: Wayan Sudiarnata <Unknown>\n"
+"Language-Team: Indonesian <id@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:30
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:14
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:24
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:73
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:103
+msgid "Upload Manager"
+msgstr "Manajer upload"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:71
+#, python-format
+msgid "The upload to '%(service)s' was cancelled"
+msgstr "Pengunggahan ke '%(service)s' telah dibatalkan"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:83
+#, python-format
+msgid "Upload to '%s' failed: "
+msgstr "Mengunggah ke '%s' gagal: "
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:89
+#, python-format
+msgid "Successfully uploaded %(number)d files to '%(service)s'"
+msgstr "Berhasil mengunggah berkas %(number)d ke '%(service)s'"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:91
+#, python-format
+msgid "Successfully uploaded 1 file to '%(service)s'"
+msgstr "Berhasil mengunggah 1 berkas ke '%(service)s'"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:102
+msgid "Do you want to cancel this upload?"
+msgstr "Apakah anda ingin membatalkan pengunggahan ini?"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:103
+msgid "Cancel"
+msgstr "Batal"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:104
+msgid "Run in the background"
+msgstr "Jalankan di belakang"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:107
+msgid "Cancel upload?"
+msgstr "Batalkan pengunggahan?"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:127
+#, python-format
+msgid "Uploading %(number)d files to %(service)s"
+msgstr "Mengunggah berkas %(number)d ke %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:128
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:236
+#, python-format
+msgid "%(percentage)s of %(number)d files - Uploading to %(service)s"
+msgstr "%(percentage)s dari %(number)d berkas - Mengunggah ke %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:130
+#, python-format
+msgid "Uploading 1 file to %(service)s"
+msgstr "Mengunggah 1 berkas ke %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:131
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:238
+#, python-format
+msgid "%(percentage)s of 1 file - Uploading to %(service)s"
+msgstr "%(percentage)s dari 1 berkas - Mengunggah ke %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:149
+#, python-format
+msgid ""
+"%(size_so_far)s of %(total_size)s - %(time_remaining)s left (%(speed)s/sec)"
+msgstr ""
+"%(size_so_far)s dari %(total_size)s - %(time_remaining)s tersisa "
+"(%(speed)s/sec)"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:151
+#, python-format
+msgid "%(size_so_far)s of %(total_size)s"
+msgstr "%(size_so_far)s dari %(total_size)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:178
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:180
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:182
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:184
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:191
+#, python-format
+msgid "%(hours)d hours, %(minutes)d minutes"
+msgstr "%(hours)d jam, %(minutes)d menit"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:193
+#, python-format
+msgid "1 hour, %d minutes"
+msgstr "1 jam, %d menit"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:195
+#, python-format
+msgid "%(minutes)d minutes, %(seconds)d seconds"
+msgstr "%(minutes)d menit, %(seconds)d detik"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:197
+#, python-format
+msgid "1 minute, %d seconds"
+msgstr "1 menit, %d detik"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:199
+#, python-format
+msgid "%d seconds"
+msgstr "%d detik"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:229
+#, python-format
+msgid "Unknown service: %s"
+msgstr "Layanan tidak dikenal: %s"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "KiB"
+msgstr "KiB"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "MiB"
+msgstr "MiB"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "GiB"
+msgstr "GiB"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:123
+msgid "File larger than service's maximum"
+msgstr "Berkas lebih besar dibanding ukuran maksimum layanan"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:133
+msgid "Could not get available space"
+msgstr "Tidak bisa mendapatkan ruang yang tersedia"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:136
+msgid "File larger than service's available space"
+msgstr "File lebih besar daripada layanan ruang yang tersedia"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:160
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:297
+msgid "File uploaded successfully."
+msgstr "Berkas berhasil diunggah."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:179
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:222
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:257
+msgid "connection successfully established"
+msgstr "sambungan berhasil dibuat"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:188
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:230
+msgid "Uploading the file..."
+msgstr "Mengunggah berkas..."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:212
+msgid "This service requires a password or private key."
+msgstr "Layanan ini membutuhkan kata sandi atau kata kunci pribadi."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:264
+msgid "This service requires a password."
+msgstr "Layanan ini membutuhkan kata sandi."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:290
+msgid "URL:"
+msgstr "URL"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:334
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:338
+#, python-format
+msgid "%(1)s is not set in the config file found under %(2)s or %(3)s"
+msgstr ""
+"%(1)s tidak diatur dalam file konfigurasi yang ditemukan di bawah %(2)s atau "
+"%(3)s"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:82
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:30
+msgid "Upload services"
+msgstr "Layanan-layanan unggah"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:97
+msgid "Services:"
+msgstr "Layanan:"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:110
+msgid "Upload manager..."
+msgstr "Manajer upload..."
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:176
+#, python-format
+msgid "Drag &amp; Drop here to upload to %s"
+msgstr "Seret &amp; Jatuhkan disini untuk diunggah ke %s"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:15
+msgid "Define upload services"
+msgstr "Definisikan layanan unggah"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:47
+msgid "_File"
+msgstr "_Berkas"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:51
+msgid "Close"
+msgstr "Tutup"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:55
+msgid "_Help"
+msgstr "_Bantuan"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:59
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:69
+msgid "About"
+msgstr "Tentang"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:105
+msgid "<b>Please enter a name for the new upload service:</b>"
+msgstr "</b>Silakan masukkan sebuah nama untuk layanan unggah yang baru:</b>"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:109
+msgid "Service name:"
+msgstr "Nama layanan:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:111
+msgid "<i>Try to avoid spaces and special characters...</i>"
+msgstr "<i>Coba untuk menghindari spasi dan karakter khusus...</i>"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:169
+#, python-format
+msgid "%s Properties"
+msgstr "Properti %s"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:172
+msgid "Advanced settings"
+msgstr "Pengaturan lanjutan"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:173
+msgid "Check connection"
+msgstr "Periksa sambungan"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:178
+msgid "Type:"
+msgstr "Tipe:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:179
+msgid "Host:"
+msgstr "Host:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:180
+msgid "Port:"
+msgstr "Port:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:181
+msgid "User:"
+msgstr "Pengguna:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:182
+msgid "Password:"
+msgstr "Kata sandi:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:183
+msgid "Timestamp:"
+msgstr "Waktu update:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:184
+msgid "Path:"
+msgstr "Lokasi:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:186
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:187
+msgid "Hostname or IP address, default: "
+msgstr "Nama host atau IP address, biasanya: "
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:190
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:191
+msgid "Remote port, default is 21 for FTP, 22 for SFTP and SCP"
+msgstr "Remote port, biasanya 21 untuk FTP, 22 untuk SFTP dan SCP"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:194
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:195
+msgid "Username, defaults to your local username"
+msgstr "Nama pengguna, biasanya nama pengguna lokal"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:198
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:199
+msgid ""
+"Password, by default: password-less SCP connection, null-string FTP "
+"connection, ~/.ssh keys used for SFTP connections"
+msgstr ""
+"Kata sandi, biasanya: koneksi SCP tanpa password, koneksi FTP null-string, "
+"koneksi SFTP ~/.ssh"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:202
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:203
+msgid "Timestamp format (strftime). By default:"
+msgstr "Format waktu update(strftime). Biasanya:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:206
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:207
+msgid ""
+"Directory to upload to. <TIMESTAMP> is replaced with the current timestamp, "
+"following the timestamp format given. By default: ."
+msgstr ""
+"Folder untuk diunggah. <TIMESTAMP> ditimpa oleh waktu update saat ini, "
+"mengikuti format waktu update yang diberikan. Biasanya:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:265
+msgid "Could not save configuration change"
+msgstr "Tidak bisa menyimpan perubahan konfigurasi"
+
+#, python-format
+#~ msgid "Upload to %s failed: "
+#~ msgstr "Unggah ke %s gagal: "
+
+#, python-format
+#~ msgid "Upload to %s successful"
+#~ msgstr "Unggah ke %s berhasil"
+
+#~ msgid "File Uploader"
+#~ msgstr "Pengunggah berkas"
+
+#, python-format
+#~ msgid "Uploading to %s"
+#~ msgstr "Unggah ke %s"
+
+#~ msgid "Upload files on the Internet"
+#~ msgstr "Unggah file ke Internet"
+
+#~ msgid "Hostname:"
+#~ msgstr "Nama Host:"
+
+#~ msgid "<i>Try to avoid spaces and funny characters...</i>"
+#~ msgstr "<i>Coba hindari spasi dan karakter-karakter unik...</i>"
+
+#~ msgid "Username:"
+#~ msgstr "Nama Pengguna:"
+
+#, python-format
+#~ msgid "Uploading %(file)s to %(service)s"
+#~ msgstr "Unggah %(file)s ke %(service)s"

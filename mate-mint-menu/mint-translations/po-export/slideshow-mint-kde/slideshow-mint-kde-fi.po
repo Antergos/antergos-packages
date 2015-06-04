@@ -1,0 +1,323 @@
+# Finnish translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-06-14 11:26+0300\n"
+"PO-Revision-Date: 2013-12-18 20:00+0000\n"
+"Last-Translator: Mikko <ballihici@gmail.com>\n"
+"Language-Team: Finnish <fi@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/01-welcome.html:1
+msgid "Welcome to Linux Mint"
+msgstr "Tervetuloa Linux Mintin pariin"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/01-welcome.html:8
+msgid ""
+"Welcome and thank you for choosing Linux Mint. This slideshow will show you "
+"around while the system is being installed on your computer."
+msgstr ""
+"Tervetuloa ja kiitos, että olet valinnut Linux Mintin! Esittelemme hieman "
+"järjestelmän ominaisuuksia samalla kun järjestelmä asentuu tietokoneeseen."
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/02-web.html:1
+msgid "Browse the web"
+msgstr "Selaa verkkoa"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/02-web.html:8
+msgid ""
+"Be fast and safe on the web with Mozilla Firefox. Enjoy Java, Flash and "
+"multimedia content."
+msgstr ""
+"Mozilla Firefox -nettiselaimella surffaat turvallisesti ja nopeasti. Nauti "
+"Java-, Flash- ja multimediasisällöistä."
+
+#. type: Content of: <div><div><div>
+#: slideshows/mint-kde/slides/02-web.html:11
+#: slideshows/mint-kde/slides/03-music.html:12
+#: slideshows/mint-kde/slides/04-video.html:11
+#: slideshows/mint-kde/slides/05-photos.html:12
+#: slideshows/mint-kde/slides/06-chat.html:11
+#: slideshows/mint-kde/slides/07-office.html:12
+msgid "Included software"
+msgstr "Sisältyvät ohjelmistot"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:14
+msgid "Firefox"
+msgstr "Firefox"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:16
+msgid "Flash"
+msgstr "Flash"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:18
+msgid "Java"
+msgstr "Java"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/03-music.html:1
+msgid "Listen to music and CDs"
+msgstr "Kuuntele musiikkia ja CD-levyjä"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/03-music.html:8
+msgid ""
+"Enjoy your music with Amarok. Plug-in your MP3 player or extract songs from "
+"your audio CDs. Listen to podcasts and online radios. Discover new artists "
+"on Last.fm, Jamendo, Magnatune and Librivox."
+msgstr ""
+"Nauti musiikistasi Amarok:lla. Kiinnitä MP3 soittimesi tai tuo musiikkia "
+"audio CD:ltäsi. Kuuntele podcasteja ja online radioasemia. Uusia "
+"kiinnostavia artisteja voit löytää Last.fm, Jamendo, Magnatune ja Librivox -"
+"palveluista."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/03-music.html:15
+msgid "Amarok"
+msgstr "Amarok"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/03-music.html:17
+msgid "Audio codecs"
+msgstr "Äänikoodekit"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/04-video.html:1
+msgid "Watch videos and DVDs"
+msgstr "Katso videoita ja DVD:itä"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/04-video.html:8
+msgid ""
+"Insert a DVD and enjoy a movie. Watch high-definition videos with Kaffeine."
+msgstr ""
+"Aseta DVD asemaan ja nauti elokuvasta. Katso korkearesoluutioisia videoita "
+"Kaffeinella."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:14
+msgid "Kaffeine"
+msgstr "Kaffeine"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:16
+msgid "VLC"
+msgstr "VLC"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:18
+msgid "Video codecs"
+msgstr "Videokoodekit"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/05-photos.html:1
+msgid "Manage your photos"
+msgstr "Valokuvien hallinta"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/05-photos.html:8
+msgid ""
+"Organize, enjoy and share your photos with digikam. Export your albums to "
+"CD, to the Web, or to online services such as Flickr or PicasaWeb to share "
+"them with friends and family."
+msgstr ""
+"Organisoi, nauti ja jaa kuviasi käyttäen digikamia. Vie albumisi CD-levylle, "
+"internettiin tai verkkopalveluun kuten Flickr tai PicasaWeb jakaaksesi "
+"kuviasi kavereidesi ja perheesi kanssa."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/05-photos.html:15
+msgid "Digikam"
+msgstr "Digikam"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/06-chat.html:1
+msgid "Stay connected"
+msgstr "Pysy yhteyksissä"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/06-chat.html:8
+msgid ""
+"Keep in touch with your friends and contacts, by email, messenger or on your "
+"favorite social networks. Linux Mint provides all you need to interact with "
+"Twitter, Facebook, MSN, ICQ, GoogleTalk, AIM, Yahoo and many other networks."
+msgstr ""
+"Pidä yhteyttä ystäviin ja kavereihin sähköpostitse, pikaviestimellä tai "
+"sosiaalisten verkostojen kautta. Linux Mintissä on kaikki, mitä tarvitset "
+"ollaksesi yhteydessä: Twitter, Facebook, MSN, ICQ, Google Talk, AIM, Yahoo "
+"ja monet muut verkostot."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:14
+msgid "Kmail"
+msgstr "Kmail"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:16
+msgid "Telepathy"
+msgstr "Ajatuksensiirto"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:18
+msgid "Konversation"
+msgstr "Konversation"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/07-office.html:1
+msgid "Be productive"
+msgstr "Ole luova"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/07-office.html:8
+msgid ""
+"Use LibreOffice to create professional documents, spreadsheets and "
+"presentations that are fully compatible with Microsoft Office. Archive "
+"documents, emails, or web pages to PDF. Send and receive files with Giver on "
+"the local network. Share printers or access them remotely."
+msgstr ""
+"Käytä LibreOfficea luodaksesi ammattimaisia dokumentteja, taulukoita ja "
+"esitelmiä, jotka ovat täysin yhteensopivia Microsoft Officen kanssa. "
+"Arkistoi dokumentteja, sähköposteja tai internetsivustoja PDF-tiedostoiksi. "
+"Lähetä ja vastaanota tiedostoja Giveriä käyttäen lähiverkossasi. Jaa tai "
+"käytä tulostinta etänä."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/07-office.html:15
+msgid "LibreOffice"
+msgstr "LibreOffice"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/07-office.html:17
+msgid "PDF Printer"
+msgstr "PDF Tulostin"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/08-software.html:1
+msgid "Install software"
+msgstr "Asenna sovelluksia"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/08-software.html:8
+msgid ""
+"Browse through 50,000 free applications from the Software Manager. Enjoy "
+"screenshots and user reviews. Install software with one click of the mouse."
+msgstr ""
+"Selaa 50 000:tta vapaata ohjelmistoa ohjelmistonhallinnassa. Nauti "
+"kuvankaappauksista ja arvosteluista. Asenna sovelluksia yhdellä "
+"klikkauksella."
+
+#. type: Content of: <div><div><div>
+#: slideshows/mint-kde/slides/08-software.html:11
+#: slideshows/mint-kde/slides/09-windows.html:12
+msgid "Featured software"
+msgstr "Ohjelmistoesimerkkejä"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:14
+msgid "Filezilla"
+msgstr "Filezilla"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:16
+msgid "Skype"
+msgstr "Skype"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:18
+msgid "Inkscape"
+msgstr "Inkscape"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:20
+msgid "Google Earth"
+msgstr "Google Earth"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/09-windows.html:1
+msgid "Run Windows software"
+msgstr "Käytä Windows-ohjelmia"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/09-windows.html:8
+msgid ""
+"Install Wine and run Windows software in Linux Mint. Or install Virtualbox, "
+"and run Windows itself within Linux Mint."
+msgstr ""
+"Asenna Wine ja käytä Windows-ohjelmistoja Linux Mintissä. Voit myös asentaa "
+"esimerkiksi Virtualboxiin ja ajaa Windowsia ja sen sovelluksia "
+"virtuaaliympäristössä."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/09-windows.html:15
+msgid "Wine"
+msgstr "Wine"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/09-windows.html:17
+msgid "Virtualbox"
+msgstr "Virtualbox"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/10-customize.html:1
+msgid "Customize your desktop"
+msgstr "Mukauta työpöytääsi"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/10-customize.html:8
+msgid ""
+"Make yourself at home and modify any aspect of your desktop. Choose from a "
+"large variety of themes, icons and backgrounds. Linux Mint is open and easy "
+"to customize."
+msgstr ""
+"Tee olosi kotoisaksi ja muokkaa työpöydän osia. Valitse monenlaisista "
+"teemoista, kuvakkeista ja taustoista. Linux Mint on avoin ja helppo muokata."
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/11-updates.html:1
+msgid "Keep your system up to date"
+msgstr "Pidä järjestelmäsi ajan tasalla"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/11-updates.html:8
+msgid ""
+"Receive fixes and security updates all in one place, for the entire system, "
+"including the software you install."
+msgstr ""
+"Linux Mintissä pidät tietokoneesi helposti päivitettynä ja ajan tasalla. "
+"Uusien ohjelmistojen asentaminen käy myös kätevästi samasta paikasta."
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/12-help.html:1
+msgid "Find help"
+msgstr "Etsi apua"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/12-help.html:8
+msgid ""
+"If you're curious about something or if you're facing a problem, simply ask "
+"around. Linux Mint is the 4th most widely used operating system in the "
+"World. It comes with a user guide, a community website, a collection of "
+"tutorials, active forums and chat rooms and one of the most dynamic "
+"communities on the Internet."
+msgstr ""
+"Jos haluat tietää jotain tai törmäät johonkin ongelmaan, niin älä epäröi "
+"kysyä! Linux Mint on neljänneksi käytetyin käyttöjärjestelmä maailmassa. Sen "
+"mukana tulee kattava käyttöopas, nettisivut, kokoelma ohjeita, aktiivinen "
+"foorumi sekä chat-huoneet, ja Linux Mintin yhteisö on yksi voimakkaimmista "
+"yhteisöistä Internetissä."

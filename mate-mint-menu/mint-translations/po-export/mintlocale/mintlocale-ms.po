@@ -1,0 +1,202 @@
+# Malay translation for linuxmint
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-10-23 22:54+0200\n"
+"PO-Revision-Date: 2014-11-09 06:05+0000\n"
+"Last-Translator: Fazwan Fazil <takaizu91@gmail.com>\n"
+"Language-Team: Malay <ms@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:13+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintLocale/add.py:41
+msgid "Add a New Language"
+msgstr "Tambah Bahasa Baharu"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:52
+msgid "Install / Remove Languages"
+msgstr "Pasang / Buang Bahasa"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:157
+msgid "Some language packs are missing"
+msgstr "Sesetengah pek bahasa tidak dijumpai"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:161
+msgid "Fully installed"
+msgstr "Dipasang sepenuhnya"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:195
+#: usr/lib/linuxmint/mintLocale/install_remove.py:234
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:471
+msgid "Please wait, this can take some time"
+msgstr "Sila tunggu, ini akan mengambil sedikit masa"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:197
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:473
+msgid "Installation is complete"
+msgstr "Pemasangan selesai"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:236
+msgid "The related language packs were removed"
+msgstr "Pek bahasa berkaitan dibuang"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:271
+msgid "Language Settings"
+msgstr "Tetapan Bahasa"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:278
+msgid "Apply System-Wide"
+msgstr "Laksanakan Menyeluruhi-Sistem"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:282
+msgid "Install / Remove Languages..."
+msgstr "Pasang / Buang Bahasa..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:292
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:293
+msgid "Language"
+msgstr "Bahasa"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:293
+msgid "Language, interface, date and time..."
+msgstr "Bahasa, antara muka, tarikh dan masa..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:295
+msgid "Region"
+msgstr "Wilayah"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:295
+msgid "Numbers, currency, addresses, measurement..."
+msgstr "Nombor-nombor, matawang, alamat-alamat, ukuran..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:310
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:317
+msgid "Input method"
+msgstr "Kaedah input"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:313
+msgid ""
+"Input methods are used to write symbols and characters which are not present "
+"on the keyboard. They are useful to write in Chinese, Japanese, Korean, "
+"Thai, Vietnamese..."
+msgstr ""
+"Kaedah input digunakan untuk menulis simbol dan karakter yang tidak ada di "
+"paapn kekunci. Ianya berguna untuk menulis bahasa Cina, Jepun, Korean, Thai, "
+"Vietnam..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:500
+msgid "None"
+msgstr "Tiada"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:528
+msgid "Installed"
+msgstr "Dipasang"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:538
+#, python-format
+msgid "%d missing components!"
+msgstr "%d komponen tiada!"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:539
+msgid "Install the missing components"
+msgstr "Pasang komponen yang tiada"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:544
+#, python-format
+msgid "%d optional components available"
+msgstr "%d komponen pilihan tersedia"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:545
+msgid "Install the optional components"
+msgstr "Paasng komponen pilihan"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:550
+msgid "Not installed"
+msgstr "Tidak dipasang"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:551
+#, python-format
+msgid "Add support for %s"
+msgstr "Tambah sokongan pada %s"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:558
+msgid "Not supported"
+msgstr "Tidak disokong"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:568
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:569
+msgid "No locale defined"
+msgstr "Tiada lokal ditakrif"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:638
+msgid "System locale"
+msgstr "Sistem lokal"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:643
+msgid "Language support"
+msgstr "Sokongan bahasa"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:643
+#, python-format
+msgid "%d languages installed"
+msgstr "%d bahasa dipasang"
+
+#: usr/lib/linuxmint/mintLocale/add.ui.h:1
+msgid "Install"
+msgstr "Pasang"
+
+#: usr/lib/linuxmint/mintLocale/add.ui.h:2
+msgid "Install the selected language"
+msgstr "Pasang bahasa yang dipilih"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:1
+msgid ""
+"<b><small>Note: Installing or upgrading language packs can trigger the "
+"installation of additional languages</small></b>"
+msgstr ""
+"<b><small>Perhatian: Memasang atau menatar pek bahasa boleh memicu "
+"pemasangan bahasa tambahan</small></b>"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:2
+msgid "Add..."
+msgstr "Tambah..."
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:3
+msgid "Add a new language"
+msgstr "Tambah bahasa baharu"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:4
+msgid "Remove"
+msgstr "Buang"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:5
+msgid "Remove the selected language"
+msgstr "Buang bahasa terpilih"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:6
+msgid "Install language packs"
+msgstr "Pasang pek bahasa"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:7
+msgid ""
+"Install any missing language packs, translations files, dictionaries for the "
+"selected language"
+msgstr ""
+"Pasang mana-mana pek bahasa, fail terjemahan, kamus yang tiada untuk bahasa "
+"yang dipilih"
+
+#: generate_desktop_files:24
+msgid "Languages"
+msgstr "Bahasa"
+
+#: generate_desktop_files:24
+msgid "Language settings"
+msgstr "Tetapan bahasa"

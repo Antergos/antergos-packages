@@ -1,0 +1,347 @@
+# Welsh translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-08-30 16:37+0100\n"
+"PO-Revision-Date: 2014-11-19 09:44+0000\n"
+"Last-Translator: Rhoslyn Prys <rprys@yahoo.com>\n"
+"Language-Team: Welsh <cy@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:30
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:14
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:24
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:73
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:103
+msgid "Upload Manager"
+msgstr "Rheolwr Llwytho i Fyny"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:71
+#, python-format
+msgid "The upload to '%(service)s' was cancelled"
+msgstr "Cafodd y llwyth i '%(service)s ei ddiddymu"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:83
+#, python-format
+msgid "Upload to '%s' failed: "
+msgstr "Methodd y llwytho i '%s' "
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:89
+#, python-format
+msgid "Successfully uploaded %(number)d files to '%(service)s'"
+msgstr "Cafwyd llwyddiant wrth lwytho %(number)d ffeil i '%(service)s'"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:91
+#, python-format
+msgid "Successfully uploaded 1 file to '%(service)s'"
+msgstr "Cafwyd llwyddiant wrth lwytho 1 ffeil i '%(service)s'"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:102
+msgid "Do you want to cancel this upload?"
+msgstr "Hoffech chi ddidymu llwytho'r ffeil hon?"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:103
+msgid "Cancel"
+msgstr "Diddymu"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:104
+msgid "Run in the background"
+msgstr "Rhedeg yn y cefndir"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:107
+msgid "Cancel upload?"
+msgstr "Diddymu'r llwytho"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:127
+#, python-format
+msgid "Uploading %(number)d files to %(service)s"
+msgstr "Llwytho %(number)d ffeil i %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:128
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:236
+#, python-format
+msgid "%(percentage)s of %(number)d files - Uploading to %(service)s"
+msgstr "%(percentage)s o %(number)d ffeil - Llwytho i %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:130
+#, python-format
+msgid "Uploading 1 file to %(service)s"
+msgstr "Llwytho 1 ffeil i %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:131
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:238
+#, python-format
+msgid "%(percentage)s of 1 file - Uploading to %(service)s"
+msgstr "%(percentage)s o 1 ffeil - Llwytho i %(service)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:149
+#, python-format
+msgid ""
+"%(size_so_far)s of %(total_size)s - %(time_remaining)s left (%(speed)s/sec)"
+msgstr ""
+"%(size_so_far)s o %(total_size)s - %(time_remaining)s yn weddill "
+"(%(speed)s/sec)"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:151
+#, python-format
+msgid "%(size_so_far)s of %(total_size)s"
+msgstr "%(size_so_far)s o %(total_size)s"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:178
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:180
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:182
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:184
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:84
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:191
+#, python-format
+msgid "%(hours)d hours, %(minutes)d minutes"
+msgstr "%(hours)d awr, %(minutes)d munud"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:193
+#, python-format
+msgid "1 hour, %d minutes"
+msgstr "1 awr, %d munud"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:195
+#, python-format
+msgid "%(minutes)d minutes, %(seconds)d seconds"
+msgstr "%(minutes)d munud, %(seconds)d eiliad"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:197
+#, python-format
+msgid "1 minute, %d seconds"
+msgstr "1 fund, %d eiliad"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:199
+#, python-format
+msgid "%d seconds"
+msgstr "%d eiliadau"
+
+#: usr/lib/linuxmint/mintUpload/mintUpload.py:229
+#, python-format
+msgid "Unknown service: %s"
+msgstr "Gwasanaeth anhysbys: %s"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "KiB"
+msgstr "KiB"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "MiB"
+msgstr "MiB"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:82
+msgid "GiB"
+msgstr "GiB"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:123
+msgid "File larger than service's maximum"
+msgstr "Mae'r ffeil yn fwy nag uchafswm maint y gwasanaeth"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:133
+msgid "Could not get available space"
+msgstr "Methu cael lle ar gael"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:136
+msgid "File larger than service's available space"
+msgstr "Mae'r ffeil yn fwy na'r lle ar gael gan y gwasanaeth"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:160
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:297
+msgid "File uploaded successfully."
+msgstr "Ffeil wedi ei llwytho'n llwyddiannus"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:179
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:222
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:257
+msgid "connection successfully established"
+msgstr "cysylltiad wedi ei greu'n llwyddiannus"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:188
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:230
+msgid "Uploading the file..."
+msgstr "Llwytho ffeil i fyny..."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:212
+msgid "This service requires a password or private key."
+msgstr "Mae angen cyfrinair neu allwedd breifat ar y gwasanaeth..."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:264
+msgid "This service requires a password."
+msgstr "Mae'r gwasanaeth angen cyfrinair."
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:290
+msgid "URL:"
+msgstr "URL:"
+
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:334
+#: usr/lib/linuxmint/mintUpload/mintUploadCore.py:338
+#, python-format
+msgid "%(1)s is not set in the config file found under %(2)s or %(3)s"
+msgstr "Nid yw %(1)s wedi ei osod yn ffeil config o dan %(2)s neu %(3)s"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:82
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:30
+msgid "Upload services"
+msgstr "Gwasanaethau llwytho"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:97
+msgid "Services:"
+msgstr "Gwasanaethau:"
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:110
+msgid "Upload manager..."
+msgstr "Rheolwr llwytho..."
+
+#: usr/lib/linuxmint/mintUpload/file-uploader.py:176
+#, python-format
+msgid "Drag &amp; Drop here to upload to %s"
+msgstr "Llusgo a Gludo i lwytho i %s"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:15
+msgid "Define upload services"
+msgstr "Dififnio gwasanaethau llwytho"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:47
+msgid "_File"
+msgstr "_Ffeil"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:51
+msgid "Close"
+msgstr "Cau"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:55
+msgid "_Help"
+msgstr "_Cymorth"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:59
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:69
+msgid "About"
+msgstr "Ynghylch"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:105
+msgid "<b>Please enter a name for the new upload service:</b>"
+msgstr "<b>Rhowch enw i'r gwasanaeth llwytho newydd:</b>"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:109
+msgid "Service name:"
+msgstr "Enw'r gwasanaeth:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:111
+msgid "<i>Try to avoid spaces and special characters...</i>"
+msgstr "<i>Ceisiwch osgoi bylchau a nodau arbennig...</i>"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:169
+#, python-format
+msgid "%s Properties"
+msgstr "Priodweddau %s"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:172
+msgid "Advanced settings"
+msgstr "Gosodiadau uwch"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:173
+msgid "Check connection"
+msgstr "Gwirio'r cysylltiad"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:178
+msgid "Type:"
+msgstr "Math:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:179
+msgid "Host:"
+msgstr "Gwesteiwr:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:180
+msgid "Port:"
+msgstr "Porth:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:181
+msgid "User:"
+msgstr "Defnyddiwr:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:182
+msgid "Password:"
+msgstr "Cyfrinair:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:183
+msgid "Timestamp:"
+msgstr "Stamp amser:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:184
+msgid "Path:"
+msgstr "Llwybr:"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:186
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:187
+msgid "Hostname or IP address, default: "
+msgstr "Enw gwesteiwr neu gyfeiriad IP, rhagosodedig: "
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:190
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:191
+msgid "Remote port, default is 21 for FTP, 22 for SFTP and SCP"
+msgstr ""
+"Porth pell, y rhagosodedig yw 21 ar gyfer FTP, 22 ar gyfer SFTP ac SCP"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:194
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:195
+msgid "Username, defaults to your local username"
+msgstr "Enw defnyddiwr, rhagosod i'ch enw defnyddiwr lleol"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:198
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:199
+msgid ""
+"Password, by default: password-less SCP connection, null-string FTP "
+"connection, ~/.ssh keys used for SFTP connections"
+msgstr ""
+"Cyfrinair, trwy rhagosodiad: cysylltiad SCP digyfrinair, cysylltiad FTP "
+"llinyn nwl, allweddi ~/.ssh ar gyfer cysylltiad STP"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:202
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:203
+msgid "Timestamp format (strftime). By default:"
+msgstr "Fformat stamp amser (strftime). Trwy ragosodiad"
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:206
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:207
+msgid ""
+"Directory to upload to. <TIMESTAMP> is replaced with the current timestamp, "
+"following the timestamp format given. By default: ."
+msgstr ""
+"Cyfeiriadur i lwytho iddo. Mae <TIMESTAMP> yn cael ei amnewid â'r stamp "
+"amser cyfredol, yn dilyn fformat stamp amser. Rhagosodiad: ."
+
+#: usr/lib/linuxmint/mintUpload/upload-manager.py:265
+msgid "Could not save configuration change"
+msgstr "Methu cadw'r newid ffurfweddiad"
+
+#~ msgid "File Uploader"
+#~ msgstr "Llwythwr Ffeiliau"
+
+#~ msgid "<i>Try to avoid spaces and funny characters...</i>"
+#~ msgstr "<i>Ceisiwch osgoi bylchau a nodau rhyfedd...</i>"

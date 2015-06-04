@@ -1,0 +1,214 @@
+# Turkish translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-12-09 16:44+0000\n"
+"PO-Revision-Date: 2014-12-09 22:17+0000\n"
+"Last-Translator: kelebek333 <Unknown>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:110
+msgid "Desktop"
+msgstr "Masaüstü"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:111
+msgid "Windows"
+msgstr "Pencereler"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:112
+msgid "Interface"
+msgstr "Arayüz"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:113
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:160
+msgid "Terminal"
+msgstr "Uçbirim"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:154
+msgid "Desktop icons"
+msgstr "Masaüstü simgeleri"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:155
+msgid "Performance"
+msgstr "Performans"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:156
+msgid "Appearance"
+msgstr "Görünüm"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:157
+msgid "Icons"
+msgstr "Simgeler"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:158
+msgid "Context menus"
+msgstr "İçerik menüleri"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:159
+msgid "Toolbars"
+msgstr "Araç Çubukları"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:161
+msgid "Window Manager"
+msgstr "Pencere Yöneticisi"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:163
+msgid "Select the items you want to see on the desktop:"
+msgstr "Masaüstünde görmek istediğiniz ögeleri seçin:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:165
+msgid "Computer"
+msgstr "Bilgisayar"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:166
+msgid "Home"
+msgstr "Ev Dizini"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:167
+msgid "Network"
+msgstr "Ağ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:168
+msgid "Trash"
+msgstr "Çöp Kutusu"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:169
+msgid "Mounted Volumes"
+msgstr "Bağlı Birimler"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:171
+msgid "Don't show window content while dragging them"
+msgstr "Sürüklerken pencere içeriğini gösterme"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:172
+msgid "Use compositing"
+msgstr "Compositing özelliğini kullan"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:173
+msgid "Use system font in titlebar"
+msgstr "Başlıkta sistem yazı tipini kullan"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:174
+msgid "Show fortune cookies"
+msgstr "Şans kurabiyelerini göster"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:176
+msgid "Buttons layout:"
+msgstr "Düğme düzeni:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:178
+msgid "Window manager:"
+msgstr "Pencere yöneticisi:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:180
+msgid "Show icons on menus"
+msgstr "Menülerde simgeleri göster"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:181
+msgid "Show icons on buttons"
+msgstr "Düğmelerde simgeleri göster"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:182
+msgid "Show Input Methods menu in context menus"
+msgstr "Girdi Yöntemleri menüsünü içerik menülerinde göster"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:183
+msgid "Show Unicode Control Character menu in context menus"
+msgstr "Unicode Kontrol Karakter menüsünü içerik menülerinde göster"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:185
+msgid "Buttons labels:"
+msgstr "Düğme etiketleri:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:186
+msgid "Icon size:"
+msgstr "Simge boyutu:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:210
+msgid "Small"
+msgstr "Küçük"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:211
+msgid "Large"
+msgstr "Büyük"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:217
+msgid "Traditional style (Right)"
+msgstr "Geleneksel biçim (Sağ)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:218
+msgid "Mac style (Left)"
+msgstr "Mac biçimi (Sol)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:225
+msgid "Marco (stable and reliable)"
+msgstr "Marco (kararlı ve güvenilir)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:226
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:234
+msgid "Compiz (impressive desktop effects)"
+msgstr "Compiz (etkileyici masaüstü efektleri)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:228
+msgid ""
+"Log out and log back in for changes to take effect. If things go wrong, run "
+"'mate-wm-recovery' to switch back to Marco."
+msgstr ""
+"Değişikliklerin etkinleşmesi için oturumu kapatınız ve tekrar açınız. Bir "
+"şeyler hatalı giderse 'mate-wm-recovery' komutunu çalıştırarak Marco pencere "
+"yöneticisine geri dönebilirsiniz."
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:233
+msgid "Xfwm (stable and reliable)"
+msgstr "Xfwm (kararlı ve güvenilir)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:237
+msgid "Log out and log back in for changes to take effect."
+msgstr ""
+"Değişikliklerin etkinleşmesi için oturumu kapatınız ve tekrar açınız."
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:246
+msgid "Text below items"
+msgstr "Metin öğelerin altında"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:247
+msgid "Text beside items"
+msgstr "Metin öğelerin yanında"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:248
+msgid "Icons only"
+msgstr "Sadece simgeler"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:249
+msgid "Text only"
+msgstr "Sadece metin"
+
+#: generate_desktop_files:25
+msgid "Desktop Settings"
+msgstr "Masaüstü Ayarları"
+
+#: generate_desktop_files:25
+msgid "Fine-tune desktop settings"
+msgstr "Masaüstü ince ayarları"
+
+#~ msgid "Desktop Items"
+#~ msgstr "Masaüstü öğeleri"
+
+#~ msgid "Gnome Settings"
+#~ msgstr "Gnome Ayarları"
+
+#~ msgid "Fine-tune Gnome settings"
+#~ msgstr "Gnome İnce Ayarları"
+
+#~ msgid "Desktop Configuration Tool"
+#~ msgstr "Masaüstü Yapılandırma Aracı"

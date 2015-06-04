@@ -1,0 +1,205 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mint Welcome\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-08 10:39+0100\n"
+"PO-Revision-Date: 2014-04-08 17:04+0000\n"
+"Last-Translator: kelebek333 <Unknown>\n"
+"Language-Team: Linux Mint Türkiye Çeviri Tayfası <hsngrms@ovi.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+"X-Poedit-Country: TURKEY\n"
+"Language: \n"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:24 generate_desktop_files:58
+#: generate_desktop_files:72
+msgid "Welcome Screen"
+msgstr "Karşılama Ekranı"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:77
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did designing it. The links below will help you get started "
+"with your new operating system. Have a great time and don't hesitate to send "
+"us your feedback."
+msgstr ""
+"Hoşgeldiniz, Linux Mint'i seçtiğiniz için teşekkür ederiz. Umarız, bizim "
+"Linux Mint'i geliştirirken aldığımız keyfi siz de kullanırken alırsınız. "
+"Aşağıdaki bağlantılar, size yeni işletim sisteminizi tanımanızda yardımcı "
+"olacaktır. İyi zaman geçirin ve bize geri bildirimlerinizi göndermekten "
+"çekinmeyin."
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "New features"
+msgstr "Yeni özellikler"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "See what is new in this release"
+msgstr "Bu sürümdeki yenilikleri görünüz"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid "Important information"
+msgstr "Önemli bilgi"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid ""
+"Find out about important information, limitations, known issues and their "
+"solution"
+msgstr ""
+"Önemli bilgileri, sınırlamaları, bilinen sorunları ve onların çözümlerini "
+"örenin"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "User guide (PDF)"
+msgstr "Kullanıcı kılavuzu (PDF)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "Learn all the basics to get started with Linux Mint"
+msgstr "Linux Mint'e başlarken temel bilgileri öğrenin"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data"
+msgstr "Verileri geri yükle"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data or applications from a previous installation"
+msgstr "Önceki kurulumdaki veri ya da uygulamaları geri yükle"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Software manager"
+msgstr "Yazılım yöneticisi"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Install additional software"
+msgstr "Ek yazılım yükleyin"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat room"
+msgstr "Sohbet odası"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat live with other users in the chat room"
+msgstr "Sohbet odalarında diğer kullanıcılar ile canlı sohbet edin"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Forums"
+msgstr "Forumlar"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Seek help from other users in the Linux Mint forums"
+msgstr "Linux Mint forumlarında diğer kullanıcılardam yardım isteyin"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Tutorials"
+msgstr "Eğitici Belgeler"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Find tutorials about Linux Mint"
+msgstr "Linux Mint hakkında rehberler bulun"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid "Hardware database"
+msgstr "Donanım veritabanı"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid ""
+"Find hardware that is compatible with Linux, or information about your "
+"hardware"
+msgstr ""
+"Linux ile donanım uyumluluğunu araştırın, ya da donanımınız hakkında bilgi "
+"edinin"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Idea pool"
+msgstr "Fikir havuzu"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Submit new ideas to the development team"
+msgstr "Geliştirici takıma yeni fikirler iletin"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Get involved"
+msgstr "Katkıda bulunun"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Find out how to get involved in the Linux Mint project"
+msgstr "Linux Mint projesinde nasıl yer alınacağını öğrenin"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Donations"
+msgstr "Bağışlar"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Make a donation to the Linux Mint project"
+msgstr "Linux Mint projesi için bağış yapın"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Sponsors"
+msgstr "Sponsorlar"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Apply to become a Linux Mint sponsor"
+msgstr "Linux Mint'e sponsor olmak için başvurun"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:140
+msgid "Show this dialog at startup"
+msgstr "Başlangıçta bu pencereyi göster"
+
+#: generate_desktop_files:58 generate_desktop_files:72
+msgid "Introduction to Linux Mint"
+msgstr "Linux Mint'e Giriş"
+
+#: generate_desktop_files:86
+msgid "Install Multimedia Codecs"
+msgstr "Çoklu Ortam Çözücülerini Kur"
+
+#: generate_desktop_files:86
+msgid "Add all the missing multimedia codecs"
+msgstr "Tüm eksik çoklu ortam çözücülerini ekle"
+
+#~ msgid "Browse the list of new features"
+#~ msgstr "Yeni özelliklere göz atın"
+
+#, python-format
+#~ msgid "Discover %s"
+#~ msgstr "Keşfet %s"
+
+#~ msgid "Find help"
+#~ msgstr "Yardım Bul"
+
+#~ msgid "Welcome to Linux Mint"
+#~ msgstr "Linux Mint'e Hoşgeldiniz"
+
+#~ msgid "Connect to the chat room"
+#~ msgstr "Sohbet odasına bağlanın"
+
+#~ msgid "Download the user guide (PDF)"
+#~ msgstr "Kullanıcı kılavuzunu indirin (PDF)"
+
+#~ msgid "Read the release notes"
+#~ msgstr "Sürüm notlarını okuyun"
+
+#~ msgid "Visit the forums"
+#~ msgstr "Forumları ziyaret edin"
+
+#~ msgid "Contribute to Linux Mint"
+#~ msgstr "Linux Mint'e katkıda bulunun"
+
+#~ msgid ""
+#~ "Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+#~ "as much as we did making it. Please make yourself familiar with the new "
+#~ "features and the documentation and don't hesitate to send us your feedback."
+#~ msgstr ""
+#~ "Merhaba! Linux Mint'i seçtiğiniz için teşekkür ederiz. Umarız Linux Mint'i "
+#~ "yaratırken geçirdiğimiz keyifli dakikaların aynısını siz kullanırken "
+#~ "yaşayabilirsiniz. Lütfen yeni özellikler ve dökümantasyon ile aşina olun ve "
+#~ "görüşlerinizi bize göndermek için tereddüt etmeyin."
+
+#~ msgid "Make a donation"
+#~ msgstr "Bağış yapın"
+
+#~ msgid "Become a sponsor"
+#~ msgstr "Sponsor olun"

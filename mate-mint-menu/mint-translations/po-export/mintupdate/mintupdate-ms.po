@@ -1,0 +1,965 @@
+# Malay translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-05-29 15:50+0200\n"
+"PO-Revision-Date: 2014-12-07 07:45+0000\n"
+"Last-Translator: Fazwan Fazil <takaizu91@gmail.com>\n"
+"Language-Team: Malay <ms@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:128
+msgid "Downloading changelog..."
+msgstr "Sedang muat turun log perubahan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:156
+msgid "No changelog available"
+msgstr "Tiada log-perubahan tersedia"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:254
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:423
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:176
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade_root.py:54
+msgid "Please wait, this can take some time"
+msgstr "Sila tunggu, ini akan mengambil sedikit masa"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:257
+#, python-format
+msgid "The %s kernel was removed"
+msgstr "Kernel %s telah dibuang"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:259
+#, python-format
+msgid "The %s kernel was installed"
+msgstr "Kernel %s telah dipasang"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:331
+msgid "This upgrade will trigger additional changes"
+msgstr "Naik taraf ini akan menyebabkan berlaku perubahan tambahan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:341
+msgid "The following package will be removed:"
+msgstr "Pakej berikut akan dibuang:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:343
+#, python-format
+msgid "The following %d packages will be removed:"
+msgstr "Pakej %d berikut akan dibuang:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:371
+msgid "The following package will be installed:"
+msgstr "Pakej berikut akan ditetapkan:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:373
+#, python-format
+msgid "The following %d packages will be installed:"
+msgstr "Pakej %d berikut akan dipasang:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:414
+msgid "Installing updates"
+msgstr "Memasang kemaskini"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:425
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade_root.py:56
+msgid "Update is complete"
+msgstr "Kemaskini selesai"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:465
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:574
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2033
+msgid "Checking for updates"
+msgstr "Memeriksa kemaskini"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:489
+msgid "Could not install the security updates"
+msgstr "Kemaskini keselamatan tidak dapat dipasang"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:563
+msgid "Starting refresh..."
+msgstr "Segar semula dimulakan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:612
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:613
+msgid "Another application is using APT"
+msgstr "Aplikasi lain sedang menggunakan APT"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:623
+msgid "Finding the list of updates..."
+msgstr "Mencari senarai kemaskini"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:659
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:660
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:873
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:874
+msgid "Your system is up to date"
+msgstr "Sistem anda dikemaskini"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:677
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:678
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:899
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:903
+msgid "Could not refresh the list of updates"
+msgstr "Tidak dapat muat semula senarai kemas kini"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:725
+msgid "Security update"
+msgstr "Kemas kini keselamatan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:727
+msgid ""
+"Software backport. Be careful when upgrading. New versions of sofware can "
+"introduce regressions."
+msgstr ""
+"Perisian backport. Berhati-hati semasa menaik taraf. Perisian versi baru "
+"boleh menyebabkan regresi."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:729
+msgid ""
+"Unstable software. Only apply this update to help developers beta-test new "
+"software."
+msgstr ""
+"Perisian tidak stabil. Hanya guna kemas kini ini untuk membantu pembangun "
+"melakukan ujian-beta perisian baru."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:731
+msgid "Software update"
+msgstr "Kemas kini perisian"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:844
+msgid "A new version of the update manager is available"
+msgstr "Pengurusan kemaskini versi baharu tersedia"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:854
+#, python-format
+msgid "1 recommended update available (%(size)s)"
+msgstr "1 kemas kini dicadangkan boleh didapati (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:856
+#, python-format
+msgid "1 recommended update available (%(size)s), 1 ignored"
+msgstr "1 kemas kini dicadangkan boleh didapati (%(size)s), 1 diabaikan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:858
+#, python-format
+msgid "1 recommended update available (%(size)s), %(ignored)d ignored"
+msgstr ""
+"1 kemas kini dicadangkan boleh didapati (%(size)s), %(ignored)d diabaikan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:861
+#, python-format
+msgid "%(recommended)d recommended updates available (%(size)s)"
+msgstr "%(recommended)d kemas kini dicadangkan boleh didapati (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:863
+#, python-format
+msgid "%(recommended)d recommended updates available (%(size)s), 1 ignored"
+msgstr ""
+"%(recommended)d kemas kini dicadangkan boleh didapati  (%(size)s), 1 "
+"diabaikan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:865
+#, python-format
+msgid ""
+"%(recommended)d recommended updates available (%(size)s), %(ignored)d ignored"
+msgstr ""
+"%(recommended)d kemaskini cadangan tersedia  (%(size)s), %(ignored)d "
+"diabaikan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:938
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:957
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1934
+msgid "No updates selected"
+msgstr "Tiada kemaskini dipilih"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:959
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1936
+#, python-format
+msgid "%(selected)d update selected (%(size)s)"
+msgstr "%(selected)d kemas kini dipilih (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:961
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1938
+#, python-format
+msgid "%(selected)d updates selected (%(size)s)"
+msgstr "%(selected)d kemas kini dipilih (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:974
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1226
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1372
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1441
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1487
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1708
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1710
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2039 generate_desktop_files:24
+msgid "Update Manager"
+msgstr "Pengurus Kemaskini"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1226
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2164
+msgid "Preferences"
+msgstr "Tetapan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1228
+msgid "Levels"
+msgstr "Aras"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1229
+msgid "Auto-Refresh"
+msgstr "Segar semula auto"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1230
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2074
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2219
+msgid "Level"
+msgstr "Aras"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1231
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2141
+msgid "Description"
+msgstr "Huraian"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1232
+msgid "Tested?"
+msgstr "Telah diuji?"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1233
+msgid "Origin"
+msgstr "Asal"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1234
+msgid "Safe?"
+msgstr "Selamat?"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1235
+msgid "Visible?"
+msgstr "Nyata?"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1236
+msgid ""
+"Certified updates. Tested through Romeo or directly maintained by Linux Mint."
+msgstr ""
+"Kemas kini diiktiraf. Diuji melalui Romeo atau diselenggara secara terus "
+"oleh Linux Mint"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1237
+msgid "Recommended updates. Tested and approved by Linux Mint."
+msgstr "Kemas kini disyorkan. Diuji dan diluluskan oleh Linux Mint."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1238
+msgid "Safe updates. Not tested but believed to be safe."
+msgstr "Kemas kini selamat. Tidak diuji tetapi dipercayai selamat."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1239
+msgid "Unsafe updates. Could potentially affect the stability of the system."
+msgstr "Kemas kini tidak selamat. Boleh menyebabkan ketidakstabilan sistem."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1240
+msgid ""
+"Dangerous updates. Known to affect the stability of the systems depending on "
+"certain specs or hardware."
+msgstr ""
+"Kemas kini bahaya. Diketahui boleh menyebabkan ketidakstabilan sistem "
+"bergantung pada spekifikasi atau perkakasan."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1241
+msgid "Linux Mint"
+msgstr "Linux Mint"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1242
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1243
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1244
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1245
+msgid "Upstream"
+msgstr "Huluan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1246
+msgid "Refresh the list of updates every:"
+msgstr "Segar semula senarai kemaskini setiap:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1247
+msgid ""
+"Note: The list only gets refreshed while the update manager window is closed "
+"(system tray mode)."
+msgstr ""
+"Nota: Senarai ini hanya akan disegarkan apabila tetingkap pengurusan "
+"kemaskini ditutup ( mod dulang sistem )"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1249
+msgid "Options"
+msgstr ""
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1250
+msgid "Icons"
+msgstr "Ikon"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1251
+msgid "Icon"
+msgstr "Ikon"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1252
+msgid "Status"
+msgstr "Status"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1253
+msgid "New Icon"
+msgstr "Ikon Baru"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1254
+msgid "Busy"
+msgstr "Sibuk"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1255
+msgid "System up-to-date"
+msgstr "Sistem terkini"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1256
+msgid "Updates available"
+msgstr "Kemaskini tersedia"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1257
+msgid "Error"
+msgstr "Ralat"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1258
+msgid "Unknown state"
+msgstr "Keadaan tidak dikenali"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1259
+msgid "Applying updates"
+msgstr "Melaksanakan kemaskini"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1260
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1314
+msgid "Ignored updates"
+msgstr "Kemas kini diendahkan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1262
+msgid ""
+"Include updates which require the installation of new packages or the "
+"removal of installed packages"
+msgstr ""
+"Termasuk kemas kini yang memerlukan installasi pakej baru atau pakej "
+"terpasang dibuang"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1263
+msgid "Hide the update manager after applying updates"
+msgstr ""
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1292
+msgid "Always show security updates"
+msgstr "Sentiasa papar kemas kini keselamatan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1293
+msgid "Always select and trust security updates"
+msgstr "Sentiasa pilih dan percaya kemas kini keselamatan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1295
+msgid "minutes"
+msgstr "minit"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1296
+msgid "hours"
+msgstr "jam"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1297
+msgid "days"
+msgstr "hari"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1340
+msgid "Please specify the name of the update to ignore:"
+msgstr "Sila nyatakan nama kemas kini untuk diabaikan:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1341
+msgid "Ignore an update"
+msgstr "Abaikan kemas kini"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1345
+msgid "Name:"
+msgstr "Nama:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1372
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2200
+msgid "History of updates"
+msgstr "Sejarah kemaskini"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1375
+msgid "Date"
+msgstr "Tarikh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1378
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2070
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2225
+msgid "Package"
+msgstr "Pakej"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1381
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2078
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2231
+msgid "Old version"
+msgstr "Versi lama"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1384
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2082
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2237
+msgid "New version"
+msgstr "Versi baru"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1441
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2206
+msgid "Information"
+msgstr "Maklumat"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1444
+msgid "Process ID:"
+msgstr "ID proses:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1445
+msgid "Log file:"
+msgstr "Fail log:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1463
+#, python-format
+msgid "Are you sure you want to remove the %s kernel?"
+msgstr "Adakah anda pasti anda mahu buang kernel %s?"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1465
+#, python-format
+msgid "Are you sure you want to install the %s kernel?"
+msgstr "Adakah anda pasti anda mahu pasang kernel %s?"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1487
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2203
+msgid "Linux kernels"
+msgstr "Kernel-kernel Linux"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1495
+msgid "Warning!"
+msgstr "Amaran!"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1496
+msgid ""
+"The Linux kernel is a critical part of the system. Regressions can lead to "
+"lack of networking, lack of sound, lack of graphical environment or even the "
+"inability to boot the computer. Only install or remove kernels if you're "
+"experienced with kernels, drivers, dkms and you know how to recover a non-"
+"booting computer."
+msgstr ""
+"Kernel Linux adalah bahagian kritikal sistem. Regresi boleh menyebabkan "
+"kekurangan atau masalah pada perangkaian, bunyi, persekitaran grafik atau "
+"ketidakupayaan membut komputer. Hanya pasang atau buang kernel jika anda "
+"tahu mengendali kernel, pemacu, dkms dan juga tahu memulih kembali komputer "
+"yang gagal dibut."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1497
+msgid "The following kernels are available:"
+msgstr "Kernel-kernel berikut boleh didapati:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1498
+msgid "More info..."
+msgstr "Maklumat lanjut..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1500
+msgid ""
+"Fixes can represent bug fixes, improvements in hardware support or security "
+"fixes."
+msgstr ""
+"Pembaikan boleh mewakili pembaikan pepijat, penambahbaikan dalam sokongan "
+"perkakasan atau pembaikan keselamatan."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1501
+msgid ""
+"Security fixes are important when local users represent a potential threat "
+"(in companies, libraries, schools or public places for instance) or when the "
+"computer can be threatened by remote attacks (servers for instance)."
+msgstr ""
+"Pembaikan keselamatan adalah penting bila pengguna setempat merupakan "
+"ancaman (dalam syarikat, pustaka, sekolah atau tempat awam sebagai contoh) "
+"atau bila komputer boleh diancam secara serangan jauh (pelayan sebagai "
+"contoh)."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1502
+msgid ""
+"Bug fixes and hardware improvements are important if one of your devices "
+"isn't working as expected and the newer kernel addresses that problem."
+msgstr ""
+"Pembaikan pepijat dan penambahbaikan perkakasan adalah penting jika salah "
+"satu dari peranti anda tidak berfungsi seperti yang diharapkan dan alamat "
+"kernel lebih baharu yang menjadi punca masalah."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1503
+msgid ""
+"Regressions represent something which worked well and no longer works after "
+"an update. It is common in software development that a code change or even a "
+"bug fix introduces side effects and breaks something else. Because of "
+"regressions it is recommended to be selective when installing updates or "
+"newer kernels."
+msgstr ""
+"Regresi mewakili sesuatu sebelum ini berfungsi baik kemudian tidak lagi "
+"berfungsi selepas kemaskii. Ia biasa berlaku di dalam pembangunan perisian "
+"yang mana berlakunya perubahan kod atau pembaikan pepijat menyebabkan kesan "
+"sampingan dan merosakkan yang lain. Oleh kerana regresi ini  perlu dipilih "
+"bila memasang kemaskini atau kernel baharu."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1505
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1528
+msgid "Fixes"
+msgstr "Perbaikan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1506
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1532
+msgid "Regressions"
+msgstr "Regresi"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1507
+msgid ""
+"Note: Only known fixes and regressions are mentioned. If you are aware of "
+"additional fixes or regressions, please contact the development team."
+msgstr ""
+"Perhatian: Hanya pembaikan da n regresi diketahui akan dimaklumkan. Jika "
+"anda ketahui ada pembaikan atau regresi tambahan, sila hubungai pasukan "
+"pembangunan."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1512
+msgid "Version"
+msgstr "Versi"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1516
+msgid "Loaded"
+msgstr "Dimuatkan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1520
+msgid "Recommended"
+msgstr "Disyorkan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1524
+msgid "Installed"
+msgstr "Dipasang"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1607
+msgid "Install"
+msgstr "Pasang"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1611
+msgid "Remove"
+msgstr "Buang"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1653
+#, python-format
+msgid "Remove the %s kernel"
+msgstr "Buang kernel %s"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1655
+msgid "This kernel cannot be removed because it is currently in use."
+msgstr "Kernel ini tidak boleh dibuang kerana ia sedang digunakan."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1659
+#, python-format
+msgid "Install the %s kernel"
+msgstr "Pasang kernel %s"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1661
+msgid "This kernel is not installable."
+msgstr "Kernel ini tidak boleh dipasang."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1708
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2274
+msgid "About"
+msgstr "Tentang"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1865
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1895
+#, python-format
+msgid "This update contains %d packages: "
+msgstr "Kemas kini ini mengandungi %d pakej: "
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1868
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1898
+msgid "This update contains 1 package: "
+msgstr "Kemas kini ini mengandungi 1 pakej: "
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1941
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1943
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1945
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1947
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1976
+msgid "Ignore updates for this package"
+msgstr "Abaikan kemas kini untuk pakej ini"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2065
+msgid "Upgrade"
+msgstr "Naik taraf"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2086
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2243
+msgid "Size"
+msgstr "Saiz"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2090
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2213
+msgid "Type"
+msgstr "Jenis"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2137
+msgid "Install Updates"
+msgstr "Pasang kemaskini"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2138
+msgid "Refresh"
+msgstr "Segar semula"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2139
+msgid "Select All"
+msgstr "Pilih Semua"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2140
+msgid "Clear"
+msgstr "Padam"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2142
+msgid "Changelog"
+msgstr "log-perubahan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2152
+msgid "_File"
+msgstr "_Fail"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2156
+msgid "Close"
+msgstr "Tutup"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2160
+msgid "_Edit"
+msgstr "_Sunting"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2170
+msgid "Software sources"
+msgstr "Sumber perisian"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2192
+#, python-format
+msgid "Upgrade to %s"
+msgstr "Naik taraf ke %s"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2196
+msgid "_View"
+msgstr "_Papar"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2209
+msgid "Visible columns"
+msgstr "Lajur nyata"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2251
+msgid "Show descriptions"
+msgstr "Tunjukkan deskripsi"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2265
+msgid "_Help"
+msgstr "_Bantuan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2269
+msgid "Contents"
+msgstr "Kandungan"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:18
+msgid "System Upgrade"
+msgstr "Sistem Naik Taraf"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:30
+msgid "Introduction"
+msgstr "Pengenalan"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:34
+msgid ""
+"Your system is missing critical components. A package corresponding to your "
+"edition of Linux Mint should provide the virtual package 'mint-info' and the "
+"file /etc/linuxmint/info."
+msgstr ""
+"Sistem anda tiada komponen kritical. Satu pakej sepadan dengan edisi Linux "
+"Mint anda patut berikan pakej maya 'mint-info' dan fail /etc/linuxmint/info"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:47
+msgid "No upgrades were found."
+msgstr "Tiada Naik Taraf dijumpai"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:55
+msgid "A new version of Linux Mint is available!"
+msgstr "Versi baru Linux Mint boleh didapati!"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:65
+#, python-format
+msgid "An upgrade was found but it is not available yet for the %s edition."
+msgstr ""
+"Satu naik taraf dijumpai tetapi ia masih belum didapati untuk edisi %s ."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:74
+msgid "Release notes"
+msgstr "Nota pelepasan"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:81
+msgid ""
+"Please read the release notes before upgrading. They explain all the known "
+"issues, workarounds and solutions associated with the new version."
+msgstr ""
+"Sila baca nota pelepasan sebelum naik taraf. Ia akan menerangkan semua isu-"
+"isu yang diketahui, workaround dan penyelesaian berkaitan dengan versi baru."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:85
+#, python-format
+msgid "Release notes for %s"
+msgstr "Nota pelepasan untuk %s"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:89
+msgid "Click on the link to open the release notes."
+msgstr "Klik pada pautan untuk buka nota pelepasan."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:97
+msgid "New features"
+msgstr "Ciri-ciri baru"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:104
+msgid "Please look at the new features introduced in the new version."
+msgstr "Sila lihat ciri-ciri baru yang diperkenalkan dalam versi baru."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:108
+#, python-format
+msgid "New features in %s"
+msgstr "Ciri-ciri baru dalam %s"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:112
+msgid "Click on the link to browse the new features."
+msgstr "Klik pada pautan untuk layari ciri-ciri baru."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:120
+msgid "Requirements"
+msgstr "Keperluan"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:130
+#, python-format
+msgid "The package %s needs to be installed before upgrading."
+msgstr "Pakej %s perlu dipasang terlebih dahulu sebelum naik taraf."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:134
+#, python-format
+msgid "Install %s"
+msgstr "Pasang %s"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:139
+msgid "Click on the button to install the missing package."
+msgstr "Klik pada butang untuk pasang pakej yang tiada."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:153
+msgid ""
+"New releases provide bug fixes and new features but they also sometimes "
+"introduce new issues. Upgrading always represents a risk. Your data is safe "
+"but new issues can potentially affect your operating system."
+msgstr ""
+"Pelepasan baru menyediakan bug fix dan ciri-ciri baru tetapi ia juga boleh "
+"mencetuskan isu-isu baru. Naik taraf selalu melambangkan risiko. Data anda "
+"selamat tetapi isu-isu baru ada potensi untuk menjejaskan sistem operasi."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:157
+#, python-format
+msgid "I understand the risk. I want to upgrade to %s."
+msgstr "Saya memahami risiko itu. Saya mahu naik taraf ke %s."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:167
+msgid "Summary"
+msgstr "Ringkasan"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:178
+msgid "The package was installed"
+msgstr "Pakej sudah dipasang"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:270
+msgid ""
+"Your operating system was successfully upgraded. Please reboot your computer "
+"for all changes to take effect."
+msgstr ""
+"Operasi sistem anda sudah berjaya dinaik taraf. Sila boot semula komputer "
+"anda untuk semua perubahan berkuat kuasa."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:279
+msgid ""
+"The upgrade did not succeed. Make sure you are connected to the Internet and "
+"try to upgrade again."
+msgstr ""
+"Naik taraf tidak berjaya. Pastikan anda disambungkan ke Internet dan cuba "
+"untuk naik taraf lagi."
+
+#: generate_desktop_files:24
+msgid "Show and install available updates"
+msgstr "Tunjuk dan pasang kemaskini yang ada"
+
+#: usr/bin/mint-release-upgrade-root:16
+msgid "Please enter your password to perform the upgrade"
+msgstr "Sila masukkan kata laluan anda untuk lakukan naik taraf"
+
+#~ msgid "Checking the connection to the Internet..."
+#~ msgstr "Memeriksa sambungan internet"
+
+#~ msgid "Could not refresh the list of packages"
+#~ msgstr "Tidak dapat menyegar semula senarai pakej"
+
+#~ msgid "Could not connect to the Internet"
+#~ msgstr "Tidak dapat menyambung kepada internet"
+
+#~ msgid "Downloading safety level rules..."
+#~ msgstr "Memuat turun peraturan aras keselamatan"
+
+#~ msgid "Could not download safety rules"
+#~ msgstr "Peraturan aras keselamatan tidak dapat dimuat turun"
+
+#, python-format
+#~ msgid "%d recommended updates available"
+#~ msgstr "%d kemaskini yang disyorkan telah sedia"
+
+#~ msgid ""
+#~ "Unsafe packages. Could potentially affect the stability of the system."
+#~ msgstr "Pakej tidak selamat. Boleh mengganggu kestabilan sistem."
+
+#~ msgid "Safe packages. Not tested but believed to be safe."
+#~ msgstr "Pakej selamat. Tidak diuji tetapi diyakini selamat."
+
+#~ msgid "Linux Mint or Romeo"
+#~ msgstr "Linux Mint atau Romeo"
+
+#~ msgid ""
+#~ "Dangerous packages. Known to affect the stability of the systems depending "
+#~ "on certain specs or hardware."
+#~ msgstr ""
+#~ "Pakej merbahaya. Dipercayai boleh mengganggu kestabilan sistem bergantung "
+#~ "kepada perkakas atau ciri-ciri tertentu."
+
+#~ msgid "Yes"
+#~ msgstr "Ya"
+
+#~ msgid "Ubuntu or 3rd party"
+#~ msgstr "Ubuntu atau pihak luar"
+
+#~ msgid ""
+#~ "Certified packages. Tested through Romeo or directly maintained by Linux "
+#~ "Mint."
+#~ msgstr ""
+#~ "Pakej diiktiraf. Telah diuji melalui Romeo atau dipelihara oleh Linux Mint "
+#~ "sendiri."
+
+#~ msgid "Recommended packages. Tested and approved by Linux Mint."
+#~ msgstr "Pakej yang disyorkan. Telah diuji dan disahkan oleh Linux Mint."
+
+#~ msgid ""
+#~ "Note: The dist-upgrade option, in addition to performing the function of "
+#~ "upgrade, also intelligently handles changing dependencies with new versions "
+#~ "of packages. Without this option, only the latest versions of any out-of-"
+#~ "date packages on your system are installed. Packages that are not yet "
+#~ "installed don't get installed automatically and newer versions of packages "
+#~ "which dependencies require such installations are simply ignored."
+#~ msgstr ""
+#~ "Nota: Pilihan dist-upgrade, sebagai tambahan bagi melaksanakan fungsi "
+#~ "kemaskini, juga mengendali perubahan kendiri dengan versi pakej terbaru "
+#~ "dengan cekap. Tanpa pilihan ini, hanya versi terkini dari mana-mana pakej "
+#~ "lama di dalam sistem anda yang dipasang. Pakej yang belum dipasang tidak "
+#~ "akan dipasang secara automatik dan pakej versi terkini dimana kendiriannya "
+#~ "memerlukan pemasangan tersebut akan diabaikan."
+
+#~ msgid "No"
+#~ msgstr "Tidak"
+
+#~ msgid "Update Method"
+#~ msgstr "Cara Kemaskini"
+
+#~ msgid ""
+#~ "Note: The list only gets refreshed while the mintUpdate window is closed "
+#~ "(system tray mode)."
+#~ msgstr ""
+#~ "Nota: Senarai hanya akan disegar semula apabila jendela mintUpdate ditutup "
+#~ "(bentuk sistem tray)"
+
+#~ msgid "HTTP Proxy:"
+#~ msgstr "Proksi HTTP"
+
+#~ msgid "FTP Proxy:"
+#~ msgstr "Proksi FTP"
+
+#~ msgid "Internet check (domain name or IP address):"
+#~ msgstr "Periksa menggunakan internet (nama domain atau alamat IP)"
+
+#~ msgid "Proxy"
+#~ msgstr "Proksi"
+
+#~ msgid "Manual proxy configuration"
+#~ msgstr "Konfigurasi proksi manual"
+
+#~ msgid "Use the same proxy for all protocols"
+#~ msgstr "Menggunakan proksi yang sama bagi semua protokol"
+
+#~ msgid "Satisfy changing dependencies using dist-upgrade?"
+#~ msgstr "Pua hati dengan perubahan kendiri menggunakan dist-upgrade?"
+
+#~ msgid "Gopher Proxy:"
+#~ msgstr "Proksi Gopher"
+
+#~ msgid "Port:"
+#~ msgstr "Port:"
+
+#~ msgid "Ignored packages"
+#~ msgstr "Pakej yang diabaikan"
+
+#~ msgid "Please enter a package name:"
+#~ msgstr "Sila masukkan nama pakej:"
+
+#~ msgid "Package name:"
+#~ msgstr "Nama pakej:"
+
+#~ msgid "Ignore a package"
+#~ msgstr "Abaikan pakej"
+
+#~ msgid "Log file"
+#~ msgstr "Fail log"
+
+#~ msgid "Permissions:"
+#~ msgstr "Kebenaran:"
+
+#~ msgid "All available upgrades for this package will be ignored."
+#~ msgstr "Semua kemaskini tersedia bagi pakej ini akan diabaikan"
+
+#~ msgid "Please enter your password to start mintUpdate"
+#~ msgstr "Sila masukkan kata laluan anda bagi memulakan mintUpdate"
+
+#~ msgid "Extra Info"
+#~ msgstr "Maklumat tambahan"
+
+#~ msgid "Warnings"
+#~ msgstr "Amaran"
+
+#~ msgid "Software Updates"
+#~ msgstr "Kemaskini Perisian"
+
+#, python-format
+#~ msgid "%(recommended)d recommended updates available, %(ignored)d ignored"
+#~ msgstr ""
+#~ "%(recommended)d mencadangkan mengemaskini terbaru boleh didapati, "
+#~ "%(ignored)d di abaikan"
+
+#~ msgid "Startup delay (in seconds):"
+#~ msgstr "Lengahan permulaan (dalam saat):"

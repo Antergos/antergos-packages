@@ -1,0 +1,116 @@
+# Tamil translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-05-09 21:57+0100\n"
+"PO-Revision-Date: 2014-06-10 18:10+0000\n"
+"Last-Translator: Khaleel Jageer <jskcse4@gmail.com>\n"
+"Language-Team: Tamil <ta@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:33 generate_desktop_files:26
+msgid "Driver Manager"
+msgstr "இயக்கி மேலாளர்"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:43
+msgid ""
+"Drivers cannot be installed.\n"
+"Please connect to the Internet or insert the Linux Mint installation DVD (or "
+"USB stick)."
+msgstr ""
+"இயக்கிகளை நிறுவ முடியாது.\n"
+"இணையத்துடன் இணைக்கவும் அல்லது லினக்ஸ் மின்ட் நிறுவல் DVD (அல்லது USB குச்சி) "
+"செருகவும்."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:126
+msgid "Applying changes..."
+msgstr "மாற்றங்களைச்  செயல்படுத்துகிறது"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:218
+msgid "Re_vert"
+msgstr "மீட்டமைக்க"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:220
+msgid "_Apply Changes"
+msgstr "மாற்றங்களைச்  செயல்படுத்து"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:222
+msgid "_Cancel"
+msgstr "ரத்துசெய் (_C)"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:224
+msgid "_Restart..."
+msgstr "மறுதொடக்கம்"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:307
+msgid "This device is using the recommended driver."
+msgstr "இந்த சாதனம் பரிந்துரைக்கப்பட்ட இயக்கியை பயன்படுத்தி வருகிறது."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:308
+msgid "This device is using an alternative driver."
+msgstr "இந்த சாதனம் ஒரு மாற்று இயக்கியை பயன்படுத்தி வருகிறது."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:309
+msgid "This device is using a manually-installed driver."
+msgstr "இந்த சாதனம் ஒரு கைமுறையாக நிறுவப்பட்ட இயக்கியை பயன்படுத்தி வருகிறது."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:310
+msgid "This device is not working."
+msgstr "இந்த சாதனம் வேலை செய்யவில்லை."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:319
+msgid "Continue using a manually installed driver"
+msgstr "கைமுறையாக நிறுவப்பட்ட இயக்கியை பயன்படுத்தி தொடர்க"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:346
+msgid "recommended"
+msgstr "பரிந்துரைக்கப்படுகிறது"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:346
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:348
+msgid "Version"
+msgstr "பதிப்பு"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:370
+msgid "Do not use the device"
+msgstr "இந்த சாதனத்தைப் பயன்படுத்த வேண்டாம்"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:388
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:389
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:419
+msgid "Unknown"
+msgstr "தெரியாதது"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:472
+msgid "You need to restart the computer to complete the driver changes."
+msgstr ""
+"நீங்கள் இயக்கி மாற்றங்களை நிறைவு செய்ய கணினியை மறுதொடக்கம் செய்ய வேண்டும்."
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:486
+#, python-format
+msgid "%(count)d proprietary driver in use."
+msgid_plural "%(count)d proprietary drivers in use."
+msgstr[0] "%(count)d தனியுரிமை இயக்கி பயன்பாட்டில் உள்ளது"
+msgstr[1] "%(count)d தனியுரிமை இயக்கிகள் பயன்பாட்டில் உள்ளன"
+
+#: usr/lib/linuxmint/mintDrivers/mintDrivers.py:491
+msgid "No proprietary drivers are in use."
+msgstr "எந்த தனியுரிமை இயக்கியும் பயன்பாட்டில் இல்லை ."
+
+#: usr/bin/driver-manager:9
+msgid "Please enter your password to launch the driver manager"
+msgstr "இயக்கி மேலாளரைத் தொடங்க உங்கள் கடவுச்சொல்லை உள்ளிடவும்."
+
+#: generate_desktop_files:26
+msgid "Manage the drivers for your devices"
+msgstr "உங்கள் சாதனங்களுக்கான இயக்கிகளை நிர்வகிக்க"

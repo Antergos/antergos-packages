@@ -1,0 +1,60 @@
+# Uyghur translation for linuxmint
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-07-27 17:39+0200\n"
+"PO-Revision-Date: 2015-03-19 04:01+0000\n"
+"Last-Translator: Gheyret T.Kenji <Unknown>\n"
+"Language-Team: Uyghur <ug@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:33
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:89
+msgid "Domain Blocker"
+msgstr ""
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:34
+msgid "Parental Control"
+msgstr ""
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:35
+msgid "Block access to selected domain names"
+msgstr ""
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:39
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:135
+msgid "About"
+msgstr "ھەققىدە"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:43
+msgid "Domain blocker"
+msgstr ""
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:64
+msgid "Domain name:"
+msgstr "دائىرە ئاتى:"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:95
+msgid "Blocked domains"
+msgstr ""
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:123
+msgid "_File"
+msgstr "ھۆججەت(_F)"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:127
+msgid "Close"
+msgstr "ياپ"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:131
+msgid "_Help"
+msgstr "ياردەم(_H)"

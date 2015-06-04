@@ -1,0 +1,197 @@
+# Tamil translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-09-19 10:09+0100\n"
+"PO-Revision-Date: 2013-09-21 07:59+0000\n"
+"Last-Translator: சதீஸ்குமார் வரதராசு <Unknown>\n"
+"Language-Team: Tamil <ta@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:13+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: lib/mintstick.py:276 lib/mintstick.py:278
+msgid "The USB stick was formatted successfully."
+msgstr "USB குச்சி வெற்றிகரமாக வடிவமைக்கப்பட்டது."
+
+#: lib/mintstick.py:281
+#, python-format
+msgid "An error occured while creating a partition on %s."
+msgstr "%sல் பகிர்வை உருவாக்கும் போது பிழை ஏற்பட்டது."
+
+#: lib/mintstick.py:283 lib/mintstick.py:370
+msgid "Authentication Error."
+msgstr "அங்கீகார பிழை."
+
+#: lib/mintstick.py:285 lib/mintstick.py:372
+msgid "An error occurred."
+msgstr "ஒரு பிழை நேர்ந்தது."
+
+#: lib/mintstick.py:302
+msgid "Image:"
+msgstr "படம்:"
+
+#: lib/mintstick.py:303
+msgid "USB stick:"
+msgstr "USB குச்சி"
+
+#: lib/mintstick.py:328
+#, python-format
+msgid "Writing %(VAR_FILE)s to %(VAR_DEV)s"
+msgstr "%(VAR_FILE)s லிருந்து %(VAR_DEV)s  க்கு எழுதுகிறது."
+
+#: lib/mintstick.py:329
+#, python-format
+msgid "Starting copy from %(VAR_SOURCE)s to %(VAR_TARGET)s"
+msgstr "%(VAR_SOURCE)s லிருந்து %(VAR_TARGET)s க்கு நகலெடுக்கிறது"
+
+#: lib/mintstick.py:361 lib/mintstick.py:363
+msgid "The image was successfully written."
+msgstr "படம் வெற்றிகரமாக எழுதப்பட்டது."
+
+#: lib/mintstick.py:366
+msgid "Not enough space on the USB stick."
+msgstr "USB குச்சியில் போதுமான இடம் இல்லை."
+
+#: lib/mintstick.py:368
+msgid "An error occured while copying the image."
+msgstr "படத்தை நகலெடுக்கும் போது பிழை ஏற்பட்டது."
+
+#: generate_additional_files.py:49 generate_additional_files.py:61
+#: share/mintstick/mintstick.glade.h:28
+msgid "USB Image Writer"
+msgstr "யுஎஸ்பி பட எழுதி"
+
+#: generate_additional_files.py:49 generate_additional_files.py:61
+#: generate_additional_files.py:94
+msgid "Make a bootable USB stick"
+msgstr "துவங்கக்கூடிய ஒரு யுஎஸ்பி குச்சியைச் செய்க"
+
+#: generate_additional_files.py:73 generate_additional_files.py:85
+#: share/mintstick/mintstick.glade.h:4
+msgid "USB Stick Formatter"
+msgstr "USB குச்சி வடிவமைப்பான்"
+
+#: generate_additional_files.py:73 generate_additional_files.py:85
+#: generate_additional_files.py:104
+msgid "Format a USB stick"
+msgstr "ஒரு யுஎஸ்பி குச்சியை வடிவமைக்கவும்"
+
+#: generate_additional_files.py:94
+msgid "Make bootable USB stick"
+msgstr "துவங்கக்கூடிய யுஎஸ்பி குச்சியை செய்க"
+
+#: generate_additional_files.py:104 share/mintstick/mintstick.glade.h:27
+msgid "Format"
+msgstr "வடிவமைப்பு"
+
+#: share/mintstick/mintstick.glade.h:1
+msgid " "
+msgstr " "
+
+#: share/mintstick/mintstick.glade.h:2
+msgid ""
+"This will destroy all data on the USB stick, are you sure you want to "
+"proceed?"
+msgstr ""
+"இது USB குச்சியிலுள்ள அனைத்து தரவுகளையும் அழித்துவிடும், இதனைத் தொடர "
+"விரும்புகிறீர்களா?"
+
+#: share/mintstick/mintstick.glade.h:3
+msgid ""
+"Something went wrong, please see the details window for the exact error."
+msgstr "ஏதோ தவறாகிவிட்டது, சரியான பிழைக்கு, விவரச் சாளரத்தை பார்க்கவும்."
+
+#: share/mintstick/mintstick.glade.h:5
+msgid "Format:"
+msgstr "வடிவமைப்பு:"
+
+#: share/mintstick/mintstick.glade.h:6
+msgid "Select a USB stick"
+msgstr "ஒரு USB குச்சியைத் தேர்ந்தெடு"
+
+#: share/mintstick/mintstick.glade.h:7
+msgid "as"
+msgstr "என"
+
+#: share/mintstick/mintstick.glade.h:8
+msgid ""
+"FAT32 \n"
+"   + Compatible everywhere.\n"
+"   -  Cannot handle files larger than 4GB.\n"
+"\n"
+"NTFS \n"
+"  + Compatible with Windows.\n"
+"   - Not compatible with Mac and most hardware devices.\n"
+"   - Occasional compatibility problems with Linux (NTFS is proprietary and "
+"reverse engineered).\n"
+"\n"
+"EXT4 \n"
+"\n"
+"  + Modern, stable, fast, journalized.\n"
+"  + Supports Linux file permissions.\n"
+"   - Not compatible with Windows, Mac and most hardware devices.\n"
+msgstr ""
+"FAT32 \n"
+"   + எங்கும் ஒத்திசைந்து செயல்படும்.\n"
+"   -  4ஜிபியை விட பெரிய கோப்புகளை கையாள முடியாது.\n"
+"\n"
+"NTFS \n"
+"  + விண்டோஸுடன் ஒத்திசைந்து செயல்படும்.\n"
+"   - மேக் மற்றும் பல வன்பொருள் சாதனங்களுடன் ஒத்திசைந்து செயல்படாது.\n"
+"   - லினக்ஸில் அவ்வப்போது இணக்கத்தன்மை சிக்கல்கள் ஏற்படும் (NTFS "
+"தனியுரிமையுடையது மற்றும் பின்னோக்கு பொறியாக்கம் செய்யப்பட்டது).\n"
+"\n"
+"EXT4 \n"
+"\n"
+"  + நவீனமானது, நிலையானது, ​​வேகமானது, குறிப்பேட்டு.\n"
+"  + லினக்ஸ் கோப்பு அனுமதிகளை ஆதரிக்கிறது.\n"
+"   - விண்டோஸ், மேக் மற்றும் பல வன்பொருள் சாதனங்களுடன் ஒத்திசைந்து "
+"செயல்படாது.\n"
+
+#: share/mintstick/mintstick.glade.h:23
+msgid "Volume label:"
+msgstr "வன்வட்டு முத்திரை:"
+
+#: share/mintstick/mintstick.glade.h:24
+msgid "Choose a name for your USB Stick"
+msgstr "உங்கள் USB குச்சிக்கு ஒரு பெயரைத் தேர்வு செய்க"
+
+#: share/mintstick/mintstick.glade.h:25
+msgid "USB Stick"
+msgstr "USB குச்சி"
+
+#: share/mintstick/mintstick.glade.h:26
+msgid "Details"
+msgstr "விவரங்கள்"
+
+#: share/mintstick/mintstick.glade.h:29
+msgid "Write image:"
+msgstr "படத்தை எழுது"
+
+#: share/mintstick/mintstick.glade.h:30
+msgid "Select an image"
+msgstr "ஒரு படத்தைத் தேர்ந்தெடு"
+
+#: share/mintstick/mintstick.glade.h:31
+msgid "Select Image"
+msgstr "படத்தைத் தேர்ந்தெடு"
+
+#: share/mintstick/mintstick.glade.h:32
+msgid "to"
+msgstr "அதற்கு"
+
+#: share/mintstick/mintstick.glade.h:33
+msgid "Write"
+msgstr "எழுது"
+
+#: share/mintstick/mintstick.glade.h:34
+msgid "The image was written successfully."
+msgstr "படம் வெற்றிகரமாக எழுதப்பட்டது."

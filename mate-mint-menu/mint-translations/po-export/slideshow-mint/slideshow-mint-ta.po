@@ -1,0 +1,331 @@
+# Tamil translation for linuxmint
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-10-29 12:31+0000\n"
+"PO-Revision-Date: 2013-10-30 05:04+0000\n"
+"Last-Translator: சதீஸ்குமார் வரதராசு <Unknown>\n"
+"Language-Team: Tamil <ta@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:10+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/chat.html:1
+msgid "Stay connected"
+msgstr "எப்பொழுதும் இணைந்திருங்கள்"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/chat.html:8
+msgid ""
+"Keep in touch with your friends and contacts, by email, messenger or on your "
+"favorite social networks. Linux Mint provides all you need to interact with "
+"Twitter, Facebook, MSN, ICQ, GoogleTalk, AIM, Yahoo and many other networks."
+msgstr ""
+"உங்கள் நண்பர்களுடனும், தெரிந்தவர்களுடனும் மின்னஞல், தூதன் அல்லது உங்கள் "
+"விருப்பமான சமூக வலைதலத்தின் மூலம் இணைந்திருங்கள். லினக்ஸ் மின்ட் ட்விட்டர், "
+"முகநூல், MSN, ICQ, கூகுள்பேச்சு, AIM, யாகூ மற்றும் வேறு சில பிணையத்துடன் "
+"தொடர்பு கொள்ள தேவையானவை அனைத்தையும் வழங்குகிறது."
+
+#. type: Content of: <div><div><div><h2>
+#: slideshows/mint/slides/chat.html:12 slideshows/mint/slides/music.html:12
+#: slideshows/mint/slides/office.html:12 slideshows/mint/slides/photos.html:12
+#: slideshows/mint/slides/video.html:12 slideshows/mint/slides/web.html:12
+msgid "Included software"
+msgstr "இணைக்கப்பட்ட மென்பொருள்கள்"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:16
+msgid "Thunderbird"
+msgstr "இடிபறவை"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:20
+msgid "Pidgin"
+msgstr "பிட்கின்"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:24
+msgid "Xchat"
+msgstr "எக்ஸ்அரட்டை"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/customize.html:1
+msgid "Customize your desktop"
+msgstr "உங்கள் பணிமேடையை தனிப்பயனாக்கு"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/customize.html:8
+msgid ""
+"Make yourself at home and modify any aspect of your desktop. Choose from a "
+"large variety of themes, icons and backgrounds. Linux Mint is open and easy "
+"to customize."
+msgstr ""
+"வீட்டிலிருந்தபடியே பணிமேடையின் எந்த அம்சத்தையும் மாற்றலாம். அதிக அளவிலான "
+"கருப்பொருள்கள், சின்னங்கள் மற்றும் பின்னணிகளிலிருந்து தேர்ந்தெடுக்கலாம். "
+"லினக்ஸ் மின்ட் எளிதாக தனிப்பயனாக்கக் கூடியது."
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/help.html:1
+msgid "Find help"
+msgstr "உதவியைத் தேடு"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/help.html:8
+msgid ""
+"If you're curious about something or if you're facing a problem, simply ask "
+"around. Linux Mint is the 4th most widely used operating system in the "
+"World. It comes with a user guide, a community website, a collection of "
+"tutorials, active forums and chat rooms and one of the most dynamic "
+"communities on the Internet."
+msgstr ""
+"நீங்கள் எதற்கேனும் ஆர்வமாக இருந்தாலோ அல்லது ஏதேனும் பிரச்சனைகளை சந்தித்தாலோ, "
+"எங்களைக் கேளுங்கள். லினக்ஸ் மின்ட் உலகிலேயே 4வது அதிகமாக பயன்படுத்தப்படும் "
+"இயங்கு தளம். இது ஒரு பயனர் கையேடு, ஒரு சமூக வலைத்தளம், பயிற்சிகளின் "
+"தொகுப்பு, செயலியல் மன்றங்கள் மற்றும் அரட்டை அறைகள் ஆகியவற்றுடன் இணையத்தில் "
+"மிகவும் ஆற்றல் வாய்ந்த சமூகங்களில் ஒன்றாக வருகிறது."
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/music.html:1
+msgid "Listen to music and CDs"
+msgstr "இசை மற்றும் குறுந்தகட்டை கேள்"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/music.html:8
+msgid ""
+"Enjoy your music with Banshee. Plug-in your MP3 player or extract songs from "
+"your audio CDs. Listen to podcasts and online radios. Discover new artists "
+"on Last.fm, the Internet Archive and the Amazon MP3 Store."
+msgstr ""
+"பான்ஷியுடன் உங்கள் இசையை அனுபவியுங்கள். உங்கள் எம்.பி.3 இயக்கி செருகுங்கள் "
+"அல்லது உங்கள் ஒலி குறுவட்டுகளிலிருந்து பாடல்களைப் பிரித்தெடுங்கள். வலையொலி "
+"மற்றும் இணைய வானொலிகளைக் கேளுங்கள். புதிய கலைஞர்களை Last.fm மிலோ இணையக் "
+"காப்பகத்திலோ மற்றும் அமேசான் எம்.பி.3 அங்காடியிலோ கண்டறியுங்கள்."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/music.html:16
+msgid "Banshee"
+msgstr "பான்ஷீ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/music.html:20
+msgid "Audio codecs"
+msgstr "ஒலி கோடெக்குகள்"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/office.html:1
+msgid "Be productive"
+msgstr "உற்பத்தி திறனோடிரு"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/office.html:8
+msgid ""
+"Use LibreOffice to create professional documents, spreadsheets and "
+"presentations that are fully compatible with Microsoft Office. Share "
+"printers or access them remotely."
+msgstr ""
+"மைக்ரோசாப்ட் அலுவலகத்துடன் முழுமையாக ஒத்தியங்கும் தொழில்முறை ஆவணங்கள், "
+"விரிதாள்கள் மற்றும்  விளக்கக்காட்சிகள் உருவாக்க லிப்ரே அலுவலகத்தைப் "
+"பயன்படுத்துங்கள். மேலும் இதன் மூலம் அச்சுப்பொறிகளை பகிரலாம் அல்லது "
+"தொலைவிலிருந்து அவற்றை அணுகலாம்."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:16
+msgid "LibreOffice"
+msgstr "லிபரேஆபீஸ்"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:20
+msgid "Microsoft Office Support"
+msgstr "மைக்ரோசாப்ட் அலுவலக ஆதரவு"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:24
+msgid "PDF Support"
+msgstr "பிடிஎஃப் ஆதரவு"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/photos.html:1
+msgid "Manage your photos"
+msgstr "உங்கள் படங்களை நிர்வகிக்கவும்"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/photos.html:8
+msgid ""
+"Organize, enjoy and share your photos with gThumb or Picasa. Export your "
+"albums to CD, to the Web, or to online services such as Flickr or PicasaWeb "
+"to share them with friends and family."
+msgstr ""
+"gThumb அல்லது Picasa மூலம் உங்கள் புகைப்படங்களை ஒருங்கமைத்து, பகிர்ந்து "
+"மகிழுங்கள். உங்கள் ஆல்பங்களை, குருவட்டிலோ, இணையத்திலோ அல்லது இணைய சேவைகளான "
+"Flickr அல்லது PicasaWeb பொன்றவற்றின் மூலமோ, தங்கள் நண்பர்கள் மற்றும் "
+"குடும்பத்தாருடன் பகிருங்கள்."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/photos.html:16
+msgid "gThumb"
+msgstr "gThumb"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/software.html:1
+msgid "Install software"
+msgstr "மென்பொருளை நிறுவுக"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/software.html:8
+msgid ""
+"Browse through 30,000 free applications from the Software Manager. Enjoy "
+"screenshots and user reviews. Install software with one click of the mouse."
+msgstr ""
+"மென்பொருள் மேலாளர் மூலம் 30,000 இலவச பயன்பாடுகளில் உலாவுங்கள். "
+"திரைக்காட்சிகள் மற்றும் பயனர் மதிப்புரைகளை அனுபவியுங்கள். சுட்டியின் ஒரு "
+"சொடுக்கில் மென்பொருளை நிறுவி மகிழுங்கள்."
+
+#. type: Content of: <div><div><div><h2>
+#: slideshows/mint/slides/software.html:12
+#: slideshows/mint/slides/windows.html:12
+msgid "Featured software"
+msgstr "பரிந்துரைக்கப்படும் மென்பொருள்கள்"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:16
+msgid "Filezilla"
+msgstr "கோப்புஜில்லா"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:20
+msgid "Skype"
+msgstr "ஸ்கைப்"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:24
+msgid "Audacity"
+msgstr "ஆடாசிடி"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:28
+msgid "Picasa"
+msgstr "பிகாசா"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:32
+msgid "Google Earth"
+msgstr "கூகுள் பூமி"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/updates.html:1
+msgid "Keep your system up to date"
+msgstr "உங்கள் கணினியை புதுப்பித்து வைத்திருங்கள்"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/updates.html:8
+msgid ""
+"Receive fixes and security updates all in one place, for the entire system, "
+"including the software you install."
+msgstr ""
+"தங்கள் முழு கணினி மற்றும் நீங்கள் நிறுவிய மென்பொருள் உட்பட அனைத்திற்கும் ஒரே "
+"இடத்திலிருந்து திருத்தங்கள் மற்றும் பாதுகாப்பு புதுப்பித்தல்களைப் "
+"பெற்றிடுங்கள்."
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/video.html:1
+msgid "Watch videos and DVDs"
+msgstr "நிழற்படங்கள் மற்றும் டிவிடிகள் பார்க்க"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/video.html:8
+msgid ""
+"Insert a DVD and enjoy a movie. Watch high-definition videos with VLC."
+msgstr ""
+"ஒரு டிவிடி செருகி படத்தை அனுபவியுங்கள். வி.எல்.சி மூலம் உயர்-வரையறை "
+"நிழற்படங்களளைக் காணுங்கள்."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:16
+msgid "VLC"
+msgstr "விஎல்சி"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:20
+msgid "Totem"
+msgstr "Totem"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:24
+msgid "Video codecs"
+msgstr "நிழற்படகோடெக்குகள்"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/web.html:1
+msgid "Browse the web"
+msgstr "இணையத்தில் உலாவு"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/web.html:8
+msgid ""
+"Be fast and safe on the web with Mozilla Firefox. Enjoy Java, Flash and "
+"multimedia content."
+msgstr ""
+"Mozilla Firefox மூலம் இணையத்தில் வேகமாகவும் பாதுகாப்பாகவும் இருங்கள். ஜாவா, "
+"ஃப்ளாஷ் மற்றும் பல்லூடக உள்ளடக்கத்தை அனுபவியுங்கள்."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:16
+msgid "Firefox"
+msgstr "நெருப்புநரி"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:20
+msgid "Flash"
+msgstr "ஃப்ளாஷ்"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:24
+msgid "Java"
+msgstr "ஜாவா"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/welcome.html:1
+msgid "Welcome to Linux Mint"
+msgstr "லினக்ஸ் மின்டிற்கு வரவேற்கின்றோம்"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/welcome.html:8
+msgid ""
+"Welcome and thank you for choosing Linux Mint. This slideshow will show you "
+"around while the system is being installed on your computer."
+msgstr ""
+"வரவேற்கிறோம் மெலும் லினக்ஸ் மின்ட் தேர்ந்தெடுத்தமைக்கு நன்றி.  அமைப்பு "
+"உங்கள் கணினியில் நிறுவப்படும்போதே இந்த சறுக்குக்காட்சி தங்களுக்கு சுற்றி "
+"காண்பிக்கும்."
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/windows.html:1
+msgid "Run Windows software"
+msgstr "விண்டோஸ் பயன்பாட்டை இயக்கு"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/windows.html:8
+msgid ""
+"Install Wine and run Windows software in Linux Mint. Or install Virtualbox, "
+"and run Windows itself within Linux Mint."
+msgstr ""
+"Wine நிறுவி விண்டோஸ் பயன்பாடுகளை லினக்ஸ் மின்ட்டில் இயக்கலாம். அல்லது "
+"Virtualbox நிறுவி விண்டோஸ் இயங்குதளத்தையே லினக்ஸ் மின்ட்டில் இயக்கலாம்."
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/windows.html:16
+msgid "Wine"
+msgstr "மது"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/windows.html:20
+msgid "Virtualbox"
+msgstr "மெய்நிகர்பெட்டி"

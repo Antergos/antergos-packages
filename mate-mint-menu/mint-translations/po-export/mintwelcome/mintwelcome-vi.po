@@ -1,0 +1,205 @@
+# Vietnamese translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-08 10:39+0100\n"
+"PO-Revision-Date: 2014-04-24 17:05+0000\n"
+"Last-Translator: Saki <a4e484b@hotmail.com>\n"
+"Language-Team: Vietnamese <vi@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:24 generate_desktop_files:58
+#: generate_desktop_files:72
+msgid "Welcome Screen"
+msgstr "Màn hình Chào mừng"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:77
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did designing it. The links below will help you get started "
+"with your new operating system. Have a great time and don't hesitate to send "
+"us your feedback."
+msgstr ""
+"Xin chào mừng và xin cám ơn bạn đã chọn Linux Mint. Chúng tôi hi vọng bạn sẽ "
+"thích sử dụng Linux Mint cũng như chúng tôi khi thiết kế nó. Các liên kết "
+"bên dưới sẽ giúp bạn bắt đầu làm quen với hệ điều hành mới. Chúc bạn sử dụng "
+"vui vẻ và đừng ngần ngại gửi phản hồi đến cho chúng tôi."
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "New features"
+msgstr "Tính năng mới"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "See what is new in this release"
+msgstr "Xem có gì mới trong lần phát hành này"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid "Important information"
+msgstr "Thông tin quan trọng"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid ""
+"Find out about important information, limitations, known issues and their "
+"solution"
+msgstr ""
+"Tìm hiểu các thông tin quan trọng, hạn chế, vấn đề đã biết và giải pháp"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "User guide (PDF)"
+msgstr "Hướng dẫn sử dụng (PDF)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "Learn all the basics to get started with Linux Mint"
+msgstr "Học tất cả các điều cơ bản để bắt đầu với Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data"
+msgstr "Phục hồi dữ liệu"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data or applications from a previous installation"
+msgstr "Phục hồi dữ liệu hoặc ứng dụng từ bản cài đặt trước"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Software manager"
+msgstr "Trình Quản lý phần mềm"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Install additional software"
+msgstr "Cài thêm chương trình"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat room"
+msgstr "Phòng tán gẫu"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat live with other users in the chat room"
+msgstr "Tán gẫu trực tiếp với các người dùng khác trong phòng tán gẫu"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Forums"
+msgstr "Diễn đàn"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Seek help from other users in the Linux Mint forums"
+msgstr ""
+"Tìm kiếm giúp đỡ từ các người dùng khác trong các diễn đàn Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Tutorials"
+msgstr "Trợ giáo"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Find tutorials about Linux Mint"
+msgstr "Tìm các trình trợ giáo về Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid "Hardware database"
+msgstr "Cơ sở dữ liệu phần cứng"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid ""
+"Find hardware that is compatible with Linux, or information about your "
+"hardware"
+msgstr ""
+"Tìm phần cứng tương thích với Linux, hoặc thông tin về phần cứng của bạn"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Idea pool"
+msgstr "Ý tưởng"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Submit new ideas to the development team"
+msgstr "Gửi đăng ý tưởng mới cho đội phát triển"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Get involved"
+msgstr "Tham gia"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Find out how to get involved in the Linux Mint project"
+msgstr "Tìm hiểu cách thức tham gia vào dự án Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Donations"
+msgstr "Đóng góp"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Make a donation to the Linux Mint project"
+msgstr "Đóng góp tài chính vào dự án Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Sponsors"
+msgstr "Nhà tài trợ"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Apply to become a Linux Mint sponsor"
+msgstr "Đăng ký làm nhà tài trợ Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:140
+msgid "Show this dialog at startup"
+msgstr "Hiện cửa sổ này khi khởi động"
+
+#: generate_desktop_files:58 generate_desktop_files:72
+msgid "Introduction to Linux Mint"
+msgstr "Giới thiệu Linux Mint"
+
+#: generate_desktop_files:86
+msgid "Install Multimedia Codecs"
+msgstr "Cài đặt các Bộ mã Đa phương tiện"
+
+#: generate_desktop_files:86
+msgid "Add all the missing multimedia codecs"
+msgstr "Thêm tất cả các bộ mã đa phương tiện còn thiếu"
+
+#~ msgid "Connect to the chat room"
+#~ msgstr "Kết nối tới phòng tán gẫu"
+
+#~ msgid "Download the user guide (PDF)"
+#~ msgstr "Tải xuống bản Hướng dẫn sử dụng (PDF)"
+
+#~ msgid "Read the release notes"
+#~ msgstr "Đọc bản Ghi chú phát hành"
+
+#~ msgid "Visit the forums"
+#~ msgstr "Ghé thăm diễn đàn"
+
+#~ msgid "Contribute to Linux Mint"
+#~ msgstr "Đóng góp vào Linux Mint"
+
+#~ msgid "Browse the list of new features"
+#~ msgstr "Duyệt xem danh sách tính năng mới"
+
+#, python-format
+#~ msgid "Discover %s"
+#~ msgstr "Khám phá %s"
+
+#~ msgid "Find help"
+#~ msgstr "Tìm kiếm trợ giúp"
+
+#~ msgid "Welcome to Linux Mint"
+#~ msgstr "Chào mừng bạn đến với Linux Mint"
+
+#~ msgid ""
+#~ "Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+#~ "as much as we did making it. Please make yourself familiar with the new "
+#~ "features and the documentation and don't hesitate to send us your feedback."
+#~ msgstr ""
+#~ "Xin chào mừng và cám ơn bạn đã chọn Linux Mint. Chúng tôi hi vọng bạn sẽ "
+#~ "hứng thú sử dụng hệt như chúng tôi đã hứng thú tạo ra. Hãy làm quen với "
+#~ "những tính năng mới, hệ thống tài liệu và đừng ngần ngại gởi ý kiến phải hồi."
+
+#~ msgid "Make a donation"
+#~ msgstr "Quyên góp"
+
+#~ msgid "Become a sponsor"
+#~ msgstr "Làm nhà tài trợ"

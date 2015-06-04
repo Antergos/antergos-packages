@@ -1,0 +1,305 @@
+# Korean translation for linuxmint
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-06-14 11:26+0300\n"
+"PO-Revision-Date: 2014-11-29 12:21+0000\n"
+"Last-Translator: B. W. Knight <kbd0651@gmail.com>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/01-welcome.html:1
+msgid "Welcome to Linux Mint"
+msgstr "리눅스 민트에 오신 것을 환영합니다"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/01-welcome.html:8
+msgid ""
+"Welcome and thank you for choosing Linux Mint. This slideshow will show you "
+"around while the system is being installed on your computer."
+msgstr "리눅스 민트 를 선택해주셔서 감사합니다. 이 슬라이드 쇼는 설치되는 동안 리눅스 민트에 대한 모든 것을 보여줄 것입니다."
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/02-web.html:1
+msgid "Browse the web"
+msgstr "인터넷 정보를 검색하기"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/02-web.html:8
+msgid ""
+"Be fast and safe on the web with Mozilla Firefox. Enjoy Java, Flash and "
+"multimedia content."
+msgstr ""
+"모질라 파이어폭스를 이용해 빠르고 안전하게 인터넷을 사용할 수 있습니다. 자바, 플래시 등의 멀티미디어 콘텐츠도 즐길 수 있습니다."
+
+#. type: Content of: <div><div><div>
+#: slideshows/mint-kde/slides/02-web.html:11
+#: slideshows/mint-kde/slides/03-music.html:12
+#: slideshows/mint-kde/slides/04-video.html:11
+#: slideshows/mint-kde/slides/05-photos.html:12
+#: slideshows/mint-kde/slides/06-chat.html:11
+#: slideshows/mint-kde/slides/07-office.html:12
+msgid "Included software"
+msgstr "기본으로 포함된 소프트웨어"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:14
+msgid "Firefox"
+msgstr "파이어폭스"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:16
+msgid "Flash"
+msgstr "플래시"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:18
+msgid "Java"
+msgstr "자바"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/03-music.html:1
+msgid "Listen to music and CDs"
+msgstr "음악과 CD 재생 및 듣기"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/03-music.html:8
+msgid ""
+"Enjoy your music with Amarok. Plug-in your MP3 player or extract songs from "
+"your audio CDs. Listen to podcasts and online radios. Discover new artists "
+"on Last.fm, Jamendo, Magnatune and Librivox."
+msgstr ""
+"아마록과 함께 음악을 여러 가지 방법으로 즐기십시오. 당신의 MP3 플레이어를 컴퓨터에 장착하여 듣던지 혹은 노래를 CD로부터 추출하여 "
+"저장할 수 있습니다. 팟캐스트와 온라인 라디오 채널을 청취할 수 있고 또한 새로운 예술가를 라스트.fm, 자멘도, 마그나튠 그리고 "
+"리브리복스를 통해 찾으실 수 있습니다."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/03-music.html:15
+msgid "Amarok"
+msgstr "아마록"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/03-music.html:17
+msgid "Audio codecs"
+msgstr "오디오 코덱"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/04-video.html:1
+msgid "Watch videos and DVDs"
+msgstr "비디오와 DVD 감상"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/04-video.html:8
+msgid ""
+"Insert a DVD and enjoy a movie. Watch high-definition videos with Kaffeine."
+msgstr "당신의 컴퓨터에 DVD를 넣고 카페인으로 고화질 영상을 즐겁게 감상하십시오."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:14
+msgid "Kaffeine"
+msgstr "카페인"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:16
+msgid "VLC"
+msgstr "VLC"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:18
+msgid "Video codecs"
+msgstr "비디오 코덱"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/05-photos.html:1
+msgid "Manage your photos"
+msgstr "사진 관리하기"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/05-photos.html:8
+msgid ""
+"Organize, enjoy and share your photos with digikam. Export your albums to "
+"CD, to the Web, or to online services such as Flickr or PicasaWeb to share "
+"them with friends and family."
+msgstr ""
+"디지켐으로 당신의 사진을 정리하고, 공유하고, 그리고 즐거움을 느끼십시오. 또한 이것으로 앨범을 CD에다 저장하거나 플릭커와 피카사웹 "
+"같은 사이트들에 사진을 올려 당신의 친구와 가족들과 함께 공유를 할 수 있습니다."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/05-photos.html:15
+msgid "Digikam"
+msgstr "디지켐"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/06-chat.html:1
+msgid "Stay connected"
+msgstr "소셜 네트워킹"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/06-chat.html:8
+msgid ""
+"Keep in touch with your friends and contacts, by email, messenger or on your "
+"favorite social networks. Linux Mint provides all you need to interact with "
+"Twitter, Facebook, MSN, ICQ, GoogleTalk, AIM, Yahoo and many other networks."
+msgstr ""
+"당신이 즐겨 쓰는 소셜 네트워크, 메신저, 이메일을 통해 친구들과 연락하십시오. 리눅스 민트는 트위터, 페이스북, MSN, ICQ, 구글 "
+"토크, AIM, 야후 등을 지원합니다."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:14
+msgid "Kmail"
+msgstr "K메일"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:16
+msgid "Telepathy"
+msgstr "텔레파시"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:18
+msgid "Konversation"
+msgstr "컨버세이션"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/07-office.html:1
+msgid "Be productive"
+msgstr "높은 생산성"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/07-office.html:8
+msgid ""
+"Use LibreOffice to create professional documents, spreadsheets and "
+"presentations that are fully compatible with Microsoft Office. Archive "
+"documents, emails, or web pages to PDF. Send and receive files with Giver on "
+"the local network. Share printers or access them remotely."
+msgstr ""
+"리브레 오피스를 이용하여 마이크로소프트 오피스와 호완이 되는 전문적인 문서, 스프레드시트 그리고 프레젠테이션을 만드십시오. 또한 당신은 "
+"기버로 묶음 문서, 전자 우편 혹은 PDF 형식의 웹 페이지들을 네트워크로 전송할 수 있습니다. 프린터들 역시 원격으로 공유 혹은 사용할 "
+"수 있습니다."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/07-office.html:15
+msgid "LibreOffice"
+msgstr "리브레 오피스"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/07-office.html:17
+msgid "PDF Printer"
+msgstr "PDF 프린터"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/08-software.html:1
+msgid "Install software"
+msgstr "소프트웨어 설치"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/08-software.html:8
+msgid ""
+"Browse through 50,000 free applications from the Software Manager. Enjoy "
+"screenshots and user reviews. Install software with one click of the mouse."
+msgstr ""
+"소프트웨어 관리자로 50000개 이상의 자유 소프트웨어들을 검색하십시오. 스크린 숏들과 유저들의 평가를 참고하여 소프트웨어들을 즐겁게 "
+"사용하십시오. 단 한 번의 클릭으로 소프트웨어를 설치하십시오."
+
+#. type: Content of: <div><div><div>
+#: slideshows/mint-kde/slides/08-software.html:11
+#: slideshows/mint-kde/slides/09-windows.html:12
+msgid "Featured software"
+msgstr "인기 및 추천 소프트웨어"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:14
+msgid "Filezilla"
+msgstr "파일질라"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:16
+msgid "Skype"
+msgstr "스카이프"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:18
+msgid "Inkscape"
+msgstr "잉크스케이프"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:20
+msgid "Google Earth"
+msgstr "구글 어스"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/09-windows.html:1
+msgid "Run Windows software"
+msgstr "윈도우즈 소프트웨어 실행"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/09-windows.html:8
+msgid ""
+"Install Wine and run Windows software in Linux Mint. Or install Virtualbox, "
+"and run Windows itself within Linux Mint."
+msgstr ""
+"와인을 설치하여 리눅스 민트에서 윈도즈 소프트웨어를 실행하십시오. 또는 버추얼박스를 설치하여 리눅스 민트 안에서 윈도즈를 실행하십시오."
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/09-windows.html:15
+msgid "Wine"
+msgstr "와인"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/09-windows.html:17
+msgid "Virtualbox"
+msgstr "버추얼 박스"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/10-customize.html:1
+msgid "Customize your desktop"
+msgstr "데스크톱 개인화"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/10-customize.html:8
+msgid ""
+"Make yourself at home and modify any aspect of your desktop. Choose from a "
+"large variety of themes, icons and backgrounds. Linux Mint is open and easy "
+"to customize."
+msgstr ""
+"데스크톱의 모든 요소들을 꾸미십시오.  다양한 테마와, 아이콘 그리고 바탕화면을 선택할 수 있습니다. 리눅스 민트는 쉽게 개인화할 수 "
+"있습니다."
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/11-updates.html:1
+msgid "Keep your system up to date"
+msgstr "시스템을 최신 상태로 유지"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/11-updates.html:8
+msgid ""
+"Receive fixes and security updates all in one place, for the entire system, "
+"including the software you install."
+msgstr "설치된 소프트웨어를 포함한 전체 시스템의 최신 패치와 보안 업데이트를 한 곳에서 관리합니다."
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/12-help.html:1
+msgid "Find help"
+msgstr "도움 얻기"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/12-help.html:8
+msgid ""
+"If you're curious about something or if you're facing a problem, simply ask "
+"around. Linux Mint is the 4th most widely used operating system in the "
+"World. It comes with a user guide, a community website, a collection of "
+"tutorials, active forums and chat rooms and one of the most dynamic "
+"communities on the Internet."
+msgstr ""
+"무언가에 대해 궁금하거나 문제를 겪고 있다면 그냥 물어보십시오. 리눅스 민트는 세계에서 4번째로 많이 사용되는 운영체제입니다.  리눅스 "
+"민트는 사용 설명서, 튜토리얼 모음집, 커뮤니티 웹사이트, 활발한 채팅방과 포럼들 그리고 인터넷에서 있는 커뮤니티들 중 가장 활동적인 "
+"커뮤니티를 포함하고 있습니다."

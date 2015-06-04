@@ -1,0 +1,656 @@
+# Kurdish translation for linuxmint
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 17:21+0100\n"
+"PO-Revision-Date: 2015-04-06 21:22+0000\n"
+"Last-Translator: Sipan Roj <sipanroj@live.com>\n"
+"Language-Team: Kurdish <ku@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:196
+#, python-format
+msgid "The package '%s' could not be installed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:198
+#, python-format
+msgid "The package '%s' could not be removed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:204
+msgid "Please check your connection to the Internet"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:215
+msgid "Another application is using APT:"
+msgstr "Sepanek din APT bikartîne:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:301
+#, python-format
+msgid "%d ongoing actions"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:311
+#, python-format
+msgid "Cancel the task: %s"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Waiting"
+msgstr "Li bendê ye"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Downloading"
+msgstr "Tê daxistin"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Running"
+msgstr "Dixebite"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:125
+msgid "Finished"
+msgstr "Qediya"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:335
+#, python-format
+msgid "Installing %s"
+msgstr "%s bardibe"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:337
+#, python-format
+msgid "Removing %s"
+msgstr "%s radike"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:339
+msgid "Updating cache"
+msgstr "Pêşbîr rojane dibe"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:341
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:343
+msgid "No role set"
+msgstr "Erk ne hat dayîn"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:451
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:789
+#: usr/lib/linuxmint/mintInstall/splash.py:20
+#: usr/lib/linuxmint/mintInstall/splash.py:27
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:343 generate_desktop_files:24
+#: generate_desktop_files:35 generate_desktop_files:47
+msgid "Software Manager"
+msgstr "Rêvebirê Nermalavê"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:472
+msgid "_File"
+msgstr "_Pel"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:476
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:127
+msgid "Close"
+msgstr "Bigire"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:480
+msgid "_Edit"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:484
+msgid "Preferences"
+msgstr "Vebijêrk"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:488
+msgid "Search in packages summary (slower search)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:492
+msgid "Search in packages description (even slower search)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:496
+msgid "Open links using the web browser"
+msgstr "Web gerokê bi karbîne girêdanan veke"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:500
+msgid "Search while typing"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:513
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:753
+msgid "Account information"
+msgstr "Agahiyên Hesab"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:520
+msgid "Software sources"
+msgstr "Çavkaniyên Nermalavê"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:524
+msgid "_View"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:528
+msgid "Available packages"
+msgstr "Pakêtên Amade"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:532
+msgid "Installed packages"
+msgstr "Pakêtên sazbûyî"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:539
+msgid "_Help"
+msgstr "_Alîkarî"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:543
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:787
+msgid "About"
+msgstr "Derbarde"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:589
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:599
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1118
+msgid "Categories"
+msgstr "Beş"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:590
+msgid "Please choose a category"
+msgstr "Ji kerema xwe beşan hilbijêre"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:591
+#, python-format
+msgid "%d packages are currently available"
+msgstr "%d pakêt niha amadene"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:600
+msgid "Please choose a sub-category"
+msgstr "Ji kerema xwe kategoriya-jêr hilbijêre"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:621
+msgid "No ongoing actions"
+msgstr "Çalekiyên dewam dike nîne"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:622
+msgid "Active tasks:"
+msgstr "Karên çalak:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:625
+msgid "Show all results"
+msgstr "Hemû encaman nîşan bike"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:755
+msgid "Your community account"
+msgstr "Hesabê te yê civakî"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:757
+msgid "Fill in your account info to review applications"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:759
+msgid "Username:"
+msgstr "Karhêner"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:760
+msgid "Password:"
+msgstr "Nasnav:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:832
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1759
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1770
+msgid "B"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:834
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1761
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1772
+msgid "KB"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:836
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1763
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1774
+msgid "MB"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:838
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1765
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1776
+msgid "GB"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:860
+msgid "Icon"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:864
+msgid "Application"
+msgstr "Sepan"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:871
+msgid "Score"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:893
+msgid "Task"
+msgstr "Kar"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:896
+msgid "Status"
+msgstr "Rewş"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:899
+msgid "Progress"
+msgstr "Pêşdeçûn"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:996
+msgid "See more reviews"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1038
+msgid "Screenshot"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1047
+msgid "Website"
+msgstr "Malper"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1055
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1067
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1780
+msgid "Reviews"
+msgstr "Nêrîn"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1120
+msgid "Featured"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1123
+msgid "All Packages"
+msgstr "Hemû Pakêt"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1125
+msgid "Internet"
+msgstr "Înternet"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1126
+msgid "Web"
+msgstr "Web"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1128
+msgid "Email"
+msgstr "Epeyam"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1130
+msgid "Chat"
+msgstr "Civat"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1132
+msgid "File sharing"
+msgstr "Parvekirina Pelan"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1135
+msgid "Sound and video"
+msgstr "Deng u vîdeo"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1138
+msgid "Graphics"
+msgstr "Grafîk"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1140
+msgid "3D"
+msgstr "3D"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1142
+msgid "Drawing"
+msgstr "Xîzdan"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1144
+msgid "Photography"
+msgstr "Wênevanî"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1146
+msgid "Publishing"
+msgstr "Weşantî"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1148
+msgid "Scanning"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1150
+msgid "Viewers"
+msgstr "Temaşevan"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1153
+msgid "Office"
+msgstr "Nivîsgeh"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1155
+msgid "Games"
+msgstr "Lîstik"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1157
+msgid "Board games"
+msgstr "Leyistokên  mêzeyî"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1159
+msgid "First-person shooters"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1161
+msgid "Real-time strategy"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1163
+msgid "Turn-based strategy"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1165
+msgid "Emulators"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1167
+msgid "Simulation and racing"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1170
+msgid "Accessories"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1172
+msgid "System tools"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1175
+msgid "Fonts"
+msgstr "Font"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1178
+msgid "Science and Education"
+msgstr "Zanist û  Perwerde"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1181
+msgid "Programming"
+msgstr "Bernamekirin"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1380
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1853
+#, python-format
+msgid "%d reviews"
+msgstr "%d nêrîn"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1416
+#, python-format
+msgid "%d packages"
+msgstr "%d pakêt"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1661
+#, python-format
+msgid "Only results in category \"%s\" are shown."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1672
+msgid "Search results"
+msgstr "Encamên lêgerînê"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Hate it"
+msgstr "Hez nekir"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Not a fan"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "So so"
+msgstr "Tedarîk dibe"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Like it"
+msgstr "Eciband"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Awesome!"
+msgstr "Balkêş!"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1728
+msgid "Score:"
+msgstr "Rewş:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1729
+msgid "Submit"
+msgstr "Bişîne"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1730
+msgid "Your review"
+msgstr "Nêrîna te"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1778
+msgid "Size:"
+msgstr "Mezinahî:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1779
+msgid "Version:"
+msgstr "Guherto:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1781
+msgid "Your review:"
+msgstr "Nêrîna te:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1782
+msgid "Details"
+msgstr "Berfireh"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1784
+msgid "This will remove the following packages:"
+msgstr "Ev pakêtên dîşopîne wê rake :"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1785
+msgid "Cancel"
+msgstr "Betal bike"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1786
+msgid "Confirm"
+msgstr "Pesendbike"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1790
+#, python-format
+msgid "%(localSize)s of disk space freed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1792
+#, python-format
+msgid "%(localSize)s of disk space required"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1795
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space freed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1797
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space required"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1800
+msgid "The following packages would be installed: "
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1802
+msgid "The following packages would be removed: "
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1805
+msgid "Impact on packages:"
+msgstr "Pakêtên derb xwarî:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1823
+msgid "Remove"
+msgstr "Rake"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1825
+#: usr/bin/mint-search-apt:37
+msgid "Installed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1829
+msgid "Not available"
+msgstr "Ne amadeye"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1831
+msgid "Please use apt-get to install this package."
+msgstr "Ji kerema xwe ji bo sazkirina vê pakêtê apt-get 'ê bi karbîne."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1834
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:207
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:442
+msgid "Install"
+msgstr "Sazbike"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1836
+msgid "Not installed"
+msgstr "Saznebûye"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1857
+msgid "Reviews:"
+msgstr "Nêrîn:"
+
+#: usr/lib/linuxmint/mintInstall/splash.py:28
+#, python-format
+msgid "Gathering information for %d packages..."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:68
+msgid "Backing up your APT sources"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:92
+#: usr/lib/linuxmint/mintInstall/remove.py:48 usr/bin/mint-synaptic-install:14
+msgid "Please wait, this can take some time"
+msgstr "Ji kerema xwe li bendê be, evê kêmek demê te bixwe"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:94
+#: usr/bin/mint-synaptic-install:16
+msgid "Installation is complete"
+msgstr "Sazkirin temam bu"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:121
+msgid "Restoring your APT sources"
+msgstr "Çavkaniyên APT ya xwe paşdebîne"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:204
+msgid "Using the following repositories:"
+msgstr "Barxaneyên dişopîne bi karbîne:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:209
+#, python-format
+msgid "Install %s?"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:212
+msgid "The following packages will be installed:"
+msgstr "Pakêtên dişopîne wê bên sazkirin:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:223
+msgid "Default repositories"
+msgstr "Barxaneyên wekheyî"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:296
+#, python-format
+msgid "Upgrade %s?"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:298
+msgid "The following packages will be upgraded:"
+msgstr "Ev pakêtên dişopîne wê bên bilindkirin:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:299
+msgid "Upgrade"
+msgstr "Bilind bike"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:434
+msgid "Find Software"
+msgstr "Bernameyan Bibîne"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:437
+msgid "Go to the Linux Mint Software Portal"
+msgstr "Here Portala Nermalava Linux Mint'ê"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:438
+msgid "Search for a .mint application"
+msgstr "Sepanek ya .mint bigere"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:439
+msgid "Go to the GetDeb Portal"
+msgstr "Here Portala GetDeb"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:440
+msgid "Search for a .deb package"
+msgstr "Paketek ya .deb bigere"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:441
+msgid "Search"
+msgstr "Lêbigere"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:443
+msgid "Show"
+msgstr "Nîşan bide"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:444
+msgid "Go to the Ubuntu repository"
+msgstr "Here Barxaneya Ubuntu 'yê"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:445
+msgid "Go to the Linux Mint repository"
+msgstr "Here Barxaneya Linux Mint 'ê"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid "Your APT sources were corrupted."
+msgstr "Çavkaniyên APT ya te şikestîne:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid ""
+"Your APT sources were not correctly restored after you last ran mintInstall. "
+"They now have been restored."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/remove.py:50
+msgid "Application removed successfully"
+msgstr "Sepan bi awayek serkeftî hate rakirin"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:104
+#, python-format
+msgid "Remove %s?"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/remove.py:107
+msgid "The following packages will be removed:"
+msgstr ""
+
+#: usr/bin/mint-search-apt:34
+msgid "No results"
+msgstr ""
+
+#: usr/bin/mint-search-apt:41
+msgid "Package"
+msgstr ""
+
+#: usr/bin/mint-search-apt:42
+msgid "Description"
+msgstr ""
+
+#: usr/bin/mint-make-cmd:37 usr/bin/mint-make-cmd:38
+#, python-format
+msgid "Could not find package: %s"
+msgstr ""
+
+#: generate_desktop_files:24 generate_desktop_files:35
+#: generate_desktop_files:47
+msgid "Install new applications"
+msgstr ""

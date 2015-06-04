@@ -1,0 +1,902 @@
+# translation of mintinstall_mintinstall-is.po to Icelandic
+# Icelandic translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+#
+# Sveinn í Felli <sveinki@nett.is>, 2009, 2010, 2011, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: mintinstall_mintinstall-is\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 17:21+0100\n"
+"PO-Revision-Date: 2014-11-03 16:41+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+"Language: is\n"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:196
+#, python-format
+msgid "The package '%s' could not be installed"
+msgstr "Ekki var hægt að setja upp '%s' pakkann"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:198
+#, python-format
+msgid "The package '%s' could not be removed"
+msgstr "Ekki var hægt að fjarlægja '%s' pakkann"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:204
+msgid "Please check your connection to the Internet"
+msgstr "Athugaðu internet-tenginguna þína"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:215
+msgid "Another application is using APT:"
+msgstr "Annað forrit er að nota APT:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:301
+#, python-format
+msgid "%d ongoing actions"
+msgstr "%d aðgerðir í gangi"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:311
+#, python-format
+msgid "Cancel the task: %s"
+msgstr "Hætta við verkið: %s"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Waiting"
+msgstr "Bið"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Downloading"
+msgstr "Hala niður"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Running"
+msgstr "Keyrandi"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:125
+msgid "Finished"
+msgstr "Lokið"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:335
+#, python-format
+msgid "Installing %s"
+msgstr "Set upp %s"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:337
+#, python-format
+msgid "Removing %s"
+msgstr "Fjarlægi %s"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:339
+msgid "Updating cache"
+msgstr "Uppfæri skyndiminni"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:341
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:343
+msgid "No role set"
+msgstr "Ekkert hlutverk sett"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:451
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:789
+#: usr/lib/linuxmint/mintInstall/splash.py:20
+#: usr/lib/linuxmint/mintInstall/splash.py:27
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:343 generate_desktop_files:24
+#: generate_desktop_files:35 generate_desktop_files:47
+msgid "Software Manager"
+msgstr "Hugbúnaðarstjórnun"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:472
+msgid "_File"
+msgstr "_Skrá"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:476
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:127
+msgid "Close"
+msgstr "Loka"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:480
+msgid "_Edit"
+msgstr "Br_eyta"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:484
+msgid "Preferences"
+msgstr "Stillingar"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:488
+msgid "Search in packages summary (slower search)"
+msgstr "Leita í yfirliti pakka (hægari leit)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:492
+msgid "Search in packages description (even slower search)"
+msgstr "Leita í lýsingum pakka (ennþá hægari leit)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:496
+msgid "Open links using the web browser"
+msgstr "Opna tengla í vafranum"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:500
+msgid "Search while typing"
+msgstr "Leita á meðan skrifað"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:513
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:753
+msgid "Account information"
+msgstr "Notandaupplýsingar"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:520
+msgid "Software sources"
+msgstr "Hugbúnaðarsöfn"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:524
+msgid "_View"
+msgstr "S_koða"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:528
+msgid "Available packages"
+msgstr "Tiltækir pakkar"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:532
+msgid "Installed packages"
+msgstr "Uppsettir pakkar"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:539
+msgid "_Help"
+msgstr "_Hjálp"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:543
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:787
+msgid "About"
+msgstr "Um"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:589
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:599
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1118
+msgid "Categories"
+msgstr "Flokkar"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:590
+msgid "Please choose a category"
+msgstr "Veldu flokk"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:591
+#, python-format
+msgid "%d packages are currently available"
+msgstr "%d pakkar tiltækir"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:600
+msgid "Please choose a sub-category"
+msgstr "Veldu undirflokk"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:621
+msgid "No ongoing actions"
+msgstr "Engar aðgerðir í gangi"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:622
+msgid "Active tasks:"
+msgstr "Virk verkefni"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:625
+msgid "Show all results"
+msgstr "Sýna allar niðurstöður"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:755
+msgid "Your community account"
+msgstr "Aðgangur þinn hjá samfélaginu"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:757
+msgid "Fill in your account info to review applications"
+msgstr "Fylltu inn í aðgangsupplýsingarnar til að gefa umsögn um hugbúnað"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:759
+msgid "Username:"
+msgstr "Notandanafn:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:760
+msgid "Password:"
+msgstr "Lykilorð:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:832
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1759
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1770
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:834
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1761
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1772
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:836
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1763
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1774
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:838
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1765
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1776
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:860
+msgid "Icon"
+msgstr "Táknmynd"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:864
+msgid "Application"
+msgstr "Forrit"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:871
+msgid "Score"
+msgstr "Stig"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:893
+msgid "Task"
+msgstr "Verkefni"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:896
+msgid "Status"
+msgstr "Staða"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:899
+msgid "Progress"
+msgstr "Framvinda"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:996
+msgid "See more reviews"
+msgstr "Skoða fleiri umsagnir"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1038
+msgid "Screenshot"
+msgstr "Skjámynd"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1047
+msgid "Website"
+msgstr "Vefsvæði"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1055
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1067
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1780
+msgid "Reviews"
+msgstr "Umsagnir"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1120
+msgid "Featured"
+msgstr "Efst á baugi"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1123
+msgid "All Packages"
+msgstr "Allir pakkar"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1125
+msgid "Internet"
+msgstr "Internetið"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1126
+msgid "Web"
+msgstr "Vefur"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1128
+msgid "Email"
+msgstr "Tölvupóstur"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1130
+msgid "Chat"
+msgstr "Spjall"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1132
+msgid "File sharing"
+msgstr "Skráamiðlun"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1135
+msgid "Sound and video"
+msgstr "Hljóð og mynd"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1138
+msgid "Graphics"
+msgstr "Myndvinnsla"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1140
+msgid "3D"
+msgstr "3D"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1142
+msgid "Drawing"
+msgstr "Teikning"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1144
+msgid "Photography"
+msgstr "Ljósmyndun"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1146
+msgid "Publishing"
+msgstr "Útgáfa"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1148
+msgid "Scanning"
+msgstr "Skönnun"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1150
+msgid "Viewers"
+msgstr "Skoðarar"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1153
+msgid "Office"
+msgstr "Skrifstofan"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1155
+msgid "Games"
+msgstr "Leikir"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1157
+msgid "Board games"
+msgstr "Borðspil"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1159
+msgid "First-person shooters"
+msgstr "Firstu-persónu skotleikir"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1161
+msgid "Real-time strategy"
+msgstr "Rauntíma herkænska"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1163
+msgid "Turn-based strategy"
+msgstr "Til-skiptis herkænska"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1165
+msgid "Emulators"
+msgstr "Hermar"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1167
+msgid "Simulation and racing"
+msgstr "Hermar og keppni"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1170
+msgid "Accessories"
+msgstr "Aukahlutir"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1172
+msgid "System tools"
+msgstr "Kerfistól"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1175
+msgid "Fonts"
+msgstr "Letur"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1178
+msgid "Science and Education"
+msgstr "Menntun og vísindi"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1181
+msgid "Programming"
+msgstr "Forritun"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1380
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1853
+#, python-format
+msgid "%d reviews"
+msgstr "%d umsagnir"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1416
+#, python-format
+msgid "%d packages"
+msgstr "%d pakkar"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1661
+#, python-format
+msgid "Only results in category \"%s\" are shown."
+msgstr "Einungis niðurstöður úr \"%s\" flokknum eru birtar."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1672
+msgid "Search results"
+msgstr "Leitarniðurstöður"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Hate it"
+msgstr "Hata það"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Not a fan"
+msgstr "Ekki aðdáandi"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "So so"
+msgstr "La-la"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Like it"
+msgstr "Líkar það"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Awesome!"
+msgstr "Frábært!"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1728
+msgid "Score:"
+msgstr "Stig:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1729
+msgid "Submit"
+msgstr "Senda"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1730
+msgid "Your review"
+msgstr "Umsögnin þín"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1778
+msgid "Size:"
+msgstr "Stærð:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1779
+msgid "Version:"
+msgstr "Útgáfa:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1781
+msgid "Your review:"
+msgstr "Umsögnin þín:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1782
+msgid "Details"
+msgstr "Nánar"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1784
+msgid "This will remove the following packages:"
+msgstr "Þetta myndi fjarlægja eftirfarandi pakka:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1785
+msgid "Cancel"
+msgstr "Hætta við"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1786
+msgid "Confirm"
+msgstr "Staðfesta"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1790
+#, python-format
+msgid "%(localSize)s of disk space freed"
+msgstr "Losar %(localSize)s rými á hörðum diski"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1792
+#, python-format
+msgid "%(localSize)s of disk space required"
+msgstr "Krefst %(localSize)s rýmis á hörðum diski"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1795
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space freed"
+msgstr ""
+"%(downloadSize)s til að sækja, losar %(localSize)s rými á hörðum diski"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1797
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space required"
+msgstr ""
+"%(downloadSize)s til að sækja, krefst %(localSize)s rýmis á hörðum diski"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1800
+msgid "The following packages would be installed: "
+msgstr "Eftirfarandi pakkar yrðu settir inn: "
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1802
+msgid "The following packages would be removed: "
+msgstr "Eftirfarandi pakkar yrðu fjarlægðir: "
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1805
+msgid "Impact on packages:"
+msgstr "Áhrif á pakka:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1823
+msgid "Remove"
+msgstr "Fjarlægja"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1825
+#: usr/bin/mint-search-apt:37
+msgid "Installed"
+msgstr "Uppsett"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1829
+msgid "Not available"
+msgstr "Ekki tiltækt"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1831
+msgid "Please use apt-get to install this package."
+msgstr "Notaðu apt-get til að setja upp þennan pakka."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1834
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:207
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:442
+msgid "Install"
+msgstr "Setja upp"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1836
+msgid "Not installed"
+msgstr "Ekki uppsett"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1857
+msgid "Reviews:"
+msgstr "Umsagnir:"
+
+#: usr/lib/linuxmint/mintInstall/splash.py:28
+#, python-format
+msgid "Gathering information for %d packages..."
+msgstr "Safna upplýsingum um %d pakka..."
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:68
+msgid "Backing up your APT sources"
+msgstr "Tek öryggisafrit af APT-grunnunum þínum (APTsources)"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:92
+#: usr/lib/linuxmint/mintInstall/remove.py:48 usr/bin/mint-synaptic-install:14
+msgid "Please wait, this can take some time"
+msgstr "Bíddu aðeins, þetta getur tekið dálítinn tíma"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:94
+#: usr/bin/mint-synaptic-install:16
+msgid "Installation is complete"
+msgstr "Uppsetningu er lokið"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:121
+msgid "Restoring your APT sources"
+msgstr "Endursmíða APT-grunnana þína (APTsources)"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:204
+msgid "Using the following repositories:"
+msgstr "Nota eftirfarandi hugbúnaðarsöfn:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:209
+#, python-format
+msgid "Install %s?"
+msgstr "Setja inn %s?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:212
+msgid "The following packages will be installed:"
+msgstr "Eftirfarandi pakkar verða settir inn:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:223
+msgid "Default repositories"
+msgstr "Sjálfgefin hugbúnaðarsöfn"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:296
+#, python-format
+msgid "Upgrade %s?"
+msgstr "Uppfæra %s?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:298
+msgid "The following packages will be upgraded:"
+msgstr "Eftirtaldir pakkar verða uppfærðir:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:299
+msgid "Upgrade"
+msgstr "Uppfæra"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:434
+msgid "Find Software"
+msgstr "Finna hugbúnað"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:437
+msgid "Go to the Linux Mint Software Portal"
+msgstr "Fara á Linux Mint hugbúnaðargáttina"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:438
+msgid "Search for a .mint application"
+msgstr "Leita eftir .mint forriti"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:439
+msgid "Go to the GetDeb Portal"
+msgstr "Fara á GetDeb gáttina"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:440
+msgid "Search for a .deb package"
+msgstr "Leita eftir .deb pakka"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:441
+msgid "Search"
+msgstr "Leita"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:443
+msgid "Show"
+msgstr "Sýna"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:444
+msgid "Go to the Ubuntu repository"
+msgstr "Fara í Ubuntu hugbúnaðarsafnið"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:445
+msgid "Go to the Linux Mint repository"
+msgstr "Fara í Linux Mint hugbúnaðarsafnið"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid "Your APT sources were corrupted."
+msgstr "APT-grunnarnir þínir (APTsources) voru skemmdir."
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid ""
+"Your APT sources were not correctly restored after you last ran mintInstall. "
+"They now have been restored."
+msgstr ""
+"APT grunnarnir þínir (APTsources) endurheimtust ekki rétt þegar þú keyrðir "
+"síðast mintInstall. Þeir hafa nú verið endurheimtir."
+
+#: usr/lib/linuxmint/mintInstall/remove.py:50
+msgid "Application removed successfully"
+msgstr "Forritið var fjarlægt"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:104
+#, python-format
+msgid "Remove %s?"
+msgstr "Fjarlægja %s?"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:107
+msgid "The following packages will be removed:"
+msgstr "Eftirfarandi pakkar verða fjarlægðir:"
+
+#: usr/bin/mint-search-apt:34
+msgid "No results"
+msgstr "Engar niðurstöður"
+
+#: usr/bin/mint-search-apt:41
+msgid "Package"
+msgstr "Pakki"
+
+#: usr/bin/mint-search-apt:42
+msgid "Description"
+msgstr "Lýsing"
+
+#: usr/bin/mint-make-cmd:37 usr/bin/mint-make-cmd:38
+#, python-format
+msgid "Could not find package: %s"
+msgstr "Gat ekki fundið pakka: %s"
+
+#: generate_desktop_files:24 generate_desktop_files:35
+#: generate_desktop_files:47
+msgid "Install new applications"
+msgstr "Setja upp ný forrit"
+
+#~ msgid "Description:"
+#~ msgstr "Lýsing:"
+
+#~ msgid "Size"
+#~ msgstr "Stærð"
+
+#~ msgid "License:"
+#~ msgstr "Notkunarskilmálar:"
+
+#~ msgid "Available version"
+#~ msgstr "Tiltæk útgáfa"
+
+#~ msgid "Installed version"
+#~ msgstr "Uppsett útgáfa"
+
+#~ msgid "Repository"
+#~ msgstr "Hugbúnaðarsafn"
+
+#~ msgid "Category"
+#~ msgstr "Flokkur"
+
+#~ msgid "Views"
+#~ msgstr "Birtingar"
+
+#~ msgid "Added"
+#~ msgstr "Bætt við"
+
+#~ msgid "Reviewer"
+#~ msgstr "Umsagnaraðili"
+
+#~ msgid "Review"
+#~ msgstr "Umsögn"
+
+#~ msgid "Rating"
+#~ msgstr "Einkunn"
+
+#~ msgid "Software manager"
+#~ msgstr "Hugbúnaðarstjórn"
+
+#~ msgid "Quit"
+#~ msgstr "Hætta"
+
+#~ msgid "All applications"
+#~ msgstr "Öll forrit"
+
+#~ msgid "Featured applications"
+#~ msgstr "Helstu forrit"
+
+#~ msgid "These popular applications can be installed on your system:"
+#~ msgstr "Þessi vinsælu forrit er hægt að setja upp á kerfinu þínu:"
+
+#~ msgid "More info"
+#~ msgstr "Fleiri upplýsingar"
+
+#~ msgid "Average rating"
+#~ msgstr "Meðaleinkunn"
+
+#~ msgid ""
+#~ "The data used by mintInstall is corrupted or out of date. Click on refresh "
+#~ "to fix the problem :"
+#~ msgstr ""
+#~ "Gögn sem notuð eru af mintInstall eru skemmd eða of gömul. Smelltu á "
+#~ "'Endurlesa' til að laga vandann:"
+
+#~ msgid "Please refresh mintInstall by clicking on the Refresh button"
+#~ msgstr "Frískaðu við mintInstall með því að smella á 'Endurlesa' hnappinn."
+
+#~ msgid ""
+#~ "The mint file for this application was not successfully downloaded. Click on "
+#~ "refresh to fix the problem."
+#~ msgstr ""
+#~ "Mint-skrá þessa forrits halaðist ekki rétt inn. Smelltu á 'Endurlesa' til að "
+#~ "laga vandann."
+
+#, python-format
+#~ msgid "%d screenshots loaded"
+#~ msgstr "%d skjámyndum hlaðið inn"
+
+#, python-format
+#~ msgid "%d categories loaded"
+#~ msgstr "%d flokkar hlaðnir inn"
+
+#, python-format
+#~ msgid "%d applications loaded"
+#~ msgstr "%d forrit hlaðin inn"
+
+#, python-format
+#~ msgid "Downloading data for %s"
+#~ msgstr "Hleð niður gögnum fyrir %s"
+
+#, python-format
+#~ msgid "%d reviews loaded"
+#~ msgstr "%d umsögnum hlaðið inn"
+
+#~ msgid "The changes are complete"
+#~ msgstr "Breytingunum er lokið"
+
+#~ msgid "Show:"
+#~ msgstr "Sýna:"
+
+#~ msgid "Quick search:"
+#~ msgstr "Flýtileit:"
+
+#~ msgid "All software"
+#~ msgstr "Allur hugbúnaður"
+
+#~ msgid "Installed software"
+#~ msgstr "Uppsettur hugbúnaður"
+
+#~ msgid "Available software"
+#~ msgstr "Tiltækur hugbúnaður"
+
+#~ msgid "Cancel all changes"
+#~ msgstr "Hætta við allar breytingar"
+
+#~ msgid "Portal URL"
+#~ msgstr "Slóð vefgáttar"
+
+#~ msgid "Your changes"
+#~ msgstr "Þínar breytingar"
+
+#~ msgid "Text editors"
+#~ msgstr "Textaritlar"
+
+#~ msgid "Sound & Video"
+#~ msgstr "Hljóð og mynd"
+
+#~ msgid "Office suites"
+#~ msgstr "Skrifstofuvöndlar"
+
+#~ msgid "Scanning tools"
+#~ msgstr "Skönnun"
+
+#~ msgid "Tools"
+#~ msgstr "Verkfæri"
+
+#~ msgid "Photo"
+#~ msgstr "Ljósmyndun"
+
+#~ msgid "Finance"
+#~ msgstr "Fjármál"
+
+#~ msgid "2D"
+#~ msgstr "Teikniforrit"
+
+#~ msgid "Spreadsheets"
+#~ msgstr "Töflureiknar"
+
+#~ msgid "Word processors"
+#~ msgstr "Ritvinnsla"
+
+#~ msgid "Databases"
+#~ msgstr "Gagnagrunnar"
+
+#~ msgid "Internet Relay Chat"
+#~ msgstr "IRC spjall"
+
+#~ msgid "Instant messengers"
+#~ msgstr "Spjallforrit"
+
+#~ msgid "Education"
+#~ msgstr "Menntun"
+
+#~ msgid "Firewall"
+#~ msgstr "Eldveggir"
+
+#~ msgid "Drivers"
+#~ msgstr "Reklar"
+
+#~ msgid "Package management"
+#~ msgstr "Pakkastjórnun"
+
+#~ msgid "FTP"
+#~ msgstr "FTP"
+
+#~ msgid "System Tools"
+#~ msgstr "Kerfistól"
+
+#~ msgid "Cancel change"
+#~ msgstr "Hætta við breytingar"
+
+#~ msgid "Cancel installation"
+#~ msgstr "Hætta við uppsetningu"
+
+#~ msgid "Cancel removal"
+#~ msgstr "Hætta við að fjarlægja"
+
+#, python-format
+#~ msgid ""
+#~ "%(applications)d applications listed, %(install)d to install, %(remove)d to "
+#~ "remove"
+#~ msgstr ""
+#~ "%(applications)d forrit á lista, %(install)d til uppsetningar, %(remove)d "
+#~ "til að fjarlægja"
+
+#~ msgid "First person shooters"
+#~ msgstr "Fyrstupersónu skotleikir"
+
+#~ msgid "Real time strategy"
+#~ msgstr "Rauntíma herkænska"
+
+#~ msgid "Simulation & racing"
+#~ msgstr "Hermar og keppni"
+
+#~ msgid "Audio players"
+#~ msgstr "Hljóðspilun"
+
+#~ msgid "Video players"
+#~ msgstr "Vídeóspilun"
+
+#~ msgid "Burning tools"
+#~ msgstr "Diskabrennsla"
+
+#~ msgid "Collection managers"
+#~ msgstr "Safnastjórar"
+
+#~ msgid "Document viewers"
+#~ msgstr "Skjalaskoðun"
+
+#~ msgid "Image viewers"
+#~ msgstr "Myndaskoðun"
+
+#~ msgid "Web browsers"
+#~ msgstr "Vefskoðarar"
+
+#~ msgid "Graph and flowcharts"
+#~ msgstr "Línu- og flæðirit"
+
+#~ msgid "Mind mapping"
+#~ msgstr "Hugsanakort"
+
+#~ msgid "Desktop components"
+#~ msgstr "Skjáborðseiningar"
+
+#~ msgid "P2P and torrent"
+#~ msgstr "P2P og torrent straumar"
+
+#~ msgid "Upstream"
+#~ msgstr "Upprunalegt"

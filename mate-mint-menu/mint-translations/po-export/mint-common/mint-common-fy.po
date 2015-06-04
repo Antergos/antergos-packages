@@ -1,0 +1,55 @@
+# Frisian translation for linuxmint
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-03-31 16:29+0100\n"
+"PO-Revision-Date: 2015-05-16 12:30+0000\n"
+"Last-Translator: David Metzlar <metzlar94@live.nl>\n"
+"Language-Team: Frisian <fy@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/common/mint-which-launcher.py:9
+#: usr/lib/linuxmint/common/mint-which-launcher.py:11
+msgid "Please enter your password"
+msgstr "Fier jo wachtwurd yn"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:36
+msgid "Please wait, this can take some time"
+msgstr "Efkes geduld, dit kin efkes duorje"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:38
+msgid "Application removed successfully"
+msgstr "Applikaasje is ferwydere"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:57
+msgid ""
+"This menu item is not associated to any package. Do you want to remove it "
+"from the menu anyway?"
+msgstr ""
+"Dit menu underdiel is net ferbûn oan in oar pakket. Binne jo der wis fan dat "
+"jo it ferwyderje wolle?"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:67
+msgid "The following packages will be removed:"
+msgstr "De folgjende pakketten wurde ferwydere:"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:71
+msgid "Packages to be removed"
+msgstr "Pakketten dy't fewydere wurde moatte"
+
+#: generate_additional_files.py:49
+msgid "Send by Email"
+msgstr "Ferstjoere oer Email"
+
+#: generate_additional_files.py:49
+msgid "Send as email attachment"
+msgstr "Ferstjoere taheakke oan in Email"

@@ -1,0 +1,204 @@
+# Estonian translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-08 10:39+0100\n"
+"PO-Revision-Date: 2014-08-07 09:44+0000\n"
+"Last-Translator: mahfiaz <mahfiaz@gmail.com>\n"
+"Language-Team: Estonian <et@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+"Language: et\n"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:24 generate_desktop_files:58
+#: generate_desktop_files:72
+msgid "Welcome Screen"
+msgstr "Tere tulemast"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:77
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did designing it. The links below will help you get started "
+"with your new operating system. Have a great time and don't hesitate to send "
+"us your feedback."
+msgstr ""
+"Tere tulemast! Suur tänu, et valisid Linux Minti. Me loodame, et sa naudid "
+"selle kasutamist sama palju, kui meie selle valmistamist. Järgnevad lingid "
+"aitavad sul tutvuda sinu uue operatsioonisüsteemiga. Edu edaspidiseks ja ära "
+"pelga meile tagasisidet saata!"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "New features"
+msgstr "Uued võimalused"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "See what is new in this release"
+msgstr "Vaata, mis on selles väljalaskes uut"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid "Important information"
+msgstr "Tähtis info"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid ""
+"Find out about important information, limitations, known issues and their "
+"solution"
+msgstr "Oluline teave, piirangud, teadaolevad probleemid ja nende lahendused"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "User guide (PDF)"
+msgstr "Kasutusjuhend (PDF)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "Learn all the basics to get started with Linux Mint"
+msgstr "Algteadmised Linux Minti kasutamiseks"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data"
+msgstr "Andmete taastamine"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data or applications from a previous installation"
+msgstr "Eelmisest paigaldusest andmete või rakenduste taastamine"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Software manager"
+msgstr "Tarkvarahaldur"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Install additional software"
+msgstr "Täiendava tarkvara paigaldamine"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat room"
+msgstr "Jututuba"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat live with other users in the chat room"
+msgstr "Vestle teiste kasutajatega jututoas"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Forums"
+msgstr "Foorumid"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Seek help from other users in the Linux Mint forums"
+msgstr "Otsi abi foorumis teistelt Linux Minti kasutajatelt"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Tutorials"
+msgstr "Õpetused"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Find tutorials about Linux Mint"
+msgstr "Erinevad õpetused Linux Minti kohta"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid "Hardware database"
+msgstr "Riistvara andmebaas"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid ""
+"Find hardware that is compatible with Linux, or information about your "
+"hardware"
+msgstr "Leia Linuxiga ühilduvat riistvara või teavet enda riistvara kohta"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Idea pool"
+msgstr "Ideed"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Submit new ideas to the development team"
+msgstr "Saada oma ägedad ideed arendustiimile"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Get involved"
+msgstr "Osalemine"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Find out how to get involved in the Linux Mint project"
+msgstr "Uuri, kuidas aidata Linux Minti projektile kaasa"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Donations"
+msgstr "Annetused"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Make a donation to the Linux Mint project"
+msgstr "Anneta raha Linux Minti projekti toetuseks"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Sponsors"
+msgstr "Sponsorid"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Apply to become a Linux Mint sponsor"
+msgstr "Hakka Linux Minti sponsoriks"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:140
+msgid "Show this dialog at startup"
+msgstr "Seda teadet näidatakse alati käivitamisel"
+
+#: generate_desktop_files:58 generate_desktop_files:72
+msgid "Introduction to Linux Mint"
+msgstr "Sissejuhatus Linux Minti"
+
+#: generate_desktop_files:86
+msgid "Install Multimedia Codecs"
+msgstr "Paigalda multimeediakoodekid"
+
+#: generate_desktop_files:86
+msgid "Add all the missing multimedia codecs"
+msgstr "Kõigi puuduvate koodekite lisamine"
+
+#~ msgid "Become a sponsor"
+#~ msgstr "Hakka sponsoriks"
+
+#~ msgid "Visit the forums"
+#~ msgstr "Külasta foorumit"
+
+#~ msgid "Connect to the chat room"
+#~ msgstr "Ühine jututoaga"
+
+#~ msgid "Download the user guide (PDF)"
+#~ msgstr "Laadi endale kasutusjuhend (PDF)"
+
+#~ msgid "Read the release notes"
+#~ msgstr "Loe märkmeid väljalaske kohta"
+
+#~ msgid "Contribute to Linux Mint"
+#~ msgstr "Panusta Linux Mint'i"
+
+#~ msgid "Browse the list of new features"
+#~ msgstr "Sirvi uute funktsioonide nimekirja"
+
+#, python-format
+#~ msgid "Discover %s"
+#~ msgstr "Avasta %s"
+
+#~ msgid "Find help"
+#~ msgstr "Hangi abi"
+
+#~ msgid "Welcome to Linux Mint"
+#~ msgstr "Tere tulemast Linux Mint'i"
+
+#~ msgid "Make a donation"
+#~ msgstr "Anneta"
+
+#~ msgid ""
+#~ "Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+#~ "as much as we did making it. Please make yourself familiar with the new "
+#~ "features and the documentation and don't hesitate to send us your feedback."
+#~ msgstr ""
+#~ "Tere tulemast ja suur tänu, et otsustasite kasutada Linux Mint'i. Loodame, "
+#~ "et naudite selle kasutamist niisama palju, kui meie selle väljatöötamist. "
+#~ "Palun saage tuttavaks uute töövahendite ja nende dokumentatsiooniga. Ja "
+#~ "viimaks, ärge kartke anda meile tagasisidet Linux Mint'i kohta."

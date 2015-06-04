@@ -1,0 +1,223 @@
+mint-translations (2015.06.02) rafaela; urgency=medium
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 02 Jun 2015 13:55:38 +0200
+
+mint-translations (2015.02.25) betsy; urgency=medium
+
+  * Updated packaging (now works off LP .po export)
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 25 Feb 2015 11:51:38 +0100
+
+mint-translations (2015.02.23) rebecca; urgency=medium
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 23 Feb 2015 12:01:24 +0100
+
+mint-translations (2014.11.23) rebecca; urgency=medium
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 23 Nov 2014 15:03:59 +0100
+
+mint-translations (2014.11.11) rebecca; urgency=medium
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 11 Nov 2014 12:09:42 +0100
+
+mint-translations (2014.10.31) rebecca; urgency=medium
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 31 Oct 2014 17:52:09 +0100
+
+mint-translations (2014.05.25) qiana; urgency=medium
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 25 May 2014 13:32:26 +0100
+
+mint-translations (2014.05.08) qiana; urgency=medium
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 08 May 2014 12:04:25 +0100
+
+mint-translations (2014.05.03) qiana; urgency=medium
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 03 May 2014 22:46:35 +0100
+
+mint-translations (2013.11.26.1) debian; urgency=low
+
+  * live-installer translations updated
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 27 Feb 2014 12:07:08 +0000
+
+mint-translations (2013.11.26) petra; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 26 Nov 2013 12:19:14 +0000
+
+mint-translations (2013.11.07) petra; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 07 Nov 2013 12:22:13 +0000
+
+mint-translations (2013.10.07) petra; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 07 Oct 2013 13:25:56 +0100
+
+mint-translations (2013.05.04) olivia; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 04 May 2013 17:48:06 +0100
+
+mint-translations (2013.05.01) olivia; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 01 May 2013 18:32:25 +0100
+
+mint-translations (2013.04.11) olivia; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 11 Apr 2013 19:00:29 +0100
+
+mint-translations (2012.10.18) nadia; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 18 Oct 2012 14:29:12 +0100
+
+mint-translations (2012.04.29) lisa; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 29 Apr 2012 11:08:33 +0000
+
+mint-translations (2011.11.24) lisa; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  24 Nov 2011 11:06:00 +0000
+
+mint-translations (2011.08.06) julia; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun,  06 Aug 2011 13:39:00 +0000
+
+mint-translations (2011.07.04) julia; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon,  04 Jul 2011 13:39:00 +0000
+
+mint-translations (2011.06.01) julia; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed,  01 Jun 2011 16:16:00 +0000
+
+mint-translations (2011.05.20) julia; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri,  20 May 2011 11:42:00 +0000
+
+mint-translations (2011.02.01) julia; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue,  01 Feb 2011 11:42:00 +0000
+
+mint-translations (2010.11.05) julia; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri,  05 Nov 2010 10:24:00 +0000
+
+mint-translations (2010.10.14) julia; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  14 Oct 2010 15:55:00 +0000
+
+mint-translations (2010.09.01) isadora; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed,  01 Aug 2010 13:48:00 +0000
+
+mint-translations (2010.06.12) isadora; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat,  12 Jun 2010 10:53:00 +0000
+
+mint-translations (2010.05.14) isadora; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri,  14 May 2010 10:01:00 +0000
+
+mint-translations (2010.05.13) isadora; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  13 May 2010 11:16:00 +0000
+
+mint-translations (2010.05.08) isadora; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat,  08 May 2010 11:49:00 +0000
+
+mint-translations (2010.05.06) isadora; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed,  06 May 2010 12:07:00 +0000
+
+mint-translations (2010.05.05) isadora; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed,  05 May 2010 17:54:00 +0000
+
+mint-translations (2010.02.02) helena; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue,  02 Feb 2010 10:13:00 +0000
+
+mint-translations (2009.12.21) helena; urgency=low
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon,  21 Dec 2009 11:49:00 +0000
+
+mint-translations (2009.11.26) helena; urgency=low
+
+  * Updated translation for Mint 8 stable release
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  26 Nov 2009 10:09:00 +0000
+
+mint-translations (2009.11.03) helena; urgency=low
+
+  * Initial release
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue,  3 Nov 2009 12:16:00 +0000
+

@@ -1,0 +1,350 @@
+# Thai translation for linuxmint
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 10:14+0100\n"
+"PO-Revision-Date: 2015-04-01 10:33+0000\n"
+"Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
+"Language-Team: Thai <th@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:33
+msgid "Adding PPAs is not supported"
+msgstr "ไม่รองรับการเพิ่ม PPA"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:40
+#: usr/lib/linuxmint/mintSources/mintSources.py:881
+#, python-format
+msgid "Cannot add PPA: '%s'."
+msgstr "ไม่สามารถเพิ่ม PPA ได้: '%s'"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:44
+msgid "Adding private PPAs is not supported currently"
+msgstr "ยังไม่รองรับการเพิ่ม PPA ส่วนตัวในขณะนี้"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:47
+msgid "You are about to add the following PPA to your system:"
+msgstr "คุณกำลังจะเพิ่ม PPA ต่อไปนี้ในระบบของคุณ:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:50
+#, python-format
+msgid " More info: %s"
+msgstr " ข้อมูลเพิ่มเติม: %s"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:54
+msgid "Press [ENTER] to continue or ctrl-c to cancel adding it"
+msgstr "กด [ENTER] เพื่อทำต่อหรือ ctrl-c เพื่อยกเลิกการเพิ่ม"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:58
+msgid "Unable to prompt for response.  Please run with -y"
+msgstr "ไม่สามารถรอให้ตอบสนองได้ กรุณาเรียกด้วย -y"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:257
+#: usr/lib/linuxmint/mintSources/mintSources.py:285
+msgid "Sources"
+msgstr "แหล่งข้อมูล"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:263
+msgid "CD-ROM (Installation Disc)"
+msgstr "ซีดีรอม (แผ่นติดตั้ง)"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:304
+msgid ""
+"Linux Mint uses Romeo to publish packages which are not tested. Once these "
+"packages are tested, they are then moved to the official repositories. "
+"Unless you are participating in beta-testing, you should not enable this "
+"repository. Are you sure you want to enable Romeo?"
+msgstr ""
+"ลินุกซ์มินต์ใช้ Romeo เผยแพร่แพกเกจที่ไม่ได้ผ่านการทดสอบ "
+"เมื่อแพกเกจเหล่านี้ถูกทดสอบแล้ว "
+"จะถูกย้ายไปยังพื้นที่จัดเก็บข้อมูลอย่างเป็นทางการ "
+"นอกจากว่าคุณจะมีส่วนร่วมในการทดสอบแพกเกจรุ่นทดลอง "
+"คุณไม่ควรเปิดใช้งานแหล่งเก็บข้อมูลนี้ คุณต้องการที่จะเปิดใช้งาน Romeo "
+"หรือไม่?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:310
+msgid ""
+"Backports are packages coming from newer Linux Mint releases. When backports "
+"are made available, the development team publishes an official announcement "
+"on http://blog.linuxmint.com. This announcement might include important "
+"information about the new features, design decisions or even known issues "
+"which relate to you. It is therefore strongly recommended to not enable "
+"backports until you have read this information. Are you sure you want to "
+"enable backports?"
+msgstr ""
+"Backports เป็นแพคเกจที่มากับลินุกซ์มินต์รุ่นใหม่ เมื่อ backports จะให้บริการ "
+"ทีมผู้พัฒนาเผยแพร่ประกาศอย่างเป็นทางการในเว็บไซต์ http://blog.linuxmint.com "
+"การประกาศครั้งนี้อาจรวมถึงข้อมูลที่สำคัญเกี่ยวกับคุณสมบัติใหม่ "
+"การตัดสินใจในการออกแบบ หรือแม้กระทั่งปัญหาที่ทราบที่เกี่ยวข้องกับคุณ "
+"ดังนั้นจึงขอแนะนำให้ได้เปิดใช้งาน backports จนกว่าคุณจะได้อ่านข้อมูลนี้ "
+"คุณต้องการเปิดใช้งาน backports หรือไม่?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:366
+msgid "Other..."
+msgstr "อื่นๆ..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:388
+msgid "Select a mirror"
+msgstr "เลือก mirror"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:400
+msgid "Country"
+msgstr "ประเทศ"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:405
+msgid "URL"
+msgstr "ที่อยู่ URL"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:410
+msgid "Speed"
+msgstr "ความเร็ว"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:447
+#: usr/lib/linuxmint/mintSources/mintSources.py:456
+msgid "kB/s"
+msgstr "กิโลไบต์/วินาที"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:450
+msgid "MB/s"
+msgstr "เมกะไบต์/วินาที"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:453
+msgid "GB/s"
+msgstr "กิกะไบต์/วินาที"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:540 generate_desktop_files:28
+#: generate_desktop_files:44
+msgid "Software Sources"
+msgstr "แหล่งที่มาของซอฟต์แวร์"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:557
+msgid "Backported packages"
+msgstr "แพกเกจที่ถูกย้ายกลับ"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:559
+msgid "Unstable packages"
+msgstr "แพกเกจไม่แน่นอน"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:572
+#: usr/lib/linuxmint/mintSources/mintSources.py:1129
+msgid "No action required"
+msgstr "ไม่จำเป็นต้องมีการกระทำ"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:574
+msgid "Official repositories"
+msgstr "พื้นที่จัดเก็บข้อมูลทางการ"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:575
+msgid "PPAs"
+msgstr "PPA"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:576
+msgid "Additional repositories"
+msgstr "พื้นที่จัดเก็บข้อมูลเพิ่มเติม"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:577
+msgid "Authentication keys"
+msgstr "รหัสยืนยันตัวบุคคล"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:578
+msgid "Maintenance"
+msgstr "บำรุงรักษา"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:580
+msgid "Mirrors"
+msgstr "มิเรอร์ต่าง ๆ"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:581
+msgid "Main"
+msgstr "หลัก"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:582
+msgid "Base"
+msgstr "ฐาน"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:583
+#: usr/lib/linuxmint/mintSources/mintSources.py:584
+msgid "Select a faster server..."
+msgstr "เลือกผู้ให้บริการที่เร็วกว่า..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:586
+msgid "Optional components"
+msgstr "คอมโพเนนต์ที่ไม่จำเป็น"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:587
+msgid "Source code"
+msgstr "ซอร์สโค้ด"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:589
+msgid "Add a new PPA..."
+msgstr "เพิ่ม PPA ใหม่..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:590
+#: usr/lib/linuxmint/mintSources/mintSources.py:594
+msgid "Edit URL..."
+msgstr "แก้ไขที่อยู่ URL..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:591
+#: usr/lib/linuxmint/mintSources/mintSources.py:595
+#: usr/lib/linuxmint/mintSources/mintSources.py:599
+msgid "Remove permanently"
+msgstr "ลบถาวร"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:593
+msgid "Add a new repository..."
+msgstr "เพิ่มพื้นที่จัดเก็บข้อมูลใหม่..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:597
+msgid "Import key file..."
+msgstr "นำเข้าแฟ้มกุญแจ..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:598
+msgid "Download a key..."
+msgstr "ดาวน์โหลดกุญแจ..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:601
+msgid "Fix MergeList problems"
+msgstr "แก้ไขปัญหาการรวมรายการ"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:602
+msgid ""
+"If you experience MergeList problems, click this button to solve the problem."
+msgstr "หากคุณประสบปัญหาการรวมรายการ ให้คลิกปุ่มนี้เพื่อแก้ไขปัญหานี้"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:603
+msgid "Purge residual configuration"
+msgstr "การกำหนดค่าที่เหลือล้าง"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:604
+msgid ""
+"Packages sometimes leave configuration files on the system even after they "
+"are removed."
+msgstr ""
+"บางแพกเกจอาจทิ้งแฟ้มการกำหนดค่าในระบบเป็นบางครั้งแม้ว่าแพกเกจเหล่านั้นลบไปแล้"
+"ว"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:609
+msgid "Enable source code repositories"
+msgstr "เปิดใช้งานพื้นที่จัดเก็บข้อมูลซอร์สโค้ด"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:619
+msgid ""
+"Warning: Backports and unstable packages can introduce regressions and "
+"negatively impact your system. Please do not enable these options in Linux "
+"Mint unless it was suggested by the development team."
+msgstr ""
+"คำเตือน: หากใช้ Backports "
+"กับแพกเกจที่ยังไม่เสถียรจะสามารถส่งผลเสียให้กับระบบของคุณได้ "
+"กรุณาอย่าเปิดใช้งานตัวเลือกเหล่านี้ในลินุกซ์มินต์นอกจากจะได้รับคำแนะนำจากทีมผ"
+"ู้พัฒนา"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:680
+#: usr/lib/linuxmint/mintSources/mintSources.py:704
+msgid "Enabled"
+msgstr "เปิดใช้งาน"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:686
+msgid "PPA"
+msgstr "PPA"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:710
+msgid "Repository"
+msgstr "พื้นที่จัดเก็บข้อมูล"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:726
+msgid "Key"
+msgstr "กุญแจ"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:739
+msgid "Restore the default settings"
+msgstr "คืนการตั้งค่าเดิม"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:740
+msgid "Restore the official repositories to their default settings"
+msgstr "คืนการตั้งค่าเดิมให้แก่พื้นที่จัดเก็บข้อมูลเป็นทางการ"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:805
+msgid "There is no more residual configuration on the system."
+msgstr "ไม่มีการกำหนดค่าที่ตกค้างอยู่ในระบบแล้ว"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:811
+msgid "The problem was fixed. Please reload the cache."
+msgstr "ปัญหานี้ได้แก้ไขสำเร็จแล้ว กรุณาโหลดแคชใหม่อีกครั้ง"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:837
+msgid "Open.."
+msgstr "เปิด..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:853
+msgid ""
+"Please enter the 8 characters of the public key you want to download from "
+"keyserver.ubuntu.com:"
+msgstr ""
+"กรุณาป้อนอักขระ 8 ตัวของกุญแจสาธารณะที่คุณต้องการดาวน์โหลดจากเว็บไซต์ "
+"keyserver.ubuntu.com:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:866
+msgid "Are you sure you want to permanently remove this key?"
+msgstr "คุณต้องการจะลบกุญแจนี้ถาวรเลยหรือไม่?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:874
+msgid "Please enter the name of the PPA you want to add:"
+msgstr "กรุณาป้อนชื่อของ PPA ที่คุณจะเพิ่มเข้า:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:925
+msgid "Edit the URL of the PPA"
+msgstr "แก้ไขที่อยู่ URL ของ PPA นี้"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:935
+msgid "Are you sure you want to permanently remove this PPA?"
+msgstr "คุณต้องการลบ PPA นี้อย่างถาวรเลยหรือไม่?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:944
+msgid "Please enter the name of the repository you want to add:"
+msgstr "กรุณาป้อนชื่อพื้นที่จัดเก็บข้อมูลที่คุณจะเพิ่มเข้า:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:963
+msgid "Edit the URL of the repository"
+msgstr "แก้ไขที่อยู่ URL ของพื้นที่จัดเก็บข้อมูล"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:973
+msgid "Are you sure you want to permanently remove this repository?"
+msgstr "คุณต้องการลบพื้นที่จัดเก็บข้อมูลนี้อย่างถาวรเลยหรือไม่?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1123
+msgid "Update the cache"
+msgstr "ปรับปรุงแคช"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1124
+msgid "Click here to update your APT cache with your new sources"
+msgstr ""
+"คลิกที่นี่เพื่อปรับปรุงแคช APT ของคุณพร้อมแหล่งเก็บข้อมูลที่ใหม่ของคุณ"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1130
+msgid "Your APT cache is up to date"
+msgstr "แคช APT ของคุณเป็นรุ่นล่าสุดแล้ว"
+
+#: usr/bin/software-sources:9
+msgid "Please enter your password to configure the software sources"
+msgstr "กรุณาป้อนรหัสผ่านของคุณเพื่อกำหนดค่าแหล่งซอฟต์แวร์นี้"
+
+#: usr/bin/add-apt-repository:10
+msgid "Error: must run as root"
+msgstr "ผิดพลาด: ต้องทำการในฐานะ root"
+
+#: usr/bin/add-apt-repository:21
+msgid "Error: need a repository as argument"
+msgstr "ผิดพลาด: ต้องการแหล่งจัดเก็บข้อมูลไว้เป็นข้อพิสูจน์"
+
+#: generate_desktop_files:28 generate_desktop_files:44
+msgid "Configure the sources for installable software and updates"
+msgstr "ปรับแต่งแหล่งของซอฟต์แวร์ที่ใช้ในการติดตั้งและปรับปรุงรุ่น"

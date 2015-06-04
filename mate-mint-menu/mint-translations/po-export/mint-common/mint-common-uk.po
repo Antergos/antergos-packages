@@ -1,0 +1,55 @@
+# Ukrainian translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-03-31 16:29+0100\n"
+"PO-Revision-Date: 2015-05-15 11:00+0000\n"
+"Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/common/mint-which-launcher.py:9
+#: usr/lib/linuxmint/common/mint-which-launcher.py:11
+msgid "Please enter your password"
+msgstr "Будь ласка, уведіть Ваш пароль"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:36
+msgid "Please wait, this can take some time"
+msgstr "Будь ласка, зачекайте, це може тривати деякий час"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:38
+msgid "Application removed successfully"
+msgstr "Проґраму вилучено успішно"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:57
+msgid ""
+"This menu item is not associated to any package. Do you want to remove it "
+"from the menu anyway?"
+msgstr ""
+"Цей пункт меню не пов'язаний з жодним пакунком. Ви бажаєте,  так чи інакше, "
+"вилучити його з меню?"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:67
+msgid "The following packages will be removed:"
+msgstr "Будуть вилучені такі пакунки:"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:71
+msgid "Packages to be removed"
+msgstr "Пакунки, які будуть вилучені"
+
+#: generate_additional_files.py:49
+msgid "Send by Email"
+msgstr "Надіслати поштою"
+
+#: generate_additional_files.py:49
+msgid "Send as email attachment"
+msgstr "Надіслати як вкладення електронної пошти"

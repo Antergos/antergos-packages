@@ -1,0 +1,765 @@
+# Finnish translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# Ari Ervasti <ari.ervasti87@gmail.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-02-24 17:11+0100\n"
+"PO-Revision-Date: 2015-05-26 19:09+0000\n"
+"Last-Translator: Ari Ervasti <ari.ervasti87@gmail.com>\n"
+"Language-Team: Finnish <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:10+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+"Language: fi\n"
+
+#: usr/lib/live-installer/installer.py:69
+#, python-format
+msgid "Formatting %(partition)s as %(format)s ..."
+msgstr "Alustetaan %(partition)s muotoon %(format)s ..."
+
+#: usr/lib/live-installer/installer.py:91
+#: usr/lib/live-installer/installer.py:102
+#, python-format
+msgid "Mounting %(partition)s on %(mountpoint)s"
+msgstr "Liittäminen %(partition)s kohteeseen %(mountpoint)s"
+
+#: usr/lib/live-installer/installer.py:127
+msgid ""
+"ERROR: You must first manually mount your target filesystem(s) at /target to "
+"do a custom install!"
+msgstr ""
+"VIRHE: Sinun täytyy ensin itse liittää kohdetiedostojärjestelmä(t) "
+"kohteeseen /target suorittaaksesi mukautetun asennuksen!"
+
+#: usr/lib/live-installer/installer.py:135
+msgid ""
+"ERROR: Something is wrong with the installation medium! This is usually "
+"caused by burning tools which are not compatible with LMDE (YUMI or other "
+"multiboot tools). Please burn the ISO image to DVD/USB using a different "
+"tool."
+msgstr ""
+"VIRHE: Asennusmediassa on jotain vialla! Tämä yleensä johtuu "
+"levynkirjoitustyökaluista, jotka eivät ole yhteensopivia LMDE-version kanssa "
+"(YUMI tai jotkin muut multiboot-työkalut). Ole hyvä ja käytä ISO-levykuvan "
+"kirjoittamiseen DVD/USB:lle jotain muuta työkalua."
+
+#: usr/lib/live-installer/installer.py:159
+msgid "Indexing files to be copied.."
+msgstr "Indeksoidaan kopioitavia tiedostoja"
+
+#: usr/lib/live-installer/installer.py:179
+#, python-format
+msgid "Copying %s"
+msgstr "Kopioidaan %s"
+
+#: usr/lib/live-installer/installer.py:221
+#, python-format
+msgid "Restoring meta-information on %s"
+msgstr "Palautetaan meta-tiedot %s"
+
+#: usr/lib/live-installer/installer.py:231
+msgid "Entering the system ..."
+msgstr "Siirrytään järjestelmään ..."
+
+#: usr/lib/live-installer/installer.py:273
+msgid "Removing live configuration (packages)"
+msgstr "Poistetaan live asetukset (paketit)"
+
+#: usr/lib/live-installer/installer.py:281
+msgid "Adding new user to the system"
+msgstr "Lisätään uusi käyttäjä järjestelmään"
+
+#: usr/lib/live-installer/installer.py:321
+msgid "Writing filesystem mount information to /etc/fstab"
+msgstr "Kirjoitetaan tiedostojärjestelmän kiinnitystietoja /etc/fstab"
+
+#: usr/lib/live-installer/installer.py:374
+msgid "Setting hostname"
+msgstr "Aseta konenimi"
+
+#: usr/lib/live-installer/installer.py:393
+msgid "Setting locale"
+msgstr "Asettaa kieliasetukset"
+
+#: usr/lib/live-installer/installer.py:407
+msgid "Localizing packages"
+msgstr "Lokalisoidaan paketteja"
+
+#: usr/lib/live-installer/installer.py:422
+msgid "Installing drivers"
+msgstr "Asennetaan ajureita"
+
+#: usr/lib/live-installer/installer.py:437
+msgid "Setting keyboard options"
+msgstr "Tehdään näppäimistöasetuksia"
+
+#: usr/lib/live-installer/installer.py:476
+msgid "Installing bootloader"
+msgstr "Asennetaan käynnistyslataajaa"
+
+#: usr/lib/live-installer/installer.py:485
+msgid ""
+"WARNING: The grub bootloader was not configured properly! You need to "
+"configure it manually."
+msgstr ""
+"VAROITUS: grub käynnistyslataaja ei ole määritetty oikein! Sinun täytyy "
+"määrittää se manuaalisesti."
+
+#: usr/lib/live-installer/installer.py:498
+msgid "Cleaning APT"
+msgstr "Puhdistetaan APT"
+
+#: usr/lib/live-installer/installer.py:522
+#: usr/lib/live-installer/frontend/gtk_interface.py:967
+msgid "Installation finished"
+msgstr "Asennus on valmis"
+
+#: usr/lib/live-installer/installer.py:532
+msgid "Configuring bootloader"
+msgstr "Tehdään käynnistyslataaja"
+
+#: usr/lib/live-installer/installer.py:541
+msgid "Checking bootloader"
+msgstr "Tarkistetaan käynnistyslataaja"
+
+#: usr/lib/live-installer/main.py:31
+msgid "Unexpected error"
+msgstr "Odottamaton virhe"
+
+#: usr/lib/live-installer/main.py:32
+msgid "The installer failed with the following error."
+msgstr "Asennus epäonnistui seuraavan virheen takia."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:75
+#: usr/lib/live-installer/frontend/gtk_interface.py:77
+#, python-format
+msgid "%s Installer"
+msgstr "%s - asennus"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:92
+#: usr/lib/live-installer/frontend/gtk_interface.py:111
+msgid "Language"
+msgstr "Kieli"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:93
+msgid "Timezone"
+msgstr "Aikavyöhyke"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:94
+msgid "Keyboard layout"
+msgstr "Näppäinasettelu"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:95
+msgid "User info"
+msgstr "Käyttäjätiedot"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:96
+msgid "Partitioning"
+msgstr "Osiointi"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:97
+msgid "Please make sure you wish to manage partitions manually"
+msgstr "Ole hyvä ja varmista, että haluat muokata osioita manuaalisesti"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:98
+msgid "Advanced options"
+msgstr "Lisäasetukset"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:99
+msgid "Summary"
+msgstr "Yhteenveto"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:100
+msgid "Installing Linux Mint..."
+msgstr "Asennetaan Linux Mint..."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:101
+msgid "Installation paused: please finish the custom installation"
+msgstr "Asennus pysäytetty: ole hyvä ja viimeistele mukautettu asennus"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:114
+msgid "Country"
+msgstr "Maa"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:126
+msgid "Click to change your picture"
+msgstr "Napsauta vaihtaaksesi kuvaasi"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:128
+msgid "Take a photo..."
+msgstr "Ota kuva..."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:131
+msgid "Browse for more pictures..."
+msgstr "Selaa lisää kuvia..."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:170
+msgid "Select timezone"
+msgstr "Valitse aikavyöhyke"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:174
+msgid "Edit partitions"
+msgstr "Muokkaa osioita"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:175
+msgid "Refresh"
+msgstr "Virkistä"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:176
+msgid "Expert mode"
+msgstr "Asiantuntijatila"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:220
+#: usr/lib/live-installer/frontend/gtk_interface.py:444
+msgid "Layout"
+msgstr "Asettelu"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:226
+#: usr/lib/live-installer/frontend/gtk_interface.py:445
+msgid "Variant"
+msgstr "Muunnos"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:235
+#: usr/lib/live-installer/frontend/gtk_interface.py:446
+msgid "Overview"
+msgstr "Yhteenveto"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:239
+msgid "Calculating file indexes ..."
+msgstr "Lasketaan tiedosto indeksejä"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:311
+msgid "Images"
+msgstr "Kuvat"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:390
+msgid "Your full name"
+msgstr "Koko nimi"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:391
+msgid "Please enter your full name."
+msgstr "Syötä koko nimesi."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:392
+msgid "Your username"
+msgstr "Käyttäjänimi"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:393
+msgid "This is the name you will use to log in to your computer."
+msgstr "Tätä nimeä käytät tietokoneellesi kirjautumiseen."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:394
+msgid "Your password"
+msgstr "Salasana"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:395
+msgid "Please enter your password twice to ensure it is correct."
+msgstr "Syötä salasanasi kahdesti varmistaaksesi sen oikeaksi."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:396
+msgid "Hostname"
+msgstr "Konenimi"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:397
+msgid "This hostname will be the computer's name on the network."
+msgstr "Tämä isäntänimi on tulee olemaan tietokoneen nimi verkossa."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:398
+msgid "Automatic login"
+msgstr "Automaattinen kirjautuminen"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:399
+msgid ""
+"If enabled, the login screen is skipped when the system starts, and you are "
+"signed into your desktop session automatically."
+msgstr ""
+"Jos valittu, kirjautumisikkuna jätetään väliin järjestelmän käynnistyessä, "
+"ja sinut kirjataan automaattisesti työpöytä istuntoosi."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:400
+msgid "Log in automatically"
+msgstr "Kirjaudu sisään automaattisesti"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:403
+msgid "Your picture"
+msgstr "Sinun kuvasi"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:404
+msgid ""
+"This picture represents your user account. It is used in the login screen "
+"and a few other places."
+msgstr ""
+"Tämä kuva esittää käyttäjätiliäsi. Sitä käytetään sisäänkirjautuessasi ja "
+"muutamissa muissa paikoissa."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:407
+msgid "Selected timezone:"
+msgstr "Valittu aikavyöhyke:"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:410
+msgid "Bootloader"
+msgstr "Käynnistyslataaja"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:411
+msgid "Install GRUB"
+msgstr "Asenna GRUB"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:412
+msgid "GRUB is a bootloader used to load the Linux kernel."
+msgstr "GRUB on käynnistyslataaja, jota käytetään Linux-ytimen lataamiseen."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:415
+msgid "Use this box to test your keyboard layout."
+msgstr "Käytä tätä laatikkoa kokeillaksesi näppäimistön asettelua."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:416
+msgid "Model"
+msgstr "Malli"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:419
+msgid ""
+"You have selected to manage your partitions manually, this feature is for "
+"ADVANCED USERS ONLY."
+msgstr ""
+"Olet valinnut manuaalisen osioiden hallinnan, tämä toiminto on VAIN "
+"KEHITTYNEILLE KÄYTTÄJILLE."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:420
+msgid "Before continuing, please mount your target filesystem(s) at /target."
+msgstr ""
+"Ennen kuin jatkat, liitä kohdetiedostojärjestelmä(t) kohteeseen /target."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:421
+msgid ""
+"Do NOT mount virtual devices such as /dev, /proc, /sys, etc on /target/."
+msgstr ""
+"Älä liitä virtuaalilaitteita kuten /dev, /proc, /sys, jne. kohteeseen "
+"/target/."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:422
+msgid ""
+"During the install, you will be given time to chroot into /target and "
+"install any packages that will be needed to boot your new system."
+msgstr ""
+"Asennuksen aikana, sinulle annetaan aikaa chroot:ssa kohteeseen /target ja "
+"asentaa mitkä tahansa paketit joita tarvitaan uuden järjestelmäsi "
+"käynnistämiseen."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:423
+msgid ""
+"During the install, you will be required to write your own /etc/fstab."
+msgstr ""
+"Asennuksen aikana sinun täytyy kirjoittaa oma /etc/fstab -tiedostosi."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:424
+msgid ""
+"If you aren't sure what any of this means, please go back and deselect "
+"manual partition management."
+msgstr ""
+"Jos et ole varma kaiken tämän tarkoituksesta, ole hyvä ja poista manuaalisen "
+"osion hallinnan valinta."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:427
+msgid ""
+"Please do the following and then click Forward to finish installation:"
+msgstr ""
+"Tee seuraava ja napsauta sitten Eteen-painiketta päättääksesi asennuksen."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:428
+msgid ""
+"Create /target/etc/fstab for the filesystems as they will be mounted in your "
+"new system, matching those currently mounted at /target (without using the "
+"/target prefix in the mount paths themselves)."
+msgstr ""
+"Luo /target /etc /fstab  tiedostojärjestelmiin kun niitä asennetaan uuteen "
+"järjestelmään, yhteensovitus nykyisin asennettu / kohde (ilman / kohde "
+"liitetään itse)"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:429
+msgid ""
+"Install any packages that may be needed for first boot (mdadm, cryptsetup, "
+"dmraid, etc) by calling \"sudo chroot /target\" followed by the relevant apt-"
+"get/aptitude installations."
+msgstr ""
+"Asenna ensimmäistä käynnistyskertaa varten tarvittavat paketit (mdadm, "
+"cryptsetup, dmraid, jne) kutsumalla \"sudo chroot /target\" ja antamalla "
+"asiaankuuluvat apt-get/aptitude asennuskomennot."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:430
+msgid ""
+"Note that in order for update-initramfs to work properly in some cases (such "
+"as dm-crypt), you may need to have drives currently mounted using the same "
+"block device name as they appear in /target/etc/fstab."
+msgstr ""
+"Huom! Jotta update-initramfs toimisi oikein joissakin tapauksissa (kuten dm-"
+"crypt), sinun tarvitsee ehkä liittää levyt käyttäen samaa nimeä kuin "
+"/target/etc/fstab:ssa."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:431
+msgid ""
+"Double-check that your /target/etc/fstab is correct, matches what your new "
+"system will have at first boot, and matches what is currently mounted at "
+"/target."
+msgstr ""
+"Tarkista että /target/etc/fstab on kunnossa, vastaa sitä mitä uudessa "
+"järjestelmässäsi on liitettynä ensimmäisellä käynnistyskerralla ja vastaa "
+"sitä mitä tällä hetkellä on liitettynä /target:ssa."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:435
+msgid "Device"
+msgstr "Laite"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:436
+msgid "Type"
+msgstr "Tyyppi"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:437
+msgid "Operating system"
+msgstr "Käyttöjärjestelmä"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:438
+msgid "Mount point"
+msgstr "Liitoskohta"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:439
+msgid "Format as"
+msgstr "Alusta muotoon"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:440
+msgid "Size"
+msgstr "Koko"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:441
+#: usr/lib/live-installer/partitioning.py:338
+msgid "Free space"
+msgstr "Vapaa tila"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:467
+msgid "Quit?"
+msgstr "Lopeta?"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:467
+msgid "Are you sure you want to quit the installer?"
+msgstr "Haluatko varmasti lopettaa asennuksen?"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:686
+msgid "Passwords do not match."
+msgstr "Salasanat eivät vastaa toisiaan"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:689
+msgid "Passwords match."
+msgstr "Salasanat vastaavat toisiaan"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:714
+#: usr/lib/live-installer/frontend/gtk_interface.py:787
+#: usr/lib/live-installer/frontend/gtk_interface.py:800
+#: usr/lib/live-installer/frontend/gtk_interface.py:803
+#: usr/lib/live-installer/frontend/gtk_interface.py:813
+#: usr/lib/live-installer/frontend/gtk_interface.py:816
+#: usr/lib/live-installer/frontend/gtk_interface.py:821
+#: usr/lib/live-installer/frontend/gtk_interface.py:825
+#: usr/lib/live-installer/frontend/gtk_interface.py:829
+#: usr/lib/live-installer/partitioning.py:217
+msgid "Installation Tool"
+msgstr "Asennustyökalu"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:714
+msgid "Please choose a language"
+msgstr "Valitse kieli"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:754
+msgid "Please provide your full name."
+msgstr "Anna koko nimesi"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:757
+msgid "Please provide a username."
+msgstr "Anna käyttäjätunnus"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:760
+msgid "Please provide a password for your user account."
+msgstr "Anna käyttäjätilisi salasana"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:763
+msgid "Your passwords do not match."
+msgstr "Salasanasi eivät vastaa toisiaan"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:766
+msgid "Please provide a hostname."
+msgstr "Anna isäntänimi"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:771
+msgid "Your username must be lower case."
+msgstr "Käyttäjänimesi tulee kirjoittaa pienillä kirjaimilla."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:775
+msgid "Your username may not contain whitespace characters."
+msgstr "Käyttäjänimessäsi ei voi olla välejä kuvaavia merkkejä."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:780
+msgid "The hostname must be lower case."
+msgstr "Isäntänimesi tulee kirjoittaa pienillä kirjaimilla."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:784
+msgid "The hostname may not contain whitespace characters."
+msgstr "Isäntänimessä ei voi olla välejä kuvaavia merkkejä."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:800
+msgid ""
+"Please indicate a filesystem to format the root (/) partition with before "
+"proceeding."
+msgstr ""
+"Osoita valitsemasi tiedostojärjestelmä alustaaksesi root (/) osion ennen "
+"jatkamista."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:803
+msgid "Please select a root (/) partition."
+msgstr "Valitse root (/) osio."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:803
+msgid ""
+"A root partition is needed to install Linux Mint on.\n"
+"\n"
+" - Mount point: /\n"
+" - Recommended size: 30GB\n"
+" - Recommended filesystem format: ext4\n"
+" "
+msgstr ""
+"Root-osiota tarvitaan Linux Mint:in asentamiseksi.\n"
+"\n"
+" - Liitoskohta: /\n"
+" - Suositeltu koko: 30GB\n"
+" - Suositeltu tiedostojärjestelmän muoto: ext4\n"
+" "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:813
+msgid "The EFI partition is not bootable. Please edit the partition flags."
+msgstr "EFI-osio ei ole käynnistettävä. Muokkaa osion lippuja."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:816
+msgid "The EFI partition is too small. It must be at least 100MB."
+msgstr "EFI-osio on liian pieni. Sen täytyy olla vähintään 100Mt."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:821
+#: usr/lib/live-installer/frontend/gtk_interface.py:825
+msgid "The EFI partition must be formatted as vfat."
+msgstr "EFI-osio täytyy alustaa vfat-muotoon."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:829
+msgid "Please select an EFI partition."
+msgstr "Valitse EFI-osio."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:829
+msgid ""
+"An EFI system partition is needed with the following requirements:\n"
+"\n"
+" - Mount point: /boot/efi\n"
+" - Partition flags: Bootable\n"
+" - Size: Larger than 100MB\n"
+" - Format: vfat or fat32\n"
+"\n"
+"To ensure compatibility with Windows we recommend you use the first "
+"partition of the disk as the EFI system partition.\n"
+" "
+msgstr ""
+"EFI-järjestelmäosioon tarvitaan seuraavat vaatimukset:\n"
+"\n"
+"- Liitoskohta: /boot/efi\n"
+"- Osion liput: Käynnistettävä (Bootable)\n"
+"- Koko: Suurempi kuin 100Mt\n"
+"- Tiedostojärjestelmä: vfat tai fat32\n"
+"\n"
+"Suosittelemme, että käytät levyn ensimmäistä osiota EFI-järjestelmäosiona "
+"varmistaaksesi yhteensopivuuden Windowsin kanssa.\n"
+" "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:879
+msgid "Localization"
+msgstr "Lokalisaatio"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:880
+msgid "Language: "
+msgstr "Kieli: "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:881
+msgid "Timezone: "
+msgstr "Aikavyöhyke: "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:882
+msgid "Keyboard layout: "
+msgstr "Näppäimistöasettelu: "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:885
+msgid "User settings"
+msgstr "Käyttäjäasetukset"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:886
+msgid "Real name: "
+msgstr "Oikea nimi: "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:887
+msgid "Username: "
+msgstr "Käyttäjänimi: "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:888
+msgid "Automatic login: "
+msgstr "Automaattinen kirjautuminen: "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:888
+msgid "enabled"
+msgstr "käytössä"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:888
+msgid "disabled"
+msgstr "poistettu käytöstä"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:889
+msgid "System settings"
+msgstr "Järjestelmän asetukset"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:890
+msgid "Hostname: "
+msgstr "Konenimi: "
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:891
+msgid "Filesystem operations"
+msgstr "Tiedostojärjestelmätoiminnot"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:892
+#, python-format
+msgid "Install bootloader on %s"
+msgstr "Asenna käynnistyslataaja %s"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:892
+msgid "Do not install bootloader"
+msgstr "Älä asenna käynnistyslataajaa"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:894
+msgid "Use already-mounted /target."
+msgstr "Käytä valmiiksi-liitetty /target"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:898
+#, python-format
+msgid "Format %(path)s as %(filesystem)s"
+msgstr "Alusta %(path)s muotoon %(filesystem)s"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:901
+#, python-format
+msgid "Mount %(path)s as %(mount)s"
+msgstr "Liitä %(path)s kohtaan %(mount)s"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:933
+#: usr/lib/live-installer/frontend/gtk_interface.py:937
+#: usr/lib/live-installer/frontend/gtk_interface.py:957
+#: usr/lib/live-installer/frontend/gtk_interface.py:965
+msgid "Installation error"
+msgstr "Asennusvirhe"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:946
+msgid "Installation paused"
+msgstr "Asennus pysäytetty"
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:946
+msgid ""
+"The installation is now paused. Please read the instructions on the page "
+"carefully before clicking Forward to finish the installation."
+msgstr ""
+"Asennus on nyt pysäytetty. Lue tarkasti sivun ohjeet, ennen kuin jatkat "
+"napsauttamalla Eteen-painiketta päättääksesi asennuksen."
+
+#: usr/lib/live-installer/frontend/gtk_interface.py:967
+msgid ""
+"The installation is now complete. Do you want to restart your computer to "
+"use the new system?"
+msgstr ""
+"Asennus on nyt valmis. Haluatko käynnistää tietokoneesi uudestaan "
+"käyttääksesi uutta järjestelmää?"
+
+#: usr/lib/live-installer/partitioning.py:129
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: usr/lib/live-installer/partitioning.py:134
+msgid "Assign to /"
+msgstr "Liitä /"
+
+#: usr/lib/live-installer/partitioning.py:137
+msgid "Assign to /home"
+msgstr "Liitä /home"
+
+#: usr/lib/live-installer/partitioning.py:143
+msgid "Assign to /boot/efi"
+msgstr "Liitä /boot/efi"
+
+#: usr/lib/live-installer/partitioning.py:198
+msgid "B"
+msgstr "B"
+
+#: usr/lib/live-installer/partitioning.py:198
+#: usr/lib/live-installer/partitioning.py:303
+msgid "kB"
+msgstr "kB"
+
+#: usr/lib/live-installer/partitioning.py:198
+#: usr/lib/live-installer/partitioning.py:303
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/live-installer/partitioning.py:198
+#: usr/lib/live-installer/partitioning.py:303
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/live-installer/partitioning.py:198
+#: usr/lib/live-installer/partitioning.py:303
+msgid "TB"
+msgstr "TB"
+
+#: usr/lib/live-installer/partitioning.py:203
+msgid "Removable:"
+msgstr "Irrotettava:"
+
+#: usr/lib/live-installer/partitioning.py:218
+#, python-format
+msgid ""
+"No partition table was found on the hard drive: %s. Do you want the "
+"installer to create a set of partitions for you? Note: This will ERASE ALL "
+"DATA present on this disk."
+msgstr ""
+"Osiointitaulukkoa ei löytynyt tältä kiintoasemalta: %s. Tahdotko "
+"asennusohjelman suorittavan osioinnin puolestasi? Huomautus: tämä valinta "
+"POISTAA KAIKKI AIKAISEMMAT TIEDOSTOT jotka ovat tältä asemalta."
+
+#: usr/lib/live-installer/partitioning.py:336
+msgid "Logical partition"
+msgstr "Looginen osio"
+
+#: usr/lib/live-installer/partitioning.py:337
+msgid "Extended partition"
+msgstr "Laajennettu osio"
+
+#: usr/lib/live-installer/partitioning.py:341
+msgid "Unknown"
+msgstr "Tuntematon"
+
+#: usr/lib/live-installer/partitioning.py:436
+msgid "Edit partition"
+msgstr "Muokkaa osiota"
+
+#: usr/lib/live-installer/partitioning.py:437
+msgid "Device:"
+msgstr "Laite:"
+
+#: usr/lib/live-installer/partitioning.py:439
+msgid "Format as:"
+msgstr "Alusta muotoon:"
+
+#: usr/lib/live-installer/partitioning.py:440
+msgid "Mount point:"
+msgstr "Liitoskohta:"

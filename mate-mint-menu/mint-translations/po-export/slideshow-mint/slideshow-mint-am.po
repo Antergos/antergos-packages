@@ -1,0 +1,312 @@
+# Amharic translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-10-29 12:31+0000\n"
+"PO-Revision-Date: 2013-12-26 23:40+0000\n"
+"Last-Translator: samson <Unknown>\n"
+"Language-Team: Amharic <am@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:10+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/chat.html:1
+msgid "Stay connected"
+msgstr "እንደተገናኙ ይቆዩ"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/chat.html:8
+msgid ""
+"Keep in touch with your friends and contacts, by email, messenger or on your "
+"favorite social networks. Linux Mint provides all you need to interact with "
+"Twitter, Facebook, MSN, ICQ, GoogleTalk, AIM, Yahoo and many other networks."
+msgstr ""
+"ከጓደኞቾ ጋር ይገናኙ እንዲሁም ከሌሎች ጋር በኢሜይል ፤ በመሴንጀር ወይም በሚወዱት የሕብረተሰብ ኔትዎርክ ፤ ሊነክስ "
+"ሚንት ዝግጁ ነው ሊያገናኞት ከትዊተር ፤ ክፌስቡክ ፤ ክኤምኤስኤን ፤ ክአይሲኪው ፤ ክጉግልቶክ ፤ ክኤይም ፤ ክያሁ "
+"እንዲሁም ከሌሎች ኔትዎርኮች ጋር"
+
+#. type: Content of: <div><div><div><h2>
+#: slideshows/mint/slides/chat.html:12 slideshows/mint/slides/music.html:12
+#: slideshows/mint/slides/office.html:12 slideshows/mint/slides/photos.html:12
+#: slideshows/mint/slides/video.html:12 slideshows/mint/slides/web.html:12
+msgid "Included software"
+msgstr "የተካተቱ ሶፍትዌሮች"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:16
+msgid "Thunderbird"
+msgstr "ተንደር በርድ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:20
+msgid "Pidgin"
+msgstr "ፒጂን"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/chat.html:24
+msgid "Xchat"
+msgstr "ኤክስ ቻት"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/customize.html:1
+msgid "Customize your desktop"
+msgstr "ዴስክቶፕ መቀያየሪያ"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/customize.html:8
+msgid ""
+"Make yourself at home and modify any aspect of your desktop. Choose from a "
+"large variety of themes, icons and backgrounds. Linux Mint is open and easy "
+"to customize."
+msgstr ""
+"ዴስክቶፕን እንደ ቤትዎ ለእርስዎ እንደሚስማማ በማሻሻል ይቀያይሩ ፤ ከብዙ አይነት ምልክቶች እና መልኮች እንዲሁም መደቦች "
+"መካከል የሚስማማዎትን ይምረጡ ፤ ሊነክስ ሚንት ነጻ እና ግልጽ ነው እርስዎ እንደሚፈልጉት ለማሻሻል"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/help.html:1
+msgid "Find help"
+msgstr "እርዳታ ይፈልጉ"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/help.html:8
+msgid ""
+"If you're curious about something or if you're facing a problem, simply ask "
+"around. Linux Mint is the 4th most widely used operating system in the "
+"World. It comes with a user guide, a community website, a collection of "
+"tutorials, active forums and chat rooms and one of the most dynamic "
+"communities on the Internet."
+msgstr ""
+"ስለ አንድ ነገር ማወቅ ከፈለጉ ወይም ችግር ከገጠሞት ጥያቄዎትን ያቅርቡ ፤ ሊነክስ ሚንት በአለም አቀፍ ደረጃ 4ኛ ደረጃ "
+"ይዟል በተጠቃሚ ብዛት ፤ የተጠቃሚ መምሪያ አብሮት ይመጣል ፤ የሕብረተሰብ ዌብሳይቶች ፤ የተለያዩ ማስተማሪያዎች ፤ "
+"የውይይት ክፍሎች እንዲሁም ፎረሞች በኢንተርኔት ላይ የሚገኙ የህብረተሰቡ እርዳታ ክፍሎች ናቸው"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/music.html:1
+msgid "Listen to music and CDs"
+msgstr "ሙዚቃ እና ሲዲዎችን ያድምጡ"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/music.html:8
+msgid ""
+"Enjoy your music with Banshee. Plug-in your MP3 player or extract songs from "
+"your audio CDs. Listen to podcasts and online radios. Discover new artists "
+"on Last.fm, the Internet Archive and the Amazon MP3 Store."
+msgstr ""
+"ሙዚቃን በባንሺ ያድምጡ። ኤምፒ3 ማጫወቻዎን አገናኝተው ሙዚቃዎትን እንደሚፈልጉ ያሰናዱ። የተለያዩ ሬዲዮኖች በኢንተርኔት "
+"ያድምጡ። አዳዲስ ዘፋኞችን ከላስት ኤፍ ኤም ከኢንተርኔት ማህደሮች ከአማዞን ኤምፒ3 ሱቅ ያግኙ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/music.html:16
+msgid "Banshee"
+msgstr "ባንሺ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/music.html:20
+msgid "Audio codecs"
+msgstr "የድምጽ ኮዴክስ"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/office.html:1
+msgid "Be productive"
+msgstr "አምራች ይሁኑ"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/office.html:8
+msgid ""
+"Use LibreOffice to create professional documents, spreadsheets and "
+"presentations that are fully compatible with Microsoft Office. Share "
+"printers or access them remotely."
+msgstr ""
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:16
+msgid "LibreOffice"
+msgstr "ሊብሬ ቢሮ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:20
+msgid "Microsoft Office Support"
+msgstr "የ Microsoft Office ድጋፍ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/office.html:24
+msgid "PDF Support"
+msgstr "የ PDF ድጋፍ"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/photos.html:1
+msgid "Manage your photos"
+msgstr "ፎቶዎችን ማሰናጃ"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/photos.html:8
+msgid ""
+"Organize, enjoy and share your photos with gThumb or Picasa. Export your "
+"albums to CD, to the Web, or to online services such as Flickr or PicasaWeb "
+"to share them with friends and family."
+msgstr ""
+"ጂተምብ ወይም ፒካሳን በመጠቀም ፎቶዎችን ያደራጁ ወይም ያካፍሉ። የፎቶ አልበሞችን ወደ ሲዲ ወደ ድህረ ገጽ ወይም "
+"በኢንተርኔት ግልጋሎት ሰጪ እንደ ፍሊከር ወይም ፒካሳዌብ በመላክ ከቤተሰብ እና ከጓደኞች ጋር ይካፈሉ።"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/photos.html:16
+msgid "gThumb"
+msgstr "ጂተምብ"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/software.html:1
+msgid "Install software"
+msgstr "ሶፍትዌር መግጠሚያ"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/software.html:8
+msgid ""
+"Browse through 30,000 free applications from the Software Manager. Enjoy "
+"screenshots and user reviews. Install software with one click of the mouse."
+msgstr ""
+"በሶፍትዌር አስተዳዳሪ ከ 30,000 በላይ ነጻ መተግበሪያዎችን ይቃኙ ፤ ክለሳዎች እና ስክሪንሾት ይመልከቱ እና ገጥመው "
+"ይጠቀሙ"
+
+#. type: Content of: <div><div><div><h2>
+#: slideshows/mint/slides/software.html:12
+#: slideshows/mint/slides/windows.html:12
+msgid "Featured software"
+msgstr "የሶፍትዌር ገጽታ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:16
+msgid "Filezilla"
+msgstr "ፋይልዚላ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:20
+msgid "Skype"
+msgstr "ስካይፕ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:24
+msgid "Audacity"
+msgstr "ኦዳሲቲ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:28
+msgid "Picasa"
+msgstr "ፒካሳ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/software.html:32
+msgid "Google Earth"
+msgstr "ጉግል መሬት"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/updates.html:1
+msgid "Keep your system up to date"
+msgstr "ስርአቱን ዘመናዊ ያድርጉ"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/updates.html:8
+msgid ""
+"Receive fixes and security updates all in one place, for the entire system, "
+"including the software you install."
+msgstr ""
+"ጥገና እና የደህንነት ማሻሻያዎችን ሁሉንም ከአንድ ቦታ አውርደው ይግጠሙ ለስርአቱ እንዲሁም ለተገጠሙ ሶፍትዌሮች በሙሉ"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/video.html:1
+msgid "Watch videos and DVDs"
+msgstr "ቪዲዮ እና ዲቪዲ መመልከቻ"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/video.html:8
+msgid ""
+"Insert a DVD and enjoy a movie. Watch high-definition videos with VLC."
+msgstr "ዲቪዲ አስገብተው ሲኒማ ይመልከቱ ፤ በቪልሲ ማጫወቻ ሀይ-ዴፊንሽን ሲማዎችን ይመልከቱ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:16
+msgid "VLC"
+msgstr "ቪኤልሲ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:20
+msgid "Totem"
+msgstr "ቶተም"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/video.html:24
+msgid "Video codecs"
+msgstr "ቪዲዮ ኮዴክስ"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/web.html:1
+msgid "Browse the web"
+msgstr "ድርን መቃኛ"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/web.html:8
+msgid ""
+"Be fast and safe on the web with Mozilla Firefox. Enjoy Java, Flash and "
+"multimedia content."
+msgstr ""
+"በሞዚላ ፋየርፎክስ ዌብን በፍጥነት እና በደህንነት ይጎብኙ ፤ በጃቫ ፤ ፍላሽ እና መልቲሚዲያ ትእይንቶችን በማየት ይደሰቱ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:16
+msgid "Firefox"
+msgstr "ፋየርፎክስ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:20
+msgid "Flash"
+msgstr "ፍላሽ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/web.html:24
+msgid "Java"
+msgstr "ጃቫ"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/welcome.html:1
+msgid "Welcome to Linux Mint"
+msgstr "እንኳን ደህና መጡ ወደ ሊነክስ ሚንት"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/welcome.html:8
+msgid ""
+"Welcome and thank you for choosing Linux Mint. This slideshow will show you "
+"around while the system is being installed on your computer."
+msgstr ""
+"እንኳን ደህና መጡ ወደ ሊነክስ ሚንት ፤ ሊነክስ ሚንትን በመምረጥዎ እናመሰግናለን። ይህ ስላይድ ሾው ስርአቱ እስኪገጠም "
+"ድረስ የተለያዩ ነገሮችን ያስጎበኞታል"
+
+#. type: Content of: <div><h1>
+#: slideshows/mint/slides/windows.html:1
+msgid "Run Windows software"
+msgstr "የዊንዶው ሶፍትዌሮችን ያስኪዱ"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint/slides/windows.html:8
+msgid ""
+"Install Wine and run Windows software in Linux Mint. Or install Virtualbox, "
+"and run Windows itself within Linux Mint."
+msgstr ""
+"በሊነክስ ሚንት ውስጥ ዋይንን ገጥመው የዊንዶው ሶፍትዌርን ያስኪዱ ወይም ቪርችዩአል ቦክስን ገጥመው ዊንዶን በሊነክስ "
+"ሚንት ውስጥ ያስኪዱ"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/windows.html:16
+msgid "Wine"
+msgstr "ዋይን"
+
+#. type: Content of: <div><div><div><ul><li><p>
+#: slideshows/mint/slides/windows.html:20
+msgid "Virtualbox"
+msgstr "ቪርችዩአል ቦክስ"

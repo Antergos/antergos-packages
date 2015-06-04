@@ -1,0 +1,296 @@
+# Chinese (Traditional) translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-06-14 11:26+0300\n"
+"PO-Revision-Date: 2015-02-14 00:52+0000\n"
+"Last-Translator: Steven Liao <stevenliao0119@yahoo.com.tw>\n"
+"Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/01-welcome.html:1
+msgid "Welcome to Linux Mint"
+msgstr "歡迎使用 Linux Mint"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/01-welcome.html:8
+msgid ""
+"Welcome and thank you for choosing Linux Mint. This slideshow will show you "
+"around while the system is being installed on your computer."
+msgstr "歡迎! 感謝您選擇 Linux Mint。當系統安裝至您的電腦時，幻燈片放映會帶領您進⼊ Linux Mint 的世界。"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/02-web.html:1
+msgid "Browse the web"
+msgstr "瀏覽網路"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/02-web.html:8
+msgid ""
+"Be fast and safe on the web with Mozilla Firefox. Enjoy Java, Flash and "
+"multimedia content."
+msgstr "使用 Mozilla Firefox 瀏覽網站既快速又安全。盡情享受 Java，Flash，與多媒體內容。"
+
+#. type: Content of: <div><div><div>
+#: slideshows/mint-kde/slides/02-web.html:11
+#: slideshows/mint-kde/slides/03-music.html:12
+#: slideshows/mint-kde/slides/04-video.html:11
+#: slideshows/mint-kde/slides/05-photos.html:12
+#: slideshows/mint-kde/slides/06-chat.html:11
+#: slideshows/mint-kde/slides/07-office.html:12
+msgid "Included software"
+msgstr "內建軟體"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:14
+msgid "Firefox"
+msgstr "Firefox"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:16
+msgid "Flash"
+msgstr "Flash"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:18
+msgid "Java"
+msgstr "Java"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/03-music.html:1
+msgid "Listen to music and CDs"
+msgstr "聆聽音樂與 CD"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/03-music.html:8
+msgid ""
+"Enjoy your music with Amarok. Plug-in your MP3 player or extract songs from "
+"your audio CDs. Listen to podcasts and online radios. Discover new artists "
+"on Last.fm, Jamendo, Magnatune and Librivox."
+msgstr ""
+"使用 Amarok 享受您的音樂。插入您的 MP3 播放器或從您的音樂 CD 擷取歌曲。聆聽 Podcast 與網路電台。從 "
+"Last.fm，Jamendo，Magnatune 與 LibriVox 探索新藝人。"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/03-music.html:15
+msgid "Amarok"
+msgstr "Amarok"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/03-music.html:17
+msgid "Audio codecs"
+msgstr "音訊編解碼器"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/04-video.html:1
+msgid "Watch videos and DVDs"
+msgstr "觀賞影片與 DVD"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/04-video.html:8
+msgid ""
+"Insert a DVD and enjoy a movie. Watch high-definition videos with Kaffeine."
+msgstr "插入 DVD 並觀賞電影。使用 Kaffeine 觀賞高畫質影片。"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:14
+msgid "Kaffeine"
+msgstr "Kaffeine"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:16
+msgid "VLC"
+msgstr "VLC"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:18
+msgid "Video codecs"
+msgstr "視訊編解碼器"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/05-photos.html:1
+msgid "Manage your photos"
+msgstr "管理您的相片"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/05-photos.html:8
+msgid ""
+"Organize, enjoy and share your photos with digikam. Export your albums to "
+"CD, to the Web, or to online services such as Flickr or PicasaWeb to share "
+"them with friends and family."
+msgstr ""
+"使用 digikam 組織，欣賞，並分享您的相片。將您的相簿匯出至 CD，網路，或線上服務 (如 Flickr 或 PicasaWeb) "
+"來與朋友或家人分享。"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/05-photos.html:15
+msgid "Digikam"
+msgstr "Digikam"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/06-chat.html:1
+msgid "Stay connected"
+msgstr "保持聯絡"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/06-chat.html:8
+msgid ""
+"Keep in touch with your friends and contacts, by email, messenger or on your "
+"favorite social networks. Linux Mint provides all you need to interact with "
+"Twitter, Facebook, MSN, ICQ, GoogleTalk, AIM, Yahoo and many other networks."
+msgstr ""
+"用 email，通訊軟體，或在您喜歡的社群網站上與您的朋友和聯絡人保持連繫。Linux Mint 能滿足您在 "
+"Twitter，Facebook，MSN，ICQ，GoogleTalk，AIM，Yahoo，或其他網路上與他人互動的所有需求。"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:14
+msgid "Kmail"
+msgstr "Kmail"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:16
+msgid "Telepathy"
+msgstr "Telepathy"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:18
+msgid "Konversation"
+msgstr "Konversation"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/07-office.html:1
+msgid "Be productive"
+msgstr "保持生產力"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/07-office.html:8
+msgid ""
+"Use LibreOffice to create professional documents, spreadsheets and "
+"presentations that are fully compatible with Microsoft Office. Archive "
+"documents, emails, or web pages to PDF. Send and receive files with Giver on "
+"the local network. Share printers or access them remotely."
+msgstr "使用 LibreOffice 來建立與 Microsoft Office 完全相容的專業文件，試算表，與簡報。分享或遠端控制印表機。"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/07-office.html:15
+msgid "LibreOffice"
+msgstr "LibreOffice"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/07-office.html:17
+msgid "PDF Printer"
+msgstr "PDF 印表機"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/08-software.html:1
+msgid "Install software"
+msgstr "安裝軟體"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/08-software.html:8
+msgid ""
+"Browse through 50,000 free applications from the Software Manager. Enjoy "
+"screenshots and user reviews. Install software with one click of the mouse."
+msgstr "您可以在軟體管理員瀏覽超過 50,000 個免費的應用程式，並享受螢幕截圖與使用者評論。安裝軟體僅需點擊一下滑鼠。"
+
+#. type: Content of: <div><div><div>
+#: slideshows/mint-kde/slides/08-software.html:11
+#: slideshows/mint-kde/slides/09-windows.html:12
+msgid "Featured software"
+msgstr "精選軟體"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:14
+msgid "Filezilla"
+msgstr "Filezilla"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:16
+msgid "Skype"
+msgstr "Skype"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:18
+msgid "Inkscape"
+msgstr "Inkscape"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:20
+msgid "Google Earth"
+msgstr "Google Earth"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/09-windows.html:1
+msgid "Run Windows software"
+msgstr "執行 Windows 軟體"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/09-windows.html:8
+msgid ""
+"Install Wine and run Windows software in Linux Mint. Or install Virtualbox, "
+"and run Windows itself within Linux Mint."
+msgstr ""
+"安裝 Wine 並在 Linux Mint 執行 Windows 軟體。您也可以安裝 Virtualbox 以在 Linux Mint 執行 "
+"Windows。"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/09-windows.html:15
+msgid "Wine"
+msgstr "Wine"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/09-windows.html:17
+msgid "Virtualbox"
+msgstr "Virtulbox"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/10-customize.html:1
+msgid "Customize your desktop"
+msgstr "自訂您的桌面"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/10-customize.html:8
+msgid ""
+"Make yourself at home and modify any aspect of your desktop. Choose from a "
+"large variety of themes, icons and backgrounds. Linux Mint is open and easy "
+"to customize."
+msgstr "您可以調整桌面上的任何外觀，並從豐富多樣的佈景主題，圖示，與背景裡自由選擇。Linux Mint 是個開放且易於自訂的作業系統。"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/11-updates.html:1
+msgid "Keep your system up to date"
+msgstr "讓您的系統保持最新"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/11-updates.html:8
+msgid ""
+"Receive fixes and security updates all in one place, for the entire system, "
+"including the software you install."
+msgstr "在同一個地方接收整個系統 (包含您所安裝的軟體) 的修復與安全性更新。"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/12-help.html:1
+msgid "Find help"
+msgstr "尋求協助"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/12-help.html:8
+msgid ""
+"If you're curious about something or if you're facing a problem, simply ask "
+"around. Linux Mint is the 4th most widely used operating system in the "
+"World. It comes with a user guide, a community website, a collection of "
+"tutorials, active forums and chat rooms and one of the most dynamic "
+"communities on the Internet."
+msgstr ""
+"如果您有感到好奇的地方，或是遭遇到任何問題，請儘管發問。Linux Mint "
+"是市佔率世界第四的作業系統。它提供完善的使用者指南，社群網站，教學文庫，動態討論區，聊天室，與網際網路上最具活力的社群!"

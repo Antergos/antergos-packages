@@ -1,0 +1,194 @@
+# Nepali translation for linuxmint
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-09-19 10:09+0100\n"
+"PO-Revision-Date: 2014-03-12 09:07+0000\n"
+"Last-Translator: Niroj Bista <nirooj56@outlook.com>\n"
+"Language-Team: Nepali <ne@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:13+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: lib/mintstick.py:276 lib/mintstick.py:278
+msgid "The USB stick was formatted successfully."
+msgstr "USB सफलतापूर्वक ढाँचाबद्ध भऐको छ !"
+
+#: lib/mintstick.py:281
+#, python-format
+msgid "An error occured while creating a partition on %s."
+msgstr "%s मा विभाजन सिर्जना गर्दा त्रुटि भेटियो।"
+
+#: lib/mintstick.py:283 lib/mintstick.py:370
+msgid "Authentication Error."
+msgstr "प्रमाणीकरणको क्रममा त्रुटि"
+
+#: lib/mintstick.py:285 lib/mintstick.py:372
+msgid "An error occurred."
+msgstr "एउटा त्रुटि उत्पन्न भयो ।"
+
+#: lib/mintstick.py:302
+msgid "Image:"
+msgstr "चित्र:"
+
+#: lib/mintstick.py:303
+msgid "USB stick:"
+msgstr "USB:"
+
+#: lib/mintstick.py:328
+#, python-format
+msgid "Writing %(VAR_FILE)s to %(VAR_DEV)s"
+msgstr "%(VAR_FILE)s बाट %(VAR_DEV)s मा लेखिदै !"
+
+#: lib/mintstick.py:329
+#, python-format
+msgid "Starting copy from %(VAR_SOURCE)s to %(VAR_TARGET)s"
+msgstr "%(VAR_SOURCE)s देखि %(VAR_TARGET)s प्रतिलिपि शुरू"
+
+#: lib/mintstick.py:361 lib/mintstick.py:363
+msgid "The image was successfully written."
+msgstr "छवि सफलतापूर्वक लेखिएको थियो"
+
+#: lib/mintstick.py:366
+msgid "Not enough space on the USB stick."
+msgstr "यस USB मा पर्याप्त ठाउँ छैन"
+
+#: lib/mintstick.py:368
+msgid "An error occured while copying the image."
+msgstr "छवि प्रतिलिपि गर्दा त्रुटि देखापर्यो"
+
+#: generate_additional_files.py:49 generate_additional_files.py:61
+#: share/mintstick/mintstick.glade.h:28
+msgid "USB Image Writer"
+msgstr "USB छवि लेखक"
+
+#: generate_additional_files.py:49 generate_additional_files.py:61
+#: generate_additional_files.py:94
+msgid "Make a bootable USB stick"
+msgstr "बुटेवल USB बनाउनुहोस्"
+
+#: generate_additional_files.py:73 generate_additional_files.py:85
+#: share/mintstick/mintstick.glade.h:4
+msgid "USB Stick Formatter"
+msgstr "USB ढाँचाकर्ता"
+
+#: generate_additional_files.py:73 generate_additional_files.py:85
+#: generate_additional_files.py:104
+msgid "Format a USB stick"
+msgstr "USB ढाँचाबद्ध गर्नुहोस्"
+
+#: generate_additional_files.py:94
+msgid "Make bootable USB stick"
+msgstr "बुटेवल USB बनाउनुहोस्"
+
+#: generate_additional_files.py:104 share/mintstick/mintstick.glade.h:27
+msgid "Format"
+msgstr "ढाँचाबद्ध गर्नुहोस्"
+
+#: share/mintstick/mintstick.glade.h:1
+msgid " "
+msgstr " "
+
+#: share/mintstick/mintstick.glade.h:2
+msgid ""
+"This will destroy all data on the USB stick, are you sure you want to "
+"proceed?"
+msgstr "यो USB मा सबै डेटा नष्ट हुर्नेछ, के तपाईं प्रक्रिया गर्न चाहनुहुन्छ?"
+
+#: share/mintstick/mintstick.glade.h:3
+msgid ""
+"Something went wrong, please see the details window for the exact error."
+msgstr "केही गलत हुन गयो, सही त्रुटि लागि विवरणहरू सन्झ्याल हेर्नुहोस !"
+
+#: share/mintstick/mintstick.glade.h:5
+msgid "Format:"
+msgstr "ढाँचा:"
+
+#: share/mintstick/mintstick.glade.h:6
+msgid "Select a USB stick"
+msgstr "USB चयन गर्नुहोस्"
+
+#: share/mintstick/mintstick.glade.h:7
+msgid "as"
+msgstr "रूपमा"
+
+#: share/mintstick/mintstick.glade.h:8
+msgid ""
+"FAT32 \n"
+"   + Compatible everywhere.\n"
+"   -  Cannot handle files larger than 4GB.\n"
+"\n"
+"NTFS \n"
+"  + Compatible with Windows.\n"
+"   - Not compatible with Mac and most hardware devices.\n"
+"   - Occasional compatibility problems with Linux (NTFS is proprietary and "
+"reverse engineered).\n"
+"\n"
+"EXT4 \n"
+"\n"
+"  + Modern, stable, fast, journalized.\n"
+"  + Supports Linux file permissions.\n"
+"   - Not compatible with Windows, Mac and most hardware devices.\n"
+msgstr ""
+"FAT32\n"
+"+ जताततै मिल्ने !\n"
+"- 4GB भन्दा ठूलो फाइलहरु ह्यान्डल गर्न सकिदैन्\n"
+"\n"
+"NTFS\n"
+"+ Windows संग मिल्ने !\n"
+"- Mac र अधिकांश हार्डवेयर उपकरणहरुसंग मिल्दो छैन।\n"
+"- Linux संग समसामयिक अनुकूलता समस्या छ (NTFS स्वामित्व र उल्टो ईन्जिनियर "
+"छ)।\n"
+"\n"
+"EXT4\n"
+"\n"
+"+, आधुनिक स्थिर, छिटो, journalized।\n"
+"+ Linux फाइल अनुमति समर्थन गर्दछ\n"
+"- Windows, Mac र अधिकांश हार्डवेयर उपकरणहरुको मिल्दो छैन।\n"
+
+#: share/mintstick/mintstick.glade.h:23
+msgid "Volume label:"
+msgstr "भोल्युम लेबुल:"
+
+#: share/mintstick/mintstick.glade.h:24
+msgid "Choose a name for your USB Stick"
+msgstr "आफ्नो USB लागि एउटा नाम छान्नुहोस्"
+
+#: share/mintstick/mintstick.glade.h:25
+msgid "USB Stick"
+msgstr "USB"
+
+#: share/mintstick/mintstick.glade.h:26
+msgid "Details"
+msgstr "विवरणहरू"
+
+#: share/mintstick/mintstick.glade.h:29
+msgid "Write image:"
+msgstr "छवि लेख्नुहोस्"
+
+#: share/mintstick/mintstick.glade.h:30
+msgid "Select an image"
+msgstr "छवि चयन गर्नुहोस्"
+
+#: share/mintstick/mintstick.glade.h:31
+msgid "Select Image"
+msgstr "छवि चयन गर्नुहोस"
+
+#: share/mintstick/mintstick.glade.h:32
+msgid "to"
+msgstr "बाट"
+
+#: share/mintstick/mintstick.glade.h:33
+msgid "Write"
+msgstr "लेख्नुहोस्"
+
+#: share/mintstick/mintstick.glade.h:34
+msgid "The image was written successfully."
+msgstr "छवि सफलतापूर्वक लेखिएको थियो"

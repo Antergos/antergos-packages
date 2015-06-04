@@ -1,0 +1,546 @@
+# Irish translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-14 12:43+0100\n"
+"PO-Revision-Date: 2013-06-22 15:43+0000\n"
+"Last-Translator: Gearóid  Ó Maelearcaidh <gearoid@omaelearcaidh.com>\n"
+"Language-Team: Irish <ga@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:34
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:99
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:238
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:427
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:443
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:501
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:504
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:556
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:559
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:579
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:602
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:609
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1426
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1519
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1527
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1570
+msgid "Backup Tool"
+msgstr "Uirlís Cúltaca"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:35
+msgid "Make a backup of your home directory"
+msgstr "Déan cóíp cúltaca de d' chomhadlann bhaile"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:155
+msgid "Preserve structure"
+msgstr "Caomhnaigh structúr"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:157
+msgid ".tar file"
+msgstr "Comhad  .tar"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:158
+msgid ".tar.bz2 file"
+msgstr "Comhad  .tar.bz2"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:159
+msgid ".tar.gz file"
+msgstr "Comhad  .tar.gz"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:165
+msgid "Never"
+msgstr "Riamh"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:166
+msgid "Size mismatch"
+msgstr "Mímheaitseáil ar mhéid"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:167
+msgid "Modification time mismatch"
+msgstr "Mímheaitseáil ar mhionathrú ama"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:168
+msgid "Checksum mismatch"
+msgstr "Mímheaitseáil ar shuim sheiceála"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:169
+msgid "Always"
+msgstr "I gcónaí"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:191
+msgid "Excluded paths"
+msgstr "Cosáin eisiata"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:201
+msgid "Type"
+msgstr "Cineál"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:205
+msgid "Detail"
+msgstr "Mionsonra"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:211
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:220
+msgid "Path"
+msgstr "Cosán"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:214
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:223
+msgid "Error"
+msgstr "Earráid"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:255
+msgid "Store?"
+msgstr "Stóráil?"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:258
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:271
+msgid "Name"
+msgstr "Ainm"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:268
+msgid "Install"
+msgstr "Suiteáil"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:276
+msgid "Backup or Restore"
+msgstr "Cúltacaigh nó Tabhair ar ais"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:277
+msgid "Choose from the following options"
+msgstr "Roghnaigh idir na roghanna seo a leanas"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:279
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:295
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:309
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:316
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:320
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:325
+msgid "Backup files"
+msgstr "Comhaid chúltaca"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:280
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:329
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:339
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:345
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:350
+msgid "Restore files"
+msgstr "Tabhair ar ais comhaid"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:281
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:354
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:359
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:365
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:370
+msgid "Backup software selection"
+msgstr "Roghnú ar bhogearraí cúltaca"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:282
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:374
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:379
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:386
+msgid "Restore software selection"
+msgstr "Tabhair ar ais rogha ar bhogearraí"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:284
+msgid "Make a backup of your files"
+msgstr "Déan cúltaca de do chuid comhad"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:285
+msgid "Save the list of installed applications"
+msgstr "Sábháil liosta na bhfeidhmchlár atá suiteáilte"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:286
+msgid "Restore a previous backup"
+msgstr "Aischuir cúltaca déanta cheanna"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:287
+msgid "Restore previously installed applications"
+msgstr "Aischuir feidhmchláir suiteáilte cheanna"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:296
+msgid "Please select a source and a destination for your backup"
+msgstr "Roghnaigh foinse le d' thoil agus áit sprice do do chúltaca"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:297
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:333
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:341
+msgid "Source:"
+msgstr "Foinse:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:298
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:334
+msgid "Destination:"
+msgstr "Áit sprice:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:299
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:335
+msgid "Advanced options"
+msgstr "Ardroghanna"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:300
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:342
+msgid "Description:"
+msgstr "Cur Síos:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:301
+msgid "Output:"
+msgstr "Aschur:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:302
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:336
+msgid "Overwrite:"
+msgstr "Forscríobh:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:303
+msgid "Confirm integrity"
+msgstr "Deimhnigh sláine"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:304
+msgid "Follow symlinks"
+msgstr "Lean naisc shiombalacha"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:305
+msgid "Preserve permissions"
+msgstr "Caomhnaigh ceadanna"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:306
+msgid "Preserve timestamps"
+msgstr "Caomhnaigh stampaí ama"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:310
+msgid "Please select any files or directories you want to exclude"
+msgstr "Roghnaigh comhad ar bith nó comhadlann gur mhaith leat a eisiamh"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:311
+msgid "Exclude files"
+msgstr "Eisiaigh comhaid"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:312
+msgid "Exclude directories"
+msgstr "Eisiaigh comhadlanna"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:313
+msgid "Remove"
+msgstr "Bain"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:317
+msgid "Please review the information below before starting the backup"
+msgstr "Déan léirmheas ar an eolas thíos sula dtugtar faoin gcúltaca"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:321
+msgid "Please wait while your files are being backed up"
+msgstr "Fan fad is atá do chomhaid á gcúltacú"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:322
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:367
+msgid "Backing up:"
+msgstr "Á cúltacú:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:326
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:371
+msgid "The backup is now finished"
+msgstr "Tá an cúltaca críochnaithe anois"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:330
+msgid ""
+"Please choose the type of backup to restore, its location and a destination"
+msgstr ""
+"Roghnaigh an chineál cúltaca a bheas tugtha ar ais, a shuíomh is a áit spríce"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:331
+msgid "Archive"
+msgstr "Cuir i gcartlann"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:332
+msgid "Directory"
+msgstr "Comhadlann"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:340
+msgid "Please review the information below"
+msgstr "Déan léirmheas ar an eolas thíos le d' thoil"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:346
+msgid "Please wait while your files are being restored"
+msgstr "Fan fad is atá do chomhaid á aischur."
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:347
+msgid "Restoring:"
+msgstr "ag aischuir:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:351
+msgid "The restoration of the files is now finished"
+msgstr "Tá aischur na comhaid críochnaithe anois"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:355
+msgid "Please choose a destination"
+msgstr "Roghnaigh áit spríce"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:356
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:520
+msgid "Destination"
+msgstr "Áit sprice"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:360
+msgid "The list below shows the packages you added to Linux Mint"
+msgstr "Taispeantar sa liosta thíos na pacáistí a chur tú le Linux Mint"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:361
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:381
+msgid "Select all"
+msgstr "Roghnaigh gach rud"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:362
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:382
+msgid "Deselect all"
+msgstr "Díroghnaigh gach rud"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:366
+msgid "Please wait while your software selection is being backed up"
+msgstr "Fan fad is atá do rogha bogearraí á cúltacú le d' thoil"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:375
+msgid "Please select a saved software selection"
+msgstr "Roghnaigh rogha bogearraí a sábháileadh"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:376
+msgid "Software selection:"
+msgstr "Rogha bogearraí:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:380
+msgid "Select the packages you want to install"
+msgstr "Roghnaigh na pacáistí gur mhaith leat a shuiteáil"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:383
+msgid "Refresh"
+msgstr "Athnuaigh"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:387
+msgid "The restoration is now finished"
+msgstr "Tá an t-aischur críochnaithe anois"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:388
+msgid "Your package selection was restored succesfully"
+msgstr "D'éirigh le do rogha pácaiste a aischuir"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:436
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:452
+msgid "Invalid path"
+msgstr "Cosán neamhbhailí"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:436
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:452
+#, python-format
+msgid "%s is not located within your source directory. Not added."
+msgstr ""
+"Ní aimsítear %s laistigh do chomhadlann fhoinseach. Níor cuireadh lei."
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:501
+msgid "Please choose directories for the source and the destination"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:504
+msgid ""
+"Please choose different directories for the source and the destination"
+msgstr ""
+"Roghnaigh comhadlanna difriúla don fhoinse agus don áit spríce le d' thoil"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:519
+msgid "Source"
+msgstr "Foinse"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:522
+msgid "Description"
+msgstr "Cur Síos"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:526
+msgid "Compression"
+msgstr "Comhbhrú"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:530
+msgid "Overwrite destination files"
+msgstr "Forscríobh comhaid spríce"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:533
+msgid "Exclude"
+msgstr "Eisiaigh"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:556
+msgid "Please choose a file to restore from"
+msgstr "Roghnaigh comhad a aischuirfear le d' thoil"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:559
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:579
+msgid "Please choose a destination directory"
+msgstr "Roghnaigh comhadlann spríce le d' thoil"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:602
+msgid "No packages need to be installed at this time"
+msgstr "Níl gá le suiteáil pacáiste ar bith faoi láthair"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:609
+msgid "Please select one or more packages to install"
+msgstr "Roghnaigh pácáiste nó dhó le suiteáil le d' thoil"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:666
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:667
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1143
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1145
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1439
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1440
+msgid "Calculating..."
+msgstr "Á ríomh"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:716
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:756
+msgid "Skipping broken link"
+msgstr "Á scipeáil naisc briste"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:717
+msgid "Broken link"
+msgstr "Nasc briste"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:720
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:760
+msgid "Skipping link"
+msgstr "Á scipeáil naisc"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:784
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:793
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:802
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1204
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1215
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1228
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1293
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1302
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1312
+msgid "Skipping identical file"
+msgstr "Á scipeáil comhaid atá comhionann lena chéile"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:824
+#, python-format
+msgid ""
+"Warning: Some files were not saved, copied: %(current_file)d files out of "
+"%(total)d total"
+msgstr ""
+"Rabhadh: Níor sábhálfadh roinnt comhad, cóipeáladh: %(current_file)d comhaid "
+"de %(total)d iomlán"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:828
+msgid "An error occured during the backup"
+msgstr "Tharla earráid i rith an chúltaca"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:838
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1484
+msgid "The backup was aborted"
+msgstr "Cealaíodh an cúltaca"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:846
+msgid "The backup completed successfully"
+msgstr "Rinneadh an cúltaca gan fadhb"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:931
+msgid "Checksum Mismatch:"
+msgstr "Mímheaitseáil ar shuim sheiceála"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:932
+msgid "Checksum Mismatch"
+msgstr "Mímheaitseáil ar shuim sheiceála"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:982
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:984
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1011
+msgid "Calculating checksum"
+msgstr "Á ríomh suime seiceála"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1053
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1077
+msgid "(Not created with the Backup Tool)"
+msgstr "(Not created with the Backup Tool)"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1336
+#, python-format
+msgid ""
+"Warning: Some files were not restored, copied: %(current_file)d files out of "
+"%(total)d total"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1339
+msgid "An error occured during the restoration"
+msgstr "Tharla earráid fad is a bhí an t-aischur ar siúl"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1350
+msgid "The restoration was aborted"
+msgstr "Cealaíodh an t-aischur"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1358
+msgid "The restoration completed successfully"
+msgstr "D' éirigh go hiomlán leis an aischur"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1475
+msgid "An error occured during the backup:"
+msgstr "Tharla earráid fad is a bhí tabhairt ar ais ar siúl :"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1492
+msgid "Your software selection was backed up succesfully"
+msgstr "D'éirigh ar fad ar fad le do rogha bogearraí a chúltacú"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1519
+msgid "The specified file is not a valid software selection"
+msgstr "Ní rogha bhailí bhogearraí í an comhad atá luaite"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1527
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1570
+msgid "An error occurred while accessing the file"
+msgstr "Tharla earráid fad is a bhí rochtain ar an gcomhaid ar siúl"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1563
+msgid "Could not locate the package"
+msgstr "Niobh fhéidir an pacáiste a aimsiú"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1594
+msgid "Please wait, this can take some time"
+msgstr "Fan le d' thoil, d'fhéadfadh go dtógadh sé seo tamall maith"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1596
+msgid "The installation is complete"
+msgstr "Tá an suiteáil críochnaithe"
+
+#~ msgid "Cleaning up..."
+#~ msgstr "Á Ghlanadh..."
+
+#~ msgid "Read error"
+#~ msgstr "Earráid sa léamh"
+
+#~ msgid "Backup"
+#~ msgstr "Déan cúltaca"
+
+#~ msgid "Restore"
+#~ msgstr "Aischuir"
+
+#~ msgid "Hidden paths"
+#~ msgstr "Cosáin curtha i bhfolach"
+
+#~ msgid "View content"
+#~ msgstr "Amharc ar inneachar"
+
+#~ msgid "Backup successful"
+#~ msgstr "D' éirigh le cúltaca"
+
+#~ msgid "Included"
+#~ msgstr "Iniata"
+
+#~ msgid "Excluded Files and Directories"
+#~ msgstr "Comhaid is comhadlanna eisiata"
+
+#~ msgid "Exclude folders"
+#~ msgstr "Eisiaigh fillteáin"

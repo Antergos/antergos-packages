@@ -1,0 +1,55 @@
+# Gaelic; Scottish translation for linuxmint
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-03-31 16:29+0100\n"
+"PO-Revision-Date: 2014-11-06 18:08+0000\n"
+"Last-Translator: Akerbeltz <fios@akerbeltz.org>\n"
+"Language-Team: Gaelic; Scottish <gd@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/common/mint-which-launcher.py:9
+#: usr/lib/linuxmint/common/mint-which-launcher.py:11
+msgid "Please enter your password"
+msgstr "Cuir a-steach am facal-faire agad"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:36
+msgid "Please wait, this can take some time"
+msgstr "Fuirich ort, faodaidh gun doir seo greis"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:38
+msgid "Application removed successfully"
+msgstr "Chaidh an aplacaid a thoirt air falbh"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:57
+msgid ""
+"This menu item is not associated to any package. Do you want to remove it "
+"from the menu anyway?"
+msgstr ""
+"Chan eil ball a' chlàir-thaice seo co-cheangailte ri pacaid sam bith. A "
+"bheil thu airson a thoirt air falbh on chlàr-taice co-dhiù?"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:67
+msgid "The following packages will be removed:"
+msgstr "Thèid na pacaidean a leanas a thoirt air falbh:"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:71
+msgid "Packages to be removed"
+msgstr "Na pacaidean a thèid a thoirt air falbh"
+
+#: generate_additional_files.py:49
+msgid "Send by Email"
+msgstr "Cuir air a' phost-d"
+
+#: generate_additional_files.py:49
+msgid "Send as email attachment"
+msgstr "Cuir mar cheanglachan puist-d"

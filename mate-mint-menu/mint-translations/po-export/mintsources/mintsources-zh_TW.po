@@ -1,0 +1,335 @@
+# Chinese (Traditional) translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 10:14+0100\n"
+"PO-Revision-Date: 2015-02-14 01:13+0000\n"
+"Last-Translator: Steven Liao <stevenliao0119@yahoo.com.tw>\n"
+"Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:33
+msgid "Adding PPAs is not supported"
+msgstr "不支援加入 PPA"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:40
+#: usr/lib/linuxmint/mintSources/mintSources.py:881
+#, python-format
+msgid "Cannot add PPA: '%s'."
+msgstr "無法加入 PPA: 「%s」。"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:44
+msgid "Adding private PPAs is not supported currently"
+msgstr "目前不支援加入私人 PPA"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:47
+msgid "You are about to add the following PPA to your system:"
+msgstr "即將加入以下 PPA 至您的系統:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:50
+#, python-format
+msgid " More info: %s"
+msgstr " 更多資訊: %s"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:54
+msgid "Press [ENTER] to continue or ctrl-c to cancel adding it"
+msgstr "請按 [ENTER] 繼續，或按 Ctrl-C 來取消加入"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:58
+msgid "Unable to prompt for response.  Please run with -y"
+msgstr "無法提示回應。請加入參數 -y 後再執行。"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:257
+#: usr/lib/linuxmint/mintSources/mintSources.py:285
+msgid "Sources"
+msgstr "來源"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:263
+msgid "CD-ROM (Installation Disc)"
+msgstr "CD-ROM (安裝光碟)"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:304
+msgid ""
+"Linux Mint uses Romeo to publish packages which are not tested. Once these "
+"packages are tested, they are then moved to the official repositories. "
+"Unless you are participating in beta-testing, you should not enable this "
+"repository. Are you sure you want to enable Romeo?"
+msgstr ""
+"Linux Mint 使用 Romeo 來發表未經測試的套件。一旦這些套件經過測試，它們將會被移動到官方的套件庫。除非您參與 beta "
+"版本測試，您不應該啟用這個套件庫。 您是否確定要啟用 Romeo?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:310
+msgid ""
+"Backports are packages coming from newer Linux Mint releases. When backports "
+"are made available, the development team publishes an official announcement "
+"on http://blog.linuxmint.com. This announcement might include important "
+"information about the new features, design decisions or even known issues "
+"which relate to you. It is therefore strongly recommended to not enable "
+"backports until you have read this information. Are you sure you want to "
+"enable backports?"
+msgstr ""
+"向後移植套件，是從較新版本 Linux Mint 而來的套件。當向後移植套件對外開放時，開發團隊會在 http://blog.linuxmint.com "
+"發表官方公告。這個公告會包含新功能，設計決定，或已知問題等與您有關的重要資訊。 "
+"所以強烈建議在您詳細閱讀公告資訊之前，不要啟用向後移植套件。您是否確定要啟用向後移植套件?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:366
+msgid "Other..."
+msgstr "其他…"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:388
+msgid "Select a mirror"
+msgstr "選擇鏡像網站"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:400
+msgid "Country"
+msgstr "國家"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:405
+msgid "URL"
+msgstr "位址"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:410
+msgid "Speed"
+msgstr "速度"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:447
+#: usr/lib/linuxmint/mintSources/mintSources.py:456
+msgid "kB/s"
+msgstr "kB/s"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:450
+msgid "MB/s"
+msgstr "MB/s"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:453
+msgid "GB/s"
+msgstr "GB/s"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:540 generate_desktop_files:28
+#: generate_desktop_files:44
+msgid "Software Sources"
+msgstr "軟體來源"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:557
+msgid "Backported packages"
+msgstr "向後移植套件"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:559
+msgid "Unstable packages"
+msgstr "不穩定的套件"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:572
+#: usr/lib/linuxmint/mintSources/mintSources.py:1129
+msgid "No action required"
+msgstr "無需任何動作"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:574
+msgid "Official repositories"
+msgstr "官方軟體庫"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:575
+msgid "PPAs"
+msgstr "PPAs"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:576
+msgid "Additional repositories"
+msgstr "新軟體庫"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:577
+msgid "Authentication keys"
+msgstr "驗證金鑰"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:578
+msgid "Maintenance"
+msgstr "維護"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:580
+msgid "Mirrors"
+msgstr "鏡像網站"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:581
+msgid "Main"
+msgstr "主要"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:582
+msgid "Base"
+msgstr "基礎"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:583
+#: usr/lib/linuxmint/mintSources/mintSources.py:584
+msgid "Select a faster server..."
+msgstr "選擇更快的伺服器..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:586
+msgid "Optional components"
+msgstr "選擇性組件"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:587
+msgid "Source code"
+msgstr "原始碼"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:589
+msgid "Add a new PPA..."
+msgstr "加入新 PPA..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:590
+#: usr/lib/linuxmint/mintSources/mintSources.py:594
+msgid "Edit URL..."
+msgstr "編輯位址..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:591
+#: usr/lib/linuxmint/mintSources/mintSources.py:595
+#: usr/lib/linuxmint/mintSources/mintSources.py:599
+msgid "Remove permanently"
+msgstr "永久移除"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:593
+msgid "Add a new repository..."
+msgstr "加入新套件庫..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:597
+msgid "Import key file..."
+msgstr "匯入金鑰檔案..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:598
+msgid "Download a key..."
+msgstr "下載金鑰..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:601
+msgid "Fix MergeList problems"
+msgstr "修正 MergeList 問題"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:602
+msgid ""
+"If you experience MergeList problems, click this button to solve the problem."
+msgstr "如果遇到 MergeList 問題，點擊此按鍵以解決問題。"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:603
+msgid "Purge residual configuration"
+msgstr "清除殘餘的組態"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:604
+msgid ""
+"Packages sometimes leave configuration files on the system even after they "
+"are removed."
+msgstr "有時套件移除後仍會在系統留下組態檔案。"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:609
+msgid "Enable source code repositories"
+msgstr "啟用原始碼套件庫"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:619
+msgid ""
+"Warning: Backports and unstable packages can introduce regressions and "
+"negatively impact your system. Please do not enable these options in Linux "
+"Mint unless it was suggested by the development team."
+msgstr ""
+"警示: 向後移植套件與其他不穩定的套件可能會對您系統的穩定度與效能有負面的影響。除非開發團隊建議使用，請勿在 Linux Mint 啟用這些選項。"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:680
+#: usr/lib/linuxmint/mintSources/mintSources.py:704
+msgid "Enabled"
+msgstr "啟用"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:686
+msgid "PPA"
+msgstr "PPA"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:710
+msgid "Repository"
+msgstr "套件庫"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:726
+msgid "Key"
+msgstr "金鑰"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:739
+msgid "Restore the default settings"
+msgstr "還原至預設值"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:740
+msgid "Restore the official repositories to their default settings"
+msgstr "將官方套件庫還原至預設值"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:805
+msgid "There is no more residual configuration on the system."
+msgstr "系統已無殘餘的組態"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:811
+msgid "The problem was fixed. Please reload the cache."
+msgstr "問題已修正。請重新載入快取。"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:837
+msgid "Open.."
+msgstr "開啟.."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:853
+msgid ""
+"Please enter the 8 characters of the public key you want to download from "
+"keyserver.ubuntu.com:"
+msgstr "請輸入您想要從 keyserver.ubuntu.com 下載的 8 字元公用金鑰:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:866
+msgid "Are you sure you want to permanently remove this key?"
+msgstr "您是否確定要永久移除此金鑰?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:874
+msgid "Please enter the name of the PPA you want to add:"
+msgstr "請輸入您要加入的 PPA 名稱:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:925
+msgid "Edit the URL of the PPA"
+msgstr "編輯 PPA 的位址"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:935
+msgid "Are you sure you want to permanently remove this PPA?"
+msgstr "您是否確定要永久移除此 PPA?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:944
+msgid "Please enter the name of the repository you want to add:"
+msgstr "請輸入您要加入的套件庫名稱:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:963
+msgid "Edit the URL of the repository"
+msgstr "編輯套件庫的位址"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:973
+msgid "Are you sure you want to permanently remove this repository?"
+msgstr "您是否確定要永久移除此套件庫?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1123
+msgid "Update the cache"
+msgstr "更新快取"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1124
+msgid "Click here to update your APT cache with your new sources"
+msgstr "按這裡來用您的新來源更新您的 APT 快取"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1130
+msgid "Your APT cache is up to date"
+msgstr "您的 APT 快取已是最新"
+
+#: usr/bin/software-sources:9
+msgid "Please enter your password to configure the software sources"
+msgstr "請輸入您的密碼以設定軟體的來源組態"
+
+#: usr/bin/add-apt-repository:10
+msgid "Error: must run as root"
+msgstr "錯誤: 必須使用根帳號執行"
+
+#: usr/bin/add-apt-repository:21
+msgid "Error: need a repository as argument"
+msgstr "錯誤: 需要套件庫作為引數"
+
+#: generate_desktop_files:28 generate_desktop_files:44
+msgid "Configure the sources for installable software and updates"
+msgstr "設定可安裝軟體與更新的來源組態"

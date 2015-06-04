@@ -1,0 +1,207 @@
+# Ukrainian translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-08 10:39+0100\n"
+"PO-Revision-Date: 2015-05-15 10:28+0000\n"
+"Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Donations"
+msgstr "Пожертви"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:24 generate_desktop_files:58
+#: generate_desktop_files:72
+msgid "Welcome Screen"
+msgstr "Екран привітання"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:77
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did designing it. The links below will help you get started "
+"with your new operating system. Have a great time and don't hesitate to send "
+"us your feedback."
+msgstr ""
+"Ласкаво просимо і дякуємо Вам за вибір Linux Mint. Сподіваємося, Вам "
+"сподобається користуватися цією ОС так само, як і нам сподобалося її "
+"розробляти. Наведені нижче посилання дадуть Вам змогу розпочати роботу з "
+"новою операційною системою. Добре проведіть час, і не соромтеся надсилати "
+"нам свої відгуки."
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "New features"
+msgstr "Нові можливості"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "See what is new in this release"
+msgstr "Подивіться, що нового у цьому випуску"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid "Important information"
+msgstr "Важлива інформація"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid ""
+"Find out about important information, limitations, known issues and their "
+"solution"
+msgstr ""
+"Взнайте більше про важливу інформацію, обмеження, знайдені проблеми і їх "
+"вирішення"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "User guide (PDF)"
+msgstr "Посібник користувача (PDF)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "Learn all the basics to get started with Linux Mint"
+msgstr "Дізнайтеся про основи, щоб почати роботу з Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data"
+msgstr "Відновлення даних"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data or applications from a previous installation"
+msgstr "Відновлення даних або додатків з попереднього встановлення"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Software manager"
+msgstr "Менеджер проґрамного забезпечення"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Install additional software"
+msgstr "Встановлення додаткових проґрам"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat room"
+msgstr "Балачка"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat live with other users in the chat room"
+msgstr "Спілкуйтеся з іншими користувачами у балачці"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Forums"
+msgstr "Форуми"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Seek help from other users in the Linux Mint forums"
+msgstr "Зверніться по допомогу до інших користувачів Linux Mint на форумах"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Tutorials"
+msgstr "Настанови"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Find tutorials about Linux Mint"
+msgstr "Знайдіть підручники про Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid "Hardware database"
+msgstr "База даних апаратного забезпечення"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid ""
+"Find hardware that is compatible with Linux, or information about your "
+"hardware"
+msgstr ""
+"Знайдіть обладнання, сумісне з Linux, або інформацію про ваше обладнання"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Idea pool"
+msgstr "Ідеї"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Submit new ideas to the development team"
+msgstr "Надайте нові ідеї команді розробників"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Get involved"
+msgstr "Приєднуйтеся"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Find out how to get involved in the Linux Mint project"
+msgstr "Дізнайтеся, як взяти участь у проєкті Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Make a donation to the Linux Mint project"
+msgstr "Зробіть пожертву для проєкту Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Sponsors"
+msgstr "Спонсори"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Apply to become a Linux Mint sponsor"
+msgstr "Застосуйте щоб стати спонсором  Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:140
+msgid "Show this dialog at startup"
+msgstr "Показувати цей діялоґ під час запуску"
+
+#: generate_desktop_files:58 generate_desktop_files:72
+msgid "Introduction to Linux Mint"
+msgstr "Знайомство з Linux Mint"
+
+#: generate_desktop_files:86
+msgid "Install Multimedia Codecs"
+msgstr "Встановити мультимедійні кодеки"
+
+#: generate_desktop_files:86
+msgid "Add all the missing multimedia codecs"
+msgstr "Додати відсутні мультимедійні кодеки"
+
+#~ msgid "Connect to the chat room"
+#~ msgstr "Під'єднатись до чату"
+
+#~ msgid "Download the user guide (PDF)"
+#~ msgstr "Завантажити посібник користувача (PDF)"
+
+#~ msgid "Read the release notes"
+#~ msgstr "Прочитати зауваження до випуску"
+
+#~ msgid "Visit the forums"
+#~ msgstr "Відвідати форуми"
+
+#~ msgid "Contribute to Linux Mint"
+#~ msgstr "Зробити внесок в розвиток Linux Mint"
+
+#~ msgid "Browse the list of new features"
+#~ msgstr "Перегляньте список нових можливостей"
+
+#~ msgid ""
+#~ "Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+#~ "as much as we did making it. Please make yourself familiar with the new "
+#~ "features and the documentation and don't hesitate to send us your feedback."
+#~ msgstr ""
+#~ "Ласкаво просимо та дякуємо Вам за вибір Linux Mint. Ми сподіваємось, Вам "
+#~ "сподобається його використовувати так само, як нам подобалось його робити. "
+#~ "Будьте ласкаві, познайомтесь з новими функціями і документацію та не "
+#~ "соромтесь надсилати нам свої відгуки."
+
+#, python-format
+#~ msgid "Discover %s"
+#~ msgstr "Відкрийте для себе %s"
+
+#~ msgid "Find help"
+#~ msgstr "Отримайте допомогу"
+
+#~ msgid "Welcome to Linux Mint"
+#~ msgstr "Ласкаво просимо до Linux Mint"
+
+#~ msgid "Make a donation"
+#~ msgstr "Зробити пожертву"
+
+#~ msgid "Become a sponsor"
+#~ msgstr "Стати спонсором"

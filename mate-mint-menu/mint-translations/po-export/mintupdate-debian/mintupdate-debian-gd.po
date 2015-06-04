@@ -1,0 +1,542 @@
+# Gaelic; Scottish translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# alasdair caimbeul <alexd@garrit.freeserve.co.uk>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-07-05 16:11+0100\n"
+"PO-Revision-Date: 2014-11-07 14:32+0000\n"
+"Last-Translator: Akerbeltz <fios@akerbeltz.org>\n"
+"Language-Team: Sgioba na gàidhlig\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:10+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+"Language: gd\n"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:62
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:740
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:940
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1058
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1114
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1224
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1242
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1244
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1501
+msgid "Update Manager"
+msgstr "Manaidsear nan ùrachaidhean"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:63
+msgid "Software Updates"
+msgstr "Ùrachaidhean bathair-bhog"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:64
+msgid "Show and install available updates"
+msgstr "Seall agus stàlaich ùrachaidhean a tha ri làimh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:92
+msgid "Downloading changelog..."
+msgstr "A' luchdadh a-nuas loga nan atharraichean..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:118
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:129
+msgid "No changelog available"
+msgstr "Chan eil loga nan atharraichean ri fhaighinn"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:129
+msgid ""
+"Click on Edit->Software Sources and tick the 'Source code' option to enable "
+"access to the changelogs"
+msgstr ""
+"Briog air Deasaich -> Tùsan a' bhathair-bhog agus cuir cromag ris an "
+"roghainn \"Bun-tùs a' chòd\" gus greim fhaighinn air logaichean nan "
+"atharrachaichean"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:242
+msgid "This upgrade will trigger additional changes"
+msgstr "Dùisgidh an t-ùrachadh seo atharraichean a bharrachd"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:251
+msgid "The following package will be removed:"
+msgstr "Thèid a' phacaid a leanas a thoirt air falbh:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:253
+#, python-format
+msgid "The following %d packages will be removed:"
+msgstr "Thèid na %d pacaidean a leanas a thoirt air falbh:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:281
+msgid "The following package will be installed:"
+msgstr "Thèid a' phacaid a leanas a stàladh:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:283
+#, python-format
+msgid "The following %d packages will be installed:"
+msgstr "Thèid na %d pacaidean a leanas a stàladh:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:324
+msgid "Installing updates"
+msgstr "A' stàladh nan ùrachaidhean"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:334
+msgid "Please wait, this can take some time"
+msgstr "Fuirich ort, faodaidh gun doir seo greis"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:336
+msgid "Update is complete"
+msgstr "Chaidh an t-ùrachadh a choileanadh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:366
+msgid "Please enter your password to restart the update manager"
+msgstr ""
+"Cuir a-steach am facal-faire agad gus manaidsear nan ùrachaidhean ath-"
+"thòiseachadh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:371
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:438
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1495
+msgid "Checking for updates"
+msgstr "A' toirt sùil airson ùrachaidhean"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:395
+msgid "Could not install the security updates"
+msgstr "Cha b' urrainn dhuinn na h-ùrachaidhean tèarainteachd a stàladh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:427
+msgid "Starting refresh..."
+msgstr "A' tòiseachadh air an ath-nuadhachadh..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:460
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:461
+msgid "Another application is using APT"
+msgstr "Tha aplacaid eile a' cleachdadh APT"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:471
+msgid "Finding the list of updates..."
+msgstr "A' lorg liosta nan ùrachaidhean..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:501
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:502
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:609
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:610
+msgid "Your system is up to date"
+msgstr "Tha an siostam agad cho ùr 's a ghabhas"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:514
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:515
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:632
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:636
+msgid "Could not refresh the list of packages"
+msgstr "Cha b' urrainn dhuinn liosta nam pacaidean ath-nuadhachadh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:580
+msgid "A new version of the update manager is available"
+msgstr "Tha tionndadh ùr de mhanaidsear nan ùrachaidhean ri fhaighinn"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:590
+#, python-format
+msgid "1 recommended update available (%(size)s)"
+msgstr "Tha ùrachadh a mholamaid ri fhaidhinn (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:592
+#, python-format
+msgid "1 recommended update available (%(size)s), 1 ignored"
+msgstr ""
+"Tha ùrachadh a mholamaid ri fhaidhinn (%(size)s), aonan air a leigeil seachad"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:594
+#, python-format
+msgid "1 recommended update available (%(size)s), %(ignored)d ignored"
+msgstr ""
+"Tha ùrachadh a mholamaid ri fhaidhinn (%(size)s), %(ignored)d air a leigeil "
+"seachad"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:597
+#, python-format
+msgid "%(recommended)d recommended updates available (%(size)s)"
+msgstr "Tha %(recommended)d ùrachaidhean a mholamaid ri fhaighinn (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:599
+#, python-format
+msgid "%(recommended)d recommended updates available (%(size)s), 1 ignored"
+msgstr ""
+"Tha %(recommended)d ùrachaidhean a mholamaid ri fhaighinn (%(size)s), aonan "
+"air a leigeil seachad"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:601
+#, python-format
+msgid ""
+"%(recommended)d recommended updates available (%(size)s), %(ignored)d ignored"
+msgstr ""
+"Tha %(recommended)d ùrachaidhean a mholamaid ri fhaighinn (%(size)s), "
+"%(ignored)d air a leigeil seachad"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:671
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:690
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1395
+msgid "No updates selected"
+msgstr "Cha deach ùrachadh sam bith a thaghadh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:692
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1397
+#, python-format
+msgid "%(selected)d update selected (%(size)s)"
+msgstr "Thagh thu %(selected)d ùrachadh (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:694
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1399
+#, python-format
+msgid "%(selected)d updates selected (%(size)s)"
+msgstr "Thagh thu %(selected)d ùrachaidhean (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:940
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1618
+msgid "Preferences"
+msgstr "Roghainnean"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:942
+msgid "Auto-Refresh"
+msgstr "Ath-nuadhachadh fèin-obrachail"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:943
+msgid "Refresh the list of updates every:"
+msgstr "Ath-nuadhaich liosta nan ùrachaidhean gach:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:944
+msgid ""
+"Note: The list only gets refreshed while the update manager window is closed "
+"(system tray mode)."
+msgstr ""
+"An aire: Cha dèid an liosta ath-nuadhachadh ach ma bhios uinneag manaidsear "
+"nan ùrachaidhean dùinte (modh treidhe an t-siostaim)."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:946
+msgid "Update Method"
+msgstr "An dòigh ùrachaidh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:947
+msgid "Icons"
+msgstr "Ìomhaigheagan"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:948
+msgid "Icon"
+msgstr "Ìomhaigheag"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:949
+msgid "Status"
+msgstr "Staid"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:950
+msgid "New Icon"
+msgstr "Ìomhaigheag ùr"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:951
+msgid "Busy"
+msgstr "Trang"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:952
+msgid "System up-to-date"
+msgstr "Tha an siostam cho ùr 's a ghabhas"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:953
+msgid "Updates available"
+msgstr "Tha ùrachaidhean ri fhaighinn"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:954
+msgid "Error"
+msgstr "Mearachd"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:955
+msgid "Unknown state"
+msgstr "Staid neo-aithnichte"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:956
+msgid "Applying updates"
+msgstr "A' cur an sàs nan ùrachaidhean"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:957
+msgid "Startup delay (in seconds):"
+msgstr "An dàil air an tòiseachadh (ann an diogan):"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:958
+msgid "Internet check (domain name or IP address):"
+msgstr "Sgrùdadh eadar-lìn (ainm na h-àrainn no seòladh IP):"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:959
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:999
+msgid "Ignored packages"
+msgstr "Pacaidean a chaidh a leigeil seachad"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:961
+msgid ""
+"Include updates which require the installation or the removal of other "
+"packages"
+msgstr ""
+"Gabh a-staigh ùrachaidhean a dh'iarras orm pacaidean eile a stàladh no a "
+"thoirt air falbh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:977
+msgid "minutes"
+msgstr "mionaid(ean)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:978
+msgid "hours"
+msgstr "uair(ean) a thìde"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:979
+msgid "days"
+msgstr "là(ithean)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1025
+msgid "Please enter a package name:"
+msgstr "Cuir a-steach ainm pacaid:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1026
+msgid "Ignore a package"
+msgstr "Leig seachad pacaid"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1030
+msgid "Package name:"
+msgstr "Ainm na pacaid:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1032
+msgid "All available upgrades for this package will be ignored."
+msgstr "Thèid ùrachadh sam bith dhan phacaid seo a leigeil seachad."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1058
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1632
+msgid "History of updates"
+msgstr "Eachdraidh nan ùrachaidhean"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1061
+msgid "Date"
+msgstr "Ceann-là"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1064
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1529
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1642
+msgid "Package"
+msgstr "Pacaid"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1067
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1533
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1648
+msgid "Old version"
+msgstr "Seann-tionndadh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1070
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1537
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1654
+msgid "New version"
+msgstr "Tionndadh ùr"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1114
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1590
+msgid "Update Pack Info"
+msgstr "Fiosrachadh air ùrachadh na pacaid"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1117
+msgid "Your system configuration:"
+msgstr "Rèiteachadh an t-siostaim agad:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1118
+msgid "Current Update Pack available:"
+msgstr "A' phacaid ùrachaidhean a tha ri làimh an-dràsta:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1119
+msgid "Latest Update Pack used by this system:"
+msgstr "A' phacaid ùrachaidhean as ùire a chleachdas an siostam seo:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1122
+msgid "Could not identify your APT sources"
+msgstr "Cha b' urrainn dhuinn na tùsan APT agad fhiosrachadh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1123
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1124
+msgid "N/A"
+msgstr "Chan eil gin"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1160
+msgid "Your system is pointing to ftp.debian.org and debian.linuxmint.com"
+msgstr ""
+"Tha an siostam agad a' tomhad ri ftp.debian.org agus debian.linuxmint.com"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1160
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1164
+msgid "These repositories conflict with each others"
+msgstr "Tha na h-ionadan-tasgaidh ann an còmhstri"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1164
+msgid ""
+"Your system is pointing to debian.linuxmint.com/latest and "
+"debian.linuxmint.com/incoming"
+msgstr ""
+"Tha an siostam agad a' tomhadh ri debian.linuxmint.com/latest agus "
+"debian.linuxmint.com/incoming"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1168
+msgid "Your system is not pointing to the Linux Mint repositories"
+msgstr "Chan eil an siostam agad a' tomhadh ri ionadan-tasgaidh Linux Mint"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1168
+msgid ""
+"Add 'deb http://packages.linuxmint.com/ debian main upstream import' to your "
+"APT sources"
+msgstr ""
+"Cuir \"deb http://packages.linuxmint.com/ debian main upstream import\" ris "
+"na tùsan APT agad"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1172
+msgid "Your system is not pointing to any Debian repository"
+msgstr "Chan eil an siostam agad a' tomhadh ri ionad-tasgaidh sam bith"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1172
+msgid ""
+"Add 'deb http://debian.linuxmint.com/latest testing main contrib non-free' "
+"to your APT sources"
+msgstr ""
+"Cuir \"deb http://debian.linuxmint.com/latest testing main contrib non-"
+"free\" ris na tùsan APT agad"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1176
+msgid "Your system is pointing directly to Debian"
+msgstr "Tha an siostam agad a' tomhad ri Debian fhèin"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1176
+msgid "This is only recommended for experienced users"
+msgstr "Cha mholamaid seo ach do shàr-chleachdaichean"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1179
+msgid ""
+"Your system is pointing to the 'Linux Mint Debian Incoming' repository"
+msgstr ""
+"Tha an siostam agad a' tomhadh ris an ionad-tasgaidh \"Linux Mint Debian "
+"Incoming\""
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1179
+msgid "This is only recommend for experienced users"
+msgstr "Cha mholamaid seo ach do shàr-chleachdaichean"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1182
+msgid "Your system is pointing to the 'Linux Mint Debian Latest' repository"
+msgstr ""
+"Tha an siostam agad a' tomhadh ris an ionad-tasgaidh \"Linux Mint Debian "
+"Latest\""
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1224
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1227
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1635
+msgid "Information"
+msgstr "Fiosrachadh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1228
+msgid "Log file"
+msgstr "Faidhle an loga"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1229
+msgid "Permissions:"
+msgstr "Ceadan:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1230
+msgid "Process ID:"
+msgstr "ID a' phròiseis:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1231
+msgid "Log file:"
+msgstr "Faidhle an loga:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1242
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1674
+msgid "About"
+msgstr "Mu dhèidhinn"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1323
+msgid "Please enter your password to start the update manager"
+msgstr ""
+"Cuir a-steach am facal-faire agad gus manaidsear nan ùrachaidhean a "
+"thòiseachadh"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1402
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1404
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1406
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1408
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1427
+msgid "Ignore updates for this package"
+msgstr "Leig seachad ùrachaidhean na pacaide seo"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1524
+msgid "Upgrade"
+msgstr "Àrdaich"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1541
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1660
+msgid "Size"
+msgstr "Meud"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1591
+msgid "Install Updates"
+msgstr "Stàlaich na h-ùrachaidhean"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1592
+msgid "Refresh"
+msgstr "Ath-nuadhaich"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1593
+msgid "Select All"
+msgstr "Tagh na h-uile"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1594
+msgid "Clear"
+msgstr "Falamhaich"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1595
+msgid "Description"
+msgstr "Tuairisgeul"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1596
+msgid "Changelog"
+msgstr "Loga nan atharraichean"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1606
+msgid "_File"
+msgstr "_Faidhle"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1610
+msgid "Close"
+msgstr "Dùin"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1614
+msgid "_Edit"
+msgstr "_Deasaich"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1624
+msgid "Software sources"
+msgstr "Tùsan bathair-bhog"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1628
+msgid "_View"
+msgstr "_Seall"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1638
+msgid "Visible columns"
+msgstr "Colbhan a chithear"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1670
+msgid "_Help"
+msgstr "_Cobhair"

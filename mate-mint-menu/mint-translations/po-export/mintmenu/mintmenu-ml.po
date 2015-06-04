@@ -1,0 +1,615 @@
+# Malayalam translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-27 15:05+0300\n"
+"PO-Revision-Date: 2012-11-09 23:10+0000\n"
+"Last-Translator: praveenp <Unknown>\n"
+"Language-Team: Malayalam <ml@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:48
+msgid "Menu"
+msgstr "മെനു"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:256
+msgid "Couldn't load plugin:"
+msgstr "പ്ലഗിന്‍ ലോഡ് ചെയ്യാന്‍ കഴിഞ്ഞില്ല:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:328
+msgid "Couldn't initialize plugin"
+msgstr "പ്ലുഗിന്‍ ഇനിഷ്യലൈസ് ചെയ്യാന്‍ കഴിഞ്ഞില്ല"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:731
+msgid "Advanced MATE Menu"
+msgstr ""
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:818
+msgid "Preferences"
+msgstr "മുന്‍ഗണനകള്‍"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:821
+msgid "Edit menu"
+msgstr "മെനു തിരുത്തുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:824
+msgid "Reload plugins"
+msgstr "പ്ലഗിനുകൾ വീണ്ടും എടുക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenu.py:827
+msgid "About"
+msgstr "വിവരണം"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:42
+msgid "Menu preferences"
+msgstr "മെനു മുന്‍ഗണന"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:45
+msgid "Always start with favorites pane"
+msgstr "എപ്പോഴും പ്രിയപ്പെട്ടവ ഉള്‍പ്പെടുന്ന പാളി ദ്രിശ്യമാം വിധം ആരംഭിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:46
+msgid "Show button icon"
+msgstr "ബട്ടണ്‍ ഐക്കണ്‍ കാണിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:47
+msgid "Use custom colors"
+msgstr "ഇശ്ചാനുസരണമുള്ള നിറങ്ങള്‍ ഉപയോഗിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:48
+msgid "Show recent documents plugin"
+msgstr "സമീപകാല പ്രമാണങ്ങൾ പ്ലഗിൻ പ്രദർശിപ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:49
+msgid "Show applications plugin"
+msgstr "ആപ്ലിക്കേഷൻസ് പ്ലഗിൻ പ്രദർശിപ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:50
+msgid "Show system plugin"
+msgstr "സിസ്റ്റം പ്ലഗിൻ പ്രദർശിപ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:51
+msgid "Show places plugin"
+msgstr "സ്ഥാനങ്ങൾ പ്ലഗിൻ പ്രദർശിപ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:53
+msgid "Show application comments"
+msgstr "ആപ്പ്ലിക്കെഷനെ കുറിച്ചുള്ള അഭിപ്രായങ്ങള്‍ കാണിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:54
+msgid "Show category icons"
+msgstr "വര്‍ഗ്ഗങ്ങളുടെ ഐക്കണുകള്‍ കാണിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:55
+msgid "Hover"
+msgstr "വട്ടമിട്ട് പറക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:56
+msgid "Remember the last category or search"
+msgstr ""
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:57
+msgid "Search for packages to install"
+msgstr "ഇൻസ്റ്റോൾ ചെയ്യാനുള്ള പാക്കേജുകൾ തിരയുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:58
+msgid "Swap name and generic name"
+msgstr "നാമവും, സാമാന്യ നാമവും കൈമാറുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:60
+msgid "Border width:"
+msgstr "അതിരിന്റെ വലുപ്പം:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:61
+msgid "pixels"
+msgstr "പിക്സലുകള്‍"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:63
+msgid "Opacity:"
+msgstr "ഒപാസിറ്റി"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:66
+msgid "Button text:"
+msgstr "ബട്ടണ്‍ പദാവലി:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:67
+msgid "Options"
+msgstr "ഐച്ഛികങ്ങള്‍"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:68
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:251
+msgid "Applications"
+msgstr "ആപ്ലിക്കേഷനുകള്‍"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:70
+msgid "Theme"
+msgstr "ദൃശ്യരൂപം"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:71
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:248
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:249
+msgid "Favorites"
+msgstr "പ്രിയപ്പെട്ടവ"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:72
+msgid "Main button"
+msgstr "പ്രധാന ബട്ടണ്‍"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:73
+msgid "Plugins"
+msgstr ""
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:75
+msgid "Background:"
+msgstr "പശ്ചാത്തലം:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:76
+msgid "Headings:"
+msgstr "മുഖവുര:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:77
+msgid "Borders:"
+msgstr "അതിരുകള്‍:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:78
+msgid "Theme:"
+msgstr "ദൃശ്യരൂപം:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:82
+msgid "Number of columns:"
+msgstr "നിരകളുടെ എണ്ണം:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:83
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:84
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:85
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:86
+msgid "Icon size:"
+msgstr "ചിഹ്നത്തിന്റെ വലിപ്പം:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:87
+msgid "Hover delay (ms):"
+msgstr "വട്ടമിട്ട് പറക്കുന്നതിന്റെ കാലവിളംബം (ms):"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:88
+msgid "Button icon:"
+msgstr "ബട്ടണ്‍ ഐക്കണ്‍:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:89
+msgid "Search command:"
+msgstr "അന്വേഷണത്തിനുള്ള ആജ്ജ:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:91
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:44
+msgid "Places"
+msgstr "സ്ഥലങ്ങള്‍"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:92
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:104
+msgid "Allow Scrollbar"
+msgstr "സ്ക്രോള്‍ബാര്‍ അനുവദിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:93
+msgid "Show GTK Bookmarks"
+msgstr "ജിറ്റികെ ബുക്ക്‌മാർക്കുകൾ പ്രദർശിപ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:94
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:105
+msgid "Height:"
+msgstr "ഉയരം:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:95
+msgid "Toggle Default Places:"
+msgstr "തനതായ സ്ഥലങ്ങള്‍ അന്യോന്യം മാറ്റുക:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:96
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:141
+msgid "Computer"
+msgstr "കമ്പ്യൂട്ടര്‍"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:97
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:151
+msgid "Home Folder"
+msgstr "ഹോം ഫോള്‍ഡര്‍"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:98
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:164
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:166
+msgid "Network"
+msgstr "നെറ്റ്‍വര്‍ക്ക്"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:99
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:189
+msgid "Desktop"
+msgstr "ഡെസ്ക്ടോപ്പ്"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:100
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:199
+msgid "Trash"
+msgstr "ചവറ്റുകൊട്ട"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:101
+msgid "Custom Places:"
+msgstr "ഇശ്ചാനുസരണമുള്ള സ്ഥലങ്ങള്‍:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:103
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:40
+msgid "System"
+msgstr "സിസ്റ്റം"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:106
+msgid "Toggle Default Items:"
+msgstr "തനതായ ഇനങ്ങള്‍ അന്യോന്യം മാറ്റുക:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:107
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:136
+msgid "Software Manager"
+msgstr "സോഫ്റ്റ്‌വേര്‍ മാനേജര്‍"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:108
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:143
+msgid "Package Manager"
+msgstr "പാക്കേജ് മാനേജര്‍"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:109
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:150
+msgid "Control Center"
+msgstr "നിയന്ത്രണ കേന്ദ്രം"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:110
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:160
+msgid "Terminal"
+msgstr "ടെര്‍മിനല്‍"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:111
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:177
+msgid "Lock Screen"
+msgstr "സ്ക്രീന്‍ പൂട്ടുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:112
+msgid "Log Out"
+msgstr "ലോഗ് ഔട്ട് ചെയ്യുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:113
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:194
+msgid "Quit"
+msgstr "പുറത്തു് കടക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:115
+msgid "Edit Place"
+msgstr "സ്ഥലത്തിന് മാറ്റം വരുത്തുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:116
+msgid "New Place"
+msgstr "പുതിയ സ്ഥലം"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:117
+msgid "Select a folder"
+msgstr "ഒരു ഫോള്‍ഡര്‍ തിരഞ്ഞടുക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:147
+msgid "Keyboard shortcut:"
+msgstr "കീബോര്‍ഡ്‌ എളുപ്പവഴി:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:153
+msgid "Images"
+msgstr "ചിത്രങ്ങൾ"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:271
+msgid "Name"
+msgstr "നാമം"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:272
+msgid "Path"
+msgstr "വഴി"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:287
+msgid "Desktop theme"
+msgstr "ഡെസ്ക്ടോപ്പ് ദൃശ്യരൂപം"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:426
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:457
+msgid "Name:"
+msgstr "നാമം:"
+
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:427
+#: usr/lib/linuxmint/mintMenu/mintMenuConfig.py:458
+msgid "Path:"
+msgstr "വഴി:"
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:197
+msgid ""
+"Click to set a new accelerator key for opening and closing the menu.  "
+msgstr ""
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:198
+msgid "Press Escape or click again to cancel the operation.  "
+msgstr ""
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:199
+msgid "Press Backspace to clear the existing keybinding."
+msgstr ""
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:212
+msgid "Pick an accelerator"
+msgstr ""
+
+#: usr/lib/linuxmint/mintMenu/keybinding.py:265
+msgid "<not set>"
+msgstr ""
+
+#: usr/lib/linuxmint/mintMenu/plugins/recent.py:31
+msgid "Recent documents"
+msgstr "കാലികമായ പ്രമാണങ്ങള്‍"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:246
+msgid "Search:"
+msgstr "തിരയുക:"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:250
+msgid "All applications"
+msgstr "എല്ലാ അപ്പ്ളിക്കേഷനുകളും"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:634
+#, python-format
+msgid "Search Google for %s"
+msgstr "%s ഗൂഗിളിൽ തിരയുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:641
+#, python-format
+msgid "Search Wikipedia for %s"
+msgstr "%s വിക്കിപീഡിയയിൽ തിരയുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:657
+#, python-format
+msgid "Lookup %s in Dictionary"
+msgstr "%s നിഘണ്ടുവിൽ നോക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:664
+#, python-format
+msgid "Search Computer for %s"
+msgstr "%s കമ്പ്യൂട്ടറിൽ തിരയുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:742
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:795
+#, python-format
+msgid "Install package '%s'"
+msgstr "'%s' പാക്കേജ് ഇന്‍സ്റ്റോള്‍ ചെയ്യുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:918
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:986
+msgid "Add to desktop"
+msgstr "ടെസ്ക്ടോപിലേക്ക് ചേര്‍ക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:919
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:987
+msgid "Add to panel"
+msgstr "പാളിയിലേക്ക് ചേര്‍ക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:921
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:969
+msgid "Insert space"
+msgstr "സ്ഥലം തിരുകി വയ്ക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:922
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:970
+msgid "Insert separator"
+msgstr "ബന്ധ-മോചകനെ(separator) തിരുകി വയ്ക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:924
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:990
+msgid "Launch when I log in"
+msgstr "ഞാന്‍ ലോഗിന്‍ ചെയ്യുന്ന സമയം ആരംഭിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:926
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:992
+msgid "Launch"
+msgstr "തുടങ്ങുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:927
+msgid "Remove from favorites"
+msgstr "ഇഷ്ടപെട്ടവയില്‍ നിന്നും നീക്കം ചെയ്യുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:929
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:996
+msgid "Edit properties"
+msgstr "ഗുണഗണങ്ങള്‍ ചിട്ടപ്പെടുത്തുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:968
+msgid "Remove"
+msgstr "നീക്കം ചെയ്യുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:989
+msgid "Show in my favorites"
+msgstr "എനിക്ക് പ്രിയപ്പെട്ടവയുടെ കൂടെ കാണിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:993
+msgid "Uninstall"
+msgstr "അണ്‍ഇന്‍സ്റ്റോള്‍ ചെയ്യുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:994
+msgid "Delete from menu"
+msgstr "മെനുവില്‍ നിന്നും നീക്കം ചെയ്യുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1048
+msgid "Search Google"
+msgstr "ഗൂഗിളിൽ തിരയുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1055
+msgid "Search Wikipedia"
+msgstr "വിക്കിപീഡിയയിൽ തിരയുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1065
+msgid "Lookup Dictionary"
+msgstr "നിഘണ്ടുവിൽ നോക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1072
+msgid "Search Computer"
+msgstr "കമ്പ്യൂട്ടറിൽ തിരയുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1082
+msgid "Find Software"
+msgstr "സോഫ്റ്റ്‌വേർ കണ്ടെത്തുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1089
+msgid "Find Tutorials"
+msgstr "പഠനസഹായികൾ കണ്ടെത്തുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1096
+msgid "Find Hardware"
+msgstr "ഹാർഡ്‌വേർ കണ്ടെത്തുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1103
+msgid "Find Ideas"
+msgstr "ആശയങ്ങൾ കണ്ടെത്തുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1110
+msgid "Find Users"
+msgstr "ഉപയോക്താക്കളെ കണ്ടെത്തുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1577
+msgid ""
+"Couldn't save favorites. Check if you have write access to "
+"~/.linuxmint/mintMenu"
+msgstr ""
+"പ്രിയപ്പെട്ടവയെ സംരക്ഷിക്കാന്‍ കഴിഞ്ഞില്ല. ~/.linuxmint/mintMenu -ല്‍ "
+"നിങ്ങള്‍ക്ക് എഴുതുവാന്‍ തക്കതായ സാമീപ്യം ഉണ്ടോ എന്ന് പരിശോധിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1778
+msgid "All"
+msgstr "എല്ലാം"
+
+#: usr/lib/linuxmint/mintMenu/plugins/applications.py:1778
+msgid "Show all applications"
+msgstr "എല്ലാ ആപ്പ്ലിക്കേഷനുകളും കാണിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:140
+msgid "Browse and install available software"
+msgstr "ലഭ്യമായ സോഫ്റ്റ്‌വെയര്‍-കളിലൂടെ പരതി ഇന്‍സ്റ്റോള്‍ ചെയ്യുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:147
+msgid "Install, remove and upgrade software packages"
+msgstr ""
+"സോഫ്റ്റ്‌വെയര്‍ പാക്കേജുകള്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യുകയോ, നീക്കം ചെയ്യുകയോ, "
+"നവീകരിക്കുകയോ ചെയ്യുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:157
+msgid "Configure your system"
+msgstr "നിങ്ങളുടെ സിസ്റ്റം ക്രമീകരിയ്ക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:167
+msgid "Use the command line"
+msgstr "കമാന്‍ഡ് ലൈന്‍ ഉപയോഗിക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:170
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:187
+msgid "Logout"
+msgstr "പുറത്ത്‌ കടക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:174
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:191
+msgid "Log out or switch user"
+msgstr "പുറത്തു കടക്കുക അല്ലെങ്കില്‍ ഉപഭോക്താവിനെ മാറ്റുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:184
+msgid "Requires password to unlock"
+msgstr "പൂട്ട്‌ തുറക്കാന്‍ അടയാളവാക്ക് ആവശ്യമാണ്"
+
+#: usr/lib/linuxmint/mintMenu/plugins/system_management.py:198
+msgid "Shutdown, restart, suspend or hibernate"
+msgstr "അടക്കുക, വീണ്ടും തുറക്കുക, മയങ്ങുക അല്ലെങ്കില്‍ ഗാഡനിദ്രയിലാവുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:148
+msgid ""
+"Browse all local and remote disks and folders accessible from this computer"
+msgstr "ലഭ്യമായ പ്രാദേശികവും വിദൂരവുമായ എല്ലാ ഡിസ്ക്കുകളും അറകളും പരതുക."
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:158
+msgid "Open your personal folder"
+msgstr "നിങ്ങളുടെ സ്വകാര്യ ഫോള്‍ഡറ്‍ തുറക്കുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:173
+msgid "Browse bookmarked and local network locations"
+msgstr ""
+"അടയാളപ്പെടുത്തിയ വെബ് പേജുകളും ലോക്കല്‍ നെറ്റ്‌വര്‍ക്ക്​ സ്ഥാനങ്ങളും തിരയുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:196
+msgid "Browse items placed on the desktop"
+msgstr "ടെസ്ക്ടോപില്‍ ഉള്ള വസ്തുക്കള്‍ പരതുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:210
+msgid "Browse deleted files"
+msgstr "നീക്കം ചെയ്യപ്പെട്ട ഫയലുകള്‍ പരതുക"
+
+#: usr/lib/linuxmint/mintMenu/plugins/places.py:262
+msgid "Empty trash"
+msgstr "ചവറ്റുകൊട്ട കാലിയാക്കുക"
+
+#~ msgid "Please wait, this can take some time"
+#~ msgstr "ദയവായി കാത്തിരിക്കൂ. ഇത്‌ കുറച്ച്‌ സമയം എടുത്തേക്കും"
+
+#, python-format
+#~ msgid "Remove %s?"
+#~ msgstr "%s നീക്കം ചെയ്യണോ?"
+
+#~ msgid "The following packages will be removed:"
+#~ msgstr "താഴെ പറയുന്ന പാക്കേജുകള്‍ നീക്കം ചെയ്യപ്പെടുന്നതാണ്:"
+
+#~ msgid "Colors"
+#~ msgstr "നിറങ്ങള്‍"
+
+#~ msgid "File not found"
+#~ msgstr "ഫയല്‍ കണ്ടെത്താനായില്ല"
+
+#~ msgid "Based on USP from S.Chanderbally"
+#~ msgstr "എസ്.ചന്ദര്‍ബെല്ലി യുടെ USP യെ ആധാരമാക്കിയുള്ളത്"
+
+#~ msgid "Show sidepane"
+#~ msgstr "വശത്തെ പാളി കാണിക്കുക"
+
+#~ msgid "No matching package found"
+#~ msgstr "പൊരുത്തപ്പെടുന്ന പാക്കേജ് കണ്ടെത്തിയില്ല"
+
+#~ msgid "Do you want to remove this menu entry?"
+#~ msgstr "ഈ മെനു എന്‍ട്രി താങ്കള്‍ക്ക് നീക്കം ചെയ്യണോ?"
+
+#~ msgid "Packages to be removed"
+#~ msgstr "പാക്കേജുകള്‍ നീക്കം ചെയ്യപ്പെടുന്നതായിരിക്കും"
+
+#~ msgid "Filter:"
+#~ msgstr "അരിപ്പ:"
+
+#, python-format
+#~ msgid "Search repositories for '%s'"
+#~ msgstr "'%s' - നെ repositories ഇല്‍ തിരയുക"
+
+#, python-format
+#~ msgid "Search portal for '%s'"
+#~ msgstr "'%s' - നെ പോര്‍ട്ടലില്‍ തിരയുക"
+
+#, python-format
+#~ msgid "Show package '%s'"
+#~ msgstr "'%s' പാക്കേജ് കാണിക്കുക"
+
+#~ msgid "Not a valid .menu file"
+#~ msgstr "സാധുത ഉള്ള ഒരു .menu ഫയല്‍ അല്ല"
+
+#~ msgid "Not a .menu file"
+#~ msgstr "ഒരു .menu ഫയല്‍ അല്ല"
+
+#~ msgid "Show recent documents"
+#~ msgstr "കാലികമായ ലിഖിതങ്ങള്‍ കാണിക്കുക"
+
+#~ msgid "Application removed successfully"
+#~ msgstr "ആപ്ലിക്കേഷൻ വിജയകരമായി നീക്കം ചെയ്തു"
+
+#~ msgid "Advanced Gnome Menu"
+#~ msgstr "വിപുലീകൃത ഗ്നോം മെനു"

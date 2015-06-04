@@ -1,0 +1,202 @@
+# Japanese translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: https://launchpad.net/~linuxmint-translation-team-"
+"japanese\n"
+"POT-Creation-Date: 2014-04-08 10:39+0100\n"
+"PO-Revision-Date: 2014-05-27 11:35+0000\n"
+"Last-Translator: BALLOON a.k.a. Fu-sen. <balloon@shigakeiichi.com>\n"
+"Language-Team: Japanese <https://launchpad.net/~linuxmint-translation-team-"
+"japanese>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:24 generate_desktop_files:58
+#: generate_desktop_files:72
+msgid "Welcome Screen"
+msgstr "Welcome Screen"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:77
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did designing it. The links below will help you get started "
+"with your new operating system. Have a great time and don't hesitate to send "
+"us your feedback."
+msgstr ""
+"ようこそ Linux Mint へ。Linux Mint を選んでいただきありがとうございます。開発を担当した私たちと同じく Linux Mint "
+"を楽しんでいただければと思います。以下のリンクは新しいオペレーティングシステムを使い始めるに当たって手助けとなってくれるでしょう。大いに楽しんで、是非とも"
+"フィードバックを送ってください。"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "New features"
+msgstr "新機能"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "See what is new in this release"
+msgstr "このリリースの新しいところを見る"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid "Important information"
+msgstr "重要なお知らせ"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid ""
+"Find out about important information, limitations, known issues and their "
+"solution"
+msgstr "重要なお知らせや、制約事項、問題の解決策を見る"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "User guide (PDF)"
+msgstr "ユーザガイド (PDF)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "Learn all the basics to get started with Linux Mint"
+msgstr "Linux Mint をはじめるため基本を学びましょう"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data"
+msgstr "データを復元する"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data or applications from a previous installation"
+msgstr "以前のインストールからデータ・アプリケーションを復元する"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Software manager"
+msgstr "ソフトウェアマネージャ"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Install additional software"
+msgstr "追加ソフトウェアのインストール"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat room"
+msgstr "チャットルーム"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat live with other users in the chat room"
+msgstr "チャットルームで他のユーザーとライブチャット"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Forums"
+msgstr "フォーラム"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Seek help from other users in the Linux Mint forums"
+msgstr "Linux Mint のフォーラムで他のユーザーに質問する(英語)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Tutorials"
+msgstr "チュートリアル"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Find tutorials about Linux Mint"
+msgstr "Linux Mint についてのチュートリアルを検索"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid "Hardware database"
+msgstr "ハードウェアデータベース"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid ""
+"Find hardware that is compatible with Linux, or information about your "
+"hardware"
+msgstr "Linux と互換性のあるハードウェアやハードウェアに関する情報を検索"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Idea pool"
+msgstr "アイデアプール"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Submit new ideas to the development team"
+msgstr "開発チームに新たな提案を送信する"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Get involved"
+msgstr "参加する"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Find out how to get involved in the Linux Mint project"
+msgstr "Linux Mint プロジェクトの参加方法を調べる"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Donations"
+msgstr "寄付"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Make a donation to the Linux Mint project"
+msgstr "Linux Mint プロジェクトに寄付をする"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Sponsors"
+msgstr "スポンサー"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Apply to become a Linux Mint sponsor"
+msgstr "Linux Mint のスポンサーになる"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:140
+msgid "Show this dialog at startup"
+msgstr "起動時にこのダイアログを表示"
+
+#: generate_desktop_files:58 generate_desktop_files:72
+msgid "Introduction to Linux Mint"
+msgstr "Linux Mint のご紹介"
+
+#: generate_desktop_files:86
+msgid "Install Multimedia Codecs"
+msgstr "マルチメディアコーデックのインストール"
+
+#: generate_desktop_files:86
+msgid "Add all the missing multimedia codecs"
+msgstr "インストールされていないマルチメディアコーデックをすべて追加します"
+
+#~ msgid "Visit the forums"
+#~ msgstr "フォーラムへ移動"
+
+#~ msgid "Read the release notes"
+#~ msgstr "リリースノートを読む"
+
+#~ msgid "Connect to the chat room"
+#~ msgstr "チェットルームに接続"
+
+#~ msgid "Browse the list of new features"
+#~ msgstr "新機能の一覧を見る"
+
+#~ msgid "Contribute to Linux Mint"
+#~ msgstr "Linux Mint へ寄与"
+
+#, python-format
+#~ msgid "Discover %s"
+#~ msgstr "%s を見つける"
+
+#~ msgid "Find help"
+#~ msgstr "ヘルプを検索"
+
+#~ msgid "Welcome to Linux Mint"
+#~ msgstr "Linux Mint へようこそ"
+
+#~ msgid "Become a sponsor"
+#~ msgstr "スポンサーになる"
+
+#~ msgid ""
+#~ "Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+#~ "as much as we did making it. Please make yourself familiar with the new "
+#~ "features and the documentation and don't hesitate to send us your feedback."
+#~ msgstr ""
+#~ "ようこそ Linux Mint へ。Linux Mint をお選び頂き有難う御座います。私達は開発した以上に Linux Mint "
+#~ "を楽しく使って頂ける事と存じます。新しい特徴と設計仕様をお確かめ頂き、お気づきの点があれば、ぜひ私達にお聞かせ下さい。"
+
+#~ msgid "Make a donation"
+#~ msgstr "寄付する"
+
+#~ msgid "Download the user guide (PDF)"
+#~ msgstr "ユーザガイド (PDF) をダウンロード"

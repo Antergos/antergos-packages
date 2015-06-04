@@ -1,0 +1,519 @@
+# Korean translation for linuxmint
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-07-05 16:11+0100\n"
+"PO-Revision-Date: 2013-03-29 11:55+0000\n"
+"Last-Translator: sundol <Unknown>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:10+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:62
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:740
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:940
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1058
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1114
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1224
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1242
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1244
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1501
+msgid "Update Manager"
+msgstr "업데이트 관리자"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:63
+msgid "Software Updates"
+msgstr "소프트웨어 업데이트"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:64
+msgid "Show and install available updates"
+msgstr "이용가능한 업데이트를 보여주고, 설치합니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:92
+msgid "Downloading changelog..."
+msgstr "변경내역을 받아오는 중..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:118
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:129
+msgid "No changelog available"
+msgstr "변경내역이 없습니다"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:129
+msgid ""
+"Click on Edit->Software Sources and tick the 'Source code' option to enable "
+"access to the changelogs"
+msgstr "변경내역을 받아오려면 '편집->소프트웨어 저장소'에서 '소스코드' 옵션을 활성화하십시오."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:242
+msgid "This upgrade will trigger additional changes"
+msgstr "해당 업그레이드는 추가적인 변경을 일으킵니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:251
+msgid "The following package will be removed:"
+msgstr "다음의 패키지가 제거됩니다:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:253
+#, python-format
+msgid "The following %d packages will be removed:"
+msgstr "다음의 %d 개의 패키지가 제거됩니다:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:281
+msgid "The following package will be installed:"
+msgstr "다음의 패키지가 설치됩니다:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:283
+#, python-format
+msgid "The following %d packages will be installed:"
+msgstr "다음의 %d 개의 패키지가 설치됩니다:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:324
+msgid "Installing updates"
+msgstr "업데이트를 설치하고 있습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:334
+msgid "Please wait, this can take some time"
+msgstr "잠시만 기다려 주십시오. 이 작업은 다소 시간이 걸릴 수도 있습니다"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:336
+msgid "Update is complete"
+msgstr "업데이트가 완료되었습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:366
+msgid "Please enter your password to restart the update manager"
+msgstr "업데이트 관리자를 재시작하려면 사용자의 암호를 입력해주세요"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:371
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:438
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1495
+msgid "Checking for updates"
+msgstr "업데이트 확인중"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:395
+msgid "Could not install the security updates"
+msgstr "보안 업데이트 설치에 실패하였습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:427
+msgid "Starting refresh..."
+msgstr "갱신하는 중..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:460
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:461
+msgid "Another application is using APT"
+msgstr "다른 응용프로그램이 APT를 사용중입니다"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:471
+msgid "Finding the list of updates..."
+msgstr "업데이트 목록을 찾는 중입니다..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:501
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:502
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:609
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:610
+msgid "Your system is up to date"
+msgstr "현재 시스템이 최신 버전입니다"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:514
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:515
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:632
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:636
+msgid "Could not refresh the list of packages"
+msgstr "패키지 목록을 새로고칠 수 없습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:580
+msgid "A new version of the update manager is available"
+msgstr "새 버전의 업데이트 관리자가 나왔습니다"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:590
+#, python-format
+msgid "1 recommended update available (%(size)s)"
+msgstr "1개의 추천 업데이트가 있습니다 (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:592
+#, python-format
+msgid "1 recommended update available (%(size)s), 1 ignored"
+msgstr "1개의 추천 업데이트가 있습니다 (%(size)s), 1개의 업데이트가 무시되었습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:594
+#, python-format
+msgid "1 recommended update available (%(size)s), %(ignored)d ignored"
+msgstr "1개의 추천 업데이트가 있습니다 (%(size)s), %(ignored)d개의 업데이트가 무시되었습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:597
+#, python-format
+msgid "%(recommended)d recommended updates available (%(size)s)"
+msgstr "%(recommended)d개의 추천 업데이트가 있습니다 (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:599
+#, python-format
+msgid "%(recommended)d recommended updates available (%(size)s), 1 ignored"
+msgstr "%(recommended)d개의 추천 업데이트가 있습니다 (%(size)s), 1개의 업데이트가 무시되었습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:601
+#, python-format
+msgid ""
+"%(recommended)d recommended updates available (%(size)s), %(ignored)d ignored"
+msgstr ""
+"%(recommended)d개의 추천 업데이트가 있습니다 (%(size)s), %(ignored)d개의 업데이트가 무시되었습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:671
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:690
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1395
+msgid "No updates selected"
+msgstr "선택된 업데이트가 없습니다"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:692
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1397
+#, python-format
+msgid "%(selected)d update selected (%(size)s)"
+msgstr "%(selected)d개의 업데이트가 선택되었습니다 (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:694
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1399
+#, python-format
+msgid "%(selected)d updates selected (%(size)s)"
+msgstr "%(selected)d개의 업데이트가 선택되었습니다 (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:940
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1618
+msgid "Preferences"
+msgstr "환경 설정"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:942
+msgid "Auto-Refresh"
+msgstr "자동 갱신"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:943
+msgid "Refresh the list of updates every:"
+msgstr "업데이트 목록 갱신 주기:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:944
+msgid ""
+"Note: The list only gets refreshed while the update manager window is closed "
+"(system tray mode)."
+msgstr "주의: 이 목록은 업데이트 관리자 창이 닫혀있을 때에만 갱신됩니다. (시스템 트레이 모드)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:946
+msgid "Update Method"
+msgstr "업데이트 방법"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:947
+msgid "Icons"
+msgstr "아이콘"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:948
+msgid "Icon"
+msgstr "아이콘"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:949
+msgid "Status"
+msgstr "상태"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:950
+msgid "New Icon"
+msgstr "새 아이콘"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:951
+msgid "Busy"
+msgstr "작동중"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:952
+msgid "System up-to-date"
+msgstr "모두 최신 버전임"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:953
+msgid "Updates available"
+msgstr "업데이트가 사용 가능함"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:954
+msgid "Error"
+msgstr "오류"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:955
+msgid "Unknown state"
+msgstr "알 수 없는 상태"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:956
+msgid "Applying updates"
+msgstr "업데이트 적용중"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:957
+msgid "Startup delay (in seconds):"
+msgstr "시작 지연 (초 단위)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:958
+msgid "Internet check (domain name or IP address):"
+msgstr "인터넷 연결 확인 (도메인이름 또는 IP 주소):"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:959
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:999
+msgid "Ignored packages"
+msgstr "무시된 패키지"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:961
+msgid ""
+"Include updates which require the installation or the removal of other "
+"packages"
+msgstr "다른 패키지를 추가 혹은 제거해야하는 업데이트들도 포함하기"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:977
+msgid "minutes"
+msgstr "분"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:978
+msgid "hours"
+msgstr "시간"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:979
+msgid "days"
+msgstr "일"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1025
+msgid "Please enter a package name:"
+msgstr "패키지 이름을 입력하십시오:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1026
+msgid "Ignore a package"
+msgstr "무시할 패키지"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1030
+msgid "Package name:"
+msgstr "패키지 이름:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1032
+msgid "All available upgrades for this package will be ignored."
+msgstr "이 패키지에 대한 모든 버전 업그레이드는 무시됩니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1058
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1632
+msgid "History of updates"
+msgstr "업데이트 내역"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1061
+msgid "Date"
+msgstr "날짜"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1064
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1529
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1642
+msgid "Package"
+msgstr "패키지"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1067
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1533
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1648
+msgid "Old version"
+msgstr "옛 버전"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1070
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1537
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1654
+msgid "New version"
+msgstr "새 버전"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1114
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1590
+msgid "Update Pack Info"
+msgstr "업데이트 패키지 정보"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1117
+msgid "Your system configuration:"
+msgstr "시스템 설정"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1118
+msgid "Current Update Pack available:"
+msgstr "현재 이용가능한 업데이트 패키지"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1119
+msgid "Latest Update Pack used by this system:"
+msgstr "이 시스템이 이용한 최신 업데이트 패키지"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1122
+msgid "Could not identify your APT sources"
+msgstr "당신의 APT 소스를 확인할 수 없었습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1123
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1124
+msgid "N/A"
+msgstr "해당 없음"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1160
+msgid "Your system is pointing to ftp.debian.org and debian.linuxmint.com"
+msgstr "당신의 시스템은 ftp.debian.org 와 debian.linuxmint.com를 가리키고 있습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1160
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1164
+msgid "These repositories conflict with each others"
+msgstr "이 저장소들은 서로 충돌하는 내용이 있습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1164
+msgid ""
+"Your system is pointing to debian.linuxmint.com/latest and "
+"debian.linuxmint.com/incoming"
+msgstr ""
+"당신의 시스템은 debian.linuxmint.com/latest 와 debian.linuxmint.com/incoming을 가리키고 "
+"있습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1168
+msgid "Your system is not pointing to the Linux Mint repositories"
+msgstr "당신의 시스템은 리눅스 민트 저장소를 가리키고 있지 않습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1168
+msgid ""
+"Add 'deb http://packages.linuxmint.com/ debian main upstream import' to your "
+"APT sources"
+msgstr ""
+"당신의 APT 소스에 'deb http://packages.linuxmint.com/ debian main upstream "
+"import'를 추가하세요."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1172
+msgid "Your system is not pointing to any Debian repository"
+msgstr "당신의 시스템은 어떠한 데비안 저장소도 가리키고 있지 않습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1172
+msgid ""
+"Add 'deb http://debian.linuxmint.com/latest testing main contrib non-free' "
+"to your APT sources"
+msgstr ""
+"당신의 APT 소스에 'deb http://debian.linuxmint.com/latest testing main contrib non-"
+"free'를 추가하세요."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1176
+msgid "Your system is pointing directly to Debian"
+msgstr "당신의 시스템은 데비안을 직접 가리키고 있습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1176
+msgid "This is only recommended for experienced users"
+msgstr "이것은 숙련된 사용자에게만 추천합니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1179
+msgid ""
+"Your system is pointing to the 'Linux Mint Debian Incoming' repository"
+msgstr "당신의 시스템은 '리눅스 민트 데비안 Incoming' 저장소를 가리키고 있습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1179
+msgid "This is only recommend for experienced users"
+msgstr "이것은 숙련된 사용자에게만 추천합니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1182
+msgid "Your system is pointing to the 'Linux Mint Debian Latest' repository"
+msgstr "당신의 시스템은 '리눅스 민트 데비안 최신' 저장소를 가리키고 있습니다."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1224
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1227
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1635
+msgid "Information"
+msgstr "정보"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1228
+msgid "Log file"
+msgstr "로그 파일"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1229
+msgid "Permissions:"
+msgstr "권한:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1230
+msgid "Process ID:"
+msgstr "프로세스 ID:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1231
+msgid "Log file:"
+msgstr "로그 파일:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1242
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1674
+msgid "About"
+msgstr "정보 보기"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1323
+msgid "Please enter your password to start the update manager"
+msgstr "업데이트 관리자를 시작하려면 암호를 입력하세요."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1402
+msgid "B"
+msgstr "바이트"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1404
+msgid "KB"
+msgstr "킬로바이트"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1406
+msgid "MB"
+msgstr "메가바이트"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1408
+msgid "GB"
+msgstr "기가 바이트"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1427
+msgid "Ignore updates for this package"
+msgstr "이 패키지에 대한 업데이트 무시"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1524
+msgid "Upgrade"
+msgstr "업그레이드"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1541
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1660
+msgid "Size"
+msgstr "크기"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1591
+msgid "Install Updates"
+msgstr "업데이트 설치"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1592
+msgid "Refresh"
+msgstr "새로 고침"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1593
+msgid "Select All"
+msgstr "전체 선택"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1594
+msgid "Clear"
+msgstr "제거"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1595
+msgid "Description"
+msgstr "설명"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1596
+msgid "Changelog"
+msgstr "변경기록"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1606
+msgid "_File"
+msgstr "파일(_F)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1610
+msgid "Close"
+msgstr "닫기"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1614
+msgid "_Edit"
+msgstr "편집(_E)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1624
+msgid "Software sources"
+msgstr "소프트웨어 소스"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1628
+msgid "_View"
+msgstr "보기(_V)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1638
+msgid "Visible columns"
+msgstr "열 설정"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1670
+msgid "_Help"
+msgstr "도움말(_H)"

@@ -1,0 +1,599 @@
+# Hungarian translation of mintbackup.
+# Copyright (C) 2013-2014 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mintbackup package.
+# KAMI <kami911@gmail.com>, 2013-2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mintbackup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-14 12:43+0100\n"
+"PO-Revision-Date: 2014-04-14 13:37+0000\n"
+"Last-Translator: KAMI <kami911@gmail.com>\n"
+"Language-Team: Hungarian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+"Language: hu\n"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:34
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:99
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:238
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:427
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:443
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:501
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:504
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:556
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:559
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:579
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:602
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:609
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1426
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1519
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1527
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1570
+msgid "Backup Tool"
+msgstr "Mentéskezelő"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:35
+msgid "Make a backup of your home directory"
+msgstr "Mentés készítése a saját mappáról"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:155
+msgid "Preserve structure"
+msgstr "Struktúra megőrzése"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:157
+msgid ".tar file"
+msgstr ".tar fájl"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:158
+msgid ".tar.bz2 file"
+msgstr ".tar.bz2 fájl"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:159
+msgid ".tar.gz file"
+msgstr ".tar.gz fájl"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:165
+msgid "Never"
+msgstr "Soha"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:166
+msgid "Size mismatch"
+msgstr "Méreteltérés"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:167
+msgid "Modification time mismatch"
+msgstr "Módosítási idő eltérés"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:168
+msgid "Checksum mismatch"
+msgstr "Hibás ellenőrzőösszeg"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:169
+msgid "Always"
+msgstr "Mindig"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:191
+msgid "Excluded paths"
+msgstr "Kihagyott útvonalak"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:201
+msgid "Type"
+msgstr "Típus"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:205
+msgid "Detail"
+msgstr "Részletek"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:211
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:220
+msgid "Path"
+msgstr "Útvonal"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:214
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:223
+msgid "Error"
+msgstr "Hiba"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:255
+msgid "Store?"
+msgstr "Elmentsük?"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:258
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:271
+msgid "Name"
+msgstr "Név"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:268
+msgid "Install"
+msgstr "Telepítés"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:276
+msgid "Backup or Restore"
+msgstr "Biztonsági mentés vagy visszaállítás"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:277
+msgid "Choose from the following options"
+msgstr "Válasszon az alábbiak közül"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:279
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:295
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:309
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:316
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:320
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:325
+msgid "Backup files"
+msgstr "Fájlok biztonsági mentése"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:280
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:329
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:339
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:345
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:350
+msgid "Restore files"
+msgstr "Fájlok visszaállítása"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:281
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:354
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:359
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:365
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:370
+msgid "Backup software selection"
+msgstr "Szoftverválaszték mentése"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:282
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:374
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:379
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:386
+msgid "Restore software selection"
+msgstr "Szoftverválaszték visszaállítása"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:284
+msgid "Make a backup of your files"
+msgstr "Saját fájlok biztonsági mentése"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:285
+msgid "Save the list of installed applications"
+msgstr "Telepített alkalmazások listájának mentése"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:286
+msgid "Restore a previous backup"
+msgstr "Korábbi mentés visszaállítása"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:287
+msgid "Restore previously installed applications"
+msgstr "Korábban telepített alkalmazások visszaállítása"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:296
+msgid "Please select a source and a destination for your backup"
+msgstr "Válassza ki a biztonsági mentés forrását és célját"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:297
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:333
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:341
+msgid "Source:"
+msgstr "Forrás:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:298
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:334
+msgid "Destination:"
+msgstr "Cél:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:299
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:335
+msgid "Advanced options"
+msgstr "Haladó beállítások"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:300
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:342
+msgid "Description:"
+msgstr "Leírás:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:301
+msgid "Output:"
+msgstr "Kimenet:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:302
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:336
+msgid "Overwrite:"
+msgstr "Felülírás:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:303
+msgid "Confirm integrity"
+msgstr "Integritás megőrzése"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:304
+msgid "Follow symlinks"
+msgstr "Szimbolikus linkek követése"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:305
+msgid "Preserve permissions"
+msgstr "Jogosultságok megőrzése"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:306
+msgid "Preserve timestamps"
+msgstr "Időbélyegek megőrzése"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:310
+msgid "Please select any files or directories you want to exclude"
+msgstr "Válassza ki a kihagyni kívánt fájlokat vagy könyvtárakat"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:311
+msgid "Exclude files"
+msgstr "Kihagyandó fájlok"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:312
+msgid "Exclude directories"
+msgstr "Kihagyandó mappák"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:313
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:317
+msgid "Please review the information below before starting the backup"
+msgstr "Nézze át a beállításokat a mentés megkezdése előtt"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:321
+msgid "Please wait while your files are being backed up"
+msgstr "Kérem várjon, amíg a mentés befejeződik"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:322
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:367
+msgid "Backing up:"
+msgstr "Biztonsági mentés:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:326
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:371
+msgid "The backup is now finished"
+msgstr "A biztonsági mentés befejeződött"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:330
+msgid ""
+"Please choose the type of backup to restore, its location and a destination"
+msgstr "Válassza ki a visszaállítandó mentés típusát, helyét és célját"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:331
+msgid "Archive"
+msgstr "Archívum"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:332
+msgid "Directory"
+msgstr "Könyvtár"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:340
+msgid "Please review the information below"
+msgstr "Nézze át az alábbiakat"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:346
+msgid "Please wait while your files are being restored"
+msgstr "Kérem várjon, amíg a visszaállítás befejeződik"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:347
+msgid "Restoring:"
+msgstr "Visszaállítás:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:351
+msgid "The restoration of the files is now finished"
+msgstr "A fájlok visszaállítása befejeződött"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:355
+msgid "Please choose a destination"
+msgstr "Válassza ki a célhelyet"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:356
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:520
+msgid "Destination"
+msgstr "Cél"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:360
+msgid "The list below shows the packages you added to Linux Mint"
+msgstr ""
+"Az alábbi listán azokat a csomagokat találja, amelyeket Ön adott a Linux "
+"Mint-hez"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:361
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:381
+msgid "Select all"
+msgstr "Összes kijelölése"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:362
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:382
+msgid "Deselect all"
+msgstr "Kijelölés megszüntetése"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:366
+msgid "Please wait while your software selection is being backed up"
+msgstr "Kérem várjon, amíg a szoftverkészlet mentésre kerül"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:375
+msgid "Please select a saved software selection"
+msgstr "Válasszon egy elmentett szoftverkészletet"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:376
+msgid "Software selection:"
+msgstr "Szoftverkészlet:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:380
+msgid "Select the packages you want to install"
+msgstr "Válassza ki a telepíteni kívánt csomagokat"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:383
+msgid "Refresh"
+msgstr "Frissítés"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:387
+msgid "The restoration is now finished"
+msgstr "A visszaállítás befejeződött"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:388
+msgid "Your package selection was restored succesfully"
+msgstr "A csomagkészlet sikeresen visszaállításra került"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:436
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:452
+msgid "Invalid path"
+msgstr "Érvénytelen útvonal"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:436
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:452
+#, python-format
+msgid "%s is not located within your source directory. Not added."
+msgstr "%s nem található a forráskönyvtárban. Nem lett hozzáadva."
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:501
+msgid "Please choose directories for the source and the destination"
+msgstr "Válassza ki a biztonsági mentés forrás- és célmappáit"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:504
+msgid ""
+"Please choose different directories for the source and the destination"
+msgstr "Válasszon különböző könyvtárat a forrásnak és a célnak"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:519
+msgid "Source"
+msgstr "Forrás"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:522
+msgid "Description"
+msgstr "Leírás"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:526
+msgid "Compression"
+msgstr "Tömörítés"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:530
+msgid "Overwrite destination files"
+msgstr "Létező fájlok felülírása"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:533
+msgid "Exclude"
+msgstr "Kihagyás"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:556
+msgid "Please choose a file to restore from"
+msgstr "Válassza ki a fájlt, amelyből vissza szeretne állítani"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:559
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:579
+msgid "Please choose a destination directory"
+msgstr "Válassza ki a célkönyvtárat"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:602
+msgid "No packages need to be installed at this time"
+msgstr "Nem került telepítése csomag"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:609
+msgid "Please select one or more packages to install"
+msgstr "Válassza ki a telepítendő csomagokat"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:666
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:667
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1143
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1145
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1439
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1440
+msgid "Calculating..."
+msgstr "Számítás…"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:716
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:756
+msgid "Skipping broken link"
+msgstr "Törött linkek kihagyása"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:717
+msgid "Broken link"
+msgstr "Törött link"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:720
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:760
+msgid "Skipping link"
+msgstr "Link kihagyása"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:784
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:793
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:802
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1204
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1215
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1228
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1293
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1302
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1312
+msgid "Skipping identical file"
+msgstr "Azonos fájl kihagyása"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:824
+#, python-format
+msgid ""
+"Warning: Some files were not saved, copied: %(current_file)d files out of "
+"%(total)d total"
+msgstr ""
+"Figyelmeztetés: Néhány fájl nem lett mentve, %(total)d fájlból "
+"%(current_file)d fájl lett átmásolva"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:828
+msgid "An error occured during the backup"
+msgstr "A mentés közben hiba lépett fel"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:838
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1484
+msgid "The backup was aborted"
+msgstr "Mentés megszakítva"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:846
+msgid "The backup completed successfully"
+msgstr "A mentés sikeresen befejeződött"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:931
+msgid "Checksum Mismatch:"
+msgstr "Ellenőrzőösszeg hiba:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:932
+msgid "Checksum Mismatch"
+msgstr "Ellenőrzőösszeg hiba"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:982
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:984
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1011
+msgid "Calculating checksum"
+msgstr "Ellenőrzőösszeg számítása"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1053
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1077
+msgid "(Not created with the Backup Tool)"
+msgstr "(nem a Mentéskezelővel készült)"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1336
+#, python-format
+msgid ""
+"Warning: Some files were not restored, copied: %(current_file)d files out of "
+"%(total)d total"
+msgstr ""
+"Figyelmeztetés: Néhány fájl nem lett visszaállítva, %(total)d fájlból "
+"%(current_file)d fájl lett átmásolva"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1339
+msgid "An error occured during the restoration"
+msgstr "A visszaállítás közben hiba lépett fel"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1350
+msgid "The restoration was aborted"
+msgstr "Visszaállítás megszakítva"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1358
+msgid "The restoration completed successfully"
+msgstr "A visszaállítás sikeresen befejeződött"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1475
+msgid "An error occured during the backup:"
+msgstr "A mentés közben hiba lépett fel:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1492
+msgid "Your software selection was backed up succesfully"
+msgstr "A szoftverkészlet mentése sikerült"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1519
+msgid "The specified file is not a valid software selection"
+msgstr "A megadott fájl nem érvényes szoftverkészlet"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1527
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1570
+msgid "An error occurred while accessing the file"
+msgstr "Hiba történt a fájl elérése közben"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1563
+msgid "Could not locate the package"
+msgstr "A csomag nem található"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1594
+msgid "Please wait, this can take some time"
+msgstr "Kis türelmet, ez eltarthat egy ideig"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1596
+msgid "The installation is complete"
+msgstr "A telepítés kész"
+
+#~ msgid "Archiving your home directory..."
+#~ msgstr "A Saját mappa archiválása..."
+
+#~ msgid "Backup successful"
+#~ msgstr "A mentés sikerült"
+
+#~ msgid "An error occurred during the backup:"
+#~ msgstr "A következő hiba lépett fel a mentés során:"
+
+#~ msgid "Backup failed"
+#~ msgstr "A mentés nem sikerült"
+
+#~ msgid "Extracting the content of the backup into your home directory..."
+#~ msgstr "A mentés tartalmának kicsomagolása a Saját mappába..."
+
+#~ msgid "Copying the backup file into your home directory..."
+#~ msgstr "A mentésfájl másolása a Saját mappába..."
+
+#~ msgid "Restoration successful"
+#~ msgstr "A visszaállítás sikerült"
+
+#~ msgid "Cleaning up..."
+#~ msgstr "Takarítás..."
+
+#~ msgid "Your backup was successfully restored"
+#~ msgstr "A mentés sikeresen visszaállítva"
+
+#~ msgid "Your home directory was successfully backed-up into"
+#~ msgstr "A Saját mappa sikeresen mentve a következő fájlba:"
+
+#~ msgid "Backup"
+#~ msgstr "Mentés"
+
+#~ msgid "Restoration failed"
+#~ msgstr "A visszaállítás nem sikerült"
+
+#~ msgid "An error occurred while restoring the backup archive:"
+#~ msgstr "A következő hiba lépett fel a visszaállítás során:"
+
+#~ msgid "Read error"
+#~ msgstr "Olvasási hiba"
+
+#~ msgid "Restore your personal data from this backup"
+#~ msgstr "Személyes adatainak visszaállítása ebből a mentésből"
+
+#~ msgid "<big><b>Load data into your home directory</b></big>"
+#~ msgstr "<big><b>Adatok visszatöltése a Saját mappába</b></big>"
+
+#~ msgid "is not located within your home directory. Not added."
+#~ msgstr "nem a Saját mappában található. Nem adható meg."
+
+#~ msgid "Included hidden directories"
+#~ msgstr "Mentendő rejtett fájlok és mappák"
+
+#~ msgid "Included"
+#~ msgstr "Mentés"
+
+#~ msgid "Restore"
+#~ msgstr "Visszaállítás"
+
+#~ msgid "Overwrite existing files"
+#~ msgstr "Létező fájlok felülírása"
+
+#~ msgid "View content"
+#~ msgstr "Tartalom megtekintése"
+
+#~ msgid "Exclude folders"
+#~ msgstr "Mappák kihagyása"
+
+#~ msgid "Excluded Files and Directories"
+#~ msgstr "A mentésből kihagyott fájlok és mappák"
+
+#~ msgid "Hidden paths"
+#~ msgstr "Rejtett elemek"
+
+#~ msgid "Opening the backup archive..."
+#~ msgstr "A mentési archívum megnyitása..."
+
+#~ msgid "An error occurred while opening the backup:"
+#~ msgstr "A következő hiba lépett fel a mentés megnyitása során:"

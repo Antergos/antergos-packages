@@ -1,0 +1,194 @@
+# Slovak translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-09-19 10:09+0100\n"
+"PO-Revision-Date: 2014-12-21 10:05+0000\n"
+"Last-Translator: tibbi <tibbbi2@gmail.com>\n"
+"Language-Team: Slovak <sk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:13+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: lib/mintstick.py:276 lib/mintstick.py:278
+msgid "The USB stick was formatted successfully."
+msgstr "USB flash disk bol úspešne naformátovaný."
+
+#: lib/mintstick.py:281
+#, python-format
+msgid "An error occured while creating a partition on %s."
+msgstr "Vyskytla sa chyba pri vytváraní partície na %s."
+
+#: lib/mintstick.py:283 lib/mintstick.py:370
+msgid "Authentication Error."
+msgstr "Chyba overovania."
+
+#: lib/mintstick.py:285 lib/mintstick.py:372
+msgid "An error occurred."
+msgstr "Došlo k chybe."
+
+#: lib/mintstick.py:302
+msgid "Image:"
+msgstr "Obrázok:"
+
+#: lib/mintstick.py:303
+msgid "USB stick:"
+msgstr "USB disk:"
+
+#: lib/mintstick.py:328
+#, python-format
+msgid "Writing %(VAR_FILE)s to %(VAR_DEV)s"
+msgstr "Zápis %(VAR_FILE)s do %(VAR_DEV)s"
+
+#: lib/mintstick.py:329
+#, python-format
+msgid "Starting copy from %(VAR_SOURCE)s to %(VAR_TARGET)s"
+msgstr "Spúšťam kopírovanie z %(VAR_SOURCE)s do %(VAR_TARGET)s"
+
+#: lib/mintstick.py:361 lib/mintstick.py:363
+msgid "The image was successfully written."
+msgstr "Obraz bol úspešne zapísaný."
+
+#: lib/mintstick.py:366
+msgid "Not enough space on the USB stick."
+msgstr "Nedostatok miesta na USB flash disku"
+
+#: lib/mintstick.py:368
+msgid "An error occured while copying the image."
+msgstr "Nastala chyba pri kopírovaní obrazu"
+
+#: generate_additional_files.py:49 generate_additional_files.py:61
+#: share/mintstick/mintstick.glade.h:28
+msgid "USB Image Writer"
+msgstr "Tvorca USB obrazu"
+
+#: generate_additional_files.py:49 generate_additional_files.py:61
+#: generate_additional_files.py:94
+msgid "Make a bootable USB stick"
+msgstr "Vytvoriť spustiteľný USB flash disk"
+
+#: generate_additional_files.py:73 generate_additional_files.py:85
+#: share/mintstick/mintstick.glade.h:4
+msgid "USB Stick Formatter"
+msgstr "Formátovanie USB flash disku"
+
+#: generate_additional_files.py:73 generate_additional_files.py:85
+#: generate_additional_files.py:104
+msgid "Format a USB stick"
+msgstr "Naformátovať USB disk"
+
+#: generate_additional_files.py:94
+msgid "Make bootable USB stick"
+msgstr "Vytvoriť spustiteľný USB flash disk"
+
+#: generate_additional_files.py:104 share/mintstick/mintstick.glade.h:27
+msgid "Format"
+msgstr "Formátovanie"
+
+#: share/mintstick/mintstick.glade.h:1
+msgid " "
+msgstr " "
+
+#: share/mintstick/mintstick.glade.h:2
+msgid ""
+"This will destroy all data on the USB stick, are you sure you want to "
+"proceed?"
+msgstr "Všetky dáta na USB flash disku budú zničené, chcete pokračovať?"
+
+#: share/mintstick/mintstick.glade.h:3
+msgid ""
+"Something went wrong, please see the details window for the exact error."
+msgstr "Niečo zlyhalo, viac informácií v okne o podrobnostiach zlyhania."
+
+#: share/mintstick/mintstick.glade.h:5
+msgid "Format:"
+msgstr "Formát:"
+
+#: share/mintstick/mintstick.glade.h:6
+msgid "Select a USB stick"
+msgstr "Vyberte USB disk"
+
+#: share/mintstick/mintstick.glade.h:7
+msgid "as"
+msgstr "ako"
+
+#: share/mintstick/mintstick.glade.h:8
+msgid ""
+"FAT32 \n"
+"   + Compatible everywhere.\n"
+"   -  Cannot handle files larger than 4GB.\n"
+"\n"
+"NTFS \n"
+"  + Compatible with Windows.\n"
+"   - Not compatible with Mac and most hardware devices.\n"
+"   - Occasional compatibility problems with Linux (NTFS is proprietary and "
+"reverse engineered).\n"
+"\n"
+"EXT4 \n"
+"\n"
+"  + Modern, stable, fast, journalized.\n"
+"  + Supports Linux file permissions.\n"
+"   - Not compatible with Windows, Mac and most hardware devices.\n"
+msgstr ""
+"FAT32 \n"
+"   + Všade kompatibilný\n"
+"   - Nevie pracovať so súbormi väčšími než 4 GB\n"
+"\n"
+"NTFS \n"
+"  + Kompatibilný s Windows\n"
+"   - Nekompatibilný so systémom Mac a väčšinou hardvérových zariadení\n"
+"   - Možné problémy s kompabilitou na Linuxe (NTFS je proprietárny a "
+"spracovaný na základe reverzného inžiniestva)\n"
+"\n"
+"EXT4 \n"
+"\n"
+"  + Moderný, stabilný, rýchly\n"
+"  + Podporuje Linuxové súborové oprávnenia\n"
+"   - Nekompatibilný s Windows, Mac a väčšinou hardvérových zariadení\n"
+
+#: share/mintstick/mintstick.glade.h:23
+msgid "Volume label:"
+msgstr "Názov média:"
+
+#: share/mintstick/mintstick.glade.h:24
+msgid "Choose a name for your USB Stick"
+msgstr "Zvoľte meno pre váš USB disk"
+
+#: share/mintstick/mintstick.glade.h:25
+msgid "USB Stick"
+msgstr "USB flash disk"
+
+#: share/mintstick/mintstick.glade.h:26
+msgid "Details"
+msgstr "Detaily"
+
+#: share/mintstick/mintstick.glade.h:29
+msgid "Write image:"
+msgstr "Vytvoriť obraz:"
+
+#: share/mintstick/mintstick.glade.h:30
+msgid "Select an image"
+msgstr "Zvoľte obraz"
+
+#: share/mintstick/mintstick.glade.h:31
+msgid "Select Image"
+msgstr "Zvoľte obraz"
+
+#: share/mintstick/mintstick.glade.h:32
+msgid "to"
+msgstr "do"
+
+#: share/mintstick/mintstick.glade.h:33
+msgid "Write"
+msgstr "Zápis"
+
+#: share/mintstick/mintstick.glade.h:34
+msgid "The image was written successfully."
+msgstr "Obraz bol úspešne napísaný."

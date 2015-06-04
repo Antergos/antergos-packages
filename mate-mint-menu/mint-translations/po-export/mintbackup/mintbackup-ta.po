@@ -1,0 +1,601 @@
+# Tamil translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-14 12:43+0100\n"
+"PO-Revision-Date: 2014-03-26 08:29+0000\n"
+"Last-Translator: Khaleel Jageer <jskcse4@gmail.com>\n"
+"Language-Team: Tamil <ta@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:34
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:99
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:238
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:427
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:443
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:501
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:504
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:556
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:559
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:579
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:602
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:609
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1426
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1519
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1527
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1570
+msgid "Backup Tool"
+msgstr "காப்பு நகலெடுக்கும் மென்கருவி"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:35
+msgid "Make a backup of your home directory"
+msgstr "துவக்க இல்லத்தை காப்பு நகலெடுக்கவும்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:155
+msgid "Preserve structure"
+msgstr "கட்டமைப்பினை பாதுகாத்திடு"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:157
+msgid ".tar file"
+msgstr ".tar கோப்பு"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:158
+msgid ".tar.bz2 file"
+msgstr ".tar.bz2 கோப்பு"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:159
+msgid ".tar.gz file"
+msgstr ".tar.gz கோப்பு"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:165
+msgid "Never"
+msgstr "ஒருபோதும் இல்லை"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:166
+msgid "Size mismatch"
+msgstr "அளவு பொருந்தவில்லை"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:167
+msgid "Modification time mismatch"
+msgstr "நேர மாற்றம் பொருந்தவில்லை"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:168
+msgid "Checksum mismatch"
+msgstr "சரிபார்ப்புக் கூட்டல் பொருந்தவில்லை"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:169
+msgid "Always"
+msgstr "எப்பொழுதும்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:191
+msgid "Excluded paths"
+msgstr "தவிர்க்கப்பட்ட பாதைகள்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:201
+msgid "Type"
+msgstr "வகை"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:205
+msgid "Detail"
+msgstr "விவரம்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:211
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:220
+msgid "Path"
+msgstr "பாதை"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:214
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:223
+msgid "Error"
+msgstr "பிழை"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:255
+msgid "Store?"
+msgstr "சேமிக்கவா?"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:258
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:271
+msgid "Name"
+msgstr "பெயர்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:268
+msgid "Install"
+msgstr "நிறுவுக"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:276
+msgid "Backup or Restore"
+msgstr "காப்பெடுக்க அல்லது மீட்டமை"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:277
+msgid "Choose from the following options"
+msgstr "பின்வரும் விருப்பத்தேர்வுகளில் இருந்து தேர்ந்தெடுங்கள்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:279
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:295
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:309
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:316
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:320
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:325
+msgid "Backup files"
+msgstr "காப்புக் கோப்பு"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:280
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:329
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:339
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:345
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:350
+msgid "Restore files"
+msgstr "கோப்புகளை மீட்டமை"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:281
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:354
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:359
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:365
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:370
+msgid "Backup software selection"
+msgstr "காப்பு மென்பொருள் தேர்வு"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:282
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:374
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:379
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:386
+msgid "Restore software selection"
+msgstr "மென்பொருள் தேர்ந்தெடுப்பை மீட்டமை"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:284
+msgid "Make a backup of your files"
+msgstr "தங்களின் கோப்புகளை காப்பு செய்க"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:285
+msgid "Save the list of installed applications"
+msgstr "நிறுவப்பட்டுள்ள பயன்பாடுகளின் பட்டியலை சேமி"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:286
+msgid "Restore a previous backup"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:287
+msgid "Restore previously installed applications"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:296
+msgid "Please select a source and a destination for your backup"
+msgstr ""
+"தயைகூர்ந்து தங்களின் காப்பிற்கான மூலம் மற்றும் சேருமிடம் ஆகியவற்றை "
+"தேர்ந்தெடுங்கள்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:297
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:333
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:341
+msgid "Source:"
+msgstr "மூலம்:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:298
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:334
+msgid "Destination:"
+msgstr "சேருமிடம்:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:299
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:335
+msgid "Advanced options"
+msgstr "கூடுதல் விருப்பங்கள்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:300
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:342
+msgid "Description:"
+msgstr "விளக்கம்:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:301
+msgid "Output:"
+msgstr "வெளியீடு:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:302
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:336
+msgid "Overwrite:"
+msgstr "மேல் எழுது;"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:303
+msgid "Confirm integrity"
+msgstr "முழுமையை உறுதி"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:304
+msgid "Follow symlinks"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:305
+msgid "Preserve permissions"
+msgstr "அனுமதிகளை பாதுகாக்கவும்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:306
+msgid "Preserve timestamps"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:310
+msgid "Please select any files or directories you want to exclude"
+msgstr "நீங்கள் தவிர்க்க வேண்டிய கோப்புகளை அல்லது அடைவுகளை தேர்வு செய்க"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:311
+msgid "Exclude files"
+msgstr "தவிர்க்கப்பட்ட கோப்புகள்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:312
+msgid "Exclude directories"
+msgstr "அடைவுகள் நீக்க"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:313
+msgid "Remove"
+msgstr "அகற்று"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:317
+msgid "Please review the information below before starting the backup"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:321
+msgid "Please wait while your files are being backed up"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:322
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:367
+msgid "Backing up:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:326
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:371
+msgid "The backup is now finished"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:330
+msgid ""
+"Please choose the type of backup to restore, its location and a destination"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:331
+msgid "Archive"
+msgstr "காப்பகம்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:332
+msgid "Directory"
+msgstr "அடைவு"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:340
+msgid "Please review the information below"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:346
+msgid "Please wait while your files are being restored"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:347
+msgid "Restoring:"
+msgstr "மறுசேமிக்கிறது:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:351
+msgid "The restoration of the files is now finished"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:355
+msgid "Please choose a destination"
+msgstr "தயவுசெய்து இலக்கை தேர்ந்தெடுக்கவும்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:356
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:520
+msgid "Destination"
+msgstr "இலக்கு"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:360
+msgid "The list below shows the packages you added to Linux Mint"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:361
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:381
+msgid "Select all"
+msgstr "அனைத்தையும் தேர்வு செய்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:362
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:382
+msgid "Deselect all"
+msgstr "அனைத்தையும் தேர்வு நீக்க"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:366
+msgid "Please wait while your software selection is being backed up"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:375
+msgid "Please select a saved software selection"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:376
+msgid "Software selection:"
+msgstr "மென்பொருள் தேர்வு:"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:380
+msgid "Select the packages you want to install"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:383
+msgid "Refresh"
+msgstr "புதுப்பி"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:387
+msgid "The restoration is now finished"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:388
+msgid "Your package selection was restored succesfully"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:436
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:452
+msgid "Invalid path"
+msgstr "தவறான பாதை"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:436
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:452
+#, python-format
+msgid "%s is not located within your source directory. Not added."
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:501
+msgid "Please choose directories for the source and the destination"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:504
+msgid ""
+"Please choose different directories for the source and the destination"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:519
+msgid "Source"
+msgstr "மூலம்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:522
+msgid "Description"
+msgstr "விளக்கம்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:526
+msgid "Compression"
+msgstr "சுருக்கம்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:530
+msgid "Overwrite destination files"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:533
+msgid "Exclude"
+msgstr "அகற்று"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:556
+msgid "Please choose a file to restore from"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:559
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:579
+msgid "Please choose a destination directory"
+msgstr "தயவுசெய்து ஒரு இலக்கு கோப்பகத்தை தேர்ந்தெடுக்கவும்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:602
+msgid "No packages need to be installed at this time"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:609
+msgid "Please select one or more packages to install"
+msgstr "ஒன்று அல்லது அதற்கு மேற்பட்ட தொகுப்புகளை நிறுவ தேர்வு செய்க"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:666
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:667
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1143
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1145
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1439
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1440
+msgid "Calculating..."
+msgstr "கணக்கிடுகிறது..."
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:716
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:756
+msgid "Skipping broken link"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:717
+msgid "Broken link"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:720
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:760
+msgid "Skipping link"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:784
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:793
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:802
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1204
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1215
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1228
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1293
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1302
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1312
+msgid "Skipping identical file"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:824
+#, python-format
+msgid ""
+"Warning: Some files were not saved, copied: %(current_file)d files out of "
+"%(total)d total"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:828
+msgid "An error occured during the backup"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:838
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1484
+msgid "The backup was aborted"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:846
+msgid "The backup completed successfully"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:931
+msgid "Checksum Mismatch:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:932
+msgid "Checksum Mismatch"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:982
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:984
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1011
+msgid "Calculating checksum"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1053
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1077
+msgid "(Not created with the Backup Tool)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1336
+#, python-format
+msgid ""
+"Warning: Some files were not restored, copied: %(current_file)d files out of "
+"%(total)d total"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1339
+msgid "An error occured during the restoration"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1350
+msgid "The restoration was aborted"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1358
+msgid "The restoration completed successfully"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1475
+msgid "An error occured during the backup:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1492
+msgid "Your software selection was backed up succesfully"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1519
+msgid "The specified file is not a valid software selection"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1527
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1570
+msgid "An error occurred while accessing the file"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1563
+msgid "Could not locate the package"
+msgstr ""
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1594
+msgid "Please wait, this can take some time"
+msgstr "தயை கூர்ந்து காத்திருங்கள், இது சற்று நேரத்தில் நிறைவுறலாம்"
+
+#: usr/lib/linuxmint/mintBackup/mintBackup.py:1596
+msgid "The installation is complete"
+msgstr ""
+
+#~ msgid "Cleaning up..."
+#~ msgstr "தூய்மையாக்குகிறது..."
+
+#~ msgid "Archiving your home directory..."
+#~ msgstr "தங்களின் துவக்க இல்லம் தொகுக்கப்படுகிறது..."
+
+#~ msgid "Restoration successful"
+#~ msgstr "மீட்சி நன்முறையில் முற்றுப்பெற்றது"
+
+#~ msgid "Restoration failed"
+#~ msgstr "மீட்சி நிறைவடையவில்லை"
+
+#~ msgid "Read error"
+#~ msgstr "வாசிப்பதில் பிழை"
+
+#~ msgid "Hidden paths"
+#~ msgstr "மறைக்கப்பட்ட‌ பாதைகள்"
+
+#~ msgid "Your backup was successfully restored"
+#~ msgstr "தங்களின் காப்பு நகல் நன்முறையில் மீட்டெடுக்கப்பட்டது"
+
+#~ msgid "An error occurred while restoring the backup archive:"
+#~ msgstr "காப்பு நகலாக்கத் தொகுப்பை மீட்டெடுக்கும்போது ஒரு பிழை ஏற்பட்டுள்ளது:"
+
+#~ msgid "An error occurred while opening the backup:"
+#~ msgstr "காப்பு நகலைத் திறப்பதில் ஒரு பிழை ஏற்பட்டுள்ளது:"
+
+#~ msgid "Restore your personal data from this backup"
+#~ msgstr ""
+#~ "உங்கள் தனிப்பட்ட மதிப்பீட்டுக் குறியீடுகளை காப்பு நகலிலிருந்து மீட்டெடுக‌"
+
+#~ msgid "<big><b>Load data into your home directory</b></big>"
+#~ msgstr ""
+#~ "<big><b>உங்களது துவக்க இல்லத்திற்குள் மதிப்பீட்டுக் குறியீடுகளைப் "
+#~ "புகுத்துக‌</b></big>"
+
+#~ msgid "is not located within your home directory. Not added."
+#~ msgstr "உங்களது துவக்க இல்லத்திற்குள் அமையவில்லை. சேர்க்கப்படவில்லை."
+
+#~ msgid "Included hidden directories"
+#~ msgstr "மறைவு அடைவுகள் உள்ளடக்கப்பட்டது"
+
+#~ msgid "Included"
+#~ msgstr "உள்ளடக்கப்பட்டது"
+
+#~ msgid "Excluded Files and Directories"
+#~ msgstr "தவிர்க்கப்பட்ட கோப்புகள் மற்றும் அடைவுகள்"
+
+#~ msgid "Backup"
+#~ msgstr "காப்பு நகல்"
+
+#~ msgid "Overwrite existing files"
+#~ msgstr "நடைமுறையிலுள்ள கோப்புகள் மறுபதியப்படுகின்றன‌"
+
+#~ msgid "Exclude folders"
+#~ msgstr "தவிர்க்கப்பட்ட கோப்பு அடைவுகள்"
+
+#~ msgid "View content"
+#~ msgstr "உள்ளடக்கத்தை பார்வையிடுக‌"
+
+#~ msgid "Restore"
+#~ msgstr "மீட்சி"
+
+#~ msgid "Extracting the content of the backup into your home directory..."
+#~ msgstr ""
+#~ "காப்பு நகலின் உள்ளடக்கத்தின் சாரம் தங்களது துவக்க இல்லத்திற்குள் "
+#~ "சேமிப்பாகிறது..."
+
+#~ msgid "Your home directory was successfully backed-up into"
+#~ msgstr ""
+#~ "தங்களது துவக்க இல்லம் நன்முறையில் காப்பு நகலெடுக்கப்பட்டு இவ்விடம் "
+#~ "சேமிக்கப்பட்டுள்ளது-"
+
+#~ msgid "Backup successful"
+#~ msgstr "காப்பு நகலாக்கம் நன்முறையில் முற்றுப்பெற்றது"
+
+#~ msgid "An error occurred during the backup:"
+#~ msgstr "காப்பு நகலாக்கத்தின்போது ஒரு பிழை ஏற்பட்டுள்ளது:"
+
+#~ msgid "Backup failed"
+#~ msgstr "காப்பு நகலாக்கம் நிறைவடையவில்லை"
+
+#~ msgid "Copying the backup file into your home directory..."
+#~ msgstr "கோப்பின் காப்பு நகல் தங்களது துவக்க இல்லத்திற்குள் பிரதியாகிறது..."
+
+#~ msgid "Opening the backup archive..."
+#~ msgstr "காப்பு நகலாக்கத் தொகுப்பு திறக்கப்படுகிறது..."

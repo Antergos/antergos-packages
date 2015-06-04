@@ -1,0 +1,891 @@
+# Korean translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 17:21+0100\n"
+"PO-Revision-Date: 2014-11-04 14:22+0000\n"
+"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:196
+#, python-format
+msgid "The package '%s' could not be installed"
+msgstr "'%s' 패키지를 설치할 수 없습니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:198
+#, python-format
+msgid "The package '%s' could not be removed"
+msgstr "'%s' 패키지를 제거할 수 없습니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:204
+msgid "Please check your connection to the Internet"
+msgstr "인터넷 연결을 확인해 주세요"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:215
+msgid "Another application is using APT:"
+msgstr "다른 패키지에서 APT:를 사용 중입니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:301
+#, python-format
+msgid "%d ongoing actions"
+msgstr "%d 개의 작업이 실행 중입니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:311
+#, python-format
+msgid "Cancel the task: %s"
+msgstr "작업을 취소합니다: %s"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Waiting"
+msgstr "기다리는 중입니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Downloading"
+msgstr "다운로드 중입니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Running"
+msgstr "실행 중입니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:125
+msgid "Finished"
+msgstr "완료되었습니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:335
+#, python-format
+msgid "Installing %s"
+msgstr "%s를 설치하는 중입니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:337
+#, python-format
+msgid "Removing %s"
+msgstr "%s를 제거하는 중입니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:339
+msgid "Updating cache"
+msgstr "캐시를 갱신하고 있습니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:341
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:343
+msgid "No role set"
+msgstr "역할 없음"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:451
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:789
+#: usr/lib/linuxmint/mintInstall/splash.py:20
+#: usr/lib/linuxmint/mintInstall/splash.py:27
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:343 generate_desktop_files:24
+#: generate_desktop_files:35 generate_desktop_files:47
+msgid "Software Manager"
+msgstr "소프트웨어 관리자"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:472
+msgid "_File"
+msgstr "파일(_F)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:476
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:127
+msgid "Close"
+msgstr "닫기"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:480
+msgid "_Edit"
+msgstr "편집(_E)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:484
+msgid "Preferences"
+msgstr "환경 설정"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:488
+msgid "Search in packages summary (slower search)"
+msgstr "패키지 요약에서 검색 (느림)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:492
+msgid "Search in packages description (even slower search)"
+msgstr "패키지 설명에서 검색 (매우 느림)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:496
+msgid "Open links using the web browser"
+msgstr "웹브라우저로 링크 열기"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:500
+msgid "Search while typing"
+msgstr "입력하는 동안 검색"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:513
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:753
+msgid "Account information"
+msgstr "계정 정보"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:520
+msgid "Software sources"
+msgstr "소프트웨어 소스"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:524
+msgid "_View"
+msgstr "보기(_V)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:528
+msgid "Available packages"
+msgstr "사용 가능한 패키지"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:532
+msgid "Installed packages"
+msgstr "설치된 패키지"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:539
+msgid "_Help"
+msgstr "도움말(_H)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:543
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:787
+msgid "About"
+msgstr "정보"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:589
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:599
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1118
+msgid "Categories"
+msgstr "카테고리"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:590
+msgid "Please choose a category"
+msgstr "카테고리를 선택해 주세요"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:591
+#, python-format
+msgid "%d packages are currently available"
+msgstr "%d 개의 패키지가 사용 가능합니다."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:600
+msgid "Please choose a sub-category"
+msgstr "하부 카테고리 선택"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:621
+msgid "No ongoing actions"
+msgstr "진행중인 작업이 없습니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:622
+msgid "Active tasks:"
+msgstr "진행 중 작업:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:625
+msgid "Show all results"
+msgstr "모든 결과 보이기"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:755
+msgid "Your community account"
+msgstr "사용자의 커뮤니티 계정"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:757
+msgid "Fill in your account info to review applications"
+msgstr "평가를 남기려면 사용자 계정이 필요합니다"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:759
+msgid "Username:"
+msgstr "사용자명:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:760
+msgid "Password:"
+msgstr "비밀번호 :"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:832
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1759
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1770
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:834
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1761
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1772
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:836
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1763
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1774
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:838
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1765
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1776
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:860
+msgid "Icon"
+msgstr "아이콘"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:864
+msgid "Application"
+msgstr "애플리케이션"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:871
+msgid "Score"
+msgstr "점수"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:893
+msgid "Task"
+msgstr "작업"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:896
+msgid "Status"
+msgstr "상태"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:899
+msgid "Progress"
+msgstr "진행률"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:996
+msgid "See more reviews"
+msgstr "모든 평가 보기"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1038
+msgid "Screenshot"
+msgstr "스크린샷"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1047
+msgid "Website"
+msgstr "웹사이트"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1055
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1067
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1780
+msgid "Reviews"
+msgstr "평가"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1120
+msgid "Featured"
+msgstr "추천"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1123
+msgid "All Packages"
+msgstr "모든 패키지들"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1125
+msgid "Internet"
+msgstr "인터넷"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1126
+msgid "Web"
+msgstr "웹"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1128
+msgid "Email"
+msgstr "이메일"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1130
+msgid "Chat"
+msgstr "채팅"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1132
+msgid "File sharing"
+msgstr "파일 공유"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1135
+msgid "Sound and video"
+msgstr "소리 / 영상"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1138
+msgid "Graphics"
+msgstr "그래픽"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1140
+msgid "3D"
+msgstr "3D"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1142
+msgid "Drawing"
+msgstr "그림"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1144
+msgid "Photography"
+msgstr "사진"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1146
+msgid "Publishing"
+msgstr "출판"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1148
+msgid "Scanning"
+msgstr "스캔"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1150
+msgid "Viewers"
+msgstr "뷰어"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1153
+msgid "Office"
+msgstr "사무용 도구"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1155
+msgid "Games"
+msgstr "게임"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1157
+msgid "Board games"
+msgstr "보드 게임"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1159
+msgid "First-person shooters"
+msgstr "일인칭 슈팅"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1161
+msgid "Real-time strategy"
+msgstr "실시간 전략"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1163
+msgid "Turn-based strategy"
+msgstr "턴제 전략"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1165
+msgid "Emulators"
+msgstr "에뮬레이터"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1167
+msgid "Simulation and racing"
+msgstr "시뮬레이션 / 레이싱"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1170
+msgid "Accessories"
+msgstr "보조 프로그램"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1172
+msgid "System tools"
+msgstr "시스템 도구"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1175
+msgid "Fonts"
+msgstr "글꼴"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1178
+msgid "Science and Education"
+msgstr "과학과 교육"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1181
+msgid "Programming"
+msgstr "프로그래밍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1380
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1853
+#, python-format
+msgid "%d reviews"
+msgstr "%d개의 평가"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1416
+#, python-format
+msgid "%d packages"
+msgstr "%d개의 패키지"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1661
+#, python-format
+msgid "Only results in category \"%s\" are shown."
+msgstr "카테고리 \"%s\"의 결과만 보임."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1672
+msgid "Search results"
+msgstr "검색 결과"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Hate it"
+msgstr "비추천"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Not a fan"
+msgstr "그다지"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "So so"
+msgstr "보통"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Like it"
+msgstr "좋음"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Awesome!"
+msgstr "훌륭함"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1728
+msgid "Score:"
+msgstr "점수:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1729
+msgid "Submit"
+msgstr "제출"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1730
+msgid "Your review"
+msgstr "리뷰"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1778
+msgid "Size:"
+msgstr "크기:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1779
+msgid "Version:"
+msgstr "버전:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1781
+msgid "Your review:"
+msgstr "사용자 평가:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1782
+msgid "Details"
+msgstr "자세히"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1784
+msgid "This will remove the following packages:"
+msgstr "이 작업으로 다음 패키지들을 제거합니다:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1785
+msgid "Cancel"
+msgstr "취소"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1786
+msgid "Confirm"
+msgstr "확인"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1790
+#, python-format
+msgid "%(localSize)s of disk space freed"
+msgstr "%(localSize)s의 공간 사용가능하게 됨"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1792
+#, python-format
+msgid "%(localSize)s of disk space required"
+msgstr "%(localSize)s 의 공간 필요"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1795
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space freed"
+msgstr "다운로드 시 %(downloadSize)s 사용, %(localSize)s 의 공간이 사용 가능하게 됨"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1797
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space required"
+msgstr "다운로드 시 %(downloadSize)s 사용, %(localSize)s 의 공간이 필요함"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1800
+msgid "The following packages would be installed: "
+msgstr "다음 패키지들이 설치됩니다: "
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1802
+msgid "The following packages would be removed: "
+msgstr "다음 패키지들이 제거됩니다: "
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1805
+msgid "Impact on packages:"
+msgstr "다음 패키지에 영향:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1823
+msgid "Remove"
+msgstr "제거"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1825
+#: usr/bin/mint-search-apt:37
+msgid "Installed"
+msgstr "설치됨"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1829
+msgid "Not available"
+msgstr "사용할 수 없음"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1831
+msgid "Please use apt-get to install this package."
+msgstr "apt-get를 이용해서 이 패키지를 설치하세요."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1834
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:207
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:442
+msgid "Install"
+msgstr "설치"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1836
+msgid "Not installed"
+msgstr "설치되지 않음"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1857
+msgid "Reviews:"
+msgstr "평가:"
+
+#: usr/lib/linuxmint/mintInstall/splash.py:28
+#, python-format
+msgid "Gathering information for %d packages..."
+msgstr "%d 패키지에 대한 정보 수집 중..."
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:68
+msgid "Backing up your APT sources"
+msgstr "사용자의 APT 소스를 백업중입니다"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:92
+#: usr/lib/linuxmint/mintInstall/remove.py:48 usr/bin/mint-synaptic-install:14
+msgid "Please wait, this can take some time"
+msgstr "잠시만 기다려 주십시오. 이 작업은 다소 시간이 걸릴 수도 있습니다"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:94
+#: usr/bin/mint-synaptic-install:16
+msgid "Installation is complete"
+msgstr "설치가 완료되었습니다"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:121
+msgid "Restoring your APT sources"
+msgstr "사용자의 APT 소스를 복원하고 있습니다"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:204
+msgid "Using the following repositories:"
+msgstr "다음 저장소를 사용합니다:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:209
+#, python-format
+msgid "Install %s?"
+msgstr "%s을(를) 설치하시겠습니까?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:212
+msgid "The following packages will be installed:"
+msgstr "다음 패키지들이 설치될 것입니다:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:223
+msgid "Default repositories"
+msgstr "기본 저장소"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:296
+#, python-format
+msgid "Upgrade %s?"
+msgstr "%s을(를) 업그레이드하시겠습니까?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:298
+msgid "The following packages will be upgraded:"
+msgstr "다음 패키지를 업그레이드할 것입니다:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:299
+msgid "Upgrade"
+msgstr "업그레이드"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:434
+msgid "Find Software"
+msgstr "소프트웨어 찾기"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:437
+msgid "Go to the Linux Mint Software Portal"
+msgstr "리눅스 민트 소프트웨어 포털로 이동"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:438
+msgid "Search for a .mint application"
+msgstr ".mint 응용프로그램 검색"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:439
+msgid "Go to the GetDeb Portal"
+msgstr "GetDeb 포털로 이동"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:440
+msgid "Search for a .deb package"
+msgstr ".deb 꾸러미 검색"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:441
+msgid "Search"
+msgstr "검색"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:443
+msgid "Show"
+msgstr "정보"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:444
+msgid "Go to the Ubuntu repository"
+msgstr "우분투 저장소로 이동"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:445
+msgid "Go to the Linux Mint repository"
+msgstr "리눅스 민트 저장소로 이동"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid "Your APT sources were corrupted."
+msgstr "사용자의 APT 소스가 손상되었습니다."
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid ""
+"Your APT sources were not correctly restored after you last ran mintInstall. "
+"They now have been restored."
+msgstr "마지막 실행시 사용자의 APT 소스가 제대로 저장되지 않았습니다. 자동으로 복구합니다."
+
+#: usr/lib/linuxmint/mintInstall/remove.py:50
+msgid "Application removed successfully"
+msgstr "프로그램을 성공적으로 제거하였습니다"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:104
+#, python-format
+msgid "Remove %s?"
+msgstr "%s을(를) 제거하시겠습니까?"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:107
+msgid "The following packages will be removed:"
+msgstr "다음의 패키지들이 제거됩니다:"
+
+#: usr/bin/mint-search-apt:34
+msgid "No results"
+msgstr "결과 없음"
+
+#: usr/bin/mint-search-apt:41
+msgid "Package"
+msgstr "패키지"
+
+#: usr/bin/mint-search-apt:42
+msgid "Description"
+msgstr "설명"
+
+#: usr/bin/mint-make-cmd:37 usr/bin/mint-make-cmd:38
+#, python-format
+msgid "Could not find package: %s"
+msgstr "%s 패키지를 찾을 수 없습니다"
+
+#: generate_desktop_files:24 generate_desktop_files:35
+#: generate_desktop_files:47
+msgid "Install new applications"
+msgstr "새로운 소프트웨어를 설치합니다"
+
+#~ msgid "Repository"
+#~ msgstr "저장소"
+
+#~ msgid "Size"
+#~ msgstr "크기"
+
+#~ msgid "Available version"
+#~ msgstr "사용 가능한 버전"
+
+#~ msgid "Installed version"
+#~ msgstr "설치된 버전"
+
+#~ msgid "Category"
+#~ msgstr "카테고리"
+
+#~ msgid "Views"
+#~ msgstr "조회수"
+
+#~ msgid "Installed software"
+#~ msgstr "설치된 소프트웨어"
+
+#~ msgid "All software"
+#~ msgstr "모든 소프트웨어"
+
+#~ msgid "Available software"
+#~ msgstr "사용 가능한 소프트웨어"
+
+#~ msgid "The changes are complete"
+#~ msgstr "변경이 완료되었습니다"
+
+#~ msgid "Show:"
+#~ msgstr "보기:"
+
+#~ msgid "Quit"
+#~ msgstr "종료"
+
+#~ msgid "Rating"
+#~ msgstr "평점"
+
+#~ msgid "Software manager"
+#~ msgstr "소프트웨어 관리자"
+
+#~ msgid "Quick search:"
+#~ msgstr "빠른 검색:"
+
+#~ msgid "Reviewer"
+#~ msgstr "평가자"
+
+#~ msgid "Review"
+#~ msgstr "평가"
+
+#~ msgid "Portal URL"
+#~ msgstr "포털 URL"
+
+#~ msgid "Real time strategy"
+#~ msgstr "실시간 전략"
+
+#~ msgid "Cancel removal"
+#~ msgstr "제거 취소"
+
+#~ msgid "Cancel installation"
+#~ msgstr "설치 취소"
+
+#~ msgid "Burning tools"
+#~ msgstr "CD 굽기 도구"
+
+#~ msgid "Tools"
+#~ msgstr "도구"
+
+#~ msgid "Photo"
+#~ msgstr "사진"
+
+#~ msgid "Web browsers"
+#~ msgstr "웹 브라우저"
+
+#~ msgid "Image viewers"
+#~ msgstr "이미지 뷰어"
+
+#~ msgid "Collection managers"
+#~ msgstr "모음집 관리기"
+
+#~ msgid "Finance"
+#~ msgstr "재무"
+
+#~ msgid "Document viewers"
+#~ msgstr "문서 뷰어"
+
+#~ msgid "2D"
+#~ msgstr "2D"
+
+#~ msgid "Internet Relay Chat"
+#~ msgstr "IRC 클라이언트"
+
+#~ msgid "Instant messengers"
+#~ msgstr "인터넷 메신저"
+
+#~ msgid "Word processors"
+#~ msgstr "워드 프로세서"
+
+#~ msgid "Graph and flowcharts"
+#~ msgstr "그래프와 흐름도"
+
+#~ msgid "Databases"
+#~ msgstr "데이터베이스"
+
+#~ msgid "Education"
+#~ msgstr "교육"
+
+#~ msgid "Firewall"
+#~ msgstr "방화벽"
+
+#~ msgid "Drivers"
+#~ msgstr "드라이버"
+
+#~ msgid "FTP"
+#~ msgstr "FTP"
+
+#~ msgid "System Tools"
+#~ msgstr "시스템 도구"
+
+#~ msgid "Upstream"
+#~ msgstr "Upstream"
+
+#~ msgid "Cancel change"
+#~ msgstr "변경 취소"
+
+#~ msgid "Featured applications"
+#~ msgstr "추천 응용 프로그램"
+
+#~ msgid "License:"
+#~ msgstr "라이선스:"
+
+#~ msgid "Description:"
+#~ msgstr "설명:"
+
+#~ msgid "More info"
+#~ msgstr "자세한 정보"
+
+#~ msgid "Your changes"
+#~ msgstr "바뀐 사항"
+
+#~ msgid "All applications"
+#~ msgstr "모든 응용 프로그램"
+
+#~ msgid "First person shooters"
+#~ msgstr "FPS"
+
+#~ msgid "Simulation & racing"
+#~ msgstr "시뮬레이션과 레이싱"
+
+#~ msgid "Text editors"
+#~ msgstr "텍스트 편집기"
+
+#~ msgid "Sound & Video"
+#~ msgstr "소리과 영상"
+
+#~ msgid "Audio players"
+#~ msgstr "오디오 플레이어"
+
+#~ msgid "Video players"
+#~ msgstr "동영상 플레이어"
+
+#~ msgid "Office suites"
+#~ msgstr "사무 제품군"
+
+#~ msgid "Scanning tools"
+#~ msgstr "스캔 도구"
+
+#~ msgid "Spreadsheets"
+#~ msgstr "스프레드 시트"
+
+#~ msgid "Mind mapping"
+#~ msgstr "마인드 맵"
+
+#~ msgid "Desktop components"
+#~ msgstr "데스크톱 구성 요소"
+
+#~ msgid "Package management"
+#~ msgstr "꾸러미 관리"
+
+#~ msgid "P2P and torrent"
+#~ msgstr "P2P와 토런트"
+
+#~ msgid "These popular applications can be installed on your system:"
+#~ msgstr "이 인기있는 응용 프로그램들을 사용자의 시스템에 설치할 수 있습니다:"
+
+#~ msgid ""
+#~ "The mint file for this application was not successfully downloaded. Click on "
+#~ "refresh to fix the problem."
+#~ msgstr ""
+#~ "이 응용 프로그램을 설치하는데 사용할 .mint 파일이 정상적으로 다운로드되지 않았습니다. 새로 고침을 눌러 다시 다운로드 받으십시오."
+
+#~ msgid "Average rating"
+#~ msgstr "전반적인 평가"
+
+#~ msgid "Cancel all changes"
+#~ msgstr "모든 바뀐 사항을 없던 것으로 합니다"
+
+#~ msgid "Please refresh mintInstall by clicking on the Refresh button"
+#~ msgstr "새로 고침을 눌러 mintInstall을 갱신해주십시오"
+
+#, python-format
+#~ msgid "Downloading data for %s"
+#~ msgstr "'%s' 관련 데이터를 내려받고 있습니다"
+
+#, python-format
+#~ msgid "%d categories loaded"
+#~ msgstr "%d개의 카테고리를 불러왔습니다"
+
+#, python-format
+#~ msgid "%d applications loaded"
+#~ msgstr "%d개의 응용 프로그램을 불러왔습니다"
+
+#, python-format
+#~ msgid "%d screenshots loaded"
+#~ msgstr "%d개의 스크린 샷을 불러왔습니다"
+
+#, python-format
+#~ msgid "%d reviews loaded"
+#~ msgstr "%d개의 평가를 불러왔습니다"
+
+#, python-format
+#~ msgid ""
+#~ "%(applications)d applications listed, %(install)d to install, %(remove)d to "
+#~ "remove"
+#~ msgstr "전체 %(applications)d개 중, %(install)d개를 설치했고 %(remove)d개를 제거하였습니다"
+
+#~ msgid "Added"
+#~ msgstr "추가되었습니다"
+
+#~ msgid ""
+#~ "The data used by mintInstall is corrupted or out of date. Click on refresh "
+#~ "to fix the problem :"
+#~ msgstr "mintInstall이 사용하는 데이터가 너무 오래되었거나 손상되었습니다. 새로 고침을 눌러 이 문제를 해결하십시오:"

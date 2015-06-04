@@ -1,0 +1,353 @@
+# Italian translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 10:14+0100\n"
+"PO-Revision-Date: 2015-02-02 15:20+0000\n"
+"Last-Translator: Fabio <Unknown>\n"
+"Language-Team: Italian <it@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:33
+msgid "Adding PPAs is not supported"
+msgstr "La aggiunta di PPA non è supportata"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:40
+#: usr/lib/linuxmint/mintSources/mintSources.py:881
+#, python-format
+msgid "Cannot add PPA: '%s'."
+msgstr "Impossibile aggiungere il PPA: '%s'."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:44
+msgid "Adding private PPAs is not supported currently"
+msgstr "L'aggiunta di PPA privati non è al momento supportata"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:47
+msgid "You are about to add the following PPA to your system:"
+msgstr "Si sta per aggiungere il seguente PPA al sistema:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:50
+#, python-format
+msgid " More info: %s"
+msgstr " Maggiori informazioni: %s"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:54
+msgid "Press [ENTER] to continue or ctrl-c to cancel adding it"
+msgstr "Premere [INVIO] per continuare o Ctrl+C per annullare"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:58
+msgid "Unable to prompt for response.  Please run with -y"
+msgstr "Impossibile richiedere risposta. Eseguire con -y"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:257
+#: usr/lib/linuxmint/mintSources/mintSources.py:285
+msgid "Sources"
+msgstr "Sorgenti"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:263
+msgid "CD-ROM (Installation Disc)"
+msgstr "CD-ROM (disco di installazione)"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:304
+msgid ""
+"Linux Mint uses Romeo to publish packages which are not tested. Once these "
+"packages are tested, they are then moved to the official repositories. "
+"Unless you are participating in beta-testing, you should not enable this "
+"repository. Are you sure you want to enable Romeo?"
+msgstr ""
+"Linux Mint usa il repository \"Romeo\" per pubblicare pacchetti che non sono "
+"testati. Una volta che tali pacchetti sono testati, vengono spostati nei "
+"repositories ufficiali. Se non partecipi ai test, NON devi abilitare questo "
+"repository. Sei sicuro di voler abilitare il repository Romeo?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:310
+msgid ""
+"Backports are packages coming from newer Linux Mint releases. When backports "
+"are made available, the development team publishes an official announcement "
+"on http://blog.linuxmint.com. This announcement might include important "
+"information about the new features, design decisions or even known issues "
+"which relate to you. It is therefore strongly recommended to not enable "
+"backports until you have read this information. Are you sure you want to "
+"enable backports?"
+msgstr ""
+"I Backports sono pacchetti provenienti dalle edizioni più recenti di Linux "
+"Mint. Quando i backports sono disponibili, il gruppo di sviluppo pubblica un "
+"annuncio ufficiale su http://blog.linuxmint.com. Questo annuncio può "
+"includere informazioni importanti sulle nuove caratteristiche, decisioni "
+"progettuali, o anche problemi noti che possono riferirsi a te. È "
+"sconsigliato attivare i backports finché non hai letto tali annunci. Sei "
+"sicuro di voler attivare i backports?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:366
+msgid "Other..."
+msgstr "Altro..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:388
+msgid "Select a mirror"
+msgstr "Seleziona un server"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:400
+msgid "Country"
+msgstr "Paese"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:405
+msgid "URL"
+msgstr "URL"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:410
+msgid "Speed"
+msgstr "Velocità"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:447
+#: usr/lib/linuxmint/mintSources/mintSources.py:456
+msgid "kB/s"
+msgstr "kB/s"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:450
+msgid "MB/s"
+msgstr "MB/s"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:453
+msgid "GB/s"
+msgstr "GB/s"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:540 generate_desktop_files:28
+#: generate_desktop_files:44
+msgid "Software Sources"
+msgstr "Sorgenti software"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:557
+msgid "Backported packages"
+msgstr "Pacchetti in versione backport"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:559
+msgid "Unstable packages"
+msgstr "Pacchetti non stabili"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:572
+#: usr/lib/linuxmint/mintSources/mintSources.py:1129
+msgid "No action required"
+msgstr "Non è richiesta nessuna azione"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:574
+msgid "Official repositories"
+msgstr "Repository ufficiali"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:575
+msgid "PPAs"
+msgstr "PPA"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:576
+msgid "Additional repositories"
+msgstr "Repositori aggiuntivi"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:577
+msgid "Authentication keys"
+msgstr "Chiavi di autenticazione"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:578
+msgid "Maintenance"
+msgstr "Manutenzione"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:580
+msgid "Mirrors"
+msgstr "Mirror"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:581
+msgid "Main"
+msgstr "Principale"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:582
+msgid "Base"
+msgstr "Base"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:583
+#: usr/lib/linuxmint/mintSources/mintSources.py:584
+msgid "Select a faster server..."
+msgstr "Scegli un server più veloce..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:586
+msgid "Optional components"
+msgstr "Componenti opzionali"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:587
+msgid "Source code"
+msgstr "Codice sorgente"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:589
+msgid "Add a new PPA..."
+msgstr "Aggiungi un nuovo PPA..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:590
+#: usr/lib/linuxmint/mintSources/mintSources.py:594
+msgid "Edit URL..."
+msgstr "Modifica URL..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:591
+#: usr/lib/linuxmint/mintSources/mintSources.py:595
+#: usr/lib/linuxmint/mintSources/mintSources.py:599
+msgid "Remove permanently"
+msgstr "Cancella definitivamente"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:593
+msgid "Add a new repository..."
+msgstr "Aggiungi un nuovo repository..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:597
+msgid "Import key file..."
+msgstr "Importa un file con la chiave di autenticazione ..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:598
+msgid "Download a key..."
+msgstr "Scarica una chiave ..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:601
+msgid "Fix MergeList problems"
+msgstr "Correggi i problemi della MergeList"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:602
+msgid ""
+"If you experience MergeList problems, click this button to solve the problem."
+msgstr ""
+"Se incontri problemi con MergeList, clicca questo bottone per risolvere il "
+"problema."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:603
+msgid "Purge residual configuration"
+msgstr "Cancella la configurazione residua"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:604
+msgid ""
+"Packages sometimes leave configuration files on the system even after they "
+"are removed."
+msgstr ""
+"I pacchetti a volte lasciano file di configurazione sul sistema anche dopo "
+"essere stati rimossi."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:609
+msgid "Enable source code repositories"
+msgstr "Abilita il repository dei codici sorgente"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:619
+msgid ""
+"Warning: Backports and unstable packages can introduce regressions and "
+"negatively impact your system. Please do not enable these options in Linux "
+"Mint unless it was suggested by the development team."
+msgstr ""
+"Attenzione: i pacchetti backport e unstable possono introdurre regressioni e "
+"impattare negativamente sul tuo sistema. Per favore non abilitare queste "
+"opzioni in Linux Mint se non è stato esplicitamente proposto dal team di "
+"sviluppo."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:680
+#: usr/lib/linuxmint/mintSources/mintSources.py:704
+msgid "Enabled"
+msgstr "Abilitato"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:686
+msgid "PPA"
+msgstr "PPA"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:710
+msgid "Repository"
+msgstr "Repository"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:726
+msgid "Key"
+msgstr "Chiave"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:739
+msgid "Restore the default settings"
+msgstr "Ritorna alle impostazioni predefinite"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:740
+msgid "Restore the official repositories to their default settings"
+msgstr ""
+"Ripristina i repository ufficiali alla loro configurazione predefinita"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:805
+msgid "There is no more residual configuration on the system."
+msgstr "Nessuna configurazione residua rimasta nel sistema."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:811
+msgid "The problem was fixed. Please reload the cache."
+msgstr "Il problema è stato risolto. Per favore ricarica la cache."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:837
+msgid "Open.."
+msgstr "Apri..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:853
+msgid ""
+"Please enter the 8 characters of the public key you want to download from "
+"keyserver.ubuntu.com:"
+msgstr ""
+"Per favore inserisci gli 8 caratteri della chiave pubblica che vuoi "
+"scaricare da keyserver.ubuntu.com:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:866
+msgid "Are you sure you want to permanently remove this key?"
+msgstr "Sei sicuro di volere rimuovere definitivamente questa chiave?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:874
+msgid "Please enter the name of the PPA you want to add:"
+msgstr "Per favore immetti il nome del PPA che vuoi aggiungere:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:925
+msgid "Edit the URL of the PPA"
+msgstr "Modifica l'indirizzo del PPA"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:935
+msgid "Are you sure you want to permanently remove this PPA?"
+msgstr "Sei sicuro di voler rimuovere permanentemente questo PPA?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:944
+msgid "Please enter the name of the repository you want to add:"
+msgstr "Per favore inserisci il nome del repository che vuoi aggiungere:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:963
+msgid "Edit the URL of the repository"
+msgstr "Modifica l'indirizzo del repository"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:973
+msgid "Are you sure you want to permanently remove this repository?"
+msgstr "Sei sicuro di volere rimuovere definitivamente questo repository?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1123
+msgid "Update the cache"
+msgstr "Aggiorna la cache"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1124
+msgid "Click here to update your APT cache with your new sources"
+msgstr "Clicca qui per aggiornare la cache APT con i tuoi nuovi sorgenti"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1130
+msgid "Your APT cache is up to date"
+msgstr "La tua cache di APT è aggiornata"
+
+#: usr/bin/software-sources:9
+msgid "Please enter your password to configure the software sources"
+msgstr ""
+"Per favore inserisci la tua password per configurare le sorgenti del software"
+
+#: usr/bin/add-apt-repository:10
+msgid "Error: must run as root"
+msgstr "Errore: deve essere eseguito come root"
+
+#: usr/bin/add-apt-repository:21
+msgid "Error: need a repository as argument"
+msgstr "Errore: specificare un repository come argomento"
+
+#: generate_desktop_files:28 generate_desktop_files:44
+msgid "Configure the sources for installable software and updates"
+msgstr ""
+"Configura le sorgenti per il software installabile e per gli aggiornamenti"

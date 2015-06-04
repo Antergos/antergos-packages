@@ -1,0 +1,321 @@
+# Nepali translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-06-14 11:26+0300\n"
+"PO-Revision-Date: 2014-03-10 07:16+0000\n"
+"Last-Translator: Niroj Bista <nirooj56@outlook.com>\n"
+"Language-Team: Nepali <ne@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/01-welcome.html:1
+msgid "Welcome to Linux Mint"
+msgstr "लिनक्स मिन्टमा स्वागत छ |"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/01-welcome.html:8
+msgid ""
+"Welcome and thank you for choosing Linux Mint. This slideshow will show you "
+"around while the system is being installed on your computer."
+msgstr ""
+"लिनक्स मिन्टलाई छान्नु भएकोमा तपाईलाई धन्यवाद छ र स्वागत गर्दछौँ। यो स्लाइड "
+"शो तपाईलाई जानकारी दिदैँ सिस्टम इन्स्टल गर्दैहुनेछ।"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/02-web.html:1
+msgid "Browse the web"
+msgstr "वेब ब्राउज गर्नुहोस्"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/02-web.html:8
+msgid ""
+"Be fast and safe on the web with Mozilla Firefox. Enjoy Java, Flash and "
+"multimedia content."
+msgstr ""
+"छिटो तथा सुरक्षित रहनुहोस् वेबमा मोजिला फायरफक्ससँग। जाभा, फ्ल्याश र "
+"मल्टिमिडियाको भरिपुर्ण आनन्द गर्नुहोस्।"
+
+#. type: Content of: <div><div><div>
+#: slideshows/mint-kde/slides/02-web.html:11
+#: slideshows/mint-kde/slides/03-music.html:12
+#: slideshows/mint-kde/slides/04-video.html:11
+#: slideshows/mint-kde/slides/05-photos.html:12
+#: slideshows/mint-kde/slides/06-chat.html:11
+#: slideshows/mint-kde/slides/07-office.html:12
+msgid "Included software"
+msgstr "उपलब्ध सफ्टवेयर"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:14
+msgid "Firefox"
+msgstr "फायरफक्स"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:16
+msgid "Flash"
+msgstr "फ्ल्याश"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/02-web.html:18
+msgid "Java"
+msgstr "जाभा"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/03-music.html:1
+msgid "Listen to music and CDs"
+msgstr "संगीत र सीडीहरु सुन्नुहोस् |"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/03-music.html:8
+msgid ""
+"Enjoy your music with Amarok. Plug-in your MP3 player or extract songs from "
+"your audio CDs. Listen to podcasts and online radios. Discover new artists "
+"on Last.fm, Jamendo, Magnatune and Librivox."
+msgstr ""
+"अमारोक सँग तपाईंको संगीतमा रम्नुहोस् | तपाईंको MP3 उपकरण जोद्नुहोस् अथवा "
+"सि.डिबाट गीतहरु निकाल्नुस् | अन्लाईन रेडियो या पद्कास्तहरु सुन्नुहोस् | "
+"Last.fm, Jamendo, Magnatune  र Librivox बाट नयाँ कलाकारहरु भेटाउनुहोस् |"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/03-music.html:15
+msgid "Amarok"
+msgstr "अमारोक"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/03-music.html:17
+msgid "Audio codecs"
+msgstr "अडियो कोडेकहरु"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/04-video.html:1
+msgid "Watch videos and DVDs"
+msgstr "डि.भि.डि र भिडियोहरु हेर्नुहोस् |"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/04-video.html:8
+msgid ""
+"Insert a DVD and enjoy a movie. Watch high-definition videos with Kaffeine."
+msgstr ""
+"डि.भि.डि राखेर फिल्मको मजा लिनुहोस् | काफ्फेइनसँग उच्च गुणवत्ताको भिडियो "
+"हेर्नुहोस् |"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:14
+msgid "Kaffeine"
+msgstr "काफ्फेइन"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:16
+msgid "VLC"
+msgstr "भि एल सि"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/04-video.html:18
+msgid "Video codecs"
+msgstr "भिडियो कोडेक"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/05-photos.html:1
+msgid "Manage your photos"
+msgstr "आफ्नो तस्बिरहरुको प्रभन्दन गर्नुहोस् ।"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/05-photos.html:8
+msgid ""
+"Organize, enjoy and share your photos with digikam. Export your albums to "
+"CD, to the Web, or to online services such as Flickr or PicasaWeb to share "
+"them with friends and family."
+msgstr ""
+"तपाईंका तस्बिरहरु दिजिकामबाट हेर्नुहोस्, बाद्नुहोस् र संगठित गर्नुहोस् । "
+"आफ्नो गीतका सङ्रहहरु सि.डिमा, ईन्टरनेटमा या अन्लाईन सेवा प्रदायक जस्तै "
+"Flickr या PicasaWebमा राखेर साथी अथवा परिवारसँग बाद्नुहोस् ।"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/05-photos.html:15
+msgid "Digikam"
+msgstr "दिजिकाम"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/06-chat.html:1
+msgid "Stay connected"
+msgstr "कन्नेक्तेद रहनुहोस् ।"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/06-chat.html:8
+msgid ""
+"Keep in touch with your friends and contacts, by email, messenger or on your "
+"favorite social networks. Linux Mint provides all you need to interact with "
+"Twitter, Facebook, MSN, ICQ, GoogleTalk, AIM, Yahoo and many other networks."
+msgstr ""
+"आफ्ना साथी र सम्पर्कहरुसँग ईमेल, मेसेन्जर या तपाईंको मन्पर्ने सामाजिक "
+"सन्जालबाट कन्नेक्तेद रहनुहोस् । लिनक्स मिन्टले तपाईंलाई Twitter, Facebook, "
+"MSN, ICQ, GoogleTalk, AIM, Yahoo र अरु देरै सन्जालहरुको लागि चाहिने जरुरी "
+"सफ्टवेर प्रदान गरेको छ ।"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:14
+msgid "Kmail"
+msgstr "केमेल"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:16
+msgid "Telepathy"
+msgstr "टेलिप्याथी"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/06-chat.html:18
+msgid "Konversation"
+msgstr "कुराकानी"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/07-office.html:1
+msgid "Be productive"
+msgstr "उत्पादकत्वो बदाउनुहोस् ।"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/07-office.html:8
+msgid ""
+"Use LibreOffice to create professional documents, spreadsheets and "
+"presentations that are fully compatible with Microsoft Office. Archive "
+"documents, emails, or web pages to PDF. Send and receive files with Giver on "
+"the local network. Share printers or access them remotely."
+msgstr ""
+"लिब्रेअफिसबाट व्यवसायीक दस्तावेज, आय कागजात तथा प्रस्तुतिहरु बनाउनुहोस् जुन "
+"माईक्रोसफ्ट अफिसमा पनि चल्ने चन। दस्तावेजहरु, ईमेलहरु, अथवा वेब पृष्ठहरु "
+"प्ड्फ मा संग्रह गर्नुहोस्। गिवरबाट स्थानीय नेटवर्कबाट फाइलहरु पठाउनु र "
+"प्राप्त गर्नुहोस्। प्रिन्तरहरु बाद्नुहोस् अथवा नेट्वोर्क बाट कन्ट्रोल "
+"गर्नुहोस्।"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/07-office.html:15
+msgid "LibreOffice"
+msgstr "लिब्रेअफिस"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/07-office.html:17
+msgid "PDF Printer"
+msgstr "PDF मुद्रक"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/08-software.html:1
+msgid "Install software"
+msgstr "सफ्टवेर इन्स्टल गर्नुहोस्।"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/08-software.html:8
+msgid ""
+"Browse through 50,000 free applications from the Software Manager. Enjoy "
+"screenshots and user reviews. Install software with one click of the mouse."
+msgstr ""
+"सफ्टवेर म्यानेजरबाट ५०,००० भन्दा बदी प्रोग्रामहरु हेर्नुहोस्।  स्क्रीनशट र "
+"आरु उपयोगकर्तका समीक्षा हेर्नुहोस्। माउसको एक क्लिकले सफ्टवेरहरु इन्स्तल्ल "
+"गर्नुहोस्।"
+
+#. type: Content of: <div><div><div>
+#: slideshows/mint-kde/slides/08-software.html:11
+#: slideshows/mint-kde/slides/09-windows.html:12
+msgid "Featured software"
+msgstr "बिशेष सफ्टवेर"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:14
+msgid "Filezilla"
+msgstr "फाइलजिल्ला"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:16
+msgid "Skype"
+msgstr "स्काइप"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:18
+msgid "Inkscape"
+msgstr "इन्कस्केप"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/08-software.html:20
+msgid "Google Earth"
+msgstr "गूगल पृथ्वी"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/09-windows.html:1
+msgid "Run Windows software"
+msgstr "विन्डोजका सफ्टवेर चलाऊनुहोस्।"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/09-windows.html:8
+msgid ""
+"Install Wine and run Windows software in Linux Mint. Or install Virtualbox, "
+"and run Windows itself within Linux Mint."
+msgstr ""
+"वाइन इन्स्तल गरेर विन्डोजका सफ्टवेर लिनक्स मिन्टमा चलाऊन्होस्। अथवा "
+"भर्तुअलबक्स इन्स्तल गरी लिनक्स मिन्टमै विन्डोज चलाऊनुहोस्।"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/09-windows.html:15
+msgid "Wine"
+msgstr "वाइन"
+
+#. type: Content of: <div><div><ul><li>
+#: slideshows/mint-kde/slides/09-windows.html:17
+msgid "Virtualbox"
+msgstr "भर्तुअलबक्स"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/10-customize.html:1
+msgid "Customize your desktop"
+msgstr "आफ्नो डेस्कटपलाई अनुकूलित बनाउनुहोस्।"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/10-customize.html:8
+msgid ""
+"Make yourself at home and modify any aspect of your desktop. Choose from a "
+"large variety of themes, icons and backgrounds. Linux Mint is open and easy "
+"to customize."
+msgstr ""
+"आफुलाई घरमै सम्झी डेस्कटपका कुनैपनी स्वरूप बादलनुहोस्। उपलब्ध विविध थेम, "
+"आइकन, पृष्ठभूमिहरुबाट मन्परेका चुन्नुहोस्। लिनक्स मिन्ट आफ्नो अनुकूलित बनाउन "
+"निकै सजिलो छ।"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/11-updates.html:1
+msgid "Keep your system up to date"
+msgstr "आफ्नो सिस्टम अप तु देत राख्नुहोस्।"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/11-updates.html:8
+msgid ""
+"Receive fixes and security updates all in one place, for the entire system, "
+"including the software you install."
+msgstr ""
+"आफुले इन्स्तल गरेका सफ्टवेर र सम्पूर्ण सिस्टमको लागि नयाँ सुरक्षा, सुधार "
+"अपडेट एकै ठाउँमा पाउनुहोस्।"
+
+#. type: Content of: <div>
+#: slideshows/mint-kde/slides/12-help.html:1
+msgid "Find help"
+msgstr "सहयोग खोज्नुहोस् ।"
+
+#. type: Content of: <div><div><div><p>
+#: slideshows/mint-kde/slides/12-help.html:8
+msgid ""
+"If you're curious about something or if you're facing a problem, simply ask "
+"around. Linux Mint is the 4th most widely used operating system in the "
+"World. It comes with a user guide, a community website, a collection of "
+"tutorials, active forums and chat rooms and one of the most dynamic "
+"communities on the Internet."
+msgstr ""
+"यदी तपाईंलाई केही जिज्ञासा या केही समस्या छन भने सोध्नुहोस्। लिनक्स मिन्ट "
+"बिस्वको चौथो ब्यापक प्रयोग गरिने अपेरतिङ सिस्टम हो। यो प्रयोगकर्ताका लागि "
+"गाईड, समुदाइक वेब साईट, ट्यूटोरियलका संग्रह, सक्रिय फोरुमrहरु र च्याट "
+"रूम्सहरु पाइन्छन र यो ईन्टरनेटकै  सबैभन्दा क्रियाशील समुदायमा पर्छ।"

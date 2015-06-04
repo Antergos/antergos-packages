@@ -1,0 +1,208 @@
+# Serbian translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Саша Петровић <salepetronije@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-08 10:39+0100\n"
+"PO-Revision-Date: 2015-01-11 23:24+0000\n"
+"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
+"Language-Team: српски <xfce4@xfce4.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+"Language: sr\n"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:24 generate_desktop_files:58
+#: generate_desktop_files:72
+msgid "Welcome Screen"
+msgstr "Екран добродошлице"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:77
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did designing it. The links below will help you get started "
+"with your new operating system. Have a great time and don't hesitate to send "
+"us your feedback."
+msgstr ""
+"Добродошли и хвала вам што сте изабрали Линукс Минт. Надамо се да ћете "
+"уживати у његовом коришћењу колико смо и ми уживали правећи га. Везе у "
+"наставку ће вам помоћи да почнете са новим оперативним системом. Уживајте у "
+"даљем раду и не устручавајте се да нам пошаљете повратне податке."
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "New features"
+msgstr "Нове могућности"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "See what is new in this release"
+msgstr "Погледајте шта је ново у овом издању"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid "Important information"
+msgstr "Важна обавештења"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid ""
+"Find out about important information, limitations, known issues and their "
+"solution"
+msgstr ""
+"Сазнајте важна обавештења, ограничења, познате потешкоће и начине за њихово "
+"решавање"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "User guide (PDF)"
+msgstr "Корисничко упутство (ПДФ)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "Learn all the basics to get started with Linux Mint"
+msgstr "Научите основе за почетак коришћења Линукс Минта"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data"
+msgstr "Повратите податке"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data or applications from a previous installation"
+msgstr "Повратите податке или програме из претходних уградњи"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Software manager"
+msgstr "Управник програма"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Install additional software"
+msgstr "Уградите додатне програме"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat room"
+msgstr "Соба за ћаскање"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat live with other users in the chat room"
+msgstr "Ћаскајте уживо са осталим корисницима на соби за ћаскање"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Forums"
+msgstr "Форуми"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Seek help from other users in the Linux Mint forums"
+msgstr "Потражите помоћ од осталих корисника на форумима Линукс Минта"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Tutorials"
+msgstr "Упутства"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Find tutorials about Linux Mint"
+msgstr "Пронађите упутства за Линукс Минт"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid "Hardware database"
+msgstr "Складиште података о уређајима"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid ""
+"Find hardware that is compatible with Linux, or information about your "
+"hardware"
+msgstr ""
+"Пронађите уређаје којима Линукс одговара, или податке о својим уређајима"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Idea pool"
+msgstr "Идеје"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Submit new ideas to the development team"
+msgstr "Поднесите нове идеје развојној дружини"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Get involved"
+msgstr "Учествујте"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Find out how to get involved in the Linux Mint project"
+msgstr "Откријте како да се прикључите пројекту Линукс Минта"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Donations"
+msgstr "Добровољни прилози"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Make a donation to the Linux Mint project"
+msgstr "Приложите пројекту Линукс Минта"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Sponsors"
+msgstr "Покровитељи"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Apply to become a Linux Mint sponsor"
+msgstr "Поднесите пријаву да будете покровитељ Линукс Минта"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:140
+msgid "Show this dialog at startup"
+msgstr "Прикажи ово прозорче при покретању"
+
+#: generate_desktop_files:58 generate_desktop_files:72
+msgid "Introduction to Linux Mint"
+msgstr "Упознај се са Линукс Mинтом"
+
+#: generate_desktop_files:86
+msgid "Install Multimedia Codecs"
+msgstr "Уградња мултимедијалних кодека"
+
+#: generate_desktop_files:86
+msgid "Add all the missing multimedia codecs"
+msgstr "Додај све недостајуће мултимедијалне кодеке"
+
+#~ msgid "Visit the forums"
+#~ msgstr "Посетите форуме"
+
+#~ msgid "Find help"
+#~ msgstr "Naci pomoc"
+
+#~ msgid "Welcome to Linux Mint"
+#~ msgstr "Добродошли у Линукс Минт"
+
+#~ msgid "Connect to the chat room"
+#~ msgstr "Повежите се у соби за ћаскање"
+
+#~ msgid "Download the user guide (PDF)"
+#~ msgstr "Преузмите упутство за употребу (ПДФ)"
+
+#~ msgid "Read the release notes"
+#~ msgstr "Прочитајте белешке о издању"
+
+#~ msgid "Contribute to Linux Mint"
+#~ msgstr "Пронађите помоћ"
+
+#~ msgid "Browse the list of new features"
+#~ msgstr "Прегледај списак нових функција"
+
+#, python-format
+#~ msgid "Discover %s"
+#~ msgstr "Откријтеi %s"
+
+#~ msgid ""
+#~ "Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+#~ "as much as we did making it. Please make yourself familiar with the new "
+#~ "features and the documentation and don't hesitate to send us your feedback."
+#~ msgstr ""
+#~ "Добродошли и хвала вам што сте изабрали Линукс Минт. Надамо се да ћете "
+#~ "уживати користећи га,  исто колико смо и ми уживали правећи га. Молимо вас "
+#~ "да се упознате са новим функцијама и документацијом и не оклевајте да нам "
+#~ "пошаљете повратне информације."
+
+#~ msgid "Make a donation"
+#~ msgstr "Дарујте"
+
+#~ msgid "Become a sponsor"
+#~ msgstr "Постаните покровитељ"

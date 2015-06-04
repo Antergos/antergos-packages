@@ -1,0 +1,204 @@
+# Lithuanian translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-08 10:39+0100\n"
+"PO-Revision-Date: 2014-04-10 18:10+0000\n"
+"Last-Translator: jonas-ska <Unknown>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:24 generate_desktop_files:58
+#: generate_desktop_files:72
+msgid "Welcome Screen"
+msgstr "Susipažinimas su Linux sistema"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:77
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did designing it. The links below will help you get started "
+"with your new operating system. Have a great time and don't hesitate to send "
+"us your feedback."
+msgstr ""
+"Sveiki atvykę ir ačiū, kad pasirinkote Linux Mint. Tikimės, jums bus taip "
+"malonu ja naudotis, kaip buvo mums ją kuriant. Žemiau esančios nuorodos "
+"padės jums pradėti naudotis nauja operacine sistema. Gerai praleiskite laiką "
+"ir nedvejodami pasidalinkite savo atsiliepimais su mumis."
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "New features"
+msgstr "Naujovės"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "See what is new in this release"
+msgstr "Pažiūrėkite, kas naujo šioje versijoje"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid "Important information"
+msgstr "Svarbi informacija"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid ""
+"Find out about important information, limitations, known issues and their "
+"solution"
+msgstr ""
+"Raskite svarbios informacijos, apribojimų, žinomų klaidų ir jų sprendimo būdų"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "User guide (PDF)"
+msgstr "Naudotojo vadovas (PDF)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "Learn all the basics to get started with Linux Mint"
+msgstr "Išmokite Linux Mint pagrindų"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data"
+msgstr "Atkurkite duomenis"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data or applications from a previous installation"
+msgstr "Atkurkite ankstesnio įdiegimo duomenis ar programas"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Software manager"
+msgstr "Programų tvarkyklė"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Install additional software"
+msgstr "Diekite papildomų programų"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat room"
+msgstr "Pokalbių kambarys"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat live with other users in the chat room"
+msgstr "Kalbėkitės su kitais vartotojais pokalbių kambariuose"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Forums"
+msgstr "Forumai"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Seek help from other users in the Linux Mint forums"
+msgstr "Gaukite pagalbos iš kitų vartotojų Linux Mint forumuose"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Tutorials"
+msgstr "Pamokos"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Find tutorials about Linux Mint"
+msgstr "Raskite Linux mint vartotojo gidų"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid "Hardware database"
+msgstr "Aparatinės įrangos duomenų bazė"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid ""
+"Find hardware that is compatible with Linux, or information about your "
+"hardware"
+msgstr ""
+"Raskite aparatinę įrangą, suderinamą su Linux, bei informacijos apie saviškę"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Idea pool"
+msgstr "Idėjos"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Submit new ideas to the development team"
+msgstr "Siųskite naujas idėjas kūrėjų komandai"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Get involved"
+msgstr "Prisijunkite"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Find out how to get involved in the Linux Mint project"
+msgstr "Išsiaiškinkite, kaip prisidėti prie Linux Mint projekto"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Donations"
+msgstr "Parama"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Make a donation to the Linux Mint project"
+msgstr "Paremkite Linux Mint projektą"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Sponsors"
+msgstr "Sponsoriai"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Apply to become a Linux Mint sponsor"
+msgstr "Tapkite nuolatiniu Linux Mint remėju"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:140
+msgid "Show this dialog at startup"
+msgstr "Rodyti šį langą paleidus operacinę sistemą"
+
+#: generate_desktop_files:58 generate_desktop_files:72
+msgid "Introduction to Linux Mint"
+msgstr "Įvadas į Linux Mint"
+
+#: generate_desktop_files:86
+msgid "Install Multimedia Codecs"
+msgstr "Diegti multimedijos kodekus"
+
+#: generate_desktop_files:86
+msgid "Add all the missing multimedia codecs"
+msgstr "Pridėti visus trūkstamus multimedijos kodekus"
+
+#~ msgid "Connect to the chat room"
+#~ msgstr "Prisijungti prie pokalbių kambario"
+
+#~ msgid "Make a donation"
+#~ msgstr "Paaukokite"
+
+#~ msgid "Become a sponsor"
+#~ msgstr "Tapkite rėmėju"
+
+#~ msgid "Contribute to Linux Mint"
+#~ msgstr "Padėti Linux Mint"
+
+#, python-format
+#~ msgid "Discover %s"
+#~ msgstr "Aptikti %s"
+
+#~ msgid "Visit the forums"
+#~ msgstr "Apsilankyti forume"
+
+#~ msgid "Download the user guide (PDF)"
+#~ msgstr "Parsiųsti vartotojo gidą (PDF)"
+
+#~ msgid "Read the release notes"
+#~ msgstr "Skaityti leidimo užrašus"
+
+#~ msgid "Find help"
+#~ msgstr "Ieškoti pagalbos"
+
+#~ msgid ""
+#~ "Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+#~ "as much as we did making it. Please make yourself familiar with the new "
+#~ "features and the documentation and don't hesitate to send us your feedback."
+#~ msgstr ""
+#~ "Sveiki ir ačiū, kad naudojatės Linux Mint. Tikimės, kad jums patiks ja "
+#~ "naudotis taip pat, kaip mums patiko ją kurti. Susipažinkite su įdiegtomis "
+#~ "naujovėmis ir nedvejodami pasidalinkite savo mintimis su mumis."
+
+#~ msgid "Browse the list of new features"
+#~ msgstr "Peržiūrėti naujų sąvybių sąrašą"
+
+#~ msgid "Welcome to Linux Mint"
+#~ msgstr "Sveikiname paleidus Linux Mint sistemą"

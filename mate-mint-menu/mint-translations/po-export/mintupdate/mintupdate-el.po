@@ -1,0 +1,983 @@
+# Greek translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-05-29 15:50+0200\n"
+"PO-Revision-Date: 2015-04-11 07:50+0000\n"
+"Last-Translator: Jim Spentzos <Unknown>\n"
+"Language-Team: Greek <el@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:128
+msgid "Downloading changelog..."
+msgstr "Λήψη αρχείου καταγραφής αλλαγών..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:156
+msgid "No changelog available"
+msgstr "Μη διαθέσιμο αρχείο καταγραφής αλλαγών"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:254
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:423
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:176
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade_root.py:54
+msgid "Please wait, this can take some time"
+msgstr "Παρακαλώ περιμένετε, θα χρειαστούν μερικά λεπτά"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:257
+#, python-format
+msgid "The %s kernel was removed"
+msgstr "Ο πυρήνας %s αφαιρέθηκε"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:259
+#, python-format
+msgid "The %s kernel was installed"
+msgstr "Ο πυρήνας %s εγκαταστάθηκε"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:331
+msgid "This upgrade will trigger additional changes"
+msgstr "Η αναβάθμιση αυτή θα προκαλέσει επιπρόσθετες αλλαγές"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:341
+msgid "The following package will be removed:"
+msgstr "Το παρακάτω πακέτο θα αφαιρεθεί:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:343
+#, python-format
+msgid "The following %d packages will be removed:"
+msgstr "Τα παρακάτω %d πακέτα θα αφαιρεθούν:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:371
+msgid "The following package will be installed:"
+msgstr "Το παρακάτω πακέτο θα εγκατασταθεί:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:373
+#, python-format
+msgid "The following %d packages will be installed:"
+msgstr "Τα παρακάτω %d πακέτα θα εγκατασταθούν:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:414
+msgid "Installing updates"
+msgstr "Εγκατάσταση ενημερώσεων"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:425
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade_root.py:56
+msgid "Update is complete"
+msgstr "Η ενημέρωση ολοκληρώθηκε"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:465
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:574
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2033
+msgid "Checking for updates"
+msgstr "Έλεγχος για ενημερώσεις"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:489
+msgid "Could not install the security updates"
+msgstr "Αδυναμία εγκατάστασης ενημερώσεων ασφαλείας"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:563
+msgid "Starting refresh..."
+msgstr "Έναρξη ανανέωσης..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:612
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:613
+msgid "Another application is using APT"
+msgstr "Κάποια άλλη εφαρμογή χρησιμποιεί το APT"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:623
+msgid "Finding the list of updates..."
+msgstr "Εύρεση λίστας ενημερώσεων..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:659
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:660
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:873
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:874
+msgid "Your system is up to date"
+msgstr "Το σύστημά σας ειναι ενημερωμένο"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:677
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:678
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:899
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:903
+msgid "Could not refresh the list of updates"
+msgstr "Αδυναμία ανανέωσης της λίστας ενημερώσεων"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:725
+msgid "Security update"
+msgstr "Ενημέρωση ασφαλείας"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:727
+msgid ""
+"Software backport. Be careful when upgrading. New versions of sofware can "
+"introduce regressions."
+msgstr ""
+"Backport λογισμικό. Προσοχή όταν αναβαθμίζετε. Νεότερες εκδόσεις του "
+"λογισμικού ίσως οδηγήσουν σε προγενέστερη ανεπιθύμητη κατάσταση."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:729
+msgid ""
+"Unstable software. Only apply this update to help developers beta-test new "
+"software."
+msgstr ""
+"Ασταθές λογισμικό. Εφαρμόστε αυτή την ενημέρωση μόνο για να βοηθήσετε τους "
+"προγραμματιστές να κάνουν ελέγχους τύπου beta στο λογισμικό."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:731
+msgid "Software update"
+msgstr "Ενημέρωση λογισμικού"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:844
+msgid "A new version of the update manager is available"
+msgstr "Μια νέα έκδοση του διαχειριστή ενημερώσεων είναι διαθέσιμη"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:854
+#, python-format
+msgid "1 recommended update available (%(size)s)"
+msgstr "1 προτεινόμενη ενημέρωση είναι διαθέσιμη (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:856
+#, python-format
+msgid "1 recommended update available (%(size)s), 1 ignored"
+msgstr "1 προτεινόμενη ενημέρωση είναι διαθέσιμη (%(size)s), 1 παραβλέπεται"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:858
+#, python-format
+msgid "1 recommended update available (%(size)s), %(ignored)d ignored"
+msgstr ""
+"1 προτεινόμενη ενημέρωση είναι διαθέσιμη (%(size)s), %(ignored)d "
+"παραβλέπονται"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:861
+#, python-format
+msgid "%(recommended)d recommended updates available (%(size)s)"
+msgstr ""
+"%(recommended)d προτεινόμενες ενημερώσεις είναι διαθέσιμες (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:863
+#, python-format
+msgid "%(recommended)d recommended updates available (%(size)s), 1 ignored"
+msgstr ""
+"%(recommended)d προτεινόμενες ενημερώσεις είναι διαθέσιμες (%(size)s), 1 "
+"παραβλέπεται"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:865
+#, python-format
+msgid ""
+"%(recommended)d recommended updates available (%(size)s), %(ignored)d ignored"
+msgstr ""
+"%(recommended)d προτεινόμενες ενημερώσεις είναι διαθέσιμες (%(size)s), "
+"%(ignored)d παραβλέπονται"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:938
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:957
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1934
+msgid "No updates selected"
+msgstr "Καμία επιλεγμένη ενημέρωση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:959
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1936
+#, python-format
+msgid "%(selected)d update selected (%(size)s)"
+msgstr "%(selected)d επιλεγμένη ενημέρωση (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:961
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1938
+#, python-format
+msgid "%(selected)d updates selected (%(size)s)"
+msgstr "%(selected)d επιλεγμένες ενημερώσεις (%(size)s)"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:974
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1226
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1372
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1441
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1487
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1708
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1710
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2039 generate_desktop_files:24
+msgid "Update Manager"
+msgstr "Διαχειριστής Ενημερώσεων"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1226
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2164
+msgid "Preferences"
+msgstr "Προτιμήσεις"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1228
+msgid "Levels"
+msgstr "Επίπεδα"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1229
+msgid "Auto-Refresh"
+msgstr "Αυτόματη Ανανέωση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1230
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2074
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2219
+msgid "Level"
+msgstr "Επίπεδο"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1231
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2141
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1232
+msgid "Tested?"
+msgstr "Δοκιμασμένες;"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1233
+msgid "Origin"
+msgstr "Προέλευση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1234
+msgid "Safe?"
+msgstr "Ασφαλείς;"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1235
+msgid "Visible?"
+msgstr "Ορατές;"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1236
+msgid ""
+"Certified updates. Tested through Romeo or directly maintained by Linux Mint."
+msgstr ""
+"Πιστοποιημένες ενημερώσεις. Ελέγχθηκαν μέσω Romeo ή υποστηρίζονται απευθείας "
+"από το Linux Mint."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1237
+msgid "Recommended updates. Tested and approved by Linux Mint."
+msgstr ""
+"Συνιστώμενες ενημερώσεις. Ελεγμένες και εγκεκριμένες από το Linux Mint."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1238
+msgid "Safe updates. Not tested but believed to be safe."
+msgstr ""
+"Ασφαλείς ενημερώσεις. Δεν είναι ελεγμένες, αλλά πιστεύεται ότι είναι "
+"ασφαλείς."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1239
+msgid "Unsafe updates. Could potentially affect the stability of the system."
+msgstr ""
+"Μη ασφαλείς ενημερώσεις. Μπορούν να επιδράσουν στην σταθερότητα του "
+"συστήματος."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1240
+msgid ""
+"Dangerous updates. Known to affect the stability of the systems depending on "
+"certain specs or hardware."
+msgstr ""
+"Επικίνδυνες ενημερώσεις. Είναι γνωστό ότι επιδρούν στην σταθερότητα των "
+"συστημάτων, αναλόγως των ιδιαίτερων χαρακτηριστικών τους ή των εξαρτημάτων "
+"τους."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1241
+msgid "Linux Mint"
+msgstr "Linux Mint"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1242
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1243
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1244
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1245
+msgid "Upstream"
+msgstr "Upstream"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1246
+msgid "Refresh the list of updates every:"
+msgstr "Ανανέωση της λίστας ενημερώσεων κάθε:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1247
+msgid ""
+"Note: The list only gets refreshed while the update manager window is closed "
+"(system tray mode)."
+msgstr ""
+"Σημείωση: Η λίστα ανανεώνεται μόνο όταν το παράθυρο του διαχειριστή "
+"ενημερώσεων είναι κλειστό (λειτουργία γραμμής εργασιών)."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1249
+msgid "Options"
+msgstr ""
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1250
+msgid "Icons"
+msgstr "Εικονίδια"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1251
+msgid "Icon"
+msgstr "Εικονίδιο"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1252
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1253
+msgid "New Icon"
+msgstr "Νέο Εικονίδιο"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1254
+msgid "Busy"
+msgstr "Απασχολημένο"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1255
+msgid "System up-to-date"
+msgstr "Το σύστημα είναι ενημερωμένο"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1256
+msgid "Updates available"
+msgstr "Διαθέσιμες ενημερώσεις"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1257
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1258
+msgid "Unknown state"
+msgstr "Άγνωστη κατάσταση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1259
+msgid "Applying updates"
+msgstr "Εφαρμογή ενημερώσεων"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1260
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1314
+msgid "Ignored updates"
+msgstr "Αγνοημένες ενημερώσεις"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1262
+msgid ""
+"Include updates which require the installation of new packages or the "
+"removal of installed packages"
+msgstr ""
+"Να συμπεριλαμβάνονται ενημερώσεις που απαιτούν την εγκατάσταση νέων πακέτων "
+"ή την απομάκρυνση εγκατεστημένων πακέτων."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1263
+msgid "Hide the update manager after applying updates"
+msgstr ""
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1292
+msgid "Always show security updates"
+msgstr "Να εμφανίζονται πάντα ενημερώσεις ασφαλείας"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1293
+msgid "Always select and trust security updates"
+msgstr "Να επιλέγονται και να εμπιστεύονται πάντα οι ενημερώσεις ασφαλείας"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1295
+msgid "minutes"
+msgstr "λεπτά"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1296
+msgid "hours"
+msgstr "ώρες"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1297
+msgid "days"
+msgstr "ημέρες"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1340
+msgid "Please specify the name of the update to ignore:"
+msgstr "Προσδιορίστε το όνομα της ενημέρωσης που θα παραβλεφθεί:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1341
+msgid "Ignore an update"
+msgstr "Παράβλεψη ενημέρωσης"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1345
+msgid "Name:"
+msgstr "Όνομα:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1372
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2200
+msgid "History of updates"
+msgstr "Ιστορικό ενημερώσεων"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1375
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1378
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2070
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2225
+msgid "Package"
+msgstr "Πακέτο"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1381
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2078
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2231
+msgid "Old version"
+msgstr "Παλιά έκδοση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1384
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2082
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2237
+msgid "New version"
+msgstr "Νέα έκδοση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1441
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2206
+msgid "Information"
+msgstr "Πληροφορίες"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1444
+msgid "Process ID:"
+msgstr "Αναγνωριστικό Διεργασίας:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1445
+msgid "Log file:"
+msgstr "Αρχείο καταγραφής:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1463
+#, python-format
+msgid "Are you sure you want to remove the %s kernel?"
+msgstr "Είστε σίγουρος ότι θέλετε να αφαιρέσετε τον πυρήνα %s;"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1465
+#, python-format
+msgid "Are you sure you want to install the %s kernel?"
+msgstr "Είστε σίγουρος ότι θέλετε να εγκαταστήσετε τον πυρήνα %s;"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1487
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2203
+msgid "Linux kernels"
+msgstr "Πυρήνες Linux"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1495
+msgid "Warning!"
+msgstr "Προειδοποίηση!"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1496
+msgid ""
+"The Linux kernel is a critical part of the system. Regressions can lead to "
+"lack of networking, lack of sound, lack of graphical environment or even the "
+"inability to boot the computer. Only install or remove kernels if you're "
+"experienced with kernels, drivers, dkms and you know how to recover a non-"
+"booting computer."
+msgstr ""
+"Ο πυρήνας Linux είναι ένα κρίσιμο μέρος του συστήματος. Οι οπισθοδρομήσεις "
+"μπορούν να οδηγήσουν σε έλλειψη δικτύωσης, έλλειψη ήχου, έλλειψη γραφικού "
+"περιβάλλοντος ή ακόμη και αδυναμία εκκίνησης του υπολογιστή. Εγκαταστήστε ή "
+"αφαιρέστε πυρήνες μόνο αν είστε έμπειρος με πυρήνες, οδηγούς, dkms και αν "
+"ξέρετε πως να ανακτήσετε έναν υπολογιστή που δεν εκκινείται."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1497
+msgid "The following kernels are available:"
+msgstr "Οι ακόλουθοι πυρήνες είναι διαθέσιμοι:"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1498
+msgid "More info..."
+msgstr "Περισσότερες πληροφορίες..."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1500
+msgid ""
+"Fixes can represent bug fixes, improvements in hardware support or security "
+"fixes."
+msgstr ""
+"Οι διορθώσεις μπορούν να αντιπροσωπεύουν διορθώσεις σφαλμάτων, βελτιώσεις "
+"στην υποστήριξη υλικού ή διορθώσεις ασφαλείας."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1501
+msgid ""
+"Security fixes are important when local users represent a potential threat "
+"(in companies, libraries, schools or public places for instance) or when the "
+"computer can be threatened by remote attacks (servers for instance)."
+msgstr ""
+"Οι διορθώσεις ασφαλείας είναι σημαντικές όταν οι τοπικοί χρήστες "
+"αντιπροσωπεύουν μια πιθανή απειλή (στις εταιρίες, τις βιβλιοθήκες, τα "
+"σχολεία ή σε δημόσια μέρη για παράδειγμα) ή όταν ο υπολογιστής μπορεί να "
+"απειληθεί από απομακρυσμένες επιθέσεις (διακομιστές για παράδειγμα)."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1502
+msgid ""
+"Bug fixes and hardware improvements are important if one of your devices "
+"isn't working as expected and the newer kernel addresses that problem."
+msgstr ""
+"Οι διορθώσεις σφαλμάτων και οι βελτιώσεις υλικού είναι σημαντικές αν κάποια "
+"από τις συσκευές σας δε λειτουργεί όπως θα περιμένατε και ο νεότερος πυρήνας "
+"ασχολείται με αυτό το πρόβλημα."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1503
+msgid ""
+"Regressions represent something which worked well and no longer works after "
+"an update. It is common in software development that a code change or even a "
+"bug fix introduces side effects and breaks something else. Because of "
+"regressions it is recommended to be selective when installing updates or "
+"newer kernels."
+msgstr ""
+"Οι οπισθοδρομήσεις αντιπροσωπεύουν κάτι το οποίο λειτουργούσε καλά και δε "
+"λειτουργεί πλέον μετά από μια ενημέρωση. Είναι συνηθισμένο στην ανάπτυξη "
+"λογισμικού ότι ένας κώδικας αλλάζει ή ακόμη και μια διόρθωση σφαλμάτων "
+"παρουσιάζει παρενέργειες και χαλάει κάτι άλλο. Εξαιτίας των οπισθοδρομήσεων, "
+"συνίσταται να είστε επιλεκτικός κατά την εγκατάσταση ενημερώσεων ή νεότερων "
+"πυρήνων."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1505
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1528
+msgid "Fixes"
+msgstr "Διορθώσεις"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1506
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1532
+msgid "Regressions"
+msgstr "Οπισθοδρομήσεις"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1507
+msgid ""
+"Note: Only known fixes and regressions are mentioned. If you are aware of "
+"additional fixes or regressions, please contact the development team."
+msgstr ""
+"Σημείωση: Αναφέρονται μόνο οι γνωστές διορθώσεις και οπισθοδρομήσεις. Αν "
+"είστε ενήμερος για επιπλέον διορθώσεις ή επιστροφές, παρακαλούμε "
+"επικοινωνήστε με την ομάδα προγραμματισμού."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1512
+msgid "Version"
+msgstr "Έκδοση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1516
+msgid "Loaded"
+msgstr "Φορτώθηκε"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1520
+msgid "Recommended"
+msgstr "Προτείνεται"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1524
+msgid "Installed"
+msgstr "Εγκαταστάθηκε"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1607
+msgid "Install"
+msgstr "Εγκατάσταση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1611
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1653
+#, python-format
+msgid "Remove the %s kernel"
+msgstr "Αφαίρεση του πυρήνα %s"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1655
+msgid "This kernel cannot be removed because it is currently in use."
+msgstr ""
+"Αυτός ο πυρήνας δεν μπορεί να αφαιρεθεί επειδή χρησιμοποιείται αυτή τη "
+"στιγμή."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1659
+#, python-format
+msgid "Install the %s kernel"
+msgstr "Εγκατάσταση του πυρήνα %s"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1661
+msgid "This kernel is not installable."
+msgstr "Αυτός ο πυρήνας δεν είναι εγκαταστάσιμος."
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1708
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2274
+msgid "About"
+msgstr "Σχετικά"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1865
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1895
+#, python-format
+msgid "This update contains %d packages: "
+msgstr "Η ενημέρωση αυτή περιέχει %d πακέτα: "
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1868
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1898
+msgid "This update contains 1 package: "
+msgstr "Η ενημέρωση αυτή περιέχει 1 πακέτο: "
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1941
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1943
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1945
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1947
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:1976
+msgid "Ignore updates for this package"
+msgstr "Παράβλεψη ενημερώσεων για αυτό το πακέτο"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2065
+msgid "Upgrade"
+msgstr "Αναβάθμιση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2086
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2243
+msgid "Size"
+msgstr "Μέγεθος"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2090
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2213
+msgid "Type"
+msgstr "Τύπος"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2137
+msgid "Install Updates"
+msgstr "Εγκατάσταση Ενημερώσεων"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2138
+msgid "Refresh"
+msgstr "Ανανέωση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2139
+msgid "Select All"
+msgstr "Επιλογή Όλων"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2140
+msgid "Clear"
+msgstr "Εκκαθάριση"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2142
+msgid "Changelog"
+msgstr "Αρχείο καταγραφής αλλαγών"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2152
+msgid "_File"
+msgstr "_Αρχείο"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2156
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2160
+msgid "_Edit"
+msgstr "_Επεξεργασία"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2170
+msgid "Software sources"
+msgstr "Πηγές λογισμικού"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2192
+#, python-format
+msgid "Upgrade to %s"
+msgstr "Αναβάθμιση σε %s"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2196
+msgid "_View"
+msgstr "_Προβολή"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2209
+msgid "Visible columns"
+msgstr "Ορατές στήλες"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2251
+msgid "Show descriptions"
+msgstr "Εμφάνιση περιγραφών"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2265
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: usr/lib/linuxmint/mintUpdate/mintUpdate.py:2269
+msgid "Contents"
+msgstr "Περιεχόμενα"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:18
+msgid "System Upgrade"
+msgstr "Αναβάθμιση Συστήματος"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:30
+msgid "Introduction"
+msgstr "Εισαγωγή"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:34
+msgid ""
+"Your system is missing critical components. A package corresponding to your "
+"edition of Linux Mint should provide the virtual package 'mint-info' and the "
+"file /etc/linuxmint/info."
+msgstr ""
+"Από το σύστημά σας απουσιάζουν κρίσιμα συστατικά. Ένα από τα πακέτα που "
+"αντιστοιχούν στην έκδοση Linux Mint που έχετε μπορεί να δώσει τις "
+"πληροφορίες πακέτου 'mint-info' και το αρχείο /etc/linuxmint/info."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:47
+msgid "No upgrades were found."
+msgstr "Δε βρέθηκαν αναβαθμίσεις."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:55
+msgid "A new version of Linux Mint is available!"
+msgstr "Διατίθεται μια νέα έκδοση του Linux Mint!"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:65
+#, python-format
+msgid "An upgrade was found but it is not available yet for the %s edition."
+msgstr ""
+"Βρέθηκε μια αναβάθμιση αλλά δεν είναι ακόμη διαθέσιμη για την έκδοση %s."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:74
+msgid "Release notes"
+msgstr "Σημειώσεις έκδοσης"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:81
+msgid ""
+"Please read the release notes before upgrading. They explain all the known "
+"issues, workarounds and solutions associated with the new version."
+msgstr ""
+"Παρακαλώ διαβάστε τις σημειώσεις έκδοσης πριν αναβαθμίσετε. Εκεί εξηγούνται "
+"όλα τα γνωστά προβλήματα, η αντιμετώπιση και οι λύσεις που συνοδεύον την νέα "
+"έκδοση."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:85
+#, python-format
+msgid "Release notes for %s"
+msgstr "Σημειώσεις έκδοσης για %s"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:89
+msgid "Click on the link to open the release notes."
+msgstr "Πατήστε στον σύνδεσμο για να ανοίξετε τις σημειώσεις έκδοσης."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:97
+msgid "New features"
+msgstr "Καινούργιες λειτουργίες"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:104
+msgid "Please look at the new features introduced in the new version."
+msgstr ""
+"Παρακαλώ, ρίξτε μια ματιά στα νέα χαρακτηριστικά που εισάγει η νέα έκδοση."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:108
+#, python-format
+msgid "New features in %s"
+msgstr "Νέα χαρακτηριστικά στο %s"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:112
+msgid "Click on the link to browse the new features."
+msgstr "Πατήστε στον σύνδεσμο για περιήγηση στα νέα χαρακτηριστικά."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:120
+msgid "Requirements"
+msgstr "Απαιτήσεις"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:130
+#, python-format
+msgid "The package %s needs to be installed before upgrading."
+msgstr "Το πακέτο %s πρέπει να εγκατασταθεί πριν την αναβάθμιση."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:134
+#, python-format
+msgid "Install %s"
+msgstr "Εγκατάσταση %s"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:139
+msgid "Click on the button to install the missing package."
+msgstr "Πατήστε το κουμπί για να εγκατασταθεί το πακέτο που λείπει."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:153
+msgid ""
+"New releases provide bug fixes and new features but they also sometimes "
+"introduce new issues. Upgrading always represents a risk. Your data is safe "
+"but new issues can potentially affect your operating system."
+msgstr ""
+"Οι νέες εκδόσεις παρέχουν διορθώσεις σφαλμάτων και νέα χαρακτηριστικά αλλά, "
+"μερικές φορές, παρουσιάζουν νέα προβλήματα. Η αναβάθμιση πάντοτε ενέχει "
+"κινδύνους. Τα δεδομένα σας είναι ασφαλή αλλά τα νέα προβλήματα μπορούν, "
+"ενδεχομένως, να επιδράσουν στο λειτουργικό σύστημά σας."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:157
+#, python-format
+msgid "I understand the risk. I want to upgrade to %s."
+msgstr "Καταλαβαίνω τους κινδύνους. Επιθυμώ να αναβαθμίσω σε %s."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:167
+msgid "Summary"
+msgstr "Σύνοψη"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:178
+msgid "The package was installed"
+msgstr "Το πακέτο εγκαταστάθηκε"
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:270
+msgid ""
+"Your operating system was successfully upgraded. Please reboot your computer "
+"for all changes to take effect."
+msgstr ""
+"Το λειτουργικό σύστημά σας αναβαθμίστηκε με επιτυχία. Παρακαλώ επανεκκινήστε "
+"τον υπολογιστή ώστε να εφαρμοστούν όλες οι αλλαγές."
+
+#: usr/lib/linuxmint/mintUpdate/rel_upgrade.py:279
+msgid ""
+"The upgrade did not succeed. Make sure you are connected to the Internet and "
+"try to upgrade again."
+msgstr ""
+"Η αναβάθμιση δεν ήταν επιτυχής. Βεβαιωθείτε ότι είστε συνδεδεμένος στο "
+"Διαδίκτυο και προσπαθήστε ξανά να αναβαθμίσετε."
+
+#: generate_desktop_files:24
+msgid "Show and install available updates"
+msgstr "Εμφάνιση και εγκατάσταση διαθέσιμων ενημερώσεων"
+
+#: usr/bin/mint-release-upgrade-root:16
+msgid "Please enter your password to perform the upgrade"
+msgstr "Παρακαλώ πληκτρολογήστε τον κωδικό πρόσβασής σας για αναβάθμιση"
+
+#~ msgid "Checking the connection to the Internet..."
+#~ msgstr "Έλεγχος σύνδεσης με το Διαδίκτυο..."
+
+#~ msgid "Could not connect to the Internet"
+#~ msgstr "Αδυναμία σύνδεσης στο Διαδίκτυο"
+
+#~ msgid "Downloading safety level rules..."
+#~ msgstr "Μεταφόρτωση κανόνων επιπέδων ασφαλείας..."
+
+#~ msgid "Could not download safety rules"
+#~ msgstr "Αδυναμία μεταφόρτωσης κανόνων ασφαλείας"
+
+#~ msgid ""
+#~ "Certified packages. Tested through Romeo or directly maintained by Linux "
+#~ "Mint."
+#~ msgstr ""
+#~ "Πιστοποιημένα πακέτα. Δοκιμασμένα μέσω του Romeo ή απευθείας συντηρούμενα "
+#~ "από το Linux Mint."
+
+#~ msgid "Linux Mint or Romeo"
+#~ msgstr "Linux Mint ή Romeo"
+
+#~ msgid "Ubuntu or 3rd party"
+#~ msgstr "Ubuntu ή 3ου κατασκευαστή"
+
+#~ msgid "No"
+#~ msgstr "Όχι"
+
+#~ msgid "Yes"
+#~ msgstr "Ναι"
+
+#~ msgid "Startup delay (in seconds):"
+#~ msgstr "Καθυστέρηση εκκίνησης (σε δευτερόλεπτα):"
+
+#~ msgid "HTTP Proxy:"
+#~ msgstr "HTTP Διαμεσολαβητής:"
+
+#~ msgid "FTP Proxy:"
+#~ msgstr "FTP Διαμεσολαβητής:"
+
+#~ msgid "Gopher Proxy:"
+#~ msgstr "Διαμεσολαβητής Gopher:"
+
+#~ msgid "Port:"
+#~ msgstr "Θύρα:"
+
+#~ msgid "Internet check (domain name or IP address):"
+#~ msgstr "Έλεγχος Διαδικτύου (έλεγχος τομέα ή διεύθυνσης IP):"
+
+#~ msgid "Proxy"
+#~ msgstr "Διαμεσολαβητής"
+
+#~ msgid "Manual proxy configuration"
+#~ msgstr "Χειροκίνητη ρύθμιση διαμεσολαβητή"
+
+#~ msgid "Use the same proxy for all protocols"
+#~ msgstr "Χρήση του ίδιου διαμεσολαβητή για όλα τα πρωτόκολλα"
+
+#~ msgid "Please enter a package name:"
+#~ msgstr "Παρακαλώ εισάγετε το όνομα ενός πακέτου:"
+
+#~ msgid "Package name:"
+#~ msgstr "Όνομα πακέτου:"
+
+#~ msgid "Please enter your password to start mintUpdate"
+#~ msgstr "Παρακαλώ εισάγετε τον κωδικό σας για να ξεκινήσει το mintUpdate"
+
+#~ msgid "Log file"
+#~ msgstr "Αρχείο καταγραφής"
+
+#~ msgid "Permissions:"
+#~ msgstr "Δικαιώματα:"
+
+#~ msgid "Warnings"
+#~ msgstr "Προειδοποιήσεις"
+
+#~ msgid "Software Updates"
+#~ msgstr "Ενημερώσεις λογισμικού"
+
+#~ msgid "Satisfy changing dependencies using dist-upgrade?"
+#~ msgstr ""
+#~ "Να καλυφθούν οι τροποποιημένες εξαρτήσεις χρησιμοποιώντας το dist-upgrade;"
+
+#~ msgid ""
+#~ "Note: The dist-upgrade option, in addition to performing the function of "
+#~ "upgrade, also intelligently handles changing dependencies with new versions "
+#~ "of packages. Without this option, only the latest versions of any out-of-"
+#~ "date packages on your system are installed. Packages that are not yet "
+#~ "installed don't get installed automatically and newer versions of packages "
+#~ "which dependencies require such installations are simply ignored."
+#~ msgstr ""
+#~ "Σημείωση: Η επιλογή dist-upgrade, εκτός της αναβάθμισης, διαχειρίζεται "
+#~ "έξυπνα και τις τροποποιημένες εξαρτήσεις των νεότερων πακέτων. Χωρίς αυτή "
+#~ "την επιλογή, μόνο οι τελευταίες εκδόσεις των πακέτων του συστήματος σας "
+#~ "εγκαθίστανται. Πακέτα που δεν είναι ήδη εγκατεστημένα στον υπολογιστή σας, "
+#~ "αλλά απαιτούνται από τις εξαρτήσεις των νέων πακέτων αγνοούνται και δεν "
+#~ "εγκαθίστανται καθόλου."
+
+#~ msgid "Safe packages. Not tested but believed to be safe."
+#~ msgstr ""
+#~ "Ασφαλή πακέτα. Δεν έχουν δοκιμασθεί αλλά πιστεύεται ότι είναι ασφαλή."
+
+#~ msgid "Recommended packages. Tested and approved by Linux Mint."
+#~ msgstr "Προτεινόμενα πακέτα. Δοκιμασμένα και εγκεκριμένα από το Linux Mint."
+
+#~ msgid ""
+#~ "Note: The list only gets refreshed while the mintUpdate window is closed "
+#~ "(system tray mode)."
+#~ msgstr ""
+#~ "Σημείωση: Η λίστα ενημερώνεται μόνο όταν το παράθυρο του mintUpdate είναι "
+#~ "κλειστό (ως εικονιδίο στην μπάρα συστήματος)."
+
+#~ msgid "Extra Info"
+#~ msgstr "Επιπλέον πληροφορίες"
+
+#, python-format
+#~ msgid "%d recommended updates available"
+#~ msgstr "%d προτεινόμενες διαθέσιμες αναβαθμίσεις"
+
+#, python-format
+#~ msgid "%(recommended)d recommended updates available, %(ignored)d ignored"
+#~ msgstr ""
+#~ "%(recommended)d συνιστώμενες ενημερώσεις διαθέσιμες, %(ignored)d αγνοήθηκαν"
+
+#~ msgid "Could not refresh the list of packages"
+#~ msgstr "Αδυναμία ανανέωσης της λίστας πακέτων"
+
+#~ msgid ""
+#~ "Unsafe packages. Could potentially affect the stability of the system."
+#~ msgstr ""
+#~ "Μη ασφαλή πακέτα. Θα μπορούσαν να επηρεάσουν την σταθερότητα του συστήματος."
+
+#~ msgid ""
+#~ "Dangerous packages. Known to affect the stability of the systems depending "
+#~ "on certain specs or hardware."
+#~ msgstr ""
+#~ "Επικίνδυνα πακέτα. Είναι γνωστό ότι επηρεάζουν την σταθερότητα των "
+#~ "συστημάτων ανάλογα με συγκεκριμένες προδιαγραφές ή υλικό."
+
+#~ msgid "Update Method"
+#~ msgstr "Μέθοδος Ενημέρωσης"
+
+#~ msgid "Ignored packages"
+#~ msgstr "Πακέτα που παραβλέφθηκαν"
+
+#~ msgid "Ignore a package"
+#~ msgstr "Παράβλεψη πακέτου"
+
+#~ msgid "All available upgrades for this package will be ignored."
+#~ msgstr ""
+#~ "Όλες οι διαθέσιμες αναβαθμίσεις για το συγκεκριμένο πακέτο θα παραβλεφθούν."

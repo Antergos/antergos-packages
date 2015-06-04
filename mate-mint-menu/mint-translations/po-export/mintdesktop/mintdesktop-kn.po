@@ -1,0 +1,201 @@
+# Kannada translation for linuxmint
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-12-09 16:44+0000\n"
+"PO-Revision-Date: 2012-06-02 18:28+0000\n"
+"Last-Translator: Hoysala T'swamy <jrandomnerd@gmail.com>\n"
+"Language-Team: Kannada <kn@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:110
+msgid "Desktop"
+msgstr "ಗಣಕತೆರೆ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:111
+msgid "Windows"
+msgstr "ಕಿಟಕಿಗಳು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:112
+msgid "Interface"
+msgstr "ಸಂಪರ್ಕಸಾಧನ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:113
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:160
+msgid "Terminal"
+msgstr "ಆದೇಶತೆರೆ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:154
+msgid "Desktop icons"
+msgstr "ಗಣಕತೆರೆ ಲಾಂಛನಗಳು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:155
+msgid "Performance"
+msgstr "ಕಾರ್ಯಕ್ಷಮತೆ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:156
+msgid "Appearance"
+msgstr "ಗೋಚರತೆ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:157
+msgid "Icons"
+msgstr "ಲಾಂಛನಗಳು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:158
+msgid "Context menus"
+msgstr "ಸಾಂದರ್ಭಿಕ ಅಂಶಪಟ್ಟಿಗಳು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:159
+msgid "Toolbars"
+msgstr "ಉಪಕರಣಪಟ್ಟಿಗಳು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:161
+msgid "Window Manager"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:163
+msgid "Select the items you want to see on the desktop:"
+msgstr "ನೀವು ಗಣಕತೆರೆಯ ಮೇಲೆ ನೋಡಲು ಬಯಸುವ ಅಂಶಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಿ:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:165
+msgid "Computer"
+msgstr "ಗಣಕ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:166
+msgid "Home"
+msgstr "ನೆಲೆ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:167
+msgid "Network"
+msgstr "ಜಾಲಬಂಧ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:168
+msgid "Trash"
+msgstr "ಕಸದ ಬುಟ್ಟಿ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:169
+msgid "Mounted Volumes"
+msgstr "ಆರೋಹಣವಾದ ಸಂಪುಟಗಳು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:171
+msgid "Don't show window content while dragging them"
+msgstr "ಎಳೆದಾಡುವಾಗ ಕಿಟಕಿಯ ಒಳಗನ್ನು ತೋರಿಸದಿರು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:172
+msgid "Use compositing"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:173
+msgid "Use system font in titlebar"
+msgstr "ಶೀರ್ಷಿಕೆಪಟ್ಟಿಯಲ್ಲಿ ವ್ಯವಸ್ಥೆಯ ಅಕ್ಷರಶೈಲಿಯನ್ನು ಬಳಸು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:174
+msgid "Show fortune cookies"
+msgstr "ಅದೃಷ್ಟ ಸಂದೇಶಗಳನ್ನು ತೋರಿಸು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:176
+msgid "Buttons layout:"
+msgstr "ಒತ್ತುಗುಂಡಿಗಳ ವಿನ್ಯಾಸ:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:178
+msgid "Window manager:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:180
+msgid "Show icons on menus"
+msgstr "ಅಂಶಪಟ್ಟಿಗಳಲ್ಲಿ ಲಾಂಛನಗಳನ್ನು ತೋರಿಸು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:181
+msgid "Show icons on buttons"
+msgstr "ಒತ್ತುಗುಂಡಿಗಳಲ್ಲಿ ಲಾಂಛನಗಳನ್ನು ತೋರಿಸು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:182
+msgid "Show Input Methods menu in context menus"
+msgstr "ಸಾಂದರ್ಭಿಕ ಅಂಶಪಟ್ಟಿಗಳಲ್ಲಿ ಆದಾನ ಪದ್ಧತಿಗಳನ್ನು ತೋರಿಸು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:183
+msgid "Show Unicode Control Character menu in context menus"
+msgstr "ಸಾಂದರ್ಭಿಕ ಅಂಶಪಟ್ಟಿಗಳಲ್ಲಿ ಯೂನಿಕೋಡ್ ನಿಯಂತ್ರಣ ಅಕ್ಷರ ಅಂಶಪಟ್ಟಿ ತೋರಿಸು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:185
+msgid "Buttons labels:"
+msgstr "ಒತ್ತುಗುಂಡಿಗಳ ಶೀರ್ಷಿಕೆಗಳು:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:186
+msgid "Icon size:"
+msgstr "ಲಾಂಛನ ಗಾತ್ರ:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:210
+msgid "Small"
+msgstr "ಚಿಕ್ಕದು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:211
+msgid "Large"
+msgstr "ದೊಡ್ಡದು"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:217
+msgid "Traditional style (Right)"
+msgstr "ಸಾಂಪ್ರದಾಯಿಕ ಶೈಲಿ (ಬಲ)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:218
+msgid "Mac style (Left)"
+msgstr "ಮ್ಯಾಕ್ ಶೈಲಿ (ಎಡ)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:225
+msgid "Marco (stable and reliable)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:226
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:234
+msgid "Compiz (impressive desktop effects)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:228
+msgid ""
+"Log out and log back in for changes to take effect. If things go wrong, run "
+"'mate-wm-recovery' to switch back to Marco."
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:233
+msgid "Xfwm (stable and reliable)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:237
+msgid "Log out and log back in for changes to take effect."
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:246
+msgid "Text below items"
+msgstr "ಅಂಶಗಳ ಕೆಳಗೆ ಪಠ್ಯ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:247
+msgid "Text beside items"
+msgstr "ಅಂಶಗಳ ಬದಿಯಲ್ಲಿ ಪಠ್ಯ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:248
+msgid "Icons only"
+msgstr "ಲಾಂಛನಗಳು ಮಾತ್ರ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:249
+msgid "Text only"
+msgstr "ಪಠ್ಯ ಮಾತ್ರ"
+
+#: generate_desktop_files:25
+msgid "Desktop Settings"
+msgstr "ಗಣಕತೆರೆ ಸಂಯೋಜನೆಗಳು"
+
+#: generate_desktop_files:25
+msgid "Fine-tune desktop settings"
+msgstr "ಗಣಕತೆರೆ ಸಂಯೋಜನೆಗಳನ್ನು ಹದಮಾಡಿ"
+
+#~ msgid "Desktop Configuration Tool"
+#~ msgstr "ಗಣಕತೆರೆ ಸಂಯೋಜನಾ ಸಲಕರಣೆ"

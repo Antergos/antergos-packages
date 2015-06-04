@@ -1,0 +1,53 @@
+# Malagasy translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-03-31 16:29+0100\n"
+"PO-Revision-Date: 2014-05-07 19:06+0000\n"
+"Last-Translator: DotMG <mahefa.randimbisoa@gmail.com>\n"
+"Language-Team: Malagasy <mg@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/common/mint-which-launcher.py:9
+#: usr/lib/linuxmint/common/mint-which-launcher.py:11
+msgid "Please enter your password"
+msgstr "Atsofohy ny tenimiafina"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:36
+msgid "Please wait, this can take some time"
+msgstr "Mahandrasa azafady fa mety haharitraritra"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:38
+msgid "Application removed successfully"
+msgstr "Voaaisotra soa aman-tsara ny fampiharana"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:57
+msgid ""
+"This menu item is not associated to any package. Do you want to remove it "
+"from the menu anyway?"
+msgstr ""
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:67
+msgid "The following packages will be removed:"
+msgstr "Hoesorina ireto packages ireto:"
+
+#: usr/lib/linuxmint/common/mint-remove-application.py:71
+msgid "Packages to be removed"
+msgstr "Packages hoesorina"
+
+#: generate_additional_files.py:49
+msgid "Send by Email"
+msgstr "Alefa imailaka"
+
+#: generate_additional_files.py:49
+msgid "Send as email attachment"
+msgstr "Alefa amin'ny mailaka"

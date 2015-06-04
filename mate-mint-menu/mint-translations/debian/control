@@ -1,0 +1,11 @@
+Source: mint-translations
+Section: admin
+Priority: optional
+Maintainer: Clement Lefebvre <root@linuxmint.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: mint-translations
+Architecture: all
+Description: Translation files for Linux Mint
+ Translation files for Linux Mint

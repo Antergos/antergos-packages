@@ -1,0 +1,206 @@
+# Polish translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-08 10:39+0100\n"
+"PO-Revision-Date: 2014-10-01 06:46+0000\n"
+"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
+"Language-Team: Polish <pl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:24 generate_desktop_files:58
+#: generate_desktop_files:72
+msgid "Welcome Screen"
+msgstr "Ekran powitalny"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:77
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did designing it. The links below will help you get started "
+"with your new operating system. Have a great time and don't hesitate to send "
+"us your feedback."
+msgstr ""
+"Witamy i dziękujemy za wybranie Linux Mint. Mamy nadzieję, że korzystanie z "
+"niego sprawi Ci tyle samo przyjemności jak nam jego projektowanie. Poniższe "
+"odnośniki pomogą Ci rozpocząć korzystanie z nowego systemu operacyjnego. Baw "
+"się dobrze i nie wahaj się przesłać nam swojej opinii."
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "New features"
+msgstr "Nowe funkcje"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "See what is new in this release"
+msgstr "Zobacz co jest nowego w tym wydaniu"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid "Important information"
+msgstr "Ważne informacje"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid ""
+"Find out about important information, limitations, known issues and their "
+"solution"
+msgstr ""
+"Dowiedz się o ważnych informacjach, ograniczeniach, znanych problemach i "
+"sposobach ich rozwiązania"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "User guide (PDF)"
+msgstr "Podręcznik użytkownika (PDF)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "Learn all the basics to get started with Linux Mint"
+msgstr "Naucz się podstaw, aby zacząć pracę z Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data"
+msgstr "Przywróć dane"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data or applications from a previous installation"
+msgstr "Przywróć dane lub programy z wcześniejszej instalacji"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Software manager"
+msgstr "Menedżer oprogramowania"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Install additional software"
+msgstr "Zainstaluj dodatkowe oprogramowanie"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat room"
+msgstr "Pokój rozmów"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat live with other users in the chat room"
+msgstr "Rozmawiaj na żywo z innymi użytkownikami w pokojach rozmów"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Forums"
+msgstr "Fora dyskusyjne"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Seek help from other users in the Linux Mint forums"
+msgstr "Szukaj pomocy u innych użytkowników na formach Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Tutorials"
+msgstr "Poradniki"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Find tutorials about Linux Mint"
+msgstr "Odnajdź poradniki dotyczące Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid "Hardware database"
+msgstr "Baza danych urządzeń"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid ""
+"Find hardware that is compatible with Linux, or information about your "
+"hardware"
+msgstr ""
+"Odnajdź sprzęt, który jest kompatybilny z Linuksem oraz informacje nt. "
+"własnego sprzętu"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Idea pool"
+msgstr "Pomysły"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Submit new ideas to the development team"
+msgstr "Prześlij nowe pomysły do zespołu programistów"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Get involved"
+msgstr "Zaangażuj się"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Find out how to get involved in the Linux Mint project"
+msgstr "Dowiedz się, jak się zaangażować w projekt Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Donations"
+msgstr "Datki"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Make a donation to the Linux Mint project"
+msgstr "Przekaż darowiznę dla projektu Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Sponsors"
+msgstr "Sponsorzy"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Apply to become a Linux Mint sponsor"
+msgstr "Zostań sponsorem Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:140
+msgid "Show this dialog at startup"
+msgstr "Wyświetl to okno na starcie"
+
+#: generate_desktop_files:58 generate_desktop_files:72
+msgid "Introduction to Linux Mint"
+msgstr "Wprowadzenie do Linuksa Mint"
+
+#: generate_desktop_files:86
+msgid "Install Multimedia Codecs"
+msgstr "Zainstaluj kodeki multimediów"
+
+#: generate_desktop_files:86
+msgid "Add all the missing multimedia codecs"
+msgstr "Dodaj wszystkie brakujące kodeki multimediów"
+
+#~ msgid "Visit the forums"
+#~ msgstr "Odwiedź forum"
+
+#~ msgid "Connect to the chat room"
+#~ msgstr "Dołącz do czatu"
+
+#, python-format
+#~ msgid "Discover %s"
+#~ msgstr "Odkryj %s"
+
+#~ msgid "Find help"
+#~ msgstr "Znajdź pomoc"
+
+#~ msgid "Welcome to Linux Mint"
+#~ msgstr "Witaj w Linux Mint"
+
+#~ msgid "Become a sponsor"
+#~ msgstr "Zostań sponsorem"
+
+#~ msgid "Download the user guide (PDF)"
+#~ msgstr "Pobierz instrukcję użytkownika (PDF)"
+
+#~ msgid "Browse the list of new features"
+#~ msgstr "Przejrzyj listę nowych funkcji"
+
+#~ msgid "Read the release notes"
+#~ msgstr "Zapoznaj się z informacją o wydaniu"
+
+#~ msgid "Contribute to Linux Mint"
+#~ msgstr "Wesprzyj Linux Mint"
+
+#~ msgid "Make a donation"
+#~ msgstr "Wesprzyj nas finansowo"
+
+#~ msgid ""
+#~ "Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+#~ "as much as we did making it. Please make yourself familiar with the new "
+#~ "features and the documentation and don't hesitate to send us your feedback."
+#~ msgstr ""
+#~ "Witaj, dziękujemy za wybranie Linux Mint. Mamy nadzieję, że jego używanie "
+#~ "spodoba Ci się tak samo, jak nam jego tworzenie. Zapoznaj się z nowymi "
+#~ "możliwościami oraz dokumentacją i nie wahaj się wysłać nam swojej opinii."

@@ -1,0 +1,899 @@
+# Kashubian translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 17:21+0100\n"
+"PO-Revision-Date: 2010-05-09 11:54+0000\n"
+"Last-Translator: Mark Kwidzińsczi <Unknown>\n"
+"Language-Team: Kashubian <csb@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:196
+#, python-format
+msgid "The package '%s' could not be installed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:198
+#, python-format
+msgid "The package '%s' could not be removed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:204
+msgid "Please check your connection to the Internet"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:215
+msgid "Another application is using APT:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:301
+#, python-format
+msgid "%d ongoing actions"
+msgstr "%d rbiacych dzejaniów"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:311
+#, python-format
+msgid "Cancel the task: %s"
+msgstr "Anulowanié zadania: %s"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Waiting"
+msgstr "Żdanié"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Downloading"
+msgstr "Zladënk"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Running"
+msgstr "Zrëszony"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:125
+msgid "Finished"
+msgstr "Skùńczoné"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:335
+#, python-format
+msgid "Installing %s"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:337
+#, python-format
+msgid "Removing %s"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:339
+msgid "Updating cache"
+msgstr "Aktualizacëjô pòdrãczny pamiãcë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:341
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:343
+msgid "No role set"
+msgstr "Felënk nastôwiony reglë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:451
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:789
+#: usr/lib/linuxmint/mintInstall/splash.py:20
+#: usr/lib/linuxmint/mintInstall/splash.py:27
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:343 generate_desktop_files:24
+#: generate_desktop_files:35 generate_desktop_files:47
+msgid "Software Manager"
+msgstr "Menedżera softwôrë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:472
+msgid "_File"
+msgstr "_Lopk"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:476
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:127
+msgid "Close"
+msgstr "Zamkni"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:480
+msgid "_Edit"
+msgstr "_Edicëjô"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:484
+msgid "Preferences"
+msgstr "Preferencëje"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:488
+msgid "Search in packages summary (slower search)"
+msgstr "Szëkba w zesëmòwaniu paczétów (wòlnô szëkba)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:492
+msgid "Search in packages description (even slower search)"
+msgstr "Szëkba w òpisënkù paczétów (jesz wòlniészô szëkba)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:496
+msgid "Open links using the web browser"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:500
+msgid "Search while typing"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:513
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:753
+msgid "Account information"
+msgstr "Pòdôwczi kònta"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:520
+msgid "Software sources"
+msgstr "Zdroje softwôrë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:524
+msgid "_View"
+msgstr "_Wëzdrzatk"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:528
+msgid "Available packages"
+msgstr "Przëstãpné paczétë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:532
+msgid "Installed packages"
+msgstr "Winstalowóné paczétë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:539
+msgid "_Help"
+msgstr "_Pòmòc"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:543
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:787
+msgid "About"
+msgstr "Ò"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:589
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:599
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1118
+msgid "Categories"
+msgstr "Kategòrëje"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:590
+msgid "Please choose a category"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:591
+#, python-format
+msgid "%d packages are currently available"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:600
+msgid "Please choose a sub-category"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:621
+msgid "No ongoing actions"
+msgstr "Felënk aktualnych dzejaniów"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:622
+msgid "Active tasks:"
+msgstr "Aktiwné zadania:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:625
+msgid "Show all results"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:755
+msgid "Your community account"
+msgstr "Twòjé spòlëzniane kònto"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:757
+msgid "Fill in your account info to review applications"
+msgstr "Wëfùlëjë wëdowiédzã ò se na kònce, żebë móc recenzowac programë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:759
+msgid "Username:"
+msgstr "Miono brëkòwnika:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:760
+msgid "Password:"
+msgstr "Parola:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:832
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1759
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1770
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:834
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1761
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1772
+msgid "KB"
+msgstr "KB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:836
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1763
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1774
+msgid "MB"
+msgstr "MB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:838
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1765
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1776
+msgid "GB"
+msgstr "GB"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:860
+msgid "Icon"
+msgstr "Ikòna"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:864
+msgid "Application"
+msgstr "Aplikacëjô"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:871
+msgid "Score"
+msgstr "Pùnktacëjô"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:893
+msgid "Task"
+msgstr "Dzejanié"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:896
+msgid "Status"
+msgstr "Status"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:899
+msgid "Progress"
+msgstr "Pòkrok"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:996
+msgid "See more reviews"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1038
+msgid "Screenshot"
+msgstr "Zdrzëcënk ekranu"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1047
+msgid "Website"
+msgstr "Internetowô starna"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1055
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1067
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1780
+msgid "Reviews"
+msgstr "Recenzëje"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1120
+msgid "Featured"
+msgstr "Zamòdlëwóné"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1123
+msgid "All Packages"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1125
+msgid "Internet"
+msgstr "Internet"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1126
+msgid "Web"
+msgstr "Séc"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1128
+msgid "Email"
+msgstr "E-mail"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1130
+msgid "Chat"
+msgstr "Gôdka"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1132
+msgid "File sharing"
+msgstr "Wëmiana lopków"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1135
+msgid "Sound and video"
+msgstr "Zwãk ë òbrôz"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1138
+msgid "Graphics"
+msgstr "Grafika"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1140
+msgid "3D"
+msgstr "Trzëmiarowé"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1142
+msgid "Drawing"
+msgstr "Céchòwanié"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1144
+msgid "Photography"
+msgstr "Fòtografijô"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1146
+msgid "Publishing"
+msgstr "Pùblikòwanié"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1148
+msgid "Scanning"
+msgstr "Skanowanié"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1150
+msgid "Viewers"
+msgstr "Przezérniczi"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1153
+msgid "Office"
+msgstr "Biuro"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1155
+msgid "Games"
+msgstr "Grë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1157
+msgid "Board games"
+msgstr "Planszowé grë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1159
+msgid "First-person shooters"
+msgstr "Pierszoperzonowé strzelanczi"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1161
+msgid "Real-time strategy"
+msgstr "Strategijô realnegò czasu"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1163
+msgid "Turn-based strategy"
+msgstr "Startegijô òpiartô na rundach"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1165
+msgid "Emulators"
+msgstr "Emùlatorë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1167
+msgid "Simulation and racing"
+msgstr "Symùlacëjô ë góńbë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1170
+msgid "Accessories"
+msgstr "Akcesorëja"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1172
+msgid "System tools"
+msgstr "Systemòwé nôrzãdza"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1175
+msgid "Fonts"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1178
+msgid "Science and Education"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1181
+msgid "Programming"
+msgstr "Programòwanié"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1380
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1853
+#, python-format
+msgid "%d reviews"
+msgstr "%d recenzëji"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1416
+#, python-format
+msgid "%d packages"
+msgstr "%d paczétów"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1661
+#, python-format
+msgid "Only results in category \"%s\" are shown."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1672
+msgid "Search results"
+msgstr "Skùtczi szëkbë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Hate it"
+msgstr "Nie lubi mie"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Not a fan"
+msgstr "Nie jem fanã"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "So so"
+msgstr "Czésto fejn"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Like it"
+msgstr "Lubi mie"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Awesome!"
+msgstr "Super!"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1728
+msgid "Score:"
+msgstr "Pùnktacëjô:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1729
+msgid "Submit"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1730
+msgid "Your review"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1778
+msgid "Size:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1779
+msgid "Version:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1781
+msgid "Your review:"
+msgstr "Twòjô recenzëjô:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1782
+msgid "Details"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1784
+msgid "This will remove the following packages:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1785
+msgid "Cancel"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1786
+msgid "Confirm"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1790
+#, python-format
+msgid "%(localSize)s of disk space freed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1792
+#, python-format
+msgid "%(localSize)s of disk space required"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1795
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space freed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1797
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space required"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1800
+msgid "The following packages would be installed: "
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1802
+msgid "The following packages would be removed: "
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1805
+msgid "Impact on packages:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1823
+msgid "Remove"
+msgstr "Rëmôj"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1825
+#: usr/bin/mint-search-apt:37
+msgid "Installed"
+msgstr "Winstalowóny"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1829
+msgid "Not available"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1831
+msgid "Please use apt-get to install this package."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1834
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:207
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:442
+msgid "Install"
+msgstr "Instalëjë"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1836
+msgid "Not installed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1857
+msgid "Reviews:"
+msgstr "Recenzëje:"
+
+#: usr/lib/linuxmint/mintInstall/splash.py:28
+#, python-format
+msgid "Gathering information for %d packages..."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:68
+msgid "Backing up your APT sources"
+msgstr "Ùsôdzë kòpijã swòjich zdrojów APT"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:92
+#: usr/lib/linuxmint/mintInstall/remove.py:48 usr/bin/mint-synaptic-install:14
+msgid "Please wait, this can take some time"
+msgstr "Proszã żdac, to mòże kąsk zbawic"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:94
+#: usr/bin/mint-synaptic-install:16
+msgid "Installation is complete"
+msgstr "Instalacëjô zakùńczonô"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:121
+msgid "Restoring your APT sources"
+msgstr "Doprowôdzanié nazôd twòjich zdrojów APT"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:204
+msgid "Using the following repositories:"
+msgstr "Brëkùjë nôslédnych repòzytorëjów:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:209
+#, python-format
+msgid "Install %s?"
+msgstr "Winstalowac %s?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:212
+msgid "The following packages will be installed:"
+msgstr "Nôslédny paczétë bãdą winstalowóne:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:223
+msgid "Default repositories"
+msgstr "Domëslné repòzytorëja"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:296
+#, python-format
+msgid "Upgrade %s?"
+msgstr "Zaktualnic %s?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:298
+msgid "The following packages will be upgraded:"
+msgstr "Nôslédné paczétë bãdą zaktualnioné:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:299
+msgid "Upgrade"
+msgstr "Zaktualni"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:434
+msgid "Find Software"
+msgstr "Nalezë softwôrã"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:437
+msgid "Go to the Linux Mint Software Portal"
+msgstr "Biéj do Pòrtalu Softwôrë Linux Mint"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:438
+msgid "Search for a .mint application"
+msgstr "Szëkba aplikacëji a .mint"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:439
+msgid "Go to the GetDeb Portal"
+msgstr "Biéj do Pòrtalu GetDeb"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:440
+msgid "Search for a .deb package"
+msgstr "Szëkba paczétu .deb"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:441
+msgid "Search"
+msgstr "Szëkba"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:443
+msgid "Show"
+msgstr "Wëskrzëni"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:444
+msgid "Go to the Ubuntu repository"
+msgstr "Biéj do repòzytorëjóm Ubuntu"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:445
+msgid "Go to the Linux Mint repository"
+msgstr "Biéj do repòzytorëjóm Linux Mint"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid "Your APT sources were corrupted."
+msgstr "Twòje zdroje APT mają fele."
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid ""
+"Your APT sources were not correctly restored after you last ran mintInstall. "
+"They now have been restored."
+msgstr ""
+"Twòje zdroje APT nie òstałë, pò slédnym zrëszeniu mintinstall, pòprôwno "
+"doprowôdzoné nazôd. Terô òstałë òne doprowôdzoné nazôd."
+
+#: usr/lib/linuxmint/mintInstall/remove.py:50
+msgid "Application removed successfully"
+msgstr "Pòprôwno rëmniãtô aplikacëjô"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:104
+#, python-format
+msgid "Remove %s?"
+msgstr "Rëmôj %s"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:107
+msgid "The following packages will be removed:"
+msgstr "Nôslédné paczétë bãdą rëmniãté:"
+
+#: usr/bin/mint-search-apt:34
+msgid "No results"
+msgstr "Felënk skùtków"
+
+#: usr/bin/mint-search-apt:41
+msgid "Package"
+msgstr "Paczétë"
+
+#: usr/bin/mint-search-apt:42
+msgid "Description"
+msgstr "Òpisënk"
+
+#: usr/bin/mint-make-cmd:37 usr/bin/mint-make-cmd:38
+#, python-format
+msgid "Could not find package: %s"
+msgstr "Nié mòżé nalezc paczétu: %s"
+
+#: generate_desktop_files:24 generate_desktop_files:35
+#: generate_desktop_files:47
+msgid "Install new applications"
+msgstr "Instalëjë nową aplikacëjã"
+
+#~ msgid "Featured applications"
+#~ msgstr "Przëstãpné aplikacëje"
+
+#~ msgid "These popular applications can be installed on your system:"
+#~ msgstr "Ne pòpùlarné aplikacëje mògą bëc winstalowóné w twòji systemie:"
+
+#~ msgid "Repository"
+#~ msgstr "Repòzytorëja"
+
+#~ msgid ""
+#~ "The mint file for this application was not successfully downloaded. Click on "
+#~ "refresh to fix the problem."
+#~ msgstr ""
+#~ "Lopk mint dlô ti aplikacëji ni òstôł pòprôwno zladowóny. Klëkni na \"Zladëjë "
+#~ "znowa\" abë naprawic nã problemã."
+
+#~ msgid "Size"
+#~ msgstr "Miara"
+
+#~ msgid "The changes are complete"
+#~ msgstr "Ùkùńczonë zmianë"
+
+#~ msgid "Portal URL"
+#~ msgstr "Adresa URL Pòrtalu"
+
+#~ msgid "Description:"
+#~ msgstr "Òpisënk:"
+
+#~ msgid "Quick search:"
+#~ msgstr "Chùtkô szëkba:"
+
+#~ msgid "License:"
+#~ msgstr "Licencëjô:"
+
+#~ msgid "Available version"
+#~ msgstr "Przëstãpnô wersëjô"
+
+#~ msgid "Installed version"
+#~ msgstr "Winstalowónô wersëjô"
+
+#~ msgid "More info"
+#~ msgstr "Wicy wëdowiédzë"
+
+#~ msgid "Show:"
+#~ msgstr "Wëskrzëni:"
+
+#~ msgid "Category"
+#~ msgstr "Kategòrëjô"
+
+#~ msgid "Average rating"
+#~ msgstr "Strzédny òbsąd"
+
+#~ msgid "Views"
+#~ msgstr "Wëzdrzatczi"
+
+#~ msgid "Added"
+#~ msgstr "Dodóné"
+
+#~ msgid "Installed software"
+#~ msgstr "Winstalowónô softwôra"
+
+#~ msgid "Your changes"
+#~ msgstr "Twòjé zmianë"
+
+#~ msgid "All software"
+#~ msgstr "Całownô softwôra"
+
+#~ msgid "Available software"
+#~ msgstr "Przëstãpnô softwôra"
+
+#~ msgid "Quit"
+#~ msgstr "Zakùńczë"
+
+#~ msgid "Reviewer"
+#~ msgstr "Recenzent"
+
+#~ msgid "Review"
+#~ msgstr "Recenzëjô"
+
+#~ msgid "Rating"
+#~ msgstr "Òbsąd"
+
+#~ msgid "Cancel all changes"
+#~ msgstr "Pòrzucë wszëtczé zjinaczi"
+
+#~ msgid "Software manager"
+#~ msgstr "Menadżera softwôrë"
+
+#, python-format
+#~ msgid "%d screenshots loaded"
+#~ msgstr "%d zdrzëcenków ekranu zladowónych"
+
+#, python-format
+#~ msgid "%d reviews loaded"
+#~ msgstr "%d recenzëji zladowónych"
+
+#, python-format
+#~ msgid "%d categories loaded"
+#~ msgstr "%d kategòrëjów zladowónych"
+
+#, python-format
+#~ msgid "%d applications loaded"
+#~ msgstr "%d aplikacëjów zladowónych"
+
+#~ msgid "Please refresh mintInstall by clicking on the Refresh button"
+#~ msgstr ""
+#~ "Zladëjë znowa mintInstall  przez klëkniãcé na knąps \"Zladëjë znowa\""
+
+#, python-format
+#~ msgid "Downloading data for %s"
+#~ msgstr "Ladowanié pòdôwków dlô %s"
+
+#~ msgid ""
+#~ "The data used by mintInstall is corrupted or out of date. Click on refresh "
+#~ "to fix the problem :"
+#~ msgstr ""
+#~ "Pòdôwczi brëkòwóné przez mintInstall są abò z felama zabò przestarzałé. "
+#~ "Klëkni na \"Zladëjë znowa\" abë naprawic problemã:"
+
+#~ msgid "All applications"
+#~ msgstr "Wszëtczé aplikacëje"
+
+#~ msgid "Cancel removal"
+#~ msgstr "Pòcësni rëmniãcé"
+
+#~ msgid "Cancel installation"
+#~ msgstr "Pòcësni instalacëjã"
+
+#~ msgid "Cancel change"
+#~ msgstr "Pòcësni zmianë"
+
+#, python-format
+#~ msgid ""
+#~ "%(applications)d applications listed, %(install)d to install, %(remove)d to "
+#~ "remove"
+#~ msgstr ""
+#~ "%(applications)d aplikacëjów w grëpie, %(install)d do winstalowaniô, "
+#~ "%(remove)d do rëmniãcô"
+
+#~ msgid "Office suites"
+#~ msgstr "Biurowô softwôra"
+
+#~ msgid "Text editors"
+#~ msgstr "Editorë tekstu"
+
+#~ msgid "Sound & Video"
+#~ msgstr "Zwãk ë òbrôz"
+
+#~ msgid "Video players"
+#~ msgstr "Grôczë wideò"
+
+#~ msgid "Audio players"
+#~ msgstr "Grôcze aùdio"
+
+#~ msgid "Burning tools"
+#~ msgstr "Nôrzãdze do wëpôlaniô"
+
+#~ msgid "Scanning tools"
+#~ msgstr "Nôrzãdza do skanowaniô"
+
+#~ msgid "Tools"
+#~ msgstr "Nôrzãdza"
+
+#~ msgid "Image viewers"
+#~ msgstr "Przezérniczi òbrôzów"
+
+#~ msgid "Photo"
+#~ msgstr "Òdjimk"
+
+#~ msgid "Web browsers"
+#~ msgstr "Internetowé przezérniczi"
+
+#~ msgid "Finance"
+#~ msgstr "Finanse"
+
+#~ msgid "Document viewers"
+#~ msgstr "Przezérniczi dokùmentów"
+
+#~ msgid "2D"
+#~ msgstr "2D"
+
+#~ msgid "Spreadsheets"
+#~ msgstr "Kalkùlacjowé bòdżi"
+
+#~ msgid "Word processors"
+#~ msgstr "Procesorë tekstu"
+
+#~ msgid "Databases"
+#~ msgstr "Bazë pòdwków"
+
+#~ msgid "Education"
+#~ msgstr "Edukacëjô"
+
+#~ msgid "Firewall"
+#~ msgstr "Ògniowô scana"
+
+#~ msgid "Drivers"
+#~ msgstr "Czérowniczi"
+
+#~ msgid "Upstream"
+#~ msgstr "Sélanié lopków"
+
+#~ msgid "P2P and torrent"
+#~ msgstr "P2P ë torrentë"
+
+#~ msgid "Package management"
+#~ msgstr "Sprôwianié paczétama"
+
+#~ msgid "Desktop components"
+#~ msgstr "Kòmpònentë pùltu"
+
+#~ msgid "FTP"
+#~ msgstr "FTP"
+
+#~ msgid "System Tools"
+#~ msgstr "Systemòwé nôrzãdza"
+
+#~ msgid "Internet Relay Chat"
+#~ msgstr "IRC (Internet Relay Chat)"
+
+#~ msgid "Instant messengers"
+#~ msgstr "Internetowé kòmùnikatorë"
+
+#~ msgid "Collection managers"
+#~ msgstr "Menadżerë kòlekcëji"
+
+#~ msgid "First person shooters"
+#~ msgstr "Strzélankô z perspektiwë pierszi personë"
+
+#~ msgid "Graph and flowcharts"
+#~ msgstr "Djagramë ë céchùńczi"
+
+#~ msgid "Simulation & racing"
+#~ msgstr "Symùlatorë ë gòńbë"
+
+#~ msgid "Mind mapping"
+#~ msgstr "Mapa mëslë"
+
+#~ msgid "Real time strategy"
+#~ msgstr "Strategijô òpartô na biéżnym czasu"

@@ -1,0 +1,205 @@
+# Malayalam translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-08 10:39+0100\n"
+"PO-Revision-Date: 2012-10-02 19:17+0000\n"
+"Last-Translator: praveenp <Unknown>\n"
+"Language-Team: Malayalam <ml@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:24 generate_desktop_files:58
+#: generate_desktop_files:72
+msgid "Welcome Screen"
+msgstr "സ്വാഗതം"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:77
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did designing it. The links below will help you get started "
+"with your new operating system. Have a great time and don't hesitate to send "
+"us your feedback."
+msgstr ""
+"സ്വാഗതം, ലിനക്സ് മിന്റ് തിരഞ്ഞെടുത്തതിനു നന്ദി. രൂപീകരണ വേളയിൽ ഞങ്ങൾ "
+"ആസ്വദിച്ചപോലെ, ഇതിന്റെ ഉപയോഗം താങ്കൾക്കും ആസ്വാദ്യകരമായിരിക്കും എന്നു "
+"പ്രതീക്ഷിക്കുന്നു. താങ്കളുടെ പുതിയ ഓപ്പറേറ്റിങ് സിസ്റ്റം ഉപയോഗിച്ച് തുടങ്ങാൻ "
+"താഴെക്കാണുന്ന കണ്ണികൾ താങ്കളെ സഹായിക്കുന്നതാണ്. നല്ലൊരു അനുഭവം "
+"ആശംസിക്കുന്നു, താങ്കളുടെ പ്രതികരണങ്ങൾ ഞങ്ങളെ അറിയിക്കാൻ മടിക്കേണ്ടതില്ല."
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "New features"
+msgstr "പുതിയ വിശേഷഗുണങ്ങൾ"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "See what is new in this release"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid "Important information"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid ""
+"Find out about important information, limitations, known issues and their "
+"solution"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "User guide (PDF)"
+msgstr "ഉപയോഗസഹായി (പി.ഡി.എഫ്.)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "Learn all the basics to get started with Linux Mint"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data or applications from a previous installation"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Software manager"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Install additional software"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat room"
+msgstr "ചാറ്റ് റൂം"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat live with other users in the chat room"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Forums"
+msgstr "ഫോറങ്ങള്‍"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Seek help from other users in the Linux Mint forums"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Tutorials"
+msgstr "പാഠങ്ങള്‍"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Find tutorials about Linux Mint"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid "Hardware database"
+msgstr "ഹാര്‍ഡ്‌‌വേർ ഡേറ്റാബേസ്"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid ""
+"Find hardware that is compatible with Linux, or information about your "
+"hardware"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Idea pool"
+msgstr "ആശയങ്ങൾ"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Submit new ideas to the development team"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Get involved"
+msgstr "പങ്കാളിയാകുക"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Find out how to get involved in the Linux Mint project"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Donations"
+msgstr "സംഭാവനകൾ"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Make a donation to the Linux Mint project"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Sponsors"
+msgstr "പ്രായോജകർ"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Apply to become a Linux Mint sponsor"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:140
+msgid "Show this dialog at startup"
+msgstr "ആരംഭത്തിൽ ഈ കുറിപ്പ് പ്രദർശിപ്പിക്കുക"
+
+#: generate_desktop_files:58 generate_desktop_files:72
+msgid "Introduction to Linux Mint"
+msgstr "ലിനക്സ് മിന്റിനൊരു അവതാരിക"
+
+#: generate_desktop_files:86
+msgid "Install Multimedia Codecs"
+msgstr "മൾട്ടിമീഡിയ കോഡെക്സ് ഇൻസ്റ്റോൾ ചെയ്യുക"
+
+#: generate_desktop_files:86
+msgid "Add all the missing multimedia codecs"
+msgstr "വിട്ടുപോയ മൾട്ടിമീഡിയ കോഡെക്സ് കൂട്ടിച്ചേർക്കുക"
+
+#~ msgid "Visit the forums"
+#~ msgstr "ഫോറം സന്ദര്‍ശിക്കുക"
+
+#~ msgid "Connect to the chat room"
+#~ msgstr "ചാറ്റ് റൂമിലേക് ബന്ധിപ്പിക്കുക"
+
+#~ msgid "Download the user guide (PDF)"
+#~ msgstr "ഉപയോക സഹായി(പി ഡി എഫ്) ഡൌണ്‍ലോഡ് ചെയ്യുക"
+
+#~ msgid "Read the release notes"
+#~ msgstr "പുറത്തിറക്കല്‍ രേഖകള്‍(release notes) വായിക്കുക"
+
+#~ msgid "Contribute to Linux Mint"
+#~ msgstr "ലിനക്സ്‌ മിന്റ് - ലേക്ക് സംഭാവന നല്‍കുക"
+
+#~ msgid "Browse the list of new features"
+#~ msgstr "പുതിയ ഫീച്ചറുകള്‍ പരതുക"
+
+#, python-format
+#~ msgid "Discover %s"
+#~ msgstr "കണ്ടെത്തുക %s"
+
+#~ msgid "Find help"
+#~ msgstr "സഹായം തേടുക"
+
+#~ msgid ""
+#~ "Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+#~ "as much as we did making it. Please make yourself familiar with the new "
+#~ "features and the documentation and don't hesitate to send us your feedback."
+#~ msgstr ""
+#~ "സ്വാഗതം, ലിനക്സ്‌ മിന്റ് തെരഞ്ഞെടുത്തതിനു നന്ദി. ഇത് തയാറാക്കുമ്പോള്‍ "
+#~ "ഞങ്ങള്‍ എത്രത്തോളം ആസ്വദിച്ചോ അത് പോലെ തന്നെ ഇത് ഉപയോഗികുമ്പോള്‍ നിങ്ങളും "
+#~ "ആസ്വദിക്കും എന്ന് ഞങ്ങള്‍ പ്രതീക്ഷിക്കുന്നു. ദയവായി പുതിയ സാധ്യതകളേയും, "
+#~ "നിര്‍ദേശങ്ങളെയും കുറിച്ച് പരിചിതമാകുക മാത്രമല്ല നിങ്ങളുടെ അഭിപ്രായങ്ങളും "
+#~ "നിര്‍ദേശങ്ങളും ഞങ്ങള്‍ക്ക് അയച്ചുതരിക."
+
+#~ msgid "Make a donation"
+#~ msgstr "സാമ്പത്തിക സഹായം ചെയ്യുക"
+
+#~ msgid "Become a sponsor"
+#~ msgstr "ഒരു സ്പോണ്‍സര്‍ ആവുക"
+
+#~ msgid "Welcome to Linux Mint"
+#~ msgstr "ലിനക്സ് മിന്റിലേയ്ക്ക് സ്വാഗതം"

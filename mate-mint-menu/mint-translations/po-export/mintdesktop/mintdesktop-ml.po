@@ -1,0 +1,210 @@
+# Malayalam translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-12-09 16:44+0000\n"
+"PO-Revision-Date: 2012-11-06 05:53+0000\n"
+"Last-Translator: praveenp <Unknown>\n"
+"Language-Team: Malayalam <ml@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:110
+msgid "Desktop"
+msgstr "ഡെസ്ക്ടോപ്പ്"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:111
+msgid "Windows"
+msgstr "ജാലകങ്ങള്‍"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:112
+msgid "Interface"
+msgstr "സമ്പർക്കമുഖം"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:113
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:160
+msgid "Terminal"
+msgstr "ടെര്‍മിനല്‍"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:154
+msgid "Desktop icons"
+msgstr "ഡെസ്ക്ടോപ്പ് ഐകോണുകൾ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:155
+msgid "Performance"
+msgstr "പ്രകടനം"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:156
+msgid "Appearance"
+msgstr "ദൃശ്യരൂപം"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:157
+msgid "Icons"
+msgstr "ഐകോണുകൾ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:158
+msgid "Context menus"
+msgstr "സാന്ദർഭിക മെനു"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:159
+msgid "Toolbars"
+msgstr "ഉപകരണപട്ടകൾ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:161
+msgid "Window Manager"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:163
+msgid "Select the items you want to see on the desktop:"
+msgstr "ഡെസ്ക്ടോപ്പിൽ താങ്കൾ കാണാൻ ആഗ്രഹിക്കുന്ന ഇനങ്ങൾ തിരഞ്ഞെടുക്കുക:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:165
+msgid "Computer"
+msgstr "കമ്പ്യൂട്ടർ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:166
+msgid "Home"
+msgstr "ഹോം"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:167
+msgid "Network"
+msgstr "നെറ്റ്‌വർക്ക്"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:168
+msgid "Trash"
+msgstr "ട്രാഷ്"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:169
+msgid "Mounted Volumes"
+msgstr "മൗണ്ടഡ് വോള്യമുകൾ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:171
+msgid "Don't show window content while dragging them"
+msgstr "ജാലകങ്ങള്‍ വലിക്കുമ്പോള്‍ അവയുടെ ഉള്ളടക്കം മറയ്ക്കുക"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:172
+msgid "Use compositing"
+msgstr "കമ്പോസിറ്റിങ് ഉപയോഗിക്കുക"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:173
+msgid "Use system font in titlebar"
+msgstr "ശീര്‍ഷകപ്പട്ടയില്‍ സിസ്റ്റം ഫോണ്ട് ഉപയോഗിക്കുക"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:174
+msgid "Show fortune cookies"
+msgstr "ഫോർച്യൂൺ കുക്കീസ് പ്രദർശിപ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:176
+msgid "Buttons layout:"
+msgstr "ബട്ടണുകളുടെ രൂപരേഖ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:178
+msgid "Window manager:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:180
+msgid "Show icons on menus"
+msgstr "മെനുവിൽ ഐകോണുകൾ പ്രദർശിപ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:181
+msgid "Show icons on buttons"
+msgstr "ബട്ടണുകളിൽ ഐകോണുകൾ പ്രദർശിപ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:182
+msgid "Show Input Methods menu in context menus"
+msgstr "സാന്ദർഭിക മെനുകളിൽ ഇൻപുട്ട് രീതികളുടെ മെനു പ്രദർശിപ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:183
+msgid "Show Unicode Control Character menu in context menus"
+msgstr "സാന്ദർഭിക മെനുകളിൽ യൂണീകോഡ് നിയന്ത്രണാക്ഷര മെനു പ്രദർശിപ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:185
+msgid "Buttons labels:"
+msgstr "ബട്ടണുകളുടെ ലേബലുകൾ:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:186
+msgid "Icon size:"
+msgstr "ഐകോണിന്റെ വലിപ്പം:"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:210
+msgid "Small"
+msgstr "ചെറുത്"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:211
+msgid "Large"
+msgstr "വലുത്"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:217
+msgid "Traditional style (Right)"
+msgstr "പരമ്പരാഗത ശൈലി (വലത്)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:218
+msgid "Mac style (Left)"
+msgstr "മാക് ശൈലി (ഇടത്)"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:225
+msgid "Marco (stable and reliable)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:226
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:234
+msgid "Compiz (impressive desktop effects)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:228
+msgid ""
+"Log out and log back in for changes to take effect. If things go wrong, run "
+"'mate-wm-recovery' to switch back to Marco."
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:233
+msgid "Xfwm (stable and reliable)"
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:237
+msgid "Log out and log back in for changes to take effect."
+msgstr ""
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:246
+msgid "Text below items"
+msgstr "എഴുത്ത് ഇനങ്ങൾക്ക് താഴെ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:247
+msgid "Text beside items"
+msgstr "എഴുത്ത് ഇനങ്ങൾക്ക് അരികിൽ"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:248
+msgid "Icons only"
+msgstr "ഐകോണുകൾ മാത്രം"
+
+#: usr/lib/linuxmint/mintDesktop/mintDesktop.py:249
+msgid "Text only"
+msgstr "എഴുത്ത് മാത്രം"
+
+#: generate_desktop_files:25
+msgid "Desktop Settings"
+msgstr "ഡെസ്ക്ടോപ്പ് സജ്ജീകരണങ്ങള്‍"
+
+#: generate_desktop_files:25
+msgid "Fine-tune desktop settings"
+msgstr "ഡെസ്ക്ടോപ്പ് സജ്ജീകരണങ്ങൾ കൃത്യമാക്കുക"
+
+#~ msgid "Desktop Items"
+#~ msgstr "ഡെസ്ക്ടോപ്പ് ഇനങ്ങള്‍"
+
+#~ msgid "Gnome Settings"
+#~ msgstr "ജീനോം ക്രമീകരണങ്ങള്‍"
+
+#~ msgid "Fine-tune Gnome settings"
+#~ msgstr "ജീനോം ക്രമീകരണങ്ങള്‍ മെച്ചപ്പെടുത്തുക"
+
+#~ msgid "Desktop Configuration Tool"
+#~ msgstr "ഡെസ്ക്ടോപ്പ് ക്രമീകരണ ഉപകരണം"

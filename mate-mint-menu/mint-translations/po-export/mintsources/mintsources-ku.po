@@ -1,0 +1,329 @@
+# Kurdish translation for linuxmint
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 10:14+0100\n"
+"PO-Revision-Date: 2015-04-06 23:44+0000\n"
+"Last-Translator: Sipan Roj <sipanroj@live.com>\n"
+"Language-Team: Kurdish <ku@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:12+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:33
+msgid "Adding PPAs is not supported"
+msgstr "PPA'yên tu zêde diki piştgirî nehatiye dayin"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:40
+#: usr/lib/linuxmint/mintSources/mintSources.py:881
+#, python-format
+msgid "Cannot add PPA: '%s'."
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:44
+msgid "Adding private PPAs is not supported currently"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:47
+msgid "You are about to add the following PPA to your system:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:50
+#, python-format
+msgid " More info: %s"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:54
+msgid "Press [ENTER] to continue or ctrl-c to cancel adding it"
+msgstr "[ENTER]'ê bitikîne dewamke yan bi ctrl-c'yê barkirinê betalke"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:58
+msgid "Unable to prompt for response.  Please run with -y"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:257
+#: usr/lib/linuxmint/mintSources/mintSources.py:285
+msgid "Sources"
+msgstr "Çavkanî"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:263
+msgid "CD-ROM (Installation Disc)"
+msgstr "CD-ROM (Dîska Sazkirinê)"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:304
+msgid ""
+"Linux Mint uses Romeo to publish packages which are not tested. Once these "
+"packages are tested, they are then moved to the official repositories. "
+"Unless you are participating in beta-testing, you should not enable this "
+"repository. Are you sure you want to enable Romeo?"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:310
+msgid ""
+"Backports are packages coming from newer Linux Mint releases. When backports "
+"are made available, the development team publishes an official announcement "
+"on http://blog.linuxmint.com. This announcement might include important "
+"information about the new features, design decisions or even known issues "
+"which relate to you. It is therefore strongly recommended to not enable "
+"backports until you have read this information. Are you sure you want to "
+"enable backports?"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:366
+msgid "Other..."
+msgstr "Wekedin..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:388
+msgid "Select a mirror"
+msgstr "Mirror'ek hilbijêre"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:400
+msgid "Country"
+msgstr "Welat"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:405
+msgid "URL"
+msgstr "URL"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:410
+msgid "Speed"
+msgstr "Lez"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:447
+#: usr/lib/linuxmint/mintSources/mintSources.py:456
+msgid "kB/s"
+msgstr "kB/ç"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:450
+msgid "MB/s"
+msgstr "MB/ç"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:453
+msgid "GB/s"
+msgstr "GB/ç"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:540 generate_desktop_files:28
+#: generate_desktop_files:44
+msgid "Software Sources"
+msgstr "Çavkaniyên Bernameyan"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:557
+msgid "Backported packages"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:559
+msgid "Unstable packages"
+msgstr "Pakêtên Bêbiryar"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:572
+#: usr/lib/linuxmint/mintSources/mintSources.py:1129
+msgid "No action required"
+msgstr "Tu çalakî pêwîst nake"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:574
+msgid "Official repositories"
+msgstr "Barxaneyên fermî"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:575
+msgid "PPAs"
+msgstr "PPA"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:576
+msgid "Additional repositories"
+msgstr "Barxaneyên cîhgir"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:577
+msgid "Authentication keys"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:578
+msgid "Maintenance"
+msgstr "Lênêrîn"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:580
+msgid "Mirrors"
+msgstr "Mirror"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:581
+msgid "Main"
+msgstr "Giştî"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:582
+msgid "Base"
+msgstr "Bingeh"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:583
+#: usr/lib/linuxmint/mintSources/mintSources.py:584
+msgid "Select a faster server..."
+msgstr "Serverek leztir hilbijêre..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:586
+msgid "Optional components"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:587
+msgid "Source code"
+msgstr "Çavkaniya Kod"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:589
+msgid "Add a new PPA..."
+msgstr "PPA'yek zêde bike..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:590
+#: usr/lib/linuxmint/mintSources/mintSources.py:594
+msgid "Edit URL..."
+msgstr "URL'ê sererast bike..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:591
+#: usr/lib/linuxmint/mintSources/mintSources.py:595
+#: usr/lib/linuxmint/mintSources/mintSources.py:599
+msgid "Remove permanently"
+msgstr "Bi awayek mayînde rake"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:593
+msgid "Add a new repository..."
+msgstr "Barxaneyek zêdebike..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:597
+msgid "Import key file..."
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:598
+msgid "Download a key..."
+msgstr "Kilîlek barbike..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:601
+msgid "Fix MergeList problems"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:602
+msgid ""
+"If you experience MergeList problems, click this button to solve the problem."
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:603
+msgid "Purge residual configuration"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:604
+msgid ""
+"Packages sometimes leave configuration files on the system even after they "
+"are removed."
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:609
+msgid "Enable source code repositories"
+msgstr "Barxaneyên çavkaniya kodan çalak bike"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:619
+msgid ""
+"Warning: Backports and unstable packages can introduce regressions and "
+"negatively impact your system. Please do not enable these options in Linux "
+"Mint unless it was suggested by the development team."
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:680
+#: usr/lib/linuxmint/mintSources/mintSources.py:704
+msgid "Enabled"
+msgstr "Çalake"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:686
+msgid "PPA"
+msgstr "PPA"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:710
+msgid "Repository"
+msgstr "Barxane"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:726
+msgid "Key"
+msgstr "Kilîl"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:739
+msgid "Restore the default settings"
+msgstr "Mîhengên wekheyî paşde vegerîne"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:740
+msgid "Restore the official repositories to their default settings"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:805
+msgid "There is no more residual configuration on the system."
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:811
+msgid "The problem was fixed. Please reload the cache."
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:837
+msgid "Open.."
+msgstr "Veke..."
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:853
+msgid ""
+"Please enter the 8 characters of the public key you want to download from "
+"keyserver.ubuntu.com:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:866
+msgid "Are you sure you want to permanently remove this key?"
+msgstr "Ma tu jixwe bawerî ku dixwazî vê kilîlê bi mayînde rakî?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:874
+msgid "Please enter the name of the PPA you want to add:"
+msgstr "Ji kerema xwe navê PPA'ya tu dixwazî lê zêde bikî binivîse:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:925
+msgid "Edit the URL of the PPA"
+msgstr "URL'ya PPA'yê sererast bike"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:935
+msgid "Are you sure you want to permanently remove this PPA?"
+msgstr "Ma tu jixwe bawerkî ku dixwazî bi mayînde vê PPA'yê rakî?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:944
+msgid "Please enter the name of the repository you want to add:"
+msgstr "Ji kerema xwe navê barxaneya ku tu dixwazî binivîse:"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:963
+msgid "Edit the URL of the repository"
+msgstr "URL'ya barxaneyê sererast bike"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:973
+msgid "Are you sure you want to permanently remove this repository?"
+msgstr "Ma tu jixwe bawerî ku dixwazî vê barxaneyê bi mayînde rakî?"
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1123
+msgid "Update the cache"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1124
+msgid "Click here to update your APT cache with your new sources"
+msgstr ""
+
+#: usr/lib/linuxmint/mintSources/mintSources.py:1130
+msgid "Your APT cache is up to date"
+msgstr ""
+
+#: usr/bin/software-sources:9
+msgid "Please enter your password to configure the software sources"
+msgstr ""
+
+#: usr/bin/add-apt-repository:10
+msgid "Error: must run as root"
+msgstr ""
+
+#: usr/bin/add-apt-repository:21
+msgid "Error: need a repository as argument"
+msgstr ""
+
+#: generate_desktop_files:28 generate_desktop_files:44
+msgid "Configure the sources for installable software and updates"
+msgstr ""

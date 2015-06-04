@@ -1,0 +1,60 @@
+# Malayalam translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-07-27 17:39+0200\n"
+"PO-Revision-Date: 2012-10-03 04:11+0000\n"
+"Last-Translator: praveenp <Unknown>\n"
+"Language-Team: Malayalam <ml@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:33
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:89
+msgid "Domain Blocker"
+msgstr "ഡൊമൈൻ ബ്ലോക്കർ"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:34
+msgid "Parental Control"
+msgstr "രക്ഷാകർത്തൃ നിയന്ത്രണം"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:35
+msgid "Block access to selected domain names"
+msgstr "തിരഞ്ഞെടുക്കുന്ന ഡൊമൈൻ നാമങ്ങളിലേക്കുള്ള പ്രവേശനം തടയുക"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:39
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:135
+msgid "About"
+msgstr "വിവരണം"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:43
+msgid "Domain blocker"
+msgstr "ഡൊമൈൻ ബ്ലോക്കർ"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:64
+msgid "Domain name:"
+msgstr "ഡൊമൈന്‍ നാമം:"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:95
+msgid "Blocked domains"
+msgstr "തടഞ്ഞിരിക്കുന്ന ഡൊമൈനുകൾ"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:123
+msgid "_File"
+msgstr "_ഫയല്‍"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:127
+msgid "Close"
+msgstr "അടയ്ക്കുക"
+
+#: usr/lib/linuxmint/mintNanny/mintNanny.py:131
+msgid "_Help"
+msgstr "_സഹായം"

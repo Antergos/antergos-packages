@@ -1,0 +1,906 @@
+# Malayalam translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 17:21+0100\n"
+"PO-Revision-Date: 2012-10-25 12:26+0000\n"
+"Last-Translator: praveenp <Unknown>\n"
+"Language-Team: Malayalam <ml@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:196
+#, python-format
+msgid "The package '%s' could not be installed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:198
+#, python-format
+msgid "The package '%s' could not be removed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:204
+msgid "Please check your connection to the Internet"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:215
+msgid "Another application is using APT:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:301
+#, python-format
+msgid "%d ongoing actions"
+msgstr "%d നടന്നുകൊണ്ടിരിക്കുന്ന പ്രവര്‍ത്തികള്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:311
+#, python-format
+msgid "Cancel the task: %s"
+msgstr "പ്രവർത്തി റദ്ദാക്കുക: %s"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Waiting"
+msgstr "കാത്തിരിക്കുന്നു"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Downloading"
+msgstr "ഡൗൺലോഡ് ചെയ്യുന്നു"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Running"
+msgstr "പ്രവര്‍ത്തിക്കുന്നു"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:125
+msgid "Finished"
+msgstr "പൂർത്തിയായി"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:335
+#, python-format
+msgid "Installing %s"
+msgstr "%s ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നു"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:337
+#, python-format
+msgid "Removing %s"
+msgstr "%s നീക്കം ചെയ്യുന്നു"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:339
+msgid "Updating cache"
+msgstr "കാഷെ പുതുക്കുന്നു"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:341
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:343
+msgid "No role set"
+msgstr "റോൾ സെറ്റ് ഇല്ല"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:451
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:789
+#: usr/lib/linuxmint/mintInstall/splash.py:20
+#: usr/lib/linuxmint/mintInstall/splash.py:27
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:343 generate_desktop_files:24
+#: generate_desktop_files:35 generate_desktop_files:47
+msgid "Software Manager"
+msgstr "സോഫ്റ്റ്‌വേർ മാനേജർ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:472
+msgid "_File"
+msgstr "_ഫയല്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:476
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:127
+msgid "Close"
+msgstr "അടയ്ക്കുക"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:480
+msgid "_Edit"
+msgstr "_മാറ്റം വരുത്തുക"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:484
+msgid "Preferences"
+msgstr "മുന്‍ഗണനകള്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:488
+msgid "Search in packages summary (slower search)"
+msgstr ""
+"പാക്കേജുകളുടെ സംക്ഷിപ്ത വിവരണങ്ങളില്‍ തിരയുക (മന്ദഗതിയിലുള്ള തിരയല്‍)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:492
+msgid "Search in packages description (even slower search)"
+msgstr "പാക്കേജുകളുടെ വിവരണങ്ങളില്‍ തിരയുക (വളരെ മന്ദഗതിയിലുള്ള തിരയല്‍)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:496
+msgid "Open links using the web browser"
+msgstr "കണ്ണികൾ വെബ് ബ്രൗസർ ഉപയോഗിച്ച് തുറക്കുക"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:500
+msgid "Search while typing"
+msgstr "ടൈപ്പ് ചെയ്യുമ്പോൾ തന്നെ തിരയുക"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:513
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:753
+msgid "Account information"
+msgstr "അംഗത്വ വിവരങ്ങൾ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:520
+msgid "Software sources"
+msgstr "സോഫ്റ്റ്‌വേർ സ്രോതസ്സുകൾ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:524
+msgid "_View"
+msgstr "_‌കാണുക"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:528
+msgid "Available packages"
+msgstr "ലഭ്യമായ പാക്കേജുകള്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:532
+msgid "Installed packages"
+msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്തിടുള്ള പാക്കേജുകള്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:539
+msgid "_Help"
+msgstr "_സഹായം"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:543
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:787
+msgid "About"
+msgstr "വിവരണം"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:589
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:599
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1118
+msgid "Categories"
+msgstr "വർഗ്ഗങ്ങൾ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:590
+msgid "Please choose a category"
+msgstr "ദയവായി ഒരു വർഗ്ഗം തിരഞ്ഞെടുക്കുക"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:591
+#, python-format
+msgid "%d packages are currently available"
+msgstr "%d പാക്കേജുകൾ ഇപ്പോൾ ലഭ്യമാണ്‌"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:600
+msgid "Please choose a sub-category"
+msgstr "ദയവായി ഒരു ഉപവർഗ്ഗം തിരഞ്ഞെടുക്കുക"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:621
+msgid "No ongoing actions"
+msgstr "ഒരു പ്രവൃത്തിയും നടക്കുന്നില്ല"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:622
+msgid "Active tasks:"
+msgstr "സജീവമായുള്ള പ്രവൃത്തികൾ:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:625
+msgid "Show all results"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:755
+msgid "Your community account"
+msgstr "താങ്കളുടെ സമൂഹ അംഗത്വം"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:757
+msgid "Fill in your account info to review applications"
+msgstr ""
+"ആപ്ലിക്കേഷനുകൾ സംശോധനം ചെയ്യാൻ താങ്കളുടെ അംഗത്വവിവരങ്ങൾ പൂരിപ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:759
+msgid "Username:"
+msgstr "ഉപയോക്തൃനാമം:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:760
+msgid "Password:"
+msgstr "രഹസ്യവാക്ക്:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:832
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1759
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1770
+msgid "B"
+msgstr "ബി."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:834
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1761
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1772
+msgid "KB"
+msgstr "കെ.ബി."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:836
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1763
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1774
+msgid "MB"
+msgstr "എം.ബി."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:838
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1765
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1776
+msgid "GB"
+msgstr "ജി.ബി."
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:860
+msgid "Icon"
+msgstr "ഐകോൺ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:864
+msgid "Application"
+msgstr "ആപ്ലിക്കേഷന്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:871
+msgid "Score"
+msgstr "സ്കോര്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:893
+msgid "Task"
+msgstr "പ്രവൃത്തി"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:896
+msgid "Status"
+msgstr "സ്ഥിതി"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:899
+msgid "Progress"
+msgstr "പുരോഗതി"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:996
+msgid "See more reviews"
+msgstr "കൂടുതല്‍ നിരൂപണങ്ങള്‍ കാണുക"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1038
+msgid "Screenshot"
+msgstr "സ്ക്രീന്‍ഷോട്ട്"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1047
+msgid "Website"
+msgstr "വെബ്സൈറ്റ്"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1055
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1067
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1780
+msgid "Reviews"
+msgstr "നിരൂപണങ്ങള്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1120
+msgid "Featured"
+msgstr "സവിശേഷമായവ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1123
+msgid "All Packages"
+msgstr "എല്ലാ പാക്കേജുകളും"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1125
+msgid "Internet"
+msgstr "ഇന്റർനെറ്റ്"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1126
+msgid "Web"
+msgstr "വെബ്"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1128
+msgid "Email"
+msgstr "ഇമെയില്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1130
+msgid "Chat"
+msgstr "ചാറ്റ്"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1132
+msgid "File sharing"
+msgstr "ഫയല്‍ പങ്കിടല്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1135
+msgid "Sound and video"
+msgstr "ശബ്ദവും ചലച്ചിത്രവും"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1138
+msgid "Graphics"
+msgstr "ഗ്രാഫിക്സ്"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1140
+msgid "3D"
+msgstr "ത്രിമാനം"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1142
+msgid "Drawing"
+msgstr "ചിത്രരചന"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1144
+msgid "Photography"
+msgstr "ഛായാഗ്രഹണം"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1146
+msgid "Publishing"
+msgstr "പ്രസിദ്ധീകരണം"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1148
+msgid "Scanning"
+msgstr "സ്കാനിങ്"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1150
+msgid "Viewers"
+msgstr "കാഴ്ചക്കാര്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1153
+msgid "Office"
+msgstr "ഓഫീസ്"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1155
+msgid "Games"
+msgstr "കളികള്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1157
+msgid "Board games"
+msgstr "ബോർഡ് കളികൾ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1159
+msgid "First-person shooters"
+msgstr "ഒറ്റയാൾ വെടിവെപ്പുകാർ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1161
+msgid "Real-time strategy"
+msgstr "തത്സമയ തന്ത്രരൂപീകരണം"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1163
+msgid "Turn-based strategy"
+msgstr "ഊഴമനുസരിച്ചുള്ള തന്ത്രം"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1165
+msgid "Emulators"
+msgstr "എമുലേറ്ററുകള്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1167
+msgid "Simulation and racing"
+msgstr "സിമുലേഷനുകളും വേഗതാമത്സരവും"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1170
+msgid "Accessories"
+msgstr "ഉപകരണങ്ങള്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1172
+msgid "System tools"
+msgstr "സിസ്റ്റം ഉപകരണങ്ങൾ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1175
+msgid "Fonts"
+msgstr "ഫോണ്ടുകൾ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1178
+msgid "Science and Education"
+msgstr "ശാസ്ത്രവും വിദ്യാഭ്യാസവും"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1181
+msgid "Programming"
+msgstr "പ്രോഗ്രാമിങ്"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1380
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1853
+#, python-format
+msgid "%d reviews"
+msgstr "%d നിരൂപണങ്ങൾ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1416
+#, python-format
+msgid "%d packages"
+msgstr "%d പാക്കേജുകള്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1661
+#, python-format
+msgid "Only results in category \"%s\" are shown."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1672
+msgid "Search results"
+msgstr "തിരച്ചില്‍ ഫലങ്ങള്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Hate it"
+msgstr "വെറുക്കുന്നു"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Not a fan"
+msgstr "ആരാധകന്‍ അല്ല"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "So so"
+msgstr "അങ്ങനെയങ്ങനെ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Like it"
+msgstr "ഇഷ്ടപ്പെടുന്നു"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Awesome!"
+msgstr "വിസ്മയാവഹം!"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1728
+msgid "Score:"
+msgstr "സ്കോര്‍:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1729
+msgid "Submit"
+msgstr "സമര്‍പ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1730
+msgid "Your review"
+msgstr "താങ്കളുടെ നിരൂപണം"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1778
+msgid "Size:"
+msgstr "വലിപ്പം:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1779
+msgid "Version:"
+msgstr "പതിപ്പ്:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1781
+msgid "Your review:"
+msgstr "താങ്കളുടെ നിരൂപണം:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1782
+msgid "Details"
+msgstr "വിശദവിവരങ്ങള്‍"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1784
+msgid "This will remove the following packages:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1785
+msgid "Cancel"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1786
+msgid "Confirm"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1790
+#, python-format
+msgid "%(localSize)s of disk space freed"
+msgstr "%(localSize)s സംഭരണസ്ഥലം മോചിപ്പിച്ചു"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1792
+#, python-format
+msgid "%(localSize)s of disk space required"
+msgstr "%(localSize)s സംഭരണസ്ഥലം ആവശ്യമുണ്ട്"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1795
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space freed"
+msgstr ""
+"%(downloadSize)s ഡൗൺലോഡ് ചെയ്യാനുണ്ട്, %(localSize)s സംഭരണസ്ഥലം മോചിപ്പിച്ചു"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1797
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space required"
+msgstr ""
+"%(downloadSize)s ഡൗൺലോഡ് ചെയ്യാനുണ്ട്, %(localSize)s സംഭരണസ്ഥലം ആവശ്യമുണ്ട്"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1800
+msgid "The following packages would be installed: "
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1802
+msgid "The following packages would be removed: "
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1805
+msgid "Impact on packages:"
+msgstr "പാക്കേജുകളിലുണ്ടാകുന്ന ഫലം:"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1823
+msgid "Remove"
+msgstr "നീക്കം ചെയ്യുക"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1825
+#: usr/bin/mint-search-apt:37
+msgid "Installed"
+msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്തു"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1829
+msgid "Not available"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1831
+msgid "Please use apt-get to install this package."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1834
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:207
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:442
+msgid "Install"
+msgstr "ഇൻസ്റ്റോൾ ചെയ്യുക"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1836
+msgid "Not installed"
+msgstr "ഇൻസ്റ്റോൾ ചെയ്തില്ല"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1857
+msgid "Reviews:"
+msgstr "നിരൂപണങ്ങൾ:"
+
+#: usr/lib/linuxmint/mintInstall/splash.py:28
+#, python-format
+msgid "Gathering information for %d packages..."
+msgstr "%d പാക്കേജുകളുടെ വിവരങ്ങൾ ശേഖരിക്കുന്നു..."
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:68
+msgid "Backing up your APT sources"
+msgstr "താങ്കളുടെ എ.പി.റ്റി. ഉറവിടങ്ങൾ ബാക്ക് അപ് ചെയ്യുന്നു"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:92
+#: usr/lib/linuxmint/mintInstall/remove.py:48 usr/bin/mint-synaptic-install:14
+msgid "Please wait, this can take some time"
+msgstr "ദയവായി കാത്തിരിക്കൂ, ഇത്‌ കുറച്ച്‌ സമയം എടുത്തേക്കും"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:94
+#: usr/bin/mint-synaptic-install:16
+msgid "Installation is complete"
+msgstr "ഇൻസ്റ്റലേഷൻ പൂർത്തിയായിരിക്കുന്നു"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:121
+msgid "Restoring your APT sources"
+msgstr "താങ്കളുടെ എ.പി.റ്റി. ഉറവിടങ്ങൾ പുനഃസ്ഥാപിക്കുന്നു"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:204
+msgid "Using the following repositories:"
+msgstr "താഴെപ്പറയുന്ന റെപ്പോസിറ്ററികൾ ഉപയോഗിക്കുന്നു:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:209
+#, python-format
+msgid "Install %s?"
+msgstr "%s ഇൻസ്റ്റോൾ ചെയ്യണോ?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:212
+msgid "The following packages will be installed:"
+msgstr "താഴെ പറയുന്ന പാക്കെജുകള്‍ ഇൻസ്റ്റോള്‍ ചെയ്യപ്പെടുന്നതാണ്:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:223
+msgid "Default repositories"
+msgstr "സ്വതേയുള്ള റെപ്പോസിറ്ററികൾ"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:296
+#, python-format
+msgid "Upgrade %s?"
+msgstr "%s പുതുക്കണോ?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:298
+msgid "The following packages will be upgraded:"
+msgstr "താഴെ പറയുന്ന പാക്കേജുകള്‍ പുതുക്കപ്പെടുന്നതാണ്:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:299
+msgid "Upgrade"
+msgstr "പുതുക്കുക"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:434
+msgid "Find Software"
+msgstr "സോഫ്റ്റ്‌വേര്‍ കണ്ടെത്തുക"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:437
+msgid "Go to the Linux Mint Software Portal"
+msgstr "ലിനക്സ് മിന്റ്‌ സോഫ്റ്റ്‌വേര്‍ പോര്‍ട്ടലിലേക്ക് പോവുക"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:438
+msgid "Search for a .mint application"
+msgstr ".mint ആപ്ലിക്കേഷനായി തിരയുക"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:439
+msgid "Go to the GetDeb Portal"
+msgstr "ഗെറ്റ്‌ഡെബ് പോര്‍ട്ടലിലേക്ക് പോവുക"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:440
+msgid "Search for a .deb package"
+msgstr ".deb പാക്കേജ് തിരയുക"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:441
+msgid "Search"
+msgstr "തിരയുക"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:443
+msgid "Show"
+msgstr "പ്രദര്‍ശിപ്പിക്കുക"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:444
+msgid "Go to the Ubuntu repository"
+msgstr "ഉബുണ്ടു റെപ്പോസിറ്ററിയിലേയ്ക്ക് പോവുക"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:445
+msgid "Go to the Linux Mint repository"
+msgstr "ലിനക്സ് മിന്റ് റെപ്പോസിറ്ററിയിലേയ്ക്ക് പോവുക"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid "Your APT sources were corrupted."
+msgstr "താങ്കളുടെ എ.പി.റ്റി. സ്രോതസ്സുകളിൽ പ്രശ്നമുണ്ട്."
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid ""
+"Your APT sources were not correctly restored after you last ran mintInstall. "
+"They now have been restored."
+msgstr ""
+"താങ്കൾ അവസാനം മിന്റ്‌ഇൻസ്റ്റോൾ ഉപയോഗിച്ചതിന് ശേഷം, താങ്കളുടെ എ.പി.റ്റി. "
+"ഉറവിടങ്ങൾ ശരിയായ വിധത്തിൽ പുനഃസ്ഥാപിച്ചിരുന്നില്ല. ഇപ്പോഴവ "
+"പുനഃസ്ഥാപിക്കപ്പെട്ടിരിക്കുന്നു."
+
+#: usr/lib/linuxmint/mintInstall/remove.py:50
+msgid "Application removed successfully"
+msgstr "ആപ്ലിക്കേഷൻ വിജയകരമായി നീക്കം ചെയ്തിരിക്കുന്നു"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:104
+#, python-format
+msgid "Remove %s?"
+msgstr "%s നീക്കം ചെയ്യണോ?"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:107
+msgid "The following packages will be removed:"
+msgstr "താഴെ പറയുന്ന പാക്കേജുകള്‍ നീക്കം ചെയ്യപ്പെടുന്നതാണ്:"
+
+#: usr/bin/mint-search-apt:34
+msgid "No results"
+msgstr "ഫലങ്ങള്‍ ലഭ്യമല്ല"
+
+#: usr/bin/mint-search-apt:41
+msgid "Package"
+msgstr "പാക്കേജ്"
+
+#: usr/bin/mint-search-apt:42
+msgid "Description"
+msgstr "വിവരണം"
+
+#: usr/bin/mint-make-cmd:37 usr/bin/mint-make-cmd:38
+#, python-format
+msgid "Could not find package: %s"
+msgstr "പാക്കേജ് കണ്ടുപിടിക്കാന്‍ കഴിഞ്ഞില്ല: %s"
+
+#: generate_desktop_files:24 generate_desktop_files:35
+#: generate_desktop_files:47
+msgid "Install new applications"
+msgstr "പുതിയ ആപ്ലിക്കേഷനുകൾ ഇൻസ്റ്റോൾ ചെയ്യുക"
+
+#~ msgid "Cancel installation"
+#~ msgstr "ഇന്‍സ്റ്റലേഷന്‍ റദ്ദാക്കുക"
+
+#~ msgid "Cancel removal"
+#~ msgstr "നീക്കം ചെയ്യുന്നത്‌ റദ്ദാക്കുക"
+
+#~ msgid "Featured applications"
+#~ msgstr "പ്രത്യേക പ്രാധാന്യമുള്ള അപ്പ്ളിക്കേഷനുകള്‍"
+
+#~ msgid "These popular applications can be installed on your system:"
+#~ msgstr ""
+#~ "ജനസമ്മതിയുള്ള ഈ അപ്പ്ളിക്കേഷന്‍സ് നിങ്ങളുടെ കമ്പ്യൂട്ടറില്‍ ഇന്‍സ്റ്റാള്‍ "
+#~ "ചെയ്യാവുന്നതാണ്:"
+
+#~ msgid "Size"
+#~ msgstr "വലുപ്പം"
+
+#~ msgid "Repository"
+#~ msgstr "കലവറ"
+
+#~ msgid "Installed version"
+#~ msgstr "ഇന്‍സ്റ്റാള്‍ ചെയ്തിരിക്കുന്ന പതിപ്പ്"
+
+#~ msgid "Available version"
+#~ msgstr "ലഭ്യമായ പതിപ്പ്"
+
+#~ msgid "License:"
+#~ msgstr "അനുമതിപത്രം:"
+
+#~ msgid "Portal URL"
+#~ msgstr "പോര്‍ട്ടല്‍ യു ആര്‍ എല്‍"
+
+#~ msgid "Description:"
+#~ msgstr "വിവരണം:"
+
+#~ msgid "Quick search:"
+#~ msgstr "പെട്ടെന്ന് തിരയുക:"
+
+#~ msgid "More info"
+#~ msgstr "കൂടുതല്‍ വിവരങ്ങള്‍"
+
+#~ msgid "Show:"
+#~ msgstr "കാണിക്കുക:"
+
+#~ msgid "The changes are complete"
+#~ msgstr "മാറ്റങ്ങള്‍ പൂര്‍ത്തിയായി"
+
+#~ msgid ""
+#~ "The mint file for this application was not successfully downloaded. Click on "
+#~ "refresh to fix the problem."
+#~ msgstr ""
+#~ "ഈ അപ്പ്ളിക്കേഷനു വേണ്ടിയുള്ള മിന്റ് ഫയല്‍ ഡൌണ്‍ലോഡ് വിജയിച്ചില്ല. പ്രശ്നം "
+#~ "പരിഹരിക്കുന്നതിനായി റിഫ്രെഷ് അമര്‍ത്തുക."
+
+#~ msgid "Category"
+#~ msgstr "വിഭാഗം"
+
+#~ msgid "Added"
+#~ msgstr "ചേര്‍ത്തിരിക്കുന്നു"
+
+#~ msgid "Views"
+#~ msgstr "അവതരണരീതി"
+
+#~ msgid "Installed software"
+#~ msgstr "ഇന്‍സ്റ്റാള്‍ ചെയ്യപ്പെട്ട സോഫ്റ്റ്‌വെയര്‍"
+
+#~ msgid "Your changes"
+#~ msgstr "നിങ്ങള്‍ വരുത്തിയ മാറ്റങ്ങള്‍"
+
+#~ msgid "All software"
+#~ msgstr "എല്ലാ സോഫ്റ്റ്‌വെയറും"
+
+#~ msgid "Available software"
+#~ msgstr "ലഭ്യമായ സോഫ്റ്റ്‌വെയര്‍"
+
+#~ msgid "Rating"
+#~ msgstr "നിലവാരം"
+
+#~ msgid "Average rating"
+#~ msgstr "ശരാശരി നിലവാരം"
+
+#, python-format
+#~ msgid "%d categories loaded"
+#~ msgstr "%d വിഭാഗങ്ങള്‍ ലോഡ് ചെയ്തിരിക്കുന്നു"
+
+#~ msgid "Please refresh mintInstall by clicking on the Refresh button"
+#~ msgstr ""
+#~ "ദയവായി റിഫ്രെഷ് ബട്ടണ്‍ അമര്‍ത്തി മിന്റ്‌ ഇന്‍സ്റ്റാള്‍ റിഫ്രെഷ് ചെയ്യുക"
+
+#, python-format
+#~ msgid "Downloading data for %s"
+#~ msgstr "%s ന്‌ വേണ്ടിയുള്ള വിവരങ്ങള്‍ ഡൌണ്‍ലോഡ് ചെയ്തുകൊണ്ടിരിക്കുന്നു"
+
+#~ msgid "Software manager"
+#~ msgstr "സോഫ്റ്റ്‌വേര്‍ മാനേജര്‍"
+
+#~ msgid "Quit"
+#~ msgstr "ഉപേക്ഷിക്കുക"
+
+#~ msgid ""
+#~ "The data used by mintInstall is corrupted or out of date. Click on refresh "
+#~ "to fix the problem :"
+#~ msgstr ""
+#~ "മിന്റ്‌ ഇന്‍സ്റ്റാള്‍ ഉപയോഗിക്കുന്ന വിവരങ്ങള്‍ കാലാവധി കഴിഞ്ഞതോ മോശമായതോ "
+#~ "ആണ്. പ്രശ്നം പരിഹരിക്കുന്നതിനായി റിഫ്രെഷ് അമര്‍ത്തുക:"
+
+#~ msgid "Cancel all changes"
+#~ msgstr "വരുത്തിയ എല്ലാ മാറ്റങ്ങളും റദ്ദാക്കുക"
+
+#~ msgid "All applications"
+#~ msgstr "എല്ലാ അപ്പ്ളിക്കേഷനുകളും"
+
+#, python-format
+#~ msgid "%d screenshots loaded"
+#~ msgstr "%d സ്ക്രീന്‍ ഷോട്ടുകള്‍ ലോഡ് ചെയ്തിരിക്കുന്നു"
+
+#, python-format
+#~ msgid "%d applications loaded"
+#~ msgstr "%d അപ്പ്ളിക്കേഷനുകള്‍ ലോഡ് ചെയ്തിരിക്കുന്നു"
+
+#, python-format
+#~ msgid "%d reviews loaded"
+#~ msgstr "%d നിരൂപണങ്ങള്‍ ലോഡ് ചെയ്തിരിക്കുന്നു"
+
+#~ msgid "Reviewer"
+#~ msgstr "നിരൂപകന്‍"
+
+#~ msgid "Review"
+#~ msgstr "നിരൂപണം"
+
+#~ msgid "Sound & Video"
+#~ msgstr "ശബ്ദവും ചലച്ചിത്രവും"
+
+#~ msgid "Simulation & racing"
+#~ msgstr "സിമുലേഷനും റേസിംഗും"
+
+#~ msgid "First person shooters"
+#~ msgstr "ഫസ്റ്റ് പേഴ്സണ്‍ ഷൂട്ടേഴ്സ്"
+
+#~ msgid "Real time strategy"
+#~ msgstr "തത്സമയ തന്ത്രം"
+
+#~ msgid "Finance"
+#~ msgstr "സാമ്പത്തികം"
+
+#~ msgid "2D"
+#~ msgstr "2ഡി"
+
+#~ msgid "Tools"
+#~ msgstr "ഉപകരണങ്ങള്‍"
+
+#~ msgid "Photo"
+#~ msgstr "ഫോട്ടോ"
+
+#~ msgid "System Tools"
+#~ msgstr "സിസ്റ്റം ടൂളുകള്‍"
+
+#~ msgid "Education"
+#~ msgstr "വിദ്യാഭ്യാസം"
+
+#~ msgid "Firewall"
+#~ msgstr "ഫയര്‍വാള്‍"
+
+#~ msgid "Text editors"
+#~ msgstr "ടെക്സ്ട് എഡിറ്ററൂകള്‍"
+
+#~ msgid "Video players"
+#~ msgstr "വീഡിയോ പ്ലയേര്‍സ്"
+
+#~ msgid "Audio players"
+#~ msgstr "ഓഡിയോ പ്ലയേര്‍സ്"
+
+#~ msgid "Cancel change"
+#~ msgstr "വരുത്തിയ മാറ്റം റദ്ദാക്കുക"
+
+#~ msgid "Burning tools"
+#~ msgstr "ബെര്‍ണിംഗ് ടൂള്‍സ്"
+
+#~ msgid "Collection managers"
+#~ msgstr "കളക്ഷന്‍ മാനേജര്‍"
+
+#~ msgid "Office suites"
+#~ msgstr "ഓഫീസ്‌ സൂട്സ്"
+
+#~ msgid "Databases"
+#~ msgstr "ഡേറ്റാബെയിസുകള്‍"
+
+#~ msgid "Scanning tools"
+#~ msgstr "സ്കാനിങ് ടൂള്‍സ്"
+
+#~ msgid "Image viewers"
+#~ msgstr "ഇമേജ്‌ വ്യൂവേര്‍സ്"
+
+#~ msgid "Spreadsheets"
+#~ msgstr "സ്പ്രഡ് ഷീട്‌സ്"
+
+#~ msgid "Web browsers"
+#~ msgstr "വെബ്‌ ബ്രൌസേര്‍സ്"
+
+#~ msgid "Word processors"
+#~ msgstr "വേര്‍ഡ്‌ പ്രൊസസേര്‍സ്"
+
+#~ msgid "Graph and flowcharts"
+#~ msgstr "ഗ്രാഫും ഫ്ലോ ചാര്‍ട്ടുകളും"
+
+#~ msgid "Mind mapping"
+#~ msgstr "മൈന്‍ഡ് മാപ്പിങ്"
+
+#~ msgid "Document viewers"
+#~ msgstr "ഡോക്യുമെന്റ് വ്യൂവേര്‍സ്"
+
+#~ msgid "Drivers"
+#~ msgstr "ഡ്രൈവറുകള്‍"
+
+#~ msgid "Upstream"
+#~ msgstr "അപ്‌സ്ട്രീമ്"
+
+#~ msgid "P2P and torrent"
+#~ msgstr "പി2പി യും ടോറ്‌രെന്റും"
+
+#~ msgid "Package management"
+#~ msgstr "പാക്കേജ് മാനേജ്‌മെന്റ്"
+
+#~ msgid "Internet Relay Chat"
+#~ msgstr "ഇന്റെര്‍നെറ്റ് റിലെ ചാറ്റ്"
+
+#~ msgid "Instant messengers"
+#~ msgstr "ഇന്‍സ്റ്റന്റ് മെസഞ്ജേര്‍സ്‌"
+
+#~ msgid "Desktop components"
+#~ msgstr "ഡെസ്ക്ടോപ് കോംപണെണ്ട്സ്"
+
+#~ msgid "FTP"
+#~ msgstr "എഫ്‌ ടി പി"
+
+#, python-format
+#~ msgid ""
+#~ "%(applications)d applications listed, %(install)d to install, %(remove)d to "
+#~ "remove"
+#~ msgstr ""
+#~ "%(applications)d ആപ്പ്ലിക്കേഷനുകള്‍ ലിസ്റ്റ് ചെയ്തിരിക്കുന്നു, %(install)d "
+#~ "ഇന്‍സ്റ്റോള്‍ ചെയ്യാന്‍, %(remove)d നീക്കം ചെയ്യാന്‍"

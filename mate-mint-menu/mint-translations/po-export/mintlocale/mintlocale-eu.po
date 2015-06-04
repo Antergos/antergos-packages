@@ -1,0 +1,202 @@
+# Basque translation for linuxmint
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-10-23 22:54+0200\n"
+"PO-Revision-Date: 2014-11-02 12:48+0000\n"
+"Last-Translator: Asier Iturralde Sarasola <Unknown>\n"
+"Language-Team: Basque <eu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:14+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintLocale/add.py:41
+msgid "Add a New Language"
+msgstr "Gehitu hizkuntza berri bat"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:52
+msgid "Install / Remove Languages"
+msgstr "Instalatu / Kendu hizkuntzak"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:157
+msgid "Some language packs are missing"
+msgstr "Hizkuntza-pakete batzuk falta dira"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:161
+msgid "Fully installed"
+msgstr "Guztiz instalatuta"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:195
+#: usr/lib/linuxmint/mintLocale/install_remove.py:234
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:471
+msgid "Please wait, this can take some time"
+msgstr "Itxaron mesedez, baliteke honek denbora pixka bat behar izatea"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:197
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:473
+msgid "Installation is complete"
+msgstr "Instalazioa amaitu da"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.py:236
+msgid "The related language packs were removed"
+msgstr "Erlazionaturiko hizkuntza-paketeak kendu dira"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:271
+msgid "Language Settings"
+msgstr "Hizkuntzaren ezarpenak"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:278
+msgid "Apply System-Wide"
+msgstr "Aplikatu sistema osoan"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:282
+msgid "Install / Remove Languages..."
+msgstr "Instalatu / Kendu hizkuntzak..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:292
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:293
+msgid "Language"
+msgstr "Hizkuntza"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:293
+msgid "Language, interface, date and time..."
+msgstr "Hizkuntza, interfazea, data eta ordua..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:295
+msgid "Region"
+msgstr "Eskualdea"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:295
+msgid "Numbers, currency, addresses, measurement..."
+msgstr "Zenbakiak, moneta, helbideak, neurriak..."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:310
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:317
+msgid "Input method"
+msgstr "Sarrera-metodoa"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:313
+msgid ""
+"Input methods are used to write symbols and characters which are not present "
+"on the keyboard. They are useful to write in Chinese, Japanese, Korean, "
+"Thai, Vietnamese..."
+msgstr ""
+"Sarrera-metodoak teklatuan ez dauden sinbolo eta karaktereak idazteko "
+"erabiltzen dira. Erabilgarriak dira txinera, japoniera, koreera, "
+"thailandiera, vietnamera eta abarrez idazteko."
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:500
+msgid "None"
+msgstr "Bat ere ez"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:528
+msgid "Installed"
+msgstr "Instalatuta"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:538
+#, python-format
+msgid "%d missing components!"
+msgstr "%d osagai falta dira!"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:539
+msgid "Install the missing components"
+msgstr "Instalatu falta diren osagaiak"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:544
+#, python-format
+msgid "%d optional components available"
+msgstr "%d hautazko osagai eskuragarri"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:545
+msgid "Install the optional components"
+msgstr "Instalatu hautazko osagaiak"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:550
+msgid "Not installed"
+msgstr "Instalatu gabe"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:551
+#, python-format
+msgid "Add support for %s"
+msgstr "Gehitu %s(r)en euskarria"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:558
+msgid "Not supported"
+msgstr "Ez dago onartuta"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:568
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:569
+msgid "No locale defined"
+msgstr "Ez da zehaztu ezarpen lokalik"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:638
+msgid "System locale"
+msgstr "Sistemaren konfigurazio lokala"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:643
+msgid "Language support"
+msgstr "Hizkuntza-euskarria"
+
+#: usr/lib/linuxmint/mintLocale/mintLocale.py:643
+#, python-format
+msgid "%d languages installed"
+msgstr "%d hizkuntza instalatuta"
+
+#: usr/lib/linuxmint/mintLocale/add.ui.h:1
+msgid "Install"
+msgstr "Instalatu"
+
+#: usr/lib/linuxmint/mintLocale/add.ui.h:2
+msgid "Install the selected language"
+msgstr "Instalatu hautatutako hizkuntza"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:1
+msgid ""
+"<b><small>Note: Installing or upgrading language packs can trigger the "
+"installation of additional languages</small></b>"
+msgstr ""
+"<b><small>Oharra: Hizkuntza-paketeak instalatu edo bertsio-berritzeak "
+"hizkuntza gehigarriak instalatzea eragin dezake</small></b>"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:2
+msgid "Add..."
+msgstr "Gehitu..."
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:3
+msgid "Add a new language"
+msgstr "Gehitu hizkuntza berri bat"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:4
+msgid "Remove"
+msgstr "Kendu"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:5
+msgid "Remove the selected language"
+msgstr "Kendu hautatutako hizkuntza"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:6
+msgid "Install language packs"
+msgstr "Instalatu hizkuntza-paketeak"
+
+#: usr/lib/linuxmint/mintLocale/install_remove.ui.h:7
+msgid ""
+"Install any missing language packs, translations files, dictionaries for the "
+"selected language"
+msgstr ""
+"Instalatu hautatutako hizkuntzarentzat falta diren hizkuntza-pakete, "
+"itzulpen-fitxategi eta hiztegi guztiak"
+
+#: generate_desktop_files:24
+msgid "Languages"
+msgstr "Hizkuntzak"
+
+#: generate_desktop_files:24
+msgid "Language settings"
+msgstr "Hizkuntzaren ezarpenak"

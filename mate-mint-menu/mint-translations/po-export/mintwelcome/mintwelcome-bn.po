@@ -1,0 +1,188 @@
+# Bengali translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-08 10:39+0100\n"
+"PO-Revision-Date: 2011-05-12 12:57+0000\n"
+"Last-Translator: Imran Tushar <Unknown>\n"
+"Language-Team: Bengali <bn@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:24 generate_desktop_files:58
+#: generate_desktop_files:72
+msgid "Welcome Screen"
+msgstr "ওয়েলকাম স্ক্রিন"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:77
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did designing it. The links below will help you get started "
+"with your new operating system. Have a great time and don't hesitate to send "
+"us your feedback."
+msgstr ""
+"স্বাগতম এবং লিনাক্স মিন্ট নির্বাচন করার জন্য আপনাকে ধন্যবাদ। আশা করি এটি "
+"ডিজাইন করতে আমরা যতটুকু আনন্দ পেয়েছি, আপনি ব্যবহার করেও ঠিক ততটুকুই আনন্দ "
+"পাবেন। নিম্নের লিংকসমূহ আপনাকে নতুন অপারেটিং সিস্টেমে কাজ শুরু করতে সহায়তা "
+"করবে। আপনার সময় সুন্দরভাবে অতিবাহিত হোক এবং আমাদের সাথে দ্বিধাহীনভাবে "
+"যোগাযোগ করতে পারেন।"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "New features"
+msgstr "নতুন ফিচারসমূহ"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "See what is new in this release"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid "Important information"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid ""
+"Find out about important information, limitations, known issues and their "
+"solution"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "User guide (PDF)"
+msgstr "ব্যবহারকারী নির্দেশিকা (পিডিএফ)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "Learn all the basics to get started with Linux Mint"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data or applications from a previous installation"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Software manager"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Install additional software"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat room"
+msgstr "চ্যাট রুম"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat live with other users in the chat room"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Forums"
+msgstr "ফোরাম"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Seek help from other users in the Linux Mint forums"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Tutorials"
+msgstr "নির্দেশিকাসমূহ"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Find tutorials about Linux Mint"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid "Hardware database"
+msgstr "হার্ডওয়্যার ডেটাবেজ"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid ""
+"Find hardware that is compatible with Linux, or information about your "
+"hardware"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Idea pool"
+msgstr "আইডিয়া পুল"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Submit new ideas to the development team"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Get involved"
+msgstr "যুক্ত হোন"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Find out how to get involved in the Linux Mint project"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Donations"
+msgstr "দানসমূহ"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Make a donation to the Linux Mint project"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Sponsors"
+msgstr "স্পন্সরসমূহ"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Apply to become a Linux Mint sponsor"
+msgstr ""
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:140
+msgid "Show this dialog at startup"
+msgstr "সূচনাতে এই ডায়ালগটি প্রদর্শন"
+
+#: generate_desktop_files:58 generate_desktop_files:72
+msgid "Introduction to Linux Mint"
+msgstr "লিনাক্স মিন্ট পরিচিতি"
+
+#: generate_desktop_files:86
+msgid "Install Multimedia Codecs"
+msgstr "মাল্টিমিডিয়া কোডেকসমূহ ইন্সটল করুন"
+
+#: generate_desktop_files:86
+msgid "Add all the missing multimedia codecs"
+msgstr "বাদ পড়া সব মাল্টিমিডিয়া কোডেকসমূহ যুক্ত করুন"
+
+#~ msgid "Visit the forums"
+#~ msgstr "ফোরাম প্ররিভ্রমন"
+
+#~ msgid "Connect to the chat room"
+#~ msgstr "চ্যাটরুমে যুক্ত হোন"
+
+#~ msgid "Download the user guide (PDF)"
+#~ msgstr "ব্যবহারকরী সহায়িকা(পিডিএফ) ডাউনলোড করুন"
+
+#~ msgid "Contribute to Linux Mint"
+#~ msgstr "লিনাক্স মিন্ট-এ অবদান রাখুন"
+
+#~ msgid "Browse the list of new features"
+#~ msgstr "নতুন বৈশিষ্টসমূহের তালিকা দেখুন"
+
+#, python-format
+#~ msgid "Discover %s"
+#~ msgstr "%s আবিষ্কার করুন"
+
+#~ msgid "Find help"
+#~ msgstr "সাহায্য অনুসন্ধান"
+
+#~ msgid "Welcome to Linux Mint"
+#~ msgstr "লিনাক্স মিন্টে স্বাগতম"
+
+#~ msgid "Make a donation"
+#~ msgstr "দান করুন"

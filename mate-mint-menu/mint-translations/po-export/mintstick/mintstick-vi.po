@@ -1,0 +1,197 @@
+# Vietnamese translation for linuxmint
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-09-19 10:09+0100\n"
+"PO-Revision-Date: 2013-10-06 01:38+0000\n"
+"Last-Translator: Saki <a4e484b@hotmail.com>\n"
+"Language-Team: Vietnamese <vi@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:13+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: lib/mintstick.py:276 lib/mintstick.py:278
+msgid "The USB stick was formatted successfully."
+msgstr "Thanh USB đã được định dạng thành công."
+
+#: lib/mintstick.py:281
+#, python-format
+msgid "An error occured while creating a partition on %s."
+msgstr "Có lỗi xảy ra khi tạo phân vùng trên %s."
+
+#: lib/mintstick.py:283 lib/mintstick.py:370
+msgid "Authentication Error."
+msgstr "Lỗi Chứng thực."
+
+#: lib/mintstick.py:285 lib/mintstick.py:372
+msgid "An error occurred."
+msgstr "Có lỗi xảy ra."
+
+#: lib/mintstick.py:302
+msgid "Image:"
+msgstr "Ảnh:"
+
+#: lib/mintstick.py:303
+msgid "USB stick:"
+msgstr "Thanh USB:"
+
+#: lib/mintstick.py:328
+#, python-format
+msgid "Writing %(VAR_FILE)s to %(VAR_DEV)s"
+msgstr "Viết %(VAR_FILE)s lên %(VAR_DEV)s"
+
+#: lib/mintstick.py:329
+#, python-format
+msgid "Starting copy from %(VAR_SOURCE)s to %(VAR_TARGET)s"
+msgstr "Bắt đầu sao chép từ %(VAR_SOURCE)s đến %(VAR_TARGET)s"
+
+#: lib/mintstick.py:361 lib/mintstick.py:363
+msgid "The image was successfully written."
+msgstr "Ảnh đã được ghi thành công."
+
+#: lib/mintstick.py:366
+msgid "Not enough space on the USB stick."
+msgstr "Không đủ không gian trên thanh USB."
+
+#: lib/mintstick.py:368
+msgid "An error occured while copying the image."
+msgstr "Có lỗi xảy ra khi chép ảnh."
+
+#: generate_additional_files.py:49 generate_additional_files.py:61
+#: share/mintstick/mintstick.glade.h:28
+msgid "USB Image Writer"
+msgstr "Trình Ghi Ảnh USB"
+
+#: generate_additional_files.py:49 generate_additional_files.py:61
+#: generate_additional_files.py:94
+msgid "Make a bootable USB stick"
+msgstr "Tạo đĩa USB khởi động"
+
+#: generate_additional_files.py:73 generate_additional_files.py:85
+#: share/mintstick/mintstick.glade.h:4
+msgid "USB Stick Formatter"
+msgstr "Trình Định dạng Thanh USB"
+
+#: generate_additional_files.py:73 generate_additional_files.py:85
+#: generate_additional_files.py:104
+msgid "Format a USB stick"
+msgstr "Định dạng đĩa USB"
+
+#: generate_additional_files.py:94
+msgid "Make bootable USB stick"
+msgstr "Tạo đĩa USB khởi động"
+
+#: generate_additional_files.py:104 share/mintstick/mintstick.glade.h:27
+msgid "Format"
+msgstr "Định dạng"
+
+#: share/mintstick/mintstick.glade.h:1
+msgid " "
+msgstr " "
+
+#: share/mintstick/mintstick.glade.h:2
+msgid ""
+"This will destroy all data on the USB stick, are you sure you want to "
+"proceed?"
+msgstr ""
+"Thao tác này sẽ huỷ mọi dữ liệu trên thanh USB, bạn có chắc chắn muốn tiến "
+"hành không ?"
+
+#: share/mintstick/mintstick.glade.h:3
+msgid ""
+"Something went wrong, please see the details window for the exact error."
+msgstr ""
+"Có gì đó sai sót, vui lòng xem cửa sổ chi tiết để biết lỗi chính xác."
+
+#: share/mintstick/mintstick.glade.h:5
+msgid "Format:"
+msgstr "Định dạng:"
+
+#: share/mintstick/mintstick.glade.h:6
+msgid "Select a USB stick"
+msgstr "Chọn thanh USB"
+
+#: share/mintstick/mintstick.glade.h:7
+msgid "as"
+msgstr "như"
+
+#: share/mintstick/mintstick.glade.h:8
+msgid ""
+"FAT32 \n"
+"   + Compatible everywhere.\n"
+"   -  Cannot handle files larger than 4GB.\n"
+"\n"
+"NTFS \n"
+"  + Compatible with Windows.\n"
+"   - Not compatible with Mac and most hardware devices.\n"
+"   - Occasional compatibility problems with Linux (NTFS is proprietary and "
+"reverse engineered).\n"
+"\n"
+"EXT4 \n"
+"\n"
+"  + Modern, stable, fast, journalized.\n"
+"  + Supports Linux file permissions.\n"
+"   - Not compatible with Windows, Mac and most hardware devices.\n"
+msgstr ""
+"FAT32 \n"
+"   + Tương thích mọi nơi.\n"
+"   - Không thể xử lý tập tin lớn hơn 4GB.\n"
+"\n"
+"NTFS \n"
+"  + Tương thích với Windows.\n"
+"   - Không tương thích với Mac và phần lớn thiết bị phần cứng.\n"
+"   - Thỉnh thoảng gặp vấn đề tương thích với Linux (NTFS là định dạng độc "
+"quyền và được dịch ngược).\n"
+"\n"
+"EXT4 \n"
+"\n"
+"  + Hiện đại, ổn định, nhanh, được lập lịch trình.\n"
+"  + Hỗ trợ phân quyền tập tin Linux.\n"
+"   - Không tương thích với Windows, Mac và phần lớn thiết bị phần cứng.\n"
+
+#: share/mintstick/mintstick.glade.h:23
+msgid "Volume label:"
+msgstr "Nhãn đĩa:"
+
+#: share/mintstick/mintstick.glade.h:24
+msgid "Choose a name for your USB Stick"
+msgstr "Chọn tên cho thanh USB"
+
+#: share/mintstick/mintstick.glade.h:25
+msgid "USB Stick"
+msgstr "Thanh USB"
+
+#: share/mintstick/mintstick.glade.h:26
+msgid "Details"
+msgstr "Chi tiết"
+
+#: share/mintstick/mintstick.glade.h:29
+msgid "Write image:"
+msgstr "Ghi ảnh:"
+
+#: share/mintstick/mintstick.glade.h:30
+msgid "Select an image"
+msgstr "Chọn ảnh"
+
+#: share/mintstick/mintstick.glade.h:31
+msgid "Select Image"
+msgstr "Chọn Ảnh"
+
+#: share/mintstick/mintstick.glade.h:32
+msgid "to"
+msgstr "đến"
+
+#: share/mintstick/mintstick.glade.h:33
+msgid "Write"
+msgstr "Ghi"
+
+#: share/mintstick/mintstick.glade.h:34
+msgid "The image was written successfully."
+msgstr "Ảnh đã được ghi thành công."

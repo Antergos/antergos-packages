@@ -1,0 +1,821 @@
+# Bengali translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-11-03 17:21+0100\n"
+"PO-Revision-Date: 2013-04-22 12:19+0000\n"
+"Last-Translator: Iftekhar Mohammad <Unknown>\n"
+"Language-Team: Bengali <bn@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:09+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:196
+#, python-format
+msgid "The package '%s' could not be installed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:198
+#, python-format
+msgid "The package '%s' could not be removed"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:204
+msgid "Please check your connection to the Internet"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:215
+msgid "Another application is using APT:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:301
+#, python-format
+msgid "%d ongoing actions"
+msgstr "%d চলমান প্রক্রিয়া"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:311
+#, python-format
+msgid "Cancel the task: %s"
+msgstr "কাজটি বাতিল করুনঃ %s"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Waiting"
+msgstr "অপেক্ষা করা হচ্ছে"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Downloading"
+msgstr "ডাউনলোড করা হচ্ছে"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+msgid "Running"
+msgstr "চলমান"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:323
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:125
+msgid "Finished"
+msgstr "সমাপ্ত"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:335
+#, python-format
+msgid "Installing %s"
+msgstr "%s ইনস্টল হচ্ছে"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:337
+#, python-format
+msgid "Removing %s"
+msgstr "%s অপসারণ হচ্ছে"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:339
+msgid "Updating cache"
+msgstr "ক্যাশ আপডেট করা হচ্ছে"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:341
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:343
+msgid "No role set"
+msgstr "কোন রোল নির্ধারণ করা হয়নি"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:451
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:789
+#: usr/lib/linuxmint/mintInstall/splash.py:20
+#: usr/lib/linuxmint/mintInstall/splash.py:27
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:343 generate_desktop_files:24
+#: generate_desktop_files:35 generate_desktop_files:47
+msgid "Software Manager"
+msgstr "সফটওয়্যার ব্যবস্থাপক"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:472
+msgid "_File"
+msgstr "ফাইল (_F)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:476
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:127
+msgid "Close"
+msgstr "বন্ধ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:480
+msgid "_Edit"
+msgstr "সম্পাদনা (_E)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:484
+msgid "Preferences"
+msgstr "পছন্দসমূহ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:488
+msgid "Search in packages summary (slower search)"
+msgstr "প্যাকেজসমূহের সারমর্মে অনুসন্ধান করুন (slower search)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:492
+msgid "Search in packages description (even slower search)"
+msgstr "প্যাকেজসমূহের বিবরণের অনুসন্ধান করুন (even slower search)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:496
+msgid "Open links using the web browser"
+msgstr "ওয়েব ব্রাউজার ব্যবহার করে লিংক খুলুন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:500
+msgid "Search while typing"
+msgstr "টাইপের সময় খুঁজুন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:513
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:753
+msgid "Account information"
+msgstr "একাউন্টের তথ্য"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:520
+msgid "Software sources"
+msgstr "সফটওয়্যারের উৎস"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:524
+msgid "_View"
+msgstr "_প্রদর্শন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:528
+msgid "Available packages"
+msgstr "প্যাকেজসমূহের লভ্যতা"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:532
+msgid "Installed packages"
+msgstr "ইনস্টল করা প্যাকেজসমূহ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:539
+msgid "_Help"
+msgstr "সাহায্য (_H)"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:543
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:787
+msgid "About"
+msgstr "পরিচিতি"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:589
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:599
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1118
+msgid "Categories"
+msgstr "বিভাগসমূহ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:590
+msgid "Please choose a category"
+msgstr "অনুগ্রহ করে একটি শ্রেনী পছন্দ করুন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:591
+#, python-format
+msgid "%d packages are currently available"
+msgstr "%d প্যাকেজসমূহ বর্তমানে সহজলভ্য"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:600
+msgid "Please choose a sub-category"
+msgstr "অনুগ্রহ করে একটি উপশ্রেনী পছন্দ করুন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:621
+msgid "No ongoing actions"
+msgstr "কোন চলমান প্রক্রিয়া নেই"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:622
+msgid "Active tasks:"
+msgstr "সক্রিয় কাজসমূহঃ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:625
+msgid "Show all results"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:755
+msgid "Your community account"
+msgstr "আপনার কমিউনিটি একাউন্ট"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:757
+msgid "Fill in your account info to review applications"
+msgstr "সফটওয়্যার রিভিউ দেওয়ার জন্য আপনার একাউন্টের তথ্য পূরণ করুন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:759
+msgid "Username:"
+msgstr "ইউজারনেমঃ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:760
+msgid "Password:"
+msgstr "পাসওয়ার্ডঃ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:832
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1759
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1770
+msgid "B"
+msgstr "B"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:834
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1761
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1772
+msgid "KB"
+msgstr "কিলোবাইট"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:836
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1763
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1774
+msgid "MB"
+msgstr "মেগাবাইট"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:838
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1765
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1776
+msgid "GB"
+msgstr "গিগাবাইট"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:860
+msgid "Icon"
+msgstr "আইকন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:864
+msgid "Application"
+msgstr "অ্যাপলিকেশন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:871
+msgid "Score"
+msgstr "স্কোর"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:893
+msgid "Task"
+msgstr "কাজ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:896
+msgid "Status"
+msgstr "অবস্থা"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:899
+msgid "Progress"
+msgstr "অগ্রগতি"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:996
+msgid "See more reviews"
+msgstr "আরও রিভিউ দেখুন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1038
+msgid "Screenshot"
+msgstr "স্ক্রিনশট"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1047
+msgid "Website"
+msgstr "ওয়েবসাইট"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1055
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1067
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1780
+msgid "Reviews"
+msgstr "পর্যালোচনা"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1120
+msgid "Featured"
+msgstr "ফিচারড"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1123
+msgid "All Packages"
+msgstr "সকল প্যাকেজসমূহ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1125
+msgid "Internet"
+msgstr "ইন্টারনেট"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1126
+msgid "Web"
+msgstr "ওয়েব"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1128
+msgid "Email"
+msgstr "ইমেইল"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1130
+msgid "Chat"
+msgstr "চ্যাট"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1132
+msgid "File sharing"
+msgstr "ফাইল শেয়ারিং"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1135
+msgid "Sound and video"
+msgstr "শব্দ এবং ভিডিও"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1138
+msgid "Graphics"
+msgstr "গ্রাফিক্স"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1140
+msgid "3D"
+msgstr "থ্রিডি"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1142
+msgid "Drawing"
+msgstr "থ্রিডি"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1144
+msgid "Photography"
+msgstr "ফটোগ্রাফি"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1146
+msgid "Publishing"
+msgstr "প্রকাশনা"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1148
+msgid "Scanning"
+msgstr "স্ক্যানিং"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1150
+msgid "Viewers"
+msgstr "দর্শক"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1153
+msgid "Office"
+msgstr "অফিস"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1155
+msgid "Games"
+msgstr "খেলা"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1157
+msgid "Board games"
+msgstr "বোর্ড গেমস"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1159
+msgid "First-person shooters"
+msgstr "ফার্স্ট-পারসন শুটারস"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1161
+msgid "Real-time strategy"
+msgstr "রিয়েল-টাইম স্ট্রাটেজি"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1163
+msgid "Turn-based strategy"
+msgstr "টার্ন-বেইসড স্ট্রাটেজি"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1165
+msgid "Emulators"
+msgstr "ইমুলেটরসমূহ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1167
+msgid "Simulation and racing"
+msgstr "সিমুলেশন এন্ড রেসিং"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1170
+msgid "Accessories"
+msgstr "আনুষঙ্গিক"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1172
+msgid "System tools"
+msgstr "সিস্টেম টুল"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1175
+msgid "Fonts"
+msgstr "ফন্টসমূহ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1178
+msgid "Science and Education"
+msgstr "বিজ্ঞান এবং শিক্ষা"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1181
+msgid "Programming"
+msgstr "প্রোগ্রামিং"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1380
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1853
+#, python-format
+msgid "%d reviews"
+msgstr "%d রিভিউস"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1416
+#, python-format
+msgid "%d packages"
+msgstr "%d প্যাকেজসমূহ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1661
+#, python-format
+msgid "Only results in category \"%s\" are shown."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1672
+msgid "Search results"
+msgstr "অনুসন্ধানের ফলাফল"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Hate it"
+msgstr "পছন্দ হয়নি"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Not a fan"
+msgstr "ভক্ত না"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "So so"
+msgstr "মোটামুটি"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Like it"
+msgstr "পছন্দ হয়েছে"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1711
+msgid "Awesome!"
+msgstr "অসাধারণ!"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1728
+msgid "Score:"
+msgstr "স্কোরঃ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1729
+msgid "Submit"
+msgstr "জমা দিন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1730
+msgid "Your review"
+msgstr "আপনার রিভিউ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1778
+msgid "Size:"
+msgstr "সাইজ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1779
+msgid "Version:"
+msgstr "ভার্সন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1781
+msgid "Your review:"
+msgstr "আপনার রিভিউঃ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1782
+msgid "Details"
+msgstr "বিস্তারিত"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1784
+msgid "This will remove the following packages:"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1785
+msgid "Cancel"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1786
+msgid "Confirm"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1790
+#, python-format
+msgid "%(localSize)s of disk space freed"
+msgstr "%(localSize)s জায়গা খালি হয়েছে"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1792
+#, python-format
+msgid "%(localSize)s of disk space required"
+msgstr "%(localSize)s জায়গা প্রয়োজন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1795
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space freed"
+msgstr "%(downloadSize)s ডাউনলোড হবে, %(localSize)s জায়গা খালি হয়েছে"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1797
+#, python-format
+msgid "%(downloadSize)s to download, %(localSize)s of disk space required"
+msgstr "%(downloadSize)s ডাউনলোড হবে, %(localSize)s জায়গা প্রয়োজন"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1800
+msgid "The following packages would be installed: "
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1802
+msgid "The following packages would be removed: "
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1805
+msgid "Impact on packages:"
+msgstr "ইম্প্যাক্ট অন প্যাকেজেসঃ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1823
+msgid "Remove"
+msgstr "অপসারণ"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1825
+#: usr/bin/mint-search-apt:37
+msgid "Installed"
+msgstr "ইনস্টল করা হয়েছে"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1829
+msgid "Not available"
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1831
+msgid "Please use apt-get to install this package."
+msgstr ""
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1834
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:207
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:442
+msgid "Install"
+msgstr "ইনস্টল"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1836
+msgid "Not installed"
+msgstr "ইন্সটল করা হয়নি"
+
+#: usr/lib/linuxmint/mintInstall/mintinstall.py:1857
+msgid "Reviews:"
+msgstr "রিভিউসঃ"
+
+#: usr/lib/linuxmint/mintInstall/splash.py:28
+#, python-format
+msgid "Gathering information for %d packages..."
+msgstr "%d প্যাকেজের জন্য তথ্য একত্র করা হচ্ছে..."
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:68
+msgid "Backing up your APT sources"
+msgstr "এপিটি উৎসগুলো ব্যাকআপ নেওয়া হচ্ছে"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:92
+#: usr/lib/linuxmint/mintInstall/remove.py:48 usr/bin/mint-synaptic-install:14
+msgid "Please wait, this can take some time"
+msgstr "অনুগ্রহপূর্বক অপেক্ষা করুন, এটা কিছু সময় নিতে পারে"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:94
+#: usr/bin/mint-synaptic-install:16
+msgid "Installation is complete"
+msgstr "ইনস্টল সম্পন্ন"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:121
+msgid "Restoring your APT sources"
+msgstr "এপিটি উৎসগুলো রিস্টোর করা হচ্ছে"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:204
+msgid "Using the following repositories:"
+msgstr "যে রিপোজিটরীসমূহ ব্যবহার করা হচ্ছে:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:209
+#, python-format
+msgid "Install %s?"
+msgstr "ইনস্টল %s?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:212
+msgid "The following packages will be installed:"
+msgstr "যে প্যাকেজসমূহ ইনস্টল করা হবে:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:223
+msgid "Default repositories"
+msgstr "ডিফল্ট রিপোজিটরীসমূহ"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:296
+#, python-format
+msgid "Upgrade %s?"
+msgstr "%s আপগ্রেড করা হবে?"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:298
+msgid "The following packages will be upgraded:"
+msgstr "যে প্যাকেজসমূহ আপগ্রেড করা হবে:"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:299
+msgid "Upgrade"
+msgstr "আপগ্রেড"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:434
+msgid "Find Software"
+msgstr "সফটওয়্যার খুজুন"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:437
+msgid "Go to the Linux Mint Software Portal"
+msgstr "লিনাক্স মিন্ট সফটওয়্যার পোর্টাল দেখুন"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:438
+msgid "Search for a .mint application"
+msgstr ".mint অ্যাপলিকেশন খুজুন"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:439
+msgid "Go to the GetDeb Portal"
+msgstr "GetDeb পোর্টাল দেখুন"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:440
+msgid "Search for a .deb package"
+msgstr ".deb প্যাকেজ খুজুন"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:441
+msgid "Search"
+msgstr "অনুসন্ধান"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:443
+msgid "Show"
+msgstr "প্রদর্শন"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:444
+msgid "Go to the Ubuntu repository"
+msgstr "উবুন্টু রিপোজিটরী দেখুন"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:445
+msgid "Go to the Linux Mint repository"
+msgstr "লিনাক্স মিন্ট রিপোজিটরী দেখুন"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid "Your APT sources were corrupted."
+msgstr "আপনার এপিটি উৎসসমূহ করাপ্টেড।"
+
+#: usr/lib/linuxmint/mintInstall/mintInstall.py:457
+msgid ""
+"Your APT sources were not correctly restored after you last ran mintInstall. "
+"They now have been restored."
+msgstr ""
+"সর্বশেষ মিন্টইনস্টল চালানোর পর আপনার এপিটি উৎসসমূহ ঠিকমত রিস্টোর হয়নি। এখন "
+"সেগুলো রিস্টোর করা হয়েছে।"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:50
+msgid "Application removed successfully"
+msgstr "সফলভাবে অ্যাপলিকেশনটি মুছে ফেলা হয়েছে"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:104
+#, python-format
+msgid "Remove %s?"
+msgstr "%s মুছে ফেলা হবে?"
+
+#: usr/lib/linuxmint/mintInstall/remove.py:107
+msgid "The following packages will be removed:"
+msgstr "যে প্যাকেজসমূহ মুছে ফেলা হব:"
+
+#: usr/bin/mint-search-apt:34
+msgid "No results"
+msgstr "কোনো ফলাফল পাওয়া যায়নি"
+
+#: usr/bin/mint-search-apt:41
+msgid "Package"
+msgstr "প্যাকেজ"
+
+#: usr/bin/mint-search-apt:42
+msgid "Description"
+msgstr "বর্ণনা"
+
+#: usr/bin/mint-make-cmd:37 usr/bin/mint-make-cmd:38
+#, python-format
+msgid "Could not find package: %s"
+msgstr "প্যাকেজ খুজে পাওয়া যায়নি: %s"
+
+#: generate_desktop_files:24 generate_desktop_files:35
+#: generate_desktop_files:47
+msgid "Install new applications"
+msgstr "নতুন অ্যাপলিকেশন ইনস্টল করুন"
+
+#~ msgid "Cancel change"
+#~ msgstr "পরিবর্তন বাতিল করুন"
+
+#~ msgid "These popular applications can be installed on your system:"
+#~ msgstr "এই জনপ্রিয় অ্যাপলিকেশন সমূহ আপনার অপারেটিং সিস্টমে ইনস্টল করা যাবে:"
+
+#~ msgid "Size"
+#~ msgstr "সাইজ"
+
+#~ msgid "Cancel removal"
+#~ msgstr "অপসারণ বাতিল করুন"
+
+#~ msgid "Cancel installation"
+#~ msgstr "ইনস্টল বাতিল করুন"
+
+#~ msgid "License:"
+#~ msgstr "লাইসেন্স:"
+
+#~ msgid "Portal URL"
+#~ msgstr "পোর্টাল ইউআরএল"
+
+#~ msgid "Description:"
+#~ msgstr "বর্ণনা:"
+
+#~ msgid "Available version"
+#~ msgstr "প্রাপ্ত সংস্করণ"
+
+#~ msgid "Installed version"
+#~ msgstr "ইনস্টল করা সংস্করণ"
+
+#~ msgid "Repository"
+#~ msgstr "রিপোজিটরী"
+
+#~ msgid "Category"
+#~ msgstr "শ্রেণী"
+
+#~ msgid "Average rating"
+#~ msgstr "গড় রেটিং"
+
+#~ msgid "Views"
+#~ msgstr "প্রদর্শন"
+
+#~ msgid "Added"
+#~ msgstr "যোগ করা হয়েছে"
+
+#~ msgid "Review"
+#~ msgstr "পর্যালোচনা"
+
+#~ msgid "Reviewer"
+#~ msgstr "পরিদর্শক"
+
+#~ msgid "Rating"
+#~ msgstr "রেটিং"
+
+#~ msgid "Software manager"
+#~ msgstr "সফটওয়্যার ম্যানেজার"
+
+#, python-format
+#~ msgid "Downloading data for %s"
+#~ msgstr "%s ডাউনলোড করা হচ্ছে"
+
+#~ msgid "Quit"
+#~ msgstr "প্রস্থান"
+
+#~ msgid "Cancel all changes"
+#~ msgstr "সকল পরিবর্তন বাতিল করুন"
+
+#, python-format
+#~ msgid "%d applications loaded"
+#~ msgstr "%d টি অ্যাপলিকেশন দেখানো হচ্ছে"
+
+#~ msgid "All applications"
+#~ msgstr "সকল অ্যাপলিকেশন"
+
+#~ msgid "Quick search:"
+#~ msgstr "দ্রুত অনুসন্ধান:"
+
+#~ msgid "More info"
+#~ msgstr "বিস্তারিত তথ্য"
+
+#~ msgid "Show:"
+#~ msgstr "দেখাও:"
+
+#, python-format
+#~ msgid "%d screenshots loaded"
+#~ msgstr "%d টি স্ক্রিনশট দেখানো হচ্ছে"
+
+#, python-format
+#~ msgid "%d reviews loaded"
+#~ msgstr "%dটি রিভিউ দেখানো হচ্ছে"
+
+#~ msgid "Installed software"
+#~ msgstr "ইনস্টল করা সফটওয়্যারসমূহ"
+
+#~ msgid "Your changes"
+#~ msgstr "আপনার পরিবর্তন সমূহ"
+
+#~ msgid "All software"
+#~ msgstr "সকল সফটওয়্যার"
+
+#~ msgid "Sound & Video"
+#~ msgstr "শব্দ ও ভিডিও"
+
+#~ msgid "Text editors"
+#~ msgstr "টেক্সট এডিটর"
+
+#~ msgid "Audio players"
+#~ msgstr "অডিও প্লেয়ার"
+
+#~ msgid "Video players"
+#~ msgstr "ভিডিও প্লেয়ার"
+
+#~ msgid "Office suites"
+#~ msgstr "অফিস স্যুট"
+
+#~ msgid "2D"
+#~ msgstr "দ্বিমাত্রিক"
+
+#~ msgid "Tools"
+#~ msgstr "টুল"
+
+#~ msgid "Photo"
+#~ msgstr "ছবি"
+
+#~ msgid "Spreadsheets"
+#~ msgstr "স্প্রেডশীট"
+
+#~ msgid "Web browsers"
+#~ msgstr "ওয়েব ব্রাউজার"
+
+#~ msgid "Word processors"
+#~ msgstr "ওয়ার্ড প্রসেসর"
+
+#~ msgid "Graph and flowcharts"
+#~ msgstr "গ্রাফিক্স এবং ফ্লোচার্ট"
+
+#~ msgid "Databases"
+#~ msgstr "ডাটাবেস"
+
+#~ msgid "Firewall"
+#~ msgstr "ফায়ারওয়াল"
+
+#~ msgid "P2P and torrent"
+#~ msgstr "পি২পি এবং টরেন্ট"
+
+#~ msgid "Package management"
+#~ msgstr "প্যাকেজ ম্যানেজার"
+
+#~ msgid "Desktop components"
+#~ msgstr "ডেক্সটপের উপাদানসমূহ"
+
+#~ msgid "FTP"
+#~ msgstr "FTP"
+
+#~ msgid "System Tools"
+#~ msgstr "সিস্টেম টুল"
+
+#~ msgid "Education"
+#~ msgstr "শিক্ষাবিষয়ক"
+
+#~ msgid "Drivers"
+#~ msgstr "ড্রাইভার"

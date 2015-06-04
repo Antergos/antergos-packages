@@ -1,0 +1,207 @@
+# Malay translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-08 10:39+0100\n"
+"PO-Revision-Date: 2014-05-12 06:01+0000\n"
+"Last-Translator: Fazwan Fazil <takaizu91@gmail.com>\n"
+"Language-Team: Malay <ms@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-02 10:08+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:24 generate_desktop_files:58
+#: generate_desktop_files:72
+msgid "Welcome Screen"
+msgstr "Skrin Aluan"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:77
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did designing it. The links below will help you get started "
+"with your new operating system. Have a great time and don't hesitate to send "
+"us your feedback."
+msgstr ""
+"Selamat datang dan terima kasih kerana memilih Linux Mint. Kami harap anda "
+"seronok menggunakannya sepertimana seronoknya kami mereka ia. Sambungan "
+"dibawah akan membantu anda bermula dengan sistem operasi anda yang baru. "
+"Nikmati masa anda dan jangan segan untuk memberi kami maklumbalas anda."
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "New features"
+msgstr "Ciri-ciri terkini"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:106
+msgid "See what is new in this release"
+msgstr "Lihat pembaharuan terkini dari keluaran ini"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid "Important information"
+msgstr "Maklumat penting"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:107
+msgid ""
+"Find out about important information, limitations, known issues and their "
+"solution"
+msgstr ""
+"Ketahui maklumat penting, limitasi, isu-isu yang diketahui dan penyelesaian "
+"isu tersebut"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "User guide (PDF)"
+msgstr "Panduan  pengguna (PDF)"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:108
+msgid "Learn all the basics to get started with Linux Mint"
+msgstr "Belajar semua asas-asas untuk mula menggunakan Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data"
+msgstr "Pulihkan data"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:109
+msgid "Restore data or applications from a previous installation"
+msgstr "Pulihkan data atau aplikasi dari installasi terdahulu"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Software manager"
+msgstr "Pengurus perisian"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:110
+msgid "Install additional software"
+msgstr "Pasang perisian tambahan"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat room"
+msgstr "Bilik bual"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:112
+msgid "Chat live with other users in the chat room"
+msgstr "Berkomunikasi secara langsung dengan pengguna lain di bilik chat"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Forums"
+msgstr "Forum"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:113
+msgid "Seek help from other users in the Linux Mint forums"
+msgstr "Meminta pertolongan dari pengguna lain di forum Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Tutorials"
+msgstr "Tutorial"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:114
+msgid "Find tutorials about Linux Mint"
+msgstr "Cari tutorial mengenai Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid "Hardware database"
+msgstr "Pengkalan data Perkakas"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:115
+msgid ""
+"Find hardware that is compatible with Linux, or information about your "
+"hardware"
+msgstr ""
+"Cari perkakasan yang serasi dengan Linux, atau maklumat mengenai perkakasan "
+"anda"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Idea pool"
+msgstr "Kolam idea"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:116
+msgid "Submit new ideas to the development team"
+msgstr "Hantar idea-idea baru kepada kumpulan pemaju"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Get involved"
+msgstr "Libatkan diri"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:118
+msgid "Find out how to get involved in the Linux Mint project"
+msgstr "Ketahui bagaimana untuk melibatkan diri dalam projek Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Donations"
+msgstr "Penderma"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:119
+msgid "Make a donation to the Linux Mint project"
+msgstr "Memberi derma kepada projek Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Sponsors"
+msgstr "Penaja"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:120
+msgid "Apply to become a Linux Mint sponsor"
+msgstr "Memohon untuk menjadi penaja Linux Mint"
+
+#: usr/lib/linuxmint/mintWelcome/mintWelcome.py:140
+msgid "Show this dialog at startup"
+msgstr "Paparkan dialog ini pada permulaan"
+
+#: generate_desktop_files:58 generate_desktop_files:72
+msgid "Introduction to Linux Mint"
+msgstr "Pengenalan ke Linux Mint"
+
+#: generate_desktop_files:86
+msgid "Install Multimedia Codecs"
+msgstr "Pasang Kodek Multimedia"
+
+#: generate_desktop_files:86
+msgid "Add all the missing multimedia codecs"
+msgstr "Tambah semua kodek multimedia yang hilang"
+
+#~ msgid "Welcome to Linux Mint"
+#~ msgstr "Selamat datang ke Linux Mint"
+
+#~ msgid "Connect to the chat room"
+#~ msgstr "Sambungkan kepada bilik sembang"
+
+#~ msgid "Download the user guide (PDF)"
+#~ msgstr "Muat turun panduan pengguna (PDF)"
+
+#~ msgid "Read the release notes"
+#~ msgstr "Baca nota keluaran"
+
+#~ msgid "Become a sponsor"
+#~ msgstr "Menjadi penganjur"
+
+#~ msgid "Visit the forums"
+#~ msgstr "Kunjungi forum"
+
+#~ msgid "Contribute to Linux Mint"
+#~ msgstr "Menyumbangkan kepada Linux Mint"
+
+#~ msgid "Browse the list of new features"
+#~ msgstr "Melayari senarai ciri-ciri baru"
+
+#, python-format
+#~ msgid "Discover %s"
+#~ msgstr "Temukan %s"
+
+#~ msgid "Find help"
+#~ msgstr "Mencari bantuan"
+
+#~ msgid ""
+#~ "Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+#~ "as much as we did making it. Please make yourself familiar with the new "
+#~ "features and the documentation and don't hesitate to send us your feedback."
+#~ msgstr ""
+#~ "Selamat datang dan terima kasih kerana memilih Linux Mint. Kami berharap "
+#~ "anda gemar menggunakan ia sebanyak kami memang membuat ia. Sila membuat diri "
+#~ "anda biasa dengan ciri-ciri baru dan dokumentasi dan tidak ragu-ragu untuk "
+#~ "menghantar kami maklum balas anda."
+
+#~ msgid "Make a donation"
+#~ msgstr "Beri sumbangan"
