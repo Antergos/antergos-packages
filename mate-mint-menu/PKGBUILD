@@ -11,7 +11,7 @@
 _pkgname=mintmenu
 pkgname=mate-mint-menu
 pkgver=5.6.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Linux Mint Menu for MATE"
 arch=('any')
 url="http://packages.linuxmint.com/pool/main/m/mintmenu"
@@ -21,7 +21,8 @@ depends=('mate-panel>=1.8.0' 'python2-gobject2' 'python2-xdg' 'xdg-utils'
 optdepends=('mint-translations: translations files'
             'mate-screensaver: lock screen button'
             'pamac: package manager button')
-source=("${url}/mintmenu_${pkgver}.tar.gz" 
+source=("${url}/mintmenu_${pkgver}.tar.gz"
+        'https://github.com/linuxmint/mint-translations/archive/master.tar.gz' 
         'execute_fix.diff'
         'removescript')
 install=${pkgname}.install
@@ -30,7 +31,8 @@ sha256sums=('587ba8334a43a707f82bd696e454ea6619f2a91b7803c4ea3a5005e829fe240b'
             '9533d0f5416af1f2b8ef5097f06e39135278eef856994d859c4ee7ba57d6fcaa')
 
 build() {
-  for files in mint-translations/po-export/mintmenu/*; do
+  cd "$srcdir/mint-translations-master/"
+  for files in po-export/mintmenu/*; do
     	if [ -f "$files" ] && [ "$files" != 'po/mintmenu.pot' ]; then
         	STRING_PO=`echo ${files#*/}`
         	STRING=`echo ${STRING_PO%.po}`
