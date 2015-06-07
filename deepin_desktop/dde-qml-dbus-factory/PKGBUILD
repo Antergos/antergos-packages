@@ -2,6 +2,7 @@
 # Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
+
 pkgbase=deepin-dbus-factory
 pkgname=dde-qml-dbus-factory
 pkgver=0.0.2.20141226160557
@@ -43,3 +44,4 @@ package() {
 
   make DESTDIR="${pkgdir}" install-qml
 }
+
