@@ -50,4 +50,3 @@ package() {
   ## add default background..
   install -m644 ../resources/greeter/images/background/default_background.jpg "${pkgdir}"/usr/share/backgrounds/
 }
-

@@ -5,7 +5,7 @@
 pkgname=deepin-gtk-theme
 pkgver=14.07.20150327153743
 _srcdirname=deepin-gtk-theme-14.07+20150327153743~2d420cb0b9
-pkgrel=3
+pkgrel=4
 pkgdesc="Deepin GTK Theme."
 arch=('any')
 url="https://gitcafe.com/Deepin/deepin-gtk-theme"
@@ -21,9 +21,6 @@ package() {
   cd "${_srcdirname}"
 
   install -dm0755 "${pkgdir}"/usr/share/themes
-  cp -r Deepin "${pkgdir}"/usr/share/themes/Deepin-Legacy
-  cp -r Deepin-Dark "${pkgdir}"/usr/share/themes/Deepin
-  cp -r Deepin-Gray "${pkgdir}"/usr/share/themes/Deepin-Gray
-  sed -i 's/Deepin-Dark/Deepin/g' "${pkgdir}"/usr/share/themes/Deepin/index.theme
-  sed -i 's/Deepin/Deepin-Legacy/g' "${pkgdir}"/usr/share/themes/Deepin-Legacy/index.theme
+  cp -r Deepin "${pkgdir}"/usr/share/themes/Deepin
+  cp -r Deepin-light "${pkgdir}"/usr/share/themes/Deepin-light
 }

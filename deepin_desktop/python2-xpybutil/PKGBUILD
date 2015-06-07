@@ -1,0 +1,25 @@
+# Maintainer: Steve Ovens <steve_ovens [AT] linux DOT com>
+# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
+# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=python2-xpybutil
+_name=xpybutil
+pkgver=20150213
+pkgrel=1
+pkgdesc="A Python rendition of xcb-util. EWMH, ICCCM, key binding, Xinerama, etc..."
+arch=('any')
+url="http://burntsushi.net/X11/xpybutil"
+license=('GPL')
+depends=('xpyb')
+optdepends=('python2-pillow')
+provides=('xpybutil')
+conflicts=('xpybutil')
+replaces=('xpybutil')
+source=("https://github.com/BurntSushi/xpybutil/archive/master.zip")
+md5sums=('SKIP')
+
+package() {
+  cd "${_name}-master"
+
+  python2 setup.py install --root="${pkgdir}"
+}

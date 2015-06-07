@@ -13,7 +13,7 @@ license=('GPL3')
 depends=('dde-api' 'grub-theme-deepin' 'cairo' 'libcanberra' 'dbus'
          'libdeepin-webkit' 'gtk3' 'glib2' 'gdk-pixbuf2' 'gstreamer0.10'
          'libsystemd' 'acpid' 'libpulse' 'xcur2png' 'upower' 'bluez'
-         'polkit-gnome' 'metacity-ubuntu' 'network-manager-applet' 'xdotool'
+         'polkit-gnome' 'metacity-ubuntu' 'networkmanager' 'xdotool'
          'udisks2' 'lsb-release' 'iso-codes' 'mobile-broadband-provider-info')
 makedepends=('go' 'go-dlib' 'dde-go-dbus-factory' 'go-xgb' 'go-gocheck'
              'go-xgbutil' 'go-fsnotify' 'go-sqlite3' 'python2')
@@ -24,7 +24,7 @@ options=(staticlibs)
 source=("http://deepin.mirror.gtcomm.net/pool/main/d/dde-daemon/dde-daemon_0.0.1+20150415132138~b7120bedfa.tar.gz"
         "fix-i686-compile.patch")
 sha256sums=('62124a648331cd9a67678f4029a7e0c093ac5381aa50f44c3df8d5ad20576ab9'
-            'SKIP')
+            'f54fdefa940e88e7303bdfd11f2c4c353685947616e5cbb3085b92678df20e69')
 
 prepare() {
   cd "${_srcdirname}"

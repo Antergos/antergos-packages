@@ -3,28 +3,37 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=qtav
-pkgver=2.0.20150424100710
-_srcdirname=qtav-2.0+20150424100710
-pkgrel=1
+pkgver=1.6.0
+pkgrel=3
 pkgdesc="qt multimedia framework"
 arch=('i686' 'x86_64')
-url="https://gitcafe.com/Deepin/QtAV"
+url="https://github.com/wang-bin/QtAV"
 license=('GPL')
-depends=('qt5-base' 'ffmpeg')
-makedepends=('qt5-tools')
-_mirror="https://ftp.fau.de/deepin/pool/main"
-source=("http://deepin.mirror.gtcomm.net/pool/main/q/qtav/qtav_2.0+20150424100710.tar.gz")
-sha256sums=('01a90f08bba21e475bc0a75ba9826b21c85ff239fb445b2dde38a8c71c8ef879')
+depends=('qt5-svg' 'ffmpeg')
+makedepends=('qt5-tools' 'qt5-declarative' 'openal')
+source=("${url}/archive/v${pkgver}.tar.gz")
+md5sums=('SKIP')
 
 build(){
-  cd "${_srcdirname}"
+	cd "QtAV-${pkgver}"
 
-  qmake
-  make PREFIX=/usr
+	mkdir build && cd build
+	qmake-qt5 ../QtAV.pro
+    make -j8 PREFIX=/usr
 }
 
 package() {
-  cd "${_srcdirname}"
+	cd "QtAV-${pkgver}"/build
 
-  make INSTALL_ROOT="${pkgdir}" install
+	make install DESTDIR="${pkgdir}" INSTALL_ROOT="${pkgdir}"
+
+	# Useful symlinks
+  	install -d "${pkgdir}"/usr/bin
+  	ln -s /usr/lib/qt/bin/player "${pkgdir}"/usr/bin/qtav-player
+	ln -s /usr/lib/qt/bin/QMLPlayer "${pkgdir}"/usr/bin/QMLPlayer
+
+	install -D ../src/QtAV.svg "${pkgdir}"/usr/share/icons/hicolor/scalable/apps/QtAV.svg
+
+	mv "${pkgdir}"/usr/share/applications/player.desktop "${pkgdir}"/usr/share/applications/qtav-player.desktop
+	sed -i'' '8,9 s/player/qtav-player/' "${pkgdir}"/usr/share/applications/qtav-player.desktop
 }

@@ -5,7 +5,7 @@
 pkgname=deepin-movie
 pkgver=2.2.1.20150512143336
 _srcdirname=deepin-movie-2.2.1+20150512143336~131ab9d6c9
-pkgrel=1
+pkgrel=2
 pkgdesc='deepin movie for linuxdeepin desktop environment'
 arch=('any')
 url="https://github.com/linuxdeepin/deepin-movie"
@@ -35,7 +35,7 @@ package() {
   depends=('qt5-declarative' 'qt5-quickcontrols' 'qt5-multimedia' 'qt5-webkit'
            'qt5-graphicaleffects' 'qt5-imageformats' 'qt5-systems'
            'python2-ass' 'python2-magic' 'python2-peewee' 'python2-pyqt5'
-           'python2-pysrt' 'python2-setproctitle' 'python2-xpybutil'
+           'python2-pysrt' 'python2-setproctitle' 'xpybutil'
            'dde-go-dbus-factory' 'deepin-menu' 'deepin-qml-widgets' 'python2-deepin-ui'
            'desktop-file-utils' 'enca' 'mediainfo' 'qtav')
 
