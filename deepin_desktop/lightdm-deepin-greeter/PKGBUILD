@@ -25,21 +25,13 @@ prepare() {
 }
 
 build() {
-  cd "${_srcdirname}"
-
-  #export PYTHON=/usr/bin/python2
-  mkdir -p build && cd build/
-  cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release && make
-
-  gcc -o ../debian/default-terminal ../debian/default-terminal.c `pkg-config --libs --cflags glib-2.0 gio-unix-2.0`
-
   cd "${srcdir}"/${_srcdirname}-greeter
 
   mkdir -p build && cd build/
   cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release && make
 }
 
-package_lightdm-deepin-greeter() {
+package() {
   pkgdesc="Lightdm greeter for Linux Deepin desktop environment."
   depends=('cairo' 'gtk3' 'libdeepin-webkit' 'lightdm' 'nodejs' 'python2')
 
