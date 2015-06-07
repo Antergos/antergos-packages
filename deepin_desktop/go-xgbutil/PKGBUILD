@@ -5,7 +5,7 @@
 _pkgname=golang-xgbutil
 pkgname=go-xgbutil
 pkgver=1.git20140610
-pkgrel=2
+pkgrel=1
 pkgdesc='xgbutil is a utility library designed to work with the X Go Binding.'
 arch=('any')
 url="https://github.com/BurntSushi/xgbutil"

@@ -3,8 +3,8 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-movie
-pkgver=2.2.1.20150424170255
-_srcdirname=deepin-movie-2.2.1+20150424170255~9759b316cf
+pkgver=2.2.1.20150512143336
+_srcdirname=deepin-movie-2.2.1+20150512143336~131ab9d6c9
 pkgrel=1
 pkgdesc='deepin movie for linuxdeepin desktop environment'
 arch=('any')
@@ -13,8 +13,8 @@ license=('GPL3')
 makedepends=('python2-sip' 'deepin-gettext-tools')
 groups=('deepin-extra')
 install="${pkgname}.install"
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-movie/deepin-movie_2.2.1+20150424170255~9759b316cf.tar.gz")
-sha256sums=('e09307f687e46c9aa0b7914d5cbca08fae75c2bfc657cede69de2838223ffd66')
+source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-movie/deepin-movie_2.2.1+20150512143336~131ab9d6c9.tar.gz")
+sha256sums=('8e9e1cb3f099863ecb8949b3445320ad6c1a1c94f98852848d04abef16d05237')
 
 prepare() {
   cd "${_srcdirname}"

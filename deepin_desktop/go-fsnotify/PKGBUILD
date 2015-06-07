@@ -4,7 +4,7 @@
 
 pkgname=go-fsnotify
 pkgver=0.0.git201400902
-pkgrel=2
+pkgrel=1
 pkgdesc='File system notification for GO'
 arch=('any')
 url="https://github.com/howeyc/fsnotify"

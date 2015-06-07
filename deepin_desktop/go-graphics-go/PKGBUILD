@@ -5,13 +5,11 @@
 _pkgname=golang-graphics-go
 pkgname=go-graphics-go
 pkgver=0.0.git20140903
-pkgrel=2
+pkgrel=1
 pkgdesc='File system notification for GO'
 arch=('any')
 url="http://code.google.com/p/graphics-go/"
 license=('GPL2')
-makedepends=('go')
-groups=('deepin')
 replaces=('golang-graphics-go')
 source=("http://deepin.mirror.gtcomm.net/pool/main/g/golang-graphics-go/golang-graphics-go_0.0~git20140903.orig.tar.xz")
 sha256sums=('ae9471645f94a0ed070c5695ad087cff3de1bb01ba40f56ad786c6de75e06218')
@@ -29,6 +27,7 @@ prepare() {
 #}
 
 package() {
+  depends=('go')
 
   mkdir -p "${pkgdir}"/usr/lib/go/site/src
 

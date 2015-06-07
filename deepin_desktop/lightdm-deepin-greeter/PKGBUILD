@@ -4,7 +4,7 @@
 
 pkgbase=dde-workspace
 pkgname=lightdm-deepin-greeter
-pkgver=2.1.20150202093855
+pkgver=2.1.20150521160615
 _srcdirname=deepin-desktop-environment-2.1+20150202093855~5b89873137
 pkgrel=1
 arch=('i686' 'x86_64')
@@ -15,9 +15,8 @@ makedepends=('cmake' 'go' 'coffee-script' 'go-gettext-go' 'webkitgtk'
              'libdeepin-webkit' 'lightdm' 'cairo' 'dbus-glib' 'python2')
 source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-desktop-environment/deepin-desktop-environment_2.1+20150202093855~5b89873137.tar.gz"
         "default-display-manager")
-sha256sums=('5dbb5972e4920e0ebbf5f7128846ef8f2bfac52fa53673c360b4c261bc081ec1'
+sha256sums=('20aa7a8df56f4be815a5525aa33685365998e9cc63a4dc94e1cd8bc7db85300f'
             '3667d6cce9a00f0b8c8bc27250b2ceaf421382d3b4e687a5bcea4c64292030df')
-
 prepare() {
   cp -r "${_srcdirname}" "${_srcdirname}-greeter"
 
@@ -40,7 +39,7 @@ build() {
   cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release && make
 }
 
-package() {
+package_lightdm-deepin-greeter() {
   pkgdesc="Lightdm greeter for Linux Deepin desktop environment."
   depends=('cairo' 'gtk3' 'libdeepin-webkit' 'lightdm' 'nodejs' 'python2')
 
@@ -49,4 +48,3 @@ package() {
   make install DESTDIR="${pkgdir}"
   chmod 0700 "${pkgdir}"/var/lib/polkit-1
 }
-

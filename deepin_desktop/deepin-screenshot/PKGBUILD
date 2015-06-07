@@ -3,8 +3,8 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-screenshot
-pkgver=3.0.201504271302008
-_srcdirname=deepin-screenshot-3.0+20150427130200~34d48c47e58
+pkgver=3.0.20150508154858
+_srcdirname=deepin-screenshot-3.0+20150508154858~a5ed48140f
 pkgrel=1
 pkgdesc="Easy-to-use screenshot tool for linuxdeepin desktop environment"
 arch=('any')
@@ -13,8 +13,8 @@ license=('GPL3')
 makedepends=('deepin-gettext-tools')
 groups=('deepin-extra')
 install="${pkgname}.install"
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-screenshot/deepin-screenshot_3.0+20150427130200~34d48c47e58.tar.gz")
-sha256sums=('845770eb7697f2025ebc55678f8a82240701171c6af2593bdb055c53c7b7c43e')
+source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-screenshot/deepin-screenshot_3.0+20150508154858~a5ed48140f.tar.gz")
+sha256sums=('be7b95af98b0830c107c20814e9ac25419defe951a211499ee7530b3d7d44e5a')
 
 # Usage: _easycp dest files...
 _easycp () {

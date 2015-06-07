@@ -10,20 +10,20 @@ pkgdesc="Deepin GTK Theme."
 arch=('any')
 url="https://gitcafe.com/Deepin/deepin-gtk-theme"
 license=('LGPL3')
-depends=('gtk-engine-unico')
 optdepends=('gtk-engine-murrine: for gtk2 themes')
 groups=('deepin')
 source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-gtk-theme/deepin-gtk-theme_14.07+20150327153743~2d420cb0b9.tar.gz")
 sha256sums=('377695a4a91c7334259ff6283d39ae7c55c21032d43293b8c7a5298cd8706407')
 
 package() {
+  depends=('gtk-engine-unico')
 
   cd "${_srcdirname}"
 
   install -dm0755 "${pkgdir}"/usr/share/themes
-  cp -r Deepin-Legacy "${pkgdir}"/usr/share/themes/Deepin-Legacy
-  cp -r Deepin "${pkgdir}"/usr/share/themes/Deepin
-  cp -r Deepin-light "${pkgdir}"/usr/share/themes/Deepin-Light
-#  sed -i 's/Deepin-Dark/Deepin/g' "${pkgdir}"/usr/share/themes/Deepin/index.theme
-#  sed -i 's/Deepin/Deepin-Legacy/g' "${pkgdir}"/usr/share/themes/Deepin-Legacy/index.theme
+  cp -r Deepin "${pkgdir}"/usr/share/themes/Deepin-Legacy
+  cp -r Deepin-Dark "${pkgdir}"/usr/share/themes/Deepin
+  cp -r Deepin-Gray "${pkgdir}"/usr/share/themes/Deepin-Gray
+  sed -i 's/Deepin-Dark/Deepin/g' "${pkgdir}"/usr/share/themes/Deepin/index.theme
+  sed -i 's/Deepin/Deepin-Legacy/g' "${pkgdir}"/usr/share/themes/Deepin-Legacy/index.theme
 }
