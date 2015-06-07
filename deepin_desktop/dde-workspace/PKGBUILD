@@ -3,7 +3,7 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgbase=dde-workspace
-pkgname=('dde-workspace' 'lightdm-deepin-greeter')
+pkgname=dde-workspace
 pkgver=2.1.20150521160615
 _srcdirname=deepin-desktop-environment-2.1+20150521160615
 pkgrel=1
