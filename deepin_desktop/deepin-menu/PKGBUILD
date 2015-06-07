@@ -5,7 +5,7 @@
 pkgname=deepin-menu
 pkgver=1.1.20150415155150
 _srcdirname=deepin-menu-1.1+20150415155150~faffe35053
-pkgrel=2
+pkgrel=1
 pkgdesc="Deepin menu service for building beautiful menus."
 arch=('i686' 'x86_64')
 url="https://gitcafe.com/Deepin/deepin-menu"

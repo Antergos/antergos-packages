@@ -1,4 +1,5 @@
-# Maintainer: nblock <nblock [/at\] archlinux DOT us>
+# Maintainer: Steve Ovens <steve_ovens [AT] linux DOT com>
+# Contributor: nblock <nblock [/at\] archlinux DOT us>
 # Contributor: drakkan <[email protected]>
 
 pkgname=python2-setproctitle

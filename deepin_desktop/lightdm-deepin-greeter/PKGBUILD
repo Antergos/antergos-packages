@@ -5,7 +5,7 @@
 pkgbase=dde-workspace
 pkgname=lightdm-deepin-greeter
 pkgver=2.1.20150521160615
-_srcdirname=deepin-desktop-environment-2.1+20150202093855~5b89873137
+_srcdirname=deepin-desktop-environment-2.1+20150521160615
 pkgrel=1
 arch=('i686' 'x86_64')
 url="https://gitcafe.com/Deepin/dde-workspace"
@@ -13,10 +13,11 @@ license=('GPL3')
 groups=('deepin')
 makedepends=('cmake' 'go' 'coffee-script' 'go-gettext-go' 'webkitgtk'
              'libdeepin-webkit' 'lightdm' 'cairo' 'dbus-glib' 'python2')
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-desktop-environment/deepin-desktop-environment_2.1+20150202093855~5b89873137.tar.gz"
+source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-desktop-environment/deepin-desktop-environment_2.1+20150521160615.tar.gz"
         "default-display-manager")
 sha256sums=('20aa7a8df56f4be815a5525aa33685365998e9cc63a4dc94e1cd8bc7db85300f'
             '3667d6cce9a00f0b8c8bc27250b2ceaf421382d3b4e687a5bcea4c64292030df')
+
 prepare() {
   cp -r "${_srcdirname}" "${_srcdirname}-greeter"
 
@@ -40,3 +41,4 @@ package() {
   make install DESTDIR="${pkgdir}"
   chmod 0700 "${pkgdir}"/var/lib/polkit-1
 }
+

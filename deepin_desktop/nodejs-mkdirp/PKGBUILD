@@ -1,4 +1,5 @@
-# Maintainer: aboe76 AT gmail DOT com>
+# Maintainer: Steve Ovens <steve_ovens [AT] linux DOT com>
+# Contributor: aboe76 AT gmail DOT com>
 
 pkgname=nodejs-mkdirp
 _npmname=mkdirp

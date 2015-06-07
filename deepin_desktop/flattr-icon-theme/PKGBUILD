@@ -1,4 +1,5 @@
-# Maintainer: procrastinator
+# Maintainer: Steve Ovens <steve_ovens [AT] linux DOT com>
+# Contributor: procrastinator
 
 pkgname=flattr-icon-theme
 pkgver=1.1

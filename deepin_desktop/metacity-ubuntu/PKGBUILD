@@ -1,4 +1,4 @@
-# Contributor: Steve Ovens <steve_ovens [AT] linux DOT com>
+# Maintainer: Steve Ovens <steve_ovens [AT] linux DOT com>
 # Contributor: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
 # Original Contributor: Jan de Groot <jgc@archlinux.org>
 # Contributor: thn81 <root@scrat>
@@ -6,7 +6,7 @@
 pkgname=metacity-ubuntu
 _ubuntu_rel=0ubuntu4
 pkgver=2.34.13.${_ubuntu_rel}
-pkgrel=110
+pkgrel=107
 pkgdesc="A window manager for GNOME with Ubuntu's patches"
 arch=('i686' 'x86_64')
 url="http://www.gnome.org"

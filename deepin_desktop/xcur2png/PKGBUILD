@@ -1,4 +1,5 @@
-# Maintainer: Christian Hesse <mail@eworm.de>
+# Maintainer: Steve Ovens <steve_ovens [AT] linux DOT com>
+# Contributor: Christian Hesse <mail@eworm.de>
 # Contributor: Jarred Leonardo <jarredleonardo at googlemail dot com>
 
 pkgname=xcur2png

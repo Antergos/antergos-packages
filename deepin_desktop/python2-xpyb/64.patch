@@ -1,0 +1,11 @@
+diff -aur src.old/py_client.py src/py_client.py
+--- src.old/py_client.py	2013-12-11 21:17:03.833131604 -0600
++++ src/py_client.py	2013-12-11 21:17:51.226467229 -0600
+@@ -19,6 +19,7 @@
+                    'INT8':   'b', 'int8_t':  'b',
+                    'INT16':  'h', 'int16_t': 'h',
+                    'INT32':  'i', 'int32_t': 'i',
++                   'INT64':  'i', 'int64_t': 'i',
+                    'BYTE': 'B',
+                    'BOOL': 'B',
+                    'char': 'b',
