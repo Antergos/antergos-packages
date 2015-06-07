@@ -5,7 +5,7 @@
 pkgname=deepin-default-gsettings
 pkgver=0.2.20141216171821
 _srcdirname=deepin-default-gsettings-0.2+20141216171821~2cf686e3fa
-pkgrel=1
+pkgrel=2
 pkgdesc='deepin default settings of gsettings'
 arch=('any')
 groups=('deepin')

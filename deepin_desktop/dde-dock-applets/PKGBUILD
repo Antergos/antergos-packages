@@ -3,9 +3,9 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=dde-dock-applets
-pkgver=0.0.4.20150427095046
-_srcdirname=dde-dock-applets-0.0.4+20150427095046~4311ed4614
-pkgrel=2
+pkgver=0.0.4.20150521130615
+_srcdirname=dde-dock-applets-0.0.4+20150521130615
+pkgrel=3
 pkgdesc="New control center for linux deepin"
 arch=('i686' 'x86_64')
 url="https://gitcafe.com/Deepin/dde-dock-applets"
@@ -14,8 +14,8 @@ depends=('dde-daemon' 'dde-api' 'deepin-qml-widgets' 'dde-qml-dbus-factory'
          'gtk2' 'qt5-svg' 'qt5-declarative')
 makedepends=('deepin-gettext-tools' 'qt5-tools' 'python2')
 groups=('deepin')
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/dde-dock-applets/dde-dock-applets_0.0.4+20150427095046~4311ed4614.tar.gz")
-sha256sums=('98181abdb23e4e4faddd3e11c24af1e0a4f06d77ff044e84807d0dc2a3e6e143')
+source=("http://deepin.mirror.gtcomm.net/pool/main/d/dde-dock-applets/dde-dock-applets_0.0.4+20150521130615.tar.gz")
+sha256sums=('4566d20973198ec34daf369ecefb5215b652ce44b9683289cb4f9e4785a5ec24')
 
 build() {
   cd "${_srcdirname}"
