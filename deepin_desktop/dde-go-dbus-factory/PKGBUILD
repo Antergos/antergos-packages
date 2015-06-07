@@ -1,7 +1,3 @@
-# Contributor: Steve Ovens <steve_ovens [AT] linux DOT com>
-# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
-# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
-
 # Maintainer: Steve Ovens <steve_ovens [AT] linux DOT com>
 # Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
@@ -32,3 +28,10 @@ build() {
   make -j$(expr $(nproc) \* 2 - 1) -l$(nproc)
 }
 
+package() {
+  pkgdesc='Go-lang DBus factory for DDE'
+
+  cd "${_srcdirname}"
+
+  make DESTDIR="${pkgdir}" install-golang
+}

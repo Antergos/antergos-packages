@@ -5,7 +5,7 @@
 pkgname=dde-control-center
 pkgver=0.1.20150413164707
 _srcdirname=dde-control-center-0.1+20150413164707~6ec15a41de
-pkgrel=1
+pkgrel=3
 pkgdesc="New control center for linux deepin"
 arch=('i686' 'x86_64')
 url="https://gitcafe.com/Deepin/dde-control-center"

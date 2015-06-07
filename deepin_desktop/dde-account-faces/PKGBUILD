@@ -5,7 +5,7 @@
 pkgname=dde-account-faces
 pkgver=1.0.7
 _srcdirname=dde-account-faces-1.0.7
-pkgrel=1
+pkgrel=2
 pkgdesc='Deepin Account face Images'
 arch=('any')
 url="http://www.linuxdeepin.com/"

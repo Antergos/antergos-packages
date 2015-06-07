@@ -6,14 +6,14 @@ pkgbase=dde-workspace
 pkgname=lightdm-deepin-greeter
 pkgver=2.1.20150521160615
 _srcdirname=deepin-desktop-environment-2.1+20150521160615
-pkgrel=1
+pkgrel=2
 arch=('i686' 'x86_64')
 url="https://gitcafe.com/Deepin/dde-workspace"
 license=('GPL3')
 groups=('deepin')
 makedepends=('cmake' 'go' 'coffee-script' 'go-gettext-go' 'webkitgtk'
              'libdeepin-webkit' 'lightdm' 'cairo' 'dbus-glib' 'python2')
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-desktop-environment/deepin-desktop-environment_2.1+20150521160615.tar.gz"
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-desktop-environment/deepin-desktop-environment_2.1+20150521160615.tar.gz"
         "default-display-manager")
 sha256sums=('20aa7a8df56f4be815a5525aa33685365998e9cc63a4dc94e1cd8bc7db85300f'
             '3667d6cce9a00f0b8c8bc27250b2ceaf421382d3b4e687a5bcea4c64292030df')
@@ -26,11 +26,20 @@ prepare() {
 }
 
 build() {
+  cd "${_srcdirname}"
+
+  #export PYTHON=/usr/bin/python2
+  mkdir -p build && cd build/
+  cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release && make
+
+  gcc -o ../debian/default-terminal ../debian/default-terminal.c `pkg-config --libs --cflags glib-2.0 gio-unix-2.0`
+
   cd "${srcdir}"/${_srcdirname}-greeter
 
   mkdir -p build && cd build/
   cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release && make
 }
+
 
 package() {
   pkgdesc="Lightdm greeter for Linux Deepin desktop environment."
