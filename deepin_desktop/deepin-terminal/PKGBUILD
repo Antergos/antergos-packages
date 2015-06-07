@@ -5,7 +5,7 @@
 pkgname=deepin-terminal
 pkgver=1.1.20141230110750
 _srcdirname=deepin-terminal-1.1+20141230110750~bc441b7aae
-pkgrel=1
+pkgrel=4
 pkgdesc='Awesome terminal for Linux Deepin'
 arch=('any')
 url="https://gitcafe.com/Deepin/deepin-terminal"
