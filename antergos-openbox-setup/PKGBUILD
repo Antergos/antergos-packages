@@ -1,0 +1,83 @@
+# Maintainer: Gustau Castells <karasu@antergos.com>
+
+pkgname=antergos-openbox-setup
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="Setup configuration for Antergos Openbox"
+url="http://www.antergos.com"
+arch=('any')
+license=('GPL2')
+depends=('bash' 'perl')
+optdepends=('openbox' 'xorg-xinit' 'pcmanfm' 'gvfs' 'udisks'
+'nitrogen' 'plank' 'tint2' 'volumeicon' 'conky' 'compton'
+'numix-frost-themes' 'numix-icon-theme' 'plank-theme-numix'
+'chromium' 'gnome-mplayer' 'gpicview' 'lxterminal' 'mousepad' 'pragha')
+makedepends=()
+conflicts=()
+replaces=()
+backup=()
+install='antergos-openbox-setup.install'
+source=("https://github.com/karasu/openbox-setup/archive/v${pkgver}.tar.gz")
+sha256sums=('1e95c4924a0d3c00e7481f289e34c424e2da5dcd869a48b8ec5e8ee9dd93ad13')
+
+
+package() {
+  #cd "${srcdir}/${pkgname}-${pkgver}"
+  cd "${srcdir}/openbox-setup-${pkgver}"
+
+  # Compton
+  install -Dm644 compton.conf $pkgdir/usr/share/antergos-openbox-setup/compton.conf
+  
+  # Conky
+  install -Dm644 conky.conf $pkgdir/usr/share/antergos-openbox-setup/conky.conf
+  
+  # Gtk2 & Gtk3
+  install -Dm644 gtkfilechooser.ini $pkgdir/usr/share/antergos-openbox-setup/gtkfilechooser.ini
+  install -Dm644 gtkrc-2.0 $pkgdir/usr/share/antergos-openbox-setup/gtkrc-2.0
+  install -Dm644 settings.ini $pkgdir/usr/share/antergos-openbox-setup/settings.ini
+
+  # nitrogen
+  install -Dm644 nitrogen.cfg $pkgdir/usr/share/antergos-openbox-setup/nitrogen.cfg
+  install -Dm644 bg-saved.cfg $pkgdir/usr/share/antergos-openbox-setup/bg-saved.cfg
+
+  # oblogout
+  install -Dm644 oblogout.conf $pkgdir/usr/share/antergos-openbox-setup/oblogout.conf
+  install -Dm644 oblogout/cancel.svg $pkgdir/usr/share/antergos-openbox-setup/oblogout/cancel.svg
+  install -Dm644 oblogout/lock.svg $pkgdir/usr/share/antergos-openbox-setup/oblogout/lock.svg
+  install -Dm644 oblogout/restart.svg $pkgdir/usr/share/antergos-openbox-setup/oblogout/restart.svg
+  install -Dm644 oblogout/suspend.svg $pkgdir/usr/share/antergos-openbox-setup/oblogout/suspend.svg
+  install -Dm644 oblogout/hibernate.svg $pkgdir/usr/share/antergos-openbox-setup/oblogout/hibernate.svg
+  install -Dm644 oblogout/logout.svg $pkgdir/usr/share/antergos-openbox-setup/oblogout/logout.svg
+  install -Dm644 oblogout/shutdown.svg $pkgdir/usr/share/antergos-openbox-setup/oblogout/shutdown.svg
+  install -Dm644 oblogout/switch.svg $pkgdir/usr/share/antergos-openbox-setup/oblogout/switch.svg
+
+  # openbox
+  install -Dm755 openbox/autostart $pkgdir/usr/share/antergos-openbox-setup/openbox/autostart
+  install -Dm644 openbox/menu.xml $pkgdir/usr/share/antergos-openbox-setup/openbox/menu.xml
+  install -Dm644 openbox/rc.xml $pkgdir/usr/share/antergos-openbox-setup/openbox/rc.xml
+  install -Dm755 openbox/pipemenus/obpipemenu-places $pkgdir/usr/share/antergos-openbox-setup/openbox/pipemenus/obpipemenu-places
+  install -Dm755 openbox/pipemenus/obrecent.sh $pkgdir/usr/share/antergos-openbox-setup/openbox/pipemenus/obrecent.sh
+
+  # pcmanfm
+  install -Dm644 pcmanfm.conf $pkgdir/usr/share/antergos-openbox-setup/pcmanfm.conf
+  install -Dm644 libfm.conf $pkgdir/usr/share/antergos-openbox-setup/libfm.conf
+
+  # Plank
+  install -Dm644 plank/dock1/settings $pkgdir/usr/share/antergos-openbox-setup/plank/dock1/settings
+  install -Dm644 plank/dock1/launchers/chromium.dockitem $pkgdir/usr/share/antergos-openbox-setup/plank/dock1/launchers/chromium.dockitem
+  install -Dm644 plank/dock1/launchers/gpicview.dockitem $pkgdir/usr/share/antergos-openbox-setup/plank/dock1/launchers/gpicview.dockitem
+  install -Dm644 plank/dock1/launchers/mousepad.dockitem $pkgdir/usr/share/antergos-openbox-setup/plank/dock1/launchers/mousepad.dockitem
+  install -Dm644 plank/dock1/launchers/pragha.dockitem $pkgdir/usr/share/antergos-openbox-setup/plank/dock1/launchers/pragha.dockitem
+  install -Dm644 plank/dock1/launchers/gnome-mplayer.dockitem $pkgdir/usr/share/antergos-openbox-setup/plank/dock1/launchers/gnome-mplayer.dockitem
+  install -Dm644 plank/dock1/launchers/lxterminal.dockitem $pkgdir/usr/share/antergos-openbox-setup/plank/dock1/launchers/lxterminal.dockitem
+  install -Dm644 plank/dock1/launchers/plank.dockitem $pkgdir/usr/share/antergos-openbox-setup/plank/dock1/launchers/plank.dockitem
+
+  # tint2
+  install -Dm644 tint2rc $pkgdir/usr/share/antergos-openbox-setup/tint2rc
+  
+  # volumeicon
+  install -Dm644 volumeicon $pkgdir/usr/share/antergos-openbox-setup/volumeicon
+  
+  # xorg-xinit
+  install -Dm644 xinitrc $pkgdir/usr/share/antergos-openbox-setup/xinitrc
+}
