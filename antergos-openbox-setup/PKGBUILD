@@ -2,7 +2,7 @@
 
 pkgname=antergos-openbox-setup
 pkgver=0.2.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
 arch=('any')
@@ -16,9 +16,8 @@ makedepends=()
 conflicts=()
 replaces=()
 backup=()
-#install='antergos-openbox-setup.install'
-source=("https://github.com/karasu/${pkgname}/archive/v${pkgver}.tar.gz")
-sha256sums=('72ef90c20cbc104536f088cd70b64440b16e700c329c7fa7fc00c76172a708b2')
+source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
+sha256sums=('2d3e69b056bed8bfd265f33ef3c944c784afb91c2555dd6dda4934e581b7ba12')
 
 
 package() {
