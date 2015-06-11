@@ -1,7 +1,7 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-openbox-setup
-pkgver=0.2
+pkgver=0.2.1
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
@@ -79,4 +79,8 @@ package() {
   
   # xorg-xinit
   install -Dm644 xinitrc ${pkgdir}/usr/share/${pgkname}/xinitrc
+  
+  # install.sh file
+  install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
+
 }
