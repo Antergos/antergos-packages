@@ -2,7 +2,7 @@
 
 pkgname=antergos-openbox-setup
 pkgver=0.2.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
 arch=('any')
@@ -23,61 +23,63 @@ sha256sums=('2d3e69b056bed8bfd265f33ef3c944c784afb91c2555dd6dda4934e581b7ba12')
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
 
+  install -d ${pkgdir}/usr/share/${pkgname}
+
   # Compton
-  install -Dm644 compton.conf ${pkgdir}/usr/share/${pgkname}/compton.conf
+  install -Dm644 compton.conf ${pkgdir}/usr/share/${pkgname}/compton.conf
   
   # Conky
-  install -Dm644 conky.conf ${pkgdir}/usr/share/${pgkname}/conky.conf
+  install -Dm644 conky.conf ${pkgdir}/usr/share/${pkgname}/conky.conf
   
   # Gtk2 & Gtk3
-  install -Dm644 gtkfilechooser.ini ${pkgdir}/usr/share/${pgkname}/gtkfilechooser.ini
-  install -Dm644 gtkrc-2.0 ${pkgdir}/usr/share/${pgkname}/gtkrc-2.0
-  install -Dm644 settings.ini ${pkgdir}/usr/share/${pgkname}/settings.ini
+  install -Dm644 gtkfilechooser.ini ${pkgdir}/usr/share/${pkgname}/gtkfilechooser.ini
+  install -Dm644 gtkrc-2.0 ${pkgdir}/usr/share/${pkgname}/gtkrc-2.0
+  install -Dm644 settings.ini ${pkgdir}/usr/share/${pkgname}/settings.ini
 
   # nitrogen
-  install -Dm644 nitrogen.cfg ${pkgdir}/usr/share/${pgkname}/nitrogen.cfg
-  install -Dm644 bg-saved.cfg ${pkgdir}/usr/share/${pgkname}/bg-saved.cfg
+  install -Dm644 nitrogen.cfg ${pkgdir}/usr/share/${pkgname}/nitrogen.cfg
+  install -Dm644 bg-saved.cfg ${pkgdir}/usr/share/${pkgname}/bg-saved.cfg
 
   # oblogout
-  install -Dm644 oblogout.conf ${pkgdir}/usr/share/${pgkname}/oblogout.conf
-  install -Dm644 oblogout/cancel.svg ${pkgdir}/usr/share/${pgkname}/oblogout/cancel.svg
-  install -Dm644 oblogout/lock.svg ${pkgdir}/usr/share/${pgkname}/oblogout/lock.svg
-  install -Dm644 oblogout/restart.svg ${pkgdir}/usr/share/${pgkname}/oblogout/restart.svg
-  install -Dm644 oblogout/suspend.svg ${pkgdir}/usr/share/${pgkname}/oblogout/suspend.svg
-  install -Dm644 oblogout/hibernate.svg ${pkgdir}/usr/share/${pgkname}/oblogout/hibernate.svg
-  install -Dm644 oblogout/logout.svg ${pkgdir}/usr/share/${pgkname}/oblogout/logout.svg
-  install -Dm644 oblogout/shutdown.svg ${pkgdir}/usr/share/${pgkname}/oblogout/shutdown.svg
-  install -Dm644 oblogout/switch.svg ${pkgdir}/usr/share/${pgkname}/oblogout/switch.svg
+  install -Dm644 oblogout.conf ${pkgdir}/usr/share/${pkgname}/oblogout.conf
+  install -Dm644 oblogout/cancel.svg ${pkgdir}/usr/share/${pkgname}/oblogout/cancel.svg
+  install -Dm644 oblogout/lock.svg ${pkgdir}/usr/share/${pkgname}/oblogout/lock.svg
+  install -Dm644 oblogout/restart.svg ${pkgdir}/usr/share/${pkgname}/oblogout/restart.svg
+  install -Dm644 oblogout/suspend.svg ${pkgdir}/usr/share/${pkgname}/oblogout/suspend.svg
+  install -Dm644 oblogout/hibernate.svg ${pkgdir}/usr/share/${pkgname}/oblogout/hibernate.svg
+  install -Dm644 oblogout/logout.svg ${pkgdir}/usr/share/${pkgname}/oblogout/logout.svg
+  install -Dm644 oblogout/shutdown.svg ${pkgdir}/usr/share/${pkgname}/oblogout/shutdown.svg
+  install -Dm644 oblogout/switch.svg ${pkgdir}/usr/share/${pkgname}/oblogout/switch.svg
 
   # openbox
-  install -Dm755 openbox/autostart ${pkgdir}/usr/share/${pgkname}/openbox/autostart
-  install -Dm644 openbox/menu.xml ${pkgdir}/usr/share/${pgkname}/openbox/menu.xml
-  install -Dm644 openbox/rc.xml ${pkgdir}/usr/share/${pgkname}/openbox/rc.xml
-  install -Dm755 openbox/pipemenus/obpipemenu-places ${pkgdir}/usr/share/${pgkname}/openbox/pipemenus/obpipemenu-places
-  install -Dm755 openbox/pipemenus/obrecent.sh ${pkgdir}/usr/share/${pgkname}/openbox/pipemenus/obrecent.sh
+  install -Dm755 openbox/autostart ${pkgdir}/usr/share/${pkgname}/openbox/autostart
+  install -Dm644 openbox/menu.xml ${pkgdir}/usr/share/${pkgname}/openbox/menu.xml
+  install -Dm644 openbox/rc.xml ${pkgdir}/usr/share/${pkgname}/openbox/rc.xml
+  install -Dm755 openbox/pipemenus/obpipemenu-places ${pkgdir}/usr/share/${pkgname}/openbox/pipemenus/obpipemenu-places
+  install -Dm755 openbox/pipemenus/obrecent.sh ${pkgdir}/usr/share/${pkgname}/openbox/pipemenus/obrecent.sh
 
   # pcmanfm
-  install -Dm644 pcmanfm.conf ${pkgdir}/usr/share/${pgkname}/pcmanfm.conf
-  install -Dm644 libfm.conf ${pkgdir}/usr/share/${pgkname}/libfm.conf
+  install -Dm644 pcmanfm.conf ${pkgdir}/usr/share/${pkgname}/pcmanfm.conf
+  install -Dm644 libfm.conf ${pkgdir}/usr/share/${pkgname}/libfm.conf
 
   # Plank
-  install -Dm644 plank/dock1/settings ${pkgdir}/usr/share/${pgkname}/plank/dock1/settings
-  install -Dm644 plank/dock1/launchers/chromium.dockitem ${pkgdir}/usr/share/${pgkname}/plank/dock1/launchers/chromium.dockitem
-  install -Dm644 plank/dock1/launchers/gpicview.dockitem ${pkgdir}/usr/share/${pgkname}/plank/dock1/launchers/gpicview.dockitem
-  install -Dm644 plank/dock1/launchers/mousepad.dockitem ${pkgdir}/usr/share/${pgkname}/plank/dock1/launchers/mousepad.dockitem
-  install -Dm644 plank/dock1/launchers/pragha.dockitem ${pkgdir}/usr/share/${pgkname}/plank/dock1/launchers/pragha.dockitem
-  install -Dm644 plank/dock1/launchers/gnome-mplayer.dockitem ${pkgdir}/usr/share/${pgkname}/plank/dock1/launchers/gnome-mplayer.dockitem
-  install -Dm644 plank/dock1/launchers/lxterminal.dockitem ${pkgdir}/usr/share/${pgkname}/plank/dock1/launchers/lxterminal.dockitem
-  install -Dm644 plank/dock1/launchers/plank.dockitem ${pkgdir}/usr/share/${pgkname}/plank/dock1/launchers/plank.dockitem
+  install -Dm644 plank/dock1/settings ${pkgdir}/usr/share/${pkgname}/plank/dock1/settings
+  install -Dm644 plank/dock1/launchers/chromium.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/chromium.dockitem
+  install -Dm644 plank/dock1/launchers/gpicview.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/gpicview.dockitem
+  install -Dm644 plank/dock1/launchers/mousepad.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/mousepad.dockitem
+  install -Dm644 plank/dock1/launchers/pragha.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/pragha.dockitem
+  install -Dm644 plank/dock1/launchers/gnome-mplayer.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/gnome-mplayer.dockitem
+  install -Dm644 plank/dock1/launchers/lxterminal.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/lxterminal.dockitem
+  install -Dm644 plank/dock1/launchers/plank.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/plank.dockitem
 
   # tint2
-  install -Dm644 tint2rc ${pkgdir}/usr/share/${pgkname}/tint2rc
+  install -Dm644 tint2rc ${pkgdir}/usr/share/${pkgname}/tint2rc
   
   # volumeicon
-  install -Dm644 volumeicon ${pkgdir}/usr/share/${pgkname}/volumeicon
+  install -Dm644 volumeicon ${pkgdir}/usr/share/${pkgname}/volumeicon
   
   # xorg-xinit
-  install -Dm644 xinitrc ${pkgdir}/usr/share/${pgkname}/xinitrc
+  install -Dm644 xinitrc ${pkgdir}/usr/share/${pkgname}/xinitrc
   
   # install.sh file
   install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
