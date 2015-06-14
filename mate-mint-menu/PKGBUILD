@@ -16,8 +16,8 @@ pkgdesc="Linux Mint Menu for MATE"
 arch=('any')
 url="http://packages.linuxmint.com/pool/main/m/mintmenu"
 license=('GPL2')
-depends=('mate-panel>=1.8.0' 'python2-gobject2' 'python2-xdg' 'xdg-utils' 
-         'python2-keybinder2' 'python2-xlib' 'pygtk' 'mozo' 'gksu')
+depends=('python2-gobject2' 'python2-xdg' 'xdg-utils' 'mozo' 'mate-panel>=1.8.0'
+         'python2-keybinder2' 'python2-xlib' 'pygtk' 'gksu')
 optdepends=('mint-translations: translations files'
             'mate-screensaver: lock screen button'
             'pamac: package manager button')
@@ -26,14 +26,16 @@ source=("${url}/mintmenu_${pkgver}.tar.gz"
         'execute_fix.diff'
         'removescript')
 install=${pkgname}.install
-sha256sums=('587ba8334a43a707f82bd696e454ea6619f2a91b7803c4ea3a5005e829fe240b'
+sha256sums=('1bd6b5cb6ccab3cc0b61649e693e8526c3b328165720855ee6d514038ba9431b'
+            '09370c7fe33356d04c5e4d6470f611cb06f538e09b1a402c076b882fae2edcdf'
             '1c37bb89e6feadeac4cae5a59de563b19df07611c3fb0d7dfd5fa2bc44a2dead'
             '9533d0f5416af1f2b8ef5097f06e39135278eef856994d859c4ee7ba57d6fcaa')
-build() {
-  cd "$srcdir/mint-translations-master/"
-  for files in po-export/mintmenu/*; do
+package() {
+  cd "$srcdir/mint-translations-master/po-export/mintmenu"
+  for files in ./*; do
     	if [ -f "$files" ] && [ "$files" != 'po/mintmenu.pot' ]; then
-        	STRING_PO=`echo ${files#*/}`
+        	STRING_PO_F=`echo ${files#*/}`
+        	STRING_PO=`echo ${STRING_PO_F/mintmenu-}`
         	STRING=`echo ${STRING_PO%.po}`
         	mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
         	msgfmt $files -o ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/mintmenu.mo
@@ -52,9 +54,7 @@ build() {
 # Disable the package-manager entry under Places - broken do to synaptic not being present for Arch (Can be customized after install)
   sed -i "357s/true/false/" usr/share/glib-2.0/schemas/com.linuxmint.mintmenu.gschema.xml
   
-}
 
-package() {
   cd "$srcdir/${_pkgname}"
   cp -R usr "$pkgdir/"
   install -m755 "$srcdir/removescript" "$pkgdir/usr/lib/linuxmint/mintMenu/"
