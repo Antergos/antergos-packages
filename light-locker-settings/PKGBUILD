@@ -4,7 +4,7 @@
 pkgname=light-locker-settings
 pkgver=1.5.1
 _pkgver=${pkgver}
-pkgrel=4
+pkgrel=5
 pkgdesc="Just a simple settings dialog for light-locker"
 arch=('any')
 url="https://github.com/lots0logs/${pkgname}"
