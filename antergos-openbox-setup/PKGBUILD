@@ -1,8 +1,8 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-openbox-setup
-pkgver=0.2.1
-pkgrel=3
+pkgver=0.2.2
+pkgrel=1
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
 arch=('any')
@@ -17,7 +17,7 @@ conflicts=()
 replaces=()
 backup=()
 source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
-sha256sums=('2d3e69b056bed8bfd265f33ef3c944c784afb91c2555dd6dda4934e581b7ba12')
+sha256sums=('8527c471198d026e4484077f10bf03e4230646a71e2ef4dbf746d2058e4a51cc')
 
 
 package() {
@@ -27,10 +27,10 @@ package() {
 
   # Compton
   install -Dm644 compton.conf ${pkgdir}/usr/share/${pkgname}/compton.conf
-  
+
   # Conky
   install -Dm644 conky.conf ${pkgdir}/usr/share/${pkgname}/conky.conf
-  
+
   # Gtk2 & Gtk3
   install -Dm644 gtkfilechooser.ini ${pkgdir}/usr/share/${pkgname}/gtkfilechooser.ini
   install -Dm644 gtkrc-2.0 ${pkgdir}/usr/share/${pkgname}/gtkrc-2.0
@@ -74,13 +74,13 @@ package() {
 
   # tint2
   install -Dm644 tint2rc ${pkgdir}/usr/share/${pkgname}/tint2rc
-  
+
   # volumeicon
   install -Dm644 volumeicon ${pkgdir}/usr/share/${pkgname}/volumeicon
-  
+
   # xorg-xinit
   install -Dm644 xinitrc ${pkgdir}/usr/share/${pkgname}/xinitrc
-  
+
   # install.sh file
   install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
 
