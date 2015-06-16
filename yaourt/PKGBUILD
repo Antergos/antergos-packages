@@ -2,30 +2,30 @@
 # Author: tuxce <tuxce.net@gmail.com>
 
 pkgname=yaourt
-pkgver=1.5
-pkgrel=4
+pkgver=1.6
+pkgrel=1
 pkgdesc="A pacman wrapper with extended features and AUR support"
 arch=('any')
 url="https://github.com/archlinuxfr/yaourt"
 license=(GPL)
-depends=('diffutils' 'pacman>=4.2' 'package-query>=1.5' 'gettext')
+depends=('diffutils' 'pacman>=4.2' 'package-query>=1.6' 'gettext')
 optdepends=('aurvote: vote for favorite packages from AUR'
       'customizepkg: automatically modify PKGBUILD during install/upgrade'
       'rsync: retrieve PKGBUILD from official repositories')
 backup=('etc/yaourtrc')
 #source=(http://mir.archlinux.fr/~tuxce/releases/$pkgname/$pkgname-$pkgver.tar.gz)
-source=(https://github.com/archlinuxfr/yaourt/archive/master.zip)
-md5sums=('79ea9fd005c3e3791363042daecbe740')
+source=("https://github.com/archlinuxfr/yaourt/archive/${pkgver}.zip")
+sha256sums=()
 
 build() { 
-  #cd "$srcdir/$pkgname-$pkgver/"
-  cd "$srcdir/$pkgname-master/src"
+  cd "$srcdir/$pkgname-$pkgver/"
+  #cd "$srcdir/$pkgname-master/src"
   make PREFIX=/usr sysconfdir=/etc localstatedir=/var 
 }
 
 package() {
-  #cd "$srcdir/$pkgname-$pkgver/"
-  cd "$srcdir/$pkgname-master/src"
+  cd "$srcdir/$pkgname-$pkgver/"
+  #cd "$srcdir/$pkgname-master/src"
   make PREFIX=/usr sysconfdir=/etc localstatedir=/var DESTDIR="$pkgdir" install
 }
 
