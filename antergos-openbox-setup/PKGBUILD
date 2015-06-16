@@ -1,7 +1,7 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-openbox-setup
-pkgver=0.2.2
+pkgver=0.2.3
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
@@ -17,7 +17,7 @@ conflicts=()
 replaces=()
 backup=()
 source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
-sha256sums=('8527c471198d026e4484077f10bf03e4230646a71e2ef4dbf746d2058e4a51cc')
+sha256sums=('7365ccdfabab477d418baf17a284f1d6e58c574796a83d004fb2e4bca929641d')
 
 
 package() {
