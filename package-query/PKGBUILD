@@ -12,7 +12,7 @@ sha256sums=('51c9ae8703397a21035dd14814c79af6')
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
-  ./configure --localstatedir=/var --prefix=/usr --sysconfdir=/etc --with-aur-url=https://aur4.archlinux.org
+  ./autogen.sh --localstatedir=/var --prefix=/usr --sysconfdir=/etc --with-aur-url=https://aur4.archlinux.org
   make
 }
 
