@@ -1,46 +1,44 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-openbox-setup
-pkgver=0.2.3
+pkgver=0.2.4
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
 arch=('any')
 license=('GPL2')
 depends=('bash' 'perl')
-optdepends=('openbox' 'xorg-xinit' 'pcmanfm' 'gvfs' 'udisks'
+optdepends=('openbox' 'xorg-xinit' 'pcmanfm'
 'nitrogen' 'plank' 'tint2' 'volumeicon' 'conky' 'compton'
-'numix-frost-themes' 'numix-icon-theme' 'plank-theme-numix'
-'chromium' 'gnome-mplayer' 'gpicview' 'lxterminal' 'mousepad' 'pragha')
+'numix-frost-themes' 'numix-icon-theme' 'plank-theme-numix')
 makedepends=()
 conflicts=()
 replaces=()
 backup=()
 source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
-sha256sums=('7365ccdfabab477d418baf17a284f1d6e58c574796a83d004fb2e4bca929641d')
-
+sha256sums=('9c96a508f11355be666a4a940c312acdd53ebcd1c2b28fe117c19c8519fe5098')
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
 
   install -d ${pkgdir}/usr/share/${pkgname}
 
-  # Compton
+  # Compton setup
   install -Dm644 compton.conf ${pkgdir}/usr/share/${pkgname}/compton.conf
 
-  # Conky
+  # Conky setup
   install -Dm644 conky.conf ${pkgdir}/usr/share/${pkgname}/conky.conf
 
-  # Gtk2 & Gtk3
+  # Gtk2 & Gtk3 defaults
   install -Dm644 gtkfilechooser.ini ${pkgdir}/usr/share/${pkgname}/gtkfilechooser.ini
   install -Dm644 gtkrc-2.0 ${pkgdir}/usr/share/${pkgname}/gtkrc-2.0
   install -Dm644 settings.ini ${pkgdir}/usr/share/${pkgname}/settings.ini
 
-  # nitrogen
+  # Nitrogen setup
   install -Dm644 nitrogen.cfg ${pkgdir}/usr/share/${pkgname}/nitrogen.cfg
   install -Dm644 bg-saved.cfg ${pkgdir}/usr/share/${pkgname}/bg-saved.cfg
 
-  # oblogout
+  # Oblogout setup and icons
   install -Dm644 oblogout.conf ${pkgdir}/usr/share/${pkgname}/oblogout.conf
   install -Dm644 oblogout/cancel.svg ${pkgdir}/usr/share/${pkgname}/oblogout/cancel.svg
   install -Dm644 oblogout/lock.svg ${pkgdir}/usr/share/${pkgname}/oblogout/lock.svg
@@ -51,14 +49,14 @@ package() {
   install -Dm644 oblogout/shutdown.svg ${pkgdir}/usr/share/${pkgname}/oblogout/shutdown.svg
   install -Dm644 oblogout/switch.svg ${pkgdir}/usr/share/${pkgname}/oblogout/switch.svg
 
-  # openbox
+  # Openbox setup
   install -Dm755 openbox/autostart ${pkgdir}/usr/share/${pkgname}/openbox/autostart
   install -Dm644 openbox/menu.xml ${pkgdir}/usr/share/${pkgname}/openbox/menu.xml
   install -Dm644 openbox/rc.xml ${pkgdir}/usr/share/${pkgname}/openbox/rc.xml
   install -Dm755 openbox/pipemenus/obpipemenu-places ${pkgdir}/usr/share/${pkgname}/openbox/pipemenus/obpipemenu-places
   install -Dm755 openbox/pipemenus/obrecent.sh ${pkgdir}/usr/share/${pkgname}/openbox/pipemenus/obrecent.sh
 
-  # pcmanfm
+  # Pcmanfm
   install -Dm644 pcmanfm.conf ${pkgdir}/usr/share/${pkgname}/pcmanfm.conf
   install -Dm644 libfm.conf ${pkgdir}/usr/share/${pkgname}/libfm.conf
 
@@ -72,16 +70,15 @@ package() {
   install -Dm644 plank/dock1/launchers/lxterminal.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/lxterminal.dockitem
   install -Dm644 plank/dock1/launchers/plank.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/plank.dockitem
 
-  # tint2
+  # Tint2
   install -Dm644 tint2rc ${pkgdir}/usr/share/${pkgname}/tint2rc
 
-  # volumeicon
+  # VolumeIcon
   install -Dm644 volumeicon ${pkgdir}/usr/share/${pkgname}/volumeicon
 
-  # xorg-xinit
+  # Xorg-xinit
   install -Dm644 xinitrc ${pkgdir}/usr/share/${pkgname}/xinitrc
 
   # install.sh file
   install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
-
 }
