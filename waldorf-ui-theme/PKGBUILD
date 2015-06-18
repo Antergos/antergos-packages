@@ -1,0 +1,21 @@
+# Maintainer: localizator <localizator at ukr dot net>
+pkgname=waldorf-ui-theme
+pkgver=0.07
+pkgrel=1
+pkgdesc="Default GTK+ and Openbox themes for CrunchBang Waldorf."
+arch=('any')
+url="http://crunchbang.org/"
+license=('custom:WTFPL')
+depends=('gtk-engine-murrine')
+sha256sums=('4471981cd5fb64cbe82f900bd91580c721d0aca88481f52b1881f05dc9af9f42')
+source=("http://packages.crunchbang.org/waldorf/pool/main/${pkgname}_$pkgver.tar.gz")
+#source=("http://igor-zivkovic.from.hr/main/${pkgname}_${pkgver}.tar.gz")
+
+package() {
+  cd "$srcdir"/$pkgname-$pkgver/waldorf
+  mkdir -p "$pkgdir"/usr/share/themes/waldorf
+  mkdir -p "$pkgdir"/usr/share/licenses/$pkgname
+  cp ../debian/copyright "$pkgdir"/usr/share/licenses/$pkgname/
+  cp -rt "$pkgdir"/usr/share/themes/waldorf *
+}
+
