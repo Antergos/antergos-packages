@@ -14,7 +14,7 @@ Server = http://mirrors.nic.cz/antergos/$repo/$arch
 
 # France
 Server = http://cinnarch.polymorf.fr/$repo/$arch
-Server = http://mirror.finn.lu/$repo/$arch
+# Server = http://mirror.finn.lu/$repo/$arch
 
 # Greece
 Server = http://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
