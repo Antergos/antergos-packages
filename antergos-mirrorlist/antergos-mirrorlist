@@ -5,19 +5,25 @@
 # Autodetect your closest mirror
 Server = http://mirrors.antergos.com/$repo/$arch
 
+# Australia
+Server = http://sourceforge.internode.on.net/project/antergos/mirror/$repo/$arch
+
+# Brazil
+Server = http://nbtelecom.dl.sourceforge.net/project/antergos/mirror/$repo/$arch
+
+# Canada
+Server = http://sf.mirror.iweb.ca/project/antergos/mirror/$repo/$arch
 
 # China
 Server = http://mirror.bjtu.edu.cn/cinnarch/$repo/$arch
 
 # Czech Republic
 Server = http://mirrors.nic.cz/antergos/$repo/$arch
+Server = http://sourceforge.nic.cz/project/antergos/mirror/$repo/$arch
 
 # France
 Server = http://cinnarch.polymorf.fr/$repo/$arch
 # Server = http://mirror.finn.lu/$repo/$arch
-
-# Greece
-Server = http://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
 
 # England
 Server = http://www.mirrorservice.org/sites/repo.antergos.com/$repo/$arch
@@ -25,6 +31,21 @@ Server = http://www.mirrorservice.org/sites/repo.antergos.com/$repo/$arch
 # Germany
 Server = http://cinnarch.limun.org/$repo/$arch
 Server = http://mirror.de.leaseweb.net/antergos/$repo/$arch
+
+# Greece
+Server = http://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
+
+# Ireland
+Server = http://heanet.dl.sourceforge.net/project/antergos/mirror/$repo/$arch
+
+# Italy
+Server = http://sf.mirror.garr.it/project/antergos/mirror/$repo/$arch
+
+# Japan
+Server = http://ftp.jaist.ac.jp/project/antergos/mirror/$repo/$arch
+
+# Kenya
+Server = http://mirror.liquidtelecom.com/project/antergos/mirror/$repo/$arch
 
 # Netherlands
 Server = http://mirror.nl.leaseweb.net/cinnarch/$repo/$arch
