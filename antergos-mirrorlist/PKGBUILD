@@ -12,7 +12,7 @@ backup=(etc/pacman.d/antergos-mirrorlist)
 source=(antergos-mirrorlist)
 sha256sums=('fd48da4b8c3db6bdd5c1f90657f4b4f3d435fea288422ee366d75d0f823ef915')
 
-build() {
+package() {
   mkdir -p $pkgdir/etc/pacman.d
   install -m644 $srcdir/antergos-mirrorlist $pkgdir/etc/pacman.d/
 }
