@@ -10,14 +10,14 @@ license=('LGPLv2+')
 depends=('glib2' 'libyaml' 'gnome-common' 'libsoup' 'gtk3' 'gdk-pixbuf2' 'gcab')
 makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'git')
 conflicts=("appstream-glib")
-_realver=0.3.6
+_realver=0.4.0
 provides=("appstream-glib=$_realver")
 source=("git+http://github.com/hughsie/appstream-glib.git")
 md5sums=('SKIP')
 
 pkgver() {
 	cd "$srcdir/$pkgname"
-	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(date +'%Y%m%d')"
+	printf "%s.r%s" "${_realver}" "$(git rev-list --count HEAD)"
 }
 
 build() {
