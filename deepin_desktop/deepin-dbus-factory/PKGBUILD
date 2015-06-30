@@ -2,12 +2,12 @@
 # Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
-
 pkgbase=deepin-dbus-factory
-pkgname=dde-qml-dbus-factory
+pkgname=('dde-go-dbus-factory'
+         'dde-qml-dbus-factory')
 pkgver=0.0.2.20141226160557
 _srcdirname=dbus-factory-0.0.2+20141226160557~7e89f03592
-pkgrel=3
+pkgrel=1
 arch=('i686' 'x86_64')
 url="https://github.com/linuxdeepin/dbus-factory"
 license=('GPL3')
@@ -29,7 +29,7 @@ build() {
   make -j$(expr $(nproc) \* 2 - 1) -l$(nproc)
 }
 
-package() {
+package_dde-qml-dbus-factory() {
   pkgdesc='QML DBus factory for DDE'
   depends=('qt5-declarative')
   optdepends=('udisks2: Disk Management Service'
@@ -45,4 +45,10 @@ package() {
   make DESTDIR="${pkgdir}" install-qml
 }
 
+package_dde-go-dbus-factory() {
+  pkgdesc='Go-lang DBus factory for DDE'
 
+  cd "${_srcdirname}"
+
+  make DESTDIR="${pkgdir}" install-golang
+}

@@ -64,7 +64,8 @@ build() {
         -DCOMPIZ_BUILD_TESTING=OFF \
         -DUSE_GCONF=OFF \
         -DUSE_GSETTINGS=ON \
-        -DCOMPIZ_DEFAULT_PLUGINS="ccp"
+        -DCOMPIZ_DEFAULT_PLUGINS="ccp" \
+        -DCOMPIZ_WERROR=FALSE
 
   make
 }

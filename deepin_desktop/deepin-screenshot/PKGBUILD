@@ -30,7 +30,7 @@ build() {
 }
 
 package() {
-  depends=('deepin-menu' 'deepin-qml-widgets' 'deepin-pygtk'
+  depends=('deepin-menu' 'deepin-qml-widgets' 'pygtk'
            'python2' 'python2-pyqt5' 'python2-wnck' 'xpybutil')
 
   cd "${_srcdirname}"
