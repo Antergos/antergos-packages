@@ -5,7 +5,7 @@
 pkgname=python2-deepin-gsettings
 pkgver=0.1.git20131206094009
 _srcdirname=deepin-gsettings-0.1+git20131206094009~a64de3ac19
-pkgrel=2
+pkgrel=1
 pkgdesc='deepin gsettings python bindings'
 arch=('i686' 'x86_64')
 depends=('python2-setuptools')

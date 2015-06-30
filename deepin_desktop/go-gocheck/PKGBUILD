@@ -5,7 +5,7 @@
 pkgname=go-gocheck
 pkgver=0.0.bzr20131118.85
 _srcdirname=golang-gocheck-0.0~bzr20131118+85
-pkgrel=10
+pkgrel=8
 pkgdesc='Richer testing framework for Go libraries and applications to use'
 arch=('any')
 url="http://labix.org/gocheck"

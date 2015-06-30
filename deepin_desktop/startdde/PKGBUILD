@@ -5,7 +5,7 @@
 pkgname=startdde
 pkgver=0.1.20141230181929
 _srcdirname=startdde-0.1+20141230181929~b99e7b174d
-pkgrel=3
+pkgrel=1
 pkgdesc="starter of deepin desktop environment"
 arch=('i686' 'x86_64')
 url="https://gitcafe.com/Deepin/startdde"

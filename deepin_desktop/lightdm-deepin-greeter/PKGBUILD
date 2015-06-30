@@ -50,4 +50,3 @@ package() {
   make install DESTDIR="${pkgdir}"
   chmod 0700 "${pkgdir}"/var/lib/polkit-1
 }
-
