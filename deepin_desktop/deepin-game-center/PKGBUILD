@@ -5,7 +5,7 @@
 pkgname=deepin-game-center
 pkgver=1.0.1.20141230144448
 _srcdirname=deepin-game-center-1.0.1+20141230144448~4e7bbbfda6
-pkgrel=1
+pkgrel=3
 pkgdesc="Game center for Linuxdeepin"
 arch=('any')
 url="https://gitcafe.com/Deepin/deepin-game"

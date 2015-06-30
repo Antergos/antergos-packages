@@ -5,7 +5,7 @@
 pkgname=deepin-cursor-theme
 pkgver=2014.4
 _srcdirname=deepin-cursor-theme-2014~4
-pkgrel=1
+pkgrel=2
 pkgdesc='Cursor theme from Linux Deepin'
 arch=('any')
 license=('LGPL3')

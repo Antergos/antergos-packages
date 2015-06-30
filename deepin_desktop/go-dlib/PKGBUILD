@@ -5,7 +5,7 @@
 pkgname=go-dlib
 pkgver=0.0.4.20150227094412
 _srcdirname=go-dlib-0.0.4+20150227094412~8e9523b66a
-pkgrel=1
+pkgrel=3
 pkgdesc='Go-lang bingdings for dlib'
 arch=('any')
 url="https://gitcafe.com/Deepin/go-lib"

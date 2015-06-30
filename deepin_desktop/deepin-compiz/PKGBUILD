@@ -8,7 +8,7 @@
 pkgname=deepin-compiz
 pkgver=0.9.99.5.git20140707164843
 _srcdirname=compiz-0.9.99
-pkgrel=2
+pkgrel=3
 epoch=1
 pkgdesc='A forked compiz for Linux Deepin desktop environment'
 arch=('i686' 'x86_64')
