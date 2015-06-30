@@ -5,12 +5,12 @@
 pkgname=deepin-pygtk
 pkgver=2.24.0
 _srcdirname=pygtk-2.24.0
-pkgrel=7
+pkgrel=8
 pkgdesc="Python bindings for the GTK widget set - with patches to fix memory leak for deepin-ui"
 arch=('i686' 'x86_64')
 url="http://www.pygtk.org/"
 license=('LGPL')
-groups=('deepin')
+groups=('deepin-extra')
 depends=('libglade' 'python2-cairo' 'pygobject')
 optdepends=('python2-numpy')
 
