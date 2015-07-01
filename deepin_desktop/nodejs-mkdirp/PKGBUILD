@@ -8,9 +8,9 @@ pkgrel=3
 pkgdesc="Recursively mkdir, like mkdir -p, but in node.js"
 arch=('any')
 depends=('nodejs')
+makedepends=('npm')
 url="https://github.com/substack/node-mkdirp"
 license=('MIT')
-provides=('nodejs-mkdirp')
 source=(".AURINFO")
 md5sums=('SKIP')
 
