@@ -5,14 +5,14 @@ pkgname=nodejs-mkdirp
 _npmname=mkdirp
 pkgver=0.5.1
 pkgrel=1
-pkgdesc="Recursively mkdir, like `mkdir -p`"
+pkgdesc='Recursively mkdir, like "mkdir -p"'
 arch=(any)
 url="https://github.com/substack/node-mkdirp#readme"
 license=()
-depends=('nodejs' 'npm' )
+depends=('nodejs' 'npm')
 optdepends=()
-source=(http://registry.npmjs.org/$_npmname/-/$_npmname-$_npmver.tgz)
-noextract=($_npmname-$_npmver.tgz)
+source=("http://registry.npmjs.org/${_npmname}/-/${_npmname}-${_pkgver}.tgz")
+noextract=(${_npmname}-${_npmver}.tgz)
 sha1sums=(30057438eac6cf7f8c4767f38648d6697d75c903)
 
 package() {
@@ -20,5 +20,5 @@ package() {
   local _npmdir="$pkgdir/usr/lib/node_modules/"
   mkdir -p $_npmdir
   cd $_npmdir
-  npm install -g --prefix "$pkgdir/usr" $_npmname@$_npmver
+  npm install -g --prefix "$pkgdir/usr" $_npmname@$_pkgver
 }
