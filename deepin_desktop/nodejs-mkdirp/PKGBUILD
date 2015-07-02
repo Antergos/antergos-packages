@@ -11,8 +11,8 @@ url="https://github.com/substack/node-mkdirp#readme"
 license=()
 depends=('nodejs' 'npm')
 optdepends=()
-source=("http://registry.npmjs.org/${_npmname}/-/${_npmname}-${_pkgver}.tgz")
-noextract=(${_npmname}-${_npmver}.tgz)
+source=("http://registry.npmjs.org/${_npmname}/-/${_npmname}-${pkgver}.tgz")
+noextract=(${_npmname}-${pkgver}.tgz)
 sha1sums=(30057438eac6cf7f8c4767f38648d6697d75c903)
 
 package() {
@@ -20,5 +20,5 @@ package() {
   local _npmdir="$pkgdir/usr/lib/node_modules/"
   mkdir -p $_npmdir
   cd $_npmdir
-  npm install -g --prefix "$pkgdir/usr" $_npmname@$_pkgver
+  npm install -g --prefix "$pkgdir/usr" $_npmname@$pkgver
 }
