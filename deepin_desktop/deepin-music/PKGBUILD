@@ -2,10 +2,10 @@
 # Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
-pkgname=deepin-music-player
+pkgname=deepin-music
 pkgver=1.1.20150413165956
 _srcdirname=deepin-music-player-1.1+20150413165956~fa225d345b
-pkgrel=1
+pkgrel=3
 pkgdesc='Awesome music player with brilliant and tweakful UI Deepin-UI based.'
 arch=('any')
 url="https://gitcafe.com/Deepin/deepin-music"
@@ -13,6 +13,9 @@ license=('GPL3')
 depends=('python2')
 makedepends=('deepin-gettext-tools')
 groups=('deepin-extra')
+provides=('deepin-music-player')
+replaces=('deepin-music-player')
+conflicts=('deepin-music-player')
 install="${pkgname}.install"
 source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-music-player/deepin-music-player_1.1+20150413165956~fa225d345b.tar.gz")
 sha256sums=('ff74ed6d7e574ce3fded5523429eafe172bb92f18acba1ef817960cd8c86b777')

@@ -3,23 +3,25 @@
 
 pkgname=nodejs-mkdirp
 _npmname=mkdirp
-pkgver=0.5.0
-pkgrel=3
-pkgdesc="Recursively mkdir, like mkdir -p, but in node.js"
-arch=('any')
-depends=('nodejs')
-url="https://github.com/substack/node-mkdirp"
-license=('MIT')
-provides=('nodejs-mkdirp')
-source=(".AURINFO")
-md5sums=('SKIP')
+pkgver=0.5.1
+pkgrel=1
+pkgdesc='Recursively mkdir, like "mkdir -p"'
+arch=(any)
+url="https://github.com/substack/node-mkdirp#readme"
+license=()
+depends=('nodejs' 'npm')
+optdepends=()
+source=("http://registry.npmjs.org/${_npmname}/-/${_npmname}-${pkgver}.tgz")
+noextract=(${_npmname}-${pkgver}.tgz)
+sha1sums=(30057438eac6cf7f8c4767f38648d6697d75c903)
 
 package() {
+  cd $srcdir
   local _npmdir="$pkgdir/usr/lib/node_modules/"
   mkdir -p $_npmdir
-  export HOME=$srcdir
+  mkdir ${pkgdir}/root
+  export HOME=${pkgdir}/root
   cd $_npmdir
-  npm config set strict-ssl false
-  npm install --user root -g --prefix "$pkgdir/usr" $_npmname@$pkgver
-  npm config set strict-ssl true
+  npm install -g --prefix "$pkgdir/usr" $_npmname@$pkgver
+  export HOME=/root
 }
