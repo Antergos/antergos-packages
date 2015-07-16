@@ -25,13 +25,20 @@ sha256sums_x86_64=('9cfad413d4f23f2881bf53bea94227e6dd6259c1461b80bdc216b8816ea6
 
 package() {
 	tar -xf data.tar.xz --exclude=usr/share/{lintian,menu} -C "$pkgdir/"
-
-	# set suid bit for Opera sandbox
-	chmod 4755 "${pkgdir}/usr/lib/${_arch}-linux-gnu/opera-developer/opera_sandbox"
-
+	
 	# license
 	install -Dm644 \
 		"$pkgdir/usr/share/doc/$pkgname/copyright" \
 		"$pkgdir/usr/share/licenses/$pkgname/copyright"
+	
+	cd ${pkgdir}/usr/lib/*-linux-gnu
+	cp -R ${pkgname} ${pkgdir}/usr/lib
+	
+	# set suid bit for Opera sandbox
+	chmod 4755 "${pkgdir}/usr/lib/${pkgname}/opera_sandbox"
+	
+	unlink ${pkgdir}/usr/bin/${pkgname}
+	cd ${pkgdir}/usr/bin
+	ln -r ../usr/lib/opera-developer/opera-developer
 }
 
