@@ -3,7 +3,7 @@
 
 pkgname=b43-firmware
 pkgver=6.30.163.46
-pkgrel=3
+pkgrel=4
 pkgdesc="Firmware for Broadcom B43 wireless networking chips"
 arch=("any")
 url="https://wireless.wiki.kernel.org/en/users/Drivers/b43"
