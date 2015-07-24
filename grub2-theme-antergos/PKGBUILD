@@ -1,0 +1,22 @@
+# Maintainier: Gustau Castells <karasu@antergos.com>
+# Author of theme: Dustin Falgout <lots0logs@antergos.com>
+
+pkgname=grub2-theme-antergos
+pkgver=0.1
+pkgrel=1
+pkgdesc="Antergos default Grub2 theme"
+arch=('any')
+license=('GPL')
+url="https://github.com/Antergos/grub2-theme-antergos"
+depends=('grub')
+install=$pkgname.install
+source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz"
+        'grub2-theme-antergos.install')
+sha256sums=('a80a36bde5fcaa998b72ae8df98ad6c68b8666301b83ccdb0f28c5e0c5ad52a6'
+            '6d2a983554dad557f732029354d5163756ddf0cf024e0fc21df91f4c54b11310')
+
+package() {
+  cd ${srcdir}
+  mkdir -p ${pkgdir}/boot/grub/themes/Antergos-Default
+  cp -R ${pkgname}-${pkgver}/Antergos-Default/* ${pkgdir}/boot/grub/themes/Antergos-Default
+}

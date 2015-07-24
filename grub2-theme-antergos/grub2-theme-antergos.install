@@ -1,0 +1,11 @@
+post_install() {
+  cat << _EOF
+
+==> Installation:
+==> Add theme to your /etc/default/grub:
+GRUB_THEME="/boot/grub/themes/Antergos-Default/theme.txt"
+==> Preferred resolution 1024x768: GRUB_GFXMODE=1024x768
+==> Update grub:# grub-mkconfig -o /boot/grub/grub.cfg
+
+_EOF
+}
