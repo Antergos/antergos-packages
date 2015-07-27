@@ -17,8 +17,8 @@ install=opera.install
 options=(!strip)
 source_i686=("http://get.geo.opera.com/pub/${pkgname}/${pkgver}/linux/${pkgname}_${pkgver}_i386.deb")
 source_x86_64=("http://get.geo.opera.com/pub/${pkgname}/${pkgver}/linux/${pkgname}_${pkgver}_amd64.deb")
-sha256sums_i686=('6a8cebc47e2cfb121617f0c51f1974d74ef742037757fcca3a011c0f7341705a')
-sha256sums_x86_64=('9cfad413d4f23f2881bf53bea94227e6dd6259c1461b80bdc216b8816ea6be46')
+sha256sums_i686=('be60c87212307a06d7628761b9bb16e15c2bc7d711957467b4c55e2f7f868b32')
+sha256sums_x86_64=('36e153c3778ab543ea0b0921534f42dd689aaadd1fe0aac43d5e5fcb832a8a58')
 
 #prepare() {
 #}
@@ -39,6 +39,6 @@ package() {
 	
 	unlink ${pkgdir}/usr/bin/${pkgname}
 	cd ${pkgdir}/usr/bin
-	ln -sr ../usr/lib/opera-developer/opera-developer
+	ln -sf /usr/lib/${pkgname}/${pkgname}
 }
 
