@@ -16,7 +16,7 @@ sha256sums=('SKIP')
 
 pkgver() {
 	if [[ -d /pkg ]]; then
-		cd ${srcdir}/${_pkgname}
+		cd ${srcdir}/${pkgname}
 	else
 		cd cnchi-dev
 	fi
@@ -25,15 +25,15 @@ pkgver() {
 
 build ()
 {
-  cd $srcdir/${_pkgname}
+  cd $srcdir/${pkgname}
 }
 
 package() {
-	cd ${srcdir}/${_pkgname}
+	cd ${srcdir}/${pkgname}
 
 	install -d ${pkgdir}/usr/share/locale/
 	install -d ${pkgdir}/usr/share/cnchi/cnchi
-	install -Dm755 bin/${_pkgname} "${pkgdir}/usr/bin/cnchi"
+	install -Dm755 bin/${pkgname} "${pkgdir}/usr/bin/cnchi"
 	install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
 
 	for i in data scripts cnchi ui grub2-theme; do
