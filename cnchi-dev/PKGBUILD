@@ -18,7 +18,6 @@ pkgver() {
 	if [[ -d /pkg ]]; then
 		cd ${srcdir}/${_pkgname,,}
 	else
-		tar -cvf cnchi-dev.tar -C cnchi-dev .
 		cd cnchi-dev
 	fi
 	python cnchi/info.py
