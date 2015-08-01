@@ -10,13 +10,13 @@ license=(GPL)
 url="https://github.com/Antergos/Cnchi"
 depends=(python pyalpm python-gobject python-dbus python-requests python-cairo
          python-parted webkitgtk upower python-mako iso-codes encfs pam_encfs gptfdisk)
+makedepends=(python git)
 source=("git+http://github.com/lots0logs/cnchi-dev")
 sha256sums=('SKIP')
 
 pkgver() {
 	if [[ -d /pkg ]]; then
-		git clone http://github.com/lots0logs/cnchi-dev.git /tmp/cnchi-dev > /dev/null
-		cd /tmp/cnchi-dev
+		cd /pkg/cnchi-dev
 	else
 		cd ${srcdir}/${_pkgname,,}
 	fi
