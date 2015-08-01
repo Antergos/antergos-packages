@@ -10,7 +10,7 @@ license=(GPL)
 url="https://github.com/Antergos/Cnchi"
 depends=(python pyalpm python-gobject python-dbus python-requests python-cairo
          python-parted webkitgtk upower python-mako iso-codes encfs pam_encfs gptfdisk)
-source=("git+http://github.com:lots0logs/cnchi-dev")
+source=("git+http://github.com/lots0logs/cnchi-dev")
 sha256sums=('SKIP')
 
 pkgver() {
