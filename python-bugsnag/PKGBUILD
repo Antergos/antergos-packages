@@ -1,0 +1,23 @@
+# Antergos Developers <dev@antergos.com>
+
+pkgname=python-bugsnag
+pkgver=2.3.1
+pkgrel=1
+pkgdesc="Bugsnag Notifier for Python"
+url="https://github.com/bugsnag/bugsnag-python"
+arch=('any')
+license=('custom')
+depends=('python')
+source=("https://github.com/bugsnag/bugsnag-python/archive/v${pkgver}.tar.gz")
+sha256sums=('8cbaf024fbbc73cdceab2eac0937035052da48295970fe9eaa84b19d8e353e19')
+
+build() {
+  cd "${srcdir}"/${pkgname}-${pkgver}
+  python setup.py build
+}
+
+package() {
+  cd "${srcdir}"/${pkgname}-${pkgver}
+  python setup.py install --prefix=/usr --root="${pkgdir}" --optimize=1 --skip-build
+}
+
