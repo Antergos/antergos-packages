@@ -14,7 +14,12 @@ source=("git+http://github.com/lots0logs/cnchi-dev")
 sha256sums=('SKIP')
 
 pkgver() {
-	cd ${srcdir}/${_pkgname,,}
+	if [[ -d /pkg ]]; then
+		git clone http://github.com/lots0logs/cnchi-dev.git /tmp/cnchi-dev > /dev/null
+		cd /tmp/cnchi-dev
+	else
+		cd ${srcdir}/${_pkgname,,}
+	fi
 	python cnchi/info.py
 }
 
