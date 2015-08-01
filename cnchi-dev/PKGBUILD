@@ -17,8 +17,10 @@ sha256sums=('SKIP')
 pkgver() {
 	if [[ -d /pkg ]]; then
 		cd ${srcdir}/${_pkgname,,}
+	else
+		cd cnchi-dev
 	fi
-	python cnchi-dev/cnchi/info.py
+	python cnchi/info.py
 }
 
 build ()
