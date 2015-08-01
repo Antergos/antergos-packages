@@ -15,9 +15,7 @@ source=("git+http://github.com/lots0logs/cnchi-dev")
 sha256sums=('SKIP')
 
 pkgver() {
-	if ! [[ -d /pkg ]]; then
-		cd /opt/antergos-packages/cnchi-dev/cnchi-dev
-	else
+	if [[ -d /pkg ]]; then
 		cd ${srcdir}/${_pkgname,,}
 	fi
 	python cnchi/info.py
