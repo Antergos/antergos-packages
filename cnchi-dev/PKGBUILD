@@ -15,8 +15,8 @@ source=("git+http://github.com/lots0logs/cnchi-dev")
 sha256sums=('SKIP')
 
 pkgver() {
-	if [[ -d /pkg ]]; then
-		cd /pkg/cnchi-dev
+	if ! [[ -d /pkg ]]; then
+		cd /opt/antergos-packages/cnchi-dev/cnchi-dev
 	else
 		cd ${srcdir}/${_pkgname,,}
 	fi
