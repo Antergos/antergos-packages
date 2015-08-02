@@ -39,6 +39,6 @@ package() {
 	
 	unlink ${pkgdir}/usr/bin/${pkgname}
 	cd ${pkgdir}/usr/bin
-	ln -sr ../usr/lib/opera-developer/opera-developer
+	ln -sf /usr/lib/${pkgname}/${pkgname}
 }
 
