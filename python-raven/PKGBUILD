@@ -1,0 +1,22 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Benjamin A. Shelton <zancarius@gmail.com>
+
+pkgname=python-raven
+pkgver=5.4.0
+pkgrel=1
+pkgdesc="Python client for Sentry."
+arch=(any)
+url="https://github.com/getsentry/raven-python"
+license=(BSD)
+depends=('python-pyflakes')
+makedepends=('python-setuptools')
+source=("https://github.com/getsentry/raven-python/archive/${pkgver}.tar.gz")
+md5sums=(d73d7057b2798208c59fd4594ab1836c)
+
+package () {
+
+    cd "${srcdir}/raven-${pkgver}"
+    python setup.py install --root="${pkgdir}/" --optimize=1
+    install -Dm0664 "${srcdir}/${pkgver}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+
+}
