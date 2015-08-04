@@ -11,12 +11,12 @@ license=(BSD)
 depends=('python-pyflakes')
 makedepends=('python-setuptools')
 source=("https://github.com/getsentry/raven-python/archive/${pkgver}.tar.gz")
-md5sums=(d73d7057b2798208c59fd4594ab1836c)
+md5sums=(SKIP)
 
 package () {
 
-    cd "${srcdir}/raven-${pkgver}"
-    python setup.py install --root="${pkgdir}/" --optimize=1
-    install -Dm0664 "${srcdir}/${pkgver}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+    cd "${srcdir}/raven-python-${pkgver}"
+    python setup.py install --root="${pkgdir}" --optimize=1
+    install -Dm0664 "${srcdir}/raven-python-${pkgver}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 
 }
