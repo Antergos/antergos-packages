@@ -3,14 +3,14 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=go-fsnotify
-pkgver=0.0.git201400902
+pkgver=0.0.201400902
 pkgrel=3
 pkgdesc='File system notification for GO'
 arch=('any')
 url="https://github.com/howeyc/fsnotify"
 license=('GPL2')
 replaces=('golang-fsnotify')
-source=("http://deepin.mirror.gtcomm.net/pool/main/g/golang-fsnotify/golang-fsnotify_0.0~git201400902.orig.tar.xz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/golang-fsnotify/golang-fsnotify_0.0~git201400902.orig.tar.xz")
 sha256sums=('671ccaba18c5d9a2681e53ac86cc4fe83912b8db5f5c57146bb91b8ccf3c66af')
 
 _gobuild_dir="${pkgname}-build"

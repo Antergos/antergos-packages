@@ -11,7 +11,7 @@ arch=('any')
 license=('LGPL3')
 url="http://www.linuxdeepin.com/"
 groups=('deepin')
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-artwork/deepin-artwork_2014-4.tar.gz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/d/deepin-artwork/deepin-artwork_2014-4.tar.gz")
 sha256sums=('2741f79faac75540277972bacd26f8d39211fd3862180508657965db195cb6ec')
 
 package() {

@@ -3,14 +3,14 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=go-gettext-go
-pkgver=0.0.git20140808
-pkgrel=1
+pkgver=0.0.20140808
+pkgrel=2
 pkgdesc="This package provides GNU gettext support."
 arch=('any')
 url="https://code.google.com/p/gettext-go/"
 license=('GPL2')
 replaces=('golang-gettext-go')
-source=("http://deepin.mirror.gtcomm.net/pool/main/g/golang-gettext-go/golang-gettext-go_0.0~git20140808.orig.tar.xz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/golang-gettext-go/golang-gettext-go_0.0~git20140808.orig.tar.xz")
 sha256sums=('7ee643e8a548d1891afa944b130e38dea5426bbc7befa8872a1f384d2c979ded')
 
 _gobuild_dir="${pkgname}-build"

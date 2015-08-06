@@ -13,13 +13,13 @@ license=('GPL3')
 groups=('deepin')
 depends=('qt5-declarative' 'qt5-svg')
 conflicts=('notify-osd')
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-notifications/deepin-notifications_0.3+20150427175348~b2f1890574.tar.gz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/d/deepin-notifications/deepin-notifications_0.3+20150427175348~b2f1890574.tar.gz")
 sha256sums=('ddaedfa3a186c58957507f1d8de40d495804b1b6e3576f314b4835846569c289')
 
 build() {
   cd "${_srcdirname}"
 
-  qmake PREFIX=/usr
+  qmake-qt5 PREFIX=/usr
   make
 }
 
