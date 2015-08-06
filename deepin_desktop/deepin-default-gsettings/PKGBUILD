@@ -12,7 +12,7 @@ groups=('deepin')
 url="https://gitcafe.com/Deepin/default-gsettings"
 license=('GPL3')
 install="${pkgname}.install"
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-default-gsettings/deepin-default-gsettings_0.2+20141216171821~2cf686e3fa.tar.gz"
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/d/deepin-default-gsettings/deepin-default-gsettings_0.2+20141216171821~2cf686e3fa.tar.gz"
         'arch-fix.patch')
 sha256sums=('0cce133851f4b46512637f2528a57281b3e0d571cbf636b0f0fa117e58fc8d9c'
             '544d96c73c5d26a5a7d33cf27daec62e199f2c0e9f2094253baae48c3aa0784a')

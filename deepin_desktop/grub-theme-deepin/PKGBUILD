@@ -14,7 +14,7 @@ provides=('grub-themes-deepin')
 conflicts=('grub-themes-deepin')
 replaces=('grub-themes-deepin')
 groups=('deepin')
-source=("http://deepin.mirror.gtcomm.net/pool/universe/g/grub-themes-deepin/grub-themes-deepin_0.5-9.tar.gz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/universe/g/grub-themes-deepin/grub-themes-deepin_0.5-9.tar.gz")
 sha256sums=('9c951864d49f58a253bc310342ec8d23fd78aa1683188a79a91e3f979091f842')
 
 package() {

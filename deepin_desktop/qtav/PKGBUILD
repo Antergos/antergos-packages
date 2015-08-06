@@ -3,27 +3,51 @@
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=qtav
-pkgver=1.6.0
-pkgrel=3
+pkgver=1.7.0.20150711.68322f8
+pkgrel=1
 pkgdesc="qt multimedia framework"
 arch=('i686' 'x86_64')
 url="https://github.com/wang-bin/QtAV"
-license=('GPL')
-depends=('qt5-svg' 'ffmpeg')
-makedepends=('qt5-tools' 'qt5-declarative' 'openal')
-source=("${url}/archive/v${pkgver}.tar.gz")
-md5sums=('SKIP')
+license=('GPL3' 'LGPL2.1')
+depends=('desktop-file-utils'
+		 'ffmpeg'
+		 'hicolor-icon-theme'
+		 'libxv'
+		 'qt5-declarative'
+		 'qt5-svg')
+makedepends=('openal' 'portaudio' 'qt5-tools')
+optdepends=('openal'
+			'portaudio')
+install=qtav.install
+source=("${pkgname}-${pkgver}.tar.xz"
+		'libchardet-git.tar.xz'
+		'capi-git.tar.xz')
+sha256sums=('SKIP' 'SKIP' 'SKIP')
 
-build(){
-	cd "QtAV-${pkgver}"
+prepare() {
+	cd "${pkgname}-${pkgver}"
+
+	rm -rf contrib/{libchardet,capi}
+	cp -r "${srcdir}/libchardet-git" "contrib/libchardet"
+	cp -r "${srcdir}/capi-git" "contrib/capi"
+}
+
+build() {
+	cd "${pkgname}-${pkgver}"
 
 	mkdir build && cd build
-	qmake-qt5 ../QtAV.pro
+	qmake-qt5 "CONFIG+=no_rpath recheck" ../QtAV.pro
     make -j8 PREFIX=/usr
 }
 
+check() {
+	cd "${pkgname}-${pkgver}"/build
+
+    make check
+}
+
 package() {
-	cd "QtAV-${pkgver}"/build
+	cd "${pkgname}-${pkgver}"/build
 
 	make install DESTDIR="${pkgdir}" INSTALL_ROOT="${pkgdir}"
 

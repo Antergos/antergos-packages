@@ -17,7 +17,7 @@ makedepends=('cmake' 'coffee-script' 'python2' 'webkitgtk' 'go' 'sqlite'
 groups=('deepin')
 options=(staticlibs)
 conflicts=('deepin-session')
-source=("http://deepin.mirror.gtcomm.net/pool/main/s/startdde/startdde_0.1+20141230181929~b99e7b174d.tar.gz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/s/startdde/startdde_0.1+20141230181929~b99e7b174d.tar.gz")
 sha256sums=('c817aec6aeb2dfa1ca8e6feb0222a752dc8f6f16bc53a33b5a9c089f79256eb1')
 
 build() {

@@ -16,7 +16,7 @@ conflicts=('dbus-generator' 'go-dlib<=0.0.2' 'go-dlib-dbus-proxyer')
 replaces=('dbus-generator')
 groups=('deepin-dev')
 options=(staticlibs)
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/dbus-generator/dbus-generator_0.0.3+20141120163131~84ee26c38d.tar.gz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/d/dbus-generator/dbus-generator_0.0.3+20141120163131~84ee26c38d.tar.gz")
 sha256sums=('01784933c01b87f1e1ce26b2299eac6b2023abd4832e032684b07166998b4954')
 
 build(){

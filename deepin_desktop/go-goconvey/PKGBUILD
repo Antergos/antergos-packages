@@ -12,7 +12,7 @@ url="https://github.com/smartystreets/goconvey"
 license=('custom')
 makedepends=('go')
 #options=('!strip' 'staticlibs')
-source=("http://deepin.mirror.gtcomm.net/pool/main/g/golang-goconvey-dev/golang-goconvey-dev_1.5.0.orig.tar.gz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/golang-goconvey-dev/golang-goconvey-dev_1.5.0.orig.tar.gz")
 sha256sums=('e7d57f4cc8490940d2e8b284ec91c7c8a2ac2d63344a0c92ae90f670efb46d44')
 
 _gobuild_dir="${pkgname}-build"

@@ -4,13 +4,13 @@
 
 _pkgname=golang-xgbutil
 pkgname=go-xgbutil
-pkgver=1.git20140610
+pkgver=1.20140610
 pkgrel=3
 pkgdesc='xgbutil is a utility library designed to work with the X Go Binding.'
 arch=('any')
 url="https://github.com/BurntSushi/xgbutil"
 license=('GPL2')
-source=("http://deepin.mirror.gtcomm.net/pool/main/g/golang-xgbutil/golang-xgbutil_1~git20140610.orig.tar.xz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/golang-xgbutil/golang-xgbutil_1~git20140610.orig.tar.xz")
 sha256sums=('cdabe369dc467421394e7e795dbc0722d8d589068c84348f0da17cfcc576c74d')
 
 _gobuild_dir="${pkgname}-build"

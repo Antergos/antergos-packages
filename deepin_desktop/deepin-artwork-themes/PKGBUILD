@@ -12,7 +12,7 @@ license=('LGPL3')
 url="https://gitcafe.com/Deepin/deepin-artwork-themes"
 makedepends=('python2')
 groups=('deepin')
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-artwork-themes/deepin-artwork-themes_14.04.3+20141204110221~5bf78d7f42.tar.gz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/d/deepin-artwork-themes/deepin-artwork-themes_14.04.3+20141204110221~5bf78d7f42.tar.gz")
 sha256sums=('ea51f533ff14552c06218b7e32637a908b1051106458f9e2a8f40449da764cb0')
 
 prepare() {

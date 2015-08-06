@@ -15,7 +15,7 @@ depends=('dde-daemon' 'deepin-qml-widgets' 'dde-qml-dbus-factory'
 makedepends=('deepin-gettext-tools' 'qt5-tools')
 groups=('deepin')
 options=(staticlibs)
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/dde-control-center/dde-control-center_0.1+20150413164707~6ec15a41de.tar.gz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/d/dde-control-center/dde-control-center_0.1+20150413164707~6ec15a41de.tar.gz")
 sha256sums=('729a2c722bb788094e485c92120304078fa14005b36d60d5011b8b49c4cbfcf6')
 
 prepare() {

@@ -6,9 +6,9 @@
 # Contributor: Nathan Hulse <nat.hulse@gmail.com>
 
 pkgname=deepin-compiz
-pkgver=0.9.99.5.git20140707164843
+pkgver=0.9.99.5.20140707164843
 _srcdirname=compiz-0.9.99
-pkgrel=3
+pkgrel=6
 epoch=1
 pkgdesc='A forked compiz for Linux Deepin desktop environment'
 arch=('i686' 'x86_64')
@@ -31,7 +31,7 @@ replaces=('compiz-bzr' 'compiz-core' 'compiz-fusion-plugins-main'
           'compiz-decorator-kde' 'libcompizconfig' 'compizconfig-python'
           'compizconfig-backend-gconf' 'compiz-bcop' 'ccsm')
 install='compiz.install'
-source=("http://deepin.mirror.gtcomm.net/pool/main/c/compiz/compiz_0.9.99-5+git20140707164843~2e85d002e7.tar.gz"
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/c/compiz/compiz_0.9.99-5+git20140707164843~2e85d002e7.tar.gz"
         'fix-boost-interfaces.patch')
 sha256sums=('4077a2f9d86da2781a48e90651b7a52482c6c2d4ac8e60b37d91208f4b9a4250'
             '9b041e3ca5fe54984d064bab9c3c8fa623e8c0e752129c53c578922a48582845')
@@ -67,7 +67,7 @@ build() {
         -DCOMPIZ_DEFAULT_PLUGINS="ccp" \
         -DCOMPIZ_WERROR=FALSE
 
-  make
+  make -j8
 }
 
 package() {
