@@ -1,6 +1,6 @@
 # Maintainer: Christian Hesse <mail@eworm.de>
 
-pkgname=gtk-engine-unico-bzr
+pkgname=gtk-engine-unico
 pkgver=139
 pkgrel=1
 pkgdesc="Unico GTK3 theme engine"
