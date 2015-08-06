@@ -4,7 +4,7 @@
 # Maintainer: Alex Filgueira <faidoc@gmail.com>
 
 pkgname=antergos-keyring
-pkgver=20140915
+pkgver=20150806
 pkgrel=1
 pkgdesc='Antergos PGP keyring'
 arch=('any')
