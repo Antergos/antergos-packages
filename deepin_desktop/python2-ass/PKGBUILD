@@ -5,7 +5,7 @@
 pkgname=python2-ass
 _pkgname=python-ass
 pkgver=0.4.1
-pkgrel=2
+pkgrel=3
 pkgdesc="A library for parsing and manipulating Advanced SubStation Alpha subtitle files."
 arch=('any')
 url="http://github.com/rfw/python-ass"
