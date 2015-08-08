@@ -1,13 +1,20 @@
 #Maintainer: Antergos Developers <dev@antergos.com>
 # THIS IS A DUMMY PKGBUILD FOR TRACKING ISO META INFORMATION. IT WILL NOT BUILD A PACKAGE.
 
-pkgname=antergos-iso
+pkgname=antergos-minimal-x86_64
 pkgver="$(date +%Y.%m.%d)"
 pkgrel=1
-pkgdesc='Graphical Installer for Antergos Linux'
-arch=(any)
+pkgdesc='Dummy pkgbuild for tracking ISO builds on the build server.'
+arch=('x86_64')
 license=(GPL3)
 url="https://antergos.com/"
+groups=('antergos-iso')
+
+pkgver() {
+
+	echo "$(date +%Y.%m.%d)"
+
+}
 
 build () {
 
