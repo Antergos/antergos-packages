@@ -20,9 +20,9 @@ options=(docs)
 md5sums=('f71ac3ed80b9eb84c15ead6099898bb7'
          'f824c5bc2f716f8029677cae6956c1c7')
 
-build() {
-  echo -e "\033[1;34m :: \033[1;39m Building ... please wait \033[1;0m"
 
+package() {
+  
   rpmextract.sh ${pkgname}-${pkgver}-${_pkgver}.src.rpm 2>/dev/null
 
   for i in $(find -name '*.tar.bz2');do tar -jxf $i;done
