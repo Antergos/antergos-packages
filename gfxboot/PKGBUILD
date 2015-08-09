@@ -17,24 +17,25 @@ source=(http://download.opensuse.org/source/distribution/leap/42.1-Current/repo/
 	gfxboot.html)
 options=(docs)
 
-md5sums=('f71ac3ed80b9eb84c15ead6099898bb7'
+md5sums=('8b9d2e9fce5523ac608aa6de68ffb10c'
          'f824c5bc2f716f8029677cae6956c1c7')
 
 
 package() {
   
-  rpmextract.sh ${pkgname}-${pkgver}-${_pkgver}.src.rpm 2>/dev/null
+  
+  #rpmextract.sh ${pkgname}-${pkgver}-${_pkgver}.src.rpm 2>/dev/null
+  
+  cd $srcdir
 
-  for i in $(find -name '*.tar.bz2');do tar -jxf $i;done
-  mv -f themes ${pkgname}-${pkgver}/
+  for i in $(find . -name '*.tar.xz'); do tar -Jxf $i; done
+  mv themes ${pkgname}-${_Pkgver}
 
-  chown -R root:root ${pkgname}-${pkgver}
+  cd ${pkgname}-${_Pkgver}
 
-  cd ${pkgname}-${pkgver}
+  make
 
-  make -s 2>/dev/null || return 1
-
-  make -s DESTDIR=$pkgdir installsrc || return 1
+  make -s DESTDIR=$pkgdir installsrc
 
   install -d -m 755 ${pkgdir}/usr/{sbin,share/man/man8,share/doc/gfxboot} || return 1
   install -m 755 gfxboot gfxboot-compile gfxboot-font ${pkgdir}/usr/sbin || return 1
