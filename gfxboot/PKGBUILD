@@ -2,8 +2,9 @@
 # Contributor: Alessio Biancalana <dottorblaster@gmail.com>
 
 pkgname=gfxboot
-pkgver=4.5.1
-_pkgver=2.1.1
+_Pkgver=4.5.5
+_pkgver=2.5
+pkgver="${_Pkgver}.${_pkgver}"
 pkgrel=1
 arch=('i686' 'x86_64')
 license=(GPL)
@@ -12,7 +13,7 @@ pkgdesc="Graphical Boot Logo tool"
 url="http://www.opensuse.org"
 depends=('perl-html-parser' 'freetype2' 'cpio' 'nasm')
 makedepends=('rpmextract')
-source=(http://download.opensuse.org/source/distribution/12.3/repo/oss/suse/src/${pkgname}-${pkgver}-${_pkgver}.src.rpm \
+source=(http://download.opensuse.org/source/distribution/12.3/repo/oss/suse/src/${pkgname}-${_Pkgver}-${_pkgver}.src.rpm \
 	gfxboot.html)
 options=(docs)
 
