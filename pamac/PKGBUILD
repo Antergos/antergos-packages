@@ -3,7 +3,7 @@
 pkgname=pamac
 pkgver=2.3.3
 _pkgver=2.3.3
-pkgrel=2
+pkgrel=3
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 #_gitcommit="95fa57007618f73de9a93cd1362367488f369724"
 pkgdesc="A Gtk3 frontend for libalpm"
@@ -27,7 +27,8 @@ if [ "${_gitcommit}" != "" ]; then
 else
   source=("pamac-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
 fi
-source+=("pamac-grid-row-resize.patch::https://github.com/manjaro/pamac/commit/07dc17b9709b272d1bcd2170e28c59495b2fa333.patch")
+source+=("pamac-grid-row-resize.patch::https://github.com/manjaro/pamac/commit/07dc17b9709b272d1bcd2170e28c59495b2fa333.patch"
+         "pamac-aur-url.patch::https://github.com/manjaro/pamac/commit/4c0795fc1b436bd2c353ff4ab3229f1b02e8c988.patch")
 sha256sums=('5683a5e14ceedc83a4aa0c1415c75aeb65ba334923b34528fa5da2523ebb12e4'
             'afce6fdd69f57999fbf16e0777f0f9ca18fd2883953ff2d8a9730c49448975db')
 
@@ -43,6 +44,7 @@ prepare() {
   sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala
   cd "$srcdir/pamac-$pkgver/"
   patch -Np1 -i $srcdir/pamac-grid-row-resize.patch
+  patch -Np1 -i $srcdir/pamac-aur-url.patch
 }
 
 build() {
