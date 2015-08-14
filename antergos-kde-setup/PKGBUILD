@@ -1,0 +1,27 @@
+# Maintainer: Gustau Castells <karasu@antergos.com>
+
+pkgname=antergos-kde-setup
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="Setup configuration for Antergos KDE"
+url="http://www.antergos.com"
+arch=('any')
+license=('GPL2')
+depends=('bash')
+optdepends=('numix-frost-themes' 'numix-icon-theme')
+makedepends=()
+conflicts=()
+replaces=()
+backup=()
+source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
+sha256sums=('d5efb2a90c943bc2287659d160bebdcf45c1c0439eb9bdf17d9192532fca87ca')
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  install -d "${pkgdir}/usr/share/${pkgname}"
+  cp -R * "${pkgdir}/usr/share/${pkgname}"
+
+  # create a symlink to install.sh
+  mkdir -p "${pkgdir}/usr/bin"
+  ln -s "/usr/share/${pkgname}/install.sh" "${pkgdir}/usr/bin/antergos-kde-setup"
+}
