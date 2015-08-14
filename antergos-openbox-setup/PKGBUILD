@@ -2,12 +2,12 @@
 
 pkgname=antergos-openbox-setup
 pkgver=0.2.4
-pkgrel=2
+pkgrel=3
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
 arch=('any')
 license=('GPL2')
-depends=('bash' 'perl')
+depends=('bash')
 optdepends=('openbox' 'xorg-xinit' 'pcmanfm'
 'nitrogen' 'plank' 'tint2' 'volumeicon' 'conky' 'compton'
 'numix-frost-themes' 'numix-icon-theme' 'plank-theme-numix')

@@ -2,12 +2,12 @@
 
 pkgname=antergos-enlightenment-setup
 pkgver=0.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Setup configuration for Antergos Enlightenment"
 url="http://www.antergos.com"
 arch=('any')
 license=('GPL2')
-depends=('bash' 'perl')
+depends=('bash')
 optdepends=('numix-frost-themes' 'numix-icon-theme')
 makedepends=()
 conflicts=()
