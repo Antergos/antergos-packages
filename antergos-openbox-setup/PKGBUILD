@@ -2,7 +2,7 @@
 
 pkgname=antergos-openbox-setup
 pkgver=0.2.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
 arch=('any')
@@ -81,4 +81,8 @@ package() {
 
   # install.sh file
   install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
+
+  # create a symlink to install.sh
+  mkdir -p "${pkgdir}/usr/bin"
+  ln -s "/usr/share/${pkgname}/install.sh" "${pkgdir}/usr/bin/antergos-openbox-setup"
 }
