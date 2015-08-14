@@ -1,0 +1,23 @@
+# Maintainer: Gustau Castells <karasu@antergos.com>
+
+pkgname=antergos-enlightenment-setup
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="Setup configuration for Antergos Enlightenment"
+url="http://www.antergos.com"
+arch=('any')
+license=('GPL2')
+depends=('bash' 'perl')
+optdepends=('numix-frost-themes' 'numix-icon-theme')
+makedepends=()
+conflicts=()
+replaces=()
+backup=()
+source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
+sha256sums=('9a415b6c0921c7298b374fbab4ab61419a550f2d590da3c8e77ad71e11870143')
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  install -d ${pkgdir}/usr/share/${pkgname}
+  cp -R * ${pkgdir}/usr/share/${pkgname}
+}
