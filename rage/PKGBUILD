@@ -2,7 +2,7 @@
 
 pkgname=rage
 pkgver=0.1.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Video Player based on EFL"
 arch=('i686' 'x86_64')
 url="https://www.enlightenment.org/p.php?p=about/rage"
