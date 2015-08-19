@@ -25,11 +25,19 @@ pkgver() {
 
 build ()
 {
-  cd $srcdir/${pkgname}
+if [[ -d /pkg ]]; then
+	cd ${srcdir}/${_pkgname}
+else
+	cd cnchi
+fi
 }
 
 package() {
-	cd ${srcdir}/${pkgname}
+	if [[ -d /pkg ]]; then
+		cd ${srcdir}/${_pkgname}
+	else
+		cd cnchi
+	fi
 
 	install -d ${pkgdir}/usr/share/locale/
 	install -d ${pkgdir}/usr/share/cnchi/cnchi
