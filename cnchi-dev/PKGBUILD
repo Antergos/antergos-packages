@@ -11,14 +11,14 @@ url="https://github.com/Antergos/Cnchi"
 depends=(python pyalpm python-gobject python-dbus python-requests python-cairo
          python-parted webkitgtk upower python-mako iso-codes encfs pam_encfs gptfdisk)
 makedepends=(python git)
-source=("cnchi-dev.tar")
+source=("cnchi.tar")
 sha256sums=('SKIP')
 
 pkgver() {
 	if [[ -d /pkg ]]; then
-		cd ${srcdir}/${pkgname}
+		cd ${srcdir}/${_pkgname}
 	else
-		cd cnchi-dev
+		cd cnchi
 	fi
 	python cnchi/info.py
 }
