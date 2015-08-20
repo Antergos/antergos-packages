@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 pkgname=pamac-dev
-pkgver=2.3.3
-_pkgver=2.3.3
+pkgver=2.4.0rc1
+_pkgver=2.4.0rc1
 pkgrel=1
 
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
