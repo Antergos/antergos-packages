@@ -1,0 +1,26 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+
+pkgname=xfce4-panel-switch
+_pkgname=xfpanel-switch
+pkgver=1.0
+_pkgver=1.0.0
+pkgrel=1
+pkgdesc="Simple application to manage Xfce panel layouts"
+arch=('any')
+url="https://launchpad.net/xfpanel-switch"
+license=('GPL3')
+depends=('python' 'python-gobject')
+install=${pkgname}.install
+source=("https://launchpad.net/{$_pkgname}/${pkgver}/${_pkgver}/+download/${_pkgname}-${pkgver}.tar.bz2")
+md5sums=('707a1254b2f8c3ecf3947210f3d85573')
+
+build() {
+  cd ${srcdir}/${_pkgname}-${pkgver}
+  ./configure --prefix=/usr --python=python
+  make
+}
+
+package() {
+  cd ${srcdir}/${_pkgname}-${pkgver}
+  make install DESTDIR=${pkgdir}
+}
