@@ -14,7 +14,7 @@ makedepends=('inkscape')
 groups=('deepin')
 options=(!strip)
 install="${pkgname}.install"
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-icon-theme/deepin-icon-theme_13.06.13+20150114160019~dff58a2dad.tar.gz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/d/deepin-icon-theme/deepin-icon-theme_13.06.13+20150114160019~dff58a2dad.tar.gz")
 sha256sums=('f897855958c5cd8bdc5660965d4771e2927d0b1269a476256928967e6de6e042')
 
 prepare() {

@@ -4,14 +4,14 @@
 
 _pkgname=golang-jamslam-freetype-go
 pkgname=go-jamslam-freetype-go
-pkgver=0.0.git20140903
-pkgrel=1
+pkgver=0.0.20140903
+pkgrel=2
 pkgdesc='File system notification for GO'
 arch=('any')
 url="https://github.com/BurntSushi/xgb"
 license=('GPL2')
 replaces=('golang-jamslam-freetype-go')
-source=("http://deepin.mirror.gtcomm.net/pool/main/g/golang-jamslam-freetype-go/golang-jamslam-freetype-go_0.0~git20140903.orig.tar.xz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/golang-jamslam-freetype-go/golang-jamslam-freetype-go_0.0~git20140903.orig.tar.xz")
 sha256sums=('a3ad9e97f29038c6c4fb27014a3355b246395949c8a46cedac40b9a79b29f121')
 
 _gobuild_dir="${pkgname}-build"

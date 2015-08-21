@@ -11,8 +11,8 @@ arch=('any')
 url="http://labix.org/gocheck"
 license=('BSD')
 replaces=('golang-gocheck')
-source=("http://deepin.mirror.gtcomm.net/pool/main/g/golang-gocheck/golang-gocheck_0.0~bzr20131118+85.orig.tar.gz"
-        "http://deepin.mirror.gtcomm.net/pool/main/g/golang-gocheck/golang-gocheck_0.0~bzr20131118+85-6.debian.tar.gz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/golang-gocheck/golang-gocheck_0.0~bzr20131118+85.orig.tar.gz"
+        "http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/golang-gocheck/golang-gocheck_0.0~bzr20131118+85-6.debian.tar.gz")
 sha256sums=('71ba0752af3cd04a42a95ef68c098d251430281c8461272df259d52d6092f7da'
             '3a50e3d0c4ccb9397f13c30a6f057187c419e3b362c6b90767ed0bec049108fc')
 

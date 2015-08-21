@@ -11,7 +11,7 @@ arch=('any')
 license=('LGPL3')
 url="http://www.linuxdeepin.com/"
 groups=('deepin')
-source=("http://deepin.mirror.gtcomm.net/pool/main/d/deepin-cursor-theme/deepin-cursor-theme_2014~4-2.tar.gz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/d/deepin-cursor-theme/deepin-cursor-theme_2014~4-2.tar.gz")
 sha256sums=('8e1f395f784771d09858d016eb539e7027d1ccb5132841a7cd54f038943f67c0')
 
 package() {
