@@ -11,7 +11,7 @@ arch=('any')
 url="https://gitcafe.com/Deepin/go-lib"
 license=('GPL3')
 groups=('deepin-dev')
-source=("http://deepin.mirror.gtcomm.net/pool/main/g/go-dlib/go-dlib_0.0.4+20150227094412~8e9523b66a.tar.gz")
+source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/go-dlib/go-dlib_0.0.4+20150227094412~8e9523b66a.tar.gz")
 sha256sums=('622a76b47f7e2b242870e578accfa34b568903dc3cbfbc94e6196b61c28f3b19')
 
 _gobuild_dir="${pkgname}-build"
