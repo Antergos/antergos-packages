@@ -1,18 +1,20 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 pkgname=pamac-dev
-pkgver=2.4.0rc1
-_pkgver=2.4.0rc1
+pkgver=2.4.0
+_pkgver=2.4.0
 pkgrel=1
 
-# This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit="master"
 pkgdesc="A Gtk3 frontend for libalpm"
 arch=('i686' 'x86_64')
 url="https://github.com/manjaro/pamac"
 license=('GPL3')
-depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'yaourt' 'vte3>=0.38' 'gtk3>=3.16' 'libnotify' 'desktop-file-utils')
-optdepends=('polkit-gnome: needed for authentification in Cinnamon, Gnome' 'lxsession: needed for authentification in Xfce, LXDE etc.')
+depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'yaourt' 'vte3>=0.38'
+         'gtk3>=3.16' 'libnotify' 'desktop-file-utils' 'pacman>=4.3' 'gnutls>=3.4')
+optdepends=('polkit-gnome: needed for authentification in Cinnamon, Gnome'
+            'lxsession: needed for authentification in Xfce, LXDE etc.'
+            'yaourt: needed for AUR support')
 makedepends=('gettext' 'itstool' 'vala>=0.28' 'git')
 backup=('etc/pamac.conf')
 provides=('pamac')
@@ -26,7 +28,7 @@ else
   source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
-sha256sums=('SKIP')
+md5sums=('SKIP')
 
 pkgver() {
   if [[ "${srcdir}" != '' ]]; then
