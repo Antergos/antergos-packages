@@ -25,7 +25,7 @@ optdepends=('system-config-printer: Printer settings'
             'openssh: remote login')
 groups=(gnome)
 url="http://www.gnome.org"
-install=gnome-control-center.install
+install=gnome-control-center-antergos.install
 options=('!emptydirs')
 source=(http://antergos.info/$_pkgname.zip)
 sha256sums=('ff9fe9c703be1d0e3afdef7b9ea331e436846ccd4d35090d501ba9510ee5a0c5')
