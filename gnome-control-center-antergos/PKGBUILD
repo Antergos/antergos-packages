@@ -34,7 +34,7 @@ build() {
   ls
   cd $srcdir
 
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+  ./autogen.sh --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
       --libexecdir=/usr/lib/$pkgname --disable-static
 
   #https://bugzilla.gnome.org/show_bug.cgi?id=656229
