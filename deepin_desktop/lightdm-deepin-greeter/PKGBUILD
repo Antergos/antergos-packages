@@ -10,7 +10,7 @@ pkgrel=2
 arch=('i686' 'x86_64')
 url="https://gitcafe.com/Deepin/dde-workspace"
 license=('GPL3')
-groups=('deepin')
+groups=("deepin" "deepin-base")
 makedepends=('cmake' 'go' 'coffee-script' 'go-gettext-go' 'webkitgtk'
              'libdeepin-webkit' 'lightdm' 'cairo' 'dbus-glib' 'python2')
 source=("http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-desktop-environment/deepin-desktop-environment_2.1+20150521160615.tar.gz"

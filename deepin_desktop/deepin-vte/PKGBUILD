@@ -12,7 +12,7 @@ pkgdesc="Virtual Terminal Emulator widget for use with GTK2 - with several patch
 arch=('i686' 'x86_64')
 license=('GPL3')
 url="https://developer.gnome.org/vte/"
-groups=('deepin-extra')
+groups=("deepin" "deepin-extra")
 depends=('gtk2')
 makedepends=('pygtk' 'intltool' 'gobject-introspection' 'pygobject2-devel')
 provides=('vte=0.28.2' 'deepin-vte-plus')

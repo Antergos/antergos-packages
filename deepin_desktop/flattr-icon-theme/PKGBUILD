@@ -6,6 +6,7 @@ pkgver=1.1
 pkgrel=2
 pkgdesc="Flattr is an icon theme for Linux desktops, the set is inspired by the latest flat design trend."
 url="http://nitrux.in/store/flattr-icon-theme/"
+groups=("deepin" "deepin-base")
 arch=('any')
 license=('custom:CC BY-SA 4.0')
 source=("https://github.com/NitruxSA/flattr-icons/archive/v${pkgver}.tar.gz")

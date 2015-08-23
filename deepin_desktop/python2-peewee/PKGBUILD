@@ -8,6 +8,7 @@ pkgver=2.2.2
 pkgrel=2
 pkgdesc="a little orm"
 url="https://pypi.python.org/pypi/peewee/"
+groups=("deepin" "deepin-base")
 arch=('any')
 license=('MIT')
 depends=('python2' 'python2-setuptools')

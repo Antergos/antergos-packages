@@ -8,6 +8,7 @@ pkgrel=3
 pkgdesc='File system notification for GO'
 arch=('any')
 url="https://github.com/howeyc/fsnotify"
+groups=("deepin" "deepin-base")
 license=('GPL2')
 replaces=('golang-fsnotify')
 source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/golang-fsnotify/golang-fsnotify_0.0~git201400902.orig.tar.xz")

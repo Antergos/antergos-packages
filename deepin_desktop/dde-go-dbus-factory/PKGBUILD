@@ -13,7 +13,7 @@ license=('GPL3')
 makedepends=('go' 'go-dlib' 'qt5-webkit' 'qt5-quickcontrols' 'python2'
              'bluez' 'bluez-libs' 'udisks2' 'upower' 'accountsservice'
              'libdbus' 'deepin-dbus-generator')
-groups=('deepin')
+groups=("deepin" "deepin-base")
 options=('staticlibs')
 source=("http://deepin.mirror.gtcomm.net/pool/main/d/dbus-factory/dbus-factory_0.0.2+20141226160557~7e89f03592.tar.gz"
         "fix-arch.patch")

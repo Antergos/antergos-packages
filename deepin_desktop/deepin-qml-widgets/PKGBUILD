@@ -10,7 +10,7 @@ pkgdesc='Deepin QML widgets'
 arch=('i686' 'x86_64')
 url="https://gitcafe.com/Deepin/deepin-qml-widgets"
 license=('GPL3')
-groups=('deepin')
+groups=("deepin" "deepin-base")
 depends=('qt5-multimedia' 'qt5-webkit' 'qt5-imageformats'
          'qt5-graphicaleffects' 'qt5-x11extras')
 conflicts=('dde-qml-gettext-plugin')

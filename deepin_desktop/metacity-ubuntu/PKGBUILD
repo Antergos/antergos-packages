@@ -13,7 +13,7 @@ url="http://www.gnome.org"
 license=('GPL')
 depends=('dconf' 'gtk2' 'gsettings-desktop-schemas' 'libcanberra' 'libgtop' 'libsm' 'startup-notification' 'zenity')
 makedepends=('gettext' 'intltool' 'yelp-tools')
-groups=('gnome' 'unity')
+groups=("deepin" "deepin-base")
 provides=("metacity=${pkgver}")
 conflicts=('metacity')
 options=('!emptydirs')

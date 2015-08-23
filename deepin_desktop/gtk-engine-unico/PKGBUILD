@@ -6,6 +6,7 @@ pkgrel=1
 pkgdesc="Unico GTK3 theme engine"
 arch=('i686' 'x86_64')
 url="http://launchpad.net/unico"
+groups=("deepin" "deepin-base")
 license=('GPL')
 depends=('gtk3')
 makedepends=('bzr' 'gnome-common')

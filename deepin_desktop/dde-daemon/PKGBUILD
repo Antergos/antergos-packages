@@ -17,7 +17,7 @@ depends=('dde-api' 'grub-theme-deepin' 'cairo' 'libcanberra' 'dbus'
          'udisks2' 'lsb-release' 'iso-codes' 'mobile-broadband-provider-info')
 makedepends=('go' 'go-dlib' 'dde-go-dbus-factory' 'go-xgb' 'go-gocheck'
              'go-xgbutil' 'go-fsnotify' 'go-sqlite3' 'python2')
-groups=('deepin')
+groups=("deepin" "deepin-base")
 install="${pkgname}.install"
 conflicts=('dde-daemon-gsd-input')
 options=(staticlibs)
@@ -31,9 +31,9 @@ prepare() {
 
   # TODO: a temporary solution by disable datatime module of
   # dde-session-daemon to avoid build issue for go1.4/i686
-  #if test "$CARCH" == i686; then
-  #    patch -p1 -i ../fix-i686-compile.patch
-  #fi
+  if [[ i686 = "$CARCH" ]]; then
+      patch -p1 -i ../fix-i686-compile.patch
+  fi
 }
 
 build() {

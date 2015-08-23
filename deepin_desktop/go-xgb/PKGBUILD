@@ -9,6 +9,7 @@ pkgrel=2
 pkgdesc='XGB is the X protocol Go language Binding.'
 arch=('any')
 url="https://github.com/BurntSushi/xgb"
+groups=("deepin" "deepin-base")
 license=('GPL2')
 source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/golang-xgb/golang-xgb_0.0~git20140510.orig.tar.xz")
 sha256sums=('36a267803598531443cdbc65a321f215924c98687b42b3bc28ef4e4bda0ce2e9')

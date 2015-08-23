@@ -8,6 +8,7 @@ pkgrel=1
 pkgdesc="qt multimedia framework"
 arch=('i686' 'x86_64')
 url="https://github.com/wang-bin/QtAV"
+groups=("deepin" "deepin-base")
 license=('GPL3' 'LGPL2.1')
 depends=('desktop-file-utils'
 		 'ffmpeg'

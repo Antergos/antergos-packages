@@ -9,6 +9,7 @@ pkgrel=2
 pkgdesc='File system notification for GO'
 arch=('any')
 url="https://github.com/BurntSushi/xgb"
+groups=("deepin" "deepin-base")
 license=('GPL2')
 replaces=('golang-jamslam-freetype-go')
 source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/golang-jamslam-freetype-go/golang-jamslam-freetype-go_0.0~git20140903.orig.tar.xz")
