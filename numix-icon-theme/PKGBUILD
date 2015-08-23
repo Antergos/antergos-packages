@@ -13,18 +13,17 @@ provides=("${pkgname}")
 conflicts=("${pkgname}")
 options=('!strip')
 install="${pkgname}.install"
-source=("numix-icon-theme.tar")
+source=("git+http://github.com/numixproject/numix-icon-theme.git")
 sha256sums=('SKIP')
 
 pkgver() {
-  cd ${pkgname}
+  cd ${srcdir}/${pkgname}
 
   printf "0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 package() {
-  cd ${pkgname}
+  cd ${srcdir}/${pkgname}
   install -dm 755 "$pkgdir"/usr/share/icons
   cp -dr --no-preserve='ownership' Numix "$pkgdir"/usr/share/icons/
-  #rm -R "$pkgdir"/usr/share/icons/Numix/.git
 }
