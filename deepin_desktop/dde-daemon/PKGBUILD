@@ -31,7 +31,7 @@ prepare() {
 
   # TODO: a temporary solution by disable datatime module of
   # dde-session-daemon to avoid build issue for go1.4/i686
-  if [[ i686 = "$CARCH" ]]; then
+  if [[ i686 = "$CARCH" ]] || [[ i686 = "$IS_32BIT" ]]; then
       patch -p1 -i ../fix-i686-compile.patch
   fi
 }
