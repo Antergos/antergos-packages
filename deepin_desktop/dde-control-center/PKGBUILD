@@ -13,7 +13,7 @@ license=('GPL3')
 depends=('dde-daemon' 'deepin-qml-widgets' 'dde-qml-dbus-factory'
          'qt5-svg' 'qt5-declarative' 'qt5-graphicaleffects' 'qt5-quickcontrols')
 makedepends=('deepin-gettext-tools' 'qt5-tools')
-groups=('deepin')
+groups=("deepin" "deepin-base")
 options=(staticlibs)
 source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/d/dde-control-center/dde-control-center_0.1+20150413164707~6ec15a41de.tar.gz")
 sha256sums=('729a2c722bb788094e485c92120304078fa14005b36d60d5011b8b49c4cbfcf6')

@@ -9,6 +9,7 @@ pkgrel=10
 pkgdesc='Richer testing framework for Go libraries and applications to use'
 arch=('any')
 url="http://labix.org/gocheck"
+groups=("deepin" "deepin-base")
 license=('BSD')
 replaces=('golang-gocheck')
 source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/golang-gocheck/golang-gocheck_0.0~bzr20131118+85.orig.tar.gz"

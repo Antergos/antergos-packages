@@ -9,6 +9,7 @@ pkgrel=2
 pkgdesc='File system notification for GO'
 arch=('any')
 url="https://github.com/mattn/go-sqlite3"
+groups=("deepin" "deepin-base")
 license=('GPL2')
 replaces=('golang-sqlite3')
 source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/g/golang-go-sqlite3/golang-go-sqlite3_0.0~git20140913.orig.tar.gz")

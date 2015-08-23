@@ -10,6 +10,7 @@ pkgrel=1
 pkgdesc="A cross-platform application and UI framework (QtSystems)"
 arch=("i686" "x86_64")
 url="https://qt-project.org/"
+groups=("deepin" "deepin-base")
 license=("LGPL")
 depends=("qt5-declarative" "gconf")
 makedepends=("git")

@@ -10,7 +10,7 @@ pkgdesc='A fork of webkit-gtk for Linux Deepin desktop eviroment'
 arch=('i686' 'x86_64')
 url="http://www.linuxdeepin.com/"
 license=('LGPL' 'GPL' 'BSD' 'custom')
-groups=('deepin')
+groups=("deepin" "deepin-base")
 depends=('geoclue' 'libxt' 'libxslt' 'sqlite' 'libsoup' 'enchant'
          'libgl' 'gtk3' 'gstreamer0.10-base-plugins' 'libsecret'
          'libwebp' 'harfbuzz-icu')

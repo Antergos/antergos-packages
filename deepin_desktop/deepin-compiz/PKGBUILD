@@ -14,7 +14,7 @@ pkgdesc='A forked compiz for Linux Deepin desktop environment'
 arch=('i686' 'x86_64')
 license=('GPL' 'LGPL' 'MIT')
 url="https://gitcafe.com/Deepin/deepin-compiz"
-groups=('deepin')
+groups=("deepin" "deepin-base")
 depends=('gnome-settings-daemon' 'xorg-server' 'libxcomposite' 'startup-notification'
          'librsvg' 'dbus' 'mesa' 'libxslt' 'fuse' 'glibmm' 'libxrender' 'libwnck'
          'pygtk' 'desktop-file-utils' 'pyrex' 'protobuf' 'dconf' 'gtk2'
@@ -26,10 +26,6 @@ conflicts=('compiz-bzr' 'compiz-core' 'compiz-fusion-plugins-main'
            'compiz-fusion-plugins-extra' 'compiz-decorator-gtk'
            'compiz-decorator-kde' 'libcompizconfig' 'compizconfig-python'
            'compizconfig-backend-gconf' 'compiz-bcop' 'ccsm')
-replaces=('compiz-bzr' 'compiz-core' 'compiz-fusion-plugins-main'
-          'compiz-fusion-plugins-extra' 'compiz-decorator-gtk'
-          'compiz-decorator-kde' 'libcompizconfig' 'compizconfig-python'
-          'compizconfig-backend-gconf' 'compiz-bcop' 'ccsm')
 install='compiz.install'
 source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/c/compiz/compiz_0.9.99-5+git20140707164843~2e85d002e7.tar.gz"
         'fix-boost-interfaces.patch')

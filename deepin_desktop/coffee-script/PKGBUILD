@@ -21,6 +21,7 @@ depends=(nodejs 'nodejs-mkdirp' underscorejs)
 optdepends=('nodejs-profile: to load coffee-script in node')
 source=(https://github.com/jashkenas/coffeescript/archive/$pkgver.tar.gz)
 sha256sums=('a5afbf376d38e9f1daf3b3f9e914b5dcf6e89e769f0dc81c63e567b931abba84')
+groups=("deepin" "deepin-base")
 
 check() {
   export NODE_PATH=/usr/share/underscorejs:$NODE_PATH

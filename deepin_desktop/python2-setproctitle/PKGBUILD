@@ -8,6 +8,7 @@ pkgrel=1
 pkgdesc="allows a python process to change its process title"
 arch=('i686' 'x86_64')
 url="http://code.google.com/p/py-setproctitle/"
+groups=("deepin" "deepin-base")
 license=('BSD')
 depends=('python2')
 source=(http://pypi.python.org/packages/source/s/setproctitle/setproctitle-${pkgver}.tar.gz)

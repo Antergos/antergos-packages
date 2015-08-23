@@ -13,7 +13,7 @@ license=('GPL3')
 depends=('glib2' 'gdk-pixbuf2' 'gtk3' 'libcanberra' 'libxi' 'rfkill')
 makedepends=('go' 'go-dlib' 'go-xgb' 'go-xgbutil'
              'go-fsnotify' 'dde-go-dbus-factory')
-groups=('deepin')
+groups=("deepin" "deepin-base")
 options=(staticlibs)
 source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/d/dde-api/dde-api_0.0.2+20150107093816~d93500c16a.tar.gz")
 sha256sums=('7a45f0c64513c9be7e7795fcb58c1c3eb694e6a1a6a36fb6037281e1dc72e813')

@@ -14,7 +14,7 @@ depends=('dde-daemon' 'dde-workspace' 'deepin-compiz' 'libdeepin-webkit' 'cairo'
 makedepends=('cmake' 'coffee-script' 'python2' 'webkitgtk' 'go' 'sqlite'
              'go-dlib' 'dde-go-dbus-factory' 'go-fsnotify' 'go-xgbutil'
              'gstreamer0.10-base-plugins')
-groups=('deepin')
+groups=("deepin" "deepin-base")
 options=(staticlibs)
 conflicts=('deepin-session')
 source=("http://ftp5.gwdg.de/pub/linux/linuxdeepin/packages/pool/main/s/startdde/startdde_0.1+20141230181929~b99e7b174d.tar.gz")
