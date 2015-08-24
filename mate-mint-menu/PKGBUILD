@@ -11,19 +11,18 @@
 _pkgname=mintmenu
 pkgname=mate-mint-menu
 pkgver=5.6.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Linux Mint Menu for MATE"
 arch=('any')
-url="http://packages.linuxmint.com/pool/main/m/mintmenu"
+url="http://github.com/linuxmint/mintmenu"
 license=('GPL2')
 depends=('python2-gobject2' 'python2-xdg' 'xdg-utils' 'mozo' 'mate-panel>=1.8.0'
          'python2-keybinder2' 'python2-xlib' 'pygtk' 'gksu')
-optdepends=('mint-translations: translations files'
-            'mate-screensaver: lock screen button'
+optdepends=('mate-screensaver: lock screen button'
             'pamac: package manager button')
-source=("${url}/mintmenu_${pkgver}.tar.gz"
-        'https://github.com/linuxmint/mint-translations/archive/master.tar.gz' 
-        'execute_fix.diff'
+source=("http://packages.linuxmint.com/pool/main/m/mintmenu/mintmenu_${pkgver}.tar.gz"
+        'http://github.com/linuxmint/mint-translations/archive/master.tar.gz' 
+        'antergos-compat.patch'
         'removescript')
 install=${pkgname}.install
 sha256sums=('1bd6b5cb6ccab3cc0b61649e693e8526c3b328165720855ee6d514038ba9431b'
@@ -43,7 +42,7 @@ package() {
     	fi
 	done
   cd "$srcdir/${_pkgname}"
-  patch -Np1 -i "$srcdir/execute_fix.diff"
+  patch -Np1 -i "$srcdir/antergos-compat.patch"
   rm -f usr/lib/linuxmint/mintMenu/*.pyc usr/lib/linuxmint/mintMenu/plugins/*pyc
 
   for i in $(find . -name '*.py') ; do
@@ -51,8 +50,8 @@ package() {
   done
   
   sed -i 's:/usr/bin/python:/usr/bin/python2:' usr/bin/mintmenu
-# Disable the package-manager entry under Places - broken do to synaptic not being present for Arch (Can be customized after install)
-  sed -i "357s/true/false/" usr/share/glib-2.0/schemas/com.linuxmint.mintmenu.gschema.xml
+  # Disable the software-manager entry under Places
+  sed -i "351s/true/false/" usr/share/glib-2.0/schemas/com.linuxmint.mintmenu.gschema.xml
   
 
   cd "$srcdir/${_pkgname}"
