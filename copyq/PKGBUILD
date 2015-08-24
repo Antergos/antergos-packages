@@ -16,8 +16,8 @@ makedepends=('cmake')
 license=('GPL3')
 arch=('i686' 'x86_64')
 #source=("https://github.com/hluk/${_realname}/archive/v${pkgver}.tar.gz")
-source=("${_realname}-${pkgver}.tar.gz::https://codeload.github.com/hluk/CopyQ/tar.gz/23d20db45132a688559cf566702861657d5cf2bd")
-md5sums=('4215c5e3fc0c5bb050b79f07cfb88a20')
+source=("git+http://github.com/hluk/CopyQ.git#commit=23d20db45132a688559cf566702861657d5cf2bd")
+md5sums=('SKIP')
 install=copyq.install
 _allowed_in=('main' 'staging')
 build() {
