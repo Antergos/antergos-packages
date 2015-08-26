@@ -4,7 +4,7 @@
 pkgname=pam_encfs
 pkgver=0.1.4.4
 pkgrel=2
-pkgdesc="pam_encfs is a module to auto mount encfs dir on login"
+pkgdesc="A module to auto-mount encfs directories on login"
 url="http://code.google.com/p/pam-encfs/"
 arch=(any)
 depends=('encfs')
