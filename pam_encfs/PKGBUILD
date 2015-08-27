@@ -19,6 +19,7 @@ build() {
 }
 
 package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR=${pkgdir}/usr install
 	mkdir -p ${pkgdir}/etc/security
 	cp pam_encfs.conf ${pkgdir}/etc/security
