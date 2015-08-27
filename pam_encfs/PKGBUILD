@@ -4,7 +4,7 @@
 pkgname=pam_encfs
 pkgver=0.1.4.4
 pkgrel=2
-pkgdesc="A module to auto-mount encfs directories on login"
+pkgdesc="pam_encfs is a module to auto mount encfs dir on login"
 url="http://code.google.com/p/pam-encfs/"
 arch=(any)
 depends=('encfs')
@@ -14,9 +14,12 @@ source=(http://pam-encfs.googlecode.com/files/$pkgname-$pkgver.tar.gz)
 md5sums=('20d10fa842e968a224af542db7e10d21')
 
 build() {
-  cd $srcdir/$pkgname-$pkgver
-  make || return 1
-  make DESTDIR=${pkgdir}/usr install || return 1
-  mkdir -p $pkgdir/etc/security
-  cp pam_encfs.conf $pkgdir/etc/security
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make
+}
+
+package() {
+	make DESTDIR=${pkgdir}/usr install
+	mkdir -p ${pkgdir}/etc/security
+	cp pam_encfs.conf ${pkgdir}/etc/security
 }
