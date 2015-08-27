@@ -56,10 +56,6 @@ package() {
   install -Dm755 openbox/pipemenus/obpipemenu-places ${pkgdir}/usr/share/${pkgname}/openbox/pipemenus/obpipemenu-places
   install -Dm755 openbox/pipemenus/obrecent.sh ${pkgdir}/usr/share/${pkgname}/openbox/pipemenus/obrecent.sh
 
-  # Pcmanfm
-  install -Dm644 pcmanfm.conf ${pkgdir}/usr/share/${pkgname}/pcmanfm.conf
-  install -Dm644 libfm.conf ${pkgdir}/usr/share/${pkgname}/libfm.conf
-
   # Plank
   install -Dm644 plank/dock1/settings ${pkgdir}/usr/share/${pkgname}/plank/dock1/settings
   install -Dm644 plank/dock1/launchers/chromium.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/chromium.dockitem
