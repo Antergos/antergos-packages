@@ -2,7 +2,7 @@
 
 pkgname=econnman
 pkgver=1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Enlightenment ConnMan user interface"
 arch=('any')
 url="https://phab.enlightenment.org/w/projects/econnman/"
