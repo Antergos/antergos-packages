@@ -16,8 +16,8 @@ arch=('i686' 'x86_64')
 license=('custom:public')
 depends=('python2' 'libxcb')
 options=(!libtool)
-provides=('python2-xcffib')
-conflicts=('python2-xcffib')
+provides=('python2-xcffib' 'xpyb')
+conflicts=('python2-xcffib' 'xpyb')
 source=(http://xcb.freedesktop.org/dist/${_pkgname}-${pkgver}.tar.bz2
         64.patch)
 md5sums=('b9b70746cd348836516edcba96d24677'
