@@ -1,8 +1,8 @@
 # Maintainer: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=pamac
-pkgver=2.4.0
-_pkgver=2.4.0
+pkgver=2.4.1
+_pkgver=2.4.1
 pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 #_gitcommit="95fa57007618f73de9a93cd1362367488f369724"
@@ -28,7 +28,6 @@ if [ "${_gitcommit}" != "" ]; then
 else
   source=("pamac-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
 fi
-source+=("pamac-update-translations.patch::https://github.com/manjaro/pamac/commit/d48f462102b36d364656320261739f9b91e33ee9.patch")
 md5sums=('5683a5e14ceedc83a4aa0c1415c75aeb65ba334923b34528fa5da2523ebb12e4')
 
 prepare() {
@@ -42,7 +41,6 @@ prepare() {
   cd "$srcdir/pamac-$pkgver/src"
   sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala
   cd "$srcdir/pamac-$pkgver/"
-  patch -Np1 -i $srcdir/pamac-update-translations.patch
 }
 
 build() {
