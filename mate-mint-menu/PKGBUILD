@@ -11,12 +11,12 @@
 _pkgname=mintmenu
 pkgname=mate-mint-menu
 pkgver=5.6.4
-pkgrel=2
+pkgrel=3
 pkgdesc="Linux Mint Menu for MATE"
 arch=('any')
 url="http://github.com/linuxmint/mintmenu"
 license=('GPL2')
-depends=('python2-gobject2' 'python2-xdg' 'xdg-utils' 'mozo' 'mate-panel>=1.8.0'
+depends=('python2-no-hardening' 'python2-gobject2' 'python2-xdg' 'xdg-utils' 'mozo' 'mate-panel>=1.8.0'
          'python2-keybinder2' 'python2-xlib' 'pygtk' 'gksu')
 optdepends=('mate-screensaver: lock screen button'
             'pamac: package manager button')
@@ -45,11 +45,8 @@ package() {
   patch -Np1 -i "$srcdir/antergos_compat.patch"
   rm -f usr/lib/linuxmint/mintMenu/*.pyc usr/lib/linuxmint/mintMenu/plugins/*pyc
 
-  for i in $(find . -name '*.py') ; do
-    sed -ri 's:^#!/usr/bin/(env )?python$:&2:' "$i"
-  done
+  find . -type f -name '*.py' | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
   
-  sed -i 's:/usr/bin/python:/usr/bin/python2:' usr/bin/mintmenu
   # Disable the software-manager entry under Places
   sed -i "351s/true/false/" usr/share/glib-2.0/schemas/com.linuxmint.mintmenu.gschema.xml
   
