@@ -13,7 +13,7 @@ arch=('i686' 'x86_64')
 license=('PSF')
 url="http://www.python.org/"
 depends=('bzip2' 'gdbm' 'openssl' 'zlib' 'expat' 'sqlite' 'libffi')
-makedepends=('tk' 'bluez-libs', 'fakeroot')
+makedepends=('tk' 'bluez-libs' 'fakeroot')
 checkdepends=('gdb')
 optdepends=('tk: for IDLE'
             'python2-setuptools'
