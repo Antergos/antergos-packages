@@ -6,7 +6,7 @@
 
 pkgname=python2-no-hardening
 pkgver=2.7.10
-pkgrel=1
+pkgrel=2
 _pybasever=2.7
 pkgdesc="A high-level scripting language"
 arch=('i686' 'x86_64')
@@ -18,7 +18,7 @@ checkdepends=('gdb')
 optdepends=('tk: for IDLE'
             'python2-setuptools'
             'python2-pip')
-provides=('python2')
+provides=('python2' 'python2=2.7.10')
 conflicts=('python<3' 'python2')
 source=(http://www.python.org/ftp/python/${pkgver%rc?}/Python-${pkgver}.tar.xz)
 sha1sums=('ee5a50c5562e7448f037d35fdedc18d95c748b9e')
