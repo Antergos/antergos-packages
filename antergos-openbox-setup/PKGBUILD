@@ -1,14 +1,14 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-openbox-setup
-pkgver=0.2.5
+pkgver=0.2.6
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
 arch=('any')
 license=('GPL2')
 depends=('bash')
-optdepends=('openbox' 'xorg-xinit' 'pcmanfm'
+optdepends=('openbox' 'xorg-xinit' 'thunar'
 'nitrogen' 'plank' 'tint2' 'volumeicon' 'conky' 'compton'
 'numix-frost-themes' 'numix-icon-theme' 'plank-theme-numix')
 makedepends=()
