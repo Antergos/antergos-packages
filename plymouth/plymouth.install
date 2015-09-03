@@ -1,0 +1,3 @@
+post_install() {
+	plymouth-set-default-theme Antergos-Simple -R
+}
