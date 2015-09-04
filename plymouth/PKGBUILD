@@ -5,7 +5,7 @@
 
 pkgname=plymouth
 pkgver=0.9.3.f80684
-pkgrel=1
+pkgrel=2
 pkgdesc="A graphical boot splash screen with kernel mode-setting support"
 url="http://www.freedesktop.org/wiki/Software/Plymouth/"
 
@@ -23,7 +23,7 @@ conflicts=('plymouth-git')
 backup=('etc/plymouth/plymouthd.conf')
 
 source=("git+http://anongit.freedesktop.org/git/plymouth"
-	'Antergos-Simple.zip'
+	'antergos.zip'
 	'antergos-logo.png'
 	'plymouth.encrypt_hook'
 	'plymouth.encrypt_install'
@@ -96,7 +96,7 @@ package() {
 
   make DESTDIR="$pkgdir" install
   install -Dm644 ../antergos-logo.png             "$pkgdir/usr/share/plymouth/antergos-logo.png"
-  cp -R --no-preserve=all ../Antergos-Simple "$pkgdir/usr/share/plymouth/themes/"
+  cp -R --no-preserve=all ../antergos "$pkgdir/usr/share/plymouth/themes/"
   cd "$srcdir"
   install -Dm644 "plymouth.encrypt_hook"     "$pkgdir/usr/lib/initcpio/hooks/plymouth-encrypt"
   install -Dm644 "plymouth.encrypt_install"  "$pkgdir/usr/lib/initcpio/install/plymouth-encrypt"
