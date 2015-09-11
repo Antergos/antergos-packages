@@ -36,7 +36,8 @@ package() {
   make
 
   make -s DESTDIR=$pkgdir installsrc
-
+  
+  install -d -m 755 ${pkgdir}/usr/{bin,share/man/man8,share/doc/gfxboot}
   install -d -m 755 ${pkgdir}/usr/share/doc/gfxboot
   install -m 755 gfxboot gfxboot-compile gfxboot-font ${pkgdir}/usr/bin
   install -m 644 doc/gfxboot.8 ${pkgdir}/usr/share/man/man8
