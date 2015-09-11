@@ -3,9 +3,9 @@
 
 pkgname=gfxboot
 _Pkgver=4.5.5
-_pkgver=2.5
+_pkgver=3.1
 pkgver="${_Pkgver}.${_pkgver}"
-pkgrel=2
+pkgrel=1
 arch=('i686' 'x86_64')
 license=(GPL)
 install=gfxboot.install
