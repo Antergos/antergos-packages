@@ -6,7 +6,8 @@
     "3.10", 
     "3.12",
     "3.14",
-    "3.16"
+    "3.16",
+    "3.17.90"
   ], 
   "url": "https://github.com/Antergos", 
   "uuid": "lockscreen@dev.antergos.com", 
