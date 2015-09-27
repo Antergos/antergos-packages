@@ -2,8 +2,8 @@
 
 pkgname=xfce4-panel-switch
 _pkgname=xfpanel-switch
-pkgver=1.0
-_pkgver=1.0.0
+pkgver=1.0.2
+_pkgver=1.0
 pkgrel=1
 pkgdesc="Simple application to manage Xfce panel layouts"
 arch=('any')
@@ -12,7 +12,7 @@ license=('GPL3')
 depends=('python' 'python-gobject')
 makedepends=('intltool')
 install=${pkgname}.install
-source=("https://launchpad.net/{$_pkgname}/${pkgver}/${_pkgver}/+download/${_pkgname}-${pkgver}.tar.bz2")
+source=("https://launchpad.net/{$_pkgname}/${_pkgver}/${pkgver}/+download/${_pkgname}-${pkgver}.tar.bz2")
 md5sums=('707a1254b2f8c3ecf3947210f3d85573')
 
 build() {
