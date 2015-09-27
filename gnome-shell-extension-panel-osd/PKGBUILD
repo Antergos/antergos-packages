@@ -26,8 +26,6 @@ pkgver() {
 
 prepare() {
     cd "$srcdir/$_archivename"
-    sed -i 's|3.15.91|3.16|g' data/metadata.json.in
-    
 }
 
 build() {
