@@ -15,7 +15,8 @@ makedepends=('linux-headers')
 source=('modprobe.d'
 	  'license.patch'
 	  'linux-recent.patch'
-	  'gcc.patch')
+	  'gcc.patch'
+	  'linux42.patch')
 source_i686=("http://www.broadcom.com/docs/linux_sta/hybrid-v35-nodebug-pcoem-${pkgver//./_}.tar.gz")
 source_x86_64=("http://www.broadcom.com/docs/linux_sta/hybrid-v35_64-nodebug-pcoem-${pkgver//./_}.tar.gz")
 
