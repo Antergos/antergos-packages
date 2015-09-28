@@ -36,6 +36,7 @@ prepare() {
 	_kernver="$(</usr/lib/modules/extramodules-${_kernmajor}-ARCH/version)"
 
 	patch -p1 -i linux-recent.patch
+	patch -p1 -i linux42.patch
 	patch -p1 -i license.patch
 	patch -p1 -i gcc.patch
 
