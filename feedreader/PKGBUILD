@@ -18,6 +18,7 @@ groups=('rss')
 install="${pkgname%-*}.install"
 source=('https://launchpad.net/feedreader/'${pkgver%.*}'/'${pkgver}'/+download/FeedReader-'${pkgver}'.tar.gz')
 sha256sums=('cb24d6dcef46080f2aa61fdc1b0187a8c52aedf913e6f63325ee46c631e5c87a')
+_allowed_in='main'
 
 pkgver() {
   cd "${srcdir}/FeedReader-${pkgver}"
