@@ -11,7 +11,7 @@ pkgdesc='A HTML to text converter with utf-8 patch'
 arch=('i686' 'x86_64')
 url='http://www.mbayer.de/html2text'
 license=('GPL2')
-depends=('gcc-libs')
+depends=('gcc-libs' 'libgee')
 conflicts=('html2text')
 source=("http://www.mbayer.de/html2text/downloads/${pkgname}-${pkgver}.tar.gz"
   "http://www.mbayer.de/html2text/downloads/patch-utf8-${pkgname}-${pkgver}.diff")
