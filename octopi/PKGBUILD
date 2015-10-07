@@ -42,30 +42,32 @@ prepare() {
 build() {
   
   if [ "${_gitcommit}" != "" ]; then
-    cd "${srcdir}/${pkgname}-${_gitcommit}"
+    _SRCDIR="${srcdir}/${pkgname}-${_gitcommit}"
+    cd "${_SRCDIR}"
   else
-    cd "${srcdir}/${pkgname}-${pkgver}"
+    _SRCDIR="${srcdir}/${pkgname}-${pkgver}"
+    cd "${_SRCDIR}"
   fi
 
   qmake-qt5 octopi.pro
   make
 
-  cd "${srcdir}/${pkgname}-${pkgver}/notifier/pacmanhelper"
+  cd "${_SRCDIR}/notifier/pacmanhelper"
   msg "Building pacmanhelper..."
   qmake-qt5 pacmanhelper.pro
   make
 
-  cd "${srcdir}/${pkgname}-${pkgver}/notifier/octopi-notifier"
+  cd "${_SRCDIR}/notifier/octopi-notifier"
   msg "Building octopi-notifier..."
   qmake-qt5 octopi-notifier.pro
   make
 
-  cd "${srcdir}/${pkgname}-${pkgver}/repoeditor"
+  cd "${_SRCDIR}/repoeditor"
   msg "Building octopi-repoeditor..."
   qmake-qt5 octopi-repoeditor.pro
   make
 
-  cd "${srcdir}/${pkgname}-${pkgver}/cachecleaner"
+  cd "${_SRCDIR}/cachecleaner"
   msg "Building octopi-cachecleaner..."
   qmake-qt5 octopi-cachecleaner.pro
   make
@@ -74,43 +76,45 @@ build() {
 package() {
 
   if [ "${_gitcommit}" != "" ]; then
-    cd "${srcdir}/${pkgname}-${_gitcommit}"
+    _SRCDIR="${srcdir}/${pkgname}-${_gitcommit}"
+    cd "${_SRCDIR}"
   else
-    cd "${srcdir}/${pkgname}-${pkgver}"
+    _SRCDIR="${srcdir}/${pkgname}-${pkgver}"
+    cd "${_SRCDIR}"
   fi
  
-	install -D -m755 "${srcdir}/${pkgname}-${pkgver}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
-	install -D -m644 "${srcdir}/${pkgname}-${pkgver}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
-	install -D -m644 "${srcdir}/${pkgname}-${pkgver}/resources/images/${pkgname}_green.png" "${pkgdir}/usr/share/icons/${pkgname}.png"
-	install -D -m644 "${srcdir}/${pkgname}-${pkgver}/resources/images/${pkgname}_green.png" "${pkgdir}/usr/share/icons/gnome/32x32/apps/${pkgname}.png"
-	install -D -m644 "${srcdir}/${pkgname}-${pkgver}/resources/images/${pkgname}_red.png" "${pkgdir}/usr/share/icons/${pkgname}_red.png"
-	install -D -m644 "${srcdir}/${pkgname}-${pkgver}/resources/images/${pkgname}_yellow.png" "${pkgdir}/usr/share/icons/${pkgname}_yellow.png"
+	install -D -m755 "${_SRC_DIR}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
+	install -D -m644 "${_SRC_DIR}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_green.png" "${pkgdir}/usr/share/icons/${pkgname}.png"
+	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_green.png" "${pkgdir}/usr/share/icons/gnome/32x32/apps/${pkgname}.png"
+	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_red.png" "${pkgdir}/usr/share/icons/${pkgname}_red.png"
+	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_yellow.png" "${pkgdir}/usr/share/icons/${pkgname}_yellow.png"
   
   #Pacmanhelper service files
-  install -D -m755 "${srcdir}/${pkgname}-${pkgver}/notifier/bin/pacmanhelper" "${pkgdir}/usr/lib/octopi/pacmanhelper"
+  install -D -m755 "${_SRC_DIR}/notifier/bin/pacmanhelper" "${pkgdir}/usr/lib/octopi/pacmanhelper"
 
 	#speedup files
-	install -D -m755 "${srcdir}/${pkgname}-${pkgver}/speedup/speedup-octopi.sh" "${pkgdir}/usr/bin/speedup-octopi.sh"
-	install -D -m644 "${srcdir}/${pkgname}-${pkgver}/speedup/${pkgname}.service" "${pkgdir}/usr/lib/systemd/system/${pkgname}.service"
+	install -D -m755 "${_SRC_DIR}/speedup/speedup-octopi.sh" "${pkgdir}/usr/bin/speedup-octopi.sh"
+	install -D -m644 "${_SRC_DIR}/speedup/${pkgname}.service" "${pkgdir}/usr/lib/systemd/system/${pkgname}.service"
 
-  install -D -m644 "${srcdir}/${pkgname}-${pkgver}/notifier/pacmanhelper/polkit/org.octopi.pacman.policy" "${pkgdir}/usr/share/polkit-1/actions/org.octopi.pacman.policy"
-  install -D -m644 "${srcdir}/${pkgname}-${pkgver}/notifier/pacmanhelper/polkit/org.octopi.pacmanhelper.conf" "${pkgdir}/etc/dbus-1/system.d/org.octopi.pacmanhelper.conf"
-  install -D -m644 "${srcdir}/${pkgname}-${pkgver}/notifier/pacmanhelper/polkit/org.octopi.pacmanhelper.xml" "${pkgdir}/usr/share/dbus-1/interfaces/org.octopi.pacmanhelper.xml"
-  install -D -m644 "${srcdir}/${pkgname}-${pkgver}/notifier/pacmanhelper/polkit/org.octopi.pacmanhelper.service" "${pkgdir}/usr/share/dbus-1/system-services/org.octopi.pacmanhelper.service"
+  install -D -m644 "${_SRC_DIR}/notifier/pacmanhelper/polkit/org.octopi.pacman.policy" "${pkgdir}/usr/share/polkit-1/actions/org.octopi.pacman.policy"
+  install -D -m644 "${_SRC_DIR}/notifier/pacmanhelper/polkit/org.octopi.pacmanhelper.conf" "${pkgdir}/etc/dbus-1/system.d/org.octopi.pacmanhelper.conf"
+  install -D -m644 "${_SRC_DIR}/notifier/pacmanhelper/polkit/org.octopi.pacmanhelper.xml" "${pkgdir}/usr/share/dbus-1/interfaces/org.octopi.pacmanhelper.xml"
+  install -D -m644 "${_SRC_DIR}/notifier/pacmanhelper/polkit/org.octopi.pacmanhelper.service" "${pkgdir}/usr/share/dbus-1/system-services/org.octopi.pacmanhelper.service"
   
   #Octopi-notifier file
-  install -D -m755 "${srcdir}/${pkgname}-${pkgver}/notifier/bin/octopi-notifier" "${pkgdir}/usr/bin/octopi-notifier"
-  install -D -m644 "${srcdir}/${pkgname}-${pkgver}/octopi-notifier.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
-  install -D -m644 "${srcdir}/${pkgname}-${pkgver}/octopi-notifier.desktop" "${pkgdir}/etc/xdg/autostart/octopi-notifier.desktop"
+  install -D -m755 "${_SRC_DIR}/notifier/bin/octopi-notifier" "${pkgdir}/usr/bin/octopi-notifier"
+  install -D -m644 "${_SRC_DIR}/octopi-notifier.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+  install -D -m644 "${_SRC_DIR}/octopi-notifier.desktop" "${pkgdir}/etc/xdg/autostart/octopi-notifier.desktop"
   
   #Octopi-repoeditor
-  install -D -m755 "${srcdir}/${pkgname}-${pkgver}/repoeditor/bin/octopi-repoeditor" "${pkgdir}/usr/bin/octopi-repoeditor"
+  install -D -m755 "${_SRC_DIR}/repoeditor/bin/octopi-repoeditor" "${pkgdir}/usr/bin/octopi-repoeditor"
   install -D -m644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
-	install -D -m644 "${srcdir}/${pkgname}-${pkgver}/resources/images/${pkgname}_red.png" "${pkgdir}/usr/share/icons/${pkgname}.png"
+	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_red.png" "${pkgdir}/usr/share/icons/${pkgname}.png"
 	
 	#Octopi-cachecleaner file
-  install -D -m755 ${srcdir}/${pkgname}-${pkgver}/cachecleaner/bin/octopi-cachecleaner ${pkgdir}/usr/bin/octopi-cachecleaner
-  install -D -m644 ${srcdir}/${pkgname}-${pkgver}/cachecleaner/$pkgname.desktop ${pkgdir}/usr/share/applications/$pkgname.desktop
+  install -D -m755 ${_SRC_DIR}/cachecleaner/bin/octopi-cachecleaner ${pkgdir}/usr/bin/octopi-cachecleaner
+  install -D -m644 ${_SRC_DIR}/cachecleaner/$pkgname.desktop ${pkgdir}/usr/share/applications/$pkgname.desktop
 }
 
 
