@@ -4,6 +4,5 @@ Icon=octopi-repoeditor
 Exec=octopi-repoeditor
 Terminal=false
 Type=Application
-Categories=GNOME;GTK;System;
-#NotShowIn=GNOME;XFCE;LXDE;KDE;
+Categories=PackageManager;Settings;
 StartupNotify=true
