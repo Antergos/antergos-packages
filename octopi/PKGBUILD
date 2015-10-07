@@ -113,8 +113,8 @@ package() {
 	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_red.png" "${pkgdir}/usr/share/icons/${pkgname}.png"
 	
 	#Octopi-cachecleaner file
-  install -D -m755 ${_SRC_DIR}/cachecleaner/bin/octopi-cachecleaner ${pkgdir}/usr/bin/octopi-cachecleaner
-  install -D -m644 ${_SRC_DIR}/cachecleaner/$pkgname.desktop ${pkgdir}/usr/share/applications/$pkgname.desktop
+  install -D -m755 "${_SRC_DIR}/cachecleaner/bin/octopi-cachecleaner" "${pkgdir}/usr/bin/octopi-cachecleaner"
+  install -D -m644 "${_SRC_DIR}/cachecleaner/$pkgname.desktop" "${pkgdir}/usr/share/applications/$pkgname.desktop"
 }
 
 
