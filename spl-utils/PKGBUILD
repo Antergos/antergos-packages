@@ -1,0 +1,57 @@
+#
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: isiachi <isiachi@rhyeworld.it>
+#
+pkgname="spl-utils"
+pkgver=0.6.5.2
+_pkgver=0.6.5.2
+pkgrel=1
+license=('CDDL')
+pkgdesc="Kernel module support files for the Solaris Porting Layer."
+depends=("spl=${_pkgver}-${pkgrel}")
+provides=("spl-utils" "spl-utils-dkms")
+makedepends=("git")
+arch=("i686" "x86_64")
+url="http://zfsonlinux.org/"
+source=("git+https://github.com/zfsonlinux/zfs.git"
+        "zfs-utils.bash-completion-r1"
+        "zfs-utils.initcpio.install"
+        "zfs-utils.initcpio.hook")
+groups=("system" "zfs")
+md5sums=('SKIP'
+         '9ddb0c8a94861f929d0fa741fdc49950'
+         '9ef4841abb85dee611828cc7e6f5c6fe'
+         '62ba32c6853c315ff231c396cf8bfdbb')
+conflicts=("spl-utils-dkms" "spl-utils-lts" "spl-utils-git")
+
+
+pkgver() {
+    cd "${srcdir}/zfs"
+    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
+    
+}
+
+build() {
+    cd "${srcdir}/spl"
+    ./autogen.sh
+    scripts/dkms.mkconf -v ${_dirver} -f dkms.conf -n spl
+    
+    _at_enable=""
+    [ "${CARCH}" == "i686"  ] && _at_enable="--enable-atomic-spinlocks"
+
+    ./configure --prefix=/usr \
+                --libdir=/usr/lib \
+                --sbindir=/usr/bin \
+                --with-config=user \
+                ${_at_enable}
+
+    make
+}
+
+package() {
+
+    cd "${srcdir}/spl"
+    make DESTDIR="${pkgdir}" install
+
+    install -D -m644 "${srcdir}"/spl-utils.hostid "${pkgdir}"/etc/hostid
+}

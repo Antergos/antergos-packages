@@ -1,0 +1,54 @@
+#
+# Maintainer: isiachi <isiachi@rhyeworld.it>
+#
+
+pkgname=spl
+pkgver=0.6.5.2
+_pkgver=0.6.5.2
+pkgrel=1
+pkgdesc="Solaris Porting Layer kernel modules."
+license=('GPL')
+makedepends=("git")
+depends=("dkms" "spl-utils=${_pkgver}-${pkgrel}")
+provides=("spl" "spl-dkms" "solaris-porting-layer")
+conflicts=("spl-git" "spl-lts")
+install=spl.install
+arch=("i686" "x86_64")
+url="http://zfsonlinux.org/"
+source=("git+https://github.com/zfsonlinux/spl.git"
+        "spl-utils.hostid")
+md5sums=('SKIP'
+         'a54f0041a9e15b050f25c463f1db7449')
+install=spl.install
+
+_kernel="$(uname -r)"
+_kernel="${_kernel%-ARCH}"
+
+pkgver() {
+    cd "${srcdir}/spl"
+    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
+}
+
+build() {
+    cd "${srcdir}/spl"
+    ./autogen.sh
+    scripts/dkms.mkconf -v ${_dirver} -f dkms.conf -n spl
+    
+    _at_enable=""
+    [ "${CARCH}" == "i686"  ] && _at_enable="--enable-atomic-spinlocks"
+
+    ./configure --prefix=/usr \
+                --libdir=/usr/lib \
+                --sbindir=/usr/bin \
+                --with-config=user \
+                ${_at_enable}
+
+    make
+}
+
+package() {
+    install -d ${pkgdir}/usr/src
+    cp -a ${srcdir}/spl ${pkgdir}/usr/src/spl-${_pkgver}
+    rm -rf ${pkgdir}/usr/src/spl-${_pkgver}/.git
+    rm -f ${pkgdir}/usr/src/spl-${_pkgver}/.gitignore
+}
