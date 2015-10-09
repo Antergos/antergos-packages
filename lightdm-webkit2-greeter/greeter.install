@@ -5,8 +5,3 @@ post_install()
 	find /usr/share/lightdm-webkit -type d -exec chmod 755 {} \; 
 
 }
-
-post_upgrade()
-{
-	post_install
-}
