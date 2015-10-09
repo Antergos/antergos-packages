@@ -10,7 +10,7 @@ pkgdesc='A simple feedreader desktop client for web services like Tiny Tiny RSS.
 arch=('i686' 'x86_64')
 url='https://launchpad.net/feedreader'
 license=('GPL3')
-depends=('sqlite3' 'gtk3' 'webkit2gtk' 'libnotify' 'html2text' 'libsoup' 'json-glib' 'libsecret')
+depends=('sqlite3' 'gtk3>=3.18' 'gtk3<3.20' 'webkit2gtk' 'libnotify' 'html2text' 'libsoup' 'json-glib' 'libsecret')
 makedepends=('vala' 'gobject-introspection' 'cmake')
 provides=("${pkgname%-*}")
 conflicts=("${pkgname%-*}")

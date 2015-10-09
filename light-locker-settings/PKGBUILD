@@ -4,12 +4,12 @@
 pkgname=light-locker-settings
 pkgver=1.5.2
 _pkgver=${pkgver}
-pkgrel=1
+pkgrel=2
 pkgdesc="Just a simple settings dialog for light-locker"
 arch=('any')
 url="https://github.com/lots0logs/${pkgname}"
 license=('GPL3')
-depends=('light-locker' 'python-gobject' 'python-psutil')
+depends=('light-locker' 'python-gobject>=3.18' 'python-gobject<3.20' 'python-psutil')
 makedepends=('intltool')
 # source=("${url}/${pkgver%.*}/${pkgver}/+download/${pkgname}-${pkgver}.tar.bz2" "bugfix.patch")
 source=("$pkgname-$pkgver::git+https://github.com/lots0logs/light-locker-settings.git")

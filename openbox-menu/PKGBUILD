@@ -3,7 +3,7 @@
 
 pkgname=openbox-menu
 pkgver=0.7.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Dynamic XDG menu for openbox"
 arch=('i686' 'x86_64')
 url="http://mimasgpc.free.fr/openbox-menu.html"
