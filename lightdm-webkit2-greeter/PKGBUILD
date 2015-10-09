@@ -19,7 +19,7 @@ makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common'
 sha256sums=('1289810df25285d96e6d27947b00cefe3cac1d1a981d6585906ff527c1b3f4e1')
 
 build() {
-  cd $srcdir/$pkgname-$pkgver
+  cd $srcdir/$pkgname
      LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr \
      --sysconfdir=/etc --libexecdir=/usr/lib/lightdm
    make
@@ -38,6 +38,6 @@ build() {
 }
 
 package() {
-  cd $srcdir/$pkgname-$pkgver
+  cd $srcdir/$pkgname
   make DESTDIR=$pkgdir install 
 }
