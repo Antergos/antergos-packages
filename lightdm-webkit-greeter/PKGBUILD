@@ -1,4 +1,4 @@
-# Maintainer: M0Rf30
+# Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=lightdm-webkit-greeter
 pkgver=0.1.2
@@ -14,7 +14,7 @@ makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool')
 
 build() {
   cd $srcdir/$pkgname-$pkgver
-     LIBS+="-ljavascriptcoregtk-1.0" ./configure --prefix=/usr \
+     LIBS+="-ljavascriptcoregtk-3.0" ./configure --prefix=/usr \
      --sysconfdir=/etc --libexecdir=/usr/lib/lightdm
    make
    
