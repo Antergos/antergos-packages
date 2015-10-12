@@ -2,7 +2,7 @@
 # Contributor: Michael Herold <arch@michaeljherold.com>
 
 pkgname=scudcloud
-pkgver=1.0.78
+pkgver=1.0.79
 pkgrel=1
 pkgdesc="A Slack client for Linux"
 arch=('any')
