@@ -2,10 +2,10 @@
 
 pkgname=octopi
 pkgdesc="A powerful Qt5 Pacman frontend."
-pkgver=0.7.4
+pkgver=0.7.5
 pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
-_gitcommit="5de6a1b1f67450222a6fd419029a71777d26d2d6"
+_gitcommit="c5f56cc94f8afe5f10a1d23538b24962d2258bde"
 arch=('i686' 'x86_64')
 url="https://github.com/aarnt/octopi"
 license=('GPL2')
