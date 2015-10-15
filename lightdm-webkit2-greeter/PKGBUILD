@@ -1,13 +1,13 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=lightdm-webkit2-greeter
-pkgver=0.2.0
-pkgrel=3
+pkgver=0.2.1
+pkgrel=1
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
 license=('GPL3' 'LGPL3')
-source=("$pkgname-$pkgver.tar.gz::https://github.com/antergos/lightdm-webkit2-greeter/archive/master.tar.gz")
+source=("$pkgname-$pkgver.tar.gz::https://github.com/antergos/lightdm-webkit2-greeter/archive/${pkgver}.tar.gz")
 depends=('lightdm' 'webkit2gtk>=2.10' 'webkit2gtk<2.12' 'gtk-engines' 'gtk3>=3.18' 'gtk3<3.20' 'dbus-glib')
 provides=('lightdm-webkit2-greeter' 'lightdm-webkit-greeter')
 conflicts=('lightdm-webkit-greeter')
@@ -19,7 +19,7 @@ makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common'
 sha256sums=('1289810df25285d96e6d27947b00cefe3cac1d1a981d6585906ff527c1b3f4e1')
 
 build() {
-  cd $srcdir/${pkgname}-master
+  cd $srcdir/${pkgname}-${pkgver}
      LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm
      
   make
@@ -38,6 +38,6 @@ build() {
 }
 
 package() {
-  cd $srcdir/${pkgname}-master
+  cd $srcdir/${pkgname}-${pkgver}
   make DESTDIR=$pkgdir install 
 }
