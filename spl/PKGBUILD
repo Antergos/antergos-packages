@@ -15,8 +15,7 @@ conflicts=("spl-git" "spl-lts")
 install=spl.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-source=("git+https://github.com/zfsonlinux/spl.git"
-        "spl-utils.hostid")
+source=("git+https://github.com/zfsonlinux/spl.git")
 md5sums=('SKIP'
          'a54f0041a9e15b050f25c463f1db7449')
 install=spl.install
