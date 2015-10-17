@@ -18,6 +18,8 @@ groups=("system" "zfs")
 md5sums=('SKIP')
 conflicts=("spl-utils-dkms" "spl-utils-lts" "spl-utils-git")
 
+_kernel="$(uname -r)"
+_kernel="${_kernel%-ARCH}"
 
 pkgver() {
     cd "${srcdir}/spl"
