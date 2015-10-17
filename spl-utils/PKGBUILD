@@ -28,7 +28,7 @@ pkgver() {
 build() {
     cd "${srcdir}/spl"
     ./autogen.sh
-    scripts/dkms.mkconf -v ${_dirver} -f dkms.conf -n spl
+    scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n spl
     
     _at_enable=""
     [ "${CARCH}" == "i686"  ] && _at_enable="--enable-atomic-spinlocks"
