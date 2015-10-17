@@ -3,9 +3,9 @@
 pkgname=pamac
 pkgver=2.4.2
 _pkgver=2.4.2
-pkgrel=2
+pkgrel=3
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
-#_gitcommit="95fa57007618f73de9a93cd1362367488f369724"
+_gitcommit="b718f3a160341184e41eff98a150b1ac70f80ee3"
 pkgdesc="A Gtk3 frontend for libalpm"
 arch=('i686' 'x86_64')
 url="https://github.com/manjaro/pamac"
@@ -28,10 +28,7 @@ if [ "${_gitcommit}" != "" ]; then
 else
   source=("pamac-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
 fi
-
-source+=("package-enhancements.patch::https://github.com/manjaro/pamac/commit/00fd98ae27ea33623033c4913a91c0262d98b984.patch")
-md5sums=('f74f7ac891e88802e9d1eb9b26e41f0d80704c890732b4001913455e7950504d'
-         '5683a5e14ceedc83a4aa0c1415c75aeb65ba334923b34528fa5da2523ebb12e4')
+md5sums=('f74f7ac891e88802e9d1eb9b26e41f0d80704c890732b4001913455e7950504d')
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
@@ -46,7 +43,7 @@ prepare() {
   cd "$srcdir/pamac-$pkgver/"
   
   # patches here
-  patch -Np1 -i "$srcdir/package-enhancements.patch"
+  
 }
 
 build() {
