@@ -26,7 +26,7 @@ conflicts=('firefox')
 install=firefox.install
 _patchrev=7aa7715fdc8f
 options=('!emptydirs'  'strip' )
-_patchurl=http://www.rosenauer.org/hg/mozilla/raw-file/$_patchrev
+_patchurl="http://www.rosenauer.org/hg/mozilla/raw-file/$_patchrev"
 source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$pkgver/source/firefox-$pkgver.source.tar.xz"
 	  'mozconfig' 'firefox.desktop' 'firefox-install-dir.patch' 'vendor.js' 'kde.js'
 	  # Firefox patchset
