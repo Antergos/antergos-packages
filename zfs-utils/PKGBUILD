@@ -5,10 +5,10 @@
 pkgname="zfs-utils"
 pkgver=0.6.5.2
 _pkgver=0.6.5.2
-pkgrel=1
+pkgrel=2
 license=('CDDL')
 pkgdesc="Kernel module support files for the Zettabyte File System."
-depends=("spl-dkms=${pkgver}-${pkgrel}" "solaris-porting-layer")
+depends=("spl-dkms=${pkgver}-${pkgrel}" "spl")
 makedepends=("git")
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
