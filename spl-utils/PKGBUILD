@@ -8,17 +8,14 @@ _pkgver=0.6.5.2
 pkgrel=1
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
-depends=("spl=${_pkgver}-${pkgrel}")
+depends=("dkms")
 provides=("spl-utils" "spl-utils-dkms")
 makedepends=("git")
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
 source=("git+https://github.com/zfsonlinux/zfs.git")
 groups=("system" "zfs")
-md5sums=('SKIP'
-         '9ddb0c8a94861f929d0fa741fdc49950'
-         '9ef4841abb85dee611828cc7e6f5c6fe'
-         '62ba32c6853c315ff231c396cf8bfdbb')
+md5sums=('SKIP')
 conflicts=("spl-utils-dkms" "spl-utils-lts" "spl-utils-git")
 
 
