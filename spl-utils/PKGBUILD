@@ -13,14 +13,14 @@ provides=("spl-utils" "spl-utils-dkms")
 makedepends=("git")
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-source=("git+https://github.com/zfsonlinux/zfs.git")
+source=("git+https://github.com/zfsonlinux/spl.git")
 groups=("system" "zfs")
 md5sums=('SKIP')
 conflicts=("spl-utils-dkms" "spl-utils-lts" "spl-utils-git")
 
 
 pkgver() {
-    cd "${srcdir}/zfs"
+    cd "${srcdir}/spl"
     printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
     
 }
@@ -47,5 +47,4 @@ package() {
     cd "${srcdir}/spl"
     make DESTDIR="${pkgdir}" install
 
-    install -D -m644 "${srcdir}"/spl-utils.hostid "${pkgdir}"/etc/hostid
 }
