@@ -13,9 +13,7 @@ provides=("spl-utils" "spl-utils-dkms")
 makedepends=("git")
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-source=("git+https://github.com/zfsonlinux/zfs.git"
-        "zfs-utils.initcpio.install"
-        "zfs-utils.initcpio.hook")
+source=("git+https://github.com/zfsonlinux/zfs.git")
 groups=("system" "zfs")
 md5sums=('SKIP'
          '9ddb0c8a94861f929d0fa741fdc49950'
