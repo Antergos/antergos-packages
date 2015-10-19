@@ -84,7 +84,7 @@ package() {
   cd "${_SRC_DIR}"
  
 	install -D -m755 "${_SRC_DIR}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
-	install -D -m644 "${_SRC_DIR}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+	install -D -m644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
 	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_green.png" "${pkgdir}/usr/share/icons/${pkgname}.png"
 	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_green.png" "${pkgdir}/usr/share/icons/gnome/32x32/apps/${pkgname}.png"
 	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_red.png" "${pkgdir}/usr/share/icons/${pkgname}_red.png"
