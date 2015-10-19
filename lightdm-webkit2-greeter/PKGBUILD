@@ -1,7 +1,7 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=lightdm-webkit2-greeter
-pkgver=0.2.1
+pkgver=0.2.2
 pkgrel=1
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
