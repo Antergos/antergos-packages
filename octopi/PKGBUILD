@@ -76,12 +76,12 @@ build() {
 package() {
 
   if [ "${_gitcommit}" != "" ]; then
-    _SRCDIR="${srcdir}/${pkgname}-${_gitcommit}"
-    cd "${_SRCDIR}"
+    _SRC_DIR="${srcdir}/${pkgname}-${_gitcommit}"
   else
-    _SRCDIR="${srcdir}/${pkgname}-${pkgver}"
-    cd "${_SRCDIR}"
+    _SRC_DIR="${srcdir}/${pkgname}-${pkgver}"
   fi
+  
+  cd "${_SRC_DIR}"
  
 	install -D -m755 "${_SRC_DIR}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
 	install -D -m644 "${_SRC_DIR}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
