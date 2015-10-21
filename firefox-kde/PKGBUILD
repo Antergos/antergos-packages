@@ -17,7 +17,7 @@ depends=('gtk2' 'mozilla-common' 'libxt' 'startup-notification' 'mime-types'
 	   'libvpx' 'icu'  'libevent' 'nss>=3.18.1' 'nspr>=4.10.6' 'hunspell' 
 	   'sqlite' 'libnotify')
 makedepends=('unzip' 'zip' 'diffutils' 'python2' 'yasm' 'mesa' 'imake'
-		 'xorg-server-xvfb' 'libpulse' 'gst-plugins-base-libs' 'inetutils')
+		 'xorg-server-xvfb' 'libpulse' 'gst-plugins-base-libs' 'inetutils' 'xorg-xrandr')
 optdepends=('networkmanager: Location detection via available WiFi networks'
 		'gst-plugins-good: h.264 video'
 		'gst-libav: h.264 video')
