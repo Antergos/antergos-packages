@@ -7,11 +7,11 @@
 -            # Add the user to his/her own group and sudo if Administrator was selected
 +            # Add the user to his/her own group and wheel if Administrator was selected
              if dialog.account_type_combo.get_active() == 1:
--                os.system("usermod %s -G %s,sudo,nopasswdlogin" % (username, username)) 
-+                os.system("usermod %s -G %s,wheel" % (username, username)) 
+-                subprocess.call(["usermod", username, "-G", "%s,sudo,nopasswdlogin" % username])
++                subprocess.call(["usermod", username, "-G", "%s,wheel,nopasswdlogin" % username])
              else:
--                os.system("usermod %s -G %s,nopasswdlogin" % (username, username))
-+                os.system("usermod %s -G users,nopasswdlogin" % username)
+-                subprocess.call(["usermod", username, "-G", "%s,nopasswdlogin" % username])
++                subprocess.call(["usermod", username, "-G", "users,nopasswdlogin"])
              self.load_groups()
          dialog.destroy()
           
