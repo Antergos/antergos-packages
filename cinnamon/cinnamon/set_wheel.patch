@@ -1,5 +1,5 @@
---- a/files/usr/lib/cinnamon-settings-users/cinnamon-settings-users.py
-+++ b/files/usr/lib/cinnamon-settings-users/cinnamon-settings-users.py
+--- a/files/usr/share/cinnamon/cinnamon-settings-users/cinnamon-settings-users.py
++++ b/files/usr/share/cinnamon/cinnamon-settings-users/cinnamon-settings-users.py
 @@ -745,11 +738,11 @@ class Module:
              pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size("/usr/share/cinnamon/faces/user-generic.png", 48, 48)
              description = "<b>%s</b>\n%s" % (fullname, username)

@@ -3,7 +3,7 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=cjs
-pkgver=2.6.0
+pkgver=2.8.0
 pkgrel=1
 pkgdesc="Javascript Bindings for Cinnamon"
 arch=(i686 x86_64)
