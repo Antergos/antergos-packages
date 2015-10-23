@@ -1,0 +1,33 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: zach <zach {at} zach-adams {dot} com>
+# Contributor: Gordian Edenhofer <gordian.edenhofer[at]yahoo[dot]de
+
+pkgname=gtk-theme-arc
+_pkgname=Arc-theme
+pkgver=20151002.r299
+pkgrel=1
+pkgdesc="A flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell. Latest commit from Github."
+arch=('any')
+url="https://github.com/horst3180/${_pkgname}"
+license=('GPL3')
+groups=('themes')
+depends=('gtk3' 'gtk-engine-murrine' 'gnome-themes-standard')
+makedepends=('git')
+source=(${_pkgname}::"git+https://github.com/horst3180/${_pkgname}.git")
+md5sums=('SKIP')
+conflicts=('gtk-theme-arc-git')
+
+pkgver() {
+	cd "${srcdir}/${_pkgname}"
+	git fetch --tags
+	printf "%s.r%s" "$(git describe --tags `git rev-list --tags --max-count=1`)" "$(git rev-list --count HEAD)"
+}
+
+build() {
+	cd "${srcdir}/${_pkgname}"
+	./autogen.sh --prefix=/usr
+}
+
+package() {
+	make -C "${srcdir}/${_pkgname}" DESTDIR="${pkgdir}" install
+}
