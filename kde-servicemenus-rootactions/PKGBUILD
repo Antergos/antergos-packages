@@ -21,3 +21,4 @@ package() {
   cd ..
   install -Dm755 rootactions-servicemenu.pl "$pkgdir"/usr/bin/rootactions-servicemenu.pl
 }
+# -*- mode: bash;-*-

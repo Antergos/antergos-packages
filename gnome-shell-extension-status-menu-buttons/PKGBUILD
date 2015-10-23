@@ -28,3 +28,4 @@ package()
 	cp ${srcdir}/${pkgname}-master/metadata.json .
 	cp ${srcdir}/${pkgname}-master/confirmDialog.js .
 }
+# -*- mode: bash;-*-

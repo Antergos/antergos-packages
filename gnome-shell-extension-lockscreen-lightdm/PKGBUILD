@@ -27,3 +27,4 @@ package()
 	cp ${srcdir}/extension.js .
 	cp ${srcdir}/metadata.json .
 }
+# -*- mode: bash;-*-

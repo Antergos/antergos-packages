@@ -32,3 +32,4 @@ package() {
   install -d "$pkgdir/usr/share/licenses/$pkgname/"
   install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname/" AUTHORS COPYING
 }
+# -*- mode: bash;-*-

@@ -57,3 +57,4 @@ package() {
   cd "$pkgdir"/usr/lib/linuxmint/mintMenu
   ./compile.py
 }
+# -*- mode: bash;-*-

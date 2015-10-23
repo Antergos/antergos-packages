@@ -44,3 +44,4 @@ package() {
   install -m 644 ../gfxboot.html ${pkgdir}/usr/share/doc/gfxboot
 
 }
+# -*- mode: bash;-*-

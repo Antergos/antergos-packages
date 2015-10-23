@@ -36,3 +36,4 @@ package() {
 	cd "$srcdir/${_pkgname}-$pkgver/build"
 	make DESTDIR="$pkgdir/" install
 } 
+# -*- mode: bash;-*-

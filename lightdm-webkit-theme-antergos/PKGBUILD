@@ -28,3 +28,4 @@ package()
 	cd ${_pkgname}
 	rm -rf .gitignore
 }
+# -*- mode: bash;-*-

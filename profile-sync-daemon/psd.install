@@ -118,4 +118,4 @@ _daemon_refresh() {
 			su $i -s /bin/sh -c 'XDG_RUNTIME_DIR=/run/user/$UID systemctl --user daemon-reload'
 		fi
 	done
-}
+}# -*- mode: bash;-*-

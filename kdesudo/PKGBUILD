@@ -29,3 +29,4 @@ package() {
 }
 
 sha1sums=('4821552c6ce32e9ce92bc054a1963a1e96bf5185')
+# -*- mode: bash;-*-

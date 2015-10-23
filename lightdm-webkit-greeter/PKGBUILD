@@ -37,3 +37,4 @@ package() {
 }
 
 md5sums=('ff8247d5bbf3026140531061fbf1f51e')
+# -*- mode: bash;-*-

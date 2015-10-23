@@ -27,3 +27,4 @@ package() {
 	# copy license
 	install -Dm644 "${srcdir}"/${pkgname}-license.html "${pkgdir}"/usr/share/licenses/${pkgname}/license.html
 }
+# -*- mode: bash;-*-

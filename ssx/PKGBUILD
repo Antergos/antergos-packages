@@ -22,3 +22,4 @@ package() {
   install -Dm755 ssx $pkgdir/usr/bin/ssx
 }
 md5sums=('dad1cbb1a4bd001ade7f30d9603dfbde')
+# -*- mode: bash;-*-

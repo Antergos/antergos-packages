@@ -19,3 +19,4 @@ pre_remove() {
 post_remove() {
   post_install
 }
+# -*- mode: bash;-*-

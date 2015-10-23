@@ -19,3 +19,4 @@ package() {
   cp -rt "$pkgdir"/usr/share/themes/waldorf *
 }
 
+# -*- mode: bash;-*-

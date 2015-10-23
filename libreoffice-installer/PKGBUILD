@@ -28,3 +28,4 @@ package() {
 	install -Dm644 $srcdir/${pkgname}.desktop $pkgdir/usr/share/applications/${pkgname}.desktop
 	install -d $pkgdir/usr/bin
 }
+# -*- mode: bash;-*-

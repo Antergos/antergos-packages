@@ -44,3 +44,4 @@ package() {
   # example conf
   install -D -m644 "compton.sample.conf" "$pkgdir/etc/xdg/compton.conf.example"
 }
+# -*- mode: bash;-*-

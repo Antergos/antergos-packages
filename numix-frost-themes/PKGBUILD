@@ -33,3 +33,4 @@ rm -rf "${pkgdir}/usr/share/themes/${_pkgname}/.idea" "${pkgdir}/usr/share/theme
 rm -rf "${pkgdir}/usr/share/themes/${_light}/.idea" "${pkgdir}/usr/share/themes/${_light}/.git"
 
 }
+# -*- mode: bash;-*-

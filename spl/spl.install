@@ -35,3 +35,4 @@ run_depmod() {
 
     depmod ${_kernel_version_full}-ARCH
 }
+# -*- mode: bash;-*-

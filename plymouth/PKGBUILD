@@ -111,3 +111,4 @@ package() {
   cp "$pkgdir/usr/share/plymouth/plymouthd.defaults" "$pkgdir/etc/plymouth/plymouthd.conf"
 }
 
+# -*- mode: bash;-*-

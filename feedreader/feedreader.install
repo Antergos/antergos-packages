@@ -13,4 +13,4 @@ post_remove() {
   gtk-update-icon-cache -ftq usr/share/icons/hicolor
 }
 
-# vim: ts=2 sw=2 et:
+# vim: ts=2 sw=2 et:# -*- mode: bash;-*-

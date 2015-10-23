@@ -30,3 +30,4 @@ package() {
   install -d "$pkgdir/usr/share/doc/$pkgname/"
   install -m644 -t "$pkgdir/usr/share/doc/$pkgname/" AUTHORS README ChangeLog
 }
+# -*- mode: bash;-*-

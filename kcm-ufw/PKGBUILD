@@ -35,3 +35,4 @@ package() {
   make DESTDIR="${pkgdir}" install || return 1
 }
 md5sums=('97de867481948e3f54d76ca3678ffd2e')
+# -*- mode: bash;-*-

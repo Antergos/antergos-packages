@@ -5,3 +5,4 @@ post_install() {
 post_remove() {
 	echo -e '\e[93m'"==> "'\e[1;97m'"Run 'kbuildsycoca4' as normal user to rebuild your system configuration cache"'\e[0m'
 }
+# -*- mode: bash;-*-

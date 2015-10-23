@@ -21,3 +21,4 @@ package() {
   mkdir -p ${pkgdir}/boot/grub/themes/Antergos-Default
   cp -R ${pkgname}-${pkgver}/Antergos-Default/* ${pkgdir}/boot/grub/themes/Antergos-Default
 }
+# -*- mode: bash;-*-

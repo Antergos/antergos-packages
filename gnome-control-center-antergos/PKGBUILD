@@ -51,4 +51,4 @@ package() {
   # Fix a warning
   chown 102:0 "$pkgdir/usr/share/polkit-1/rules.d"
   chmod 700 "$pkgdir/usr/share/polkit-1/rules.d"
-}
+}# -*- mode: bash;-*-

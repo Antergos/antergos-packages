@@ -42,4 +42,4 @@ package() {
   install -Dpm644 'html2textrc.5.gz' "${pkgdir}/usr/share/man/man5/html2textrc.5.gz"
   set +u
 }
-set +u
+set +u# -*- mode: bash;-*-

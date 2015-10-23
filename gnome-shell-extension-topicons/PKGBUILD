@@ -22,3 +22,4 @@ package() {
   install -m644 "extension.js" \
     "${pkgdir}/usr/share/gnome-shell/extensions/${uuid}/extension.js"
 }
+# -*- mode: bash;-*-
