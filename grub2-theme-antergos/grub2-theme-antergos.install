@@ -9,3 +9,4 @@ GRUB_THEME="/boot/grub/themes/Antergos-Default/theme.txt"
 
 _EOF
 }
+# -*- mode: bash;-*-

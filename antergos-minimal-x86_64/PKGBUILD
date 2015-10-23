@@ -27,3 +27,4 @@ package() {
 	true
 
 }
+# -*- mode: bash;-*-

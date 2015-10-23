@@ -51,3 +51,4 @@ package() {
     rm -rf ${pkgdir}/usr/src/spl-${_pkgver}/.git
     rm -f ${pkgdir}/usr/src/spl-${_pkgver}/.gitignore
 }
+# -*- mode: bash;-*-

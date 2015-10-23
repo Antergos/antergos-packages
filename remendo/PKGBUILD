@@ -51,3 +51,4 @@ package_remendo-gtk() {
   cp $srcdir/remendo-gtk.desktop $pkgdir/etc/xdg/autostart/
 
 }
+# -*- mode: bash;-*-

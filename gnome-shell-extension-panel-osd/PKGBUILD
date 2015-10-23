@@ -39,3 +39,4 @@ package() {
     mkdir -p "${pkgdir}/usr/share/gnome-shell/extensions" "${pkgdir}/usr/share/glib-2.0/schemas/"
     make DESTDIR=${pkgdir} install
 }
+# -*- mode: bash;-*-

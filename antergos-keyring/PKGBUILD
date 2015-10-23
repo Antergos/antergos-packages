@@ -26,3 +26,4 @@ package() {
 	cd "${srcdir}"
 	make PREFIX=/usr DESTDIR=${pkgdir} install
 }
+# -*- mode: bash;-*-

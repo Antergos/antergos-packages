@@ -18,4 +18,4 @@ package() {
 
   install -d "${pkgdir}/usr/share/gnome-background-properties"
   install -m644 antergos-backgrounds-4-3.xml "${pkgdir}/usr/share/gnome-background-properties/"
-}
+}# -*- mode: bash;-*-

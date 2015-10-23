@@ -57,4 +57,4 @@ package() {
     cp -a ${srcdir}/zfs ${pkgdir}/usr/src/zfs-${_pkgver}
     rm -rf ${pkgdir}/usr/src/zfs-${_pkgver}/.git
     rm -f ${pkgdir}/usr/src/zfs-${_pkgver}/.gitignore
-}
+}# -*- mode: bash;-*-

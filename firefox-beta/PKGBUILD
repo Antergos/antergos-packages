@@ -64,3 +64,4 @@ package() {
   ln -s /opt/$pkgname-$pkgver/browser/icons/mozicon128.png \
         "$pkgdir"/usr/share/icons/hicolor/128x128/apps/$pkgname.png
 }
+# -*- mode: bash;-*-

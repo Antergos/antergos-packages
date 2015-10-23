@@ -47,4 +47,4 @@ post_remove() {
 op=$1
 shift
 
-$op $*
+$op $*# -*- mode: bash;-*-

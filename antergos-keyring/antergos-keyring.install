@@ -12,3 +12,4 @@ post_install() {
 		post_upgrade
 	fi
 }
+# -*- mode: bash;-*-

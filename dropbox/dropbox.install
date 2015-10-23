@@ -31,3 +31,4 @@ post_remove() {
   rm -R "${HOME}/.dropbox-dist"
   rm -R "${HOME}/.config/dropbox.desktop"
 }
+# -*- mode: bash;-*-

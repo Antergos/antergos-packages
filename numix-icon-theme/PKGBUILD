@@ -27,3 +27,4 @@ package() {
   install -dm 755 "$pkgdir"/usr/share/icons
   cp -dr --no-preserve='ownership' Numix "$pkgdir"/usr/share/icons/
 }
+# -*- mode: bash;-*-

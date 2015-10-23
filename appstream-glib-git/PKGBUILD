@@ -30,3 +30,4 @@ package() {
 	cd "$srcdir/$_pkgname"
 	make DESTDIR="${pkgdir}" install
 }
+# -*- mode: bash;-*-

@@ -20,3 +20,4 @@ post_remove() {
 	[ $_default ] || exit 0
 	sed -i 's| --ppapi-flash-path=/usr/lib/PepperFlash/libpepflashplayer.so --ppapi-flash-version=1.*[0-999]||' "$_default"
 }
+# -*- mode: bash;-*-

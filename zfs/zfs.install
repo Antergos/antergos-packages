@@ -32,3 +32,4 @@ check_initramfs() {
         fi
     fi
 }
+# -*- mode: bash;-*-

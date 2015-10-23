@@ -42,3 +42,4 @@ package() {
 	ln -sf /usr/lib/${pkgname}/${pkgname}
 }
 
+# -*- mode: bash;-*-

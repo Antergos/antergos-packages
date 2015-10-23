@@ -60,3 +60,4 @@ package() {
                        "$pkgdir"/usr/share/icons/hicolor/$i/apps/flashpeak-slimjet.png
     done
 }
+# -*- mode: bash;-*-

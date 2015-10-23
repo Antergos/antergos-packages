@@ -94,4 +94,4 @@ package() {
   # cantarell-fonts package installs its fonts into /usr/share/fonts/cantarell/
   # and because cantarell-fonts installs .otf files instead of .ttf files
   find "${pkgdir}/usr/share/fonts/TTF" -type f -name "Cantarell-*.ttf" -delete
-}
+}# -*- mode: bash;-*-
