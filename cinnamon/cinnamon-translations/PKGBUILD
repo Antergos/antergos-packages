@@ -22,3 +22,4 @@ package() {
   install -m 0755 -d ${pkgdir}/usr/share/locale/ 
   cp -Rp usr/share/locale/* ${pkgdir}/usr/share/locale/
 }
+ 

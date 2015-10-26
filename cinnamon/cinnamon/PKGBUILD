@@ -86,3 +86,4 @@ package() {
   cd ${srcdir}/Cinnamon*
   make DESTDIR="${pkgdir}" install
 }
+ 
