@@ -13,21 +13,21 @@ license=('GPL3')
 groups=('themes')
 depends=('gtk3' 'gtk-engine-murrine' 'gnome-themes-standard')
 makedepends=('git')
-source=(${_pkgname}::"git+https://github.com/horst3180/${_pkgname}.git")
+source=(${pkgname}::"git+https://github.com/horst3180/${_pkgname}.git")
 md5sums=('SKIP')
 conflicts=('gtk-theme-arc-git')
 
 pkgver() {
-	cd "${srcdir}/${_pkgname}"
+	cd "${srcdir}/${pkgname}"
 	git fetch --tags
 	printf "%s.r%s" "$(git describe --tags `git rev-list --tags --max-count=1`)" "$(git rev-list --count HEAD)"
 }
 
 build() {
-	cd "${srcdir}/${_pkgname}"
+	cd "${srcdir}/${pkgname}"
 	./autogen.sh --prefix=/usr
 }
 
 package() {
-	make -C "${srcdir}/${_pkgname}" DESTDIR="${pkgdir}" install
+	make -C "${srcdir}/${pkgname}" DESTDIR="${pkgdir}" install
 }
