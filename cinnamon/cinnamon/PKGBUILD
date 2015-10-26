@@ -17,7 +17,7 @@ depends=('accountsservice' 'caribou' 'cinnamon-settings-daemon' 'cinnamon-sessio
          'networkmanager' 'muffin' 'python2-cairo' 'python2-dbus' 'python2-pillow'
          'python2-pam' 'python2-pexpect' 'python2-pyinotify' 'python2-lxml' 'webkitgtk'
          'cinnamon-control-center' 'cinnamon-screensaver' 'cinnamon-menus' 'libgnomekbd'
-         'network-manager-applet' 'nemo' 'polkit-gnome')
+         'network-manager-applet' 'nemo' 'polkit-gnome' 'python2-ptyprocess')
 makedepends=('gnome-common' 'intltool' 'gtk-doc' 'gobject-introspection')
 options=('!emptydirs')
 install=${pkgname}.install
@@ -77,8 +77,8 @@ build() {
                --localstatedir=/var \
                --disable-static \
                --disable-schemas-compile \
-               --enable-compile-warnings=yes \
-               --with-session-tracking=systemd
+               --enable-compile-warnings=yes
+               # --with-session-tracking=systemd
   make
 }
 
