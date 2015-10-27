@@ -1,4 +1,4 @@
-# Maintainer: Antergos Devs 
+# Maintainer: Antergos Devs <dev@antergos.com>
 
 pkgname=numix-frost-themes-next
 _pkgname=Numix-Frost
@@ -7,7 +7,7 @@ _branch=numix-frost-light
 pkgver=3.0beta1
 _pkgver=${pkgver}
 pkgrel=1
-pkgdesc='Official Numix GTK theme - Antergos edition'
+pkgdesc='Beta for the next milestone release of Numix-Frost.'
 arch=('any')
 license=('GPL3')
 url='http://numixproject.org/'
@@ -50,8 +50,6 @@ sed -i 's|Numix-Frost|Numix-Frost-Light-Next|g' index.theme
 
 make
 make DESTDIR=${pkgdir} install
-
-
 
 }
 # -*- mode: bash;-*-
