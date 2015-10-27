@@ -1,0 +1,26 @@
+#Maintainer: Xyne <ac xunilhcra enyx, backwards>
+pkgname=python3-xcpf
+pkgver=2015.10.21
+pkgrel=1
+pkgdesc='Xyne'"'"'s common Pacman functions, for internal use.'
+arch=(any)
+license=(GPL)
+url="http://xyne.archlinux.ca/projects/python3-xcpf"
+depends=(python3 pyalpm)
+source=(
+  http://xyne.archlinux.ca/projects/python3-xcpf/src/python3-xcpf-2015.10.21.tar.xz
+)
+sha512sums=(
+  735871c8f6821a63af3b87eeaf7a3e3b184172aef66712af8134ed52396cabcd24c140267f00f7474733a6ce2397ab5b66de76a89964c1244297b8e9fce17e54
+)
+md5sums=(
+  d7b9c51bb6534b6adbd2d57e362431a2
+)
+
+package ()
+{
+  cd "$srcdir/$pkgname-$pkgver"
+  python3 setup.py install --prefix=/usr --root="$pkgdir" --optimize=1
+}
+
+# vim: set ts=2 sw=2 et:
