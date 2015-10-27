@@ -34,3 +34,4 @@ package() {
   install -Dm644 ../cinnamon-screensaver.pam "$pkgdir/etc/pam.d/cinnamon-screensaver"
 }
  
+
