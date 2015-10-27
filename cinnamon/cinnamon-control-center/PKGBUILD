@@ -54,3 +54,4 @@ package() {
   chmod 700 "$pkgdir/usr/share/polkit-1/rules.d"
 }
  
+
