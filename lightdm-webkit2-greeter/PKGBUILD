@@ -2,7 +2,8 @@
 
 pkgname=lightdm-webkit2-greeter
 pkgver=0.2.3beta1
-pkgrel=2
+_pkgver=${pkgver}
+pkgrel=3
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
@@ -14,8 +15,13 @@ conflicts=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos<2.2.4')
 install=greeter.install
 backup=("etc/lightdm/${pkgname}.conf")
-source=("$pkgname-$pkgver.tar.gz::https://github.com/antergos/lightdm-webkit2-greeter/archive/${pkgver}.tar.gz")
+source=("$pkgname-$pkgver::git+https://github.com/antergos/${pkgname}.git#tag=${pkgver}")
 sha256sums=('d2cb9159a434a0f9e4ccbce68aeecf2240c727a03ad98cd5440ed56ab7a26a1d')
+
+pkgver() {
+	echo "${_pkgver}"
+}
+
 
 build() {
 	cd $srcdir/${pkgname}-${pkgver}
@@ -27,7 +33,12 @@ build() {
 
 package() {
 	cd $srcdir/${pkgname}-${pkgver}
-	make DESTDIR=$pkgdir install 
+	make DESTDIR=$pkgdir install
+	
+	check="$pkgdir/usr/share/lightdm-webkit/themes/antergos/index.theme"
+	
+	[[ -d "${check}" ]] || { cp -R --no-preserve=all $pkgdir/usr/share/lightdm-webkit/themes;
+						rm -rf $pkgdir/usr/share/lightdm-webkit/themes/antergos/.git; }
 }
 
 # -*- mode: bash;-*-
