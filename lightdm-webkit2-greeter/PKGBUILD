@@ -37,7 +37,7 @@ package() {
 	
 	check="$pkgdir/usr/share/lightdm-webkit/themes/antergos/index.theme"
 	
-	[[ -d "${check}" ]] || { cp -R --no-preserve=all $pkgdir/usr/share/lightdm-webkit/themes;
+	[[ -d "${check}" ]] || { cp -R --no-preserve=all themes/antergos $pkgdir/usr/share/lightdm-webkit/themes;
 						rm -rf $pkgdir/usr/share/lightdm-webkit/themes/antergos/.git; }
 }
 
