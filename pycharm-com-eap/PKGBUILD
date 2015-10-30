@@ -34,7 +34,7 @@ package() {
    if [[ ${_eap} = "True" ]]; then
   	cp -R "${srcdir}/pycharm-community-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
   else
-  	cp -R "${srcdir}/pycharm-community-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
+  	cp -R "${srcdir}/pycharm-community-5.0/"* "${pkgdir}/opt/${pkgname}"
   fi
   if [[ $CARCH = 'i686' ]]; then
      rm -f "${pkgdir}/opt/${pkgname}/bin/libyjpagent-linux64.so"

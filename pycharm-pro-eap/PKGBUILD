@@ -32,7 +32,7 @@ package() {
   if [[ ${_eap} = "True" ]]; then
   	cp -R "${srcdir}/pycharm-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
   else
-  	cp -R "${srcdir}/pycharm-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
+  	cp -R "${srcdir}/pycharm-5.0/"* "${pkgdir}/opt/${pkgname}"
   fi
   if [[ $CARCH = 'i686' ]]; then
      rm -f "${pkgdir}/opt/${pkgname}/bin/libyjpagent-linux64.so"
@@ -61,7 +61,7 @@ EOF
    if [[ ${_eap} = "True" ]]; then
   	cp -R ${srcdir}/pycharm-${_buildver}/license/* "${pkgdir}/usr/share/licenses/${pkgname}/"
   else
-  	cp -R ${srcdir}/pycharm-${_pkgver}/license/* "${pkgdir}/usr/share/licenses/${pkgname}/"
+  	cp -R ${srcdir}/pycharm-5.0/license/* "${pkgdir}/usr/share/licenses/${pkgname}/"
   fi
   ln -s "/opt/${pkgname}/bin/pycharm.sh" "${pkgdir}/usr/bin/pycharm-eap"
 }
