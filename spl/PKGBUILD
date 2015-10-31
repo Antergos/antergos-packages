@@ -9,7 +9,7 @@ pkgrel=1
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")
-depends=("dkms" "spl-utils=${_pkgver}-${pkgrel}")
+depends=("dkms" "spl-utils")
 provides=("spl" "spl-dkms")
 conflicts=("spl-git" "spl-lts")
 install=spl.install
