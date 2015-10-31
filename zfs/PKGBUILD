@@ -9,7 +9,7 @@
 #
 pkgname="zfs"
 pkgver=0.6.5.3_r0_g9aaf60b_4.2.5_1
-pkgrel=1
+pkgrel=2
 license=('CDDL')
 
 # Used incase the i686 and x86_64 linux packages get out of sync with the
