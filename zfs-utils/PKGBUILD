@@ -23,8 +23,8 @@ md5sums=('SKIP'
          '62ba32c6853c315ff231c396cf8bfdbb')
 conflicts=("zfs-utils" "zfs-utils-lts")
 
-_kernel=4.2.5-1
-_kernel=4.2.5-1
+_kernel=4.2.5
+_kernel=4.2.5
 
 pkgver() {
     cd "${srcdir}/zfs"
