@@ -20,8 +20,8 @@ md5sums=('SKIP'
          'a54f0041a9e15b050f25c463f1db7449')
 install=spl.install
 
-_kernel="$(uname -r)"
-_kernel="${_kernel%-ARCH}"
+_kernel=4.2.5-1
+_kernel=4.2.5-1
 
 pkgver() {
     cd "${srcdir}/spl"
