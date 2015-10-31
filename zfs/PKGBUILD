@@ -16,14 +16,8 @@ conflicts=("zfs-git" "zfs-lts" "zfs-dkms")
 install=zfs.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-source=("zfs::git+http://github.com/zfsonlinux/zfs.git"
-        "zfs-utils.bash-completion-r1"
-        "zfs-utils.initcpio.install"
-        "zfs-utils.initcpio.hook")
-md5sums=('SKIP'
-         '9ddb0c8a94861f929d0fa741fdc49950'
-         '9ef4841abb85dee611828cc7e6f5c6fe'
-         '62ba32c6853c315ff231c396cf8bfdbb')
+source=("zfs::git+http://github.com/zfsonlinux/zfs.git")
+md5sums=('SKIP')
 
 _kernel="$(uname -r)"
 _kernel="${_kernel%-ARCH}"
