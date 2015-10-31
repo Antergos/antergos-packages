@@ -19,8 +19,8 @@ url="http://zfsonlinux.org/"
 source=("zfs::git+http://github.com/zfsonlinux/zfs.git")
 md5sums=('SKIP')
 
-_kernel="$(uname -r)"
-_kernel="${_kernel%-ARCH}"
+_kernel=4.2.5-1
+_kernel=4.2.5-1
 
 pkgver() {
     cd "${srcdir}/zfs"
