@@ -24,7 +24,7 @@ pkgver() {
 
 
 build() {
-	cd $srcdir/${pkgname}-${pkgver}
+	cd $srcdir/${pkgname}-master
 	git submodule init && git submodule update
 	LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm
 	make
@@ -32,7 +32,7 @@ build() {
 }
 
 package() {
-	cd $srcdir/${pkgname}-${pkgver}
+	cd $srcdir/${pkgname}-master
 	make DESTDIR=$pkgdir install
 	
 	check="$pkgdir/usr/share/lightdm-webkit/themes/antergos/index.theme"
