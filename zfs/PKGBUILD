@@ -30,7 +30,7 @@ pkgver() {
 build() {
     cd "${srcdir}/zfs"
     ./autogen.sh
-    scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
+    #scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
     
     _i686_target=""
     [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"
@@ -50,10 +50,16 @@ build() {
 }
 
 package() {
-    install -d ${pkgdir}/usr/src
-    cp -a ${srcdir}/zfs ${pkgdir}/usr/src/zfs-${_pkgver}
-    rm -rf ${pkgdir}/usr/src/zfs-${_pkgver}/.git
-    rm -f ${pkgdir}/usr/src/zfs-${_pkgver}/.gitignore
+    dkmsdir="${pkgdir}/usr/src/zfs-${_pkgver}"
+    install -d "${dkmsdir}"
+
+    cd "${srcdir}/zfs"
+    git archive --format=tar HEAD | tar -x -C "${dkmsdir}"
+
+    cd "${dkmsdir}"
+    ./autogen.sh
+    scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
+    chmod g-w,o-w -R .
 }
 
 # -*- mode: bash;-*-
