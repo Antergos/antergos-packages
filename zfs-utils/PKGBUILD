@@ -59,7 +59,6 @@ package() {
     rm -r "${pkgdir}"/usr/lib/dracut
 
     # move module tree /lib -> /usr/lib
-    cp -r "${pkgdir}"/usr
     mv "${pkgdir}"/lib/* "${pkgdir}"/usr/lib
     rm -rf "${pkgdir}"/lib
     mv "${pkgdir}"/sbin/* "${pkgdir}"/usr/bin
