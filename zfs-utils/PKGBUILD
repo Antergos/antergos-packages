@@ -29,12 +29,14 @@ _kernel=4.2.5
 pkgver() {
     cd "${srcdir}/zfs"
     printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
-    
 }
 
 build() {
     cd "${srcdir}/zfs"
     ./autogen.sh
+    
+    _i686_target=""
+    [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
@@ -45,7 +47,8 @@ build() {
                 --includedir=/usr/include \
                 --with-udevdir=/usr/lib/udev \
                 --libexecdir=/usr/lib/zfs \
-                --with-config=user
+                --with-config=user \
+                ${_i686_target}
     make
 }
 
