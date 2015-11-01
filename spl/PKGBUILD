@@ -31,7 +31,6 @@ pkgver() {
 build() {
     cd "${srcdir}/spl"
     ./autogen.sh
-    scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n spl
     
     _at_enable=""
     [ "${CARCH}" == "i686"  ] && _at_enable="--enable-atomic-spinlocks"
@@ -46,10 +45,16 @@ build() {
 }
 
 package() {
-    install -d ${pkgdir}/usr/src
-    cp -a ${srcdir}/spl ${pkgdir}/usr/src/spl-${_pkgver}
-    rm -rf ${pkgdir}/usr/src/spl-${_pkgver}/.git
-    rm -f ${pkgdir}/usr/src/spl-${_pkgver}/.gitignore
+    dkmsdir="${pkgdir}/usr/src/spl-${_pkgver}"
+    install -d "${dkmsdir}"
+
+    cd "${srcdir}/spl"
+    git archive --format=tar HEAD | tar -x -C "${dkmsdir}"
+
+    cd "${dkmsdir}"
+    ./autogen.sh
+    scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n spl
+    chmod g-w,o-w -R .
 }
 
 # -*- mode: bash;-*-

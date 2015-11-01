@@ -61,8 +61,9 @@ package() {
     rm -r "${pkgdir}"/etc/init.d
     rm -r "${pkgdir}"/usr/lib/dracut
 
-    ( mv "${pkgdir}"/sbin/* "${pkgdir}"/usr/bin
-    rm -rf "${pkgdir}"/sbin ) || true
+    # move module tree /lib -> /usr/lib
+    cp -r "${pkgdir}"/{lib,usr}
+    rm -r "${pkgdir}"/lib
 
     install -D -m644 "${srcdir}"/zfs-utils.initcpio.hook "${pkgdir}"/usr/lib/initcpio/hooks/zfs
     install -D -m644 "${srcdir}"/zfs-utils.initcpio.install "${pkgdir}"/usr/lib/initcpio/install/zfs
