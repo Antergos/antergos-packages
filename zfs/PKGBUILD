@@ -32,6 +32,9 @@ build() {
     ./autogen.sh
     scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
     
+    _i686_target=""
+    [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"
+    
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
                 --bindir=/usr/bin \
@@ -41,7 +44,8 @@ build() {
                 --includedir=/usr/include \
                 --with-udevdir=/usr/lib/udev \
                 --libexecdir=/usr/lib/zfs \
-                --with-config=user
+                --with-config=user \
+                ${_i686_target}
     make
 }
 
