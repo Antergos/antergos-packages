@@ -1,15 +1,17 @@
+## _pkgver="${2%%-*}" ##
+
 post_install() {
-    check_hostid
-    run_depmod
+	check_hostid
+	check_initramfs "${2%%-*}"
 }
 
 post_remove() {
-    run_depmod
+	check_initramfs 'remove' "${2%%-*}"
 }
 
 post_upgrade() {
-    check_hostid
-    run_depmod
+	check_hostid
+	check_initramfs "${2%%-*}"
 }
 
 check_hostid() {
@@ -25,14 +27,24 @@ check_hostid() {
     fi
 }
 
-run_depmod() {
-    echo ">>> Updating module dependencies. Please wait ..."
+check_initramfs() {
+	echo '>>> Updating module dependencies. Please wait ...'
 
-    _kernel_version_x32_full="4.2.5-1"
-    _kernel_version_x64_full="4.2.5-1"
-
-    [[ $CARCH == "i686" ]] && _kernel_version_full=${_kernel_version_x32_full} || _kernel_version_full=${_kernel_version_x64_full}
-
-    depmod ${_kernel_version_full}-ARCH
+	if [[ $1 = remove ]]; then
+		dkms remove spl/$2 --all
+		
+		MK_CONF=$(grep -v '#' /etc/mkinitcpio.conf | grep zfs >/dev/null; echo $?);
+		if [[ $MK_CONF = 0 ]]; then
+			echo '>>> The ZFS packages have been removed, but "zfs" remains in the "hooks"'
+			echo '>>> list in mkinitcpio.conf! You will need to remove "zfs" from the '
+			echo '>>> "hooks" list and then regenerate the initial ramdisk.'
+		fi
+	else
+		dkms install spl/$1
+		
+		echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'
+ 		mkinitcpio -p linux
+	fi
 }
+
 # -*- mode: bash;-*-
