@@ -3,7 +3,7 @@
 pkgname=lightdm-webkit2-greeter
 pkgver=0.2.3rc
 _pkgver=${pkgver}
-pkgrel=1
+pkgrel=2
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
@@ -15,8 +15,8 @@ conflicts=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos<2.2.4')
 install=greeter.install
 backup=("etc/lightdm/${pkgname}.conf")
-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/antergos/${pkgname}/archive/master.tar.gz")
-sha256sums=('d2cb9159a434a0f9e4ccbce68aeecf2240c727a03ad98cd5440ed56ab7a26a1d')
+source=("${pkgname}-${pkgver}::git+https://github.com/antergos/${pkgname}.git")
+sha256sums=('SKIP')
 
 pkgver() {
 	echo "${_pkgver}"
@@ -24,7 +24,7 @@ pkgver() {
 
 
 build() {
-	cd $srcdir/${pkgname}-master
+	cd $srcdir/${pkgname}-${_pkgver}
 	git submodule init && git submodule update
 	LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm --bindir=/usr/bin --sbindir=/usr/bin
 	make
@@ -32,14 +32,8 @@ build() {
 }
 
 package() {
-	cd $srcdir/${pkgname}-master
+	cd $srcdir/${pkgname}-${_pkgver}
 	make DESTDIR=$pkgdir install
-	
-	check="$pkgdir/usr/share/lightdm-webkit/themes/antergos/index.theme"
-	
-	[[ -d "${check}" ]] || { install -d $pkgdir/usr/share/lightdm-webkit/themes 
-						cp -R --no-preserve=all themes/antergos $pkgdir/usr/share/lightdm-webkit/themes;
-						rm -rf $pkgdir/usr/share/lightdm-webkit/themes/antergos/.git; }
 }
 
 # -*- mode: bash;-*-
