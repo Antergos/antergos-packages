@@ -4,7 +4,7 @@ pkgname=numix-frost-themes-next
 _pkgname=Numix-Frost
 _light=Numix-Frost-Light
 _branch=numix-frost-light
-pkgver=3.0beta2
+pkgver=3.0beta3
 _pkgver=${pkgver}
 pkgrel=1
 pkgdesc='Beta for the next milestone release of Numix-Frost.'
@@ -33,7 +33,7 @@ sed -i 's|Numix-Frost|Numix-Frost-Next|g' index.theme
 make
 make DESTDIR=${pkgdir} install
 
-sed -i 's|Numix-Cinnamon|Numix-Frost-Next|g' includes/cinnamon/Numix-Cinnamon/cinnamon/theme.json
+sed -i 's%Numix-(Cinnamon)|(Frost)%Numix-Frost-Next%g' includes/cinnamon/Numix-Cinnamon/cinnamon/theme.json
 
 install -d "${pkgdir}/usr/share/themes/${_pkgname}-Next/cinnamon"
 install -d "${pkgdir}/usr/share/themes/${_pkgname}-Next/gnome-shell"
