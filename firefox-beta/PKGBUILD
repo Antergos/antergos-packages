@@ -2,10 +2,10 @@
 # Contributors: Achilleas Pipinellis, speed145a, Schnouki
 
 pkgname=firefox-beta
-pkgver=42.0b8
+pkgver=43.0b1
 _major=${pkgver/rc*}
 _build=${pkgver/*rc}
-pkgrel=2
+pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org - Beta"
 arch=('i686' 'x86_64')
 url="https://www.mozilla.org/en-US/firefox/channel/#beta"
