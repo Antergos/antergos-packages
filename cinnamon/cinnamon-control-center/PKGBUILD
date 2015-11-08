@@ -6,7 +6,7 @@
 
 pkgname=cinnamon-control-center
 pkgver=2.8.1
-pkgrel=1
+pkgrel=2
 pkgdesc="The Control Center for Cinnamon"
 arch=('i686' 'x86_64')
 depends=('cinnamon-settings-daemon' 'cinnamon-translations' 'cinnamon-menus'
@@ -43,15 +43,15 @@ package() {
   make DESTDIR="$pkgdir" install
 
   # Remove unused stuff
-  make -C panels/sound DESTDIR="$pkgdir" uninstall
-  make -C panels/sound/data DESTDIR="$pkgdir" install
-  make -C shell DESTDIR="$pkgdir" uninstall-binPROGRAMS uninstall-directoryDATA uninstall-uiDATA
+  #make -C panels/sound DESTDIR="$pkgdir" uninstall
+  #make -C panels/sound/data DESTDIR="$pkgdir" install
+  #make -C shell DESTDIR="$pkgdir" uninstall-binPROGRAMS uninstall-directoryDATA uninstall-uiDATA
   rm "$pkgdir"/usr/share/applications/cinnamon-{control-center,datetime-panel,region-panel,sound-panel}.desktop
-  rm -R "$pkgdir/etc"
+  #rm -R "$pkgdir/etc"
 
   # Fix a warning
   chown 102:0 "$pkgdir/usr/share/polkit-1/rules.d"
-  chmod 700 "$pkgdir/usr/share/polkit-1/rules.d"
+  chmod 750 "$pkgdir/usr/share/polkit-1/rules.d"
 }
  
 
