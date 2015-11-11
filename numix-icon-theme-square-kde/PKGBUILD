@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme-square-kde
-pkgver=2014.08.09
+pkgver=0.r82.bb9313e
 pkgrel=2
 epoch=1
 pkgdesc="Square icon expansion theme from the Numix project"
@@ -16,13 +16,13 @@ source=("numix-icon-theme-square-kde.zip")
 sha256sums=('e31cbf9722fe3a66eec857a95b59ea3094854a6d33f430112e23aa108d4ceb77')
 
 
-pkgver() {
-	cd ${srcdir:=$PWD}/${pkgname}
-	revlist="$(git rev-list --count HEAD)"
-	revparse="$(git rev-parse --short HEAD)"
-	
-	printf 0.r%s.%s ${revlist} ${revparse}
-}
+#pkgver() {
+#	cd ${srcdir:=$PWD}/${pkgname}
+#	revlist="$(git rev-list --count HEAD)"
+#	revparse="$(git rev-parse --short HEAD)"
+#	
+#	printf 0.r%s.%s ${revlist} ${revparse}
+#}
 
 package() {
   cd ${srcdir:=$PWD}/${pkgname}
