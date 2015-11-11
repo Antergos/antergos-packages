@@ -4,10 +4,10 @@
 
 
 pkgname=pycharm-com-eap
-_buildver=143.587
-_pkgver=5.0.0
-_eap="True"
-pkgver=5.0.0.143.587
+_buildver=143.595
+_pkgver=5.0.1
+_eap="False"
+pkgver=5.0.0.143.595
 pkgrel=1
 pkgdesc="Powerful Python and Django IDE, Early Access Program (EAP) build. Community edition."
 arch=(any)
@@ -22,7 +22,6 @@ changelog=""
 if [[ ${_eap} = "True" ]]; then
 	source=("http://download.jetbrains.com/python/pycharm-community-${_buildver}.tar.gz")
 	sha256sums=$(wget -q "${source}.sha256" && cat "pycharm-community-${_buildver}.tar.gz.sha256" | cut -f1 -d" ")
-	_eap="False"
 else
 	source=("http://download.jetbrains.com/python/pycharm-community-${_pkgver}.tar.gz")
 	sha256sums=$(wget -q "${source}.sha256" && cat "pycharm-community-${_pkgver}.tar.gz.sha256" | cut -f1 -d" ")

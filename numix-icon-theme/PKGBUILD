@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme
-pkgver=0.r522.90d71e6
+pkgver=0.r1422.bca3c07
 pkgrel=2
 pkgdesc="Base icon theme from the Numix project"
 arch=('any')
@@ -28,7 +28,7 @@ package() {
   do
   	noext="${icon/.svg}"
   	mono=$(echo "${noext}""-symbolic.svg" | sed 's|16|scalable|')
-  	if [[ -z ${mono} ]] && [[ -f ${mono} ]]; then
+  	if [[ -n ${mono} ]] && [[ -f ${mono} ]]; then
   		rm "${icon}"
   		ln -sr "${mono}" "${icon}"
   	fi
@@ -37,7 +37,7 @@ package() {
   do
   	noext="${icon/.svg}"
   	mono=$(echo "${noext}""-symbolic.svg" | sed 's|22|scalable|')
-  	if [[ -z ${mono} ]] && [[ -f ${mono} ]]; then
+  	if [[ -n ${mono} ]] && [[ -f ${mono} ]]; then
   		rm "${icon}"
   		ln -sr "${mono}" "${icon}"
   	fi
@@ -46,12 +46,13 @@ package() {
   do
   	noext="${icon/.svg}"
   	mono=$(echo "${noext}""-symbolic.svg" | sed 's|24|scalable|')
-  	if [[ -z ${mono} ]] && [[ -f ${mono} ]]; then
+  	if [[ -n ${mono} ]] && [[ -f ${mono} ]]; then
   		rm "${icon}"
   		ln -sr "${mono}" "${icon}"
   	fi
   done
   install -dm 755 "$pkgdir"/usr/share/icons
   cp -dr --no-preserve='ownership' Numix "$pkgdir"/usr/share/icons/
+  cp -dr --no-preserve='ownership' Numix-Light "$pkgdir"/usr/share/icons/
 }
 # -*- mode: bash;-*-
