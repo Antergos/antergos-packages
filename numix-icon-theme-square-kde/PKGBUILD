@@ -25,8 +25,9 @@ sha256sums=('e31cbf9722fe3a66eec857a95b59ea3094854a6d33f430112e23aa108d4ceb77')
 #}
 
 package() {
-  ls
-  cd ${srcdir:=$PWD}/${pkgname/"-kde"}**
+  shopt -s extglob
+  cd ${srcdir:=$PWD}/${pkgname/"-kde"}**!(.zip)
+  shopt -u extglob
   sed -i 's|Inherits=Numix|Inherits=Numix,Breeze,KFaenza|g' Numix-Square/index.theme
   install -dm 755 "$pkgdir"/usr/share/icons
   cp -dr --no-preserve='ownership' Numix-Square "$pkgdir"/usr/share/icons/
