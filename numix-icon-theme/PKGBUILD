@@ -2,7 +2,7 @@
 
 pkgname=numix-icon-theme
 pkgver=0.r522.90d71e6
-pkgrel=1
+pkgrel=2
 pkgdesc="Base icon theme from the Numix project"
 arch=('any')
 url='http://numixproject.org/'
@@ -24,6 +24,33 @@ pkgver() {
 
 package() {
   cd ${srcdir}/${pkgname}
+  for icon in Numix/16/actions/**
+  do
+  	noext="${icon/.svg}"
+  	mono=$(echo "${noext}""-symbolic.svg" | sed 's|16|scalable|')
+  	if [[ -z ${mono} ]] && [[ -f ${mono} ]]; then
+  		rm "${icon}"
+  		ln -sr "${mono}" "${icon}"
+  	fi
+  done
+  for icon in Numix/22/actions/**
+  do
+  	noext="${icon/.svg}"
+  	mono=$(echo "${noext}""-symbolic.svg" | sed 's|22|scalable|')
+  	if [[ -z ${mono} ]] && [[ -f ${mono} ]]; then
+  		rm "${icon}"
+  		ln -sr "${mono}" "${icon}"
+  	fi
+  done
+  for icon in Numix/24/actions/**
+  do
+  	noext="${icon/.svg}"
+  	mono=$(echo "${noext}""-symbolic.svg" | sed 's|24|scalable|')
+  	if [[ -z ${mono} ]] && [[ -f ${mono} ]]; then
+  		rm "${icon}"
+  		ln -sr "${mono}" "${icon}"
+  	fi
+  done
   install -dm 755 "$pkgdir"/usr/share/icons
   cp -dr --no-preserve='ownership' Numix "$pkgdir"/usr/share/icons/
 }
