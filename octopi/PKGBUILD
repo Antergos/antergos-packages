@@ -2,7 +2,7 @@
 
 pkgname=octopi
 pkgdesc="A powerful Qt5 Pacman frontend."
-pkgver=0.7.5
+pkgver=0.8.0
 pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit="master"
@@ -25,7 +25,7 @@ else
   source=("octopi-${pkgver}.tar.gz::https://github.com/aarnt/octopi/archive/v${pkgver}.tar.gz")
 fi
 source+=('octopi-repoeditor.desktop')
-sha256sums=('da6e00b1292ecb274e42beaedbac73dc7567fc2d8f3ee2d0e764b0e1780b3e7c'
+sha256sums=('97248e1f52565183ec69334d485141f6eaff1988c221cbd0dfd34c8b433ace75'
             'd2b2aaf515b096dd75dfe62e45e1d16c0d365d7342960cc36e4d19a0ee2f3e00')
 
             
