@@ -5,7 +5,7 @@ pkgdesc="A powerful Qt5 Pacman frontend."
 pkgver=0.8.0
 pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
-_gitcommit="master"
+#_gitcommit="master"
 arch=('i686' 'x86_64')
 url="https://github.com/aarnt/octopi"
 license=('GPL2')
@@ -40,7 +40,7 @@ fi
   cd "${_SRC_DIR}"
 
   # sed version
-  sed -i -e "s|0.8.0-dev|${pkgver}-${pkgrel}|g" src/strconstants.h
+  sed -i -e "s|0.8.0|${pkgver}-${pkgrel}|g" src/strconstants.h
 }
 
 build() {
