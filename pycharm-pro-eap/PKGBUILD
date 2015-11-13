@@ -49,7 +49,7 @@ package() {
 		rm -f "${pkgdir}/opt/${pkgname}/bin/fsnotifier64"
 	fi
 
-	sed -i "s/Version=/Version=${pkgver}" "${pkgname}.desktop"
+	sed -i "s/Version=/Version=${pkgver}/g" "${pkgname}.desktop"
 	install -Dm644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/"
 	
 	ln -s "/opt/${pkgname}/bin/pycharm.sh" "${pkgdir}/usr/bin/pycharm-eap"
