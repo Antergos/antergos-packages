@@ -22,13 +22,13 @@ if [[ "True" = "${_eap}" ]]; then
 	_srcfile="pycharm-professional-${_buildver}.tar.gz"
 	source=("http://download.jetbrains.com/python/${_srcfile}"
 			"${pkgname}.desktop")
-	sha256sums=$(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" "
+	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
 				"a1dfd0da292c46fe17382522ae448a7987e2221bd1d19323a3d2cdb3b2bed3c8")
 else
 	_srcfile="pycharm-professional-${_pkgver}.tar.gz"
 	source=("http://download.jetbrains.com/python/${_srcfile}"
 			"${pkgname}.desktop")
-	sha256sums=$(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" "
+	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
 				"a1dfd0da292c46fe17382522ae448a7987e2221bd1d19323a3d2cdb3b2bed3c8")
 fi
 
