@@ -1,13 +1,29 @@
 post-install() {
-  gtk-update-icon-cache -ftq usr/share/icons/Numix-Square
+	case $DESKTOP_SESSION in
+		kde*|*plasma*|lxqt*) 
+			sed -i 's|Faenza,Adwaita,gnome|Breeze,KFaenza|g' /usr/share/icons/Numix-Square-Light/index.theme
+			sed -i 's|gnome,hicolor|Breeze,KFaenza,hicolor|g' /usr/share/icons/Numix-Square/index.theme
+			rm /var/tmp/kdecache-${USER}/icon-cache.kcache
+		  ;;
+		*)
+		  gtk-update-icon-cache -ftq usr/share/icons/Numix-Square usr/share/icons/Numix-Square-Light
+		  ;;
+	esac
 }
 
 post-upgrade() {
-  post-install
+	case $DESKTOP_SESSION in
+		kde*|*plasma*|lxqt*) 
+			rm /var/tmp/kdecache-${USER}/icon-cache.kcache
+		  ;;
+		*)
+		  gtk-update-icon-cache -ftq usr/share/icons/Numix-Square usr/share/icons/Numix-Square-Light
+		  ;;
+	esac
 }
 
 post-remove() {
-  post-install
+  post-upgrade
 }
 
 # vim: ts=2 sw=2 et:

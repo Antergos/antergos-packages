@@ -1,13 +1,16 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme
-pkgver=0.r1422.bca3c07
-pkgrel=2
+pkgver=0.r1429.260e6da
+pkgrel=1
 pkgdesc="Base icon theme from the Numix project"
 arch=('any')
 url='http://numixproject.org/'
 license=('GPL3')
 depends=('gnome-icon-theme')
+optdepends=('faenza-icon-theme: fallback icons'
+			'breeze-icons: KDE'
+			'kfaenza-icon-theme: fallback icons (KDE)')
 makedepends=('git')
 provides=("${pkgname}")
 conflicts=("${pkgname}")
@@ -17,42 +20,45 @@ source=("git+http://github.com/numixproject/numix-icon-theme.git")
 sha256sums=('SKIP')
 
 pkgver() {
-  cd ${srcdir}/${pkgname}
-
-  printf "0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+	cd ${srcdir}/${pkgname}
+	git remote add palob http://github.com/palob/numix-icon-theme.git
+	git fetch --all
+	git pull --no-edit palob more-breeze-icons 
+	git pull --no-edit palob breeze-next-batch 
+	printf "0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 package() {
-  cd ${srcdir}/${pkgname}
-  for icon in Numix/16/actions/**
-  do
-  	noext="${icon/.svg}"
-  	mono=$(echo "${noext}""-symbolic.svg" | sed 's|16|scalable|')
-  	if [[ -n ${mono} ]] && [[ -f ${mono} ]]; then
-  		rm "${icon}"
-  		ln -sr "${mono}" "${icon}"
-  	fi
-  done
-  for icon in Numix/22/actions/**
-  do
-  	noext="${icon/.svg}"
-  	mono=$(echo "${noext}""-symbolic.svg" | sed 's|22|scalable|')
-  	if [[ -n ${mono} ]] && [[ -f ${mono} ]]; then
-  		rm "${icon}"
-  		ln -sr "${mono}" "${icon}"
-  	fi
-  done
-  for icon in Numix/24/actions/**
-  do
-  	noext="${icon/.svg}"
-  	mono=$(echo "${noext}""-symbolic.svg" | sed 's|24|scalable|')
-  	if [[ -n ${mono} ]] && [[ -f ${mono} ]]; then
-  		rm "${icon}"
-  		ln -sr "${mono}" "${icon}"
-  	fi
-  done
-  install -dm 755 "$pkgdir"/usr/share/icons
-  cp -dr --no-preserve='ownership' Numix "$pkgdir"/usr/share/icons/
-  cp -dr --no-preserve='ownership' Numix-Light "$pkgdir"/usr/share/icons/
+	cd ${srcdir}/${pkgname}
+
+	patch_icons() {
+		cd ${srcdir}/${pkgname}
+		_regex='(gtk-)*go(to)*-*(\w|-)+\.svg'
+		for _icon in ${1}/${2}/actions/**
+		do
+			_name=$(basename ${_icon})
+			if [[ ${_name} =~ ${_regex} ]]; then
+				_noext="${_icon/.svg}"
+				_mono=$(echo "${_noext}""-symbolic.svg" | sed "s|${2}|scalable|")
+				if [[ -n ${_mono} ]] && [[ -e ${_mono} ]]; then
+					rm "${_icon}"
+					cp -L "${_mono}" "${_icon}"
+					#sed -i 's|#bebebe|#444|g' "${_icon}"
+				fi
+			fi
+		done
+	}
+
+	for size in 16 22 24
+	do
+		patch_icons Numix ${size}
+	done
+
+	sed -i 's|Name=Numix Light|Name=Numix-Light|g' Numix-Light/index.theme
+	sed -i 's|Inherits=Numix|Inherits=Numix,Faenza,Adwaita,gnome,hicolor|g' Numix-Light/index.theme
+	sed -i 's|Inherits=gnome,hicolor|Inherits=Faenza,Adwaita,gnome,hicolor|g' Numix/index.theme
+
+	install -dm 755 "$pkgdir"/usr/share/icons
+	cp -dr --no-preserve='ownership' Numix "$pkgdir"/usr/share/icons/
+	cp -dr --no-preserve='ownership' Numix-Light "$pkgdir"/usr/share/icons/
 }
-# -*- mode: bash;-*-
