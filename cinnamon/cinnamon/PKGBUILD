@@ -6,7 +6,7 @@
 
 pkgname=cinnamon
 pkgver=2.8.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Linux desktop which provides advanced innovative features and a traditional user experience"
 arch=('i686' 'x86_64')
 url="http://cinnamon.linuxmint.com/"
@@ -23,10 +23,12 @@ options=('!emptydirs')
 install=${pkgname}.install
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/Cinnamon/archive/$pkgver.tar.gz"
         "set_wheel.patch"
-        "default-theme.patch")
-sha256sums=('5dc693cb57adce95cf917c94ee4e02fa8740e5cd5edbd8ee9cdeed81604aefd3'
-            '3c4c7bb65d9e3b7d5569a14a45ebf08d2326250869645511dfa18d87b8eaf444'
-            'da763a88b4ee2e889afffd189b877708ca34b704fe7e9b62c0cc2bd970564058')
+        "default-theme.patch"
+        "cc-panels.patch")
+sha256sums=('4ae7ed062e2bfacabdac66002c14666c4709182d45a6f0140a577800e28b0326'
+            '9f1d4f6b3391f6ff0a6761fa4bcfab297a5e1185a3d8ff24a760284b667366e2'
+            '566585873f38a79ec248b916645a2e081abec3c6d4df2c34339cde1f35375cc5'
+            'f8a92f3cfaa8ee1bc1aee546fff13c8bd86264d9c19b0cf6336abaacf7ffa71d')
 _allowed_in="staging"
 
 prepare() {
@@ -44,6 +46,9 @@ prepare() {
 
   # Set default theme to 'cinnamon'
   patch -Np1 -i ../default-theme.patch
+  
+  # https://github.com/linuxmint/Cinnamon/issues/4767
+  patch -Np1 -i ../cc-panels.patch
 
   # Add polkit agent to required components
   sed -i 's/RequiredComponents=\(.*\)$/RequiredComponents=\1polkit-gnome-authentication-agent-1;/' \
