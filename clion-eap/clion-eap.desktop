@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=CLion-EAP
+Version=
+Type=Application
+Exec="/opt/clion-eap/bin/clion.sh" %f
+Icon=/opt/clion-eap/bin/clion.png
+Comment="Powerful C and C++ IDE. Early Access Program (EAP) build."
+Categories=Development;IDE;
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-clion
+Name[en_US]=CLion-EAP
