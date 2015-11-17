@@ -21,10 +21,10 @@ sha256sums=('SKIP')
 
 pkgver() {
 	cd ${srcdir}/${pkgname}
-	git remote add palob http://github.com/palob/numix-icon-theme.git
+	{ git remote add palob http://github.com/palob/numix-icon-theme.git
 	git fetch --all
 	git pull --no-edit palob more-breeze-icons 
-	git pull --no-edit palob breeze-next-batch 
+	git pull --no-edit palob breeze-next-batch; } > /dev/null
 	printf "0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
