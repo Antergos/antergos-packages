@@ -26,7 +26,7 @@ sha256sums=('e31cbf9722fe3a66eec857a95b59ea3094854a6d33f430112e23aa108d4ceb77')
 #}
 
 package() {
-  cd ${srcdir:=$PWD}/${pkgname}
+  cd "${srcdir:=$PWD}/${pkgname}"**
   sed -i 's|Inherits=Numix|Inherits=Numix,Faenza,Adwaita,gnome,hicolor|g' Numix-Square/index.theme
   sed -i 's|Name=Numix Square Light|Name=Numix-Square-Light|g' Numix-Square-Light/index.theme
 	sed -i 's|Inherits=Numix-Light|Inherits=Numix-Light,Numix,Faenza,Adwaita,gnome,hicolor|g' Numix-Square-Light/index.theme
