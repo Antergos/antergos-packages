@@ -14,7 +14,7 @@ conflicts=('numix-icon-theme-square-kde')
 provides=('numix-icon-theme-square-kde')
 options=('!strip')
 install="${pkgname}.install"
-source=("numix-icon-theme-square.tar")
+source=("numix-icon-theme-square.zip")
 sha256sums=('e31cbf9722fe3a66eec857a95b59ea3094854a6d33f430112e23aa108d4ceb77')
 
 #pkgver() {
