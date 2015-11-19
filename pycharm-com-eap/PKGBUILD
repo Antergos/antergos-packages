@@ -4,9 +4,9 @@
 
 
 pkgname=pycharm-com-eap
-_buildver=143.595
-_pkgver=5.0.1
-_eap="False"
+_buildver=143.869.1
+_pkgver=5.0.2
+_eap="True"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
 pkgdesc="Powerful Python and Django IDE, Early Access Program (EAP) build. Community edition."
