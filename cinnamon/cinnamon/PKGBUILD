@@ -5,7 +5,7 @@
 # Contributor: CReimer
 
 pkgname=cinnamon
-pkgver=2.8.4
+pkgver=2.8.5
 pkgrel=2
 pkgdesc="Linux desktop which provides advanced innovative features and a traditional user experience"
 arch=('i686' 'x86_64')
@@ -23,12 +23,10 @@ options=('!emptydirs')
 install=${pkgname}.install
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/Cinnamon/archive/$pkgver.tar.gz"
         "set_wheel.patch"
-        "default-theme.patch"
-        "cc-panels.patch")
+        "default-theme.patch")
 sha256sums=('4ae7ed062e2bfacabdac66002c14666c4709182d45a6f0140a577800e28b0326'
             '9f1d4f6b3391f6ff0a6761fa4bcfab297a5e1185a3d8ff24a760284b667366e2'
-            '566585873f38a79ec248b916645a2e081abec3c6d4df2c34339cde1f35375cc5'
-            'f8a92f3cfaa8ee1bc1aee546fff13c8bd86264d9c19b0cf6336abaacf7ffa71d')
+            '566585873f38a79ec248b916645a2e081abec3c6d4df2c34339cde1f35375cc5')
 _allowed_in="staging"
 
 prepare() {
