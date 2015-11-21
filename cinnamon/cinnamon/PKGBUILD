@@ -44,9 +44,6 @@ prepare() {
 
   # Set default theme to 'cinnamon'
   patch -Np1 -i ../default-theme.patch
-  
-  # https://github.com/linuxmint/Cinnamon/issues/4767
-  patch -Np1 -i ../cc-panels.patch
 
   # Add polkit agent to required components
   sed -i 's/RequiredComponents=\(.*\)$/RequiredComponents=\1polkit-gnome-authentication-agent-1;/' \
