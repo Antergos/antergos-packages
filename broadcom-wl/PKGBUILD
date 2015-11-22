@@ -31,12 +31,9 @@ md5sums_x86_64=('3d994cc6c05198f4b6f07a213ac1e9e45a45159899e6c4a7feca5e6c395c302
 
 install=install
 
-_kernmajor="$(pacman -Q linux | sed -r 's/linux ([0-9]*.[0-9]*).*/\1/')"
-_kernver="$(</usr/lib/modules/extramodules-${_kernmajor}-ARCH/version)"
+_kernver="$(pacman -Sl core | grep ' linux ' | cut -d ' ' -f 3)-ARCH"
 
 prepare() {
-	_kernmajor="$(pacman -Q linux | sed -r 's/linux ([0-9]*.[0-9]*).*/\1/')"
-	_kernver="$(</usr/lib/modules/extramodules-${_kernmajor}-ARCH/version)"
 
 	patch -p1 -i license.patch
 	patch -p1 -i linux-recent.patch
