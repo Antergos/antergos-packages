@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=IntelliJ IDEA EAP
+Version=
+Type=Application
+Exec="/opt/intellij-idea-ue-eap/bin/idea.sh" %f
+Icon=/opt/intellij-idea-ue-eap/bin/idea.png
+Comment="Intelligent Java IDE with out-of-the-box support for web, enterprise, and mobile frameworks. Early Access Program (EAP) Build."
+Categories=Development;IDE;
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-idea
+Name[en_US]=intellij-idea-ue-eap.desktop

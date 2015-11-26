@@ -1,0 +1,64 @@
+# Maintainer: Antergos Developers <dustin@antergos.com>
+# Contributor: Gifts <gifts.antichat@gmail.com>
+# Contributor: Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
+
+pkgname=intellij-idea-ue-eap
+_buildver=143.1015.7
+_pkgver=15.0.2
+_eap="True"
+pkgver="${_pkgver}.${_buildver}"
+pkgrel=1
+pkgdesc="Intelligent Java IDE with out-of-the-box support for web, enterprise, and mobile frameworks. Early Access Program (EAP) Build."
+arch=('any')
+options=('!strip')
+url="http://www.jetbrains.com/idea/"
+license=("custom")
+depends=('java-environment' 'giflib' 'libxtst')
+makedepends=('wget')
+provides=("intellij-idea-ultimate-edition")
+conflicts=("intellij-idea-ultimate-edition")
+groups=("development" "IDE" "editor" "jetbrains")
+
+if [[ "True" = "${_eap}" ]]; then
+	_srcfile="ideaIU-${_buildver}.tar.gz"
+	source=("http://download.jetbrains.com/idea/${_srcfile}"
+			"${pkgname}.desktop")
+	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
+				"a1dfd0da292c46fe17382522ae448a7987e2221bd1d19323a3d2cdb3b2bed3c8")
+else
+	_srcfile="ideaIU-${_pkgver}.tar.gz"
+	source=("http://download.jetbrains.com/idea/${_srcfile}"
+			"${pkgname}.desktop")
+	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
+				"a1dfd0da292c46fe17382522ae448a7987e2221bd1d19323a3d2cdb3b2bed3c8")
+fi
+
+package() {
+	cd "${srcdir}"
+	install -dm 755 \
+		"${pkgdir}/opt/${pkgname}" \
+		"${pkgdir}/usr/bin/" \
+		"${pkgdir}/usr/share/licenses/${pkgname}/" \
+		"${pkgdir}/usr/share/applications/"
+
+	wget "https://www.jetbrains.com/idea/buy/license.pdf"
+	install -m644 license.pdf "${pkgdir}/usr/share/licenses/${pkgname}/IntellijIDEA_license.txt"
+
+	if [[ "True" = "${_eap}" ]]; then
+		cp -R --no-preserve=ownership "${srcdir}/ideaIU-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
+	else
+		cp -R --no-preserve=ownership "${srcdir}/ideaIU-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
+	fi
+	
+	if [[ "i686" = "${CARCH}" ]]; then
+		rm -f "${pkgdir}/opt/${pkgname}/bin/libyjpagent-linux64.so"
+		rm -f "${pkgdir}/opt/${pkgname}/bin/fsnotifier64"
+	fi
+
+	sed -i "s/Version=/Version=${pkgver}/g" "${pkgname}.desktop"
+	install -m644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/"
+	
+	ln -s "/opt/${pkgname}/bin/idea.sh" "${pkgdir}/usr/bin/idea-ue-eap"
+}
+
+# -*- mode: bash;-*-
