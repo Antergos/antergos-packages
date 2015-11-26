@@ -24,13 +24,13 @@ if [[ "True" = "${_eap}" ]]; then
 	source=("http://download.jetbrains.com/idea/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
-				"a1dfd0da292c46fe17382522ae448a7987e2221bd1d19323a3d2cdb3b2bed3c8")
+				"c6ffb4c3a14b4b6a90158fda92aab7dbee2bb32d9585b801682792966699919c")
 else
 	_srcfile="ideaIU-${_pkgver}.tar.gz"
 	source=("http://download.jetbrains.com/idea/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
-				"a1dfd0da292c46fe17382522ae448a7987e2221bd1d19323a3d2cdb3b2bed3c8")
+				"c6ffb4c3a14b4b6a90158fda92aab7dbee2bb32d9585b801682792966699919c")
 fi
 
 package() {
