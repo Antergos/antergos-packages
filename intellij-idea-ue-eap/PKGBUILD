@@ -45,9 +45,9 @@ package() {
 	install -m644 license.pdf "${pkgdir}/usr/share/licenses/${pkgname}/IntellijIDEA_license.txt"
 
 	if [[ "True" = "${_eap}" ]]; then
-		cp -R --no-preserve=ownership "${srcdir}/ideaIU-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
+		cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
 	else
-		cp -R --no-preserve=ownership "${srcdir}/ideaIU-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
+		cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
 	fi
 	
 	if [[ "i686" = "${CARCH}" ]]; then
