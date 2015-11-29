@@ -16,7 +16,7 @@ provides=('broadcom-wl-dkms')
 conflicts=('broadcom-wl-dkms')
 backup=('etc/modprobe.d/broadcom-wl-dkms.conf')
 install=install
-source=('modprobe.d'
+source=('broadcom-wl-dkms.conf'
 		'license.patch'
 		'wl_linux.c.patch'
 		'dkms.conf.in'
