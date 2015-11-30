@@ -1,19 +1,20 @@
-# Maintainer: Antergos Devs 
+# Maintainer: Antergos Devs <dev@antergos.com>
 
 pkgname=numix-frost-themes
 _pkgname=Numix-Frost
 _light=Numix-Frost-Light
 _branch=numix-frost-light
-pkgver=2.5.2
+pkgver=3.0.0
 _pkgver=${pkgver}
 pkgrel=1
 pkgdesc='Official Numix GTK theme - Antergos edition'
 arch=('any')
 license=('GPL3')
 url='http://numixproject.org/'
-depends=('gtk-engine-murrine')
+depends=('gtk-engine-murrine' 'gtk3>=3.16')
+makedepends=('ruby-sass' 'npm')
 replaces='gtk-theme-numix-frost'
-source=("git+http://github.com/lots0logs/Numix-Frost")
+source=("git+https://github.com/Antergos/Numix-Frost.git")
 install=theme.install
 sha256sums=('SKIP')
 
@@ -24,13 +25,34 @@ pkgver() {
 package() {
 
 cd "${srcdir}/${_pkgname}"
-install -d "${pkgdir}/usr/share/themes/${_pkgname}"
-install -d "${pkgdir}/usr/share/themes/${_light}"
-find . -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/$_pkgname/{}" \;
+git submodule init
+git submodule update
+make
+make DESTDIR=${pkgdir} install
+
+sed -i 's%Numix-Cinnamon%Numix-Frost%g' includes/cinnamon/Numix-Cinnamon/cinnamon/theme.json
+
+install -d "${pkgdir}/usr/share/themes/${_pkgname}/cinnamon"
+install -d "${pkgdir}/usr/share/themes/${_pkgname}/gnome-shell"
+cd gnome-shell
+find . -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/$_pkgname/gnome-shell/{}" \;
+
+
+cd ../includes/cinnamon/Numix-Cinnamon/cinnamon
+npm install gulp
+gulp sass
+cd ..
+cp -R --no-preserve=ownership cinnamon "$pkgdir/usr/share/themes/$_pkgname"
+
+cd "${srcdir}/${_pkgname}"
+git reset --hard origin/master
+
 git checkout "${_branch}"
-find . -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/$_light/{}" \;
-rm -rf "${pkgdir}/usr/share/themes/${_pkgname}/.idea" "${pkgdir}/usr/share/themes/${_pkgname}/.git"
-rm -rf "${pkgdir}/usr/share/themes/${_light}/.idea" "${pkgdir}/usr/share/themes/${_light}/.git"
+make
+make DESTDIR=${pkgdir} install
+
+cd gnome-shell
+find . -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/$_light/gnome-shell/{}" \;
 
 }
 # -*- mode: bash;-*-
