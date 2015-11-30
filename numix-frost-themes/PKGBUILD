@@ -42,7 +42,7 @@ cd ../includes/cinnamon/Numix-Cinnamon/cinnamon
 
 TEMP="${srcdir}"
 HOME="${srcdir}"
-npm install gulp gulp-plumber gulp-util rimraf
+npm install
 gulp sass
 cd ..
 cp -R --no-preserve=ownership cinnamon "$pkgdir/usr/share/themes/$_pkgname"
