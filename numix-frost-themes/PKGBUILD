@@ -45,6 +45,7 @@ HOME="${srcdir}"
 npm install
 gulp sass
 cd ..
+rm -rf ../.git
 cp -R --no-preserve=ownership cinnamon "$pkgdir/usr/share/themes/$_pkgname"
 
 cd "${srcdir}/${_pkgname}"
