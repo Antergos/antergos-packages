@@ -29,7 +29,6 @@ git submodule init
 git submodule update
 make
 make DESTDIR=${pkgdir} install
-rm -rf .git
 
 sed -i 's%Numix-Cinnamon%Numix-Frost%g' includes/cinnamon/Numix-Cinnamon/cinnamon/theme.json
 
