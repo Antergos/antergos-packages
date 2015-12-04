@@ -23,10 +23,11 @@ optdepends=('networkmanager: Location detection via available WiFi networks'
 			'upower: Battery API')
 install=icecat.install
 source=(	icecat.desktop
-		icecat-safe.desktop)
+		icecat-safe.desktop
+		vendor.js)
 source_x86_64=("http://ftpmirror.gnu.org/gnuzilla/${pkgver}/${pkgname}-${pkgver}.en-US.linux-x86_64.tar.bz2")
 source_i686=("http://ftpmirror.gnu.org/gnuzilla/${pkgver}/${pkgname}-${pkgver}.en-US.linux-i686.tar.bz2")
-md5sums=('' '' '')
+md5sums=('' '' '' '')
 
 
 package () {
