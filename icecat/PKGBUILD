@@ -37,10 +37,10 @@ package () {
 	install -dm755 ${pkgdir}/usr/share/pixmaps
 
 	for i in 16 32 48; do
-		install -Dm644 ${srcdir}/${pkgname}/browser/branding/official/default${i}.png \
+		install -Dm644 ${srcdir}/${pkgname}/browser/chrome/icons/default/default${i}.png \
 		"$pkgdir/usr/share/icons/hicolor/${i}x${i}/apps/icecat.png"
 	done
-	install -Dm644 ${srcdir}/${pkgname}/browser/branding/official/default48.png ${pkgdir}/usr/share/pixmaps/icecat.png
+	install -Dm644 ${srcdir}/${pkgname}/browser/chrome/icons/default/default48.png ${pkgdir}/usr/share/pixmaps/icecat.png
 	install -Dm644 ${srcdir}/icecat.desktop ${pkgdir}/usr/share/applications/
 	install -Dm644 ${srcdir}/icecat-safe.desktop ${pkgdir}/usr/share/applications/
 	
