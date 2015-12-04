@@ -24,8 +24,8 @@ optdepends=('networkmanager: Location detection via available WiFi networks'
 install=icecat.install
 source=(	icecat.desktop
 		icecat-safe.desktop)
-source_x86_64=("http://ftpmirror.gnu.org/gnuzilla/${pkgver}/${pkgname}-${_pkgver}.en-US.linux-x86_64.tar.bz2")
-source_i686=("http://ftpmirror.gnu.org/gnuzilla/${pkgver}/${pkgname}-${_pkgver}.en-US.linux-i686.tar.bz2")
+source_x86_64=("http://ftpmirror.gnu.org/gnuzilla/${pkgver}/${pkgname}-${pkgver}.en-US.linux-x86_64.tar.bz2")
+source_i686=("http://ftpmirror.gnu.org/gnuzilla/${pkgver}/${pkgname}-${pkgver}.en-US.linux-i686.tar.bz2")
 md5sums=('' '' '')
 
 
