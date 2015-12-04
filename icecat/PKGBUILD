@@ -46,8 +46,8 @@ package () {
 	
 	cp -R --no-preserve=ownership ${srcdir}/${pkgname} ${pkgdir}/usr/lib
 	
-	install -Dm644 "${srcdir}/vendor.js" "${pkgdir}/usr/lib/${pkgname}/browser/defaults/preferences/vendor.js"
+	install -Dm644 "${srcdir}/vendor.js" "${pkgdir}/usr/lib/${pkgname}/defaults/pref/vendor.js"
 	
-	ln -s "${pkgdir}/usr/bin/icecat" "/usr/lib/${pkgname}/run-icecat.sh" 
+	ln -s "${pkgdir}/usr/bin/icecat" "/usr/lib/${pkgname}/run-icecat.sh"
 }
 
