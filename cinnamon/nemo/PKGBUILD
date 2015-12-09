@@ -3,7 +3,7 @@
 # Contributor: Ner0
 
 pkgname=nemo
-pkgver=2.8.5
+pkgver=2.8.6
 pkgrel=1
 pkgdesc="Cinnamon file manager (Nautilus fork)"
 arch=('i686' 'x86_64')
