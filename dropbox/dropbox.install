@@ -10,8 +10,11 @@ _post_install_upgrade() {
 	if [[ -d "${HOME}/.dropbox-dist" ]]; then
 		rm -R "${HOME}/.dropbox-dist"
 	fi
-	install -dm0 "${HOME}/.dropbox-dist"
-	cp /usr/share/applications/dropbox.desktop "${HOME}/.config/autostart/"
+	if [[ -d "/home/${USER}/.dropbox-dist" ]]; then
+		rm -R "/home/${USER}/.dropbox-dist"
+	fi
+	install -dm0 "/home/${USER}/.dropbox-dist"
+	cp --no-preserve=ownership /usr/share/applications/dropbox.desktop "/home/${USER}/.config/autostart/"
 }
 
 post_install() {
@@ -28,7 +31,7 @@ post_upgrade() {
 post_remove() {
   unlink -f /usr/bin/dropbox
   unlink -f /usr/bin/dropboxd
-  rm -R "${HOME}/.dropbox-dist"
-  rm -R "${HOME}/.config/dropbox.desktop"
+  rm -R "/home/${USER}/.dropbox-dist"
+  rm -R "/home/${USER}/.config/dropbox.desktop"
 }
 # -*- mode: bash;-*-
