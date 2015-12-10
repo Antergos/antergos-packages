@@ -2,7 +2,7 @@
 
 pkgname=lightdm-webkit-greeter
 pkgver=0.1.2
-pkgrel=6
+pkgrel=7
 pkgdesc="A lightweight display manager"
 arch=('i686' 'x86_64')
 url="https://launchpad.net/lightdm-webkit-greeter"
