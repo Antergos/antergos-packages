@@ -12,27 +12,21 @@ optdepends=('faenza-icon-theme: fallback icons'
 			'breeze-icons: KDE'
 			'kfaenza-icon-theme: fallback icons (KDE)')
 makedepends=('git')
-provides=("${pkgname}")
-conflicts=("${pkgname}")
 options=('!strip')
 install="${pkgname}.install"
 source=("git+http://github.com/numixproject/numix-icon-theme.git")
-sha256sums=('SKIP')
+md5sums=('SKIP')
 
 pkgver() {
-	cd ${srcdir}/${pkgname}
-	{ git remote add palob http://github.com/palob/numix-icon-theme.git
-	git fetch --all
-	git pull --no-edit palob more-breeze-icons 
-	git pull --no-edit palob breeze-next-batch; } > /dev/null 2>&1
+	cd "${srcdir}/${pkgname}"
 	printf "0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 package() {
-	cd ${srcdir}/${pkgname}
+	cd "${srcdir}/${pkgname}"
 
 	patch_icons() {
-		cd ${srcdir}/${pkgname}
+		cd "${srcdir}/${pkgname}"
 		_regex='(gtk-)*go(to)*-*(\w|-)+\.svg'
 		for _icon in ${1}/${2}/actions/**
 		do
@@ -43,7 +37,6 @@ package() {
 				if [[ -n ${_mono} ]] && [[ -e ${_mono} ]]; then
 					rm "${_icon}"
 					cp -L "${_mono}" "${_icon}"
-					#sed -i 's|#bebebe|#444|g' "${_icon}"
 				fi
 			fi
 		done
