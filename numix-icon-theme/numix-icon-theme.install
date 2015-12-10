@@ -12,7 +12,11 @@ post-install() {
 }
 
 post-upgrade() {
-	case $DESKTOP_SESSION in
+	post_install
+}
+
+post-remove() {
+  case $DESKTOP_SESSION in
 		kde*|*plasma*|lxqt*) 
 			rm /var/tmp/kdecache-${USER}/icon-cache.kcache
 		  ;;
@@ -20,10 +24,6 @@ post-upgrade() {
 		  gtk-update-icon-cache -ftq usr/share/icons/Numix usr/share/icons/Numix-Light
 		  ;;
 	esac
-}
-
-post-remove() {
-  post-upgrade
 }
 
 # vim: ts=2 sw=2 et:
