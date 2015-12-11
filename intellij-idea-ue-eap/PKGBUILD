@@ -41,9 +41,6 @@ package() {
 		"${pkgdir}/usr/share/licenses/${pkgname}/" \
 		"${pkgdir}/usr/share/applications/"
 
-	wget "https://www.jetbrains.com/idea/buy/license.pdf"
-	install -m644 license.pdf "${pkgdir}/usr/share/licenses/${pkgname}/IntellijIDEA_license.txt"
-
 	if [[ "True" = "${_eap}" ]]; then
 		cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
 	else
