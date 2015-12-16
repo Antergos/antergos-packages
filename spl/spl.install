@@ -30,7 +30,7 @@ check_hostid() {
 check_initramfs() {
 	echo '>>> Updating module dependencies. Please wait ...'
 
-	if [[ $1 = remove ]]; then
+	if [[ $1 = 'remove' ]]; then
 		dkms remove spl/$2 --all
 		
 		MK_CONF=$(grep -v '#' /etc/mkinitcpio.conf | grep zfs >/dev/null; echo $?);
@@ -40,7 +40,8 @@ check_initramfs() {
 			echo '>>> "hooks" list and then regenerate the initial ramdisk.'
 		fi
 	else
-		dkms install spl/$1
+		dkms add -m spl -v $1
+		dkms install -m spl -v $1
 		
 		echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'
  		mkinitcpio -p linux
