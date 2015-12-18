@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=clion-eap
-_buildver=143.1015.8
-_pkgver=1.2.2
+_buildver=144.2151.8
+_pkgver=1.5.0
 _eap="True"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
@@ -18,13 +18,13 @@ conflicts=("clion")
 groups=("development", "IDE", "editor", "jetbrains")
 
 if [[ "True" = "${_eap}" ]]; then
-	_srcfile="clion-${_buildver}.tar.gz"
+	_srcfile="CLion-${_buildver}.tar.gz"
 	source=("http://download.jetbrains.com/cpp/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
 				"c3238ab950f58e2c8ec6e637573a8663997a794693fd220be3ded8a812b24841")
 else
-	_srcfile="clion-${_pkgver}.tar.gz"
+	_srcfile="CLion-${_pkgver}.tar.gz"
 	source=("http://download.jetbrains.com/cpp/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
@@ -38,9 +38,6 @@ package() {
 		"${pkgdir}/usr/bin/" \
 		"${pkgdir}/usr/share/licenses/${pkgname}/" \
 		"${pkgdir}/usr/share/applications/"
-
-	wget "https://www.jetbrains.com/clion/buy/license.pdf"
-	install -m644 license.pdf "${pkgdir}/usr/share/licenses/${pkgname}/CLion_license.txt"
 
 	if [[ "True" = "${_eap}" ]]; then
 		cp -R --no-preserve=ownership "${srcdir}/clion-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
