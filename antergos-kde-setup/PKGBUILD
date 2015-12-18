@@ -20,6 +20,7 @@ depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clement
 		'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve' 'systemsettings'
 		'transmission-qt' 'user-manager' 'vlc' 'xdg-user-dirs')
 makedepends=()
+_is_metapkg='yes'
 conflicts=()
 replaces=()
 backup=()
