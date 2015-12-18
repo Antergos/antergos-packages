@@ -1,32 +1,38 @@
-# Maintainer: Xavion <Xavion (dot) 0 (at) Gmail (dot) com>
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Xavion <Xavion (dot) 0 (at) Gmail (dot) com>
 
 pkgname=kdesudo
 pkgver=3.4.2.4
-pkgrel=1
-pkgdesc="A SUdo frontend for KDE"
+pkgrel=2
+pkgdesc="A sudo frontend for KDE"
 arch=("i686" "x86_64")
 url="https://launchpad.net/kdesudo"
 license=("GPL")
 depends=("kdebase-runtime" "sudo")
 makedepends=("cmake" "automoc4")
 options=(!emptydirs)
-source=(http://launchpad.net/${pkgname}/3.x/${pkgver}/+download/${pkgname}-${pkgver}.tar.gz)
+source=('kdesudo::bzr+lp:~kubuntu-kdesudo/kdesudo/frameworks')
+md5sums=('SKIP')
+
 
 build() {
-	cd "${srcdir}"/${pkgname}-${pkgver}
+	mkdir build
+	cd build
 
 	# Config
 	sed -i "s|ADD_SUBDIRECTORY(en)|#ADD_SUBDIRECTORY(en)|g" doc/CMakeLists.txt
 
-	cmake . -DCMAKE_INSTALL_PREFIX=/usr
+	cmake ../kdesudo \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DLIB_INSTALL_DIR=lib \
+		-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+		-DBUILD_TESTING=OFF
 	make
 }
 
 package() {
-	cd "${srcdir}"/${pkgname}-${pkgver}
-
-	make DESTDIR="${pkgdir}" install
+	make -C build DESTDIR="${pkgdir}" install
 }
 
-sha1sums=('4821552c6ce32e9ce92bc054a1963a1e96bf5185')
 # -*- mode: bash;-*-
