@@ -1,5 +1,5 @@
 post_install() {
-	if [[ "${SUDO_USER}" != '' ]; then
+	if [[ "${SUDO_USER}" != '' ]]; then
 		_USER="${SUDO_USER}"
 	else
 		_USER="${USER}"
