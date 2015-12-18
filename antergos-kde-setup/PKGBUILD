@@ -12,13 +12,14 @@ depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clement
 		'kcalc' 'kde-gtk-config' 'kdebase-kdepasswd' 'kdebase-kdialog' 'kdebase-kfind'
 		'kdegraphics-okular' 'kdegraphics-thumbnailers' 'kdemultimedia-ffmpegthumbs'
 		'kdenetwork-kopete' 'kde-servicemenus-rootactions' 'kdesudo' 'kdeutils-sweeper'
-		'kf5' 'kf5-aids' 'kfaenza-icon-theme' 'kipi-plugins' 'khelpcenter' 'kinfocenter'
+		'kdelibs4support' 'kfaenza-icon-theme' 'kipi-plugins' 'khelpcenter' 'kinfocenter'
 		'kmenuedit' 'kmix' 'konsole' 'kscreen' 'ksshaskpass' 'ksysguard' 'kwallet-pam'
 		'kwalletmanager' 'kwayland-integration' 'kwin' 'kwrited' 'milou'
 		'nm-connection-editor' 'numix-frost-themes' 'numix-icon-theme-square' 'oxygen'
 		'oxygen-cursors' 'plasma-desktop' 'plasma-nm' 'plasma-pa' 'plasma-workspace'
-		'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve' 'systemsettings'
-		'transmission-qt' 'user-manager' 'vlc' 'xdg-user-dirs')
+		'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve-qt5' 'qtcurve-qt4'
+		'qtcurve-gtk2' 'systemsettings' 'transmission-qt' 'user-manager' 'vlc'
+		'xdg-user-dirs')
 makedepends=()
 _is_metapkg='yes'
 conflicts=()
