@@ -20,7 +20,7 @@ depends=('python2-gobject2' 'python2-xdg' 'xdg-utils' 'mozo' 'mate-panel>=1.8.0'
          'python2-keybinder2' 'python2-xlib' 'pygtk' 'gksu')
 optdepends=('mate-screensaver: lock screen button'
             'pamac: package manager button')
-source=("http://packages.linuxmint.com/pool/main/m/mintmenu/mintmenu_${pkgver}.tar.gz"
+source=("http://packages.linuxmint.com/pool/main/m/mintmenu/mintmenu_${pkgver}.tar.xz"
         'http://github.com/linuxmint/mint-translations/archive/master.tar.gz' 
         'antergos_compat.patch'
         'removescript')
