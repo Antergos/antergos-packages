@@ -1,14 +1,24 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-kde-setup
-pkgver=0.0.2
+pkgver=0.1.0
 pkgrel=1
 pkgdesc="Setup configuration for Antergos KDE"
 url="http://www.antergos.com"
 arch=('any')
-license=('GPL2')
-depends=('bash')
-optdepends=('numix-frost-themes' 'numix-icon-theme')
+license=('GPL3')
+depends=('antergos-kde-setup' 'ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao'
+		'clementine' 'dolphin' 'dolphin-plugins' 'dvd+rw-tools' 'grub2-editor' 'gwenview' 
+		'k3b' 'kate' 'kcalc' 'kde-gtk-config' 'kdebase-kdepasswd' 'kdebase-kdialog' 
+		'kdebase-kfind' 'kdegraphics-okular' 'kdegraphics-thumbnailers' 
+		'kdemultimedia-ffmpegthumbs' 'kdenetwork-kopete' 'kde-servicemenus-rootactions' 
+		'kdesudo' 'kdeutils-sweeper' 'kf5' 'kf5-aids' 'kfaenza-icon-theme' 'kipi-plugins' 
+		'khelpcenter' 'kinfocenter' 'kmenuedit' 'kmix' 'konsole' 'kscreen' 'ksshaskpass' 
+		'ksysguard' 'kwallet-pam' 'kwalletmanager' 'kwayland-integration' 'kwin' 'kwrited' 
+		'milou' 'nm-connection-editor' 'numix-frost-themes' 'numix-icon-theme-square'
+		'oxygen' 'oxygen-cursors' 'plasma-desktop' 'plasma-nm' 'plasma-pa'
+		'plasma-workspace' 'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve'
+		'systemsettings' 'transmission-qt' 'user-manager' 'vlc' 'xdg-user-dirs')
 makedepends=()
 conflicts=()
 replaces=()
@@ -17,12 +27,12 @@ source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
 sha256sums=('d5efb2a90c943bc2287659d160bebdcf45c1c0439eb9bdf17d9192532fca87ca')
 
 package() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
-  install -d "${pkgdir}/usr/share/${pkgname}"
-  cp -R * "${pkgdir}/usr/share/${pkgname}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	install -d "${pkgdir}/usr/share/${pkgname}"
+	cp -R * "${pkgdir}/usr/share/${pkgname}"
 
-  # create a symlink to install.sh
-  mkdir -p "${pkgdir}/usr/bin"
-  ln -s "/usr/share/${pkgname}/install.sh" "${pkgdir}/usr/bin/antergos-kde-setup"
+	# create a symlink to install.sh
+	mkdir -p "${pkgdir}/usr/bin"
+	ln -s "/usr/share/${pkgname}/install.sh" "${pkgdir}/usr/bin/antergos-kde-setup"
 }
 # -*- mode: bash;-*-
