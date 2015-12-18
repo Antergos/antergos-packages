@@ -11,8 +11,8 @@ license=("GPL")
 depends=("kdebase-runtime" "sudo" "kdelibs4support" "karchive")
 makedepends=("bzr" "cmake" "automoc4")
 options=(!emptydirs)
-source=('kdesudo::bzr+lp:~kubuntu-kdesudo/kdesudo/frameworks')
-md5sums=('SKIP')
+source=('kdesudo.tar.gz')
+md5sums=('')
 
 
 build() {
