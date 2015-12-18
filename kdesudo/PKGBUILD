@@ -8,7 +8,7 @@ pkgdesc="A sudo frontend for KDE"
 arch=("i686" "x86_64")
 url="https://launchpad.net/kdesudo"
 license=("GPL")
-depends=("kdebase-runtime" "sudo")
+depends=("kdebase-runtime" "sudo" "kdelibs4support" "karchive")
 makedepends=("bzr" "cmake" "automoc4")
 options=(!emptydirs)
 source=('kdesudo::bzr+lp:~kubuntu-kdesudo/kdesudo/frameworks')
@@ -16,13 +16,13 @@ md5sums=('SKIP')
 
 
 build() {
-	mkdir build
-	cd build
+	cd "${pkgname}"
+	mkdir build && cd build
 
 	# Config
-	sed -i "s|ADD_SUBDIRECTORY(en)|#ADD_SUBDIRECTORY(en)|g" doc/CMakeLists.txt
+	sed -i "s|ADD_SUBDIRECTORY(en)|#ADD_SUBDIRECTORY(en)|g" ../doc/CMakeLists.txt
 
-	cmake ../kdesudo \
+	cmake .. \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DLIB_INSTALL_DIR=lib \
@@ -32,6 +32,7 @@ build() {
 }
 
 package() {
+	cd "${pkgname}"
 	make -C build DESTDIR="${pkgdir}" install
 }
 
