@@ -4,9 +4,9 @@
 
 
 pkgname=pycharm-com-eap
-_buildver=143.1183.3
-_pkgver=5.0.2
-_eap="False"
+_buildver=143.1453.1
+_pkgver=5.0.3
+_eap="True"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
 pkgdesc="Powerful Python and Django IDE, Early Access Program (EAP) build. Community edition."
@@ -16,7 +16,7 @@ url="http://www.jetbrains.com/pycharm/"
 license=("custom")
 makedepends=("wget")
 depends=("java-environment>=6")
-provides=("pycharm-eap" "pycharm-community")
+provides=("pycharm" "pycharm-eap" "pycharm-community")
 conflicts=("pycharm-eap" "pycharm-community" "pycharm-professional")
 groups=("development" "IDE" "editor" "jetbrains")
 
@@ -40,12 +40,12 @@ package() {
 		"${pkgdir}/opt/${pkgname}" \
 		"${pkgdir}/usr/bin/" \
 		"${pkgdir}/usr/share/applications/"
-	_eap="False"
-	if [[ "True" = "${_eap}" ]]; then
-		cp -R "${srcdir}/pycharm-community-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
-	else
+
+	#if [[ "True" = "${_eap}" ]]; then
+	#	cp -R "${srcdir}/pycharm-community-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
+	#else
 		cp -R "${srcdir}/pycharm-community-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
-	fi
+	#fi
 	
 	if [[ "i686" = "${CARCH}" ]]; then
 		rm -f "${pkgdir}/opt/${pkgname}/bin/libyjpagent-linux64.so"
