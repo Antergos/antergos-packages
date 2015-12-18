@@ -6,7 +6,7 @@
 _pgo=true
 
 pkgname=firefox-kde
-pkgver=41.0.2
+pkgver=43.0
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org with openSUSE's KDE integratation patches."
 arch=('i686' 'x86_64')
@@ -24,7 +24,7 @@ optdepends=('networkmanager: Location detection via available WiFi networks'
 provides=("firefox=${pkgver}")
 conflicts=('firefox')
 install=firefox.install
-_patchrev=7aa7715fdc8f
+_patchrev=de3a92aed259
 options=('!emptydirs'  'strip' )
 _patchurl="http://www.rosenauer.org/hg/mozilla/raw-file/$_patchrev"
 source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$pkgver/source/firefox-$pkgver.source.tar.xz"
