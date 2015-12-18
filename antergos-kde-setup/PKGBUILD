@@ -22,6 +22,7 @@ depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clement
 		'xdg-user-dirs')
 makedepends=()
 _is_metapkg='yes'
+install=${pkgname}.install
 conflicts=()
 replaces=()
 backup=()
