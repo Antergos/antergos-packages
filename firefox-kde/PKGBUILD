@@ -37,7 +37,7 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$pkgver/source
 	  "$_patchurl/mozilla-kde.patch"
 	  "$_patchurl/mozilla-language.patch"
 	  "$_patchurl/mozilla-nongnome-proxies.patch"
-	  "$_patchurl/toolkit-download-folder.patch"
+	  "$_patchurl/toolkit-ui-lockdown.patch"
 	  "add_missing_pgo_rule.patch"
 	  "pgo_fix_missing_kdejs.patch")
 md5sums=('d71f0f761c51aeae03e367001afc9f8d'
