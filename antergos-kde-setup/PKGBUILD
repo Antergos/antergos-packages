@@ -2,24 +2,23 @@
 
 pkgname=antergos-kde-setup
 pkgver=0.1.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Setup configuration for Antergos KDE"
 url="http://www.antergos.com"
 arch=('any')
 license=('GPL3')
 depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clementine'
-		'dolphin' 'dolphin-plugins' 'dvd+rw-tools' 'grub2-editor' 'gwenview' 'k3b' 'kate'
-		'kcalc' 'kde-gtk-config' 'kdebase-kdepasswd' 'kdebase-kdialog' 'kdebase-kfind'
-		'kdegraphics-okular' 'kdegraphics-thumbnailers' 'kdemultimedia-ffmpegthumbs'
-		'kdenetwork-kopete' 'kde-servicemenus-rootactions' 'kdesudo' 'kdeutils-sweeper'
-		'kdelibs4support' 'kfaenza-icon-theme' 'kipi-plugins' 'khelpcenter' 'kinfocenter'
-		'kmenuedit' 'kmix' 'konsole' 'kscreen' 'ksshaskpass' 'ksysguard' 'kwallet-pam'
-		'kwalletmanager' 'kwayland-integration' 'kwin' 'kwrited' 'milou'
-		'nm-connection-editor' 'numix-frost-themes' 'numix-icon-theme-square' 'oxygen'
-		'oxygen-cursors' 'plasma-desktop' 'plasma-nm' 'plasma-pa' 'plasma-workspace'
-		'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve-qt5' 'qtcurve-qt4'
-		'qtcurve-gtk2' 'systemsettings' 'transmission-qt' 'user-manager' 'vlc'
-		'xdg-user-dirs')
+		'dolphin' 'dolphin-plugins' 'dvd+rw-tools' 'grub2-editor' 'ffmpegthumbs' 'gwenview' 'k3b'
+		'kate' 'kcalc' 'kde-gtk-config' 'kdebase-kdepasswd' 'kdebase-kdialog' 'kdebase-kfind'
+		'kdegraphics-okular' 'kdegraphics-thumbnailers' 'kdenetwork-kopete'
+		'kde-servicemenus-rootactions' 'kdesudo' 'kdeutils-sweeper' 'kdelibs4support'
+		'kfaenza-icon-theme' 'kipi-plugins' 'khelpcenter' 'kinfocenter' 'kmenuedit' 'kmix'
+		'konsole' 'kscreen' 'ksshaskpass' 'ksysguard' 'kwallet-pam' 'kwalletmanager'
+		'kwayland-integration' 'kwin' 'kwrited' 'milou' 'nm-connection-editor' 'numix-frost-themes'
+		'numix-icon-theme-square' 'oxygen' 'oxygen-cursors' 'plasma-desktop' 'plasma-nm'
+		'plasma-pa' 'plasma-workspace' 'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve-qt5'
+		'qtcurve-qt4' 'qtcurve-gtk2' 'spectacle' 'systemsettings' 'transmission-qt' 'user-manager'
+		'vlc' 'xdg-user-dirs')
 makedepends=()
 _is_metapkg='yes'
 install=${pkgname}.install
