@@ -1,10 +1,11 @@
-# Maintainer: Massimiliano Torromeo <massimiliano.torromeo@gmail.com>
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Massimiliano Torromeo <massimiliano.torromeo@gmail.com>
 # Contributor: Tom < tomgparchaur at gmail dot com >
 # Contributor: David Manouchehri <d@32t.ca>
 
 pkgname=dropbox
-pkgver=3.12.5
-pkgrel=2
+pkgver=3.12.6
+pkgrel=1
 pkgdesc="A free service that lets you bring your photos, docs, and videos anywhere and share them easily."
 arch=("i686" "x86_64")
 url="http://www.dropbox.com"
@@ -15,6 +16,7 @@ optdepends=(
     'perl-file-mimeinfo: opening dropbox folder on some desktop environments'
 )
 conflicts=("dropbox-experimental")
+groups=('cloud-storage')
 options=('!strip' '!upx')
 install=("dropbox.install")
 
