@@ -3,8 +3,8 @@
 # Contributor: Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
 
 pkgname=intellij-idea-ue-eap
-_buildver=144.2151.16
-_pkgver=16.0.0
+_buildver=143.1559.1
+_pkgver=15.0.3
 _eap="True"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
@@ -20,13 +20,13 @@ conflicts=("intellij-idea-ultimate-edition")
 groups=("development" "IDE" "editor" "jetbrains")
 
 if [[ "True" = "${_eap}" ]]; then
-	_srcfile="ideaIU-${_buildver}-custom-jdk-linux.tar.gz"
+	_srcfile="ideaIU-${_buildver}.tar.gz"
 	source=("http://download.jetbrains.com/idea/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
 				"c6ffb4c3a14b4b6a90158fda92aab7dbee2bb32d9585b801682792966699919c")
 else
-	_srcfile="ideaIU-${_pkgver}-custom-jdk-linux.tar.gz"
+	_srcfile="ideaIU-${_pkgver}.tar.gz"
 	source=("http://download.jetbrains.com/idea/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
