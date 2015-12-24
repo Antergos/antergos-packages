@@ -2,7 +2,7 @@
 # Contributors: Achilleas Pipinellis, speed145a, Schnouki
 
 pkgname=firefox-beta
-pkgver=44.0b1
+pkgver=44.0b2
 _major=${pkgver/rc*}
 _build=${pkgver/*rc}
 pkgrel=1
@@ -10,6 +10,7 @@ pkgdesc="Standalone web browser from mozilla.org - Beta"
 arch=('i686' 'x86_64')
 url="https://www.mozilla.org/en-US/firefox/channel/#beta"
 license=('MPL' 'GPL' 'LGPL')
+groups=('browser')
 depends=('alsa-lib' 'dbus-glib' 'desktop-file-utils' 'gtk2' 'hicolor-icon-theme'
          'icu' 'libevent' 'libvpx' 'libxt' 'mime-types' 'nss' 'sqlite')
 optdepends=('gst-plugins-base: vorbis decoding, ogg demuxing'
