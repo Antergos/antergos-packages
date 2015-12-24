@@ -6,9 +6,8 @@
 # Contributor: Muhammad 'MJ' Jassim <UnbreakableMJ@gmail.com> 
 
 pkgname=icecat
-pkgver=38.4.0
-_pkgver=38.4.0-gnu1
-_pkgverbase=${pkgver%%.*}
+pkgver=38.5.0
+_pkgver=38.5.0-gnu1
 pkgrel=1
 pkgdesc="GNU version of the Firefox browser."
 arch=(i686 x86_64)
