@@ -1,7 +1,7 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=clion-eap
-_buildver=144.2151.8
+_buildver=144.2608.6
 _pkgver=1.5.0
 _eap="True"
 pkgver="${_pkgver}.${_buildver}"
@@ -11,7 +11,7 @@ arch=('any')
 options=('!strip')
 url="http://www.jetbrains.com/clion/"
 license=("custom")
-depends=("java-environment>=6")
+depends=("java-environment>=8")
 makedepends=('wget')
 provides=("clion")
 conflicts=("clion")
