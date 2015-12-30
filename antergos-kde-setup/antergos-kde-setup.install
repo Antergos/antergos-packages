@@ -1,8 +1,6 @@
 post_install() {
 	if [[ "${SUDO_USER}" != '' ]]; then
 		_ANT_USER="${SUDO_USER}"
-	elif [[ "${USERNAME}" != '' ]]; then
-		_ANT_USER="${USERNAME}"
 	elif [[ "${HOME}" != '' ]]; then
 		_ANT_USER="${HOME#/home/}"
 	else

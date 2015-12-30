@@ -1,7 +1,7 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-kde-setup
-pkgver=0.1.4
+pkgver=0.1.5
 pkgrel=1
 pkgdesc="Setup configuration for Antergos KDE"
 url="http://www.antergos.com"
@@ -32,11 +32,13 @@ sha256sums=('SKIP')
 package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	install -d "${pkgdir}/usr/share/${pkgname}"
-	cp -R * "${pkgdir}/usr/share/${pkgname}"
+	find . -maxdepth 1 -type d ! -name '*.git*' -exec cp -R {} "${pkgdir}/usr/share/${pkgname}" \;
+	find . -maxdepth 1 -type f ! -path '**.git/**' -exec cp {} "${pkgdir}/usr/share/${pkgname}" \;
+	# Dont know WTH the above is not excluding the git directory.
 	rm -rf "${pkgdir}/usr/share/${pkgname}/.git"
 
 	# create a symlink to install.sh
 	mkdir -p "${pkgdir}/usr/bin"
-	ln -s "/usr/share/${pkgname}/install.sh" "${pkgdir}/usr/bin/antergos-kde-setup"
+	ln -s "/usr/share/${pkgname}/install.sh" "${pkgdir}/usr/bin/${pkgname}"
 }
 # -*- mode: bash;-*-
