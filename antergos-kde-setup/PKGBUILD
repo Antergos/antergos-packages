@@ -1,7 +1,7 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-kde-setup
-pkgver=0.1.3
+pkgver=0.1.4
 pkgrel=1
 pkgdesc="Setup configuration for Antergos KDE"
 url="http://www.antergos.com"
@@ -25,8 +25,9 @@ install=${pkgname}.install
 conflicts=()
 replaces=()
 backup=()
-source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
-sha256sums=('d5efb2a90c943bc2287659d160bebdcf45c1c0439eb9bdf17d9192532fca87ca')
+#source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
+source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
+sha256sums=('SKIP')
 
 package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
