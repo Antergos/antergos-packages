@@ -1,10 +1,16 @@
 post_install() {
 	if [[ "${SUDO_USER}" != '' ]]; then
-		_USER="${SUDO_USER}"
+		_ANT_USER="${SUDO_USER}"
+	elif [[ "${USERNAME}" != '' ]]; then
+		_ANT_USER="${USERNAME}"
+	elif [[ "${HOME}" != '' ]]; then
+		_ANT_USER="${HOME#/home/}"
 	else
-		_USER="${USER}"
+		echo "Error: Unable to determine current user."
+		exit 1
 	fi
-	antergos-kde-setup "${_USER}" 'no-overwrite'
+	
+	/usr/bin/antergos-kde-setup "${_ANT_USER}" "no-overwrite"
 }
 
 post_upgrade() {
