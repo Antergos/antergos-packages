@@ -5,7 +5,7 @@
 pkgname=spl
 pkgver=0.6.5.3
 _pkgver=0.6.5.3
-pkgrel=4
+pkgrel=5
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")
@@ -20,8 +20,7 @@ md5sums=('SKIP'
          'a54f0041a9e15b050f25c463f1db7449')
 install=spl.install
 
-_kernel=4.2.5
-_kernel=4.2.5
+_kernel=4.3.3
 
 pkgver() {
     cd "${srcdir}/spl"
