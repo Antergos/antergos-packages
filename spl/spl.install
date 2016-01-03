@@ -40,8 +40,8 @@ check_initramfs() {
 			echo '>>> "hooks" list and then regenerate the initial ramdisk.'
 		fi
 	else
-		dkms add -m spl -v $1
-		dkms install -m spl -v $1
+		dkms add spl/$1
+		dkms install spl/$1
 		
 		echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'
  		mkinitcpio -p linux

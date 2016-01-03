@@ -25,8 +25,8 @@ check_initramfs() {
 			echo '>>> "hooks" list and then regenerate the initial ramdisk.'
 		fi
 	else
-		dkms add -m zfs -v $1
-		dkms install -m zfs -v $1
+		dkms add zfs/$1
+		dkms install zfs/$1
 		
 		echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'
  		mkinitcpio -p linux
