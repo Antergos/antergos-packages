@@ -15,23 +15,24 @@ depends=('qt5-base' 'qt5-webkit' 'phonon-qt5' 'phonon-qt5-vlc' 'quazip-qt5' 'qtk
 		'liblastfm-qt5' 'libechonest-qt5' 'sqlite' 'taglib>=1.10' 'lucene++' 'qca-qt5' 'telepathy-qt5')
 makedepends=('cmake' 'sparsehash' 'boost' 'websocketpp' 'gnutls' 'git')
 groups=('music')
-source=("${pkgname}-${pkgver}::https://github.com/tomahawk-player/tomahawk/archive/master.zip")
-md5sums=('30e4d4f014b71329bd1d3ee4ca98e2be')
+source=()
+md5sums=()
 install=tomahawk.install
 
 pkgver() {
-	cd "${pkgname}-${pkgver}"
+	cd "${pkgname}"
 	printf "%s.r%s" "${pkgver}" "$(git rev-list --count HEAD)"
 }
 
 prepare() {
-  rm -rf "build-qt5"
-  mkdir -p "build-qt5"
+	git clone --depth 1 git@github.com:tomahawk-player/tomahawk.git ${pkgname} 
+	rm -rf "build-qt5"
+	mkdir -p "build-qt5"
 }
 
 build() {
   cd "build-qt5"
-  cmake "../${pkgname}-${pkgver}" \
+  cmake "../${pkgname}" \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=/usr/lib \
