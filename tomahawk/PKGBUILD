@@ -13,11 +13,16 @@ license=('GPL3')
 # NOTE: The phonon VLC backend supposedly supports networking better than the gstreamer backend.
 depends=('qt5-base' 'qt5-webkit' 'phonon-qt5' 'phonon-qt5-vlc' 'quazip-qt5' 'qtkeychain-qt5' 'attica-qt5'
 		'liblastfm-qt5' 'libechonest-qt5' 'sqlite' 'taglib>=1.10' 'lucene++' 'qca-qt5' 'telepathy-qt5')
-makedepends=('cmake' 'sparsehash' 'boost' 'websocketpp' 'gnutls')
+makedepends=('cmake' 'sparsehash' 'boost' 'websocketpp' 'gnutls' 'git')
 groups=('music')
-source=("http://download.tomahawk-player.org/${pkgname}-${pkgver}.tar.bz2")
-md5sums=('')
+source=("${pkgname}-${pkgver}::https://github.com/tomahawk-player/tomahawk/archive/master.zip")
+md5sums=('30e4d4f014b71329bd1d3ee4ca98e2be')
 install=tomahawk.install
+
+pkgver() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	printf "%s.r%s" "${pkgver}" "$(git rev-list --count HEAD)"
+}
 
 prepare() {
   rm -rf "build-qt5"
@@ -31,6 +36,7 @@ build() {
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=/usr/lib \
         -DCMAKE_INSTALL_LIBEXECDIR="/usr/lib/${pkgname}" \
+        -DCMAKE_BUILD_WITH_QT4=OFF \
         -DTAGLIB_MIN_VERSION=1.10
   make
 }
