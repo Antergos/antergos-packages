@@ -5,8 +5,8 @@
 
 pkgname=liblastfm-qt5
 _pkgname=liblastfm
-pkgver=1.0.9
-pkgrel=2
+pkgver=1.1.0
+pkgrel=1
 pkgdesc="A Qt5 C++ library for the Last.fm webservices"
 arch=('i686' 'x86_64')
 url='https://github.com/lastfm/liblastfm/'
@@ -15,8 +15,13 @@ depends=('qt5-base' 'fftw' 'libsamplerate')
 makedepends=('cmake')
 provides=('liblastfm')
 conflicts=('liblastfm')
-source=(${_pkgname}-${pkgver}.tar.gz::"https://github.com/lastfm/${_pkgname}/tarball/${pkgver}")
-md5sums=('')
+source=(${_pkgname}::"git+https://github.com/lastfm/${_pkgname}.git")
+md5sums=('SKIP')
+
+pkgver() {
+	cd "${_pkgname}"
+	printf "%s.r%s" "${pkgver}" "$(git rev-list --count HEAD)"
+}
 
 prepare() {
   rm -rf "build"
@@ -25,7 +30,7 @@ prepare() {
 
 build() {
   cd "build"
-  cmake ../lastfm-${_pkgname}-* \
+  cmake ../${_pkgname} \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBDIR=/usr/lib \
