@@ -1,0 +1,43 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Evgeniy Alekseev <arcanis at archlinux dot org>
+# Contributor: Alad Wenter
+# Contributor: Kuba Serafinowski <zizzfizzix at gmail dot com>
+
+pkgname=tomahawk
+pkgver=0.8.4
+pkgrel=1
+pkgdesc='A Music Player App written in C++/Qt'
+arch=('i686' 'x86_64')
+url='http://tomahawk-player.org/'
+license=('GPL3')
+# NOTE: The phonon VLC backend supposedly supports networking better than the gstreamer backend.
+depends=('qt5-webkit' 'phonon-qt5' 'quazip-qt5' 'qtkeychain-qt5' 'attica-qt5'
+		'liblastfm-qt5' 'libechonest-qt5' 'sqlite' 'taglib>=1.10' 'lucene++'
+		'qca-qt5')
+makedepends=('cmake' 'sparsehash' 'boost' 'websocketpp' 'gnutls')
+optdepends=('telepathy-qt5: integration with Telepathy')
+groups=('music')
+source=("http://download.tomahawk-player.org/${pkgname}-${pkgver}.tar.bz2")
+md5sums=('')
+install=tomahawk.install
+
+prepare() {
+  rm -rf "build-qt5"
+  mkdir -p "build-qt5"
+}
+
+build() {
+  cd "build-qt5"
+  cmake "../${pkgname}-${pkgver}" \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+        -DCMAKE_INSTALL_LIBEXECDIR="/usr/lib/${pkgname}" \
+        -DTAGLIB_MIN_VERSION=1.10
+  make
+}
+
+package() {
+  cd "build-qt5"
+  make DESTDIR="${pkgdir}" install
+}
