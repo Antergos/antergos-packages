@@ -25,7 +25,7 @@ pkgver() {
 }
 
 prepare() {
-	git clone --depth 1 git@github.com:tomahawk-player/tomahawk.git ${pkgname} 
+	git clone https://github.com/tomahawk-player/tomahawk.git ${pkgname} 
 	rm -rf "build-qt5"
 	mkdir -p "build-qt5"
 }
