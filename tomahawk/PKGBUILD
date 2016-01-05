@@ -11,11 +11,9 @@ arch=('i686' 'x86_64')
 url='http://tomahawk-player.org/'
 license=('GPL3')
 # NOTE: The phonon VLC backend supposedly supports networking better than the gstreamer backend.
-depends=('qt5-webkit' 'phonon-qt5' 'quazip-qt5' 'qtkeychain-qt5' 'attica-qt5'
-		'liblastfm-qt5' 'libechonest-qt5' 'sqlite' 'taglib>=1.10' 'lucene++'
-		'qca-qt5')
+depends=('qt5-base' 'qt5-webkit' 'phonon-qt5' 'phonon-vlc' 'quazip-qt5' 'qtkeychain-qt5' 'attica-qt5'
+		'liblastfm-qt5' 'libechonest-qt5' 'sqlite' 'taglib>=1.10' 'lucene++' 'qca-qt5' 'telepathy-qt5')
 makedepends=('cmake' 'sparsehash' 'boost' 'websocketpp' 'gnutls')
-optdepends=('telepathy-qt5: integration with Telepathy')
 groups=('music')
 source=("http://download.tomahawk-player.org/${pkgname}-${pkgver}.tar.bz2")
 md5sums=('')
