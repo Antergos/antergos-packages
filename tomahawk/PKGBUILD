@@ -20,7 +20,7 @@ md5sums=('30e4d4f014b71329bd1d3ee4ca98e2be')
 install=tomahawk.install
 
 pkgver() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${pkgname}-${pkgver}"
 	printf "%s.r%s" "${pkgver}" "$(git rev-list --count HEAD)"
 }
 
