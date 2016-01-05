@@ -13,6 +13,8 @@ url='https://github.com/lastfm/liblastfm/'
 license=('GPL3')
 depends=('qt5-base' 'fftw' 'libsamplerate')
 makedepends=('cmake')
+provides=('liblastfm')
+conflicts=('liblastfm')
 source=(${_pkgname}-${pkgver}.tar.gz::"https://github.com/lastfm/${_pkgname}/tarball/${pkgver}")
 md5sums=('')
 
@@ -35,6 +37,4 @@ build() {
 package(){
   cd "build"
   make DESTDIR="${pkgdir}" install
-  # liblastfm-qt compability
-  mv "${pkgdir}/usr/include/lastfm"{,5}
 }
