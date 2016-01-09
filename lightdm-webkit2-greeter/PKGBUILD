@@ -29,6 +29,10 @@ pkgver() {
 build() {
 	cd $srcdir/${pkgname}-${_pkgver}
 	git submodule init && git submodule update
+	
+	if [[ $(cat ../translations.js) != '' ]]; then
+		cp ../translations.js themes/antergos/js
+	fi
 
 	cd $srcdir/${pkgname}-${_pkgver}
 	LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm --bindir=/usr/bin --sbindir=/usr/bin
