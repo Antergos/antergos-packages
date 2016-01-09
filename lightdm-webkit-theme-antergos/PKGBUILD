@@ -20,9 +20,6 @@ sha256sums=('7bfed7493e9db81787d03f72c2cfe9215b46e8680e7275a95162179d491fc463'
 
 build() {
 	cd ${srcdir}/${pkgname}-${_pkgver}
-	if [[ $(cat ../translations.js) != '' ]]; then
-		cp ../translations.js js
-	fi
 }
 
 package() {
