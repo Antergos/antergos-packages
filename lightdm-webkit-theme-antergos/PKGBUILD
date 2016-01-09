@@ -13,18 +13,18 @@ license=('GPL3')
 depends=('lightdm-webkit-greeter' 'antergos-wallpapers')
 makedepends=('python-pip' 'nodejs')
 install=theme.install
-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/${_pkgver}.tar.gz")
+source=("${pkgname}-${_pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/${_pkgver}.tar.gz")
 sha256sums=('7bfed7493e9db81787d03f72c2cfe9215b46e8680e7275a95162179d491fc463')
 
 build() {
-	cd ${srcdir}/${pkgname}-${pkgver}
+	cd ${srcdir}/${pkgname}-${_pkgver}
 }
 
 package() {
 	cd ${pkgdir}
 	mkdir -p usr/share/lightdm-webkit/themes
 	cd usr/share/lightdm-webkit/themes
-	cp -dpr --no-preserve=ownership ${srcdir}/${pkgname}-${pkgver} ${_pkgname}
+	cp -dpr --no-preserve=ownership ${srcdir}/${pkgname}-${_pkgver} ${_pkgname}
 	msg "Removing .git files"
 	cd ${_pkgname}
 	rm -rf .gitignore

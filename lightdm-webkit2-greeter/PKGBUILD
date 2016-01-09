@@ -20,6 +20,7 @@ source=("${pkgname}-${pkgver}::git+https://github.com/antergos/${pkgname}.git")
 sha256sums=('SKIP')
 groups=('system')
 
+
 pkgver() {
 	echo "${_pkgver}"
 }
