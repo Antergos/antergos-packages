@@ -29,11 +29,6 @@ build() {
 	cd $srcdir/${pkgname}-${_pkgver}
 	git submodule init && git submodule update
 
-	# Update translations from transifex
-	pip install transifex-client
-	cd themes/antergos
-	{ tx pull --minimum-perc=50 && node .tx/combine_translations.js ${PWD}; } || true
-
 	cd $srcdir/${pkgname}-${_pkgver}
 	LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm --bindir=/usr/bin --sbindir=/usr/bin
 	make
