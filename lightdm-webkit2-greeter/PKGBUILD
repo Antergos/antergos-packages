@@ -1,16 +1,17 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=lightdm-webkit2-greeter
-pkgver=0.2.3
+pkgver=0.3.0
 _pkgver=${pkgver}
-pkgrel=3
+pkgrel=1
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
 license=('GPL3')
-makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common' 'exo')
+makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common' 'exo'
+			'python-pip' 'nodejs')
 depends=('lightdm' 'webkit2gtk>=2.10.2' 'webkit2gtk<2.12' 'gtk3>=3.18' 'gtk3<3.20')
-provides=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos=2.2.5')
+provides=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos=2.3.0')
 conflicts=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos<2.2.4')
 install=greeter.install
@@ -27,6 +28,13 @@ pkgver() {
 build() {
 	cd $srcdir/${pkgname}-${_pkgver}
 	git submodule init && git submodule update
+
+	# Update translations from transifex
+	pip install transifex-client
+	cd themes/antergos
+	{ tx pull --minimum-perc=50 && node .tx/combine_translations.js ${PWD}; } || true
+
+	cd $srcdir/${pkgname}-${_pkgver}
 	LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm --bindir=/usr/bin --sbindir=/usr/bin
 	make
 }
@@ -37,3 +45,4 @@ package() {
 }
 
 # -*- mode: bash;-*-
+
