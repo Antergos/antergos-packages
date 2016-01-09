@@ -2,24 +2,29 @@
 
 pkgname=lightdm-webkit-theme-antergos
 _pkgname=antergos
-pkgver=2.2.3
-pkgrel=2
+_holdver=2.2.3
+_pkgver=2.3.0
+pkgver=${_holdver}.${_pkgver}
+pkgrel=1
 pkgdesc="The official greeter theme of Antergos Linux. For use with legacy webkit1 greeter."
 arch=('any')
 url="http://www.antergos.com"
-license=('GPLv2')
-depends=('lightdm' 'lightdm-webkit-greeter' 'antergos-wallpapers')
+license=('GPL3')
+depends=('lightdm-webkit-greeter' 'antergos-wallpapers')
+makedepends=('python-pip' 'nodejs')
 install=theme.install
-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz")
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/${_pkgver}.tar.gz")
 sha256sums=('7bfed7493e9db81787d03f72c2cfe9215b46e8680e7275a95162179d491fc463')
 
-build()
-{
+build() {
 	cd ${srcdir}/${pkgname}-${pkgver}
+
+	# Update translations from transifex
+	pip install transifex-client
+	{ tx pull --minimum-perc=50 && node .tx/combine_translations.js ${PWD}; } || true
 }
 
-package()
-{
+package() {
 	cd ${pkgdir}
 	mkdir -p usr/share/lightdm-webkit/themes
 	cd usr/share/lightdm-webkit/themes
@@ -28,4 +33,5 @@ package()
 	cd ${_pkgname}
 	rm -rf .gitignore
 }
+
 # -*- mode: bash;-*-
