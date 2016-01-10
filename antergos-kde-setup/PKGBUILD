@@ -2,7 +2,7 @@
 
 pkgname=antergos-kde-setup
 pkgver=0.1.5
-pkgrel=2
+pkgrel=3
 pkgdesc="Setup configuration for Antergos KDE"
 url="http://www.antergos.com"
 arch=('any')
@@ -32,8 +32,8 @@ sha256sums=('SKIP')
 package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	install -d "${pkgdir}/usr/share/${pkgname}"
-	find . -maxdepth 1 -type d ! -name '*.git*' -exec cp -R {} "${pkgdir}/usr/share/${pkgname}" \;
-	find . -maxdepth 1 -type f ! -path '**.git/**' -exec cp {} "${pkgdir}/usr/share/${pkgname}" \;
+	find . -maxdepth 1 -type d ! -pname '*.git*' -exec cp -R {} "${pkgdir}/usr/share/${pkgname}" \;
+	find . -maxdepth 1 -type f ! -path '*.git/*' -exec cp {} "${pkgdir}/usr/share/${pkgname}" \;
 	# Dont know WTH the above is not excluding the git directory.
 	rm -rf "${pkgdir}/usr/share/${pkgname}/.git"
 
