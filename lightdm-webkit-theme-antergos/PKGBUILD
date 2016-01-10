@@ -13,8 +13,7 @@ license=('GPL3')
 depends=('lightdm-webkit-greeter' 'antergos-wallpapers')
 makedepends=('python-pip' 'nodejs')
 install=theme.install
-source=("${pkgname}-${_pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/${_pkgver}.tar.gz"
-		'translations.js')
+source=("${pkgname}-${_pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/${_pkgver}.tar.gz")
 sha256sums=('7bfed7493e9db81787d03f72c2cfe9215b46e8680e7275a95162179d491fc463'
 			'')
 
