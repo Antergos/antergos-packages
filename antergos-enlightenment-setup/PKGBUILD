@@ -2,7 +2,7 @@
 
 pkgname=antergos-enlightenment-setup
 pkgver=0.0.2
-pkgrel=3
+pkgrel=4
 pkgdesc="Setup configuration for Antergos Enlightenment"
 url="http://www.antergos.com"
 arch=('any')
