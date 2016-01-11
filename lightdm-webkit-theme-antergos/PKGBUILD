@@ -3,7 +3,7 @@
 pkgname=lightdm-webkit-theme-antergos
 _pkgname=antergos
 _holdver=2.2.3
-_pkgver=2.3.1
+_pkgver=2.3.2
 pkgver="${_holdver}_${_pkgver}"
 pkgrel=1
 pkgdesc="The official greeter theme of Antergos Linux. For use with legacy webkit1 greeter."
