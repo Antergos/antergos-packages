@@ -2,21 +2,18 @@
 
 pkgname=antergos-openbox-setup
 pkgver=0.2.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
 arch=('any')
 license=('GPL2')
-depends=('bash')
-optdepends=('openbox' 'xorg-xinit' 'thunar'
-'nitrogen' 'plank' 'tint2' 'volumeicon' 'conky' 'compton'
-'numix-frost-themes' 'numix-icon-theme' 'plank-theme-numix')
-makedepends=()
-conflicts=()
-replaces=()
-backup=()
-source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
-sha256sums=('9c96a508f11355be666a4a940c312acdd53ebcd1c2b28fe117c19c8519fe5098')
+_is_metapkg='yes'
+install=${pkgname}.install
+depends=('bash' 'openbox' 'xorg-xinit' 'thunar' 'nitrogen' 'plank' 
+'tint2' 'volumeicon' 'conky' 'compton' 'numix-frost-themes' 
+'numix-icon-theme' 'plank-theme-numix')
+source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
+sha256sums=('SKIP')
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
