@@ -3,12 +3,12 @@
 # Why I create this package : the existing kmozillahelper-frameworks still lacks some function.
 pkgname=kmozillahelper-kf5
 pkgver=0.6.4
-pkgrel=2
+pkgrel=3
 pkgdesc="Mozilla KDE Integration. KF5 port with kdelibs4support."
 url="https://build.opensuse.org/package/show/openSUSE:Factory/mozilla-kde4-integration"
 arch=("i686" "x86_64")
 license=('MIT')
-depends=("kdelibs4support")
+depends=("kdelibs4support" "kdoctools")
 makedepends=("cmake" "automoc4" "extra-cmake-modules")
 provides=(kmozillahelper-frameworks kmozillahelper)
 conflicts=(kmozillahelper-frameworks kmozillahelper)
