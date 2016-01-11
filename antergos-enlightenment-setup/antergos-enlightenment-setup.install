@@ -1,0 +1,16 @@
+post_install() {
+	if [[ "${SUDO_USER}" != '' ]]; then
+		_ANT_USER="${SUDO_USER}"
+	elif [[ "${HOME}" != '' ]]; then
+		_ANT_USER="${HOME#/home/}"
+	else
+		echo "Error: Unable to determine current user."
+		exit 1
+	fi
+	
+	/usr/bin/antergos-enlightenment-setup "${_ANT_USER}" "no-overwrite"
+}
+
+post_upgrade() {
+	post_install
+}
