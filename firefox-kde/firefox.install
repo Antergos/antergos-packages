@@ -11,4 +11,3 @@ post_remove() {
   post_install
 }
 
-# -*- mode: bash;-*-
