@@ -1,6 +1,7 @@
 # Contributor: Weng Xuetian <wengxt@gmail.com>
 # Maintainer: maz-1 <ohmygod19993 at gmail dot com>
 # Why I create this package : the existing kmozillahelper-frameworks still lacks some function.
+
 pkgname=kmozillahelper-kf5
 pkgver=0.6.4
 pkgrel=3
