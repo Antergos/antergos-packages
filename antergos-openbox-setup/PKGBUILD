@@ -2,7 +2,7 @@
 
 pkgname=antergos-openbox-setup
 pkgver=0.2.6
-pkgrel=2
+pkgrel=3
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
 arch=('any')
