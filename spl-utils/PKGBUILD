@@ -3,9 +3,9 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 #
 pkgname="spl-utils"
-pkgver=0.6.5.3
-_pkgver=0.6.5.3
-pkgrel=3
+pkgver=0.6.5.4
+_pkgver=0.6.5.4
+pkgrel=1
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
 depends=("dkms")
@@ -18,8 +18,8 @@ source=("spl::git+https://github.com/zfsonlinux/spl.git")
 groups=("system" "zfs")
 md5sums=('SKIP')
 
-_kernel=4.2.5
-_kernel=4.2.5
+_kernel=4.3.3
+_kernel=4.3.3
 
 pkgver() {
     cd "${srcdir}/spl"
