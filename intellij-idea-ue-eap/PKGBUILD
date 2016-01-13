@@ -19,6 +19,7 @@ provides=("intellij-idea-ultimate-edition")
 conflicts=("intellij-idea-ultimate-edition")
 groups=("development" "IDE" "editor" "jetbrains")
 
+
 if [[ "True" = "${_eap}" ]]; then
 	_srcfile="ideaIU-${_buildver}.tar.gz"
 	source=("http://download.jetbrains.com/idea/${_srcfile}"
