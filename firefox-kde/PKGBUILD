@@ -98,7 +98,7 @@ prepare() {
 	echo -n "${_google_api_key}" > google-api-key
 	echo "ac_add_options --with-google-api-keyfile=\"${PWD}/google-api-key\"" >> .mozconfig
 
-	echo -n "${_google_default_client_id $_google_default_client_secret}" > google-oauth-api-key
+	echo -n "${_google_default_client_id} ${_google_default_client_secret}" > google-oauth-api-key
 	echo "ac_add_options --with-google-oauth-api-keyfile=\"${PWD}/google-oauth-api-key\"" >> .mozconfig
 
 	echo -n "${_mozilla_api_key}" > mozilla-api-key
