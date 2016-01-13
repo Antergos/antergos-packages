@@ -42,7 +42,7 @@ check_initramfs() {
 	else
 		dkms add spl/$1
 		dkms install spl/$1
-		
+		modprobe -a spl
 		echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'
  		mkinitcpio -p linux
 	fi
