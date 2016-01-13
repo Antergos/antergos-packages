@@ -10,7 +10,7 @@
 
 # try to build with PGO
 _pgo=true
-
+_pkgname=firefox
 pkgname=firefox-kde
 pkgver=43.0.4
 pkgrel=1
