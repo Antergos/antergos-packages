@@ -136,13 +136,7 @@ build() {
 	cd ${_pkgname}-${pkgver}
 
 	export PATH="${srcdir}/path:$PATH"
-	export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/lib/firefox"
 	export PYTHON="/usr/bin/python2"
-	export CPPFLAGS="$CPPFLAGS -mno-avx"
-
-	if [[ -n $_lowmem || $CARCH == i686 ]]; then
-	  LDFLAGS+=" -Wl,--no-keep-memory"
-	fi
 
 	if [[ -n $_pgo ]]; then
 		# Do PGO
@@ -158,7 +152,7 @@ package() {
 	[[ "$CARCH" == "i686" ]] && cp "${srcdir}/kde.js" obj-i686-pc-linux-gnu/dist/bin/defaults/pref
 	[[ "$CARCH" == "x86_64" ]] && cp "${srcdir}/kde.js" obj-x86_64-unknown-linux-gnu/dist/bin/defaults/pref
 
-	make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK=install
+	make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
 
 	install -Dm644 "${srcdir}/vendor.js" "${pkgdir}/usr/lib/firefox/browser/defaults/preferences/vendor.js"
 	install -Dm644 "${srcdir}/kde.js" "${pkgdir}/usr/lib/firefox/browser/defaults/preferences/kde.js"
