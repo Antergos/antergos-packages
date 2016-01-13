@@ -32,7 +32,7 @@ options=('!emptydirs' '!makeflags')
 install=firefox.install
 _patchrev=4d8912c4a729
 _patchurl=http://www.rosenauer.org/hg/mozilla/raw-file/${_patchrev}
-source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/source/${pkgname}-${pkgver}.source.tar.xz"
+source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/source/${_pkgname}-${pkgver}.source.tar.xz"
 		'mozconfig'
 		'firefox.desktop'
 		'firefox-install-dir.patch'
