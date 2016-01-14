@@ -145,21 +145,24 @@ build() {
 	export PATH="${srcdir}/path:$PATH"
 	export PYTHON="/usr/bin/python2"
 
-	if [[ -n $_pgo ]]; then
-		# Do PGO
-		LDFLAGS='-Wl,--no-keep-memory' xvfb-run -a -s "-extension GLX -screen 0 1280x1024x24" make -f client.mk build MOZ_PGO=1
+	if [[ "$CARCH" = "i686" ]]; then
+		LDFLAGS='-Wl,--no-keep-memory' linux32 xvfb-run -a -s "-extension GLX -screen 0 1280x1024x24" make -f client.mk build MOZ_PGO=1
 	else
-		LDFLAGS='-Wl,--no-keep-memory' make -f client.mk build
+		# LDFLAGS='-Wl,--no-keep-memory' make -f client.mk build
+		LDFLAGS='-Wl,--no-keep-memory' xvfb-run -a -s "-extension GLX -screen 0 1280x1024x24" make -f client.mk build MOZ_PGO=1
 	fi
 }
 
 package() {
 	cd ${_pkgname}-${pkgver}
 
-	[[ "$CARCH" == "i686" ]] && cp "${srcdir}/kde.js" obj-i686-pc-linux-gnu/dist/bin/defaults/pref
-	[[ "$CARCH" == "x86_64" ]] && cp "${srcdir}/kde.js" obj-x86_64-unknown-linux-gnu/dist/bin/defaults/pref
-
-	LDFLAGS='-Wl,--no-keep-memory' make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
+	if [[ "$CARCH" = "i686" ]]; then
+		cp "${srcdir}/kde.js" obj-i686-pc-linux-gnu/dist/bin/defaults/pref
+		LDFLAGS='-Wl,--no-keep-memory' linux32 make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
+	else
+		cp "${srcdir}/kde.js" obj-x86_64-unknown-linux-gnu/dist/bin/defaults/pref
+		LDFLAGS='-Wl,--no-keep-memory' make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
+	fi
 
 	install -Dm644 "${srcdir}/vendor.js" "${pkgdir}/usr/lib/firefox/browser/defaults/preferences/vendor.js"
 	install -Dm644 "${srcdir}/kde.js" "${pkgdir}/usr/lib/firefox/browser/defaults/preferences/kde.js"
