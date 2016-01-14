@@ -52,7 +52,6 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		pgo_fix_missing_kdejs.patch
 		firefox-disable-GMP-PDM.patch
 		firefox-support-YUV420J-pixel-format.patch
-		add_missing_pgo_rule.patch
 )
 md5sums=('15c5222e3b0a6a766f0a1c5452ff5c31498454187165a281448954a5eb462e89'
 		'72a6572b9692cbb4a15d83de06e1674c4dbb7228999c5749c4f7ab9db5e0c516'
@@ -69,8 +68,7 @@ md5sums=('15c5222e3b0a6a766f0a1c5452ff5c31498454187165a281448954a5eb462e89'
 		'ce1b7a5bb217c31590bce30653aea5139b6401a01eda7bded7fd2f83a23d397b'
 		'e8289ea4c1f8191e1e23661312ceee2128b8e790501b9a589d0d7bfc4384553f'
 		'1d3fd85fe760ac3ab454e71322231e671483533be6089ac87f9f4880ee619e48'
-		'f9067f62a25a7a77276e15f91cc9e7ba6576315345cfc6347b1b2e884becdb0c'
-		'')
+		'f9067f62a25a7a77276e15f91cc9e7ba6576315345cfc6347b1b2e884becdb0c')
 
 # Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
@@ -89,9 +87,6 @@ _mozilla_api_key=fa35d4d6-6529-436f-b3a1-8b9af187eca2
 
 prepare() {
 	cd $_pkgname-$pkgver
-
-	# add missing rule for pgo builds
-	patch -Np1 -i ../add_missing_pgo_rule.patch
 	
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=1233429
 	patch -Np1 -i ../firefox-disable-GMP-PDM.patch
@@ -118,9 +113,6 @@ prepare() {
 	patch -Np1 -i "${srcdir}/firefox-kde.patch"
 	patch -Np1 -i "${srcdir}/firefox-no-default-ualocale.patch"
 	patch -Np1 -i "${srcdir}/firefox-branded-icons.patch"
-
-	# add missing file Makefile for pgo builds
-	patch -Np1 -i "${srcdir}"/pgo_fix_missing_kdejs.patch
 
 	# configure script misdetects the preprocessor without an optimization level
 	# https://bugs.archlinux.org/task/34644
