@@ -9,7 +9,7 @@ pkgdesc="A mail client for Mac, Linux, and Windows that is built on the modern w
 arch=('x86_64')
 url="https://nylas.com/N1/"
 license=('MIT')
-depends=('gtk2' 'libgnome-keyring' 'desktop-file-utils' 'python2' 'gconf' 'gconf-gtk2' 'nodejs'
+depends=('gtk2' 'libgnome-keyring' 'desktop-file-utils' 'python2' 'gconf' 'nodejs'
 		'libnotify' 'libxtst' 'nss' 'alsa-lib' 'xdg-utils')
 groups=('email')
 source=(N1-${pkgver}.deb::https://edgehill.s3-us-west-2.amazonaws.com/${pkgver}-${buildver}/linux-deb/x64/N1.deb)

@@ -5,7 +5,7 @@ _buildver=144.2608.6
 _pkgver=1.5.0
 _eap="True"
 pkgver="${_pkgver}.${_buildver}"
-pkgrel=1
+pkgrel=2
 pkgdesc="Powerful C and C++ IDE. Early Access Program (EAP) build."
 arch=('any')
 options=('!strip')
@@ -22,13 +22,13 @@ if [[ "True" = "${_eap}" ]]; then
 	source=("http://download.jetbrains.com/cpp/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
-				"c3238ab950f58e2c8ec6e637573a8663997a794693fd220be3ded8a812b24841")
+				"b9b58f752f5da2d59cfcd5170402759bfe8a4d3f877c40ebefae2e7f02907753")
 else
 	_srcfile="CLion-${_pkgver}.tar.gz"
 	source=("http://download.jetbrains.com/cpp/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
-				"c3238ab950f58e2c8ec6e637573a8663997a794693fd220be3ded8a812b24841")
+				"b9b58f752f5da2d59cfcd5170402759bfe8a4d3f877c40ebefae2e7f02907753")
 fi
 
 package() {
