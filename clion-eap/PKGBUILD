@@ -15,7 +15,7 @@ depends=("java-environment>=8")
 makedepends=('wget')
 provides=("clion")
 conflicts=("clion")
-groups=("development", "IDE", "editor", "jetbrains")
+groups=("development" "IDE" "editor" "jetbrains")
 
 if [[ "True" = "${_eap}" ]]; then
 	_srcfile="CLion-${_buildver}.tar.gz"
