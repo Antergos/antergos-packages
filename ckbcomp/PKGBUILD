@@ -2,7 +2,7 @@
 # Maintainer: Ramon Buldó <ramon@manjaro.org>
 
 pkgname=ckbcomp
-pkgver=1.130
+pkgver=1.134
 pkgrel=1
 pkgdesc="Compile a XKB keyboard description to a keymap suitable for loadkeys or kbdcontrol"
 arch=(any)
