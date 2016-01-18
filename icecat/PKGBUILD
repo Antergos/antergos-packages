@@ -6,8 +6,7 @@
 # Contributor: Muhammad 'MJ' Jassim <UnbreakableMJ@gmail.com> 
 
 pkgname=icecat
-pkgver=38.5.0
-_pkgver=38.5.0-gnu1
+pkgver=38.5.2
 pkgrel=1
 pkgdesc="GNU version of the Firefox browser."
 arch=(i686 x86_64)
@@ -20,6 +19,7 @@ optdepends=('networkmanager: Location detection via available WiFi networks'
 			'gst-plugins-good: h.264 video'
 			'gst-libav: h.264 video'
 			'upower: Battery API')
+groups=('browser')
 install=icecat.install
 source=(	icecat.desktop
 		icecat-safe.desktop
