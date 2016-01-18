@@ -3,7 +3,7 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.0.303.52
+pkgver=1.0.344.37
 pkgrel=1
 pkgdesc='An advanced web browser made with power users in mind.'
 url="https://vivaldi.com"
@@ -16,6 +16,7 @@ optdepends=(
     'vivaldi-ffmpeg-codecs: playback of proprietary video/audio'
     'google-chrome: Widevine DRM Plugin'
 )
+groups=('browser')
 source=('vivaldi-ffmpeg-codecs.patch')
 source_i686=("https://vivaldi.com/download/vivaldi-beta-${pkgver}-2.i386.rpm")
 source_x86_64=("https://vivaldi.com/download/vivaldi-beta-${pkgver}-2.x86_64.rpm")

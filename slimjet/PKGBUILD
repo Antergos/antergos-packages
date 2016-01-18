@@ -2,7 +2,7 @@
 # Contrubutor: raininja <raijin@rai.ninja>
 
 pkgname=slimjet
-pkgver=6.0.7.0
+pkgver=7.0.1.0
 pkgrel=1
 pkgdesc="Fast, smart and powerful browser based on Blink"
 arch=('i686' 'x86_64')
@@ -12,8 +12,7 @@ depends=('alsa-lib' 'desktop-file-utils' 'flac' 'gconf' 'gtk2' 'harfbuzz' 'harfb
          'icu' 'libpng' 'libxss' 'libxtst' 'nss' 'openssl' 'nspr' 'opus' 'snappy' 'speech-dispatcher' 'ttf-font' 'xdg-utils')
 optdepends=('kdebase-kdialog: needed for file dialogs in KDE'
             'ttf-liberation: fix fonts for some PDFs')
-makedepends=('pacman>=4.2.0')
-provides=('slimjet' 'pepper-flash')
+provides=('slimjet' 'chromium-pepper-flash' 'pepper-flash' 'flashplayer')
 options=('!emptydirs' '!strip')
 source_i686=("${pkgname}_i386.deb::http://www.slimjet.com/release/${pkgname}_i386.deb")
 source_x86_64=("${pkgname}_amd64.deb::http://www.slimjet.com/release/${pkgname}_amd64.deb")

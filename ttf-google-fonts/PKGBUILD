@@ -71,7 +71,6 @@ provides=("${conflicts[@]}" 'ttf-font')
 source=("git://github.com/google/fonts.git")
 md5sums=('SKIP')
 install=font.install
-
 # git variables
 _gitname="fonts"
 
