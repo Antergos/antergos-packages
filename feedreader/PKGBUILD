@@ -14,7 +14,7 @@ depends=('sqlite3' 'gtk3>=3.18' 'gtk3<3.20' 'webkit2gtk' 'libnotify' 'html2text'
 makedepends=('vala' 'gobject-introspection' 'cmake')
 groups=('rss')
 install="${pkgname%-*}.install"
-source=("https://launchpad.net/feedreader/${pkgver%.*}/${pkgver}/+download/FeedReader-${pkgver}.tar.gz")
+source=("${pkgname}::https://launchpad.net/feedreader/${pkgver%.*}/${pkgver}/+download/FeedReader-${pkgver}.tar.gz")
 md5sums=('')
 _allowed_in='main'
 
@@ -22,18 +22,19 @@ _allowed_in='main'
 ##Build without Libunity (-DWITH_LIBUNITY=OFF)
 build() {
   ls
-  cd "${srcdir}/FeedReader-${pkgver}"
+  echo ${PWD}
+  cd "${srcdir}/${pkgname}"
   ls
-  if [[ -d "${srcdir}/FeedReader-${pkgver}/build" ]]; then
-    rm -rf "${srcdir}/FeedReader-${pkgver}/build"
+  if [[ -d "${srcdir}/${pkgname}/build" ]]; then
+    rm -rf "${srcdir}/${pkgname}/build"
   fi
-  mkdir "${srcdir}/FeedReader-${pkgver}/build" && cd "${srcdir}/FeedReader-${pkgver}/build"
+  mkdir "${srcdir}/${pkgname}/build" && cd "${srcdir}/${pkgname}/build"
   cmake -DCMAKE_INSTALL_PREFIX=/usr -DUSE_WEBKIT_4=ON -DWITH_LIBUNITY=OFF ..
   make
 }
 
 package() {
-  cd "${srcdir}/FeedReader-${pkgver}/build"
+  cd "${srcdir}/${pkgname}/build"
   make DESTDIR="${pkgdir}" install
 }
 
