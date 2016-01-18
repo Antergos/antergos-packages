@@ -4,7 +4,7 @@ _pkgname=Cnchi
 pkgname=cnchi
 pkgver=0.12.46
 _pkgver=${pkgver}
-pkgrel=1
+pkgrel=2
 pkgdesc='Graphical Installer for Antergos Linux'
 arch=(any)
 license=(GPL)
@@ -20,8 +20,7 @@ pkgver() {
 echo ${_pkgver}
 }
 
-build ()
-{
+build () {
   cd "$srcdir/${pkgname}"
 }
 
