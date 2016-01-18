@@ -11,7 +11,7 @@
 _pkgname=mintmenu
 pkgname=mate-mint-menu
 pkgver=5.6.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Linux Mint Menu for MATE"
 arch=('any')
 url="http://github.com/linuxmint/mintmenu"
@@ -23,12 +23,14 @@ optdepends=('mate-screensaver: lock screen button'
 source=("http://packages.linuxmint.com/pool/main/m/mintmenu/mintmenu_${pkgver}.tar.xz"
         'http://github.com/linuxmint/mint-translations/archive/master.tar.gz' 
         'antergos_compat.patch'
+        'get_color_fix.patch'
         'removescript')
 install=${pkgname}.install
 sha256sums=('1bd6b5cb6ccab3cc0b61649e693e8526c3b328165720855ee6d514038ba9431b'
             '09370c7fe33356d04c5e4d6470f611cb06f538e09b1a402c076b882fae2edcdf'
             '1c37bb89e6feadeac4cae5a59de563b19df07611c3fb0d7dfd5fa2bc44a2dead'
-            '9533d0f5416af1f2b8ef5097f06e39135278eef856994d859c4ee7ba57d6fcaa')
+            '9533d0f5416af1f2b8ef5097f06e39135278eef856994d859c4ee7ba57d6fcaa'
+            '')
 package() {
   cd "$srcdir/mint-translations-master/po-export/mintmenu"
   for files in ./*; do
@@ -44,6 +46,7 @@ package() {
 
   cd "$srcdir/${_pkgname}"
   patch -Np1 -i "$srcdir/antergos_compat.patch"
+  patch -Np1 -i "${srcdir}/get_color_fix.patch"
   rm -f usr/lib/linuxmint/mintMenu/*.pyc usr/lib/linuxmint/mintMenu/plugins/*pyc
   
   # Disable the software-manager entry under Places
