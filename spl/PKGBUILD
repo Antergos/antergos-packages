@@ -5,11 +5,11 @@
 pkgname=spl
 pkgver=0.6.5.4
 _pkgver=0.6.5.4
-pkgrel=6
+pkgrel=7
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")
-depends=("dkms" "spl-utils")
+depends=("dkms" "spl-utils" "linux-headers")
 provides=("spl-dkms")
 conflicts=("spl-git" "spl-lts" "spl-dkms")
 install=spl.install
