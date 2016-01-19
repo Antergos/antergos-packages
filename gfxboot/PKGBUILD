@@ -13,8 +13,8 @@ pkgdesc="Graphical Boot Logo tool"
 url="http://www.opensuse.org"
 depends=('perl-html-parser' 'freetype2' 'cpio' 'nasm')
 makedepends=('rpmextract')
-source=(http://download.opensuse.org/source/distribution/leap/42.1-Current/repo/oss/suse/src/${pkgname}-${_pkgver}-${_pkgrel}.src.rpm \
-	gfxboot.html)
+source=('http://download.opensuse.org/source/distribution/leap/42.1/repo/oss/suse/src/${pkgname}-${_pkgver}-${_pkgrel}.src.rpm'
+		'gfxboot.html)'
 options=(docs)
 
 md5sums=('8b9d2e9fce5523ac608aa6de68ffb10c'
