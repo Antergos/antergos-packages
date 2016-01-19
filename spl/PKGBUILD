@@ -1,11 +1,10 @@
-#
-# Maintainer: isiachi <isiachi@rhyeworld.it>
-#
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl
 pkgver=0.6.5.4
 _pkgver=0.6.5.4
-pkgrel=7
+pkgrel=8
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")
@@ -21,6 +20,10 @@ md5sums=('SKIP'
 install=spl.install
 
 _kernel=4.3.3
+
+prepare() {
+	sed -i "s|<PKGVER>|${_pkgver}|g" "${srcdir}/${pkgname}.install"
+}
 
 pkgver() {
     cd "${srcdir}/spl"

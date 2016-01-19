@@ -7,7 +7,7 @@ pkgname=zfs
 pkgdesc="Kernel modules for the Zettabyte File System."
 pkgver=0.6.5.4
 _pkgver=0.6.5.4
-pkgrel=2
+pkgrel=3
 license=('CDDL')
 makedepends=("git" "linux-headers")
 depends=("spl" "zfs-utils" "dkms" "linux-headers")
@@ -20,6 +20,10 @@ source=("zfs::git+http://github.com/zfsonlinux/zfs.git")
 md5sums=('SKIP')
 
 _kernel=4.3.3
+
+prepare() {
+	sed -i "s|<PKGVER>|${_pkgver}|g" "${srcdir}/${pkgname}.install"
+}
 
 pkgver() {
     cd "${srcdir}/zfs"

@@ -1,3 +1,5 @@
+_PKGVER="<PKGVER>"
+
 check_initramfs() {
 	echo '>>> Updating module dependencies. Please wait ...'
 
@@ -25,11 +27,11 @@ check_hostid() {
 
 post_install() {
 	check_hostid
-	check_initramfs "${1%%-*}"
+	check_initramfs "${_PKGVER}"
 }
 
 post_remove() {
-	dkms remove "spl/${1%%-*}" --all
+	dkms remove "spl/${_PKGVER}" --all
 
 	if (grep -v '#' /etc/mkinitcpio.conf | grep zfs >/dev/null); then
 		echo '>>> The ZFS packages have been removed, but "zfs" remains in the "hooks"'
@@ -40,7 +42,7 @@ post_remove() {
 
 post_upgrade() {
 	check_hostid
-	check_initramfs "${1%%-*}"
+	check_initramfs "${_PKGVER}"
 }
 
 
