@@ -14,7 +14,7 @@ provides=('gnome-shell-extension-panel-osd')
 #source=("git+https://github.com/jenslody/gnome-shell-extension-panel-osd.git")
 source=("https://github.com/jenslody/${pkgname}/archive/v1.0.zip")
 install=${pkgname}.install
-sha256sums=('')
+md5sums=('79ba2a229843a03aab7626c6a4e2843a')
 
 _archivename="v${pkgver}"
 
@@ -25,20 +25,17 @@ _archivename="v${pkgver}"
 #
 #}
 
-
-prepare() {
-    cd "$srcdir/$_archivename"
-}
-
 build() {
-    cd "$srcdir/$_archivename"
-     ./autogen.sh --prefix=/usr 
-    make
+	#cd "$srcdir/$_archivename"
+	cd "${srcdir}-${pkgver}"
+	./autogen.sh --prefix=/usr 
+	make
 }
 
 package() {
-    cd "$srcdir/$_archivename"
-    mkdir -p "${pkgdir}/usr/share/gnome-shell/extensions" "${pkgdir}/usr/share/glib-2.0/schemas/"
-    make DESTDIR=${pkgdir} install
+	#cd "$srcdir/$_archivename"
+	cd "${srcdir}-${pkgver}"
+	mkdir -p "${pkgdir}/usr/share/gnome-shell/extensions" "${pkgdir}/usr/share/glib-2.0/schemas/"
+	make DESTDIR=${pkgdir} install
 }
 # -*- mode: bash;-*-
