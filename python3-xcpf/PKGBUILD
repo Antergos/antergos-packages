@@ -7,8 +7,8 @@ arch=(any)
 license=(GPL)
 url="http://xyne.archlinux.ca/projects/python3-xcpf"
 depends=(python3 pyalpm)
-source=(http://xyne.archlinux.ca/projects/python3-xcpf/src/python3-xcpf-2015.10.21.tar.xz)
-md5sums=(d7b9c51bb6534b6adbd2d57e362431a2)
+source=(http://xyne.archlinux.ca/projects/python3-xcpf/src/python3-xcpf-${pkgver}.tar.xz)
+md5sums=('d7b9c51bb6534b6adbd2d57e362431a2')
 
 package () {
   cd "$srcdir/$pkgname-$pkgver"

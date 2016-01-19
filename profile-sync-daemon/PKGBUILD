@@ -11,7 +11,7 @@ license=('MIT')
 depends=('procps-ng' 'rsync' 'systemd')
 conflicts=('firefox-sync' 'goanysync' 'go-anysync-git' 'iceweasel-sync'
 		'tmpfs-store' 'tmpfs-sync' 'user-profile-sync-daemon')
-source=("$pkgname-$pkgver::https://github.com/graysky2/profile-sync-daemon/archive/$pkgver.tar.gz")
+source=("$pkgname-$pkgver::https://github.com/graysky2/profile-sync-daemon/archive/v$pkgver.tar.gz")
 install=psd.install
 sha256sums=('f25a09254df977fd19f1e7c5a47f4003954a5c28f1c6b18f6e30d2dda94eff90')
 _allowed_in=('main' 'staging')
