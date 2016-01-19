@@ -1,51 +1,47 @@
-## _pkgver="${2%%-*}" ##
+check_initramfs() {
+	echo '>>> Updating module dependencies. Please wait ...'
 
-post_install() {
-	check_hostid
-	check_initramfs "${2%%-*}"
-}
+	dkms add "spl/${1}"
+	dkms install "spl/${1}"
+	modprobe -a spl
 
-post_remove() {
-	check_initramfs 'remove' "${2%%-*}"
-}
+	echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'
 
-post_upgrade() {
-	check_hostid
-	check_initramfs "${2%%-*}"
+ 	mkinitcpio -p linux
 }
 
 check_hostid() {
     # Check /etc/hostid to see if it set to the sentinel value, see
     # https://wiki.archlinux.org/index.php/ZFS for more information.
     HOSTID=$(hostid)
-    if [ "0x$HOSTID" == "0xffffffff" ]; then
+    if [[ "0x${HOSTID}" = "0xffffffff" ]]; then
         # Generate a new hostid
-        : >/etc/hostid
+        : > /etc/hostid
         HOSTID=$(hostid)
         # hostid is 4 byte little endian
-        printf $(echo -n $HOSTID | sed 's/\(..\)\(..\)\(..\)\(..\)/\\x\4\\x\3\\x\2\\x\1/') >/etc/hostid
+        printf '%s' "$(echo -n ${HOSTID} | sed 's/\(..\)\(..\)\(..\)\(..\)/\\x\4\\x\3\\x\2\\x\1/')" > /etc/hostid
     fi
 }
 
-check_initramfs() {
-	echo '>>> Updating module dependencies. Please wait ...'
+post_install() {
+	check_hostid
+	check_initramfs "${1%%-*}"
+}
 
-	if [[ $1 = 'remove' ]]; then
-		dkms remove spl/$2 --all
-		
-		MK_CONF=$(grep -v '#' /etc/mkinitcpio.conf | grep zfs >/dev/null; echo $?);
-		if [[ $MK_CONF = 0 ]]; then
-			echo '>>> The ZFS packages have been removed, but "zfs" remains in the "hooks"'
-			echo '>>> list in mkinitcpio.conf! You will need to remove "zfs" from the '
-			echo '>>> "hooks" list and then regenerate the initial ramdisk.'
-		fi
-	else
-		dkms add spl/$1
-		dkms install spl/$1
-		modprobe -a spl
-		echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'
- 		mkinitcpio -p linux
+post_remove() {
+	dkms remove "spl/${1%%-*}" --all
+
+	if (grep -v '#' /etc/mkinitcpio.conf | grep zfs >/dev/null); then
+		echo '>>> The ZFS packages have been removed, but "zfs" remains in the "hooks"'
+		echo '>>> list in mkinitcpio.conf! You will need to remove "zfs" from the '
+		echo '>>> "hooks" list and then regenerate the initial ramdisk.'
 	fi
 }
+
+post_upgrade() {
+	check_hostid
+	check_initramfs "${1%%-*}"
+}
+
 
 # -*- mode: bash;-*-
