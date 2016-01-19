@@ -15,26 +15,23 @@ makedepends=('vala' 'gobject-introspection' 'cmake')
 groups=('rss')
 install="${pkgname%-*}.install"
 source=("${pkgname}::https://launchpad.net/feedreader/${pkgver%.*}/${pkgver}/+download/FeedReader-${pkgver}.tar.gz")
-md5sums=('')
+md5sums=('d8a8688fbbd694e6800574d5be69d26b')
 _allowed_in='main'
 
 
 ##Build without Libunity (-DWITH_LIBUNITY=OFF)
 build() {
-  ls
-  echo ${PWD}
-  cd "${srcdir}/${pkgname}"
-  ls
-  if [[ -d "${srcdir}/${pkgname}/build" ]]; then
-    rm -rf "${srcdir}/${pkgname}/build"
+  cd "${srcdir}"
+  if [[ -d "${srcdir}/build" ]]; then
+    rm -rf "${srcdir}/build"
   fi
-  mkdir "${srcdir}/${pkgname}/build" && cd "${srcdir}/${pkgname}/build"
+  mkdir "${srcdir}/build" && cd "${srcdir}/build"
   cmake -DCMAKE_INSTALL_PREFIX=/usr -DUSE_WEBKIT_4=ON -DWITH_LIBUNITY=OFF ..
   make
 }
 
 package() {
-  cd "${srcdir}/${pkgname}/build"
+  cd "${srcdir}/build"
   make DESTDIR="${pkgdir}" install
 }
 
