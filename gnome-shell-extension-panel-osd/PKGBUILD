@@ -27,14 +27,14 @@ _archivename="v${pkgver}"
 
 build() {
 	#cd "$srcdir/$_archivename"
-	cd "${srcdir}-${pkgver}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 	./autogen.sh --prefix=/usr 
 	make
 }
 
 package() {
 	#cd "$srcdir/$_archivename"
-	cd "${srcdir}-${pkgver}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 	mkdir -p "${pkgdir}/usr/share/gnome-shell/extensions" "${pkgdir}/usr/share/glib-2.0/schemas/"
 	make DESTDIR=${pkgdir} install
 }
