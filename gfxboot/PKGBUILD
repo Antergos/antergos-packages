@@ -4,7 +4,7 @@
 pkgname=gfxboot
 _pkgver=4.5.10
 _pkgrel=1.1
-pkgver="${_Pkgver}.${_pkgver}"
+pkgver="${pkgver}.${_pkgrel}"
 pkgrel=1
 arch=('i686' 'x86_64')
 license=(GPL)
@@ -13,12 +13,13 @@ pkgdesc="Graphical Boot Logo tool"
 url="http://www.opensuse.org"
 depends=('perl-html-parser' 'freetype2' 'cpio' 'nasm')
 makedepends=('rpmextract')
-source=('http://download.opensuse.org/source/distribution/leap/42.1/repo/oss/suse/src/${pkgname}-${_pkgver}-${_pkgrel}.src.rpm'
-		'gfxboot.html)'
+source=("http://download.opensuse.org/source/distribution/leap/42.1/repo/oss/suse/src/${pkgname}-${_pkgver}-${_pkgrel}.src.rpm"
+		'gfxboot.html')
+md5sums=('9dc13ec617006bc9de5e8d2597b249db'
+		'f824c5bc2f716f8029677cae6956c1c7')
 options=(docs)
 
-md5sums=('8b9d2e9fce5523ac608aa6de68ffb10c'
-         'f824c5bc2f716f8029677cae6956c1c7')
+
 
 
 package() {
@@ -29,9 +30,9 @@ package() {
   cd $srcdir
 
   for i in $(find . -name '*.tar.xz'); do tar -Jxf $i; done
-  mv themes ${pkgname}-${_Pkgver}
+  mv themes ${pkgname}-${_pkgver}
 
-  cd ${pkgname}-${_Pkgver}
+  cd ${pkgname}-${_pkgver}
 
   make
 
