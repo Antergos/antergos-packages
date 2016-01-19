@@ -4,7 +4,7 @@
 pkgname=gfxboot
 _pkgver=4.5.10
 _pkgrel=1.1
-pkgver="${pkgver}.${_pkgrel}"
+pkgver="${_pkgver}.${_pkgrel}"
 pkgrel=1
 arch=('i686' 'x86_64')
 license=(GPL)
