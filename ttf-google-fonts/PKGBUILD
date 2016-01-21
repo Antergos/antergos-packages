@@ -74,7 +74,6 @@ install=font.install
 # git variables
 _gitname="fonts"
 
-
 pkgver() {
   cd "$srcdir/$_gitname"
   printf "%s.r%s" "$(git log -1 --format='%cd' --date=short | sed 's|-||g')" "$(git rev-list --count HEAD)"
