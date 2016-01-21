@@ -28,7 +28,9 @@ if [ "${_gitcommit}" != "" ]; then
 else
   source=("pamac-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
 fi
-md5sums=('f74f7ac891e88802e9d1eb9b26e41f0d80704c890732b4001913455e7950504d')
+source+=('notification-improvment.patch::https://github.com/manjaro/pamac/pull/88.patch')
+md5sums=('f74f7ac891e88802e9d1eb9b26e41f0d80704c890732b4001913455e7950504d'
+        '')
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
@@ -43,6 +45,7 @@ prepare() {
   cd "$srcdir/pamac-$pkgver/"
   
   # patches here
+  patch -Np1 -i $srcdir/notification-improvment.patch
   
 }
 
