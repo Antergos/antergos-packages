@@ -1,0 +1,18 @@
+#Maintainer: Xyne <ac xunilhcra enyx, backwards>
+pkgname=python3-xcgf
+pkgver=2016.1
+pkgrel=1
+pkgdesc="Xyne's common general functions, for internal use."
+arch=(any)
+license=(GPL)
+url="http://xyne.archlinux.ca/projects/python3-xcgf"
+depends=(python)
+source=(http://xyne.archlinux.ca/projects/python3-xcgf/src/python3-xcgf-${pkgver}.tar.xz)
+md5sums=('d7b9c51bb6534b6adbd2d57e362431a2')
+
+package () {
+  cd "$srcdir/$pkgname-$pkgver"
+  python3 setup.py install --prefix=/usr --root="$pkgdir" --optimize=1
+}
+
+# vim: set ts=2 sw=2 et:
