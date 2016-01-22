@@ -22,9 +22,6 @@ md5sums=('SKIP')
 
 _kernel=4.3.3
 
-prepare() {
-	sed -i "s|<PKGVER>|${_pkgver}|g" "${pkgname}.install"
-}
 
 pkgver() {
     cd "${srcdir}/zfs"
@@ -32,6 +29,7 @@ pkgver() {
 }
 
 build() {
+	sed -i "s|<PKGVER>|${_pkgver}|g" "${pkgname}.install"
     cd "${srcdir}/zfs"
     ./autogen.sh
     #scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
