@@ -27,7 +27,7 @@ pkgver() {
 }
 
 build() {
-	sed -i "s|<PKGVER>|${_pkgver}|g" "${srcdir}/${pkgname}.install"
+	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
     cd "${srcdir}/spl"
     ./autogen.sh
     
