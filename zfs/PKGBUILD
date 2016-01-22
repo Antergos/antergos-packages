@@ -29,7 +29,7 @@ pkgver() {
 }
 
 build() {
-	sed -i "s|<PKGVER>|${_pkgver}|g" "${pkgname}.install"
+	sed -i "s|<PKGVER>|${_pkgver}|g" "${srcdir}/${pkgname}.install"
     cd "${srcdir}/zfs"
     ./autogen.sh
     #scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
