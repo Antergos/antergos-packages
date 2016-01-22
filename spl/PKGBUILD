@@ -22,12 +22,12 @@ install=spl.install
 _kernel=4.3.3
 
 pkgver() {
-	sed -i "s|<PKGVER>|${_pkgver}|g" "${pkgname}.install"
     cd "${srcdir}/spl"
     printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
 }
 
 build() {
+	sed -i "s|<PKGVER>|${_pkgver}|g" "${srcdir}/${pkgname}.install"
     cd "${srcdir}/spl"
     ./autogen.sh
     
