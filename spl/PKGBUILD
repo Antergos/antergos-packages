@@ -21,12 +21,8 @@ install=spl.install
 
 _kernel=4.3.3
 
-
-prepare() {
-	sed -i "s|<PKGVER>|${_pkgver}|g" "${pkgname}.install"
-}
-
 pkgver() {
+	sed -i "s|<PKGVER>|${_pkgver}|g" "${pkgname}.install"
     cd "${srcdir}/spl"
     printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
 }
