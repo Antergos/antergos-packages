@@ -23,7 +23,7 @@ md5sums=('SKIP')
 _kernel=4.3.3
 
 prepare() {
-	sed -i "s|<PKGVER>|${_pkgver}|g" "${srcdir}/${pkgname}.install"
+	sed -i "s|<PKGVER>|${_pkgver}|g" "${pkgname}.install"
 }
 
 pkgver() {
