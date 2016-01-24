@@ -2,7 +2,7 @@
 
 _pkgname=cnchi
 pkgname=cnchi-dev
-pkgver=0.11.97
+pkgver=0.13.454
 pkgrel=1
 pkgdesc='Antergos Installer - Development Version'
 arch=(any)
