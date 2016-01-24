@@ -3,7 +3,7 @@
 # Contributor: Fernando Fernandez <fernando@softwareperonista.com.ar>
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
-pkgname=vte3-notification-common
+pkgname=vte-notification-common
 pkgver=0.42.1
 pkgrel=1
 pkgdesc='Common files used by vte and vte3'
