@@ -10,7 +10,7 @@ url="http://github.com/gnunn1/terminix"
 license=('MPL')
 depends=('gtk3' 'dconf' 'gsettings-desktop-schemas' 'vte3' 'vte3-notification')
 install=terminix.install
-source=('https://github.com/gnunn1/terminix/releases/download/$pkgver/terminix.zip'
+source=("https://github.com/gnunn1/terminix/releases/download/$pkgver/terminix.zip"
 		'com.gexperts.Terminix.gschema.xml')
 md5sums=('7269a5785afba78d43036c7227349d78'
 		'')
