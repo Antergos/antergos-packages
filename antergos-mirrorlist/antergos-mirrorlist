@@ -30,6 +30,9 @@ Server = http://mirror.nl.leaseweb.net/cinnarch/$repo/$arch
 Server = http://ftp1.nluug.nl/os/Linux/distr/antergos/$repo/$arch
 Server = http://ftp2.nluug.nl/os/Linux/distr/antergos/$repo/$arch
 
+# Russia
+Server = http://mirror.yandex.ru/mirrors/cinnarch/$repo/$arch
+
 # Spain
 Server = http://softlibre.unizar.es/cinnarch/$repo/$arch
 
