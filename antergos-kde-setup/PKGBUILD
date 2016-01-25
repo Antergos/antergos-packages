@@ -8,7 +8,7 @@ url="http://www.antergos.com"
 arch=('any')
 license=('GPL3')
 depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clementine'
-		'dolphin' 'dolphin-plugins' 'dvd+rw-tools' 'grub2-editor' 'ffmpegthumbs' 'gwenview' 'k3b'
+		'dolphin' 'dolphin-plugins' 'dvd+rw-tools' 'ffmpegthumbs' 'gwenview' 'k3b'
 		'kate' 'kcalc' 'kde-gtk-config' 'kdebase-kdepasswd' 'kdebase-kdialog' 'kdebase-kfind'
 		'kdegraphics-okular' 'kdegraphics-thumbnailers' 'kdenetwork-kopete'
 		'kde-servicemenus-rootactions' 'kdesudo' 'kdeutils-sweeper' 'kdelibs4support'
