@@ -1,7 +1,7 @@
 # Maintainer: Alexandre Filgueira <faidoc@gmail.com>
 
 pkgname=antergos-mirrorlist
-pkgver=20150715
+pkgver=20160125
 pkgrel=1
 pkgdesc="Antergos mirrorlist for use by pacman"
 arch=('any')
