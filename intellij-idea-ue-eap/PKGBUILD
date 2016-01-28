@@ -7,7 +7,7 @@ _buildver=144.3143.6
 _pkgver=16.0.0
 _eap="True"
 pkgver="${_pkgver}.${_buildver}"
-pkgrel=1
+pkgrel=2
 pkgdesc="Intelligent Java IDE with out-of-the-box support for web, enterprise, and mobile frameworks. Early Access Program (EAP) Build."
 arch=('any')
 options=('!strip')
@@ -15,7 +15,6 @@ url="http://www.jetbrains.com/idea/"
 license=("custom")
 depends=('java-environment' 'giflib' 'libxtst')
 makedepends=('wget')
-provides=("intellij-idea-ultimate-edition")
 conflicts=("intellij-idea-ultimate-edition")
 groups=("development" "IDE" "editor" "jetbrains")
 

@@ -1,11 +1,11 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=clion-eap
-_buildver=144.3143.4
+_buildver=144.3357.5
 _pkgver=1.5.0
 _eap="True"
 pkgver="${_pkgver}.${_buildver}"
-pkgrel=2
+pkgrel=1
 pkgdesc="Powerful C and C++ IDE. Early Access Program (EAP) build."
 arch=('any')
 options=('!strip')
@@ -13,7 +13,6 @@ url="http://www.jetbrains.com/clion/"
 license=("custom")
 depends=("java-environment>=8")
 makedepends=('wget')
-provides=("clion")
 conflicts=("clion")
 groups=("development" "IDE" "editor" "jetbrains")
 

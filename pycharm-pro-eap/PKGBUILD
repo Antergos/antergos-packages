@@ -7,7 +7,7 @@ _buildver=143.1919.1
 _pkgver=5.0.4
 _eap="True"
 pkgver="${_pkgver}.${_buildver}"
-pkgrel=1
+pkgrel=2
 pkgdesc="Powerful Python and Django IDE, Early Access Program (EAP) build. Professional edition."
 arch=('any')
 options=('!strip')
@@ -15,7 +15,7 @@ url="http://www.jetbrains.com/pycharm/"
 license=("custom")
 depends=("java-environment>=6")
 makedepends=('wget')
-provides=("pycharm" "pycharm-eap" "pycharm-professional")
+provides=("pycharm-eap")
 conflicts=("pycharm-eap" "pycharm-community" "pycharm-professional")
 groups=("development" "IDE" "editor" "jetbrains")
 
