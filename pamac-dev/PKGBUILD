@@ -21,6 +21,7 @@ conflicts=('pamac' 'pamac-aur')
 options=(!emptydirs)
 install=pamac.install
 
+
 if [ "${_gitcommit}" != "" ]; then
   source=("git+https://github.com/manjaro/pamac")
 else
