@@ -28,8 +28,10 @@ if [ "${_gitcommit}" != "" ]; then
 else
   source=("pamac-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
 fi
-source+=('notification-improvment.patch::https://github.com/manjaro/pamac/pull/88.patch')
+source+=('notification-improvment.patch::https://github.com/manjaro/pamac/pull/88.patch'
+         'pacman5.patch::https://aur.archlinux.org/cgit/aur.git/plain/pacman5.patch?h=pamac-aur')
 md5sums=('f74f7ac891e88802e9d1eb9b26e41f0d80704c890732b4001913455e7950504d'
+        ''
         '')
 
 prepare() {
@@ -46,6 +48,7 @@ prepare() {
   
   # patches here
   patch -Np1 -i $srcdir/notification-improvment.patch
+  patch -Np1 -i $srcdir/pacman5.patch
   
 }
 
