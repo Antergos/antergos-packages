@@ -1,6 +1,6 @@
 # Contributor: tuxce <tuxce.net@gmail.com>
 pkgname=package-query
-pkgver=None
+pkgver=1.7
 pkgrel=3
 pkgdesc="Query ALPM and AUR"
 arch=('i686' 'x86_64')
