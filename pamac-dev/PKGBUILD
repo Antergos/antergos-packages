@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 pkgname=pamac-dev
-pkgver=2.4.3
-_pkgver=2.4.3
+pkgver=3.0.0
+_pkgver=3.0.0
 pkgrel=1
 _gitcommit="master"
 pkgdesc="A Gtk3 frontend for libalpm"
@@ -28,8 +28,6 @@ else
   source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
-source+=('pacman5.patch::https://aur.archlinux.org/cgit/aur.git/plain/pacman5.patch?h=pamac-aur')
-
 md5sums=('SKIP')
 
 pkgver() {
@@ -50,8 +48,6 @@ prepare() {
   # adjust version string
   cd src
   sed -i -e "s|\"2.1\"|\"$pkgver-$pkgrel\"|g" manager_window.vala
-  
-  patch -Np1 -i $srcdir/pacman5.patch
 }
 
 build() {
