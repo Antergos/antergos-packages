@@ -17,7 +17,7 @@ conflicts=('paper-gtk-theme-git')
 #            "inkscape: edit theme assets")
 makedepends=('git')
 install=${pkgname}.install
-source=("${pkgname}"::"git+https://github.com/snwh/${_pkgname}.git")
+source=("${pkgname}::git+https://github.com/snwh/${_pkgname}.git")
 md5sums=('SKIP')
 
 pkgver() {
