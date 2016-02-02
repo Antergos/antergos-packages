@@ -4,7 +4,7 @@
 
 pkgname=gtk-theme-paper
 _pkgname=paper-gtk-theme
-pkgver=None
+pkgver=0.r188
 pkgrel=1
 pkgdesc="A modern desktop theme suite. Its design is mostly flat with a minimal use of shadows for depth."
 arch=('any')
@@ -23,7 +23,7 @@ md5sums=('SKIP')
 pkgver() {
   cd ${srcdir}/${pkgname}
 
-  printf "0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  printf "0.r%s" "$(git rev-list --count HEAD)"
 }
 
 package() {
