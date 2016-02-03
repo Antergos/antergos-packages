@@ -1,10 +1,11 @@
 _PKGVER="<PKGVER>"
+_KERNVER="<KERNVER>"
 
 check_initramfs() {
 	echo '>>> Updating module dependencies. Please wait ...'
 
-	dkms add "zfs/${1}"
-	dkms install "zfs/${1}"
+	dkms add -k "${_KERNVER}" "zfs/${1}"
+	dkms install -k "${_KERNVER}" "zfs/${1}"
 	modprobe -a zfs
 
 	echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'

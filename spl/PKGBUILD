@@ -4,7 +4,7 @@
 pkgname=spl
 pkgver=0.6.5.4
 _pkgver=0.6.5.4
-pkgrel=8
+pkgrel=9
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")
@@ -19,7 +19,7 @@ md5sums=('SKIP'
          'a54f0041a9e15b050f25c463f1db7449')
 install=spl.install
 
-_kernel=4.3.3
+_kernel=4.4.1
 
 pkgver() {
     cd "${srcdir}/spl"
@@ -28,6 +28,7 @@ pkgver() {
 
 build() {
 	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
+	sed -i "s|<KERNVER>|${_kernel}-1-ARCH|g" "${startdir}/${pkgname}.install"
     cd "${srcdir}/spl"
     ./autogen.sh
     

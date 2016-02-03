@@ -1,10 +1,11 @@
 _PKGVER="<PKGVER>"
+_KERNVER="<KERNVER>"
 
 check_initramfs() {
 	echo '>>> Updating module dependencies. Please wait ...'
 
-	dkms add "spl/${1}"
-	dkms install "spl/${1}"
+	dkms add -k "${_KERNVER}" "spl/${1}"
+	dkms install -k "${_KERNVER}" "spl/${1}"
 	modprobe -a spl
 
 	echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'
