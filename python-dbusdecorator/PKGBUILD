@@ -1,0 +1,26 @@
+# Antergos Developers <dev@antergos.com>
+
+pkgname=python-dbusdecorator
+_pkgname=pydbusdecorator
+pkgver=2.0.0
+pkgrel=1
+pkgdesc="Decorators that make using dbus in Python applications much less annoying"
+url="https://github.com/antergos/pydbusdecorator"
+arch=('any')
+license=('GPL3')
+depends=('python' 'python-setuptools')
+source=("${pkgname}-${pkgver}::https://github.com/antergos/pydbusdecorator/archive/${pkgver}.tar.gz")
+md5sums=('')
+_allowed_in=('main')
+
+build() {
+  cd "${srcdir}/${_pkgname}-${pkgver}"
+  python setup.py build
+}
+
+package() {
+  cd "${srcdir}/${_pkgname}-${pkgver}"
+  python setup.py install --prefix=/usr --root="${pkgdir}" --optimize=1 --skip-build
+}
+
+# -*- mode: bash;-*-
