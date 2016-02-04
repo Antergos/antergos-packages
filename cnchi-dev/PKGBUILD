@@ -13,7 +13,7 @@ depends=(python pyalpm python-gobject python-dbus python-requests python-cairo
          python-parted webkitgtk upower python-mako iso-codes encfs pam_encfs gptfdisk)
 makedepends=(python git)
 #source=("cnchi.tar")
-source=("cnchi::http://github.com/antergos/cnchi.git")
+source=("cnchi::git+http://github.com/antergos/cnchi.git")
 md5sums=('SKIP')
 
 pkgver() {
