@@ -15,7 +15,7 @@ source=("${pkgname}-${pkgver}.zip::https://extensions.gnome.org/download-extensi
 md5sums=('952f9441825d7231b2ca1f40c8ec360b5cc0ea48ff26ca13e91c0744588d5ea0')
 
 package() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
+  cd "${srcdir}"
 
   install -Dm644 "metadata.json" \
     "${pkgdir}/usr/share/gnome-shell/extensions/${uuid}/metadata.json"
