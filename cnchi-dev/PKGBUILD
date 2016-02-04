@@ -13,12 +13,13 @@ depends=(python pyalpm python-gobject python-dbus python-requests python-cairo
          python-parted webkitgtk upower python-mako iso-codes encfs pam_encfs gptfdisk)
 makedepends=(python git)
 #source=("cnchi.tar")
-source=("cnchi::git+http://github.com/Antergos/Cnchi.git")
+source=("cnchi::git+http://github.com/antergos/cnchi.git")
 md5sums=('SKIP')
 
 prepare() {
 	if [[ -d ${srcdir}/${_pkgname} ]]; then
 		rm -rf ${srcdir}/${_pkgname}
+		git clone http://github.com/antergos/cnchi.git cnchi
 	fi
 }
 
