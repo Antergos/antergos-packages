@@ -17,7 +17,7 @@ source=("git+http://github.com/antergos/cnchi.git")
 md5sums=('SKIP')
 
 prepare() {
-	if [[ -d ${srcdir}/${_pkgname} ]];
+	if [[ -d ${srcdir}/${_pkgname} ]]; then
 		rm -rf ${srcdir}/${_pkgname}
 	fi
 }
