@@ -1,11 +1,17 @@
 _PKGVER="<PKGVER>"
 _KERNVER="<KERNVER>"
 
+if [[ -d /.antergos-iso ]]; then 
+	_KERNVER="-k ${_KERNVER}"
+else
+	_KERNVER=' '
+fi
+
 check_initramfs() {
 	echo '>>> Updating module dependencies. Please wait ...'
-
-	dkms add -k "${_KERNVER}" "zfs/${1}"
-	dkms install -k "${_KERNVER}" "zfs/${1}"
+	
+	dkms add "${_KERNVER}" "zfs/${1}"
+	dkms install "${_KERNVER}" "zfs/${1}"
 	modprobe -a zfs
 
 	echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'

@@ -1,11 +1,17 @@
 _PKGVER="<PKGVER>"
 _KERNVER="<KERNVER>"
 
+if [[ -d /.antergos-iso ]]; then 
+	_KERNVER="-k ${_KERNVER}"
+else
+	_KERNVER=' '
+fi
+
 check_initramfs() {
 	echo '>>> Updating module dependencies. Please wait ...'
 
-	dkms add -k "${_KERNVER}" "spl/${1}"
-	dkms install -k "${_KERNVER}" "spl/${1}"
+	dkms add "${_KERNVER}" "spl/${1}"
+	dkms install "${_KERNVER}" "spl/${1}"
 	modprobe -a spl
 
 	echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'
