@@ -12,12 +12,13 @@ conflicts=(cnchi)
 depends=(python pyalpm python-gobject python-dbus python-requests python-cairo
          python-parted webkitgtk upower python-mako iso-codes encfs pam_encfs gptfdisk)
 makedepends=(python git)
-source=("cnchi.tar")
-sha256sums=('SKIP')
+#source=("cnchi.tar")
+source=("cnchi::http://github.com/antergos/cnchi.git")
+md5sums=('SKIP')
 
 pkgver() {
 	if [[ -d /pkg ]]; then
-		cd ${srcdir}/${_pkgname}
+		cd ${srcdir}/${pkgname}
 	else
 		cd cnchi
 	fi
@@ -27,7 +28,7 @@ pkgver() {
 build ()
 {
 if [[ -d /pkg ]]; then
-	cd ${srcdir}/${_pkgname}
+	cd ${srcdir}/${pkgname}
 else
 	cd cnchi
 fi
@@ -35,14 +36,14 @@ fi
 
 package() {
 	if [[ -d /pkg ]]; then
-		cd ${srcdir}/${_pkgname}
+		cd ${srcdir}/${pkgname}
 	else
 		cd cnchi
 	fi
 
 	install -d ${pkgdir}/usr/share/locale/
 	install -d ${pkgdir}/usr/share/cnchi/cnchi
-	install -Dm755 bin/${_pkgname} "${pkgdir}/usr/bin/cnchi"
+	install -Dm755 bin/${pkgname} "${pkgdir}/usr/bin/cnchi"
 	install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
 
 	for i in data scripts cnchi ui; do
