@@ -2,7 +2,7 @@
 
 _pkgname=cnchi
 pkgname=cnchi-dev
-pkgver=0.13.454
+pkgver=0.14.0
 pkgrel=1
 pkgdesc='Antergos Installer - Development Version'
 arch=(any)
@@ -50,7 +50,7 @@ package() {
 	done
 
   	for files in po/*; do
-    	if [ -f "$files" ] && [ "$files" != 'po/cnchi.pot' ]; then
+    	if [[ -f "${files}" ]] && [ "${files}" != 'po/cnchi.pot' ]; then
         	STRING_PO=`echo ${files#*/}`
         	STRING=`echo ${STRING_PO%.po}`
         	mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
