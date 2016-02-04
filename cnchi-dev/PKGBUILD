@@ -16,6 +16,12 @@ makedepends=(python git)
 source=("git+http://github.com/antergos/cnchi.git")
 md5sums=('SKIP')
 
+prepare() {
+	if [[ -d ${srcdir}/${_pkgname} ]];
+		rm -rf ${srcdir}/${_pkgname}
+	fi
+}
+
 pkgver() {
 	if [[ -d /pkg ]]; then
 		cd ${srcdir}/${_pkgname}
