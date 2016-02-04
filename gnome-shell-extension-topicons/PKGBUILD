@@ -1,7 +1,7 @@
-#Maintainer: jsh <jsh at myreseau dot org>
+#Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=gnome-shell-extension-topicons
-pkgver=27
+pkgver=28
 pkgrel=1
 pkgdesc="Shows legacy tray icons on top."
 arch=('any')
@@ -10,11 +10,11 @@ install='gnome-shell-extension-topicons.install'
 license=('GPL')
 depends=('gnome-shell')
 groups=('gnome-shell-extensions')
-source=("http://94.247.144.115/repo/topicons/snapshot/topicons-${pkgver}.tar.gz")
-sha256sums=('952f9441825d7231b2ca1f40c8ec360b5cc0ea48ff26ca13e91c0744588d5ea0')
+_uuid='topIcons@adel.gadllah@gmail.com'
+source=("${pkgname}-${pkgver}.zip::https://extensions.gnome.org/download-extension/${_uuid}.shell-extension.zip?version_tag=5335")
+md5sums=('952f9441825d7231b2ca1f40c8ec360b5cc0ea48ff26ca13e91c0744588d5ea0')
 
 package() {
-  uuid='topIcons@adel.gadllah@gmail.com'
   cd "${srcdir}/topicons-${pkgver}"
 
   install -Dm644 "metadata.json" \
