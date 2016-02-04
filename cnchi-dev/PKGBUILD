@@ -18,7 +18,7 @@ md5sums=('SKIP')
 
 pkgver() {
 	if [[ -d /pkg ]]; then
-		cd ${srcdir}/${pkgname}
+		cd ${srcdir}/${_pkgname}
 	else
 		cd cnchi
 	fi
@@ -28,7 +28,7 @@ pkgver() {
 build ()
 {
 if [[ -d /pkg ]]; then
-	cd ${srcdir}/${pkgname}
+	cd ${srcdir}/${_pkgname}
 else
 	cd cnchi
 fi
@@ -36,14 +36,14 @@ fi
 
 package() {
 	if [[ -d /pkg ]]; then
-		cd ${srcdir}/${pkgname}
+		cd ${srcdir}/${_pkgname}
 	else
 		cd cnchi
 	fi
 
 	install -d ${pkgdir}/usr/share/locale/
 	install -d ${pkgdir}/usr/share/cnchi/cnchi
-	install -Dm755 bin/${pkgname} "${pkgdir}/usr/bin/cnchi"
+	install -Dm755 bin/${_pkgname} "${pkgdir}/usr/bin/cnchi"
 	install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
 
 	for i in data scripts cnchi ui; do
