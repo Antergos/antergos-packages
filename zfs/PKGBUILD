@@ -25,7 +25,7 @@ _kernel='4.4.1-2-ARCH'
 
 pkgver() {
     cd "${srcdir}/zfs"
-    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
+    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel/-2-ARCH}"
 }
 
 build() {
