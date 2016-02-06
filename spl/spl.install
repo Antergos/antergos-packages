@@ -1,17 +1,15 @@
 _PKGVER="<PKGVER>"
 _KERNVER="<KERNVER>"
 
-if [[ -d /.antergos-iso ]]; then 
-	_KERNVER="-k ${_KERNVER}"
-else
-	_KERNVER=' '
-fi
+_KERNVER_STR="$(pacman -Q linux)"
+_KERNVER="${_KERNVER_STR/linux }"
+
 
 check_initramfs() {
 	echo '>>> Updating module dependencies. Please wait ...'
 
-	dkms add "${_KERNVER}" "spl/${1}"
-	dkms install "${_KERNVER}" "spl/${1}"
+	dkms add -k "${_KERNVER}" "spl/${_PKGVER}"
+	dkms install -k "${_KERNVER}" "spl/${_PKGVER}"
 	modprobe -a spl
 
 	echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'
@@ -34,7 +32,7 @@ check_hostid() {
 
 post_install() {
 	check_hostid
-	check_initramfs "${_PKGVER}"
+	check_initramfs
 }
 
 post_remove() {
@@ -48,8 +46,7 @@ post_remove() {
 }
 
 post_upgrade() {
-	check_hostid
-	check_initramfs "${_PKGVER}"
+	post_install
 }
 
 

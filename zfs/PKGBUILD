@@ -8,10 +8,10 @@ pkgname=zfs
 pkgdesc="Kernel modules for the Zettabyte File System."
 pkgver=0.6.5.4
 _pkgver=0.6.5.4
-pkgrel=5
+pkgrel=6
 license=('CDDL')
-makedepends=("git" "linux-headers")
-depends=("spl" "zfs-utils" "dkms" "linux-headers")
+makedepends=("git" "linux-headers" "linux")
+depends=("spl" "zfs-utils" "dkms" "linux-headers" "linux")
 provides=("zfs-dkms")
 conflicts=("zfs-git" "zfs-lts" "zfs-dkms")
 install=zfs.install
@@ -20,7 +20,7 @@ url="http://zfsonlinux.org/"
 source=("zfs::git+http://github.com/zfsonlinux/zfs.git")
 md5sums=('SKIP')
 
-_kernel=4.4.1
+_kernel='4.4.1-2-ARCH'
 
 
 pkgver() {
@@ -30,7 +30,7 @@ pkgver() {
 
 build() {
 	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
-	sed -i "s|<KERNVER>|${_kernel}-2-ARCH|g" "${startdir}/${pkgname}.install"
+	sed -i "s|<KERNVER>|${_kernel}|g" "${startdir}/${pkgname}.install"
     cd "${srcdir}/zfs"
     ./autogen.sh
     #scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
