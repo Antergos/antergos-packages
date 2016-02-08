@@ -2,8 +2,8 @@
 # Contributor: D. Can Celasun <dcelasun[at]gmail[dot]com>
 
 pkgname=n1
-pkgver=0.3.45
-buildver=b95f1f7
+pkgver=0.4.5
+buildver=b0ec335
 pkgrel=1
 pkgdesc="A mail client for Mac, Linux, and Windows that is built on the modern web and designed to be extended."
 arch=('x86_64')
