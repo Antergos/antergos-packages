@@ -18,7 +18,7 @@ optdepends=(
 conflicts=("dropbox-experimental")
 groups=('cloud-storage')
 options=('!strip' '!upx')
-install=("dropbox.install")
+install="dropbox.install"
 
 sha256sums=('e7d245f5d1a3d5322614b61400ae2913a8caef44bc86717ff7d8197a15dd7f01'
             'dd8fdb362c0bba8d789010594f021671ff00e535fc75e13da855f43bc7a4b3aa'
