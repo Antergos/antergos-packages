@@ -1,11 +1,11 @@
 # Maintainer: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=pamac
-pkgver=3.0.0
-_pkgver=3.0.0
-pkgrel=4
+pkgver=3.0.1
+_pkgver=3.0.1
+pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
-_gitcommit="e53a71fc3a8d77b9d95cb7fef9fd5dab9c778756"
+#_gitcommit="e53a71fc3a8d77b9d95cb7fef9fd5dab9c778756"
 pkgdesc="A Gtk3 frontend for libalpm"
 arch=('i686' 'x86_64')
 url="https://github.com/manjaro/pamac"
