@@ -7,7 +7,7 @@ pkgname=syslinux-tmp
 _pkgname=syslinux
 pkgver=6.03
 _tag=81ad566
-pkgrel=4.01
+pkgrel=4.02
 pkgdesc='Collection of boot loaders that boot from FAT, ext2/3/4 and btrfs filesystems, from CDs and via PXE'
 url='http://www.syslinux.org/'
 arch=(i686 x86_64)
@@ -18,6 +18,8 @@ license=(GPL2)
 # efi32/com32 do not like Arch cflags/ldflags, though it would be nice to have the flags for userspace tools
 options=(!makeflags !buildflags)
 provides=(syslinux)
+conflicts=(syslinux)
+replaces=(syslinux)
 makedepends=(git python2 nasm upx asciidoc)
 if [[ "$CARCH" == x86_64 ]]; then
   # efi32 needs it
