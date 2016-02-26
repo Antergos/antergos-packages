@@ -2,7 +2,7 @@
 # Contributor: D. Can Celasun <dcelasun[at]gmail[dot]com>
 
 pkgname=n1
-pkgver=0.4.5
+pkgver=0.4.9
 buildver=b0ec335
 pkgrel=1
 pkgdesc="A mail client for Mac, Linux, and Windows that is built on the modern web and designed to be extended."
@@ -14,7 +14,7 @@ depends=('gtk2' 'libgnome-keyring' 'desktop-file-utils' 'python2' 'gconf' 'nodej
 groups=('email')
 source=("https://github.com/nylas/N1/releases/download/${pkgver}/N1-${pkgver}.deb")
 install=${pkgname}.install
-md5sums=('822316d19e4d794ab39ccc1325f951c8')
+md5sums=('fe57622b687cc9bafbed08a887c9401d')
 package() {
 	msg2 "Extracting data.tar.gz..."
 	bsdtar -xf data.tar.gz -C "${pkgdir}/"
