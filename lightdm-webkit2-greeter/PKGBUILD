@@ -1,7 +1,7 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=lightdm-webkit2-greeter
-_pkgver=2.0.0
+_pkgver=2.1.0rc1
 pkgver=${_pkgver}
 pkgrel=1
 pkgdesc="A webkit2 greeter for LightDM"
@@ -11,7 +11,7 @@ license=('GPL3')
 makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common' 'exo'
 			'python-pip' 'nodejs')
 depends=('lightdm' 'webkit2gtk>=2.10.2' 'webkit2gtk<2.12' 'gtk3>=3.18' 'gtk3<3.20')
-provides=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos=2.3.2')
+provides=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos=2.4.0')
 conflicts=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos<2.2.4')
 install=greeter.install
