@@ -2,7 +2,7 @@
 # Author: tuxce <tuxce.net@gmail.com>
 
 pkgname=yaourt
-pkgver=1.7
+pkgver=1.8
 pkgrel=2
 pkgdesc="A pacman wrapper with extended features and AUR support"
 arch=('any')
