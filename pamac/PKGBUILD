@@ -1,4 +1,5 @@
-# Maintainer: Guillaume Benoit <guillaume@manjaro.org>
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=pamac
 pkgver=3.2.0
@@ -34,14 +35,12 @@ prepare() {
   if [ "$_gitcommit" != "" ]; then
     mv "$srcdir/pamac-$_gitcommit" "$srcdir/pamac-$pkgver"
   fi
-  cd "$srcdir/pamac-$pkgver"
- 
 
   # adjust version string
   cd "$srcdir/pamac-$pkgver/src"
-  sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala
+  sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala 
   cd "$srcdir/pamac-$pkgver/"
-  
+  # patches here
 }
 
 build() {
@@ -53,9 +52,7 @@ build() {
 
 package() {
   cd "$srcdir/pamac-$pkgver"
-  make prefix="$pkgdir/usr" sysconfdir="$pkgdir/etc" install
-
+  make prefix="$pkgdir"/usr sysconfdir="$pkgdir"/etc install
 }
 
-# vim:set ts=2 sw=2 et:
 # -*- mode: bash;-*-
