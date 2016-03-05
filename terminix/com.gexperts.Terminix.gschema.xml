@@ -67,10 +67,30 @@
   <!-- Global settings -->
   <schema id="com.gexperts.Terminix.Settings" path="/com/gexperts/Terminix/">
 
+    <key name="disable-csd" type="b">
+      <default>false</default>
+      <summary>Whether to disable the client-side-decorations.</summary>
+      <description>If true, the default titlebar will be used as created by the WM rather then the CSD.</description>
+    </key>
+    <key name="auto-hide-mouse" type="b">
+      <default>false</default>
+      <summary>Whether to automatically hide the mouse pointer when typing.</summary>
+      <description>If true, the mouse pointer is hidden when the user starts typing and shown again when interaction with the mouse occurs.</description>
+    </key>
     <key name="prompt-on-new-session" type="b">
-      <default>true</default>
+      <default>false</default>
       <summary>Whether to prompt for session settings or use defaults.</summary>
       <description>If true, when creating a new session a prompt will appear to pick the session name and profile used.</description>
+    </key>
+    <key name="enable-transparency" type="b">
+      <default>true</default>
+      <summary>Whether to transparency is enabled.</summary>
+      <description>If true, transparency is enabled in terminals is supported.</description>
+    </key>
+    <key name="enable-small-title" type="b">
+      <default>false</default>
+      <summary>Whether terminal titlebars are shown smaller.</summary>
+      <description>If true, terminal titlebars are rendered smaller then the default by removing padding.</description>
     </key>
     <!-- Dark Theme -->
     <key name="theme-variant" enum="com.gexperts.Terminix.ThemeVariant">
@@ -83,7 +103,12 @@
       <summary>Whether to notify when a process is completed</summary>
       <description>If true, notifications will be sent when non-visible processes complete in terminals.</description>
     </key>
-    <!-- Unsafe Paste, cribbed from Pantheon -->
+    <!-- Menubar Accelerator -->
+    <key name="menu-accelerator-enabled" type="b">
+      <default>true</default>
+      <summary>Whether the standard GTK shortcut for menubar access is enabled</summary>
+      <description>Normally you can access the menubar with F10. This can also be customized via gtkrc (gtk-menu-bar-accel = "whatever"). This option allows the standard menubar accelerator to be disabled.</description>
+    </key>    <!-- Unsafe Paste, cribbed from Pantheon -->
     <key name="unsafe-paste-alert" type="b">
       <default>true</default>
       <summary>Alert the user about unsafe paste.</summary>
@@ -278,7 +303,7 @@
       <default>'narrow'</default>
       <summary>Whether ambiguous-width characters are narrow or wide when using UTF-8 encoding</summary>
     </key>
-    <!-- Window Title -->
+    <!-- Terminal Title -->
     <key name="terminal-title" type="s">
       <default>'${id}: ${title}'</default>
       <summary>The string to display as the terminal title</summary>
@@ -409,10 +434,6 @@
       <default>'disabled'</default>
       <summary>Keyboard shortcut to synchronize input for the session</summary>
     </key>
-    <key name="session-list" type="s">
-      <default>'&lt;Ctrl&gt;k'</default>
-      <summary>Keyboard shortcut to open list of sessions</summary>
-    </key>
     <key name="session-close" type="s">
       <default>'disabled'</default>
       <summary>Keyboard shortcut to close a session</summary>
@@ -473,7 +494,10 @@
       <default>'&lt;Alt&gt;9'</default>
       <summary>Keyboard shortcut to switch to terminal 9</summary>
     </key>
-
+    <key name="win-view-sidebar" type="s">
+      <default>'&lt;Ctrl&gt;s'</default>
+      <summary>Keyboard shortcut to view session sidebar</summary>
+    </key>  
     <key name="win-switch-to-session-0" type="s">
       <default>'disabled'</default>
       <summary>Keyboard shortcut to switch to session 0</summary>
@@ -514,7 +538,10 @@
       <default>'disabled'</default>
       <summary>Keyboard shortcut to switch to session 9</summary>
     </key>
-    
+    <key name="win-fullscreen" type="s">
+      <default>'F11'</default>
+      <summary>Keyboard shortcut to toggle fullscreen</summary>
+    </key>
     <!-- Can't use accelerators with tab, may need to hardwire this in VTE -->
     <key name="session-switch-to-next-terminal" type="s">
       <default>'&lt;Ctrl&gt;Tab'</default>
@@ -544,13 +571,17 @@
       <default>'&lt;Ctrl&gt;&lt;Shift&gt;h'</default>
       <summary>Keyboard shortcut to find previous match in terminal</summary>
     </key>
-    <key name="terminal-title" type="s">
+    <key name="terminal-layout" type="s">
       <default>'disabled'</default>
-      <summary>Keyboard shortcut to set a custom title for the terminal</summary>
+      <summary>Keyboard shortcut to set a customize layout options for the terminal</summary>
     </key>
     <key name="terminal-close" type="s">
       <default>'disabled'</default>
       <summary>Keyboard shortcut to close the terminal</summary>
+    </key>
+    <key name="terminal-maximize" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to maximize or restore the terminal</summary>
     </key>
     <key name="terminal-profile-preference" type="s">
       <default>'disabled'</default>
@@ -571,6 +602,22 @@
     <key name="terminal-select-all" type="s">
       <default>'&lt;Ctrl&gt;&lt;Shift&gt;a'</default>
       <summary>Keyboard shortcut to select all text in terminal</summary>
+    </key>
+    <key name="terminal-zoom-in" type="s">
+      <default>'&lt;Ctrl&gt;plus'</default>
+      <summary>Keyboard shortcut to make font larger</summary>
+    </key>
+    <key name="terminal-zoom-out" type="s">
+      <default>'&lt;Ctrl&gt;minus'</default>
+      <summary>Keyboard shortcut to make font smaller</summary>
+    </key>
+    <key name="terminal-zoom-normal" type="s">
+      <default>'&lt;Ctrl&gt;0'</default>
+      <summary>Keyboard shortcut to make font normal-size</summary>
+    </key>
+    <key name="terminal-save" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to save terminal contents</summary>
     </key>
   </schema>
 </schemalist>
