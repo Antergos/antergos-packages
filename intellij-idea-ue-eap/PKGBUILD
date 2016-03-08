@@ -20,8 +20,8 @@ groups=("development" "IDE" "editor" "jetbrains")
 
 
 if [[ "True" = "${_eap}" ]]; then
-	#_srcfile="ideaIU-${_buildver}.tar.gz"
-	_srcfile="ideaIU-16-Preview.tar.gz"
+	_srcfile="ideaIU-${_buildver}.tar.gz"
+	#_srcfile="ideaIU-16-Preview.tar.gz"
 	source=("http://download.jetbrains.com/idea/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
