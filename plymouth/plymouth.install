@@ -1,3 +1,5 @@
+#!/bin/bash
+
 post_install() {
 	plymouth-set-default-theme antergos -R
 }# -*- mode: bash;-*-
