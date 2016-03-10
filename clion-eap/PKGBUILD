@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=clion-eap
-_buildver=145.184.4
-_pkgver=1.5.0
+_buildver=145.256.37
+_pkgver=2016.1
 _eap="True"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
