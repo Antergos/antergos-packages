@@ -5,7 +5,7 @@
 
 pkgname=muffin
 pkgver=2.8.5
-pkgrel=1
+pkgrel=1.1
 pkgdesc="Cinnamon window manager based on Mutter"
 arch=('i686' 'x86_64')
 url="https://github.com/linuxmint/muffin"
@@ -31,7 +31,7 @@ build() {
                  --enable-compile-warnings=minimum
   
   #https://bugzilla.gnome.org/show_bug.cgi?id=656231
-  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+  #sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
   
   make
 }
@@ -41,10 +41,10 @@ package() {
   make DESTDIR="$pkgdir/" install
 
   # Remove unused stuff
-  make -C src DESTDIR="$pkgdir" uninstall-binPROGRAMS uninstall-desktopfilesDATA
-  make -C src/tools DESTDIR="$pkgdir" uninstall
-  make -C src/compositor/plugins DESTDIR="$pkgdir" uninstall
-  make -C doc/man DESTDIR="$pkgdir" uninstall
+  #make -C src DESTDIR="$pkgdir" uninstall-binPROGRAMS uninstall-desktopfilesDATA
+  #make -C src/tools DESTDIR="$pkgdir" uninstall
+  #make -C src/compositor/plugins DESTDIR="$pkgdir" uninstall
+  #make -C doc/man DESTDIR="$pkgdir" uninstall
 }
 
 # vim:set ts=2 sw=2 et:

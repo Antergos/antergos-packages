@@ -4,7 +4,7 @@
 
 pkgname=cinnamon-settings-daemon
 pkgver=2.8.4
-pkgrel=1
+pkgrel=1.1
 pkgdesc="The Cinnamon Settings daemon"
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -29,7 +29,7 @@ build() {
       --libexecdir=/usr/lib/$pkgname --disable-static --enable-systemd
 
   #https://bugzilla.gnome.org/show_bug.cgi?id=656231
-  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+  #sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
   make
 }
