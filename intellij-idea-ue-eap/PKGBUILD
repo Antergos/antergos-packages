@@ -3,8 +3,8 @@
 # Contributor: Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
 
 pkgname=intellij-idea-ue-eap
-_buildver=145.184.1
-_pkgver=16.0.0
+_buildver=145.256.33
+_pkgver=2016.1
 _eap="True"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
