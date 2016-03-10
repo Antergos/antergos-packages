@@ -4,7 +4,7 @@
 
 pkgname=cinnamon-desktop
 pkgver=2.8.1
-pkgrel=1
+pkgrel=1.1
 pkgdesc="Library with common API for various Cinnamon modules"
 arch=(i686 x86_64)
 license=(GPL LGPL)
@@ -34,7 +34,7 @@ build() {
     --libexecdir=/usr/lib/$pkgname --disable-static
   
   #https://bugzilla.gnome.org/show_bug.cgi?id=656231
-  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+  #sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
   make
 }

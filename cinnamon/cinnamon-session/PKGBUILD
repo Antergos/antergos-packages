@@ -4,7 +4,7 @@
 
 pkgname=cinnamon-session
 pkgver=2.8.3
-pkgrel=1
+pkgrel=1.1
 pkgdesc="The Cinnamon Session Handler"
 arch=(i686 x86_64)
 license=(GPL LGPL)
