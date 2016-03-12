@@ -4,7 +4,7 @@
 
 pkgname=cinnamon-session
 pkgver=2.8.3
-pkgrel=1.1
+pkgrel=1.2
 pkgdesc="The Cinnamon Session Handler"
 arch=(i686 x86_64)
 license=(GPL LGPL)
@@ -24,6 +24,9 @@ prepare() {
 
   # Increase timeout, for slow machines
   # patch -Np1 -i ../timeout.patch
+  
+   # Support new libsystemd (which replaces libsystemd-login)
+   sed -i 's/libsystemd-login/libsystemd/' configure.ac
 
 }
 

@@ -5,7 +5,7 @@
 
 pkgname=cinnamon-screensaver
 pkgver=2.8.0
-pkgrel=1.1
+pkgrel=1.2
 pkgdesc="Screensaver designed to integrate well with the Cinnamon desktop."
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -18,8 +18,12 @@ source=($pkgname-$pkgver.tar.gz::https://github.com/linuxmint/cinnamon-screensav
 sha256sums=('2e2417e3ed4be3c3744acb4110df7ff5427491fc5d93c8cada6bab2c725a3c15'
             'c34925177c883dc4935408a4679e984855b14ef18a208bb5c7c3e5be3817619a')
 _allowed_in="staging"
+
 build() {
   cd $pkgname-$pkgver
+  
+   # Support new libsystemd (which replaces libsystemd-login)
+   sed -i 's/libsystemd-login/libsystemd/' configure.ac
 
   ./autogen.sh --prefix=/usr --sysconfdir=/etc \
                --libexecdir=/usr/lib/cinnamon-screensaver \
