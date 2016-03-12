@@ -2,9 +2,9 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl
-pkgver=0.6.5.4
-_pkgver=0.6.5.4
-pkgrel=11
+pkgver=0.6.5.5
+_pkgver=0.6.5.5
+pkgrel=1
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")
@@ -14,22 +14,22 @@ conflicts=("spl-git" "spl-lts" "spl-dkms")
 install=spl.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-source=("spl::git+https://github.com/zfsonlinux/spl.git")
-md5sums=('SKIP'
-         'a54f0041a9e15b050f25c463f1db7449')
+source=("https://github.com/zfsonlinux/zfs/releases/download/zfs-${pkgver}/${pkgname}-${pkgver}.tar.gz")
+sha256sums=('c5d909000d34de20743cca5959a12d21ea4bcd545c0dfd90df7935f138570e1e')
 install=spl.install
 
-_kernel='4.4.1-2-ARCH'
+_kernel='4.4.5-1-ARCH'
 
-pkgver() {
-    cd "${srcdir}/spl"
-    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel/-2-ARCH}"
-}
+#pkgver() {
+#    cd "${srcdir}/${pkgname}-${pkgver}"
+#    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel/-2-ARCH}"
+#}
 
 build() {
-	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
-	sed -i "s|<KERNVER>|${_kernel}|g" "${startdir}/${pkgname}.install"
-    cd "${srcdir}/spl"
+    sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
+    sed -i "s|<KERNVER>|${_kernel}|g" "${startdir}/${pkgname}.install"
+
+    cd "${srcdir}/${pkgname}-${pkgver}"
     ./autogen.sh
     
     _at_enable=""
@@ -45,15 +45,15 @@ build() {
 }
 
 package() {
-    dkmsdir="${pkgdir}/usr/src/spl-${_pkgver}"
+    dkmsdir="${pkgdir}/usr/src/${pkgname}-${_pkgver}"
     install -d "${dkmsdir}"
 
-    cd "${srcdir}/spl"
-    git archive --format=tar HEAD | tar -x -C "${dkmsdir}"
+    cd "${srcdir}"
+    tar -xzf "${pkgname}-${pkgver}.tar.gz" -C "${dkmsdir}" --strip-components 1
 
     cd "${dkmsdir}"
     ./autogen.sh
-    scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n spl
+    scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n ${pkgname}
     chmod g-w,o-w -R .
 }
 

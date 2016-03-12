@@ -3,36 +3,36 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 #
 pkgname="zfs-utils"
-pkgver=0.6.5.4
-_pkgver=0.6.5.4
-pkgrel=2
+pkgver=0.6.5.5
+_pkgver=0.6.5.5
+pkgrel=1
 license=('CDDL')
 pkgdesc="Kernel module support files for the Zettabyte File System."
 depends=("spl" "dkms" "linux-headers")
 makedepends=("git")
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-source=("zfs::git+https://github.com/zfsonlinux/zfs.git"
+source=("zfs::https://github.com/zfsonlinux/zfs/releases/download/zfs-${pkgver}/zfs-${pkgver}.tar.gz"
         "zfs-utils.bash-completion-r1"
         "zfs-utils.initcpio.install"
         "zfs-utils.initcpio.hook")
 groups=("system")
 md5sums=('SKIP'
          '9ddb0c8a94861f929d0fa741fdc49950'
-         '9ef4841abb85dee611828cc7e6f5c6fe'
+         '110b48d872a7a7d2884496267f92418a'
          '62ba32c6853c315ff231c396cf8bfdbb')
-conflicts=("zfs-utils" "zfs-utils-lts")
+conflicts=("zfs-utils-lts")
 
-_kernel=4.3.3
-_kernel=4.3.3
+_kernel=4.4.5
+_kernel=4.4.5
 
-pkgver() {
-    cd "${srcdir}/zfs"
-    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
-}
+#pkgver() {
+#    cd "${srcdir}/zfs"
+#    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
+#}
 
 build() {
-    cd "${srcdir}/zfs"
+    cd "${srcdir}/zfs-${pkgver}"
     ./autogen.sh
     
     _i686_target=""
@@ -54,7 +54,7 @@ build() {
 
 package() {
 
-    cd "${srcdir}/zfs"
+    cd "${srcdir}/zfs-${pkgver}"
     make DESTDIR="${pkgdir}" install
 
     # Remove uneeded files
