@@ -4,7 +4,7 @@
 
 pkgname=cinnamon-settings-daemon
 pkgver=2.8.4
-pkgrel=1.1
+pkgrel=1.2
 pkgdesc="The Cinnamon Settings daemon"
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -24,6 +24,9 @@ prepare() {
 
 build() {
   cd $pkgname-$pkgver
+  
+  # Support new libsystemd (which replaces libsystemd-login)
+  sed -i 's/libsystemd-login/libsystemd/' configure.ac
 
   ./autogen.sh --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
       --libexecdir=/usr/lib/$pkgname --disable-static --enable-systemd
