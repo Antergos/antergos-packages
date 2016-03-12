@@ -16,7 +16,7 @@ _post_install_upgrade() {
 		
 		install -dm0 "${_home_dir}/.dropbox-dist"
 		
-		if ! [[ -e "${_home_dir}/.config/autostart/dropbox.desktop" ]]; then
+		if ! [[ -e "${_home_dir}/.config/autostart/dropbox.desktop" ]] && [[ -d "${_home_dir}/.config/autostart" ]]; then
 			cp --no-preserve=ownership /usr/share/applications/dropbox.desktop "${_home_dir}/.config/autostart/"
 		fi
 	done
@@ -40,7 +40,7 @@ post_remove() {
 	for _home_dir in /home/*
 	do
 		rm -rf "${_home_dir}/.config/autostart/.dropbox-dist"
-		rm -rf "${_home_dir}/.config/autostart/.config/dropbox.desktop"
+		rm -rf "${_home_dir}/.config/autostart/.config/dropbox.desktop" > /dev/null
 	done
 }
 # -*- mode: bash;-*-
