@@ -2,10 +2,10 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: isiachi <isiachi@rhyeworld.it>
 #
-pkgname="spl-utils"
-pkgver=0.6.5.4
-_pkgver=0.6.5.4
-pkgrel=2
+pkgname='spl-utils'
+pkgver=0.6.5.5
+_pkgver=${pkgver}
+pkgrel=1
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
 depends=("dkms")
@@ -18,8 +18,7 @@ source=("spl::git+https://github.com/zfsonlinux/spl.git")
 groups=("system" "zfs")
 md5sums=('SKIP')
 
-_kernel=4.3.3
-_kernel=4.3.3
+_kernel=4.5.1_1
 
 pkgver() {
     cd "${srcdir}/spl"

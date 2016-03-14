@@ -6,9 +6,9 @@
 
 pkgname=zfs
 pkgdesc="Kernel modules for the Zettabyte File System."
-pkgver=0.6.5.4
-_pkgver=0.6.5.4
-pkgrel=6
+pkgver=0.6.5.5
+_pkgver=${pkgver}
+pkgrel=1
 license=('CDDL')
 makedepends=("git" "linux-headers" "linux")
 depends=("spl" "zfs-utils" "dkms" "linux-headers" "linux")
@@ -20,12 +20,12 @@ url="http://zfsonlinux.org/"
 source=("zfs::git+http://github.com/zfsonlinux/zfs.git")
 md5sums=('SKIP')
 
-_kernel='4.4.1-2-ARCH'
+_kernel='4.4.5_1'
 
 
 pkgver() {
     cd "${srcdir}/zfs"
-    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel/-2-ARCH}"
+    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
 }
 
 build() {
