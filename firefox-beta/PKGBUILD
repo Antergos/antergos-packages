@@ -5,7 +5,7 @@ pkgname=firefox-beta
 pkgver=46.0b1
 _major=${pkgver/rc*}
 _build=${pkgver/*rc}
-pkgrel=2
+pkgrel=3
 pkgdesc="Standalone web browser from mozilla.org - Beta"
 arch=('i686' 'x86_64')
 url="https://www.mozilla.org/en-US/firefox/channel/#beta"
@@ -47,10 +47,10 @@ package() {
 
   msg2 "Moving stuff in place..."
   # Install
-  cp -r firefox/ "$pkgdir"/opt/$pkgname-$pkgver
+  cp -r firefox/ "$pkgdir"/opt/$pkgname
 
   # /usr/bin link
-  ln -s /opt/$pkgname-$pkgver/firefox "$pkgdir"/usr/bin/$pkgname
+  ln -s /opt/$pkgname/firefox "$pkgdir"/usr/bin/$pkgname
 
   # Desktops
   install -m644 *.desktop "$pkgdir"/usr/share/applications/
@@ -58,11 +58,11 @@ package() {
   # Icons
   for i in 16x16 22x22 24x24 32x32 48x48 256x256; do
     install -d "$pkgdir"/usr/share/icons/hicolor/$i/apps/
-    ln -s /opt/$pkgname-$pkgver/browser/chrome/icons/default/default${i/x*}.png \
+    ln -s /opt/$pkgname/browser/chrome/icons/default/default${i/x*}.png \
           "$pkgdir"/usr/share/icons/hicolor/$i/apps/$pkgname.png
   done
 
-  ln -s /opt/$pkgname-$pkgver/browser/icons/mozicon128.png \
+  ln -s /opt/$pkgname/browser/icons/mozicon128.png \
         "$pkgdir"/usr/share/icons/hicolor/128x128/apps/$pkgname.png
 }
 # -*- mode: bash;-*-
