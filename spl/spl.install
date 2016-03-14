@@ -1,5 +1,5 @@
-_PKGVER="<PKGVER>"
-_KERNVER="<KERNVER>"
+_PKGVER="0.6.5.5"
+_KERNVER="4.4.5-1-ARCH"
 
 _KERNVER_STR="$(pacman -Q linux)"
 _KERNVER="${_KERNVER_STR/linux }-ARCH"

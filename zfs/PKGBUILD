@@ -6,34 +6,35 @@
 
 pkgname=zfs
 pkgdesc="Kernel modules for the Zettabyte File System."
-pkgver=0.6.5.4
-_pkgver=0.6.5.4
-pkgrel=6
+pkgver=0.6.5.5
+_pkgver=0.6.5.5
+pkgrel=1
 license=('CDDL')
-makedepends=("git" "linux-headers" "linux")
+makedepends=("linux-headers" "linux")
 depends=("spl" "zfs-utils" "dkms" "linux-headers" "linux")
 provides=("zfs-dkms")
 conflicts=("zfs-git" "zfs-lts" "zfs-dkms")
 install=zfs.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-source=("zfs::git+http://github.com/zfsonlinux/zfs.git")
+#source=("zfs::git+http://github.com/zfsonlinux/zfs.git")
+source=("zfs::https://github.com/zfsonlinux/zfs/releases/download/zfs-${pkgver}/zfs-${pkgver}.tar.gz")
 md5sums=('SKIP')
 
-_kernel='4.4.1-2-ARCH'
+_kernel='4.4.5-1-ARCH'
 
 
-pkgver() {
-    cd "${srcdir}/zfs"
-    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel/-2-ARCH}"
-}
+#pkgver() {
+#    cd "${srcdir}/zfs"
+#    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel/-2-ARCH}"
+#}
 
 build() {
-	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
-	sed -i "s|<KERNVER>|${_kernel}|g" "${startdir}/${pkgname}.install"
-    cd "${srcdir}/zfs"
+    sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
+    sed -i "s|<KERNVER>|${_kernel}|g" "${startdir}/${pkgname}.install"
+
+    cd "${srcdir}/zfs-${pkgver}"
     ./autogen.sh
-    #scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
     
     _i686_target=""
     [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"
@@ -56,8 +57,8 @@ package() {
     dkmsdir="${pkgdir}/usr/src/zfs-${_pkgver}"
     install -d "${dkmsdir}"
 
-    cd "${srcdir}/zfs"
-    git archive --format=tar HEAD | tar -x -C "${dkmsdir}"
+    cd "${srcdir}"
+    tar -xzf "${pkgname}-${pkgver}.tar.gz" -C "${dkmsdir}" --strip-components 1
 
     cd "${dkmsdir}"
     ./autogen.sh

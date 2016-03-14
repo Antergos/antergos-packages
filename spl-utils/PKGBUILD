@@ -3,9 +3,9 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 #
 pkgname="spl-utils"
-pkgver=0.6.5.4
-_pkgver=0.6.5.4
-pkgrel=2
+pkgver=0.6.5.5
+_pkgver=0.6.5.5
+pkgrel=1
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
 depends=("dkms")
@@ -14,21 +14,20 @@ conflicts=("spl-utils-dkms" "spl-utils-lts" "spl-utils-git")
 makedepends=("git")
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-source=("spl::git+https://github.com/zfsonlinux/spl.git")
+source=("https://github.com/zfsonlinux/zfs/releases/download/zfs-${pkgver}/spl-${pkgver}.tar.gz")
 groups=("system" "zfs")
-md5sums=('SKIP')
+sha256sums=('c5d909000d34de20743cca5959a12d21ea4bcd545c0dfd90df7935f138570e1e')
 
-_kernel=4.3.3
-_kernel=4.3.3
+_kernel=4.4.5
+_kernel=4.4.5
 
-pkgver() {
-    cd "${srcdir}/spl"
-    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
-    
-}
+#pkgver() {
+#    cd "${srcdir}/spl"
+#    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
+#}
 
 build() {
-    cd "${srcdir}/spl"
+    cd "${srcdir}/spl-${pkgver}"
     ./autogen.sh
     
     _at_enable=""
@@ -44,8 +43,7 @@ build() {
 }
 
 package() {
-
-    cd "${srcdir}/spl"
+    cd "${srcdir}/spl-${pkgver}"
     make DESTDIR="${pkgdir}" install
     #install -D -m644 "${srcdir}"/spl-utils.hostid "${pkgdir}"/etc/hostid
 }
