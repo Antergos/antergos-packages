@@ -10,7 +10,7 @@ license=('LGPLv2+')
 depends=('glib2' 'libyaml' 'gnome-common' 'libsoup' 'gtk3' 'gdk-pixbuf2' 'gcab')
 makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'git')
 conflicts=("appstream-glib")
-_realver=0.5.10
+_realver=0.5.11
 provides=("appstream-glib=$_realver")
 source=("git+http://github.com/hughsie/appstream-glib.git")
 md5sums=('SKIP')
