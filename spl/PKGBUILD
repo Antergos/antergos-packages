@@ -4,7 +4,7 @@
 pkgname=spl
 pkgver=0.6.5.5
 _pkgver=${pkgver}
-pkgrel=1
+pkgrel=2
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")

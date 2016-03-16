@@ -2,12 +2,12 @@
 
 pkgname=python-parted
 pkgver=3.10.7
-pkgrel=2
-pkgdesc="Python 3 module for GNU parted"
+pkgrel=3
+pkgdesc="Python module for the parted library which can be used for manipulating partition tables."
 url="https://github.com/rhinstaller/pyparted"
 arch=('i686' 'x86_64')
 license=('GPL2')
-depends=('python' 'parted>=3.0')
+depends=('python' 'parted>=3.1' 'e2fsprogs')
 provides=('pyparted')
 conflicts=('pyparted')
 replaces=('pyparted')
@@ -15,15 +15,13 @@ source=("https://github.com/rhinstaller/pyparted/archive/v${pkgver}.tar.gz")
 sha256sums=('5914e3a60437fe3e3758a9e86ee4a539dfa46cfe18e3df386a5cf1f75a963431')
 
 build() {
-  cd "${srcdir}"/pyparted-${pkgver}
-  # python setup.py build
-  make
+	cd "${srcdir}"/pyparted-${pkgver}
+	make
 }
 
 package() {
-  cd "${srcdir}"/pyparted-${pkgver}
-  #python setup.py install --prefix=/usr --root="${pkgdir}" --optimize=1 --skip-build
-  make install DESTDIR="${pkgdir}"
+	cd "${srcdir}"/pyparted-${pkgver}
+	make install DESTDIR="${pkgdir}"
 }
 
 # -*- mode: bash;-*-

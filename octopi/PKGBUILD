@@ -3,7 +3,7 @@
 pkgname=octopi
 pkgdesc="A powerful Qt5 Pacman frontend."
 pkgver=0.8.0
-pkgrel=2
+pkgrel=3
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 #_gitcommit="master"
 arch=('i686' 'x86_64')
@@ -122,5 +122,4 @@ fi
 }
 
 
-# vim: set ts=2 sw=2 ft=sh noet:
-# -*- mode: bash;-*-
+# -*- mode: bash; tab-width: 4; indent-tabs-mode: t -*-
