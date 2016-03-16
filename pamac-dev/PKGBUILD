@@ -23,7 +23,7 @@ install=pamac.install
 
 
 if [ "${_gitcommit}" != "" ]; then
-  source=("git+https://github.com/manjaro/pamac")
+  source=("pamac::git+https://github.com/manjaro/pamac")
 else
   source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
@@ -31,8 +31,8 @@ fi
 md5sums=('SKIP')
 
 pkgver() {
-	if [[ "${srcdir}" != '' ]]; then
-		cd "$srcdir/pamac"
+	if [[ "${_gitcommit}" != '' ]]; then
+		cd "$srcdir/pamac-$pkgver" || cd "$srcdir/pamac"
 	fi
 	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
 
