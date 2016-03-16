@@ -9,7 +9,7 @@ url="https://github.com/bugsnag/bugsnag-python"
 arch=('any')
 license=('custom')
 depends=('python' 'python-setuptools')
-source=("${pkgname}-${pkgver}::https://github.com/bugsnag/bugsnag-python/archive/v${pkgver}.tar.gz")
+source=("${pkgname}-${pkgver}::https://github.com/bugsnag/bugsnag-python/archive/${pkgver}.tar.gz")
 sha256sums=('8cbaf024fbbc73cdceab2eac0937035052da48295970fe9eaa84b19d8e353e19')
 
 build() {
