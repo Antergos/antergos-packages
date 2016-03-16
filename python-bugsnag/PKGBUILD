@@ -2,8 +2,8 @@
 
 pkgname=python-bugsnag
 _pkgname=bugsnag-python
-pkgver=2.3.1
-pkgrel=2
+pkgver=2.4.0
+pkgrel=1
 pkgdesc="Bugsnag Notifier for Python"
 url="https://github.com/bugsnag/bugsnag-python"
 arch=('any')
@@ -13,13 +13,13 @@ source=("${pkgname}-${pkgver}::https://github.com/bugsnag/bugsnag-python/archive
 sha256sums=('8cbaf024fbbc73cdceab2eac0937035052da48295970fe9eaa84b19d8e353e19')
 
 build() {
-  cd "${srcdir}"/${_pkgname}-${pkgver}
-  python setup.py build
+	cd "${srcdir}"/${_pkgname}-${pkgver}
+	python setup.py build
 }
 
 package() {
-  cd "${srcdir}"/${_pkgname}-${pkgver}
-  python setup.py install --prefix=/usr --root="${pkgdir}" --optimize=1 --skip-build
+	cd "${srcdir}"/${_pkgname}-${pkgver}
+	python setup.py install --prefix=/usr --root="${pkgdir}" --skip-build
 }
 
 # -*- mode: bash;-*-

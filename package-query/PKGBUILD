@@ -1,27 +1,28 @@
+# Maintainer: Antergos Developers
 # Contributor: tuxce <tuxce.net@gmail.com>
+
 pkgname=package-query
-pkgver=1.8
-pkgrel=1
+pkgver=1.8.r380
+_pkgver='dc45413df71a8e5364e52f845417a56aa6706c57'
+pkgrel=2
 pkgdesc="Query ALPM and AUR"
 arch=('i686' 'x86_64')
 url="https://github.com/archlinuxfr/package-query/"
 license=('GPL')
 depends=('pacman>=4.2' 'curl' 'yajl>=2.0')
-source=("https://github.com/archlinuxfr/${pkgname}/archive/${pkgver}.zip")
+source=("https://github.com/archlinuxfr/${pkgname}/archive/${_pkgver}.zip")
 sha256sums=('51c9ae8703397a21035dd14814c79af6')
- 
+
 build() {
-  cd "$srcdir/$pkgname-$pkgver"
-  ./autogen.sh
-  ./configure --localstatedir=/var --prefix=/usr --sysconfdir=/etc
-  make
+cd "$srcdir/$pkgname-$_pkgver"
+	./autogen.sh
+	./configure --localstatedir=/var --prefix=/usr --sysconfdir=/etc
+	make
 }
 
-package ()
-{
-  cd "$srcdir/$pkgname-$pkgver"
-  make DESTDIR="$pkgdir" install
+package () {
+	cd "$srcdir/$pkgname-$pkgver"
+	make DESTDIR="$pkgdir" install
 }
 
-# vim:set ts=2 sw=2 et:
-# -*- mode: bash;-*-
+# -*- mode: bash; tab-width: 4; indent-tabs-mode: t -*-

@@ -3,7 +3,7 @@
 
 pkgname=pam_encfs
 pkgver=0.1.4.4
-pkgrel=2
+pkgrel=3
 pkgdesc="pam_encfs is a module to auto mount encfs dir on login"
 url="http://code.google.com/p/pam-encfs/"
 arch=(any)
@@ -23,4 +23,6 @@ package() {
 	make DESTDIR=${pkgdir}/usr install
 	mkdir -p ${pkgdir}/etc/security
 	cp pam_encfs.conf ${pkgdir}/etc/security
-}# -*- mode: bash;-*-
+}
+
+# -*- mode: bash;-*-
