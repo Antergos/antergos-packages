@@ -2,8 +2,8 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl
-pkgver=0.6.5.5
-_pkgver=${pkgver}
+_pkgver=0.6.5.5
+pkgver=${_pkgver}
 pkgrel=2
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
@@ -19,9 +19,10 @@ md5sums=('SKIP'
          'a54f0041a9e15b050f25c463f1db7449')
 install=spl.install
 
-_kernel=4.5.1_1
+_kernel='4.4.5-1-ARCH'
 
 pkgver() {
+	local _kernel='4.4.5_1'
     cd "${srcdir}/spl"
     printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
 }
