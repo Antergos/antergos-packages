@@ -10,6 +10,7 @@ license=('GPLv2')
 depends=('gnome-shell-extensions' 'lightdm' 'xscreensaver' 'light-locker')
 replaces=('gnome-shell-extension-lockscreen-lightdm')
 conflicts=('gnome-shell-extension-lockscreen-lightdm')
+groups=('gnome-shell-extensions')
 install=buttons.install
 source=("https://github.com/lots0logs/${pkgname}/archive/master.zip")
 sha256sums=('9f2cd1fb6e33b118e2e42c61f9a8e89d14da792ab5c09924ee0a5ccb22670326')
