@@ -3,7 +3,7 @@
 pkgname=lightdm-webkit2-greeter
 _pkgver=2.0.0
 pkgver=${_pkgver}
-pkgrel=2
+pkgrel=3
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
@@ -15,7 +15,7 @@ conflicts=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos<2.2.4')
 install=greeter.install
 backup=("etc/lightdm/${pkgname}.conf")
-source=("${pkgname}-${pkgver}::git+https://github.com/antergos/${pkgname}.git")
+source=("${pkgname}-${pkgver}::git+https://github.com/antergos/${pkgname}.git#tag=2.0.0")
 sha256sums=('SKIP')
 groups=('system')
 
