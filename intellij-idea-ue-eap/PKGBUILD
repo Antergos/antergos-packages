@@ -3,9 +3,9 @@
 # Contributor: Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
 
 pkgname=intellij-idea-ue-eap
-_buildver=145.256.33
+_buildver=145.258.11
 _pkgver=2016.1
-_eap="True"
+_eap="False"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
 pkgdesc="Intelligent Java IDE with out-of-the-box support for web, enterprise, and mobile frameworks. Early Access Program (EAP) Build."
