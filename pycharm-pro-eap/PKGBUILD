@@ -3,8 +3,8 @@
 # Contributor: Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
 
 pkgname=pycharm-pro-eap
-_buildver=145.256.43
-_pkgver=5.1.0
+_buildver=145.258
+_pkgver=2016.1
 _eap="True"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
