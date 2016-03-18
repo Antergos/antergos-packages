@@ -5,7 +5,7 @@
 pkgname=pycharm-pro-eap
 _buildver=145.258
 _pkgver=2016.1
-_eap="True"
+_eap="False"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
 pkgdesc="Powerful Python and Django IDE, Early Access Program (EAP) build. Professional edition."
@@ -25,7 +25,7 @@ if [[ "True" = "${_eap}" ]]; then
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
 				"a1dfd0da292c46fe17382522ae448a7987e2221bd1d19323a3d2cdb3b2bed3c8")
 else
-	_srcfile="pycharm-professional-${_pkgver}.tar.gz"
+	_srcfile="pycharm-professional-${_pkgver}-RC.tar.gz"
 	source=("http://download.jetbrains.com/python/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
