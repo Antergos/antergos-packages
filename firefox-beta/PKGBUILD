@@ -1,41 +1,43 @@
-# Maintainer: Det <nimetonmaili g-mail>
-# Contributors: Achilleas Pipinellis, speed145a, Schnouki
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributors: Achilleas Pipinellis, speed145a, Schnouki, Det
 
 pkgname=firefox-beta
-pkgver=46.0b1
+pkgver=46.0b2
 _major=${pkgver/rc*}
 _build=${pkgver/*rc}
-pkgrel=3
+pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org - Beta"
 arch=('i686' 'x86_64')
 url="https://www.mozilla.org/en-US/firefox/channel/#beta"
 license=('MPL' 'GPL' 'LGPL')
 groups=('browser')
 depends=('alsa-lib' 'dbus-glib' 'desktop-file-utils' 'gtk2' 'gtk3' 'hicolor-icon-theme'
-         'icu' 'libevent' 'libvpx' 'libxt' 'mime-types' 'nss' 'sqlite')
+		'icu' 'libevent' 'libvpx' 'libxt' 'mime-types' 'nss' 'sqlite')
 optdepends=('gst-plugins-base: vorbis decoding, ogg demuxing'
-            'gst-plugins-good: webm and mp4 demuxing'
-            'gst-plugins-bad: aac, vp8 and opus decoding'
-            'gst-plugins-ugly: h.264 and mp3 decoding'
-            'gst-libav: more decoders'
-            'libpulse: PulseAudio driver'
-            'networkmanager: Location detection via available WiFi networks')
-provides=('firefox-beta' 'firefox-beta-bin')
-conflicts=('firefox-beta-bin')
+			'gst-plugins-good: webm and mp4 demuxing'
+			'gst-plugins-bad: aac, vp8 and opus decoding'
+			'gst-plugins-ugly: h.264 and mp3 decoding'
+			'gst-libav: more decoders'
+			'libpulse: PulseAudio driver'
+			'networkmanager: Location detection via available WiFi networks')
+provides=("firefox=${pkgver}" 'firefox-beta' 'firefox-beta-bin')
+conflicts=('firefox-beta-bin' 'firefox-beta')
 install=$pkgname.install
 source=("$pkgname.desktop"
-        "$pkgname-safe.desktop")
-source_i686=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$pkgver/linux-i686/en-US/firefox-$pkgver.tar.bz2")
-source_x86_64=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$pkgver/linux-x86_64/en-US/firefox-$pkgver.tar.bz2")
-md5sums=('13bd50c37f55a83539a680ce83162468'
-         'a85c53ccb2b78514f37833d288a20ba2')
-md5sums_i686=('8da45ae6e3c13256b5e7d4388f1c5836')
-md5sums_x86_64=('4f51d913af63aaff962cbbe0833862bf')
-# RC
+		"$pkgname-safe.desktop")
+
 if [[ $_build = ? ]]; then
-  source_i686=("https://ftp.mozilla.org/pub/mozilla.org/firefox/candidates/$_major-candidates/build$_build/linux-i686/en-US/firefox-$_major.tar.bz2")
-  source_x86_64=("https://ftp.mozilla.org/pub/mozilla.org/firefox/candidates/$_major-candidates/build$_build/linux-x86_64/en-US/firefox-$_major.tar.bz2")
+	# RC
+	source_i686=("https://ftp.mozilla.org/pub/firefox/candidates/$_major-candidates/build$_build/linux-i686/en-US/firefox-$_major.tar.bz2")
+	source_x86_64=("https://ftp.mozilla.org/pub/firefox/candidates/$_major-candidates/build$_build/linux-x86_64/en-US/firefox-$_major.tar.bz2")
+else
+	source_i686=("https://ftp.mozilla.org/pub/firefox/releases/$pkgver/linux-i686/en-US/firefox-$pkgver.tar.bz2")
+	source_x86_64=("https://ftp.mozilla.org/pub/firefox/releases/$pkgver/linux-x86_64/en-US/firefox-$pkgver.tar.bz2")
 fi
+
+md5sums=('' '')
+md5sums_i686=('')
+md5sums_x86_64=('')
 
 package() {
   # Create directories
