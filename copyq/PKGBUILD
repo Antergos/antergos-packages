@@ -4,11 +4,11 @@
 pkgname=copyq
 _realname=CopyQ
 pkgver=2.6.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Clipboard manager with searchable and editable history."
 url="https://github.com/hluk/CopyQ"
 groups=('tools')
-depends=('qt5-base' 'libxtst' 'qt5-webkit' 'qt5-svg' 'qt5-tools' 'qt5-script' 'libxfixes' 'libxtst')
+depends=('qt5-base' 'libxtst' 'qt5-webkit' 'qt5-svg' 'qt5-tools' 'qt5-script' 'libxfixes')
 makedepends=('cmake')
 license=('GPL3')
 arch=('i686' 'x86_64')
@@ -17,19 +17,20 @@ source=("https://github.com/hluk/${_realname}/archive/v${pkgver}.tar.gz")
 md5sums=('SKIP')
 install=copyq.install
 _allowed_in=('main' 'staging')
+
 build() {
-    mkdir "${srcdir}/build"
-    cd "${srcdir}/build"
-    cmake -DWITH_WEBKIT=1 \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-        -DQT_QMAKE_EXECUTABLE=qmake-qt5 \
-        -DWITH_QT5=TRUE \
-        "${srcdir}/${_realname}-${pkgver}"
-    make
+	mkdir "${srcdir}/build"
+	cd "${srcdir}/build"
+	cmake -DWITH_WEBKIT=1 \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DQT_QMAKE_EXECUTABLE=qmake-qt5 \
+		-DWITH_QT5=TRUE \
+		"${srcdir}/${_realname}-${pkgver}"
+	make
 }
 
 package() {
-    cd "${srcdir}/build"
-    make DESTDIR="${pkgdir}" install
+	cd "${srcdir}/build"
+	make DESTDIR="${pkgdir}" install
 }
 # -*- mode: bash;-*-
