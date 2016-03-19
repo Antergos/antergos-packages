@@ -92,6 +92,11 @@
       <summary>Whether terminal titlebars are shown smaller.</summary>
       <description>If true, terminal titlebars are rendered smaller then the default by removing padding.</description>
     </key>
+    <key name="enable-wide-handle" type="b">
+       <default>false</default>
+ +     <summary>Whether splitters use a narrow (default) or wide handle</summary>
+       <description>If true, splitters between terminals use a wide handle. Only supported in GTK 2.16 and later.</description>
+    </key>
     <!-- Dark Theme -->
     <key name="theme-variant" enum="com.gexperts.Terminix.ThemeVariant">
       <default>'system'</default>
@@ -105,7 +110,7 @@
     </key>
     <!-- Menubar Accelerator -->
     <key name="menu-accelerator-enabled" type="b">
-      <default>true</default>
+      <default>false</default>
       <summary>Whether the standard GTK shortcut for menubar access is enabled</summary>
       <description>Normally you can access the menubar with F10. This can also be customized via gtkrc (gtk-menu-bar-accel = "whatever"). This option allows the standard menubar accelerator to be disabled.</description>
     </key>    <!-- Unsafe Paste, cribbed from Pantheon -->
@@ -538,6 +543,14 @@
       <default>'disabled'</default>
       <summary>Keyboard shortcut to switch to session 9</summary>
     </key>
+    <key name="win-switch-to-next-session" type="s">
+       <default>'disabled'</default>
+       <summary>Keyboard shortcut to switch to the next session</summary>
+     </key>
+     <key name="win-switch-to-previous-session" type="s">
+       <default>'disabled'</default>
+       <summary>Keyboard shortcut to switch to the previous session</summary>
+     </key>
     <key name="win-fullscreen" type="s">
       <default>'F11'</default>
       <summary>Keyboard shortcut to toggle fullscreen</summary>
