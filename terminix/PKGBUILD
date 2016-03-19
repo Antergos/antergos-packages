@@ -3,7 +3,7 @@
 
 pkgname=terminix
 pkgver=0.54.0
-pkgrel=4
+pkgrel=5
 pkgdesc="A tiling terminal emulator based on GTK+ 3"
 arch=('x86_64')
 url="http://github.com/gnunn1/terminix"
