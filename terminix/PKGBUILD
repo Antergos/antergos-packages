@@ -11,19 +11,12 @@ license=('MPL')
 depends=('gtk3' 'dconf' 'gsettings-desktop-schemas' 'vte3' 'vte3-notification')
 makedepends=('python-beautifulsoup4' 'python-lxml')
 install=terminix.install
-source=("https://github.com/gnunn1/terminix/releases/download/$pkgver/terminix.zip"
-		'com.gexperts.Terminix.gschema.xml')
-md5sums=('7269a5785afba78d43036c7227349d78'
-		'')
+source=("https://github.com/gnunn1/terminix/releases/download/$pkgver/terminix.zip")
+md5sums=('7269a5785afba78d43036c7227349d78')
 
 
 package() {
 	cp -R "${srcdir}/usr" "${pkgdir}"
-	
-	sed -i 's|Unnamed|antergos|g;s|#00FF00|#F8F8F2|g;s|#000000|#232526|g;s|8192|32256|g;' \
-		"${pkgdir}/usr/share/glib-2.0/schemas/com.gexperts.Terminix.gschema.xml"
-	
-	"${startdir}/sar_helper.py" "${pkgdir}/usr/share/glib-2.0/schemas/com.gexperts.Terminix.gschema.xml"
 }
 
 # -*- mode: bash;-*-
