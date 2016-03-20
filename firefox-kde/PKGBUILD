@@ -43,6 +43,7 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		$_patchurl/mozilla-nongnome-proxies.patch
 		pgo_fix_missing_kdejs.patch
 		firefox-symbolic.svg
+		no-libnotify.patch
 )
 md5sums=('15c5222e3b0a6a766f0a1c5452ff5c31498454187165a281448954a5eb462e89'
 		'72a6572b9692cbb4a15d83de06e1674c4dbb7228999c5749c4f7ab9db5e0c516'
@@ -58,6 +59,7 @@ md5sums=('15c5222e3b0a6a766f0a1c5452ff5c31498454187165a281448954a5eb462e89'
 		'cffc199f0d4d684792e6dbeec106077f4a6ac4bdf406b4fc67d46b330c3b4169'
 		'ce1b7a5bb217c31590bce30653aea5139b6401a01eda7bded7fd2f83a23d397b'
 		'e8289ea4c1f8191e1e23661312ceee2128b8e790501b9a589d0d7bfc4384553f'
+		''
 		'')
 
 # Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
