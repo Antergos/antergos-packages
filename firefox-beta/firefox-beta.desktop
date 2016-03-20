@@ -10,3 +10,17 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xm
 StartupNotify=false
 Categories=Network;WebBrowser;
 StartupWMClass=Firefox
+
+Actions=NewTab;NewWindow;NewPrivateWindow;
+
+[Desktop Action NewTab]
+Name=Open new tab
+Exec=firefox-beta -new-tab about:newtab
+
+[Desktop Action NewWindow]
+Name=Open new window
+Exec=firefox-beta -new-window
+
+[Desktop Action NewPrivateWindow]
+Name=New private window
+Exec=firefox-beta -private-window

@@ -52,7 +52,8 @@ package() {
   cp -r firefox/ "$pkgdir"/opt/$pkgname
 
   # /usr/bin link
-  ln -s /opt/$pkgname/firefox "$pkgdir"/usr/bin/$pkgname
+  ln -s /opt/$pkgname/firefox "${pkgdir}/usr/bin/${pkgname}"
+  ln -s /opt/$pkgname/firefox "${pkgdir}/usr/bin/${pkgname}-bin"
 
   # Desktops
   install -m644 *.desktop "$pkgdir"/usr/share/applications/
