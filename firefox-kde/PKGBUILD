@@ -2,17 +2,10 @@
 # Contributor: Weng Xuetian <wengxt@gmail.com>
 # Contributor: Thaodan <theodorstormgrade@gmail.com>
 
-# enable this if you run out of memory during linking
-#_lowmem=true
-
-# enable gtk3 (warning: flash or any other plugin  crashes frequently)
-#_gtk3=true
-
-# try to build with PGO
 _pgo=true
 _pkgname=firefox
 pkgname=firefox-kde
-pkgver=43.0.4
+pkgver=45.0.1
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org with openSUSE KDE integration patches."
 arch=('i686' 'x86_64')
@@ -21,18 +14,18 @@ url="https://build.opensuse.org/package/show/mozilla:Factory/MozillaFirefox"
 depends=('gtk2' 'mozilla-common' 'libxt' 'startup-notification' 'mime-types'
 		'dbus-glib' 'alsa-lib' 'desktop-file-utils' 'hicolor-icon-theme'
 		'libvpx' 'icu'  'libevent' 'nss' 'hunspell' 'sqlite' 'ttf-font'
-		'kmozillahelper' 'gtk3')
+		'kmozillahelper' 'gtk3' 'ffmpeg')
 makedepends=('unzip' 'zip' 'diffutils' 'python2' 'yasm' 'mesa' 'imake' 'gconf' 'libx11'
 			'xorg-server-xvfb' 'libpulse' 'gst-plugins-base-libs' 'inetutils')
 optdepends=('networkmanager: Location detection via available WiFi networks'
-			'ffmpeg: H264/AAC decoding'
 			'gst-plugins-good: MP3 playback'
 			'gst-plugins-ugly: MP3 playback'
 			'upower: Battery API')
 conflicts=('firefox')
+provides=('firefox')
 options=('!emptydirs' '!makeflags')
 install=firefox.install
-_patchrev=4d8912c4a729
+_patchrev=6a889427cd4f
 _patchurl=http://www.rosenauer.org/hg/mozilla/raw-file/${_patchrev}
 source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/source/${_pkgname}-${pkgver}.source.tar.xz"
 		'mozconfig'
@@ -50,8 +43,7 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		$_patchurl/mozilla-language.patch
 		$_patchurl/mozilla-nongnome-proxies.patch
 		pgo_fix_missing_kdejs.patch
-		firefox-disable-GMP-PDM.patch
-		firefox-support-YUV420J-pixel-format.patch
+		firefox-symbolic.svg
 )
 md5sums=('15c5222e3b0a6a766f0a1c5452ff5c31498454187165a281448954a5eb462e89'
 		'72a6572b9692cbb4a15d83de06e1674c4dbb7228999c5749c4f7ab9db5e0c516'
@@ -67,8 +59,7 @@ md5sums=('15c5222e3b0a6a766f0a1c5452ff5c31498454187165a281448954a5eb462e89'
 		'cffc199f0d4d684792e6dbeec106077f4a6ac4bdf406b4fc67d46b330c3b4169'
 		'ce1b7a5bb217c31590bce30653aea5139b6401a01eda7bded7fd2f83a23d397b'
 		'e8289ea4c1f8191e1e23661312ceee2128b8e790501b9a589d0d7bfc4384553f'
-		'1d3fd85fe760ac3ab454e71322231e671483533be6089ac87f9f4880ee619e48'
-		'f9067f62a25a7a77276e15f91cc9e7ba6576315345cfc6347b1b2e884becdb0c')
+		'')
 
 # Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
@@ -87,12 +78,6 @@ _mozilla_api_key=fa35d4d6-6529-436f-b3a1-8b9af187eca2
 
 prepare() {
 	cd $_pkgname-$pkgver
-	
-	# https://bugzilla.mozilla.org/show_bug.cgi?id=1233429
-	patch -Np1 -i ../firefox-disable-GMP-PDM.patch
-
-	# https://bugzilla.mozilla.org/show_bug.cgi?id=1233340
-	patch -Np1 -i ../firefox-support-YUV420J-pixel-format.patch
 
 	cp ../mozconfig .mozconfig
 	patch -Np1 -i ../firefox-install-dir.patch
@@ -105,6 +90,10 @@ prepare() {
 
 	echo -n "${_mozilla_api_key}" > mozilla-api-key
 	echo "ac_add_options --with-mozilla-api-keyfile=\"${PWD}/mozilla-api-key\"" >> .mozconfig
+	
+	# Notifications with libnotify are broken
+	# https://bugzilla.mozilla.org/show_bug.cgi?id=1236150
+	patch -Np1 -i ../no-libnotify.patch
 
 	msg "Patching for KDE"
 	patch -Np1 -i "${srcdir}/mozilla-nongnome-proxies.patch"
@@ -166,13 +155,15 @@ package() {
 	done
 
 	install -Dm644 browser/branding/official/content/icon64.png \
-	  "${pkgdir}/usr/share/icons/hicolor/64x64/apps/firefox.png"
+		"${pkgdir}/usr/share/icons/hicolor/64x64/apps/firefox.png"
 	install -Dm644 browser/branding/official/mozicon128.png \
-	  "${pkgdir}/usr/share/icons/hicolor/128x128/apps/firefox.png"
+		"${pkgdir}/usr/share/icons/hicolor/128x128/apps/firefox.png"
 	install -Dm644 browser/branding/official/content/about-logo.png \
-	  "${pkgdir}/usr/share/icons/hicolor/192x192/apps/firefox.png"
+		"${pkgdir}/usr/share/icons/hicolor/192x192/apps/firefox.png"
 	install -Dm644 browser/branding/official/content/about-logo@2x.png \
-	  "${pkgdir}/usr/share/icons/hicolor/384x384/apps/firefox.png"
+		"${pkgdir}/usr/share/icons/hicolor/384x384/apps/firefox.png"
+	install -Dm644 ../firefox-symbolic.svg \
+		"$pkgdir/usr/share/icons/hicolor/symbolic/apps/firefox-symbolic.svg"
 
 	install -Dm644 "${srcdir}/firefox.desktop" "${pkgdir}/usr/share/applications/firefox.desktop"
 
