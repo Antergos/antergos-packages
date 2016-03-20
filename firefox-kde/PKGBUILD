@@ -32,7 +32,6 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		'firefox.desktop'
 		'firefox-install-dir.patch'
 		'vendor.js'
-		'firefox-fixed-loading-icon.png'
 		'kde.js'
 		# Firefox patchset
 		$_patchurl/firefox-branded-icons.patch
