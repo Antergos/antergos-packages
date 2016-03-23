@@ -3,7 +3,7 @@
 # Contributor: Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
 
 pkgname=pycharm-pro-eap
-_buildver=145.259
+_buildver=145.260
 _pkgver=2016.1
 _eap="False"
 pkgver="${_pkgver}.${_buildver}"
@@ -25,7 +25,7 @@ if [[ "True" = "${_eap}" ]]; then
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
 				"a1dfd0da292c46fe17382522ae448a7987e2221bd1d19323a3d2cdb3b2bed3c8")
 else
-	_srcfile="pycharm-professional-${_pkgver}-RC2.tar.gz"
+	_srcfile="pycharm-professional-${_pkgver}.tar.gz"
 	source=("http://download.jetbrains.com/python/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
