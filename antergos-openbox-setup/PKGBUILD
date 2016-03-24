@@ -1,7 +1,7 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-openbox-setup
-pkgver=0.2.7
+pkgver=0.2.8
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
@@ -10,73 +10,23 @@ license=('GPL2')
 _is_metapkg='yes'
 install=${pkgname}.install
 depends=('bash' 'openbox' 'xorg-xinit' 'thunar' 'nitrogen' 'plank' 
-'tint2' 'volumeicon' 'conky' 'compton' 'numix-frost-themes' 
-'numix-icon-theme' 'plank-theme-numix')
+		'tint2' 'volumeicon' 'conky' 'compton' 'numix-frost-themes' 
+		'numix-icon-theme' 'plank-theme-numix')
 source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
 sha256sums=('SKIP')
 
 package() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 
-  install -d ${pkgdir}/usr/share/${pkgname}
+	install -d "${pkgdir}/usr/share/${pkgname}"
+	
+	cp -R -t "${pkgdir}/usr/share/${pkgname}" {etc,home/usr}
 
-  # Compton setup
-  install -Dm644 compton.conf ${pkgdir}/usr/share/${pkgname}/compton.conf
+	# install.sh file
+	install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
 
-  # Conky setup
-  install -Dm644 conky.conf ${pkgdir}/usr/share/${pkgname}/conky.conf
-
-  # Gtk2 & Gtk3 defaults
-  install -Dm644 gtkfilechooser.ini ${pkgdir}/usr/share/${pkgname}/gtkfilechooser.ini
-  install -Dm644 gtkrc-2.0 ${pkgdir}/usr/share/${pkgname}/gtkrc-2.0
-  install -Dm644 settings.ini ${pkgdir}/usr/share/${pkgname}/settings.ini
-
-  # Nitrogen setup
-  install -Dm644 nitrogen.cfg ${pkgdir}/usr/share/${pkgname}/nitrogen.cfg
-  install -Dm644 bg-saved.cfg ${pkgdir}/usr/share/${pkgname}/bg-saved.cfg
-
-  # Oblogout setup and icons
-  install -Dm644 oblogout.conf ${pkgdir}/usr/share/${pkgname}/oblogout.conf
-  install -Dm644 oblogout/cancel.svg ${pkgdir}/usr/share/${pkgname}/oblogout/cancel.svg
-  install -Dm644 oblogout/lock.svg ${pkgdir}/usr/share/${pkgname}/oblogout/lock.svg
-  install -Dm644 oblogout/restart.svg ${pkgdir}/usr/share/${pkgname}/oblogout/restart.svg
-  install -Dm644 oblogout/suspend.svg ${pkgdir}/usr/share/${pkgname}/oblogout/suspend.svg
-  install -Dm644 oblogout/hibernate.svg ${pkgdir}/usr/share/${pkgname}/oblogout/hibernate.svg
-  install -Dm644 oblogout/logout.svg ${pkgdir}/usr/share/${pkgname}/oblogout/logout.svg
-  install -Dm644 oblogout/shutdown.svg ${pkgdir}/usr/share/${pkgname}/oblogout/shutdown.svg
-  install -Dm644 oblogout/switch.svg ${pkgdir}/usr/share/${pkgname}/oblogout/switch.svg
-
-  # Openbox setup
-  install -Dm755 openbox/autostart ${pkgdir}/usr/share/${pkgname}/openbox/autostart
-  install -Dm644 openbox/menu.xml ${pkgdir}/usr/share/${pkgname}/openbox/menu.xml
-  install -Dm644 openbox/rc.xml ${pkgdir}/usr/share/${pkgname}/openbox/rc.xml
-  install -Dm755 openbox/pipemenus/obpipemenu-places ${pkgdir}/usr/share/${pkgname}/openbox/pipemenus/obpipemenu-places
-  install -Dm755 openbox/pipemenus/obrecent.sh ${pkgdir}/usr/share/${pkgname}/openbox/pipemenus/obrecent.sh
-
-  # Plank
-  install -Dm644 plank/dock1/settings ${pkgdir}/usr/share/${pkgname}/plank/dock1/settings
-  install -Dm644 plank/dock1/launchers/chromium.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/chromium.dockitem
-  install -Dm644 plank/dock1/launchers/gpicview.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/gpicview.dockitem
-  install -Dm644 plank/dock1/launchers/mousepad.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/mousepad.dockitem
-  install -Dm644 plank/dock1/launchers/pragha.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/pragha.dockitem
-  install -Dm644 plank/dock1/launchers/gnome-mplayer.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/gnome-mplayer.dockitem
-  install -Dm644 plank/dock1/launchers/lxterminal.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/lxterminal.dockitem
-  install -Dm644 plank/dock1/launchers/plank.dockitem ${pkgdir}/usr/share/${pkgname}/plank/dock1/launchers/plank.dockitem
-
-  # Tint2
-  install -Dm644 tint2rc ${pkgdir}/usr/share/${pkgname}/tint2rc
-
-  # VolumeIcon
-  install -Dm644 volumeicon ${pkgdir}/usr/share/${pkgname}/volumeicon
-
-  # Xorg-xinit
-  install -Dm644 xinitrc ${pkgdir}/usr/share/${pkgname}/xinitrc
-
-  # install.sh file
-  install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
-
-  # create a symlink to install.sh
-  mkdir -p "${pkgdir}/usr/bin"
-  ln -s "/usr/share/${pkgname}/install.sh" "${pkgdir}/usr/bin/antergos-openbox-setup"
+	# create a symlink to install.sh
+	mkdir -p "${pkgdir}/usr/bin"
+	ln -s "/usr/share/${pkgname}/install.sh" "${pkgdir}/usr/bin/antergos-openbox-setup"
 }
 # -*- mode: bash;-*-
