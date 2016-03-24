@@ -9,7 +9,7 @@ arch=('i686' 'x86_64')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
 license=('GPL3')
 makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common' 'exo')
-depends=('lightdm' 'webkit2gtk>=2.10.7' 'webkit2gtk<2.12' 'gtk3>=3.18' 'gtk3<3.20')
+depends=('lightdm' 'webkit2gtk>=2.10.7' 'gtk3>=3.18')
 provides=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos=2.4.0')
 conflicts=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos<2.2.4')
@@ -26,8 +26,10 @@ pkgver() {
 
 
 build() {
+	cd $srcdir/${pkgname}-${_pkgver}/themes
+	git clone https://github.com/antergos/lightdm-webkit-theme-antergos.git antergos
 	cd $srcdir/${pkgname}-${_pkgver}
-	git submodule init && git submodule update
+	#git submodule init && git submodule update
 
 	cd $srcdir/${pkgname}-${_pkgver}
 	LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm --bindir=/usr/bin --sbindir=/usr/bin
