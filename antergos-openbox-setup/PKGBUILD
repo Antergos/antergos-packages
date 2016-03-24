@@ -20,7 +20,7 @@ package() {
 
 	install -d "${pkgdir}/usr/share/${pkgname}"
 	
-	cp -R -t "${pkgdir}/usr/share/${pkgname}" {etc,home/usr}
+	cp -R -t "${pkgdir}/usr/share/${pkgname}" {etc,home,usr}
 
 	# install.sh file
 	install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
