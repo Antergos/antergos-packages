@@ -1,16 +1,20 @@
-post_install() {
-	if [[ "${SUDO_USER}" != '' ]]; then
+do_antergos_setup() {
+	if [[ -n "${SUDO_USER}" ]]; then
 		_ANT_USER="${SUDO_USER}"
-	elif [[ "${HOME}" != '' ]]; then
+	elif [[ -n "${HOME}" ]]; then
 		_ANT_USER="${HOME#/home/}"
 	else
 		echo "Error: Unable to determine current user."
 		exit 1
 	fi
 	
-	/usr/bin/antergos-openbox-setup "${_ANT_USER}" "no-overwrite"
+	[[ -n "${_ANT_USER}" ]] && /usr/bin/antergos-openbox-setup "${_ANT_USER}" "${1}"
+}
+
+post_install() {
+	do_antergos_setup
 }
 
 post_upgrade() {
-	post_install
+	do_antergos_setup 'no-overwrite'
 }
