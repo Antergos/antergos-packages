@@ -2,9 +2,9 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl
-_pkgver=0.6.5.5
+_pkgver=0.6.5.6
 pkgver=${_pkgver}
-pkgrel=2
+pkgrel=1
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")

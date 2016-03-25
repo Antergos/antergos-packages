@@ -3,9 +3,9 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 #
 pkgname="zfs-utils"
-_pkgver=0.6.5.5
+_pkgver=0.6.5.6
 pkgver=${_pkgver}
-pkgrel=2
+pkgrel=1
 license=('CDDL')
 pkgdesc="Kernel module support files for the Zettabyte File System."
 depends=("spl" "dkms" "linux-headers")
