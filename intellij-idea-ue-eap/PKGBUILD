@@ -5,7 +5,7 @@
 pkgname=intellij-idea-ue-eap
 _buildver=145.596.7
 _pkgver=2016.1
-_eap="False"
+_eap="True"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
 pkgdesc="Intelligent Java IDE with out-of-the-box support for web, enterprise, and mobile frameworks. Early Access Program (EAP) Build."
