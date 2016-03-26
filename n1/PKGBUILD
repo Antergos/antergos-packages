@@ -11,7 +11,7 @@ url="https://nylas.com/N1/"
 license=('MIT')
 depends=('gtk2' 'libgnome-keyring' 'desktop-file-utils' 'python2' 'gconf' 'nodejs'
 		'libnotify' 'libxtst' 'nss' 'alsa-lib' 'xdg-utils')
-groups=('email')
+groups=('email') 
 source=("https://github.com/nylas/N1/releases/download/${pkgver}/N1-${pkgver}.deb")
 install=${pkgname}.install
 md5sums=('6e07835b7aaa96a242af6c11cb8f1092')
