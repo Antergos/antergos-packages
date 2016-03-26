@@ -1,15 +1,15 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-enlightenment-setup
-pkgver=0.0.2
-pkgrel=5
+pkgver=0.0.3
+pkgrel=1
 pkgdesc="Setup configuration for Antergos Enlightenment"
 url="http://www.antergos.com"
 arch=('any')
 license=('GPL2')
 depends=('bash' 'enlightenment' 'connman' 'econnman'
-'polkit-gnome' 'rage' 'terminology' 'xdg-user-dirs-gtk'
-'numix-frost-themes' 'numix-icon-theme')
+	'polkit-gnome' 'rage' 'terminology' 'xdg-user-dirs-gtk'
+	'numix-frost-themes' 'numix-icon-theme')
 _is_metapkg='yes'
 install=${pkgname}.install
 #source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
