@@ -20,22 +20,21 @@ md5sums=('79ba2a229843a03aab7626c6a4e2843a')
 _archivename="v${pkgver}"
 
 pkgver() {
-
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}-${_pkgver}"
 	printf "%s.r%s" "${_pkgver}" "$(git rev-list --count HEAD)"
 
 }
 
 build() {
 	#cd "$srcdir/$_archivename"
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}-${_pkgver}"
 	./autogen.sh --prefix=/usr 
 	make
 }
 
 package() {
 	#cd "$srcdir/$_archivename"
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}-${_pkgver}"
 	mkdir -p "${pkgdir}/usr/share/gnome-shell/extensions" "${pkgdir}/usr/share/glib-2.0/schemas/"
 	make DESTDIR=${pkgdir} install
 }
