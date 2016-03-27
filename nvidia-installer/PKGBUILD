@@ -1,0 +1,24 @@
+# Maintainer: Gustau Castells <karasu@antergos.com>
+
+pkgname=nvidia-installer
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="Script to setup nvidia drivers in Antergos"
+url="http://www.antergos.com"
+arch=('any')
+license=('GPL2')
+depends=()
+optdepends=('nvidia-304xx' 'nvidia-304xx-utils' 'nvidia-304xx-libgl'
+  'nvidia-340xx' 'nvidia-340xx-utils' 'nvidia-340xx-libgl'
+  'nvidia' 'nvidia-utils' 'nvidia-libgl' 'libvdpau'
+  'lib32-nvidia-304xx-libgl' 'lib32-nvidia-340xx-libgl' 'lib32-nvidia-libgl'
+  'lib32-libvdpau')
+conflicts=('mesa-libgl' 'lib32-mesa-libgl')
+source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
+sha256sums=('SKIP')
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  install -Dm755 ${pkgname} ${pkgdir}/usr/bin/${pkgname}
+}
+# -*- mode: bash;-*-
