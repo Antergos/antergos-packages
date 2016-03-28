@@ -16,7 +16,7 @@ replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos<2.2.4')
 install=greeter.install
 backup=("etc/lightdm/${pkgname}.conf")
 source=("${pkgname}-${pkgver}::http://github.com/Antergos/lightdm-webkit2-greeter/releases/download/2.1.0/${pkgname}-2.1.0rc1.zip")
-sha256sums=('SKIP')
+sha256sums=('2fcdd461dbd42fb3e3f2b6e72a3311ceaee8a44a0b90d9955f63b6729ff28fd4')
 groups=('system')
 
 
@@ -26,13 +26,14 @@ groups=('system')
 
 
 build() {
-	cd $srcdir/${pkgname}-${pkgver}
+	cd $srcdir
+	touch themes/antergos/COPYING
 	LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm --bindir=/usr/bin --sbindir=/usr/bin
 	make
 }
 
 package() {
-	cd $srcdir/${pkgname}-${pkgver}
+	cd $srcdir
 	make DESTDIR=$pkgdir install
 	#sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' ${pkgdir}/etc/${pkgname}.conf
 }
