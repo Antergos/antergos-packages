@@ -1,7 +1,7 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=lightdm-webkit2-greeter
-_pkgver=2.1.0rc4
+_pkgver=2.1.0rc5
 pkgver=${_pkgver}
 pkgrel=1
 pkgdesc="A webkit2 greeter for LightDM"
@@ -9,28 +9,23 @@ arch=('i686' 'x86_64')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
 license=('GPL3')
 makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common' 'exo')
-depends=('lightdm' 'webkit2gtk>=2.10.7' 'gtk3>=3.18')
+depends=('lightdm' 'webkit2gtk>=2.10.8' 'gtk3>=3.18')
 provides=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos=2.4.0')
 conflicts=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos<2.2.4')
 install=greeter.install
 backup=("etc/lightdm/${pkgname}.conf")
-source=("${pkgname}-${pkgver}::git+https://github.com/antergos/${pkgname}.git")
+source=("${pkgname}-${pkgver}::http://github.com/Antergos/lightdm-webkit2-greeter/releases/download/2.1.0/${pkgname}-2.1.0rc1.zip")
 sha256sums=('SKIP')
 groups=('system')
 
 
-pkgver() {
-	echo "${_pkgver}"
-}
+#pkgver() {
+#	echo "${_pkgver}"
+#}
 
 
 build() {
-	cd $srcdir/${pkgname}-${_pkgver}/themes
-	git clone https://github.com/antergos/lightdm-webkit-theme-antergos.git antergos
-	cd $srcdir/${pkgname}-${_pkgver}
-	#git submodule init && git submodule update
-
 	cd $srcdir/${pkgname}-${_pkgver}
 	LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm --bindir=/usr/bin --sbindir=/usr/bin
 	make
