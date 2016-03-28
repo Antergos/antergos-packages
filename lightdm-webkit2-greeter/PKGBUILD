@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=lightdm-webkit2-greeter
-_pkgver=2.1.0rc5
-pkgver=${_pkgver}
+_pkgver=2.1.0rc1
+pkgver=2.1.0rc5
 pkgrel=1
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
@@ -26,14 +26,15 @@ groups=('system')
 
 
 build() {
-	cd $srcdir/${pkgname}-${_pkgver}
+	cd $srcdir/${pkgname}-${pkgver}
 	LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm --bindir=/usr/bin --sbindir=/usr/bin
 	make
 }
 
 package() {
-	cd $srcdir/${pkgname}-${_pkgver}
+	cd $srcdir/${pkgname}-${pkgver}
 	make DESTDIR=$pkgdir install
+	#sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' ${pkgdir}/etc/${pkgname}.conf
 }
 
 # -*- mode: bash;-*-
