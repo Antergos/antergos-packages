@@ -2,7 +2,7 @@
 
 pkgname=antergos-enlightenment-setup
 pkgver=0.0.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Setup configuration for Antergos Enlightenment"
 url="http://www.antergos.com"
 arch=('any')
@@ -19,7 +19,8 @@ sha256sums=('SKIP')
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
   install -d "${pkgdir}/usr/share/${pkgname}"
-  cp -R -t "${pkgdir}/usr/share/${pkgname}" {etc,home,usr}
+  install -d "${pkgdir}/usr/share/${pkgname}/home"
+  cp -R home "${pkgdir}/usr/share/${pkgname}/home"
 
   # install.sh file
   install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
