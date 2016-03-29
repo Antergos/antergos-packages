@@ -1,8 +1,8 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-enlightenment-setup
-pkgver=0.0.3
-pkgrel=2
+pkgver=0.0.4
+pkgrel=1
 pkgdesc="Setup configuration for Antergos Enlightenment"
 url="http://www.antergos.com"
 arch=('any')
