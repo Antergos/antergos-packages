@@ -3,9 +3,9 @@
 # Contributor: Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
 
 pkgname=intellij-idea-ue-eap
-_buildver=145.596.7
+_buildver=145.597
 _pkgver=2016.1
-_eap="True"
+_eap="False"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
 pkgdesc="Intelligent Java IDE with out-of-the-box support for web, enterprise, and mobile frameworks. Early Access Program (EAP) Build."
@@ -27,7 +27,7 @@ if [[ "True" = "${_eap}" ]]; then
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
 				"c6ffb4c3a14b4b6a90158fda92aab7dbee2bb32d9585b801682792966699919c")
 else
-	_srcfile="ideaIU-${_pkgver}.tar.gz"
+	_srcfile="ideaIU-${_pkgver}.1.tar.gz"
 	source=("http://download.jetbrains.com/idea/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
