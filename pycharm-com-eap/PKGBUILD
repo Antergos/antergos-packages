@@ -19,7 +19,7 @@ conflicts=("pycharm-eap" "pycharm-community" "pycharm-professional")
 groups=("development" "IDE" "editor" "jetbrains")
 
 if [[ "True" = "${_eap}" ]]; then
-	_srcfile="pycharm-community-${_buildver}.tar.gz"
+	_srcfile="pycharm-community-${_buildver}.11.tar.gz"
 	source=("http://download.jetbrains.com/python/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
@@ -40,7 +40,7 @@ package() {
 		"${pkgdir}/usr/share/applications/"
 
 	if [[ "True" = "${_eap}" ]]; then
-		cp -R "${srcdir}/pycharm-community-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
+		cp -R "${srcdir}/pycharm-community-${_buildver}.11/"* "${pkgdir}/opt/${pkgname}"
 	else
 		cp -R "${srcdir}/pycharm-community-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
 	fi
