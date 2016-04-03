@@ -11,6 +11,7 @@ url="https://github.com/tista500/Adapta"
 license=('GPL2')
 install="${pkgname}.install"
 depends=('gtk2' 'gtk3>=3.18' 'gtk3<=3.20')
+groups=('themes')
 source=("https://github.com/tista500/Adapta/archive/${pkgver}.tar.gz")
 sha256sums=('5782b855137d726f2afa031f494a8d0211b85c0bd59eeed56738131fa25b9a44')
 
