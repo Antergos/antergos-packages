@@ -19,7 +19,7 @@ license=('GPL2')
 url="https://github.com/linuxmint/nemo-extensions"
 depends=('nemo' 'file-roller' 'cjs' 'clutter-gtk' 'clutter-gst' 'gst-plugins-good'
 		'libmusicbrainz5' 'evince' 'gtksourceview3' 'webkit2gtk' 'python2-gobject'
-		'seahorse' 'samba')
+		'seahorse' 'samba' 'libgnome-keyring')
 makedepends=('gconf' 'gnome-common' 'gtk-doc' 'intltool' 'gobject-introspection')
 options=('!emptydirs')
 conflicts=('nautilus-seahorse')
@@ -133,7 +133,7 @@ package_nemo-seahorse(){
 
 package_nemo-share(){
 	pkgdesc="Samba extension for Nemo"
-	depends=(python2 nemo samba)
+	depends=('python2' 'nemo' 'samba' 'libgnome-keyring')
 
 	cd ${pkgbase}-${_pkgver}/nemo-share
 	make DESTDIR="${pkgdir}" install
