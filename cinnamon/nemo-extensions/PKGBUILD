@@ -72,7 +72,14 @@ build() {
 #		[[ -f libtool ]] && sed -i "s|${search1}|${replace1}|g;s|${search2}|${replace2}|g" libtool
 		
 		if [[ -f configure ]]; then
-			PYTHON=/usr/bin/python2 ./configure
+			PYTHON=/usr/bin/python2 ./configure \
+				--prefix=/usr \
+				--exec_prefix=/usr \
+				--sysconfdir=/etc \
+				--localstatedir=/var \
+				--libexecdir=/usr/lib/${dir} \
+				--disable-static \
+				--disable-schemas-compile
 		fi
 
 		make; )
