@@ -13,7 +13,7 @@ pkgname=('nemo-fileroller'
 #'nemo-rabbitvcs'
 pkgver=2.8.0
 _pkgver=2.8.x
-pkgrel=4
+pkgrel=4.1
 arch=('i686' 'x86_64')
 license=('GPL2')
 url="https://github.com/linuxmint/nemo-extensions"
