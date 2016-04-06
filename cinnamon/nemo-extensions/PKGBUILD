@@ -56,25 +56,26 @@ build() {
 	for dir in nemo-preview nemo-python nemo-fileroller nemo-share nemo-seahorse
 	do
 		cd ${dir}
-		PYTHON=/usr/bin/python2 ./autogen.sh \
+		( PYTHON=/usr/bin/python2 ./autogen.sh \
 			--prefix=/usr \
+			--exec_prefix=/usr \
 			--sysconfdir=/etc \
 			--localstatedir=/var \
 			--libexecdir=/usr/lib/${dir} \
 			--disable-static \
 			--disable-schemas-compile
 
-		search1=' -shared '
-		replace1=' -Wl,-O1,--as-needed\0 '
-		search2='    if test "$export_dynamic" = yes && test -n "$export_dynamic_flag_spec"; then'
-		replace2='      func_append compile_command " -Wl,-O1,--as-needed"\n      func_append finalize_command " -Wl,-O1,--as-needed"\n\0'
-		[[ -f libtool ]] && sed -i "s|${search1}|${replace1}|g;s|${search2}|${replace2}|g" libtool
+#		search1=' -shared '
+#		replace1=' -Wl,-O1,--as-needed\0 '
+#		search2='    if test "$export_dynamic" = yes && test -n "$export_dynamic_flag_spec"; then'
+#		replace2='      func_append compile_command " -Wl,-O1,--as-needed"\n      func_append finalize_command " -Wl,-O1,--as-needed"\n\0'
+#		[[ -f libtool ]] && sed -i "s|${search1}|${replace1}|g;s|${search2}|${replace2}|g" libtool
 		
 		if [[ -f configure ]]; then
 			PYTHON=/usr/bin/python2 ./configure
 		fi
 
-		make
+		make; )
 		cd ../
 	done
 
