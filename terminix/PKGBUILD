@@ -17,6 +17,7 @@ md5sums=('7269a5785afba78d43036c7227349d78')
 
 package() {
 	cp -R "${srcdir}/usr" "${pkgdir}"
+	cp "${startdir}/com.gexperts.Terminix.gschema.override" "${srcdir}/usr/share/glib-2.0/schemas"
 }
 
 # -*- mode: bash;-*-
