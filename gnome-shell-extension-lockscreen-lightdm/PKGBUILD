@@ -8,6 +8,7 @@ arch=('any')
 url="http://www.antergos.com"
 license=('GPLv2')
 depends=('gnome-shell-extensions' 'lightdm' 'xscreensaver')
+groups=('gnome-shell-extensions')
 install=lockscreen.install
 source=('extension.js'
         'metadata.json')

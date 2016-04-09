@@ -10,6 +10,7 @@ pkgdesc="A gnome-shell extension that transforms the dash into an intellihide do
 arch=('any')
 url="https://github.com/micheleg/dash-to-dock"
 license=('GPL')
+groups=('gnome-shell-extensions')
 depends=('dconf')
 makedepends=('gnome-shell' 'gnome-common' 'intltool')
 source=("$pkgname::https://github.com/micheleg/dash-to-dock/archive/extensions.gnome.org-${pkgver}.tar.gz")
