@@ -34,7 +34,7 @@ build() {
 package() {
 	cd $srcdir/${pkgname}-${pkgver}
 	make DESTDIR=$pkgdir install
-	sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' ${pkgdir}/etc/${pkgname}.conf
+	sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' ${pkgdir}/etc/lightdm/${pkgname}.conf
 }
 
 # -*- mode: bash;-*-
