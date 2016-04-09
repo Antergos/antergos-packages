@@ -27,7 +27,6 @@ groups=('system')
 
 build() {
 	cd $srcdir
-	touch themes/antergos/COPYING
 	LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm --bindir=/usr/bin --sbindir=/usr/bin
 	make
 }
