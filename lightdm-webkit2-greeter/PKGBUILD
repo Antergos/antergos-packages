@@ -26,13 +26,13 @@ groups=('system')
 
 
 build() {
-	cd $srcdir
+	cd $srcdir/${pkgname}-${pkgver}
 	LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm --bindir=/usr/bin --sbindir=/usr/bin
 	make
 }
 
 package() {
-	cd $srcdir
+	cd $srcdir/${pkgname}-${pkgver}
 	make DESTDIR=$pkgdir install
 	sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' ${pkgdir}/etc/${pkgname}.conf
 }
