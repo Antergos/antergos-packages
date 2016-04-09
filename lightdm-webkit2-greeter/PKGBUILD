@@ -1,22 +1,22 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=lightdm-webkit2-greeter
-_pkgver=2.1.0rc1
-pkgver=2.1.0rc5
+_pkgver=2.1.0
+pkgver=2.1.0
 pkgrel=1
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
 license=('GPL3')
 makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common' 'exo')
-depends=('lightdm' 'webkit2gtk>=2.10.8' 'gtk3>=3.18')
-provides=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos=2.4.0')
+depends=('lightdm' 'webkit2gtk>=2.10.8' 'gtk3>=3.18' 'antergos-wallpapers')
+provides=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 conflicts=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
-replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos<2.2.4')
+replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 install=greeter.install
 backup=("etc/lightdm/${pkgname}.conf")
-source=("${pkgname}-${pkgver}::http://github.com/Antergos/lightdm-webkit2-greeter/releases/download/2.1.0/${pkgname}-2.1.0rc1.zip")
-sha256sums=('2fcdd461dbd42fb3e3f2b6e72a3311ceaee8a44a0b90d9955f63b6729ff28fd4')
+source=("${pkgname}-${pkgver}::http://github.com/Antergos/lightdm-webkit2-greeter/releases/download/2.1.0/${pkgver}.zip")
+sha256sums=('')
 groups=('system')
 
 
@@ -35,7 +35,7 @@ build() {
 package() {
 	cd $srcdir
 	make DESTDIR=$pkgdir install
-	#sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' ${pkgdir}/etc/${pkgname}.conf
+	sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' ${pkgdir}/etc/${pkgname}.conf
 }
 
 # -*- mode: bash;-*-
