@@ -15,7 +15,7 @@ conflicts=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 install=greeter.install
 backup=("etc/lightdm/${pkgname}.conf")
-source=("${pkgname}-${pkgver}::http://github.com/Antergos/lightdm-webkit2-greeter/releases/download/2.1.0/${pkgver}.zip")
+source=("${pkgname}-${pkgver}::http://github.com/Antergos/lightdm-webkit2-greeter/archive/${pkgver}.zip")
 sha256sums=('')
 groups=('system')
 
