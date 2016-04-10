@@ -1,16 +1,16 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 pkgname=pamac-dev
-pkgver=3.2.1
-_pkgver=3.2.1
+pkgver=4.0alpha1
+_pkgver=4-sans-git
 pkgrel=1
 _gitcommit="master"
 pkgdesc="A Gtk3 frontend for libalpm"
 arch=('i686' 'x86_64')
 url="https://github.com/manjaro/pamac"
 license=('GPL3')
-depends=('glib2>=2.46' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'yaourt' 'vte3>=0.38'
-		'gtk3>=3.18' 'libnotify' 'desktop-file-utils' 'pacman' 'gnutls>=3.4')
+depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'vte3>=0.38' 'gtk3>=3.18'
+		'libnotify' 'desktop-file-utils' 'pacman>=5.0' 'pacman<5.1' 'gnutls>=3.4')
 optdepends=('polkit-gnome: needed for authentification in Cinnamon, Gnome'
 			'lxsession: needed for authentification in Xfce, LXDE etc.'
 			'yaourt: needed for AUR support')
@@ -23,28 +23,29 @@ install=pamac.install
 
 
 if [ "${_gitcommit}" != "" ]; then
-	source=("git+https://github.com/manjaro/pamac")
+	#source=("git+https://github.com/manjaro/pamac")
+	source=('pamac-4-alpha.tar.xz::http://lists.manjaro.org/pipermail/manjaro-dev/attachments/20160409/a11de4e7/attachment-0001.bin')
 else
 	source=("pamac-$pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
-md5sums=('SKIP')
+md5sums=('')
 
-pkgver() {
-	[[ "${srcdir}" != '' ]] && cd "$srcdir/pamac"
+#pkgver() {
+#	[[ "${srcdir}" != '' ]] && cd "$srcdir/pamac"
+#
+#	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
 
-	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
-
-}
+#}
 
 
 prepare() {
 	{ [[ "${_gitcommit}" != "" ]] &&  cd "${srcdir}/pamac"; } || cd "${srcdir}/pamac-${_pkgver}"
 
 	# adjust version string
-	cd src
-	sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala 
-	cd ..
+	cd "$srcdir/pamac-$_pkgver/src"
+	sed -i -e "s|\"4.0.0\"|\"$pkgver-$pkgrel\"|g" manager_window.vala 
+	cd "$srcdir/pamac-$_pkgver/"
 
 	# patches here
 	
