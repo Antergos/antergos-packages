@@ -25,8 +25,7 @@ pkgver() {
 package() {
 
 cd "${srcdir}/${_pkgname}"
-git submodule init
-git submodule update
+git submodule update --init -- includes/cinnamon
 make
 make DESTDIR=${pkgdir} install
 
