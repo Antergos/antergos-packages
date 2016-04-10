@@ -2,7 +2,7 @@
 
 pkgname=gnome-shell-extension-status-menu-buttons
 pkgver=0.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Adds a hibernate, suspend, & lock button to the status menu."
 arch=('any')
 url="http://www.antergos.com"
