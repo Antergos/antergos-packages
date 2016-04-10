@@ -1,6 +1,0 @@
-post_install()
-{
-	echo "Restart GNOME Shell and then use GNOME Tweak Tool to enable the lockscreen button."
-
-}
-# -*- mode: bash;-*-

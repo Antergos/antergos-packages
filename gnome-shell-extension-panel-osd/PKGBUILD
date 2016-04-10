@@ -17,6 +17,7 @@ source=("${pkgname}-${pkgver}::git+https://github.com/jenslody/gnome-shell-exten
 install=${pkgname}.install
 md5sums=('79ba2a229843a03aab7626c6a4e2843a')
 
+
 _archivename="v${pkgver}"
 
 pkgver() {
