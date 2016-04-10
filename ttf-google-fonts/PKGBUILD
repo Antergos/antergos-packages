@@ -24,6 +24,7 @@ depends=('cantarell-fonts'
          'xorg-mkfontdir'
          'xorg-mkfontscale')
 makedepends=('git')
+
 conflicts=('adobe-source-code-pro-fonts'
            'adobe-source-sans-pro-fonts'
            'googlefontdirectory'
