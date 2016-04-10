@@ -4,60 +4,50 @@ pkgname=numix-frost-themes
 _pkgname=Numix-Frost
 _light=Numix-Frost-Light
 _branch=numix-frost-light
-pkgver=3.2
-_pkgver=${pkgver}
+pkgver=3.4
 pkgrel=1
 pkgdesc='Official Numix GTK theme - Antergos Edition'
 arch=('any')
 license=('GPL3')
 url='http://numixproject.org/'
-depends=('gtk-engine-murrine' 'gtk3>=3.20')
+depends=('gtk-engine-murrine' 'gtk3>=3.16')
 makedepends=('ruby-sass' 'npm' 'gulp')
 replaces=('gtk-theme-numix-frost')
 source=("git+https://github.com/Antergos/Numix-Frost.git")
 install=theme.install
 md5sums=('SKIP')
 
-pkgver() {
-	echo ${_pkgver}
-}
 
 package() {
 
+# Numix-Frost
 cd "${srcdir}/${_pkgname}"
 git submodule update --init -- includes/cinnamon
 make
 make DESTDIR=${pkgdir} install
 
-sed -i 's%Numix-Cinnamon%Numix-Frost%g' includes/cinnamon/Numix-Cinnamon/cinnamon/theme.json
 
+# Cinnamon Theme
+sed -i 's%Numix-Cinnamon%Numix-Frost%g' includes/cinnamon/Numix-Cinnamon/cinnamon/theme.json
 install -d "${pkgdir}/usr/share/themes/${_pkgname}/cinnamon"
+cd includes/cinnamon/Numix-Cinnamon
+scss --update --sourcemap=none cinnamon/sass:cinnamon
+cp -R --no-preserve=ownership cinnamon "$pkgdir/usr/share/themes/$_pkgname"
+
+
+# GNOME Shell Theme
 install -d "${pkgdir}/usr/share/themes/${_pkgname}/gnome-shell"
-cd gnome-shell
+cd "${srcdir}/${_pkgname}/gnome-shell"
 find . -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/$_pkgname/gnome-shell/{}" \;
 
 
-cd ../includes/cinnamon/Numix-Cinnamon/cinnamon
-
-TEMP="${srcdir}"
-HOME="${srcdir}"
-npm install
-gulp sass
-rm -rf node_modules
-cd ..
-rm -rf ../.git
-cp -R --no-preserve=ownership cinnamon "$pkgdir/usr/share/themes/$_pkgname"
-
+# Numix-Frost-Light
 cd "${srcdir}/${_pkgname}"
 git reset --hard origin/master
-
 git checkout "${_branch}"
 make
 make DESTDIR=${pkgdir} install
-rm -rf .git
 
-cd gnome-shell
-find . -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/$_light/gnome-shell/{}" \;
 
 }
 # -*- mode: bash;-*-
