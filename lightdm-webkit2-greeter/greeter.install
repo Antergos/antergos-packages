@@ -1,10 +1,10 @@
 # Colored makepkg-like functions
 msg_blue() {
-    printf "${blue}==>${bold} $1${all_off}\n"
+    printf "${blue} **${bold} $1${all_off}\n"
 }
 
 note() {
-    printf "${blue}==>${yellow} NOTE:${bold} $1${all_off}\n"
+    printf "${blue}==>${yellow} NOTE: $1 ${blue}<==${all_off}\n"
 }
 
 all_off="$(tput sgr0)"
@@ -23,6 +23,7 @@ post_upgrade() {
 	note "MANUAL ACTION REQUIRED!"
 	msg_blue "The greeter's config file contains important changes. It has been saved as"
 	msg_blue "/etc/lightdm/lightdm-webkit2-greeter.conf.pacnew. You must either merge the"
-	msg_blue "changes into /etc/lightdm/lightdm-webkit2-greeter.conf or replace it with the new file."
+	msg_blue "changes into /etc/lightdm/lightdm-webkit2-greeter.conf"
+	msg_blue "or replace the latter with the former."
 }
 # -*- mode: bash;-*-
