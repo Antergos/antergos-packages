@@ -16,8 +16,8 @@ optdepends=(
     'vivaldi-ffmpeg-codecs: playback of proprietary video/audio'
     'google-chrome: Widevine DRM Plugin'
 )
-source_i686=("https://vivaldi.com/download/stable/vivaldi-beta-${pkgver}-1.i386.rpm")
-source_x86_64=("https://vivaldi.com/download/stable/vivaldi-beta-${pkgver}-1.x86_64.rpm")
+source_i686=("https://vivaldi.com/download/stable/vivaldi-stable-${pkgver}-1.i386.rpm")
+source_x86_64=("https://vivaldi.com/download/stable/vivaldi-stable-${pkgver}-1.x86_64.rpm")
 sha256sums_i686=('')
 sha256sums_x86_64=('')
 
