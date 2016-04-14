@@ -1,7 +1,7 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 pkgname=pamac-dev
-pkgver=4.0alpha1
+pkgver=4.0beta1
 _pkgver=4-sans-git
 pkgrel=1
 _gitcommit="master"
@@ -23,8 +23,8 @@ install=pamac.install
 
 
 if [ "${_gitcommit}" != "" ]; then
-	#source=("git+https://github.com/manjaro/pamac")
-	source=('pamac-4-alpha.tar.xz::http://lists.manjaro.org/pipermail/manjaro-dev/attachments/20160409/a11de4e7/attachment-0001.bin')
+	source=("git+https://github.com/manjaro/pamac")
+	#source=('pamac-4-alpha.tar.xz::http://lists.manjaro.org/pipermail/manjaro-dev/attachments/20160409/a11de4e7/attachment-0001.bin')
 else
 	source=("pamac-$pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
