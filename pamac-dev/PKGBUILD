@@ -43,9 +43,9 @@ prepare() {
 	{ [[ "${_gitcommit}" != "" ]] &&  cd "${srcdir}/pamac"; } || cd "${srcdir}/pamac-${_pkgver}"
 
 	# adjust version string
-	cd "$srcdir/pamac-$_pkgver/src"
+	cd "$srcdir/pamac/src"
 	sed -i -e "s|\"4.0.0\"|\"$pkgver-$pkgrel\"|g" manager_window.vala 
-	cd "$srcdir/pamac-$_pkgver/"
+	cd "$srcdir/pamac/"
 
 	# patches here
 	
