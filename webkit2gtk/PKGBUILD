@@ -24,8 +24,6 @@ prepare() {
   mkdir build
 
   cd webkitgtk-$pkgver
-  cp ../python /usr/local/bin/python
-  chmod +x /usr/local/bin/python
   # patch -Np1 -i ../universal-access.patch
   Tools/Scripts/webkit-patch apply-from-bug 156651
   sed -i '1s/python$/&2/' Tools/gtk/generate-gtkdoc
