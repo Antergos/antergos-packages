@@ -18,7 +18,8 @@ optdepends=('gtk2: Netscape plugin support'
 options=('!emptydirs')
 source=("http://webkitgtk.org/releases/webkitgtk-${pkgver}.tar.xz"
 		'universal-access.patch')
-md5sums=('' '')
+md5sums=('adcbee440d81acfb1ead9ada91bd5e79'
+         'ba23efd5c1640720e20ff2fcc53d4298')
 
 prepare() {
   mkdir build
