@@ -5,7 +5,7 @@
 pkgname='spl-utils'
 _pkgver=0.6.5.6
 pkgver=${_pkgver}
-pkgrel=1
+pkgrel=2
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
 depends=("dkms")
@@ -18,10 +18,10 @@ source=("spl::git+https://github.com/zfsonlinux/spl.git")
 groups=("system" "zfs")
 md5sums=('SKIP')
 
-_kernel='4.4.5-1-ARCH'
+_kernel='4.5.0-1-ARCH'
 
 pkgver() {
-	local _kernel='4.4.5_1'
+	local _kernel='4.5.0_1'
     cd "${srcdir}/spl"
     printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
     

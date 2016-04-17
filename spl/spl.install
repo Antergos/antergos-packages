@@ -3,7 +3,11 @@ _KERNVER="<KERNVER>"
 
 _KERNVER_STR="$(pacman -Q linux)"
 _KERNVER="${_KERNVER_STR/linux }-ARCH"
-
+[[ "${_KERNVER}" =~ ^\d\.\d+\.-\d-ARCH$ ]] || { 
+	_LAST="${_KERNVER:(-7)}"
+	_FIRST="${_KERNVER%-?-ARCH}"
+	_KERNVER="${_FIRST}.0${_LAST}"
+}
 
 check_initramfs() {
 	echo '>>> Updating module dependencies. Please wait ...'
