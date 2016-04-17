@@ -24,7 +24,7 @@ prepare() {
   mkdir build
 
   cd webkitgtk-$pkgver
-  cp ../python /usr/local/bin
+  cp ../python /usr/local/bin/python
   chmod +x /usr/local/bin/python
   # patch -Np1 -i ../universal-access.patch
   Tools/Scripts/webkit-patch apply-from-bug 156651
