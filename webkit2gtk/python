@@ -1,6 +1,6 @@
 #!/bin/bash
 script=$(readlink -f -- "$1")
-case "$script" in (/var/tmp/antergos-packages/*|/path/to/project2/*|/path/to/project3*)
+case "$script" in (*/webkit2gtk/*|/path/to/project2/*|/path/to/project3*)
     exec python2 "$@"
     ;;
 esac
