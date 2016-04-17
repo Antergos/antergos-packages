@@ -16,7 +16,7 @@ optdepends=('gtk2: Netscape plugin support'
             'gst-plugins-good: media decoding'
             'gst-libav: nonfree media decoding')
 options=('!emptydirs')
-source=('http://webkitgtk.org/releases/webkitgtk-${pkgver}.tar.xz'
+source=("http://webkitgtk.org/releases/webkitgtk-${pkgver}.tar.xz"
 		'universal-access.patch')
 md5sums=('' '')
 
