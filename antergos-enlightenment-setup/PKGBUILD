@@ -7,9 +7,9 @@ pkgdesc="Setup configuration for Antergos Enlightenment"
 url="http://www.antergos.com"
 arch=('any')
 license=('GPL2')
-depends=('bash' 'enlightenment' 'connman' 'econnman'
-	'polkit-gnome' 'rage' 'terminology' 'xdg-user-dirs-gtk'
-	'numix-frost-themes' 'numix-icon-theme')
+depends=('ark' 'enlightenment' 'connman' 'econnman' 'emotion_generic_players'
+'rage' 'terminology' 'xdg-user-dirs-gtk' 'ttf-bitstream-vera' 'ttf-dejavu'
+'udisks2' 'vlc')
 _is_metapkg='yes'
 install=${pkgname}.install
 #source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
