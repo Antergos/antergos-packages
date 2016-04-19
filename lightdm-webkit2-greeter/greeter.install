@@ -20,10 +20,10 @@ post_install() {
 }
 
 post_upgrade() {
-	note "MANUAL ACTION REQUIRED!"
-	msg_blue "The greeter's config file contains important changes. It has been saved as"
-	msg_blue "/etc/lightdm/lightdm-webkit2-greeter.conf.pacnew. You must either merge the"
-	msg_blue "changes into /etc/lightdm/lightdm-webkit2-greeter.conf"
-	msg_blue "or replace the latter with the former."
+	#note "MANUAL ACTION REQUIRED!"
+	#msg_blue "The greeter's config file contains important changes. It has been saved as"
+	#msg_blue "/etc/lightdm/lightdm-webkit2-greeter.conf.pacnew. You must either merge the"
+	#msg_blue "changes into /etc/lightdm/lightdm-webkit2-greeter.conf"
+	#msg_blue "or replace the latter with the former."
 }
 # -*- mode: bash;-*-
