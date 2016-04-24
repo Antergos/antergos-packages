@@ -4,8 +4,8 @@
 # Jan de Groot <jgc@archlinux.org>
 
 pkgname=cinnamon-screensaver
-pkgver=2.8.0
-pkgrel=1.2
+pkgver=3.0.0
+pkgrel=1
 pkgdesc="Screensaver designed to integrate well with the Cinnamon desktop."
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -23,7 +23,7 @@ build() {
   cd $pkgname-$pkgver
   
    # Support new libsystemd (which replaces libsystemd-login)
-   sed -i 's/libsystemd-login/libsystemd/' configure.ac
+   #sed -i 's/libsystemd-login/libsystemd/' configure.ac
 
   ./autogen.sh --prefix=/usr --sysconfdir=/etc \
                --libexecdir=/usr/lib/cinnamon-screensaver \

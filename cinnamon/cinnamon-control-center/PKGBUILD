@@ -5,8 +5,8 @@
 # Jan de Groot <jgc@archlinux.org>
 
 pkgname=cinnamon-control-center
-pkgver=2.8.1
-pkgrel=3
+pkgver=3.0.0
+pkgrel=1
 pkgdesc="The Control Center for Cinnamon"
 arch=('i686' 'x86_64')
 depends=('cinnamon-settings-daemon' 'cinnamon-translations' 'cinnamon-menus'
@@ -18,8 +18,9 @@ install=cinnamon-control-center.install
 license=('GPL')
 options=('!emptydirs')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/cinnamon-control-center/archive/$pkgver.tar.gz")
-sha256sums=('bbc39ac8ddcbc06b6aada1ef271f95f5f0d0fe439bec38b9cd847af420305c49')
+sha256sums=('')
 _allowed_in="staging"
+
 prepare() {
   cd $pkgname-$pkgver
 }
@@ -31,9 +32,6 @@ build() {
       --localstatedir=/var --disable-static \
       --enable-systemd \
       --disable-update-mimedb
-
-  #https://bugzilla.gnome.org/show_bug.cgi?id=656229
-  #sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0 /g' -e 's/    if test "$export_dynamic" = yes && test -n "$export_dynamic_flag_spec"; then/      func_append compile_command " -Wl,-O1,--as-needed"\n      func_append finalize_command " -Wl,-O1,--as-needed"\n\0/' libtool
   make
 }
 

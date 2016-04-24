@@ -4,8 +4,8 @@
 # Contributor: Ner0
 
 pkgname=muffin
-pkgver=2.8.5
-pkgrel=1.1
+pkgver=3.0.0
+pkgrel=1
 pkgdesc="Cinnamon window manager based on Mutter"
 arch=('i686' 'x86_64')
 url="https://github.com/linuxmint/muffin"
@@ -16,37 +16,39 @@ makedepends=('intltool' 'gnome-doc-utils' 'gnome-common' 'gobject-introspection'
 options=('!emptydirs')
 install=$pkgname.install
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/muffin/archive/$pkgver.tar.gz")
-sha256sums=('61239f6dccae6ba2a3cf8b6682b6fe89247910e8978668fc9090d4d676822637')
+sha256sums=('')
 _allowed_in=('staging')
+
+
 prepare() {
-  cd ${pkgname}-${pkgver}
+	cd ${pkgname}-${pkgver}
 
 }
 
 build() {
-  cd ${pkgname}-${pkgver}
+	cd ${pkgname}-${pkgver}
 
-  PYTHON=python2 ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/muffin \
-  				 			 --localstatedir=/var --disable-static --disable-schemas-compile \
-                 --enable-compile-warnings=minimum
-  
-  #https://bugzilla.gnome.org/show_bug.cgi?id=656231
-  #sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-  
-  make
+	PYTHON=python2 ./autogen.sh \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--libexecdir=/usr/lib/muffin \
+		--localstatedir=/var \
+		--disable-static \
+		--disable-schemas-compile \
+		--enable-compile-warnings=minimum
+
+	make
 }
 
 package() {
-  cd ${pkgname}-${pkgver}
-  make DESTDIR="$pkgdir/" install
+	cd ${pkgname}-${pkgver}
+	make DESTDIR="$pkgdir/" install
 
-  # Remove unused stuff
-  #make -C src DESTDIR="$pkgdir" uninstall-binPROGRAMS uninstall-desktopfilesDATA
-  #make -C src/tools DESTDIR="$pkgdir" uninstall
-  #make -C src/compositor/plugins DESTDIR="$pkgdir" uninstall
-  #make -C doc/man DESTDIR="$pkgdir" uninstall
+	# Remove unused stuff
+	#make -C src DESTDIR="$pkgdir" uninstall-binPROGRAMS uninstall-desktopfilesDATA
+	#make -C src/tools DESTDIR="$pkgdir" uninstall
+	#make -C src/compositor/plugins DESTDIR="$pkgdir" uninstall
+	#make -C doc/man DESTDIR="$pkgdir" uninstall
 }
 
 # vim:set ts=2 sw=2 et:
- 
-

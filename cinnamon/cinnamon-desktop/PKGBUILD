@@ -3,8 +3,8 @@
 # Contributor:  Jan de Groot <jan@archlinux.org>
 
 pkgname=cinnamon-desktop
-pkgver=2.8.1
-pkgrel=1.1
+pkgver=3.0.0
+pkgrel=1
 pkgdesc="Library with common API for various Cinnamon modules"
 arch=(i686 x86_64)
 license=(GPL LGPL)
@@ -23,18 +23,13 @@ prepare() {
   
   # Arch uses systemd
   patch -Np1 -i ../config.patch
-  
-  # Fix build failure 
-  # sed -i 's|subdir-objects||g' configure.ac
+
 }
 
 build() {
   cd $pkgname-$pkgver
   ./autogen.sh --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
     --libexecdir=/usr/lib/$pkgname --disable-static
-  
-  #https://bugzilla.gnome.org/show_bug.cgi?id=656231
-  #sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
   make
 }
