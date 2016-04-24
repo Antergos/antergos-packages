@@ -3,8 +3,8 @@
 # Contributor: Ner0
 
 pkgname=nemo
-pkgver=2.8.7
-pkgrel=4
+pkgver=3.0.0
+pkgrel=1
 pkgdesc="Cinnamon file manager (Nautilus fork)"
 arch=('i686' 'x86_64')
 url="https://github.com/linuxmint/nemo"
@@ -15,16 +15,8 @@ makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'gnome-common'
 			'python2-gobject' 'python2-polib')
 options=('!emptydirs')
 install=nemo.install
-source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/nemo/tarball/$pkgver"
-		'deep-count-one-filesystem.patch'
-		'0001-GTK-3.20-fix-wrong-desktop-size.patch'
-		'nemo-gtk-3.20-style-classes.patch'
-		'0001-Fix-fallback-style-for-GTK-3.20.patch')
-sha256sums=('21f290212bcfb4ac58f7bdc17e9dccfafb59d9fd52a7540a7e199e252a7c2fe4'
-            '1acd384b7e345d4e2815c51a94b4ffbb802ee376004c3db75cc871eef551cbfa'
-            'd85e4daddf916fa51f25ab5d950efda1ab4f266c0f8fe5d015987c306f3ac3d4'
-            'b93d549c17ea1e30b52a7ea0a8c8b0262d0b827e96414843bdaaddce01e73bec'
-            'cb5aa9ec771afd5380cee08e1dd17ef35b6d6502ab8c778d85e88350a30ddfc5')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/nemo/tarball/$pkgver")
+sha256sums=('')
 _allowed_in="staging"
 
 
@@ -34,24 +26,9 @@ prepare() {
 	# Python2 fix
 	find -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
 
-	# directory: limit deep scount (folder contents and size) to one filesystem (FS#47480)
-	# https://github.com/linuxmint/nemo/pull/1083
-	patch -Np1 -i ../deep-count-one-filesystem.patch
-
-	# Fix fallback style for GTK 3.20
-	# https://github.com/linuxmint/nemo/pull/1138
-	patch -Np1 -i '../0001-Fix-fallback-style-for-GTK-3.20.patch'
-
 	# Rename 'Files' app name to avoid having the same as nautilus
 	sed -i 's/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in.in
 
-	# GTK 3.20 style classes
-	# https://github.com/linuxmint/nemo/pull/1137
-	patch -Np1 -i ../nemo-gtk-3.20-style-classes.patch
-
-	# GTK 3.20 desktop size issue
-	# https://goo.gl/fEr87z
-	patch -Np1 -i ../0001-GTK-3.20-fix-wrong-desktop-size.patch
 }
 
 build() {
