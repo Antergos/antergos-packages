@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 pkgname=pamac-dev
-pkgver=4.0beta3
-_pkgver=0105b98f9ee6ff36b5560b0b9a30926ea0452bcc
+pkgver=4.0beta4
+_pkgver=master
 pkgrel=1
 _gitcommit="master"
 pkgdesc="A Gtk3 frontend for libalpm"
@@ -23,35 +23,30 @@ install=pamac.install
 
 
 if [ "${_gitcommit}" != "" ]; then
-	#source=("git+https://github.com/manjaro/pamac")
-	source=("pamac-$pkgver.tar.xz::https://github.com/manjaro/pamac/archive/$_pkgver.tar.gz"
-			"headerbar-$pkgver.patch::https://github.com/manjaro/pamac/pull/114.patch")
-sha256sums=('a75c5e1ffa728576eff9994f7a8fdb477df7e07230e65bb7b3a300d6ccce199b'
-            'b51610c4fb1aa204214fde6e0d11f9dc4aa66d0fa9b56b29d98a8cc449df0218')
+	source=("git+https://github.com/manjaro/pamac")
 else
 	source=("pamac-$pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
+md5sums=('SKIP')
 
-#pkgver() {
-#	[[ "${srcdir}" != '' ]] && cd "$srcdir/pamac"
-#
-#	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
 
-#}
+pkgver() {
+	{ [[ "${_gitcommit}" != "" ]] &&  cd "${srcdir}/pamac"; } || cd "${srcdir}/pamac-${_pkgver}"
+
+	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
+
+}
 
 
 prepare() {
 	{ [[ "${_gitcommit}" != "" ]] &&  cd "${srcdir}/pamac"; } || cd "${srcdir}/pamac-${_pkgver}"
 
 	# adjust version string
-	cd "src"
-	sed -i -e "s|\"4.0.0\"|\"$pkgver-$pkgrel\"|g" manager_window.vala 
-	cd ..
+	sed -i -e "s|\"4.0.0\"|\"$pkgver-$pkgrel\"|g" src/transaction.vala 
 
 	# patches here
-	patch -p1 -i "$srcdir/headerbar-$pkgver.patch"
-	
+
 }
 
 build() {
