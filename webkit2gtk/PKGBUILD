@@ -16,7 +16,7 @@ optdepends=('gtk2: Netscape plugin support'
             'gst-plugins-good: media decoding'
             'gst-libav: nonfree media decoding')
 options=('!emptydirs')
-source=("http://webkitgtk.org/releases/webkitgtk-${pkgver}.tar.xz"
+source=("http://webkitgtk.org/releases/webkitgtk-${pkgver/rc1}.tar.xz"
 		'wk2-local-storage-from-file-url.patch')
 md5sums=('adcbee440d81acfb1ead9ada91bd5e79'
          'ba23efd5c1640720e20ff2fcc53d4298')
@@ -24,7 +24,7 @@ md5sums=('adcbee440d81acfb1ead9ada91bd5e79'
 prepare() {
   mkdir build
 
-  cd webkitgtk-$pkgver
+  cd webkitgtk-${pkgver/rc1}
   patch -p1 -i ../wk2-local-storage-from-file-url.patch
   sed -i '1s/python$/&2/' Tools/gtk/generate-gtkdoc
   rm -r Source/ThirdParty/gtest/
@@ -36,7 +36,7 @@ build() {
   cmake -DPORT=GTK -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_SKIP_RPATH=ON -DCMAKE_INSTALL_PREFIX=/usr \
         -DLIB_INSTALL_DIR=/usr/lib -DLIBEXEC_INSTALL_DIR=/usr/lib/webkit2gtk-4.0 \
-        -DENABLE_GTKDOC=ON ../webkitgtk-$pkgver
+        -DENABLE_GTKDOC=ON ../webkitgtk-${pkgver/rc1}
   make
 }
 
@@ -45,7 +45,7 @@ package() {
   make DESTDIR="$pkgdir" install
 
   install -m755 -d "$pkgdir/usr/share/licenses/webkit2gtk"
-  cd "$srcdir/webkitgtk-$pkgver/Source"
+  cd "$srcdir/webkitgtk-${pkgver/rc1}/Source"
   for f in $(find -name 'COPYING*' -or -name 'LICENSE*'); do
     echo $f >> "$pkgdir/usr/share/licenses/webkit2gtk/LICENSE"
     cat $f >> "$pkgdir/usr/share/licenses/webkit2gtk/LICENSE"
