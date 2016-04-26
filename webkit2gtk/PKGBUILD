@@ -2,7 +2,7 @@
 # Maintainer: Eric Bélanger <eric@archlinux.org>
 
 pkgname=webkit2gtk
-pkgver=2.12.1
+pkgver=2.12.2rc1
 pkgrel=1
 pkgdesc="GTK+ Web content engine library"
 arch=('i686' 'x86_64')
@@ -17,7 +17,7 @@ optdepends=('gtk2: Netscape plugin support'
             'gst-libav: nonfree media decoding')
 options=('!emptydirs')
 source=("http://webkitgtk.org/releases/webkitgtk-${pkgver}.tar.xz"
-		'universal-access.patch')
+		'wk2-local-storage-from-file-url.patch')
 md5sums=('adcbee440d81acfb1ead9ada91bd5e79'
          'ba23efd5c1640720e20ff2fcc53d4298')
 
@@ -25,7 +25,7 @@ prepare() {
   mkdir build
 
   cd webkitgtk-$pkgver
-  patch -p1 -i ../universal-access.patch
+  patch -p1 -i ../wk2-local-storage-from-file-url.patch
   sed -i '1s/python$/&2/' Tools/gtk/generate-gtkdoc
   rm -r Source/ThirdParty/gtest/
   rm -r Source/ThirdParty/qunit/
