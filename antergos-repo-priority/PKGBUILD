@@ -1,0 +1,22 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+
+pkgname=antergos-repo-priority
+pkgver=1.0
+pkgrel=1
+pkgdesc="Automatically adjusts the priority of the antergos repo in pacman.conf as needed."
+arch=('any')
+depends=('pacman>=5.0')
+groups=('antergos-base')
+url="https://www.antergos.com/"
+license=('GPL')
+install="${pkgname}.install"
+source=("${pkgname}"
+		"90-${pkgname}.hook")
+md5sums=('')
+
+package() {
+	mkdir -p "${pkgdir}/usr/share/libalpm/hooks"
+	install -m777 "${srcdir}/90-${pkgname}.hook" "${pkgdir}/usr/share/libalpm/hooks"
+}
+
+# -*- mode: bash;-*-
