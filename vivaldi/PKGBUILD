@@ -11,7 +11,9 @@ install=${pkgname}.install
 options=(!strip !zipman)
 license=('custom')
 arch=('i686' 'x86_64')
-depends=('gtk2' 'nss' 'libxtst' 'gconf' 'libxss' 'freetype2' 'ttf-font' 'desktop-file-utils' 'shared-mime-info' 'alsa-lib')
+depends=('gtk2' 'nss' 'libxtst' 'gconf' 'libxss' 'freetype2' 'ttf-font'
+		'desktop-file-utils' 'shared-mime-info' 'alsa-lib' 'hicolor-icon-theme')
+makedepends=('w3m')
 optdepends=(
     'vivaldi-ffmpeg-codecs: playback of proprietary video/audio'
     'google-chrome: Widevine DRM Plugin'
@@ -22,34 +24,23 @@ sha256sums_i686=('')
 sha256sums_x86_64=('')
 
 package() {
-    cp -a opt "$pkgdir"
-    install -dm755 "$pkgdir/usr/bin/"
-
-    # cheat to have the vivaldi path
-    mv "$pkgdir/opt/vivaldi-stable" "$pkgdir/opt/vivaldi" || true
+	cp -a {opt,usr} "${pkgdir}"
 
 	# suid sanbox
-	chmod 4755 "$pkgdir/opt/vivaldi/vivaldi-sandbox"
-
-    # link to vivaldi from /usr/bin
-    ln -sf "/opt/vivaldi/vivaldi" "$pkgdir/usr/bin/vivaldi"
-
-    # fix internal vivaldi link
-    (
-        cd "$pkgdir/opt/vivaldi"
-        rm vivaldi
-        ln -s vivaldi-beta vivaldi
-    )
+	chmod 4755 "${pkgdir}/opt/vivaldi/vivaldi-sandbox"
 
 	# install icons
 	for res in 16 22 24 32 48 64 128 256; do
-		install -Dm644 "$pkgdir/opt/vivaldi/product_logo_${res}.png" \
-		"$pkgdir/usr/share/icons/hicolor/${res}x${res}/apps/vivaldi.png"
+		install -Dm644 "${pkgdir}/opt/vivaldi/product_logo_${res}.png" \
+		"${pkgdir}/usr/share/icons/hicolor/${res}x${res}/apps/vivaldi.png"
 	done
 
-    # install desktop file
-    install -Dm644 usr/share/applications/vivaldi-beta.desktop \
-        "$pkgdir/usr/share/applications/vivaldi.desktop"
-    sed -e "s/-beta//g" -i "$pkgdir/usr/share/applications/vivaldi.desktop"
+	# license
+	install -dm755 "$pkgdir/usr/share/licenses/$pkgname"
+	strings "$pkgdir/opt/vivaldi/locales/en-US.pak" \
+		| tr '\n' ' ' \
+		| sed -rne 's/.*(<html lang.*>.*html>).*/\1/p' \
+		| w3m -I 'utf-8' -T 'text/html' \
+		> "$pkgdir/usr/share/licenses/$pkgname/eula.txt"
 }
 
