@@ -6,7 +6,7 @@ _light=Numix-Frost-Light
 _branch=numix-frost-light
 _pkgver=3.5
 pkgver=${_pkgver}
-pkgrel=1
+pkgrel=2
 pkgdesc='Official Numix GTK theme - Antergos Edition'
 arch=('any')
 license=('GPL3')
@@ -28,7 +28,7 @@ package() {
 
 	# Numix-Frost
 	cd "${srcdir}/${_pkgname}"
-	git submodule update --init -- includes/cinnamon
+	git submodule init && git submodule update
 	make
 	make DESTDIR=${pkgdir} install
 
