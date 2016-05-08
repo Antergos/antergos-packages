@@ -38,6 +38,8 @@ package() {
 	install -d "${pkgdir}/usr/share/themes/${_pkgname}/cinnamon"
 	cd includes/cinnamon/Numix-Cinnamon
 	scss --update --sourcemap=none cinnamon/sass:cinnamon
+	rm -rf cinnamon/sass
+	rm -f cinnamon/*.js
 	cp -R --no-preserve=ownership cinnamon "$pkgdir/usr/share/themes/$_pkgname"
 
 
