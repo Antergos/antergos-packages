@@ -18,7 +18,7 @@ depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clement
 	'numix-icon-theme-square' 'oxygen' 'plasma-desktop' 'plasma-nm'
 	'plasma-pa' 'plasma-workspace' 'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve-qt5'
 	'qtcurve-qt4' 'qtcurve-gtk2' 'spectacle' 'systemsettings' 'transmission-qt' 'user-manager'
-	'vlc' 'xdg-user-dirs')
+	'vlc' 'xdg-user-dirs' 'kdeconnect')
 makedepends=()
 _is_metapkg='yes'
 install=${pkgname}.install
