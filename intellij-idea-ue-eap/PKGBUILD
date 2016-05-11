@@ -4,7 +4,7 @@
 
 pkgname=intellij-idea-ue-eap
 _buildver=145.971
-_pkgver=2016.2
+_pkgver=2016.1.2
 _eap="False"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
