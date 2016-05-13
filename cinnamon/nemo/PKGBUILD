@@ -17,7 +17,8 @@ options=('!emptydirs')
 install=nemo.install
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/nemo/tarball/$pkgver"
 		'fix-action-scripts-utf8.patch')
-sha256sums=('' '')
+sha256sums=('7536d8fbf444732d83ad2594e9ab2e0b6cef7c2b6da6c6fc2a5c51c89e45d38c'
+            'efc3e36c7ecde9f7b0308a1b72bd0d89201581c79f9d4b398cf07ab6ad79df09')
 _allowed_in="staging"
 
 
