@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 pkgname=pamac-dev
-pkgver=4.0.0
-_pkgver=4.0.0
+pkgver=4.1.0beta1
+_pkgver=4.1.0beta1
 pkgrel=1
 _gitcommit="master"
 pkgdesc="A Gtk3 frontend for libalpm"
@@ -43,7 +43,7 @@ prepare() {
 	{ [[ "${_gitcommit}" != "" ]] &&  cd "${srcdir}/pamac"; } || cd "${srcdir}/pamac-${_pkgver}"
 
 	# adjust version string
-	sed -i -e "s|\"4.0.0\"|\"$pkgver-$pkgrel\"|g" src/transaction.vala 
+	sed -i -e "s|\"4.1.0\"|\"$pkgver-$pkgrel\"|g" src/transaction.vala 
 
 	# patches here
 
