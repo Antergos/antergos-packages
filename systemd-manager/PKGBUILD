@@ -12,7 +12,7 @@ depends=('gtk3')
 makedepends=('cargo')
 provides=('systemd-manager')
 conflicts=('systemd-manager-git')
-source=("${pkgname}::https://github.com/mmstick/systemd-manager/archive/${pkgver}.zip")
+source=("${pkgname}.zip::https://github.com/mmstick/systemd-manager/archive/${pkgver}.zip")
 md5sums=('')
 
 _allowed_in='main'
