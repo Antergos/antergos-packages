@@ -2,7 +2,7 @@
 # Contributor: Daniel Sandman <revoltism@gmail.com>
 
 pkgname=systemd-manager
-pkgver=0.3.2
+pkgver=None
 pkgrel=1
 pkgdesc='A graphical interface for managing systemd services.'
 arch=('i686' 'x86_64')
