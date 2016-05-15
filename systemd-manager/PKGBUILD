@@ -19,12 +19,12 @@ _allowed_in='main'
 _is_monitored='True'
 
 build() {
-	cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 	cargo build --release
 }
 
 package() {
-	cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 	
 	install -D -m755 'target/release/systemd-manager' "${pkgdir}/usr/bin/systemd-manager"
 	install -D -m755 'assets/systemd-manager-pkexec' "${pkgdir}/usr/bin/systemd-manager-pkexec"
