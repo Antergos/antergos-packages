@@ -1,0 +1,39 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Daniel Sandman <revoltism@gmail.com>
+
+pkgname=systemd-manager
+pkgver=0.3.2
+pkgrel=1
+pkgdesc='A graphical interface for managing systemd services.'
+arch=('i686' 'x86_64')
+url='https://github.com/mmstick/systemd-manager/'
+license=('GPL2')
+depends=('gtk3')
+makedepends=('cargo')
+provides=('systemd-manager')
+conflicts=('systemd-manager-git')
+source=("${pkgname}::https://github.com/mmstick/systemd-manager/archive/${pkgver}.zip")
+md5sums=('')
+
+_allowed_in='main'
+_is_monitored='True'
+
+build() {
+	cd "${srcdir}/${pkgname}"
+	cargo build --release
+}
+
+package() {
+	cd "${srcdir}/${pkgname}"
+	
+	install -D -m755 'target/release/systemd-manager' "${pkgdir}/usr/bin/systemd-manager"
+	install -D -m755 'assets/systemd-manager-pkexec' "${pkgdir}/usr/bin/systemd-manager-pkexec"
+	install -D -m644 'assets/systemd-manager.desktop' "${pkgdir}/usr/share/applications/systemd-manager.desktop"
+
+	install -D -m644 \
+		'assets/org.freedesktop.policykit.systemd-manager.policy' \
+		"${pkgdir}/usr/share/polkit-1/actions/org.freedesktop.policykit.systemd-manager.policy"
+
+	install -D -m644 'README.md' "${pkgdir}/usr/share/doc/${pkgname}/README"
+	install -D -m644 'LICENSE' "${pkgdir}/usr/share/licenses/${pkgname}/COPYING"
+}
