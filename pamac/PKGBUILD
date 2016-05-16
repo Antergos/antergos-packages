@@ -27,7 +27,7 @@ install=pamac.install
 if [ "${_gitcommit}" != "" ]; then
 	source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/$_gitcommit.tar.gz")
 else
-	source=("pamac-$pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz"
+	source=("pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz"
 			'recurse.patch::https://github.com/manjaro/pamac/commit/2282fa561b6e9b3a93db081c59143743ad6aef1b.patch')
 fi
 md5sums=('')
@@ -38,22 +38,22 @@ prepare() {
   fi
 
   # adjust version string
-  cd "$srcdir/pamac-$pkgver/src"
+  cd "$srcdir/pamac-$_pkgver/src"
   sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala 
-  cd "$srcdir/pamac-$pkgver/"
+  cd "$srcdir/pamac-$_pkgver/"
   # patches here
   patch -Np1 -i $srcdir/recurse.patch
 }
 
 build() {
-  cd "$srcdir/pamac-$pkgver"
+  cd "$srcdir/pamac-$_pkgver"
 
   # build
   make all
 }
 
 package() {
-  cd "$srcdir/pamac-$pkgver"
+  cd "$srcdir/pamac-$_pkgver"
   make prefix="$pkgdir"/usr sysconfdir="$pkgdir"/etc install
 }
 
