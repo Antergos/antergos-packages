@@ -27,7 +27,7 @@ install=pamac.install
 if [ "${_gitcommit}" != "" ]; then
 	source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/$_gitcommit.tar.gz")
 else
-	source=("pamac-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz"
+	source=("pamac-$pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz"
 			'recurse.patch::https://github.com/manjaro/pamac/commit/2282fa561b6e9b3a93db081c59143743ad6aef1b.patch')
 fi
 md5sums=('')
