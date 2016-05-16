@@ -20,7 +20,8 @@ _is_monitored='True'
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
-	HOME=/home/antbs cargo build --release --verbose
+	[[ -d /pkg ]] && export CARGO_HOME='/pkg'
+	cargo build --release --verbose
 }
 
 package() {
