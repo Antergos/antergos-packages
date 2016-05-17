@@ -2,8 +2,8 @@
 # Contributor: Daniel Sandman <revoltism@gmail.com>
 
 pkgname=systemd-manager
-pkgver=0.4.1
-_pkgver=0.4.1
+pkgver=0.4.3
+_pkgver=0.4.3
 pkgrel=1
 pkgdesc='A graphical interface for managing systemd services.'
 arch=('i686' 'x86_64')
@@ -13,17 +13,17 @@ depends=('gtk3')
 makedepends=('cargo')
 provides=('systemd-manager')
 conflicts=('systemd-manager-git')
-#source=("${pkgname}.zip::https://github.com/mmstick/systemd-manager/archive/${pkgver}.zip")
-source=("${pkgname}-${pkgver}::git+https://github.com/mmstick/systemd-manager.git")
+source=("${pkgname}.zip::https://github.com/mmstick/systemd-manager/archive/${pkgver}.zip")
+#source=("${pkgname}-${pkgver}::git+https://github.com/mmstick/systemd-manager.git")
 md5sums=('SKIP')
 
 _allowed_in='main'
 _is_monitored='True'
 
-pkgver() {
-	cd "${srcdir}/${pkgname}-${_pkgver}"
-	printf "%s.r%s" "${_pkgver}" "$(git rev-parse --short HEAD)"
-}
+#pkgver() {
+#	cd "${srcdir}/${pkgname}-${_pkgver}"
+#	printf "%s.r%s" "${_pkgver}" "$(git rev-parse --short HEAD)"
+#}
 
 build() {
 	cd "${srcdir}/${pkgname}-${_pkgver}"
