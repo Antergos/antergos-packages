@@ -35,11 +35,11 @@ package() {
 	cd "${srcdir}/${pkgname}-${_pkgver}"
 	
 	install -D -m755 'target/release/systemd-manager' "${pkgdir}/usr/bin/systemd-manager"
-	install -D -m755 'systemd-manager-pkexec' "${pkgdir}/usr/bin/systemd-manager-pkexec"
-	install -D -m644 'systemd-manager.desktop' "${pkgdir}/usr/share/applications/systemd-manager.desktop"
+	install -D -m755 ' assets/systemd-manager-pkexec' "${pkgdir}/usr/bin/systemd-manager-pkexec"
+	install -D -m644 ' assets/systemd-manager.desktop' "${pkgdir}/usr/share/applications/systemd-manager.desktop"
 
 	install -D -m644 \
-		'org.freedesktop.policykit.systemd-manager.policy' \
+		'assets/org.freedesktop.policykit.systemd-manager.policy' \
 		"${pkgdir}/usr/share/polkit-1/actions/org.freedesktop.policykit.systemd-manager.policy"
 
 	install -D -m644 'README.md' "${pkgdir}/usr/share/doc/${pkgname}/README"
