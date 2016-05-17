@@ -21,18 +21,18 @@ _allowed_in='main'
 _is_monitored='True'
 
 pkgver() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}-${_pkgver}"
 	printf "%s.r%s" "${_pkgver}" "$(git rev-parse --short HEAD)"
 }
 
 build() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}-${_pkgver}"
 	[[ -d /pkg ]] && export CARGO_HOME='/pkg'
 	cargo build --release --verbose
 }
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}-${_pkgver}"
 	
 	install -D -m755 'target/release/systemd-manager' "${pkgdir}/usr/bin/systemd-manager"
 	install -D -m755 'systemd-manager-pkexec' "${pkgdir}/usr/bin/systemd-manager-pkexec"
