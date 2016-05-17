@@ -21,7 +21,7 @@ _allowed_in='main'
 _is_monitored='True'
 
 pkgver() {
-	cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 	printf "%s.r%s" "${_pkgver}" "$(git rev-parse --short HEAD)"
 }
 
