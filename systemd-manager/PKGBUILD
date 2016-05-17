@@ -35,8 +35,8 @@ package() {
 	cd "${srcdir}/${pkgname}-${_pkgver}"
 	
 	install -D -m755 'target/release/systemd-manager' "${pkgdir}/usr/bin/systemd-manager"
-	install -D -m755 ' assets/systemd-manager-pkexec' "${pkgdir}/usr/bin/systemd-manager-pkexec"
-	install -D -m644 ' assets/systemd-manager.desktop' "${pkgdir}/usr/share/applications/systemd-manager.desktop"
+	install -D -m755 'assets/systemd-manager-pkexec' "${pkgdir}/usr/bin/systemd-manager-pkexec"
+	install -D -m644 'assets/systemd-manager.desktop' "${pkgdir}/usr/share/applications/systemd-manager.desktop"
 
 	install -D -m644 \
 		'assets/org.freedesktop.policykit.systemd-manager.policy' \
