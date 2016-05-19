@@ -1,9 +1,9 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=clion-eap
-_buildver=145.971
-_pkgver=2016.1.2
-_eap="False"
+_buildver=162.232.8
+_pkgver=2016.2.0
+_eap="True"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
 pkgdesc="Powerful C and C++ IDE. Early Access Program (EAP) build."
@@ -22,7 +22,7 @@ if [[ "True" = "${_eap}" ]]; then
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
 				"b9b58f752f5da2d59cfcd5170402759bfe8a4d3f877c40ebefae2e7f02907753")
 else
-	_srcfile="CLion-${_pkgver}-RC.tar.gz"
+	_srcfile="CLion-${_pkgver}.tar.gz"
 	source=("http://download.jetbrains.com/cpp/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
