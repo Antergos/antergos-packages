@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 pkgname=pamac-dev
-pkgver=4.1b2
-_pkgver=4.1b2
+pkgver=4.1rc1
+_pkgver=4.1rc1
 pkgrel=1
 _gitcommit="master"
 pkgdesc="A Gtk3 frontend for libalpm"
