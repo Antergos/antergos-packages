@@ -15,17 +15,13 @@ makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'gnome-common'
 			'python-gobject' 'python-polib' 'python2-gobject' 'python2-polib')
 options=('!emptydirs')
 install=nemo.install
-source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/nemo/tarball/$pkgver"
-		'fix-action-scripts-utf8.patch')
-sha256sums=('7536d8fbf444732d83ad2594e9ab2e0b6cef7c2b6da6c6fc2a5c51c89e45d38c'
-            'efc3e36c7ecde9f7b0308a1b72bd0d89201581c79f9d4b398cf07ab6ad79df09')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/nemo/tarball/$pkgver")
+sha256sums=('7536d8fbf444732d83ad2594e9ab2e0b6cef7c2b6da6c6fc2a5c51c89e45d38c')
 _allowed_in="staging"
 
 
 prepare() {
 	cd linuxmint-nemo-*
-	
-	patch -Np1 -i ../fix-action-scripts-utf8.patch
 
 	# Python2 fix
 	find -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
