@@ -65,7 +65,7 @@ build() {
 	for dir in ${_autogen_pkgs}
 	do
 		pushd ${dir}
-		./autogen.sh --prefix=/usr --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib/${dir} \
+		PYTHON=/usr/bin/python2 ./autogen.sh --prefix=/usr --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib/${dir} \
 			--disable-static --disable-schemas-compile
 		make
 		popd
