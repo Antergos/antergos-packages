@@ -31,7 +31,7 @@ prepare() {
 build() {
 	cd $pkgname-$pkgver
 	
-	./autogen.sh \
+	CFLAGS="${CFLAGS} -Wnomaybe-uninitialized" ./autogen.sh \
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
