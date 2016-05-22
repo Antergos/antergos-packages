@@ -20,7 +20,7 @@ optdepends=('caja: Document Properties extension'
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('c8d9ecf779f398439d67899e31722dd15d8b3b85')
-install=${_pkgname}.install
+install=${pkgname}.install
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
