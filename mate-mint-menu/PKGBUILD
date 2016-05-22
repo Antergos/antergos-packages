@@ -24,7 +24,6 @@ optdepends=('mate-screensaver: lock screen button'
 source=("http://packages.linuxmint.com/pool/main/m/mintmenu/mintmenu_${pkgver}.tar.xz"
         'http://github.com/linuxmint/mint-translations/archive/master.tar.gz' 
         'antergos_compat.patch'
-        'get_color_fix.patch'
         'removescript')
 install=${pkgname}.install
 sha256sums=('' '' '' '')
