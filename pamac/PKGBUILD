@@ -2,8 +2,8 @@
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=pamac
-pkgver=4.0.1
-_pkgver=4.0.0
+pkgver=4.1.0
+_pkgver=4.1.0
 pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit=""
@@ -27,8 +27,7 @@ install=pamac.install
 if [ "${_gitcommit}" != "" ]; then
 	source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/$_gitcommit.tar.gz")
 else
-	source=("pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz"
-			'recurse.patch::https://github.com/manjaro/pamac/commit/2282fa561b6e9b3a93db081c59143743ad6aef1b.patch')
+	source=("pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 md5sums=('')
 
@@ -42,7 +41,6 @@ prepare() {
   sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala 
   cd "$srcdir/pamac-$_pkgver/"
   # patches here
-  patch -Np1 -i $srcdir/recurse.patch
 }
 
 build() {
