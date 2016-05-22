@@ -1,0 +1,54 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=mate-notification-daemon
+pkgver=1.14.0
+pkgrel=1
+provides=('notification-daemon')
+pkgdesc="Notification daemon for MATE"
+url="http://mate-desktop.org"
+arch=('i686' 'x86_64')
+license=('GPL' 'LGPL')
+depends=('dconf' 'dbus-glib' 'gtk2' 'gtk3' 'libcanberra' 'libwnck' 'libwnck3' 'libnotify')
+makedepends=('mate-common')
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgbase}-${pkgver}.tar.xz")
+sha1sums=('6877d4b8e6b55192f66aa16103e216c851470072')
+install=${pkgname}.install
+
+prepare() {
+	cd "${srcdir}"
+	#mv "${pkgname}-${pkgver}" "${pkgbase}-gtk2"
+	#cp -a "${pkgbase}-gtk2" "${pkgbase}-gtk3"
+}
+
+build() {
+#	cd "${srcdir}/${pkgbase}-gtk2"
+#	./configure \
+#		--prefix=/usr \
+#		--with-gtk=2.0 \
+#		--disable-static
+#	make
+
+	cd "${pkgname}-${pkgver}"
+	./configure \
+		--prefix=/usr \
+		--libexecdir=/usr/lib/${pkgbase} \
+		--with-gtk=3.0 \
+		--disable-static
+	make
+}
+
+#package_mate-notification-daemon() {
+#	pkgdesc+=' (GTK2 version)'
+#	groups=('mate')
+#	conflicts=("${pkgbase}-gtk3")
+#	depends=('dconf' 'dbus-glib' 'gtk2' 'libcanberra' 'libwnck' 'libnotify')
+
+#	cd "${srcdir}/${pkgbase}-gtk2"
+#	make DESTDIR="${pkgdir}" install
+#}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

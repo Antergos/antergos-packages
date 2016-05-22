@@ -1,0 +1,33 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=mate-sensors-applet
+pkgver=1.14.0
+pkgrel=1
+pkgdesc="A MATE Panel applet to display readings from hardware sensors, including CPU temperature, fan speeds and voltage readings. (GTK2 version)"
+url="http://mate-desktop.org"
+arch=('i686' 'x86_64')
+license=('GPL')
+depends=('dbus' 'gtk2' 'libatasmart' 'libnotify' 'lm_sensors' 'mate-panel>=1.14')
+makedepends=('docbook-xml' 'libxnvctrl' 'mate-common' 'rarian' 'yelp-tools')
+optdepends=('yelp: for reading MATE help documents')
+groups=('mate-extra')
+conflicts=("${pkgname}-gtk3")
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+sha1sums=('310b06bc37038c55a18874e49c75a20c13b75e37')
+install=${pkgname}.install
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure \
+		--prefix=/usr \
+		--libexecdir=/usr/lib/${pkgname} \
+		--with-gtk=2.0 \
+		--disable-static
+  make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

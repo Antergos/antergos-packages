@@ -1,0 +1,40 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=pluma
+pkgver=1.14.0
+pkgrel=1
+pkgdesc="A powerful text editor for MATE (GTK2 version)"
+url="http://mate-desktop.org"
+arch=('i686' 'x86_64')
+license=('GPL')
+depends=('desktop-file-utils' 'enchant' 'gtk2' 'gtksourceview2' 'iso-codes'
+		 'libsm' 'mate-desktop>=1.14' 'pygtksourceview2' 'python2-gobject' 'zenity')
+makedepends=('mate-common' 'yelp-tools')
+optdepends=('yelp: for reading MATE help documents')
+groups=('mate-extra')
+conflicts=("${pkgname}-gtk3")
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+sha1sums=('f383b3332fda48af5fc76f20b7f4c8581f0d1248')
+install=${pkgname}.install
+
+prepare() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	sed -i 's/python/python2/' plugins/externaltools/data/switch-c.tool.in
+}
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	PYTHON=/usr/bin/python2 ./configure \
+		--prefix=/usr \
+		--libexecdir=/usr/lib/${pkgname} \
+		--with-gtk=2.0 \
+		--enable-gtk-doc=no \
+		--enable-python
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

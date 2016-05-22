@@ -1,0 +1,46 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=mate-power-manager
+pkgver=1.14.0
+pkgrel=1
+pkgdesc="Power management tool for the MATE desktop (GTK2 version)"
+url="http://mate-desktop.org"
+arch=('i686' 'x86_64')
+license=('GPL')
+depends=('dbus-glib' 'dconf' 'gtk2' 'libcanberra' 'libgnome-keyring'
+		 'libnotify' 'libunique' 'mate-desktop>=1.14' 'upower')
+makedepends=('docbook2x' 'docbook-xml' 'mate-common' 'mate-panel' 'xmlto' 'yelp-tools')
+optdepends=('mate-panel: Set brightness and inhibit power management from the panel'
+			'yelp: for reading MATE help documents')
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+groups=('mate-extra')
+conflicts=("${pkgname}-gtk3")
+sha1sums=('b9902eb14618f9378887d9e1d5d0ef37dc99d737')
+install=${pkgname}.install
+
+prepare() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	#Work around a problem where the .sgml fails to parse.
+	sed -e 's:@HAVE_DOCBOOK2MAN_TRUE@.*::' -i man/Makefile.in
+}
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure \
+		--prefix=/usr \
+		--libexecdir=/usr/lib/${pkgname} \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--sbindir=/usr/bin \
+		--enable-applets \
+		--enable-unique \
+		--with-gtk=2.0 \
+		--disable-strict
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}
