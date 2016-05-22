@@ -14,32 +14,23 @@ options=('!emptydirs')
 install=cinnamon-session.install
 url="https://github.com/linuxmint/cinnamon-session"
 source=(${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-session/archive/${pkgver}.tar.gz)
-sha256sums=('b738fb4d1f8b93e2217b2c7e0d905e964e0ebde726a4cf5a28296e3eba7daab7')
+sha256sums=('d8935747bc8aa70518e70a7d338eaf9109b5307d8a44d49dc57e0f15d69e9c89')
 _allowed_in="staging"
 
 prepare() {
   cd $pkgname-$pkgver
-
-  # Increase timeout, for slow machines
-  # patch -Np1 -i ../timeout.patch
-  
-   # Support new libsystemd (which replaces libsystemd-login)
-   sed -i 's/libsystemd-login/libsystemd/' configure.ac
-
 }
 
 build() {
 	cd $pkgname-$pkgver
 	
-	CFLAGS="${CFLAGS} -Wnomaybe-uninitialized" ./autogen.sh \
+	CFLAGS="${CFLAGS} -Wno-error=format-nonliteral" ./autogen.sh \
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--libexecdir=/usr/lib/cinnamon-session \
 		--disable-schemas-compile \
-		--enable-systemd \
-		--disable-gconf \
-		--enable-logind
+		--disable-gconf
   make
 }
 
