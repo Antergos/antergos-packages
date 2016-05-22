@@ -1,0 +1,40 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=mate-session-manager
+pkgver=1.14.0
+pkgrel=1
+pkgdesc="The MATE Session Handler (GTK2 version)"
+url="http://mate-desktop.org"
+arch=('i686' 'x86_64')
+license=('GPL' 'LGPL')
+depends=('dbus-glib' 'gtk2' 'libsm' 'libxtst' 'mate-desktop>=1.14'
+		 'mate-polkit>=1.14' 'mate-settings-daemon>=1.14' 'ttf-dejavu'
+		 'xdg-user-dirs')
+makedepends=('mate-common' 'xmlto' 'xtrans')
+optdepends=('lightdm-gtk-greeter: A lightweight display manager'
+			'onboard: On-screen keyboard useful for mobility impaired users'
+			'orca: Screen reader for blind or visually impaired individuals'
+			'xdg-user-dirs-gtk: Add autostart that prompts to rename user directories when switching locales')
+groups=('mate')
+conflicts=("${pkgname}-gtk3")
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+sha1sums=('225e769bade9d4968c0df98695777478f5fbe055')
+install=${pkgname}.install
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure \
+		--prefix=/usr \
+		--libexecdir=/usr/lib/${pkgname} \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--with-gtk=2.0 \
+		--disable-upower
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

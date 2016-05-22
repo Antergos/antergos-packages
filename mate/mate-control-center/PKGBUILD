@@ -1,0 +1,40 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=mate-control-center
+pkgver=1.14.0
+pkgrel=1
+pkgdesc="The Control Center for MATE (GTK2 version)"
+url="http://mate-desktop.org"
+arch=('i686' 'x86_64')
+license=('GPL')
+depends=('dbus-glib' 'dconf' 'desktop-file-utils' 'gsettings-desktop-schemas' 'gtk2'
+		 'mate-desktop>=1.14' 'mate-icon-theme' 'mate-menus>=1.14' 'mate-settings-daemon>=1.14'
+		 'marco>=1.14' 'libgtop' 'libmatekbd>=1.14' 'libunique' 'librsvg' 'libxss'
+		 'libxt' 'startup-notification')
+makedepends=('docbook2x' 'mate-common' 'yelp-tools')
+optdepends=('yelp: for reading MATE help documents')
+groups=('mate')
+conflicts=("${pkgname}-gtk3")
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+sha1sums=('7e69f411c44f15d9dce4bd85b7f88344f39a383b')
+install=${pkgname}.install
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--sbindir=/usr/bin \
+		--localstatedir=/var \
+		--with-gtk=2.0 \
+		--disable-static \
+		--disable-update-mimedb
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+	rm -f "${pkgdir}/usr/share/applications/mimeinfo.cache"
+}

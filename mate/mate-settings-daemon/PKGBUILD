@@ -1,0 +1,37 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=mate-settings-daemon
+pkgver=1.14.0
+pkgrel=1
+pkgdesc="The MATE Settings daemon (GTK2 version)"
+url="http://mate-desktop.org"
+arch=('i686' 'x86_64')
+license=('GPL')
+depends=('dbus-glib' 'dconf' 'fontconfig' 'gtk2' 'libcanberra-pulse'
+		 'libmatekbd>=1.14' 'libmatemixer' 'libnotify' 'libxt'
+		 'mate-desktop>=1.14' 'nss' 'polkit')
+makedepends=('mate-common')
+groups=('mate')
+replaces=("${pkgname}-gstreamer" "${pkgname}-pulseaudio")
+conflicts=("${pkgname}-gtk3" "${pkgname}-gstreamer" "${pkgname}-pulseaudio")
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+sha1sums=('68e139873d954386ab9e302eeb03e5b9434e46e5')
+install=${pkgname}.install
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure \
+		--prefix=/usr \
+		--libexecdir=/usr/lib/${pkgname} \
+		--sysconfdir=/etc \
+		--with-gtk=2.0 \
+		--enable-polkit \
+		--disable-static
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

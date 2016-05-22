@@ -1,0 +1,43 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=mate-screensaver
+pkgver=1.14.1
+pkgrel=0
+pkgdesc='Screensaver for MATE (GTK2 version)'
+url="http://mate-desktop.org"
+arch=('i686' 'x86_64')
+license=('GPL')
+depends=('dbus-glib' 'libmatekbd>=1.14' 'libnotify' 'libxss' 'mate-desktop>=1.14'
+		 'mate-menus>=1.14' 'mate-session-manager>=1.14')
+makedepends=('mate-common' 'xmlto')
+optdepends=('mate-power-manager: Add power management support.'
+			'mate-screensaver-hacks: Additional screensavers.'
+			'rss-glx: Really slick screensavers.')
+groups=('mate-extra')
+conflicts=("${pkgname}-gtk3")
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+sha1sums=('6930459af0d0f116861696265faf5f0807285bcf')
+install=${pkgname}.install
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure \
+		--prefix=/usr \
+		--libexecdir=/usr/lib/${pkgname} \
+		--sysconfdir=/etc \
+		--with-xscreensaverdir=/usr/share/xscreensaver/config \
+		--with-xscreensaverhackdir=/usr/lib/xscreensaver \
+		--with-mit-ext \
+		--with-libnotify \
+		--enable-locking \
+		--with-gtk=2.0 \
+		--without-console-kit \
+		--disable-static
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

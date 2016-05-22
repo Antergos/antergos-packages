@@ -1,0 +1,29 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=mozo
+pkgver=1.14.0
+pkgrel=1
+pkgdesc="MATE menu editing tool (GTK2 version)"
+url="http://mate-desktop.org"
+arch=('any')
+license=('GPL')
+depends=('mate-menus>=1.14' 'pygtk' 'python2-gobject')
+makedepends=('mate-common')
+groups=('mate-extra')
+conflicts=("${pkgname}-gtk3")
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+sha1sums=('7538b8e6e72a6ef6a7b146cdb807bc64e1453734')
+install=${pkgname}.install
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	PYTHON=/usr/bin/python2 ./configure \
+		--prefix=/usr
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

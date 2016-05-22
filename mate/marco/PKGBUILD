@@ -1,0 +1,35 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=marco
+pkgver=1.14.2
+pkgrel=1
+pkgdesc="A window manager for MATE (GTK2 version)"
+url="http://mate-desktop.org"
+arch=('i686' 'x86_64')
+license=('GPL')
+depends=('gtk2' 'libcanberra' 'libgtop' 'libice' 'libsm' 'libxt'
+		 'mate-desktop>=1.14' 'startup-notification' 'zenity')
+makedepends=('mate-common' 'yelp-tools')
+optdepends=('yelp: for reading MATE help documents')
+groups=('mate')
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+sha1sums=('8cf33e096f8cb77627e3fdad7ae3350a78f77227')
+install=${pkgname}.install
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--with-gtk=2.0 \
+		--enable-startup-notification \
+		--disable-static
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}
