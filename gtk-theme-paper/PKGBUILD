@@ -4,7 +4,7 @@
 
 pkgname=gtk-theme-paper
 _pkgname=paper-gtk-theme
-pkgver=3b3c58fb14c303710b285a92aff48f7d9f0c5f6b
+pkgver=3c0ec75c627874d98cb7e48729b130ce5aad46e6
 pkgrel=1
 pkgdesc="A modern desktop theme suite. Its design is mostly flat with a minimal use of shadows for depth."
 arch=('any')
