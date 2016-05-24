@@ -9,9 +9,10 @@ pkgdesc="Notification daemon for MATE"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL' 'LGPL')
+groups=('mate')
 depends=('dconf' 'dbus-glib' 'gtk2' 'gtk3' 'libcanberra' 'libwnck' 'libwnck3' 'libnotify')
 makedepends=('mate-common')
-source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgbase}-${pkgver}.tar.xz")
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('6877d4b8e6b55192f66aa16103e216c851470072')
 install=${pkgname}.install
 
@@ -32,7 +33,7 @@ build() {
 	cd "${pkgname}-${pkgver}"
 	./configure \
 		--prefix=/usr \
-		--libexecdir=/usr/lib/${pkgbase} \
+		--libexecdir=/usr/lib/${pkgname} \
 		--with-gtk=3.0 \
 		--disable-static
 	make
