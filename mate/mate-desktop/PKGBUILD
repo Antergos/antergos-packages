@@ -12,7 +12,7 @@ depends=('dconf' 'gtk3' 'startup-notification')
 makedepends=('gobject-introspection' 'mate-common' 'yelp-tools')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('9e1235c4305d0e73d4f271f4452a5fe767798d03')
-install=${pkgbase}.install
+install=${pkgname}.install
 
 prepare() {
 	cd "${srcdir}"
