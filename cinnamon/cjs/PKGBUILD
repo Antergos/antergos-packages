@@ -3,12 +3,13 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=cjs
-pkgver=3.0.0
+pkgver=3.0.1
 pkgrel=1
 pkgdesc="Javascript Bindings for Cinnamon"
 arch=(i686 x86_64)
 url="https://github.com/linuxmint/cjs"
 license=(GPL)
+groups=('cinnamon')
 depends=(cairo gobject-introspection-runtime js dbus-glib)
 makedepends=(gnome-common python2 gobject-introspection)
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cjs/archive/${pkgver}.tar.gz")

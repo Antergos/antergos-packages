@@ -6,9 +6,10 @@
 
 pkgname=cinnamon-control-center
 pkgver=3.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="The Control Center for Cinnamon"
 arch=('i686' 'x86_64')
+groups=('cinnamon')
 depends=('cinnamon-settings-daemon' 'cinnamon-translations' 'cinnamon-menus'
          'libgnomekbd' 'network-manager-applet')
 optdepends=('gnome-color-manager: for color management tasks')
@@ -44,7 +45,7 @@ package() {
   #make -C panels/sound DESTDIR="$pkgdir" uninstall
   #make -C panels/sound/data DESTDIR="$pkgdir" install
   #make -C shell DESTDIR="$pkgdir" uninstall-binPROGRAMS uninstall-directoryDATA uninstall-uiDATA
-  #rm "$pkgdir"/usr/share/applications/cinnamon-{control-center,datetime-panel,region-panel,sound-panel}.desktop
+  rm "$pkgdir"/usr/share/applications/cinnamon-settings-*.desktop
   #rm -R "$pkgdir/etc"
 
   # Fix a warning

@@ -3,11 +3,12 @@
 # Contributor: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgname=cinnamon-settings-daemon
-pkgver=3.0.0
+pkgver=3.0.1
 pkgrel=1
 pkgdesc="The Cinnamon Settings daemon"
 arch=('i686' 'x86_64')
 license=('GPL')
+groups=('cinnamon')
 depends=('cinnamon-desktop' 'libibus' 'libcanberra-pulse' 'librsvg' 'nss'
          'pulseaudio-alsa' 'upower' 'libnotify' 'libgnomekbd' 'libwacom')
 makedepends=('intltool' 'docbook-xsl' 'gnome-common' 'xf86-input-wacom')
@@ -25,9 +26,6 @@ prepare() {
 
 build() {
   cd $pkgname-$pkgver
-  
-  # Support new libsystemd (which replaces libsystemd-login)
-  #sed -i 's/libsystemd-login/libsystemd/' configure.ac
 
   ./autogen.sh --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
       --libexecdir=/usr/lib/$pkgname --disable-static --enable-systemd
