@@ -8,6 +8,7 @@ pkgrel=1
 pkgdesc="Library with common API for various Cinnamon modules"
 arch=(i686 x86_64)
 license=(GPL LGPL)
+groups=('cinnamon')
 depends=('gtk3' 'libxkbfile' 'python2' 'glib2' 'libgsystem' 'libpulse')
 makedepends=('intltool' 'gobject-introspection' 'gnome-common' 'python2')
 url="https://github.com/linuxmint/cinnamon-desktop"

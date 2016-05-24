@@ -13,10 +13,11 @@ pkgname=('nemo-fileroller'
 		#'nemo-rabbitvcs'
 pkgver=3.0.0
 _pkgver=3.0.0
-pkgrel=1
+pkgrel=2
 arch=('i686' 'x86_64')
 license=('GPL2')
 url="https://github.com/linuxmint/nemo-extensions"
+groups=('cinnamon')
 depends=('nemo' 'file-roller' 'cjs' 'clutter-gtk' 'clutter-gst' 'gst-plugins-good' 'libmusicbrainz5'
 		'evince' 'gtksourceview3' 'webkit2gtk' 'python2-gobject' 'seahorse-nautilus' 'samba')
 makedepends=('gconf' 'gnome-common' 'gtk-doc' 'intltool' 'gobject-introspection')
