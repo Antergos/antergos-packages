@@ -14,7 +14,7 @@ depends=('gtk-engine-murrine')
 conflicts=('paper-gtk-theme-git')
 makedepends=('git')
 install=${pkgname}.install
-source=("${pkgname}-${pkgver}::https://github.com/snwh/${_pkgname}/archive/v${pkgver}.zip")
+source=("${_pkgname}-${pkgver}::https://github.com/snwh/${_pkgname}/archive/v${pkgver}.zip")
 #source=("${pkgname}::git+https://github.com/snwh/${_pkgname}.git")
 md5sums=('')
 
@@ -25,7 +25,7 @@ md5sums=('')
 #}
 
 package() {
-    cd "${srcdir}/${pkgname}-${pkgver}"
+    cd "${srcdir}/${_pkgname}-${pkgver}"
 
     install -dm755 "${pkgdir}"/usr/share/themes/Paper
     cp -dpr --no-preserve=ownership ./Paper "${pkgdir}"/usr/share/themes/
