@@ -3,12 +3,13 @@
 # Contributor: Ner0
 
 pkgname=nemo
-pkgver=3.0.2
+pkgver=3.0.3
 pkgrel=1
 pkgdesc="Cinnamon file manager (Nautilus fork)"
 arch=('i686' 'x86_64')
 url="https://github.com/linuxmint/nemo"
 license=('GPL')
+groups=('cinnamon')
 depends=('libexif' 'gvfs' 'dconf' 'desktop-file-utils' 'exempi' 'python2'
 		'cinnamon-desktop' 'libnotify' 'libxml2' 'cinnamon-translations')
 makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'gnome-common'
