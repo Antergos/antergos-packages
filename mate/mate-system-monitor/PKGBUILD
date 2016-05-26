@@ -12,9 +12,9 @@ depends=('dconf' 'dbus-glib' 'glibmm' 'gtkmm' 'gtkmm3' 'libgtop' 'libwnck'
 		 'libwnck3' 'librsvg')
 makedepends=('docbook2x' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
-source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgbase}-${pkgver}.tar.xz")
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('58fd0ab16ff76a1d0871053698c13cb28f407bf1')
-install=${pkgbase}.install
+install=${pkgname}.install
 
 prepare() {
 	cd "${srcdir}"
@@ -32,10 +32,10 @@ build() {
 #		--disable-static
 #	make
 
-	cd "${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 	./configure \
 		--prefix=/usr \
-		--libexecdir=/usr/lib/${pkgbase} \
+		--libexecdir=/usr/lib/${pkgname} \
 		--localstatedir=/var \
 		--with-gtk=3.0 \
 		--disable-static
@@ -53,6 +53,6 @@ build() {
 #}
 
 package() {
-	cd "${srcdir}/${pkgbase}-gtk3"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
