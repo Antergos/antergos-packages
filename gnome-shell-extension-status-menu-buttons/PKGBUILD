@@ -7,6 +7,7 @@ pkgdesc="Adds a hibernate, suspend, & lock button to the status menu."
 arch=('any')
 url="http://www.antergos.com"
 license=('GPLv2')
+groups=('gnome-shell-extensions')
 depends=('gnome-shell-extensions' 'lightdm' 'xscreensaver' 'light-locker')
 replaces=('gnome-shell-extension-lockscreen-lightdm')
 conflicts=('gnome-shell-extension-lockscreen-lightdm')
