@@ -5,18 +5,17 @@
 pkgname=eom
 pkgver=1.14.1
 pkgrel=1
-pkgdesc="An image viewing and cataloging program for MATE (GTK2 version)"
+pkgdesc="An image viewing and cataloging program for MATE"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('dbus-glib' 'desktop-file-utils' 'gobject-introspection-runtime'
-		 'gtk2' 'exempi' 'lcms2' 'libexif' 'libjpeg-turbo' 'librsvg'
-		 'mate-desktop>=1.14' 'pygtk' 'python2-gobject2'
-		 'startup-notification' 'zlib')
+		'gtk3' 'exempi' 'lcms2' 'libexif' 'libjpeg-turbo' 'librsvg'
+		'mate-desktop>=1.14' 'pygtk' 'python-gobject2' 'python-gobject'
+		'startup-notification' 'zlib')
 makedepends=('gobject-introspection' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
-conflicts=("${pkgname}-gtk3")
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('3b94e003ad2d29dd04f79198f9e03d823c285d50')
 install=${pkgname}.install
@@ -25,8 +24,11 @@ build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	PYTHON=/usr/bin/python2 ./configure \
 		--prefix=/usr \
+		--bindir=/usr/bin \
+		--sbindir=/usr/bin \
+		--libexecdir=/usr/lib/${pkgname} \
 		--localstatedir=/var \
-		--with-gtk=2.0 \
+		--with-gtk=3.0 \
 		--with-librsvg \
 		--enable-python
 	make
