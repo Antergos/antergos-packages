@@ -2,10 +2,10 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-user-guide
-pkgver=1.14.1
+pkgver=1.14.0
 pkgrel=1
 pkgdesc="MATE User Guide"
-groups=('mate' 'mate-gtk3')
+groups=('mate')
 url="http://mate-desktop.org"
 arch=('any')
 license=('GPL' 'LGPL')
