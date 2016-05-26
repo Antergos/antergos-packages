@@ -1,18 +1,17 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Martin Wimpress <code@flexion.org>
 
-pkgname=libmateweather
-pkgver=1.14.0
+pkgname=libmatekbd
+pkgver=1.14.1
 pkgrel=1
-pkgdesc="Provides access to weather information from the Internet."
+pkgdesc="MATE keyboard library"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('LGPL')
-groups=('mate-extra')
-depends=('dconf' 'gtk2' 'gtk3' 'libsoup')
+depends=('dconf' 'gtk2' 'gtk3' 'iso-codes' 'libxklavier')
 makedepends=('mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('')
+md5sums=('')
 install=${pkgname}.install
 
 prepare() {
@@ -25,30 +24,22 @@ build() {
 #    cd "${srcdir}/${pkgbase}-gtk2"
 #    ./configure \
 #        --prefix=/usr \
-#        --sysconfdir=/etc \
-#        --localstatedir=/var \
 #        --with-gtk=2.0 \
-#        --disable-static \
-#        --disable-python \
-#        --enable-locations-compression
+#        --disable-static
 #    make
 
     cd "${srcdir}/${pkgname}-${pkgver}"
     ./configure \
         --prefix=/usr \
-        --sysconfdir=/etc \
-        --localstatedir=/var \
         --with-gtk=3.0 \
-        --disable-static \
-        --disable-python \
-        --enable-locations-compression
+        --disable-static
     make
 }
 
-#package_libmateweather() {
+#package_libmatekbd() {
 #    pkgdesc+=' (GTK2 version)'
 #    conflicts=("${pkgbase}-gtk3")
-#    depends=('dconf' 'gtk2' 'libsoup')
+#    depends=('dconf' 'gtk2' 'iso-codes' 'libxklavier')
 #    
 #    cd "${srcdir}/${pkgbase}-gtk2"
 #    make DESTDIR="${pkgdir}" install
