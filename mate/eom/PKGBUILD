@@ -1,5 +1,4 @@
-# Maintainer: Antergos Developers <dev@antergos.com># $Id: PKGBUILD 166764 2016-03-14 21:26:19Z bgyorgy $
-
+# Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=eom
@@ -11,7 +10,7 @@ arch=('i686' 'x86_64')
 license=('GPL')
 depends=('dbus-glib' 'desktop-file-utils' 'gobject-introspection-runtime'
 		'gtk3' 'exempi' 'lcms2' 'libexif' 'libjpeg-turbo' 'librsvg'
-		'mate-desktop>=1.14' 'pygtk' 'python-gobject2' 'python-gobject'
+		'mate-desktop>=1.14' 'python-gobject'
 		'startup-notification' 'zlib')
 makedepends=('gobject-introspection' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
