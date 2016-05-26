@@ -29,7 +29,7 @@ build() {
 		--localstatedir=/var \
 		--with-gtk=3.0 \
 		--with-librsvg \
-		--enable-python
+		--disable-python
 	make
 }
 
