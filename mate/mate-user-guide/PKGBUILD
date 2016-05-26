@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-user-guide
-pkgname=${pkgname}pkgver=1.14.1
+pkgver=1.14.1
 pkgrel=1
 pkgdesc="MATE User Guide"
 groups=('mate' 'mate-gtk3')
