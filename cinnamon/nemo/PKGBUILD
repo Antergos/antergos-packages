@@ -18,7 +18,7 @@ options=('!emptydirs')
 install=nemo.install
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/nemo/tarball/$pkgver")
 sha256sums=('7536d8fbf444732d83ad2594e9ab2e0b6cef7c2b6da6c6fc2a5c51c89e45d38c')
-_allowed_in="staging"
+
 
 
 prepare() {

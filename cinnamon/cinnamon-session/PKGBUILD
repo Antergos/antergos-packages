@@ -16,7 +16,7 @@ install=cinnamon-session.install
 url="https://github.com/linuxmint/cinnamon-session"
 source=(${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-session/archive/${pkgver}.tar.gz)
 sha256sums=('d8935747bc8aa70518e70a7d338eaf9109b5307d8a44d49dc57e0f15d69e9c89')
-_allowed_in="staging"
+
 
 prepare() {
   cd $pkgname-$pkgver
