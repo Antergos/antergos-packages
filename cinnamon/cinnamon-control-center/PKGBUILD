@@ -20,7 +20,7 @@ license=('GPL')
 options=('!emptydirs')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/cinnamon-control-center/archive/$pkgver.tar.gz")
 sha256sums=('')
-_allowed_in="staging"
+
 
 prepare() {
   cd $pkgname-$pkgver
