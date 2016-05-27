@@ -9,7 +9,7 @@ url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('dbus' 'desktop-file-utils' 'exempi' 'gtk3' 'gvfs' 'libexif' 'python-gobject'
-		'libunique' 'libxt' 'mate-desktop>=1.14' 'startup-notification')
+		'libunique3' 'libxt' 'mate-desktop>=1.14' 'startup-notification')
 makedepends=('gobject-introspection' 'mate-common')
 optdepends=('gstreamer: automatic media playback when mouseover'
 			'gvfs-smb: To connect to Samba/Windows shares')
