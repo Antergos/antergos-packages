@@ -6,4 +6,4 @@ Target = etc/pacman.conf
 
 [Action]
 Description = Updating antergos repo priority.
-Exec = /usr/bin/
+Exec = /usr/bin/antergos-repo-priority
