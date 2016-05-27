@@ -8,15 +8,14 @@ pkgdesc="File manager for the MATE desktop (GTK2 version)"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dbus' 'desktop-file-utils' 'exempi' 'gtk2' 'gvfs' 'libexif'
-		 'libunique' 'libxt' 'mate-desktop>=1.14'
-		 'startup-notification')
+depends=('dbus' 'desktop-file-utils' 'exempi' 'gtk3' 'gvfs' 'libexif' 'python-gobject'
+		'libunique' 'libxt' 'mate-desktop>=1.14' 'startup-notification')
 makedepends=('gobject-introspection' 'mate-common')
 optdepends=('gstreamer: automatic media playback when mouseover'
 			'gvfs-smb: To connect to Samba/Windows shares')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('8e69164061fb8d21d2f887d1321b94d5225abe02')
+md5sums=('')
 install=${pkgname}.install
 
 build() {
@@ -24,7 +23,7 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--libexecdir=/usr/lib/${pkgname} \
-		--with-gtk=2.0 \
+		--with-gtk=3.0 \
 		--enable-unique \
 		--enable-introspection \
 		--disable-static \
