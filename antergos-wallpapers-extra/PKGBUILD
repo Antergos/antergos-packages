@@ -1,0 +1,22 @@
+# Maintainer: Gustau Castells <karasu@antergos.com>
+
+pkgname=antergos-wallpapers-extra
+pkgver=0.1
+pkgrel=1
+pkgdesc="Users wallpapers for Antergos"
+arch=('any')
+url="http://www.antergos.com"
+license=('CCPL:by-nc-sa')
+source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz")
+sha256sums=('fef43b285645c49eab52d84f068e3d8175643e8503a19934ca53443c3bf19601')
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  install -d "${pkgdir}/usr/share/antergos/wallpapers-extra"
+  install -m644 *.jpg "${pkgdir}/usr/share/antergos/wallpapers-extra/"
+  install -m644 *.png "${pkgdir}/usr/share/antergos/wallpapers-extra/"
+
+  #install -d "${pkgdir}/usr/share/gnome-background-properties"
+  #install -m644 antergos-extra-backgrounds-4-3.xml "${pkgdir}/usr/share/gnome-background-properties/"
+}
+# -*- mode: bash;-*-
