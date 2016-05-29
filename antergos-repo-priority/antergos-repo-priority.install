@@ -1,6 +1,26 @@
+maybe_display_desktop_alert() {
+	if [[ -e '/usr/bin/pacman-boot' ]]; then
+		return
+	fi
+
+	_ant_msg='The antergos repo priority has been updated. You should review the change in'
+	_ant_msg="${_ant_msg} /etc/pacman.conf.pacnew and then update your pacman.conf accordingly."
+	_ant_user="${XAUTHORITY/\/home\/}"
+	_ant_user="${_ant_user/\/.Xauthority}"
+
+	[[ -n "${_ant_user}" ]] || return
+
+	sudo -E -u "${_ant_user}" notify-send \
+		-u critical \
+		-a Antergos \
+		-i '/usr/share/antergos/antergos-menu.png' \
+		'ATTENTION: Antergos System Message' \
+		"${_ant_msg}"
+}
+
 post_install() {
 	echo 'Checking antergos repo priority'
-	/usr/bin/antergos-repo-priority.py
+	/usr/bin/antergos-repo-priority.py && maybe_display_desktop_alert
 }
 
 post_upgrade() {
