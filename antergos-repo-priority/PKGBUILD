@@ -5,7 +5,7 @@ pkgver=1.0
 pkgrel=1
 pkgdesc="Automatically adjusts the priority of the antergos repo in pacman.conf as needed."
 arch=('any')
-depends=('pacman>=5.0', 'python-termcolor')
+depends=('pacman>=5.0' 'python-termcolor')
 groups=('antergos-base')
 url="https://antergos.com/"
 license=('GPL')
@@ -16,8 +16,8 @@ md5sums=('0bbefc718ff6099eb1fabb1669b9b685')
 package() {
 	mkdir -p "${pkgdir}/usr/share/libalpm/hooks"
 	mkdir -p "${pkgdir}/usr/bin"
-	cd "${srcdir}"
-	install -m777 "../99-${pkgname}.hook" "${pkgdir}/usr/share/libalpm/hooks"
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	install -m777 "99-${pkgname}.hook" "${pkgdir}/usr/share/libalpm/hooks"
 	install -m777 "${pkgname}.py" "${pkgdir}/usr/bin"
 }
 
