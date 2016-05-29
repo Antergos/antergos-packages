@@ -14,7 +14,7 @@ url='http://galculator.sourceforge.net/'
 license=('GPL')
 groups=('mate-extra')
 depends=('gtk3')
-makedepends=('intltool', 'mate-common')
+makedepends=('intltool' 'mate-common')
 source=("${pkgname}-${pkgver}::https://github.com/galculator/galculator/archive/v${pkgver}.zip")
 md5sums=('')
 
