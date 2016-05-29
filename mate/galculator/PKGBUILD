@@ -14,13 +14,13 @@ url='http://galculator.sourceforge.net/'
 license=('GPL')
 groups=('mate-extra')
 depends=('gtk3')
-makedepends=('intltool')
+makedepends=('intltool', 'mate-common')
 source=("${pkgname}-${pkgver}::https://github.com/galculator/galculator/archive/v${pkgver}.zip")
 md5sums=('')
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
-	./configure --prefix=/usr
+	./autogen.sh --prefix=/usr
 	make
 }
 
