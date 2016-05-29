@@ -5,7 +5,7 @@ pkgver=1.0
 pkgrel=1
 pkgdesc="Automatically adjusts the priority of the antergos repo in pacman.conf as needed."
 arch=('any')
-depends=('pacman>=5.0')
+depends=('pacman>=5.0', 'python-termcolor')
 groups=('antergos-base')
 url="https://antergos.com/"
 license=('GPL')
