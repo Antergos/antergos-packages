@@ -10,16 +10,13 @@ arch=('any')
 license=('GPL')
 depends=('gtk-engines' 'gtk-engine-murrine' 'librsvg' 'mate-icon-theme')
 makedepends=('mate-common' 'icon-naming-utils')
-groups=('mate' 'mate-gtk3')
+groups=('mate')
 source=("http://pub.mate-desktop.org/releases/themes/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('')
 install=${pkgname}.install
 
 prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
-
-	# GTK+-3.20: fix text selection in firefox
-	# patch -Np1 -i ../fix-selection.patch
 }
 
 build() {

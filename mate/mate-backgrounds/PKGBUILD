@@ -9,7 +9,7 @@ url="http://mate-desktop.org"
 arch=('any')
 license=('GPL')
 makedepends=('mate-common')
-groups=('mate' 'mate-gtk3')
+groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('ee2ed5fc7fb370b6f7e6a7cf06897ba98c26ff5b')
 

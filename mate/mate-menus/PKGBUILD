@@ -8,9 +8,9 @@ pkgdesc="MATE menu specifications"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('glib2' 'python2')
+depends=('glib2' 'python2' 'python')
 makedepends=('gobject-introspection' 'mate-common')
-groups=('mate' 'mate-gtk3')
+groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('a52eacac8cd912b866c085bc4a20e866572f96d6')
 
