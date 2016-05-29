@@ -11,9 +11,9 @@ license=('GPL')
 depends=('gtk-update-icon-cache')
 makedepends=('icon-naming-utils' 'mate-common')
 options=(!strip !emptydirs)
-groups=('mate' 'mate-gtk3')
+groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('26c5da07f617bcfedcc1920cc873c1cea6ee9488')
+md5sums=('')
 install=${pkgname}.install
 
 build() {
