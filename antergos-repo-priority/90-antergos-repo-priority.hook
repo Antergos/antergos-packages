@@ -5,5 +5,5 @@ Type = File
 Target = etc/pacman.conf
 
 [Action]
-Description = Updating antergos repo priority.
-Exec = /usr/bin/antergos-repo-priority
+Description = Checking antergos repo priority.
+Exec = /usr/bin/antergos-repo-priority.py
