@@ -20,7 +20,7 @@ maybe_display_desktop_alert() {
 
 post_install() {
 	echo 'Checking antergos repo priority'
-	/usr/bin/antergos-repo-priority.py && maybe_display_desktop_alert
+	/usr/bin/antergos-repo-priority.py True || maybe_display_desktop_alert
 }
 
 post_upgrade() {
