@@ -1,11 +1,12 @@
-# Maintainer: Alexandre Filgueira <faidoc@gmail.com>
+# Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=antergos-mirrorlist
 pkgver=20160125
-pkgrel=1
+pkgrel=2
 pkgdesc="Antergos mirrorlist for use by pacman"
 arch=('any')
 groups=('antergos-base')
+depends=('antergos-repo-priority')
 url="http://www.antergos.com/"
 license=('GPL')
 backup=(etc/pacman.d/antergos-mirrorlist)
@@ -13,8 +14,8 @@ source=(antergos-mirrorlist)
 sha256sums=('fd48da4b8c3db6bdd5c1f90657f4b4f3d435fea288422ee366d75d0f823ef915')
 
 package() {
-  mkdir -p $pkgdir/etc/pacman.d
-  install -m644 $srcdir/antergos-mirrorlist $pkgdir/etc/pacman.d/
+	mkdir -p $pkgdir/etc/pacman.d
+	install -m644 $srcdir/antergos-mirrorlist $pkgdir/etc/pacman.d/
 }
 
 
