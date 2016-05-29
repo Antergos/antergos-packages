@@ -10,10 +10,8 @@ groups=('antergos-base')
 url="https://antergos.com/"
 license=('GPL')
 install="${pkgname}.install"
-source=("${pkgname}.py"
-		"99-${pkgname}.hook")
-md5sums=('0c02394634278b0adfae750ccc41a0d2'
-		'4700bf07b6baf0e0434acc9257d87f9d')
+source=("${pkgname}-${pkgver}.zip::https://github.com/Antergos/${pkgname}/archive/${pkgver}.zip")
+md5sums=('0bbefc718ff6099eb1fabb1669b9b685')
 
 package() {
 	mkdir -p "${pkgdir}/usr/share/libalpm/hooks"
