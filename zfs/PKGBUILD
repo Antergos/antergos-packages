@@ -1,14 +1,11 @@
-#
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: isiachi <isiachi@rhyeworld.it>
-#
-
 
 pkgname=zfs
 pkgdesc="Kernel modules for the Zettabyte File System."
 _pkgver=0.6.5.7
 pkgver=${_pkgver}
-pkgrel=1
+pkgrel=2
 license=('CDDL')
 makedepends=("git" "linux-headers" "linux")
 depends=("spl" "zfs-utils" "dkms" "linux-headers" "linux")

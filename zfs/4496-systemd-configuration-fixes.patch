@@ -1,0 +1,148 @@
+Index: etc/modules-load.d/zfs.conf.in
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- etc/modules-load.d/zfs.conf.in	(revision 26ef0cc7db03be6f7a5c2d06c7ecdb2449bfa9e1)
++++ etc/modules-load.d/zfs.conf.in	(revision 92547bc45ca9a2114662d9343ae53e5098acb627)
+@@ -1,1 +1,3 @@
+-zfs
++# Always load kernel modules at boot.  The default behavior is to load the
++# kernel modules in the zfs-import-*.service or when blkid(8) detects a pool.
++#zfs
+Index: etc/systemd/system/50-zfs.preset.in
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- etc/systemd/system/50-zfs.preset.in	(revision 26ef0cc7db03be6f7a5c2d06c7ecdb2449bfa9e1)
++++ etc/systemd/system/50-zfs.preset.in	(revision 92547bc45ca9a2114662d9343ae53e5098acb627)
+@@ -1,2 +1,7 @@
+ # ZFS is enabled by default
+-enable zfs.*
++enable zfs-import-cache.service
++disable zfs-import-scan.service
++enable zfs-mount.service
++enable zfs-share.service
++enable zfs-zed.service
++enable zfs.target
+Index: etc/systemd/system/zfs-import-cache.service.in
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- etc/systemd/system/zfs-import-cache.service.in	(revision 26ef0cc7db03be6f7a5c2d06c7ecdb2449bfa9e1)
++++ etc/systemd/system/zfs-import-cache.service.in	(revision 92547bc45ca9a2114662d9343ae53e5098acb627)
+@@ -4,6 +4,7 @@
+ Requires=systemd-udev-settle.service
+ After=systemd-udev-settle.service
+ After=cryptsetup.target
++After=systemd-remount-fs.service
+ Before=dracut-mount.service
+ ConditionPathExists=@sysconfdir@/zfs/zpool.cache
+ 
+@@ -12,3 +13,7 @@
+ RemainAfterExit=yes
+ ExecStartPre=/sbin/modprobe zfs
+ ExecStart=@sbindir@/zpool import -c @sysconfdir@/zfs/zpool.cache -aN
++
++[Install]
++WantedBy=zfs-mount.service
++WantedBy=zfs.target
+Index: etc/systemd/system/zfs-import-scan.service.in
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- etc/systemd/system/zfs-import-scan.service.in	(revision 26ef0cc7db03be6f7a5c2d06c7ecdb2449bfa9e1)
++++ etc/systemd/system/zfs-import-scan.service.in	(revision 92547bc45ca9a2114662d9343ae53e5098acb627)
+@@ -11,4 +11,8 @@
+ Type=oneshot
+ RemainAfterExit=yes
+ ExecStartPre=/sbin/modprobe zfs
+-ExecStart=@sbindir@/zpool import -d /dev/disk/by-id -aN
++ExecStart=@sbindir@/zpool import -aN -o cachefile=none
++
++[Install]
++WantedBy=zfs-mount.service
++WantedBy=zfs.target
+Index: etc/systemd/system/zfs-mount.service.in
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- etc/systemd/system/zfs-mount.service.in	(revision 26ef0cc7db03be6f7a5c2d06c7ecdb2449bfa9e1)
++++ etc/systemd/system/zfs-mount.service.in	(revision 92547bc45ca9a2114662d9343ae53e5098acb627)
+@@ -1,15 +1,17 @@
+ [Unit]
+ Description=Mount ZFS filesystems
+ DefaultDependencies=no
+-Wants=zfs-import-cache.service
+-Wants=zfs-import-scan.service
+-Requires=systemd-udev-settle.service
+ After=systemd-udev-settle.service
+ After=zfs-import-cache.service
+ After=zfs-import-scan.service
++After=systemd-remount-fs.service
+ Before=local-fs.target
+ 
+ [Service]
+ Type=oneshot
+ RemainAfterExit=yes
+ ExecStart=@sbindir@/zfs mount -a
++
++[Install]
++WantedBy=zfs-share.service
++WantedBy=zfs.target
+Index: etc/systemd/system/zfs-share.service.in
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- etc/systemd/system/zfs-share.service.in	(revision 26ef0cc7db03be6f7a5c2d06c7ecdb2449bfa9e1)
++++ etc/systemd/system/zfs-share.service.in	(revision 92547bc45ca9a2114662d9343ae53e5098acb627)
+@@ -3,12 +3,14 @@
+ After=nfs-server.service nfs-kernel-server.service
+ After=smb.service
+ After=zfs-mount.service
+-Requires=zfs-mount.service
+ PartOf=nfs-server.service nfs-kernel-server.service
+ PartOf=smb.service
+ 
+ [Service]
+ Type=oneshot
+ RemainAfterExit=yes
+-ExecStartPre=-@bindir@/rm /etc/dfs/sharetab
++ExecStartPre=-@bindir@/rm -f /etc/dfs/sharetab
+ ExecStart=@sbindir@/zfs share -a
++
++[Install]
++WantedBy=zfs.target
+Index: etc/systemd/system/zfs-zed.service.in
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- etc/systemd/system/zfs-zed.service.in	(revision 26ef0cc7db03be6f7a5c2d06c7ecdb2449bfa9e1)
++++ etc/systemd/system/zfs-zed.service.in	(revision 92547bc45ca9a2114662d9343ae53e5098acb627)
+@@ -10,3 +10,4 @@
+ 
+ [Install]
+ Alias=zed.service
++WantedBy=zfs.target
+Index: etc/systemd/system/zfs.target.in
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- etc/systemd/system/zfs.target.in	(revision 26ef0cc7db03be6f7a5c2d06c7ecdb2449bfa9e1)
++++ etc/systemd/system/zfs.target.in	(revision 92547bc45ca9a2114662d9343ae53e5098acb627)
+@@ -1,8 +1,5 @@
+ [Unit]
+ Description=ZFS startup target
+-Requires=zfs-mount.service
+-Requires=zfs-share.service
+-Wants=zfs-zed.service
+ 
+ [Install]
+ WantedBy=multi-user.target
