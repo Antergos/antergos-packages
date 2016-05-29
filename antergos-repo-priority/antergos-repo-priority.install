@@ -1,0 +1,8 @@
+post_install() {
+	echo 'Checking antergos repo priority'
+	/usr/bin/antergos-repo-priority.py
+}
+
+post_upgrade() {
+	post_install
+}
