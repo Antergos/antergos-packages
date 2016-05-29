@@ -10,17 +10,17 @@ groups=('antergos-base')
 url="https://antergos.com/"
 license=('GPL')
 install="${pkgname}.install"
-source=("99-${pkgname}.hook"
-		"${pkgname}.py")
-md5sums=('4700bf07b6baf0e0434acc9257d87f9d'
-		'0c02394634278b0adfae750ccc41a0d2')
+source=("${pkgname}.py"
+		"99-${pkgname}.hook")
+md5sums=('0c02394634278b0adfae750ccc41a0d2'
+		'4700bf07b6baf0e0434acc9257d87f9d')
 
 package() {
 	mkdir -p "${pkgdir}/usr/share/libalpm/hooks"
 	mkdir -p "${pkgdir}/usr/bin"
 	cd "${srcdir}"
 	install -m777 "../99-${pkgname}.hook" "${pkgdir}/usr/share/libalpm/hooks"
-	install -m777 "../${pkgname}.py" "${pkgdir}/usr/bin"
+	install -m777 "${pkgname}.py" "${pkgdir}/usr/bin"
 }
 
 # -*- mode: bash;-*-
