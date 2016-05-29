@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = File
+Target = etc/pacman.conf
+
+[Action]
+Description = Checking antergos repo priority.
+Exec = /usr/bin/antergos-repo-priority.py
