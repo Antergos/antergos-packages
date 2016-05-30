@@ -3,13 +3,13 @@
 pkgname=lightdm-webkit2-greeter
 _pkgver=2.1.4
 pkgver=2.1.4
-pkgrel=3
+pkgrel=4
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
 license=('GPL3')
 makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common' 'exo')
-depends=('lightdm' 'webkit2gtk>=2.10.8' 'gtk3>=3.18' 'antergos-wallpapers')
+depends=('lightdm' 'webkit2gtk>=2.10.8' 'gtk3>=3.18' 'antergos-wallpapers' 'accountsservice')
 provides=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 conflicts=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
