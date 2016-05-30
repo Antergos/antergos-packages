@@ -10,8 +10,7 @@ arch=('i686' 'x86_64')
 url="https://github.com/manjaro/pamac"
 license=('GPL3')
 depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'vte3>=0.38' 'gtk3>=3.18'
-		'libnotify' 'desktop-file-utils' 'pacman>=5.0' 'pacman<5.1' 'gnutls>=3.4')
-optdepends=(	'yaourt: needed for AUR support')
+		'libnotify' 'desktop-file-utils' 'pacman>=5.0' 'pacman<5.1' 'gnutls>=3.4' 'yaourt')
 makedepends=('gettext' 'itstool' 'vala>=0.28' 'git')
 backup=('etc/pamac.conf')
 provides=('pamac')
