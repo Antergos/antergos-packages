@@ -3,7 +3,7 @@
 
 pkgname=zfs
 pkgdesc="Kernel modules for the Zettabyte File System."
-_pkgver=0.6.5.7
+_pkgver=0.6.5.7.r2178_4.5.4_1
 pkgver=${_pkgver}
 pkgrel=2
 license=('CDDL')
@@ -20,11 +20,11 @@ md5sums=('SKIP')
 _kernel='4.5.4-1-ARCH'
 
 
-pkgver() {
-	local _kernel='4.5.4_1'
-    cd "${srcdir}/zfs"
-    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
-}
+#pkgver() {
+#	local _kernel='4.5.4_1'
+#    cd "${srcdir}/zfs"
+#    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
+#}
 
 build() {
 	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
