@@ -13,7 +13,7 @@ url="https://github.com/manjaro/pamac"
 license=('GPL3')
 depends=('glib2>=2.46' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'yaourt' 'vte3>=0.38'
          'gtk3>=3.18' 'libnotify' 'desktop-file-utils' 'pacman' 'gnutls>=3.4')
-makedepends=('gettext' 'itstool' 'vala>=0.38')
+makedepends=('gettext' 'itstool' 'vala>=0.28')
 backup=('etc/pamac.conf')
 replaces=('pamac-aur')
 conflicts=('pamac-dev')
