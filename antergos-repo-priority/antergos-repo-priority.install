@@ -1,25 +1,53 @@
+export TEXTDOMAIN="ANTERGOS_NOTIFY"
+export GETTEXT='gettext "ANTERGOS_NOTIFY"'
+
+# ===>>> BEGIN Translatable Strings <<<=== #
+
+# Notification Body Part 1
+_part1=$(${GETTEXT} 'The antergos repo priority has been updated.')
+
+# Notification Body Part 2
+_part2=$(${GETTEXT} 'You should review the change in /etc/pacman.conf.pacnew')
+
+# Notification Body Part 3
+_part3=$(${GETTEXT} 'and then update your pacman.conf accordingly.')
+
+# Notification Body Part 4
+_part4=$(${GETTEXT} 'For more information see:')
+
+# Notification Subject
+_subject=$(${GETTEXT} '"ATTENTION: Antergos System Message"')
+
+# ===>>> END Translatable Strings <<<=== #
+
+
+_msg="\"${_part1} ${_part2} ${_part3}\n\n${_part4}\nhttps://antergos.com/wiki/antergos-repo-priority\""
+
+
 maybe_display_desktop_alert() {
 	if [[ -e '/usr/bin/pacman-boot' ]]; then
 		return
 	fi
 
-	_ant_msg='The antergos repo priority has been updated. You should review the change in'
-	_ant_msg="${_ant_msg} /etc/pacman.conf.pacnew and then update your pacman.conf accordingly."
-	_ant_user="${XAUTHORITY/\/home\/}"
-	_ant_user="${_ant_user/\/.Xauthority}"
+	_icon='/usr/share/antergos/logo-square32.png'
+	_command="/usr/bin/notify-send -u critical -a Antergos -i ${_icon} ${_subject} ${_msg}"
+	_addr='DBUS_SESSION_BUS_ADDRESS'
+	
+	_processes=($(ps aux | grep '[d]bus-daemon --session' | awk '{print $2}' | xargs))
+	_users=($(ps aux | grep '[d]bus-daemon --session' | awk '{print $1}' | xargs))
 
-	[[ -n "${_ant_user}" ]] || return 
+	for _i in $(seq 1 ${#_processes[@]}); do
+		_pid="${_processes[$_i - 1]}"
+		_user="${_user[$_i - 1]}"
+		_dbus="$(grep -z ${_addr} /proc/$_pid/environ | sed -e s/${_addr}=//)"
 
-	sudo -E -H -u "${_ant_user}" /usr/bin/notify-send \
-		-u critical \
-		-a Antergos \
-		-i '/usr/share/antergos/logo-square32.png' \
-		'ATTENTION: Antergos System Message' \
-		"${_ant_msg}"
+		[[ -z "${_dbus}" ]] && continue
+
+		DBUS_SESSION_BUS_ADDRESS="${_dbus}" DISPLAY=":0" su -c "${_command}" "${_user}"
+	done
 }
 
 post_install() {
-	echo 'Checking antergos repo priority'
 	/usr/bin/antergos-repo-priority.py 'True' || maybe_display_desktop_alert
 }
 

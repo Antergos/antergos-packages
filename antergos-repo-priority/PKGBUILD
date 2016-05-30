@@ -1,11 +1,11 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=antergos-repo-priority
-pkgver=1.0.3
+pkgver=1.0.4rc1
 pkgrel=1
 pkgdesc="Automatically adjusts the priority of the antergos repo in pacman.conf as needed."
 arch=('any')
-depends=('pacman>=5.0' 'python-termcolor' 'libnotify')
+depends=('pacman>=5.0' 'python-termcolor' 'libnotify' 'gettext')
 groups=('antergos-base')
 url="https://antergos.com/"
 license=('GPL')
@@ -22,6 +22,7 @@ package() {
 
 	install -m777 "99-${pkgname}.hook" "${pkgdir}/usr/share/libalpm/hooks"
 	install -m777 "${pkgname}.py" "${pkgdir}/usr/bin"
+	install -m777 'antergos-notify.sh' "${pkgdir}/usr/bin"
 	install -m644 'logo-square32.png' "${pkgdir}/usr/share/antergos"
 }
 
