@@ -4,8 +4,9 @@
 pkgname=zfs
 pkgdesc="Kernel modules for the Zettabyte File System."
 _pkgver=0.6.5.7.r2178_4.5.4_1
+_ver=0.6.5.7
 pkgver=${_pkgver}
-pkgrel=2
+pkgrel=3
 license=('CDDL')
 makedepends=("git" "linux-headers" "linux")
 depends=("spl" "zfs-utils" "dkms" "linux-headers" "linux")
@@ -27,7 +28,7 @@ _kernel='4.5.4-1-ARCH'
 #}
 
 build() {
-	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
+	sed -i "s|<PKGVER>|${_ver}|g" "${startdir}/${pkgname}.install"
 	sed -i "s|<KERNVER>|${_kernel}|g" "${startdir}/${pkgname}.install"
     cd "${srcdir}/zfs"
     ./autogen.sh
