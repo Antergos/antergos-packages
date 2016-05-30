@@ -8,19 +8,19 @@ maybe_display_desktop_alert() {
 	_ant_user="${XAUTHORITY/\/home\/}"
 	_ant_user="${_ant_user/\/.Xauthority}"
 
-	[[ -n "${_ant_user}" ]] || return
+	[[ -n "${_ant_user}" ]] || return 
 
-	sudo -E -u "${_ant_user}" notify-send \
+	sudo -E -H -u "${_ant_user}" /usr/bin/notify-send \
 		-u critical \
 		-a Antergos \
-		-i '/usr/share/antergos/antergos-menu.png' \
+		-i '/usr/share/antergos/logo-square32.png' \
 		'ATTENTION: Antergos System Message' \
 		"${_ant_msg}"
 }
 
 post_install() {
 	echo 'Checking antergos repo priority'
-	/usr/bin/antergos-repo-priority.py True || maybe_display_desktop_alert
+	/usr/bin/antergos-repo-priority.py 'True' || maybe_display_desktop_alert
 }
 
 post_upgrade() {
