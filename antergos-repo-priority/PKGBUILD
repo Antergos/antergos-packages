@@ -14,9 +14,8 @@ source=("${pkgname}-${pkgver}.zip::https://github.com/Antergos/${pkgname}/archiv
 md5sums=('bafb830f1bb154db80f42d7f3af7ddfa')
 
 package() {
-	mkdir -p "${pkgdir}/usr/share/libalpm/hooks"
+	mkdir -p "${pkgdir}/usr/share/{libalpm/hooks,antergos,locale}"
 	mkdir -p "${pkgdir}/usr/bin"
-	mkdir -p "${pkgdir}/usr/share/antergos"
 
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
@@ -24,6 +23,16 @@ package() {
 	install -m777 "${pkgname}.py" "${pkgdir}/usr/bin"
 	install -m777 'antergos-notify.sh' "${pkgdir}/usr/bin"
 	install -m644 'logo-square32.png' "${pkgdir}/usr/share/antergos"
+	
+	for fpath in po/*; do
+		if [[ -f "${fpath}" ]] && [[ "${fpath}" != 'po/ANTERGOS_NOTIFY.pot' ]]; then
+			STRING_PO=`echo ${fpath#*/}`
+			STRING=`echo ${STRING_PO%.po}`
+			mkdir -p "${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES"
+			msgfmt "${fpath}" -o "${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/ANTERGOS_NOTIFY.mo"
+			echo "${STRING} installed..."
+		fi
+	done
 }
 
 # -*- mode: bash;-*-
