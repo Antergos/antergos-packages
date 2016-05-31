@@ -14,7 +14,8 @@ source=("${pkgname}-${pkgver}.zip::https://github.com/Antergos/${pkgname}/archiv
 md5sums=('bafb830f1bb154db80f42d7f3af7ddfa')
 
 package() {
-	mkdir -p "${pkgdir}/usr/share/{libalpm/hooks,antergos,locale}"
+	mkdir -p "${pkgdir}/usr/share/{libalpm,antergos,locale}"
+	mkdir -p "${pkgdir}/usr/share/libalpm/hooks"
 	mkdir -p "${pkgdir}/usr/bin"
 
 	cd "${srcdir}/${pkgname}-${pkgver}"
