@@ -7,10 +7,10 @@ pkgname=('nemo-fileroller'
 		'nemo-python'
 		'nemo-share'
 		'nemo-seahorse')
-		#'nemo-media-columns'
-		#'nemo-pastebin'
-		#'nemo-compare'
-		#'nemo-rabbitvcs'
+#'nemo-media-columns'
+#'nemo-pastebin'
+#'nemo-compare'
+#'nemo-rabbitvcs'
 pkgver=3.0.0
 _pkgver=3.0.0
 pkgrel=2
@@ -26,10 +26,7 @@ source=("${pkgbase}-${pkgver}.tar.gz::https://github.com/linuxmint/nemo-extensio
 		'gpgversion.patch'
 		'clutter-gst3.patch'
 		'nemo-preview-webkit2-port.patch')
-sha256sums=('b62b81d40a268509c5d3be58aed4d232c05433f028a6197a00b2dd0964578605'
-            '187b9c1d684b81abac7ef3095882cfe859bd50570e554d45fcfdbf6e50455b86'
-            '7217c05f4cf4d797e8e042392c1cb92481bb616a1e7ce20393228591a6bc91e0'
-            '709075fe8516c7fcb493caf4d4b889b56beac2cd678dcd7d8a0df33b334f0c0a')
+sha256sums=('' '' '' '')
 
 prepare() {
 	cd ${pkgbase}-${_pkgver}
