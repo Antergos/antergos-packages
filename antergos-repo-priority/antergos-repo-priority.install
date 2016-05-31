@@ -1,4 +1,9 @@
 post_install() {
+	_logo = '/usr/share/antergos/logo-square32.png'
+	_logo_src = '/usr/share/pixmaps/antergos-logo-square32.png'
+
+	[[ -e "${_logo}" ]] || ln -s "${_logo_src}" "${_logo}"
+
 	/usr/bin/antergos-repo-priority.py 'True' || /usr/bin/antergos-notify.sh
 }
 
