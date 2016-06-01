@@ -3,7 +3,7 @@
 # Contributor: Ner0
 
 pkgname=nemo
-pkgver=3.0.3
+pkgver=3.0.5
 pkgrel=1
 pkgdesc="Cinnamon file manager (Nautilus fork)"
 arch=('i686' 'x86_64')
@@ -17,7 +17,7 @@ makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'gnome-common'
 options=('!emptydirs')
 install=nemo.install
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/nemo/tarball/$pkgver")
-sha256sums=('7536d8fbf444732d83ad2594e9ab2e0b6cef7c2b6da6c6fc2a5c51c89e45d38c')
+sha256sums=('67a4607e0f311db3b71c2014ab2be4c0d4c14f272fc019d381c77acf8442ad77')
 
 
 
