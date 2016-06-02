@@ -9,11 +9,11 @@ pkgdesc="Simple application to manage Xfce panel layouts"
 arch=('any')
 url="https://launchpad.net/xfpanel-switch"
 license=('GPL3')
-depends=('python' 'python-gobject>=3.18' 'python-gobject<3.20')
+depends=('python' 'python-gobject')
 makedepends=('intltool')
 install=${pkgname}.install
 source=("https://launchpad.net/{$_pkgname}/${_pkgver}/${pkgver}/+download/${_pkgname}-${pkgver}.tar.bz2")
-md5sums=('707a1254b2f8c3ecf3947210f3d85573')
+md5sums=('')
 
 build() {
   cd ${srcdir}/${_pkgname}-${pkgver}
