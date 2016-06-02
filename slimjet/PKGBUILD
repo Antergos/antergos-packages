@@ -22,7 +22,7 @@ md5sums_x86_64=('')
 
 package() {
     msg2 "Extracting the data.tar.lzma..."
-    bsdtar -xf data.tar.lzma -C "$pkgdir/"
+    bsdtar -xf data.tar.xz -C "$pkgdir/"
 
     msg2 "Correcting permissions..."
     chmod -R 0755 "$pkgdir/"
