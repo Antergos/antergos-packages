@@ -3,7 +3,7 @@
 
 pkgname=gfxboot
 _pkgver=4.5.12
-_pkgrel=1.2
+_pkgrel=1.4
 pkgver="${_pkgver}.${_pkgrel}"
 pkgrel=1
 arch=('i686' 'x86_64')
