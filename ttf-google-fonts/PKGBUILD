@@ -1,14 +1,9 @@
-# Maintainer:  Sebastian Stammler <stammler.s@gmail.com>
-#
-# Now pacman 4.1 ready!
-# For improvements/fixes to this package, please send me a
-# pull request on github: https://github.com/sebastianst/aur-packages
-#
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor:  Sebastian Stammler <stammler.s@gmail.com>
 # Contributor: Sarkasper <echo a2FzcGVyLm1lbnRlbkBnbXguY29tCg== | base64 -d>
 # Contributor: Daniel Micay <danielmicay@gmail.com>
 # Contributor: Michalis Georgiou <mechmg93@gmail.comr>
 # Contributor: Alexander De Sousa <archaur.xandy21@spamgourmet.com>
-
 
 pkgname=ttf-google-fonts
 pkgver=20150316

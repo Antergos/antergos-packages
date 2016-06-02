@@ -2,7 +2,7 @@
 
 pkgname=xfce4-panel-switch
 _pkgname=xfpanel-switch
-pkgver=1.0.3
+pkgver=1.0.4
 _pkgver=1.0
 pkgrel=1
 pkgdesc="Simple application to manage Xfce panel layouts"
