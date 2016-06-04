@@ -3,25 +3,25 @@
 
 pkgname=mate-terminal
 pkgver=1.14.0
-pkgrel=1
-pkgdesc="The MATE Terminal Emulator (GTK2 version)"
+pkgrel=2
+pkgdesc="The MATE Terminal Emulator"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dbus' 'dconf' 'libsm' 'mate-desktop>=1.14' 'vte')
+depends=('dbus' 'dconf' 'libsm' 'mate-desktop>=1.14' 'vte3')
 makedepends=('docbook2x' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
-conflicts=("${pkgname}-gtk3")
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('3b24e70e1cc69f01e48877d2e3a76013c1ab8e9d')
+md5sums=('5c04daba17d994ad3d1b5f40f084df69')
 install=${pkgname}.install
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
+
 	./configure \
 		--prefix=/usr \
-		--with-gtk=2.0 \
+		--with-gtk=3.0 \
 		--disable-static
 	make
 }

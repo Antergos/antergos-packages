@@ -3,7 +3,7 @@
 
 pkgname=mate-common
 pkgver=1.14.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Common development macros for MATE"
 arch=('any')
 license=('GPL')
@@ -11,7 +11,7 @@ groups=('mate-extra')
 depends=('autoconf' 'automake' 'gettext' 'gtk-doc' 'intltool' 'libtool' 'pkg-config')
 url="http://mate-desktop.org"
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('')
+md5sums=('c09fb1f55beac76d314827c0286b0844')
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"

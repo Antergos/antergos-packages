@@ -3,8 +3,8 @@
 
 pkgname=mate-screensaver
 pkgver=1.14.1
-pkgrel=0
-pkgdesc='Screensaver for MATE (GTK2 version)'
+pkgrel=2
+pkgdesc='Screensaver for MATE'
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -15,9 +15,8 @@ optdepends=('mate-power-manager: Add power management support.'
 			'mate-screensaver-hacks: Additional screensavers.'
 			'rss-glx: Really slick screensavers.')
 groups=('mate-extra')
-conflicts=("${pkgname}-gtk3")
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('6930459af0d0f116861696265faf5f0807285bcf')
+md5sums=('fa6f55f00f33fb6fca007c30dd1d4736')
 install=${pkgname}.install
 
 build() {
@@ -31,7 +30,7 @@ build() {
 		--with-mit-ext \
 		--with-libnotify \
 		--enable-locking \
-		--with-gtk=2.0 \
+		--with-gtk=3.0 \
 		--without-console-kit \
 		--disable-static
 	make

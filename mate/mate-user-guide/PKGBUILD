@@ -3,7 +3,7 @@
 
 pkgname=mate-user-guide
 pkgver=1.14.0
-pkgrel=1
+pkgrel=2
 pkgdesc="MATE User Guide"
 groups=('mate')
 url="http://mate-desktop.org"
@@ -12,7 +12,7 @@ license=('GPL' 'LGPL')
 depends=('yelp')
 makedepends=('mate-common' 'yelp-tools')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('09518fdee7a54e0f5b6b63d9518727464983c534')
+md5sums=('553a172785de8255ff547287a091b29b')
 install=${pkgname}.install
 
 build() {

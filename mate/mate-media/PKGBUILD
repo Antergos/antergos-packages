@@ -3,18 +3,18 @@
 
 pkgname=mate-media
 pkgver=1.14.0
-pkgrel=1
+pkgrel=2
 url="http://mate-desktop.org"
-pkgdesc="MATE Media Tools (GTK2 version)"
+pkgdesc="MATE Media Tools"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('gtk2' 'libcanberra' 'libmatemixer' 'libunique' 'mate-desktop>=1.14')
+depends=('gtk3' 'libcanberra' 'libmatemixer' 'libunique3' 'mate-desktop>=1.14')
 makedepends=('mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 groups=('mate-extra')
 replaces=("${pkgname}-gstreamer" "${pkgname}-pulseaudio")
-conflicts=("${pkgname}-gtk3" "${pkgname}-gstreamer" "${pkgname}-pulseaudio")
-sha1sums=('b3e450859d4b607981182374673fb66c54a1cad1')
+conflicts=("${pkgname}-gstreamer" "${pkgname}-pulseaudio")
+md5sums=('aedfc6cdba91d5a342154acda9229bea')
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
@@ -23,7 +23,7 @@ build() {
 		--sysconfdir=/etc \
 		--libexecdir=/usr/lib/${pkgname} \
 		--localstatedir=/var \
-		--with-gtk=2.0 \
+		--with-gtk=3.0 \
 		--disable-static
 	make
 }

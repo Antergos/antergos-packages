@@ -3,8 +3,8 @@
 
 pkgname=atril
 pkgver=1.14.1
-pkgrel=1
-pkgdesc="MATE document viewer (GTK2 version)"
+pkgrel=2
+pkgdesc="MATE document viewer"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -19,7 +19,7 @@ optdepends=('caja: Document Properties extension'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('c8d9ecf779f398439d67899e31722dd15d8b3b85')
+sha1sums=('7e1cd353202e9ae4a5ad63b093572d140dd0a7c3')
 install=${pkgname}.install
 
 build() {

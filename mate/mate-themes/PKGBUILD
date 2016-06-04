@@ -3,7 +3,7 @@
 
 pkgname=mate-themes
 pkgver=3.20.7
-pkgrel=1
+pkgrel=2
 pkgdesc="Default themes for the MATE desktop"
 url="http://mate-desktop.org"
 arch=('any')
@@ -12,7 +12,7 @@ depends=('gtk-engines' 'gtk-engine-murrine' 'librsvg' 'mate-icon-theme')
 makedepends=('mate-common' 'icon-naming-utils')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/themes/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('')
+md5sums=('87a2254b0d9fe6deb93d58cba997ee12')
 install=${pkgname}.install
 
 prepare() {

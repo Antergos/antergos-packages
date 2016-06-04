@@ -3,8 +3,8 @@
 
 pkgname=mate-applets
 pkgver=1.14.0
-pkgrel=1
-pkgdesc="Applets for MATE panel (GTK2 version)"
+pkgrel=2
+pkgdesc="Applets for MATE panel"
 arch=('i686' 'x86_64')
 url="http://mate-desktop.org"
 license=('GPL')
@@ -14,9 +14,8 @@ makedepends=('docbook2x' 'docbook-xsl' 'mate-common' 'yelp-tools')
 optdepends=('fortune-mod: for displaying fortune cookies in the Wanda the Fish applet'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')
-conflicts=("${pkgname}-gtk3")
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('1275d9922e8c0abde0256d086d3e7bceb9bcf2c9')
+sha1sums=('e316ade06cba447908120eee07b777dcfae436cd')
 install=${pkgname}.install
 
 prepare() {
@@ -32,7 +31,7 @@ build() {
 		--libexecdir=/usr/lib/${pkgname} \
 		--enable-polkit \
 		--enable-ipv6 \
-		--with-gtk=2.0 \
+		--with-gtk=3.0 \
 		--disable-static
 	make
 }

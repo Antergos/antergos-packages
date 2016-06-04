@@ -2,18 +2,17 @@
 
 pkgname=mate-user-share
 pkgver=1.14.0
-pkgrel=1
+pkgrel=2
 pkgdesc="User level public file sharing via WebDAV for MATE."
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dbus-glib' 'dconf' 'libunique' 'mod_dnssd')
+depends=('dbus-glib' 'dconf' 'libunique3' 'mod_dnssd')
 makedepends=('caja>=1.14' 'libcanberra' 'libnotify' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
-conflicts=("${pkgname}-gtk3")
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('c792d84a5580b4f48d6abd0769bca6395e5cc368')
+sha1sums=('95491485a0769f252e068ed2256f1a3386330094')
 install=${pkgname}.install
 
 build() {

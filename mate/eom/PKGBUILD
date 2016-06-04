@@ -3,7 +3,7 @@
 
 pkgname=eom
 pkgver=1.14.1
-pkgrel=1
+pkgrel=2
 pkgdesc="An image viewing and cataloging program for MATE"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -16,7 +16,7 @@ makedepends=('gobject-introspection' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('3b94e003ad2d29dd04f79198f9e03d823c285d50')
+sha1sums=('df3e91693122053e97a87ca02119b2deda74e475')
 install=${pkgname}.install
 
 build() {
