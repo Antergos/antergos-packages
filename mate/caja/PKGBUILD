@@ -3,8 +3,8 @@
 
 pkgname=caja
 pkgver=1.14.1
-pkgrel=1
-pkgdesc="File manager for the MATE desktop (GTK2 version)"
+pkgrel=2
+pkgdesc="File manager for the MATE desktop"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -15,7 +15,7 @@ optdepends=('gstreamer: automatic media playback when mouseover'
 			'gvfs-smb: To connect to Samba/Windows shares')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('')
+md5sums=('b43639c01a70c9c3cfbca9005656b073')
 install=${pkgname}.install
 
 build() {

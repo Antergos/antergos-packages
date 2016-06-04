@@ -4,14 +4,14 @@
 pkgbase=caja-extensions
 pkgname=(caja-extensions-common caja-gksu caja-image-converter caja-open-terminal caja-sendto caja-share)
 pkgver=1.14.0
-pkgrel=1
+pkgrel=2
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('caja>=1.14' 'dbus-glib' 'gksu' 'gtk3' 'gupnp' 'imagemagick' 'samba' 'python-gobject')
 makedepends=('mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgbase}-${pkgver}.tar.xz")
-md5sums=('')
+md5sums=('d43891792beef546cc87b38914f64572')
 
 build() {
 	cd "${srcdir}/${pkgbase}-${pkgver}"

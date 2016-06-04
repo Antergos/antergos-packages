@@ -7,7 +7,7 @@
 
 pkgname=galculator
 pkgver=2.1.4
-pkgrel=3
+pkgrel=4
 pkgdesc='GTK+ based scientific calculator'
 arch=('i686' 'x86_64')
 url='http://galculator.sourceforge.net/'
@@ -16,7 +16,7 @@ groups=('mate-extra')
 depends=('gtk3')
 makedepends=('intltool' 'mate-common')
 source=("${pkgname}-${pkgver}::https://github.com/galculator/galculator/archive/v${pkgver}.zip")
-md5sums=('')
+md5sums=('085c79519e3e669f44e10c24b2795c27')
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"

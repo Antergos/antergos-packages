@@ -3,7 +3,7 @@
 
 pkgname=mate-desktop
 pkgver=1.14.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Library with common API for various MATE modules"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -11,25 +11,10 @@ license=('GPL' 'LGPL')
 depends=('dconf' 'gtk3' 'startup-notification')
 makedepends=('gobject-introspection' 'mate-common' 'yelp-tools')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('9e1235c4305d0e73d4f271f4452a5fe767798d03')
+md5sums=('3d8d55e228b4ab82cf33004e314820e0')
 install=${pkgname}.install
 
-prepare() {
-	cd "${srcdir}"
-	#mv "${pkgname}-${pkgver}" "${pkgbase}-gtk2"
-	#cp -a "${pkgbase}-gtk2" "${pkgbase}-gtk3"
-}
-
 build() {
-#	cd "${srcdir}/${pkgbase}-gtk2"
-#	./configure \
-#		--prefix=/usr \
-#		--with-gtk=2.0 \
-#		--disable-static \
-#		--disable-schemas-compile \
-#		--enable-gtk-doc
-#	make
-
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	./configure \
 		--prefix=/usr \
@@ -39,16 +24,6 @@ build() {
 		--enable-gtk-doc
 	make
 }
-
-#package_mate-desktop() {
-#	pkgdesc+=' (GTK2 version)'
-#	groups=('mate')
-#	conflicts=("${pkgbase}-gtk3")
-#	depends=('dconf' 'gtk2' 'startup-notification')
-#
-#	cd "${srcdir}/${pkgbase}-gtk2"
-#	make DESTDIR="${pkgdir}" install
-#}
 
 package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"

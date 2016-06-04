@@ -1,33 +1,29 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Martin Wimpress <code@flexion.org>
 
-pkgname=mate-polkit
+pkgname=python-caja
 pkgver=1.14.0
-pkgrel=2
-pkgdesc="PolicyKit integration for the MATE desktop"
+pkgrel=1
+pkgdesc="Python binding for Caja. Enables support for property page and menu item extensions that are written in Python"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
-license=('LGPL')
-depends=('gtk3' 'polkit' 'accountsservice')
-makedepends=('gobject-introspection' 'mate-common')
+license=('GPL')
+depends=('caja>=1.14' 'python-gobject')
+makedepends=('mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('1259f8b245917ecfb22fc9d8ff309d2c')
-
+md5sums=('8afc98de109a6771590e0b858547c461')
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
-	./configure \
+	PYTHON=/usr/bin/python ./configure \
 		--prefix=/usr \
-		--libexecdir=/usr/lib/${pkgname} \
-		--sysconfdir=/etc \
-		--localstatedir=/var \
-		--with-gtk=3.0 \
-		--enable-introspection \
 		--disable-static
 	make
 }
+
 
 package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
+

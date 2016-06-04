@@ -3,49 +3,27 @@
 
 pkgname=libmatekbd
 pkgver=1.14.1
-pkgrel=1
+pkgrel=2
 pkgdesc="MATE keyboard library"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('LGPL')
-depends=('dconf' 'gtk2' 'gtk3' 'iso-codes' 'libxklavier')
+depends=('dconf' 'gtk3' 'iso-codes' 'libxklavier')
 makedepends=('mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('')
+md5sums=('38783a2c4694911c1d1e606421bf86d4')
 install=${pkgname}.install
 
-prepare() {
-    cd "${srcdir}"
-    #mv "${pkgname}-${pkgver}" "${pkgbase}-gtk2"
-    #cp -a "${pkgbase}-gtk2" "${pkgbase}-gtk3"
-}
-
 build() {
-#    cd "${srcdir}/${pkgbase}-gtk2"
-#    ./configure \
-#        --prefix=/usr \
-#        --with-gtk=2.0 \
-#        --disable-static
-#    make
-
-    cd "${srcdir}/${pkgname}-${pkgver}"
-    ./configure \
-        --prefix=/usr \
-        --with-gtk=3.0 \
-        --disable-static
-    make
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure \
+		--prefix=/usr \
+		--with-gtk=3.0 \
+		--disable-static
+	make
 }
-
-#package_libmatekbd() {
-#    pkgdesc+=' (GTK2 version)'
-#    conflicts=("${pkgbase}-gtk3")
-#    depends=('dconf' 'gtk2' 'iso-codes' 'libxklavier')
-#    
-#    cd "${srcdir}/${pkgbase}-gtk2"
-#    make DESTDIR="${pkgdir}" install
-#}
 
 package() {
-    cd "${srcdir}/${pkgname}-${pkgver}"
-    make DESTDIR="${pkgdir}" install
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
 }
