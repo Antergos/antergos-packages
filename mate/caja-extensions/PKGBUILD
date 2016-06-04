@@ -69,6 +69,7 @@ package_caja-sendto() {
 	make -C sendto DESTDIR="${pkgdir}" install
 }
 
+
 package_caja-share() {
 	pkgdesc="A Caja extension to quickly share a folder"
 	depends=('caja' 'caja-extensions-common' 'samba')
@@ -77,3 +78,5 @@ package_caja-share() {
 	cd "${srcdir}/${pkgbase}-${pkgver}"
 	make -C share DESTDIR="${pkgdir}" install
 }
+ 
+ 
