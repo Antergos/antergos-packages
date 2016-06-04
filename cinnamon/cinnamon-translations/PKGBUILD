@@ -3,7 +3,7 @@
 
 pkgname=cinnamon-translations
 pkgver=3.0.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Translations for Cinnamon and Nemo"
 arch=(any)
 groups=('cinnamon')

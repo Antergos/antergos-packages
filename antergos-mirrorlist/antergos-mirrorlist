@@ -19,7 +19,6 @@ Server = http://cinnarch.polymorf.fr/$repo/$arch
 Server = http://www.mirrorservice.org/sites/repo.antergos.com/$repo/$arch
 
 # Germany
-Server = http://cinnarch.limun.org/$repo/$arch
 Server = http://mirror.de.leaseweb.net/antergos/$repo/$arch
 
 # Greece
