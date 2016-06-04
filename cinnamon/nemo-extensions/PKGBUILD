@@ -175,6 +175,7 @@ package_nemo-share(){
 
 # }
 
+
 # package_nemo-rabbitvcs(){
 # 	cd ${pkgbase}-${_pkgver}/nemo-rabbitvcs
 
@@ -185,3 +186,4 @@ package_nemo-share(){
 #       ${pkgdir}/usr/share/nemo-python/extensions/RabbitVCS.py
 # }
 
+ 
