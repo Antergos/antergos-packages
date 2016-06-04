@@ -6,7 +6,7 @@
 
 pkgname=cinnamon-control-center
 pkgver=3.0.0
-pkgrel=2
+pkgrel=3
 pkgdesc="The Control Center for Cinnamon"
 arch=('i686' 'x86_64')
 groups=('cinnamon')
