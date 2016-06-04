@@ -31,3 +31,4 @@ package() {
 	make  DESTDIR="${pkgdir}" install
 	rm -f "${pkgdir}/usr/share/mate-user-share/dav_user_2.0.conf"
 }
+ 
