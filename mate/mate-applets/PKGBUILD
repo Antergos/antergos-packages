@@ -8,14 +8,12 @@ pkgdesc="Applets for MATE panel"
 arch=('i686' 'x86_64')
 url="http://mate-desktop.org"
 license=('GPL')
-depends=('gtksourceview2' 'libgtop' 'libnotify' 'mate-panel>=1.14'
+depends=('gtksourceview3' 'libgtop' 'libnotify' 'mate-panel>=1.14'
 		 'polkit' 'python2-dbus' 'python2-gobject' 'upower')
 makedepends=('docbook2x' 'docbook-xsl' 'mate-common' 'yelp-tools')
-optdepends=('fortune-mod: for displaying fortune cookies in the Wanda the Fish applet'
-			'yelp: for reading MATE help documents')
+optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
-source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('e316ade06cba447908120eee07b777dcfae436cd')
+md5sums=('e316ade06cba447908120eee07b777dcfae436cd')
 install=${pkgname}.install
 
 prepare() {
