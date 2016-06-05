@@ -29,3 +29,4 @@ package() {
 	rm -f "${pkgdir}/usr/share/icons/mate/icon-theme.cache"
 }
  
+ 

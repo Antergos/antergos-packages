@@ -38,3 +38,4 @@ package() {
 	rm -f "${pkgdir}/usr/share/applications/mimeinfo.cache"
 }
  
+ 
