@@ -8,7 +8,7 @@ pkgdesc="MATE document viewer"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dconf' 'dbus' 'desktop-file-utils' 'gtk2' 'libsecret' 'libsm' 'libspectre'
+depends=('dconf' 'dbus' 'desktop-file-utils' 'gtk3' 'libsecret' 'libsm' 'libspectre'
 		 'mate-desktop>=1.14' 'mathjax' 'poppler-glib' 'webkitgtk2' 'zlib')
 makedepends=('caja>=1.14' 'djvulibre' 'gobject-introspection' 'libgxps'
 			 'mate-common' 'texlive-bin' 'yelp-tools')
@@ -27,7 +27,7 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--libexecdir=/usr/lib/${pkgname} \
-		--with-gtk=2.0 \
+		--with-gtk=3.0 \
 		--enable-gtk-doc \
 		--enable-djvu \
 		--enable-dvi \
