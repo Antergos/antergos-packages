@@ -9,7 +9,7 @@ arch=('any')
 license=('GPL2')
 _is_metapkg='yes'
 install=${pkgname}.install
-depends=('bash' 'openbox' 'xorg-xinit' 'thunar' 'nitrogen' 'plank' 
+depends=('bash' 'openbox' 'xorg-xinit' 'pcmanfm' 'nitrogen' 'plank' 
 		'tint2' 'volumeicon' 'conky' 'compton' 'numix-frost-themes' 
 		'numix-icon-theme' 'plank-theme-numix')
 source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
