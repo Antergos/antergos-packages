@@ -2,12 +2,13 @@
 # Contributor: ELmoussaoui Bilal <bil.elmoussaoui@gmail.com>
 
 pkgname=arc-icon-theme
-pkgver=
-pkgrel=111
+pkgver=20160605
+pkgrel=1
 pkgdesc='Base icon theme from the creator of the popular Arc GTK Theme.'
 arch=('any')
-url=https://github.com/horst3180/arc-icon-theme
+url='https://github.com/horst3180/arc-icon-theme'
 license=('GPL3')
+groups=('themes' 'themes::icon')
 depends=('numix-icon-theme-square' 'gtk-update-icon-cache')
 makedepends=('automake' 'unzip')
 source=("${pkgname}-${pkgver}::https://github.com/horst3180/${pkgname}/archive/${pkgver}.zip")
@@ -27,8 +28,8 @@ _monitored_repo='arc-icon-theme'
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
-	# Inherit from Numix Square (mostly for application icons).
-	sed -i 's|Inherits=Moka|Inherits=Numix-Square|g' Arc/index.theme
+	# Inherit from Numix Square (for application and fallback icons).
+	sed -i 's|Inherits=Moka|Inherits=Numix-Square,Numix|g' Arc/index.theme
 	
 	./autogen.sh --prefix=/usr
 
