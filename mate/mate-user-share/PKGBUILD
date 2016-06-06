@@ -24,7 +24,7 @@ build() {
 		--sysconfdir=/etc \
 		--disable-static \
 		--disable-bluetooth \
-		--with-gtk3
+		--with-gtk=3.0
 	make
 }
 
