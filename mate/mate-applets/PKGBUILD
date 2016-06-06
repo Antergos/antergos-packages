@@ -13,6 +13,7 @@ depends=('gtksourceview3' 'libgtop' 'libnotify' 'mate-panel>=1.14'
 makedepends=('docbook2x' 'docbook-xsl' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 md5sums=('e316ade06cba447908120eee07b777dcfae436cd')
 install=${pkgname}.install
 
