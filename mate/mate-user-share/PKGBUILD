@@ -23,7 +23,8 @@ build() {
 		--libexec=/usr/lib/${pkgname} \
 		--sysconfdir=/etc \
 		--disable-static \
-		--disable-bluetooth
+		--disable-bluetooth \
+		--with-gtk3
 	make
 }
 
