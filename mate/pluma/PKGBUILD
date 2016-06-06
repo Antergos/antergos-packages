@@ -9,27 +9,34 @@ url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('desktop-file-utils' 'enchant' 'gtk3' 'gtksourceview3' 'iso-codes'
-		 'libsm' 'mate-desktop>=1.14' 'python2-gobject' 'zenity')
+		 'libsm' 'mate-desktop>=1.14' 'zenity')
 makedepends=('mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
-source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('8386579dac1e16a4d93dfc5f668a206e')
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
+		'pluma_diasable-python-plugins.patch')
+md5sums=('8386579dac1e16a4d93dfc5f668a206e'
+         '09b573a9a7f70dd15133b1201d41678c')
 install=${pkgname}.install
 
 prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
-	sed -i 's/python/python2/' plugins/externaltools/data/switch-c.tool.in
+
+	# disable non working python plugins for gtk3
+	patch -Npr 1 ../pluma_diasable-python-plugins.patch
 }
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
-	PYTHON=/usr/bin/python2 ./configure \
+	./configure \
 		--prefix=/usr \
 		--libexecdir=/usr/lib/${pkgname} \
-		--with-gtk=3.0 \
-		--enable-gtk-doc=no \
-		--enable-python
+		--disable-static \
+		--enable-gtk-doc-html \
+		--enable-gvfs-metadata \
+		--disable-python \
+		--disable-schemas-compile \
+		--with-gtk=3.0
 	make
 }
 
