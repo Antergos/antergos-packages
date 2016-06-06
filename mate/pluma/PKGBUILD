@@ -23,7 +23,7 @@ prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
 	# disable non working python plugins for gtk3
-	patch -Npr 1 ../pluma_diasable-python-plugins.patch
+	patch -Np1 -i ../pluma_diasable-python-plugins.patch
 }
 
 build() {
