@@ -3,7 +3,7 @@
 
 pkgname=arc-icon-theme
 pkgver=
-pkgrel=11
+pkgrel=111
 pkgdesc='Base icon theme from the creator of the popular Arc GTK Theme.'
 arch=('any')
 url=https://github.com/horst3180/arc-icon-theme
