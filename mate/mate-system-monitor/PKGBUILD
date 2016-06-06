@@ -12,7 +12,8 @@ depends=('dconf' 'dbus-glib' 'glibmm' 'gtkmm' 'gtkmm3' 'libgtop' 'libwnck'
 		 'libwnck3' 'librsvg')
 makedepends=('docbook2x' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
-
+source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+md5sums=('a76a853a473fcffe32bedd401d61738a')
 install=${pkgname}.install
 
 
