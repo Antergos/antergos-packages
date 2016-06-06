@@ -2,7 +2,7 @@
 # Contributor: ELmoussaoui Bilal <bil.elmoussaoui@gmail.com>
 
 pkgname=arc-icon-theme
-pkgver=20160605
+pkgver=
 pkgrel=1
 pkgdesc='Base icon theme from the creator of the popular Arc GTK Theme.'
 arch=('any')
