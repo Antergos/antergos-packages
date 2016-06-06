@@ -3,7 +3,7 @@
 
 pkgname=mate-applets
 pkgver=1.14.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Applets for MATE panel"
 arch=('i686' 'x86_64')
 url="http://mate-desktop.org"
@@ -12,6 +12,8 @@ depends=('gtksourceview3' 'libgtop' 'libnotify' 'mate-panel>=1.14'
 		 'polkit' 'python2-dbus' 'python2-gobject' 'upower')
 makedepends=('docbook2x' 'docbook-xsl' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
+replaces=('mate-netspeed' 'mate-netspeed-gtk3')
+conflicts=('mate-netspeed' 'mate-netspeed-gtk3')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 md5sums=('e316ade06cba447908120eee07b777dcfae436cd')
@@ -19,7 +21,7 @@ install=${pkgname}.install
 
 prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
-	sed -i 's/env python/env python2/' invest-applet/invest/{chart.py,invest-applet.py,mate-invest-chart}
+	grep -RZl 'env python' | xargs -0 -l sed -i 's/env python/env python2/'
 }
 
 build() {
@@ -39,5 +41,4 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
  
