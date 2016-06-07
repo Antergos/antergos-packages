@@ -1,7 +1,7 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=antergos-repo-priority
-pkgver=1.0.4rc4
+pkgver=1.0.4
 pkgrel=1
 pkgdesc="Automatically adjusts the priority of the antergos repo in pacman.conf as needed."
 arch=('any')
