@@ -16,6 +16,16 @@ source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgve
 md5sums=('890d228c8f75f99d4f801af8da870afb')
 install=${pkgname}.install
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='mate-desktop'
+_monitored_repo='mate-notification-daemon'
+
+# END ANTBS METADATA
+
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	./configure \

@@ -18,6 +18,16 @@ groups=('mate')
 md5sums=('3afb1a8f17f0f1d587dfa5f5d749ced6')
 install=${pkgname}.install
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='mate-desktop'
+_monitored_repo='mate-panel'
+
+# END ANTBS METADATA
+
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	./configure \

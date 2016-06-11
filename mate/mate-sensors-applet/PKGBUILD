@@ -16,6 +16,16 @@ source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgve
 md5sums=('61a310a3106267ab1463e4f014ff7eda')
 install=${pkgname}.install
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='mate-desktop'
+_monitored_repo='mate-sensors-applet'
+
+# END ANTBS METADATA
+
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	./configure \

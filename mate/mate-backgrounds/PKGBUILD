@@ -13,6 +13,16 @@ groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('0dd81659b362862f6da1f48900609a09133053bb')
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='mate-desktop'
+_monitored_repo='mate-backgrounds'
+
+# END ANTBS METADATA
+
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	./configure \

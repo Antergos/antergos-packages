@@ -14,6 +14,16 @@ groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 md5sums=('0143cbc50fe69f9c9012c23cc007c91b')
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='mate-desktop'
+_monitored_repo='mate-menus'
+
+# END ANTBS METADATA
+
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	PYTHON=/usr/bin/python2 ./configure \
