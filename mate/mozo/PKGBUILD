@@ -39,3 +39,5 @@ package() {
 }
  
  
+
+# -*- mode: bash;-*-
