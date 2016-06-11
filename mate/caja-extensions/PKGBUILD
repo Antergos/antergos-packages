@@ -13,35 +13,6 @@ makedepends=('mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgbase}-${pkgver}.tar.xz")
 md5sums=('d43891792beef546cc87b38914f64572')
 
-# BEGIN ANTBS METADATA
-
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='mate-desktop'
-_monitored_repo='caja-share'
-
-# END ANTBS METADATA
-
-# BEGIN ANTBS METADATA
-
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='mate-desktop'
-_monitored_repo='caja-sendto'
-
-# END ANTBS METADATA
-
-# BEGIN ANTBS METADATA
-
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='mate-desktop'
-_monitored_repo='caja-open-terminal'
-
-# END ANTBS METADATA
 
 # BEGIN ANTBS METADATA
 
@@ -53,35 +24,6 @@ _monitored_repo='caja-extensions'
 
 # END ANTBS METADATA
 
-# BEGIN ANTBS METADATA
-
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='mate-desktop'
-_monitored_repo='caja-gksu'
-
-# END ANTBS METADATA
-
-# BEGIN ANTBS METADATA
-
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='mate-desktop'
-_monitored_repo='caja-image-converter'
-
-# END ANTBS METADATA
-
-# BEGIN ANTBS METADATA
-
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='mate-desktop'
-_monitored_repo='caja-extensions-common'
-
-# END ANTBS METADATA
 
 build() {
 	cd "${srcdir}/${pkgbase}-${pkgver}"
