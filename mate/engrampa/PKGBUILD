@@ -21,7 +21,7 @@ groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
 		fr-rpm-bsdtar.patch)
 md5sums=('387d47d7321f8ab79e41e041d357c887'
-         'effff0861b225f0460ffb46f6bf84ff3')
+		'effff0861b225f0460ffb46f6bf84ff3')
 install=${pkgname}.install
 
 # BEGIN ANTBS METADATA
