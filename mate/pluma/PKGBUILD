@@ -19,6 +19,16 @@ md5sums=('8386579dac1e16a4d93dfc5f668a206e'
          '09b573a9a7f70dd15133b1201d41678c')
 install=${pkgname}.install
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='mate-desktop'
+_monitored_repo='pluma'
+
+# END ANTBS METADATA
+
 prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
