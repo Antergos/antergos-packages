@@ -15,6 +15,16 @@ source=("http://pub.mate-desktop.org/releases/themes/${pkgver::(-2)}/${pkgname}-
 md5sums=('87a2254b0d9fe6deb93d58cba997ee12')
 install=${pkgname}.install
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='mate-desktop'
+_monitored_repo='mate-themes'
+
+# END ANTBS METADATA
+
 prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 }

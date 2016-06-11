@@ -18,6 +18,16 @@ groups=('mate-extra')
 sha1sums=('286ac97658d18ea1fffa6e0a692a877727a44e41')
 install=${pkgname}.install
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='mate-desktop'
+_monitored_repo='mate-power-manager'
+
+# END ANTBS METADATA
+
 prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
