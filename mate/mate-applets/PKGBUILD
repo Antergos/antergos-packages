@@ -19,6 +19,16 @@ source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgve
 md5sums=('e316ade06cba447908120eee07b777dcfae436cd')
 install=${pkgname}.install
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='mate-desktop'
+_monitored_repo='mate-applets'
+
+# END ANTBS METADATA
+
 prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	grep -RZl 'env python' | xargs -0 -l sed -i 's/env python/env python2/'

@@ -19,6 +19,16 @@ source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgve
 md5sums=('1195bfb30c1468a9061f8e9aa07260e8')
 install=${pkgname}.install
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='mate-desktop'
+_monitored_repo='mate-settings-daemon'
+
+# END ANTBS METADATA
+
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	./configure \

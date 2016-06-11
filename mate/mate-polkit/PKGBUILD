@@ -14,6 +14,16 @@ source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgve
 md5sums=('1259f8b245917ecfb22fc9d8ff309d2c')
 
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='mate-desktop'
+_monitored_repo='mate-polkit'
+
+# END ANTBS METADATA
+
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	./configure \
