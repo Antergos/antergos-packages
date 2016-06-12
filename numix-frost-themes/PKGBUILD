@@ -6,10 +6,11 @@ _light=Numix-Frost-Light
 _branch=numix-frost-light
 _pkgver=3.5
 pkgver=${_pkgver}
-pkgrel=2
+pkgrel=1
 pkgdesc='Official Numix GTK theme - Antergos Edition'
 arch=('any')
 license=('GPL3')
+groups=('themes' 'themes-gtk')
 url='http://numixproject.org/'
 depends=('gtk-engine-murrine' 'gtk3>=3.16')
 makedepends=('ruby-sass' 'npm' 'gulp')
