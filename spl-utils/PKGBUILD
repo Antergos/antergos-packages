@@ -1,31 +1,34 @@
-#
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: isiachi <isiachi@rhyeworld.it>
-#
+
 pkgname='spl-utils'
 _pkgver=0.6.5.7
-pkgver=${_pkgver}
+_rev=984
+_kern=4.6.2_1
+pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
+groups=("system" "zfs")
 depends=("dkms")
 provides=("spl-utils" "spl-utils-dkms")
 conflicts=("spl-utils-dkms" "spl-utils-lts" "spl-utils-git")
 makedepends=("git")
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-source=("spl::git+https://github.com/zfsonlinux/spl.git")
-groups=("system" "zfs")
-md5sums=('SKIP')
+_commit='16fc1ec3ba0438b1d657b421923b3969031f2678'
+source=("${pkgname}::https://github.com/zfsonlinux/${pkgname}/archive/${_commit}.zip")
+md5sums=('f28ecfee0ed8c4b87b7a332b3304f356')
 
-_kernel='4.5.4-1-ARCH'
 
-pkgver() {
-	local _kernel='4.5.4_1'
-    cd "${srcdir}/spl"
-    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
-    
-}
+_kernel='4.6.2-1-ARCH'
+
+#pkgver() {
+#	local _kernel='4.5.4_1'
+#    cd "${srcdir}/spl"
+#    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
+#    
+#}
 
 build() {
     cd "${srcdir}/spl"

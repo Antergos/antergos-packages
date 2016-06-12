@@ -3,7 +3,9 @@
 
 pkgname=spl
 _pkgver=0.6.5.7
-pkgver=${_pkgver}
+_rev=984
+_kern=4.6.2_1
+pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
@@ -14,48 +16,49 @@ conflicts=("spl-git" "spl-lts" "spl-dkms")
 install=spl.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-source=("spl::git+https://github.com/zfsonlinux/spl.git")
-md5sums=('SKIP'
-         'a54f0041a9e15b050f25c463f1db7449')
+_commit='16fc1ec3ba0438b1d657b421923b3969031f2678'
+source=("${pkgname}::https://github.com/zfsonlinux/${pkgname}/archive/${_commit}.zip")
+md5sums=('f28ecfee0ed8c4b87b7a332b3304f356')
 install=spl.install
 
-_kernel='4.5.0-4-ARCH'
+_kernel='4.6.2-1-ARCH'
 
-pkgver() {
-	local _kernel='4.5.4_1'
-    cd "${srcdir}/spl"
-    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
-}
+#pkgver() {
+#	local _kernel='4.6.2_1'
+#	cd "${srcdir}/spl"
+#	printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
+#}
 
 build() {
 	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
 	sed -i "s|<KERNVER>|${_kernel}|g" "${startdir}/${pkgname}.install"
-    cd "${srcdir}/spl"
-    ./autogen.sh
-    
-    _at_enable=""
-    [ "${CARCH}" == "i686"  ] && _at_enable="--enable-atomic-spinlocks"
+	cd "${srcdir}/spl"
+	./autogen.sh
 
-    ./configure --prefix=/usr \
-                --libdir=/usr/lib \
-                --sbindir=/usr/bin \
-                --with-config=user \
-                ${_at_enable}
+	_at_enable=""
+	[ "${CARCH}" == "i686"  ] && _at_enable="--enable-atomic-spinlocks"
 
-    make
+	./configure \
+		--prefix=/usr \
+		--libdir=/usr/lib \
+		--sbindir=/usr/bin \
+		--with-config=user \
+		${_at_enable}
+
+	make
 }
 
 package() {
-    dkmsdir="${pkgdir}/usr/src/spl-${_pkgver}"
-    install -d "${dkmsdir}"
+	dkmsdir="${pkgdir}/usr/src/spl-${_pkgver}"
+	install -d "${dkmsdir}"
 
-    cd "${srcdir}/spl"
-    git archive --format=tar HEAD | tar -x -C "${dkmsdir}"
+	cd "${srcdir}/spl"
+	git archive --format=tar HEAD | tar -x -C "${dkmsdir}"
 
-    cd "${dkmsdir}"
-    ./autogen.sh
-    scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n spl
-    chmod g-w,o-w -R .
+	cd "${dkmsdir}"
+	./autogen.sh
+	scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n spl
+	chmod g-w,o-w -R .
 }
 
 # -*- mode: bash;-*-
