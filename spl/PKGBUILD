@@ -17,7 +17,7 @@ install=spl.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
 _commit='16fc1ec3ba0438b1d657b421923b3969031f2678'
-source=("${pkgname}::https://github.com/zfsonlinux/${pkgname}/archive/${_commit}.zip")
+source=("${pkgname}::https://github.com/zfsonlinux/spl/archive/${_commit}.zip")
 md5sums=('f28ecfee0ed8c4b87b7a332b3304f356')
 install=spl.install
 
