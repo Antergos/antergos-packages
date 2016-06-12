@@ -34,7 +34,7 @@ _kernel='4.6.2-1-ARCH'
 #}
 
 build() {
-    cd "${srcdir}/${pkgname}-${_commit}"
+    cd "${srcdir}/zfs-${_commit}"
     ./autogen.sh
     
     _i686_target=""
@@ -55,7 +55,7 @@ build() {
 }
 
 package() {
-	cd "${srcdir}/${pkgname}-${_commit}"
+	cd "${srcdir}/zfs-${_commit}"
     make DESTDIR="${pkgdir}" install
 
     # Remove uneeded files
