@@ -6,7 +6,7 @@ pkgdesc="Kernel modules for the Zettabyte File System."
 _pkgver=0.6.5.7.r2178_4.5.4_1
 _ver=0.6.5.7
 pkgver=${_pkgver}
-pkgrel=3
+pkgrel=4
 license=('CDDL')
 makedepends=("git" "linux-headers" "linux")
 depends=("spl" "zfs-utils" "dkms" "linux-headers" "linux")
@@ -52,7 +52,7 @@ build() {
 }
 
 package() {
-    dkmsdir="${pkgdir}/usr/src/zfs-${_pkgver}"
+    dkmsdir="${pkgdir}/usr/src/zfs-${_ver}"
     install -d "${dkmsdir}"
 
     cd "${srcdir}/zfs"
@@ -60,7 +60,7 @@ package() {
 
     cd "${dkmsdir}"
     ./autogen.sh
-    scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
+    scripts/dkms.mkconf -v ${_ver} -f dkms.conf -n zfs
     chmod g-w,o-w -R .
 }
 
