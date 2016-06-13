@@ -1,57 +1,44 @@
-# $Id: PKGBUILD 133861 2015-05-20 01:45:04Z faidoc $
-# Maintainer: Alexandre Filgueira <alexfilgueira@cinnarch.com>
-# Based on gnome-control-center:
-# Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-# Jan de Groot <jgc@archlinux.org>
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Alexandre Filgueira <alexfilgueira@antergos.com>
+# Contributor: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+# Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=cinnamon-control-center
 pkgver=3.0.0
 pkgrel=3
-pkgdesc="The Control Center for Cinnamon"
+pkgdesc='Modules for Cinnamon Settings'
+url='https://github.com/linuxmint/cinnamon-control-center'
 arch=('i686' 'x86_64')
 groups=('cinnamon')
 depends=('cinnamon-settings-daemon' 'cinnamon-translations' 'cinnamon-menus'
-         'libgnomekbd' 'network-manager-applet')
+		 'libgnomekbd' 'network-manager-applet')
 optdepends=('gnome-color-manager: for color management tasks')
 makedepends=('intltool' 'gnome-common' 'docbook-xsl')
-url="https://github.com/linuxmint/cinnamon-control-center"
-install=cinnamon-control-center.install
 license=('GPL')
 options=('!emptydirs')
-source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/cinnamon-control-center/archive/$pkgver.tar.gz")
-sha256sums=('')
-
-
-prepare() {
-  cd $pkgname-$pkgver
-}
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-control-center/archive/$pkgver.tar.gz")
+md5sums=('')
 
 build() {
-  cd $pkgname-$pkgver
+	cd "${pkgname}-${pkgver}"
 
-  ./autogen.sh --prefix=/usr --sysconfdir=/etc \
-      --localstatedir=/var --disable-static \
-      --enable-systemd \
-      --disable-update-mimedb
-  make
+	./autogen.sh \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static \
+		--enable-systemd \
+		--disable-update-mimedb
+
+	make
 }
 
 package() {
-  cd $pkgname-$pkgver
+	cd "${pkgname}-${pkgver}"
 
-  make DESTDIR="$pkgdir" install
+	make DESTDIR="${pkgdir}" install
 
-  # Remove unused stuff
-  #make -C panels/sound DESTDIR="$pkgdir" uninstall
-  #make -C panels/sound/data DESTDIR="$pkgdir" install
-  #make -C shell DESTDIR="$pkgdir" uninstall-binPROGRAMS uninstall-directoryDATA uninstall-uiDATA
-  rm "$pkgdir"/usr/share/applications/cinnamon-*-panel.desktop
-  #rm -R "$pkgdir/etc"
-
-  # Fix a warning
-  chown 102:0 "$pkgdir/usr/share/polkit-1/rules.d"
-  chmod 750 "$pkgdir/usr/share/polkit-1/rules.d"
+	rm "${pkgdir}"/usr/share/applications/cinnamon-*-panel.desktop
 }
- 
 
- 
+# -*- mode: bash;-*-

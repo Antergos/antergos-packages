@@ -13,7 +13,6 @@ depends=('cinnamon-desktop' 'libibus' 'libcanberra-pulse' 'librsvg' 'nss' 'polki
 		'pulseaudio-alsa' 'upower' 'libnotify' 'libgnomekbd' 'libwacom')
 makedepends=('intltool' 'docbook-xsl' 'gnome-common' 'xf86-input-wacom')
 options=('!emptydirs')
-install=cinnamon-settings-daemon.install
 url="https://github.com/linuxmint/cinnamon-settings-daemon"
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-settings-daemon/archive/${pkgver}.tar.gz")
 md5sums=('c0b815a88d7512f1575af2b8e2a57b15')
