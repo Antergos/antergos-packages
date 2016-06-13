@@ -52,7 +52,7 @@ package() {
 	dkmsdir="${pkgdir}/usr/src/spl-${_pkgver}"
 	install -d "${dkmsdir}"
 
-	cp -a "${srcdir}/${pkgname}-${_commit}". ${dkmsdir}
+	cp -a "${srcdir}/${pkgname}-${_commit}"/. ${dkmsdir}
 
 	cd "${dkmsdir}"
 	./autogen.sh
