@@ -52,8 +52,7 @@ package() {
 	dkmsdir="${pkgdir}/usr/src/spl-${_pkgver}"
 	install -d "${dkmsdir}"
 
-	cd "${srcdir}/${pkgname}-${_commit}"
-	git archive --format=tar HEAD | tar -x -C "${dkmsdir}"
+	cp -a "${srcdir}/${pkgname}-${_commit}". ${dkmsdir}
 
 	cd "${dkmsdir}"
 	./autogen.sh
