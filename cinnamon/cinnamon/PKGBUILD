@@ -1,5 +1,5 @@
-# $Id: PKGBUILD 131113 2015-04-10 15:12:41Z faidoc $
-# Maintainer: Alexandre Filgueira <alexfilgueira@cinnarch.com>
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Alexandre Filgueira <alexfilgueira@antergos.com>
 # Contributor: M0Rf30
 # Contributor: unifiedlinux
 # Contributor: CReimer
@@ -7,92 +7,76 @@
 pkgname=cinnamon
 pkgver=3.0.5
 pkgrel=2
-pkgdesc="Linux desktop which provides advanced innovative features and a traditional user experience"
+pkgdesc='Linux Desktop featuring a traditional layout built using modern technologies.'
 arch=('i686' 'x86_64')
-url="http://cinnamon.linuxmint.com/"
+url='http://cinnamon.linuxmint.com/'
 license=('GPL2')
 groups=('cinnamon')
-depends=('accountsservice' 'caribou' 'cinnamon-settings-daemon' 'cinnamon-session'
-         'cinnamon-translations' 'cjs' 'clutter-gtk' 'gnome-backgrounds' 'gconf'
-         'gnome-themes-standard' 'gstreamer' 'libgnome-keyring' 'librsvg'
-         'networkmanager' 'muffin' 'python2-cairo' 'python2-dbus' 'python2-pillow'
-         'python2-pam' 'python2-pexpect' 'python2-pyinotify' 'python2-lxml' 'webkitgtk'
-         'cinnamon-control-center' 'cinnamon-screensaver' 'cinnamon-menus' 'libgnomekbd'
-         'network-manager-applet' 'nemo' 'polkit-gnome' 'python2-ptyprocess')
+depends=('accountsservice'          'cjs'                   'librsvg'                'python2-lxml'
+		 'caribou'                  'clutter-gtk'           'muffin'                 'python2-pam'
+		 'cinnamon-control-center'  'gnome-backgrounds'     'nemo'                   'python2-pexpect'
+		 'cinnamon-menus'           'gnome-themes-standard' 'networkmanager'         'python2-pillow'
+		 'cinnamon-screensaver'     'gconf'                 'network-manager-applet' 'python2-ptyprocess'
+		 'cinnamon-session'         'gstreamer'             'polkit-gnome'           'python2-pyinotify'
+		 'cinnamon-settings-daemon' 'libgnome-keyring'      'python2-cairo'          'webkitgtk'
+		 'cinnamon-translations'    'libgnomekbd'           'python2-dbus')
 makedepends=('gnome-common' 'intltool' 'gtk-doc' 'gobject-introspection')
 options=('!emptydirs')
-install=${pkgname}.install
-source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/Cinnamon/archive/$pkgver.tar.gz"
-        "set_wheel.patch"
-        "default-theme.patch"
-        "fix-missing-icons.patch")
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/Cinnamon/archive/$pkgver.tar.gz"
+		"set_wheel.patch"
+		"default-theme.patch"
+		"fix-missing-icons.patch")
 sha256sums=('2d37f935d0082c33eaaf65c523a03a641b7ec29273b6b6aa541fe313570f23ed'
-            '9f1d4f6b3391f6ff0a6761fa4bcfab297a5e1185a3d8ff24a760284b667366e2'
-            '566585873f38a79ec248b916645a2e081abec3c6d4df2c34339cde1f35375cc5'
-            'a73f704bc6a0fcd6a003f28be23f035eb506ace484ebb82a25826634226338b0')
+			'9f1d4f6b3391f6ff0a6761fa4bcfab297a5e1185a3d8ff24a760284b667366e2'
+			'566585873f38a79ec248b916645a2e081abec3c6d4df2c34339cde1f35375cc5'
+			'a73f704bc6a0fcd6a003f28be23f035eb506ace484ebb82a25826634226338b0')
 
 
 prepare() {
-  cd ${srcdir}/Cinnamon*
+	cd "${srcdir}"/Cinnamon*
 
-  # Use wheel group instread of sudo
-  patch -Np1 -i ../set_wheel.patch
+	# Use wheel group instread of sudo
+	patch -Np1 -i ../set_wheel.patch
 
-  # Set default theme to 'cinnamon'
-  patch -Np1 -i ../default-theme.patch
-  
-  # Fix missing icons with Adwaita theme
-  patch -Np1 -i ../fix-missing-icons.patch
-  
-  # This should be submitted upstream. It has nothing to do with Cinnamon working on Arch.
-  # Don't hardcode Nemo
-  # patch -Np1 -i ../dont-hardcode-nemo.patch
-  
-  # Python2 fix
-  #sed -i 's:/usr/bin/python :/usr/bin/python2 :' files/usr/bin/cinnamon-menu-editor
-  find -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
+	# Set default theme to 'cinnamon'
+	patch -Np1 -i ../default-theme.patch
 
-  # Add polkit agent to required components
-  sed -i 's/RequiredComponents=\(.*\)$/RequiredComponents=\1polkit-gnome-authentication-agent-1;/' \
-    files/usr/share/cinnamon-session/sessions/cinnamon*.session
+	# Fix missing icons with Adwaita theme
+	patch -Np1 -i ../fix-missing-icons.patch
 
-  # Use pkexec instead of gksu
-  sed -i 's/gksu/pkexec/' files/usr/bin/cinnamon-settings-users
+	# Python2 fix
+	find -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
 
-  # Check for the cc-panel path, not for the unneeded binary
-  #sed -i 's|/usr/bin/cinnamon-control-center|/usr/lib/cinnamon-control-center-1/panels|' \
-  #  files/usr/bin/cinnamon-settings
+	# Add polkit agent to required components
+	sed -i 's/RequiredComponents=\(.*\)$/RequiredComponents=\1polkit-gnome-authentication-agent-1;/' \
+		files/usr/share/cinnamon-session/sessions/cinnamon*.session
 
-  # Cinnamon has no upstream backgrounds, use GNOME backgrounds instead
-  #sed -i 's|/usr/share/cinnamon-background-properties|/usr/share/gnome-background-properties|' \
-  #  files/usr/share/cinnamon/cinnamon-settings/modules/cs_backgrounds.py
+	# Use pkexec instead of gksu
+	sed -i 's/gksu/pkexec/' files/usr/bin/cinnamon-settings-users
 
-  # Fix selected background color in Cinnamon Settings for Adwaita theme
-  sed -i 's/@selected_bg_color;/@theme_selected_bg_color;/' \
-    files/usr/share/cinnamon/cinnamon-settings/cinnamon-settings.py
+	# Fix selected background color in Cinnamon Settings for Adwaita theme
+	sed -i 's/@selected_bg_color;/@theme_selected_bg_color;/' \
+	files/usr/share/cinnamon/cinnamon-settings/cinnamon-settings.py
 }
 
 build() {
-  cd ${srcdir}/Cinnamon*
+	cd "${srcdir}"/Cinnamon*
 
-  ./autogen.sh --prefix=/usr \
-               --sysconfdir=/etc \
-               --libexecdir=/usr/lib/cinnamon \
-               --localstatedir=/var \
-               --disable-static \
-               --disable-schemas-compile \
-               --enable-compile-warnings=yes
-  
-  #https://bugzilla.gnome.org/show_bug.cgi?id=656231
-  #sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-  
-  make
+	./autogen.sh \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--libexecdir=/usr/lib/cinnamon \
+		--localstatedir=/var \
+		--disable-static \
+		--disable-schemas-compile \
+		--enable-compile-warnings=yes
+
+	make
 }
 
 package() {
-  cd ${srcdir}/Cinnamon*
-  make DESTDIR="${pkgdir}" install
+	cd "${srcdir}"/Cinnamon*
+	make DESTDIR="${pkgdir}" install
 }
- 
 
- 
+# -*- mode: bash;-*-
