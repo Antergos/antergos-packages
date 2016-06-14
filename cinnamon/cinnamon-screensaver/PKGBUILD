@@ -20,6 +20,17 @@ sha256sums=('2e2417e3ed4be3c3744acb4110df7ff5427491fc5d93c8cada6bab2c725a3c15'
             'c34925177c883dc4935408a4679e984855b14ef18a208bb5c7c3e5be3817619a')
 
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='linuxmint'
+_monitored_repo='cinnamon-screensaver'
+
+# END ANTBS METADATA
+
+
 build() {
   cd $pkgname-$pkgver
 

@@ -19,6 +19,18 @@ md5sums=('b8ea3469806a90765454c204f83fed044917100ebdb83c850371dbae8c34656e'
 		'e2c20c35df78aaedcd2d2e4965369bc519f51072ab88d4ac9b01be9a48cf8cfd')
 _allowed_in=("staging")
 
+
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='linuxmint'
+_monitored_repo='cinnamon-desktop'
+
+# END ANTBS METADATA
+
+
 prepare() {
 	cd "${pkgname}-${pkgver}"
 
