@@ -32,6 +32,17 @@ sha256sums=('2d37f935d0082c33eaaf65c523a03a641b7ec29273b6b6aa541fe313570f23ed'
 			'a73f704bc6a0fcd6a003f28be23f035eb506ace484ebb82a25826634226338b0')
 
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='linuxmint'
+_monitored_repo='cinnamon'
+
+# END ANTBS METADATA
+
+
 prepare() {
 	cd "${srcdir}"/Cinnamon*
 

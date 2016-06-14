@@ -16,6 +16,17 @@ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cjs/archive/$
 sha256sums=('bb65b7238eabb265de256d6de0a183018a4ec28b7d161d439a809875ca6e2927')
 
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='linuxmint'
+_monitored_repo='cjs'
+
+# END ANTBS METADATA
+
+
 build() {
   cd $pkgname-$pkgver
 

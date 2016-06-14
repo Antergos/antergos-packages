@@ -18,6 +18,17 @@ source=(${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-sessi
 sha256sums=('d8935747bc8aa70518e70a7d338eaf9109b5307d8a44d49dc57e0f15d69e9c89')
 
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='linuxmint'
+_monitored_repo='cinnamon-session'
+
+# END ANTBS METADATA
+
+
 prepare() {
   cd $pkgname-$pkgver
 }

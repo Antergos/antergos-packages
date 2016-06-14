@@ -20,6 +20,17 @@ sha256sums=('')
 _allowed_in=('staging')
 
 
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='linuxmint'
+_monitored_repo='muffin'
+
+# END ANTBS METADATA
+
+
 prepare() {
 	cd ${pkgname}-${pkgver}
 
