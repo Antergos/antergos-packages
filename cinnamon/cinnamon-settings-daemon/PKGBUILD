@@ -4,7 +4,7 @@
 
 pkgname=cinnamon-settings-daemon
 pkgver=3.0.1
-pkgrel=3
+pkgrel=3.1
 pkgdesc="The Cinnamon Settings daemon"
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -38,7 +38,8 @@ build() {
 		--localstatedir=/var \
 		--libexecdir=/usr/lib/$pkgname \
 		--disable-static \
-		--enable-systemd
+		--enable-systemd \
+		--enable-polkit
 
 	make
 }

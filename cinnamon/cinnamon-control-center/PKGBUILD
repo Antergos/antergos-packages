@@ -5,7 +5,7 @@
 
 pkgname=cinnamon-control-center
 pkgver=3.0.0
-pkgrel=3
+pkgrel=3.1
 pkgdesc='Modules for Cinnamon Settings'
 url='https://github.com/linuxmint/cinnamon-control-center'
 arch=('i686' 'x86_64')
@@ -17,7 +17,7 @@ makedepends=('intltool' 'gnome-common' 'docbook-xsl')
 license=('GPL')
 options=('!emptydirs')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-control-center/archive/$pkgver.tar.gz")
-md5sums=('')
+md5sums=('ffc8fdf5cd980eeff512de5c68198f5f')
 
 
 # BEGIN ANTBS METADATA
@@ -51,6 +51,9 @@ package() {
 	make DESTDIR="${pkgdir}" install
 
 	rm "${pkgdir}"/usr/share/applications/cinnamon-*-panel.desktop
+	# Fix a warning
+	chown 102:0 "$pkgdir/usr/share/polkit-1/rules.d"
+	chmod 750 "$pkgdir/usr/share/polkit-1/rules.d"
 }
 
 # -*- mode: bash;-*-
