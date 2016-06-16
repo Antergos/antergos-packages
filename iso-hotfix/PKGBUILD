@@ -1,0 +1,44 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+
+pkgname=iso-hotfix-utility
+pkgver=1.0
+pkgrel=1
+pkgdesc='Make changes to linux live install media on-the-fly when the media is booted.'
+arch=('any')
+depends=('libnotify' 'gettext' 'antergos-mirrorlist')
+makedepends=('transifex-client')
+url='https://antergos.com/'
+license=('GPL3')
+source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.zip")
+md5sums=('99c96462a490f2d7b1e6b5eeb09b3b01')
+
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='iso-hotfix-utility'
+
+# END ANTBS METADATA
+
+
+package() { 
+	install -d "${pkgdir}/usr/bin"
+
+	cd "${srcdir}/${pkgname}-${pkgver}"
+
+	install -m777 -t "${pkgdir}/usr/bin" "${pkgname}"
+
+	for fpath in po/*; do
+		if [[ -f "${fpath}" ]] && [[ "${fpath}" != 'po/CNCHI_UPDATER.pot' ]]; then
+			STRING_PO=`echo ${fpath#*/}`
+			STRING=`echo ${STRING_PO%.po}`
+			mkdir -p "${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES"
+			msgfmt "${fpath}" -o "${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/CNCHI_UPDATER.mo"
+			echo "${STRING} installed..."
+		fi
+	done
+}
+
+# -*- mode: bash;-*-
