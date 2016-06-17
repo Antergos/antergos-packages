@@ -23,7 +23,7 @@ _monitored_repo='iso-hotfix-utility'
 # END ANTBS METADATA
 
 prepare() {
-	[[ -d /pkg && -d /staging ]] && pip install transifex-client
+	[[ -d /pkg && -d /staging ]] && sudo pip install transifex-client
 }
 
 package() { 
