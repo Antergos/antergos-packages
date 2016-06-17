@@ -3,8 +3,8 @@
 
 pkgname=chromium-pepper-flash
 pkgdesc="Google Chrome's Pepper Flash plugin for Chromium (stable version)"
-pkgver=21.0.0.242
-_verbld=50.0.2661.102-1
+pkgver=22.0.0.192
+#_verbld=50.0.2661.102-1
 pkgrel=1
 epoch=1
 arch=('x86_64')
@@ -12,15 +12,13 @@ url="http://www.google.com/chrome"
 license=('custom:chrome')
 conflicts=('chromium-pepper-flash-dev')
 provides=('pepper-flash')
-install=chromium-pepper-flash.install
+install="${pkgname}.install"
 source=(${pkgname}-license.html::https://www.google.com/chrome/intl/en/eula_text.html)
 #source_i686+=("https://dl.google.com/linux/chrome/rpm/stable/i386/google-chrome-stable-${_verbld}.i386.rpm")
 #source_x86_64+=(https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-${_verbld}.x86_64.rpm)
 #source_i686+=("https://dl.google.com/linux/direct/google-chrome-stable_current_i386.rpm")
-source_x86_64+=("https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm")
-md5sums=('da54da9383ddffa44c5db45513239da2')
-md5sums_x86_64=('ef4c4a8d386130576e317299eee6af4f')
-#md5sums_i686=('de7f8dfa03b0dbf5acdf52dae64ab6ced3fb54b5887f95a129e1185861626ed4')
+source=("https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm")
+md5sums=('')
 
 package() {
 	# create required directories
