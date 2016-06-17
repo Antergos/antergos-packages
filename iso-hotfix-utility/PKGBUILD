@@ -6,7 +6,7 @@ pkgrel=1
 pkgdesc='Make changes to linux live install media on-the-fly when the media is booted.'
 arch=('any')
 depends=('libnotify' 'gettext' 'antergos-mirrorlist')
-makedepends=('transifex-client')
+makedepends=('python-pip')
 url='https://antergos.com/'
 license=('GPL3')
 source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.zip")
@@ -22,6 +22,9 @@ _monitored_repo='iso-hotfix-utility'
 
 # END ANTBS METADATA
 
+prepare() {
+	[[ -d /pkg && -d /staging ]] && pip install transifex-client
+}
 
 package() { 
 	install -d "${pkgdir}/usr/bin"
