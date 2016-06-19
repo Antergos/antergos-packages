@@ -10,6 +10,16 @@ license=('CCPL:by-nc-sa')
 source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz")
 sha256sums=('487afbe739aff7d9db9aa5f476928a606522af2deb3779529c0d9eba27ad44d5')
 
+# ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='antergos-wallpapers-extra'
+
+# END ANTBS METADATA
+
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
   install -d "${pkgdir}/usr/share/antergos/wallpapers-extra"
