@@ -1,9 +1,9 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme
-pkgver=1.1825
+pkgver=0.1834
 pkgrel=1
-pkgdesc='Base icon theme from the Numix project'
+pkgdesc="Base icon theme from the Numix project"
 arch=('any')
 url='http://numixproject.org/'
 license=('GPL3')
@@ -11,27 +11,23 @@ depends=('gnome-icon-theme')
 optdepends=('faenza-icon-theme: fallback icons'
 			'breeze-icons: KDE'
 			'kfaenza-icon-theme: fallback icons (KDE)')
+makedepends=('git')
 options=('!strip')
 install="${pkgname}.install"
-source=("https://github.com/numixproject/${pkgname}/archive/1.1825.zip")
+source=("git+http://github.com/numixproject/numix-icon-theme.git")
 md5sums=('SKIP')
 
-# ANTBS METADATA
 
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='numixproject'
-_monitored_repo='numix-icon-theme'
-
-# END ANTBS METADATA
-
+pkgver() {
+	cd "${srcdir}/${pkgname}"
+	printf "0.%s" "$(git rev-list --count HEAD)"
+}
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}"
 
 	patch_icons() {
-		cd "${srcdir}/${pkgname}-${pkgver}"
+		cd "${srcdir}/${pkgname}"
 		_regex='(gtk-)*go(to)*-*(\w|-)+\.svg'
 		for _icon in ${1}/${2}/actions/**
 		do
