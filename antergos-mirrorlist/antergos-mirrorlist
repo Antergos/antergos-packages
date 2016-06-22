@@ -27,6 +27,8 @@ Server = http://sourceforge.net/projects/antergos/files/mirror/$repo/$arch
 Server = http://wynsrv.antergos.info/$repo/$arch
 
 # China
+Server = http://mirrors.ustc.edu.cn/antergos/$repo/$arch
+Server = http://mirrors.tuna.tsinghua.edu.cn/antergos/$repo/$arch
 Server = http://mirror.bjtu.edu.cn/cinnarch/$repo/$arch
 
 # Czech Republic
