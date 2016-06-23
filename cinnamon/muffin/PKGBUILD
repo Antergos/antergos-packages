@@ -4,8 +4,8 @@
 # Contributor: Ner0
 
 pkgname=muffin
-pkgver=3.0.4
-pkgrel=3
+pkgver=
+pkgrel=1
 pkgdesc="Cinnamon window manager based on Mutter"
 arch=('i686' 'x86_64')
 url="https://github.com/linuxmint/muffin"
