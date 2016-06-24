@@ -36,7 +36,7 @@ sha256sums=('2d37f935d0082c33eaaf65c523a03a641b7ec29273b6b6aa541fe313570f23ed'
 
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cinnamon'
 

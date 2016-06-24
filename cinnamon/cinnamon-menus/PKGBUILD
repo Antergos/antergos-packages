@@ -19,7 +19,7 @@ md5sums=('')
 
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cinnamon-menus'
 

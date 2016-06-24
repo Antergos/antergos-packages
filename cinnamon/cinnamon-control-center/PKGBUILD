@@ -24,7 +24,7 @@ md5sums=('ffc8fdf5cd980eeff512de5c68198f5f')
 
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cinnamon-control-center'
 

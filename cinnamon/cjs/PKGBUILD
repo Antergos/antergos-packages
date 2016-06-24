@@ -20,7 +20,7 @@ sha256sums=('bb65b7238eabb265de256d6de0a183018a4ec28b7d161d439a809875ca6e2927')
 
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cjs'
 

@@ -23,7 +23,7 @@ sha256sums=('67a4607e0f311db3b71c2014ab2be4c0d4c14f272fc019d381c77acf8442ad77')
 
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='nemo'
 
