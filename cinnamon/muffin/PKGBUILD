@@ -4,7 +4,7 @@
 # Contributor: Ner0
 
 pkgname=muffin
-pkgver=
+pkgver=3.0.5
 pkgrel=1
 pkgdesc="Cinnamon window manager based on Mutter"
 arch=('i686' 'x86_64')
@@ -16,7 +16,7 @@ depends=('clutter' 'gobject-introspection-runtime' 'cinnamon-desktop' 'libcanber
 makedepends=('intltool' 'gnome-doc-utils' 'gnome-common' 'gobject-introspection' 'gtk-doc') 
 options=('!emptydirs')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/muffin/archive/$pkgver.tar.gz")
-sha256sums=('')
+md5sums=('68b4bfcf83683c502f53e3d8074862c5')
 _allowed_in=('staging')
 
 
