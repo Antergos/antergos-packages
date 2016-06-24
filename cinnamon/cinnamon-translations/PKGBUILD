@@ -17,7 +17,7 @@ sha256sums=('c88e415cfe142a5f0cbe10488d296242e91e8e0f3bb7802ad94d3a5747bf5f88')
 
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cinnamon-translations'
 

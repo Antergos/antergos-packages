@@ -24,7 +24,7 @@ sha256sums=('2e2417e3ed4be3c3744acb4110df7ff5427491fc5d93c8cada6bab2c725a3c15'
 
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cinnamon-screensaver'
 
