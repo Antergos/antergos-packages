@@ -10,6 +10,7 @@ pkgdesc="A flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell
 arch=('any')
 url="https://github.com/horst3180/${_pkgname}"
 license=('GPL3')
+groups=('themes')
 depends=('gtk3' 'gtk-engine-murrine')
 source=("https://github.com/horst3180/${_pkgname}/archive/$pkgver.tar.gz")
 conflicts=('gtk-theme-arc-git')
