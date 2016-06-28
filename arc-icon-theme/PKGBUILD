@@ -30,7 +30,7 @@ build() {
 
 	# Inherit from Numix Square (for application and fallback icons).
 	sed -i 's|Inherits=Moka|Inherits=Numix-Square,Numix|g' Arc/index.theme
-	
+
 	./autogen.sh --prefix=/usr
 
 	make

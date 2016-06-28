@@ -10,24 +10,28 @@ pkgdesc="A flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell
 arch=('any')
 url="https://github.com/horst3180/${_pkgname}"
 license=('GPL3')
-groups=('themes')
+groups=('themes' 'themes::gtk')
 depends=('gtk3' 'gtk-engine-murrine' 'gnome-themes-standard')
 makedepends=('git')
-source=(${pkgname}::"git+https://github.com/horst3180/${_pkgname}.git")
-md5sums=('SKIP')
+source=("${pkgname}-${pkgver}::https://github.com/horst3180/${_pkgname}/archive/${pkgver}.zip")
+md5sums=('')
 conflicts=('gtk-theme-arc-git')
 
-pkgver() {
-	cd "${srcdir}/${pkgname}"
-	git fetch --tags
-	printf "%s.r%s" "$(git describe --tags `git rev-list --tags --max-count=1`)" "$(git rev-list --count HEAD)"
-}
+# BEGIN ANTBS METADATA
+
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='horst3180'
+_monitored_repo='arc-icon-theme'
+
+# END ANTBS METADATA
 
 build() {
-	cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 	./autogen.sh --prefix=/usr
 }
 
 package() {
-	make -C "${srcdir}/${pkgname}" DESTDIR="${pkgdir}" install
+	make -C "${srcdir}/${pkgname}-${pkgver}" DESTDIR="${pkgdir}" install
 }
