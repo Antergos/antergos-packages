@@ -13,7 +13,7 @@ license=('GPL3')
 groups=('themes' 'themes::gtk')
 depends=('gtk3' 'gtk-engine-murrine' 'gnome-themes-standard')
 makedepends=('git')
-source=("${pkgname}-${pkgver}::https://github.com/horst3180/${_pkgname}/archive/${pkgver}.zip")
+source=("${pkgname}-${pkgver}.zip::https://github.com/horst3180/${_pkgname}/archive/${pkgver}.zip")
 md5sums=('')
 conflicts=('gtk-theme-arc-git')
 
@@ -23,7 +23,7 @@ _is_monitored='True'
 _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='horst3180'
-_monitored_repo='arc-icon-theme'
+_monitored_repo='arc-theme'
 
 # END ANTBS METADATA
 
