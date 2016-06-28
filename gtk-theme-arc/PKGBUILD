@@ -5,7 +5,7 @@
 pkgname=gtk-theme-arc
 _pkgname=arc-theme
 pkgver=20160530
-pkgrel=1
+pkgrel=2
 pkgdesc="A flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell. Latest commit from Github."
 arch=('any')
 url="https://github.com/horst3180/${_pkgname}"
@@ -13,7 +13,7 @@ license=('GPL3')
 groups=('themes' 'themes::gtk')
 depends=('gtk3' 'gtk-engine-murrine' 'gnome-themes-standard')
 makedepends=('git')
-source=("${pkgname}-${pkgver}.zip::https://github.com/horst3180/${_pkgname}/archive/${pkgver}.zip")
+source=("${_pkgname}-${pkgver}.zip::https://github.com/horst3180/${_pkgname}/archive/${pkgver}.zip")
 md5sums=('')
 conflicts=('gtk-theme-arc-git')
 
@@ -28,10 +28,10 @@ _monitored_repo='arc-theme'
 # END ANTBS METADATA
 
 build() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${_pkgname}-${pkgver}"
 	./autogen.sh --prefix=/usr
 }
 
 package() {
-	make -C "${srcdir}/${pkgname}-${pkgver}" DESTDIR="${pkgdir}" install
+	make -C "${srcdir}/${_pkgname}-${pkgver}" DESTDIR="${pkgdir}" install
 }
