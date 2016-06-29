@@ -22,7 +22,7 @@ md5sums=('085c79519e3e669f44e10c24b2795c27')
 
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='mate-desktop'
 _monitored_repo='galculator'
 

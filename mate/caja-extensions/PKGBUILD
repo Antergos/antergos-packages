@@ -18,7 +18,7 @@ md5sums=('d43891792beef546cc87b38914f64572')
 
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='mate-desktop'
 _monitored_repo='caja-extensions'
 
