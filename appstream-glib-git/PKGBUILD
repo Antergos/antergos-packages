@@ -1,7 +1,7 @@
 # Maintainer: Fabien Bourigault <bourigaultfabien@gmail.com>
 pkgname=appstream-glib-git
 _pkgname=appstream-glib
-pkgver=0.5.15
+pkgver=0.5.16
 pkgrel=1
 pkgdesc="This library provides GObjects and helper methods to make it easy to read and write AppStream metadata."
 arch=('i686' 'x86_64')
@@ -10,7 +10,7 @@ license=('LGPLv2+')
 depends=('glib2' 'libyaml' 'gnome-common' 'libsoup' 'gtk3' 'gdk-pixbuf2' 'gcab' 'json-glib' 'wayland-protocols')
 makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'git')
 conflicts=("appstream-glib")
-_realver=0.5.15
+_realver=0.5.16
 provides=("appstream-glib=$_realver")
 source=("git+http://github.com/hughsie/appstream-glib.git")
 md5sums=('SKIP')
