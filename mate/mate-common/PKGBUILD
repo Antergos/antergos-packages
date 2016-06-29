@@ -17,7 +17,7 @@ md5sums=('c09fb1f55beac76d314827c0286b0844')
 
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='mate-desktop'
 _monitored_repo='mate-common'
 

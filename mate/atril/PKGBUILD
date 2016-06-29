@@ -26,7 +26,7 @@ install=${pkgname}.install
 
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='mate-desktop'
 _monitored_repo='atril'
 
