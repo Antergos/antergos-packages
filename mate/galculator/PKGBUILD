@@ -6,7 +6,7 @@
 # Contributor: Alexander Fehr <pizzapunk gmail com>
 
 pkgname=galculator
-pkgver=2.1.4
+pkgver=2.1.42.1.4
 pkgrel=4
 pkgdesc='GTK+ based scientific calculator'
 arch=('i686' 'x86_64')
