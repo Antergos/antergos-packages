@@ -4,7 +4,7 @@
 pkgname=pamac
 pkgver=4.1.0
 _pkgver=4.1.0
-pkgrel=3
+pkgrel=4
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit=""
 pkgdesc="A Gtk3 frontend for libalpm"
@@ -25,10 +25,11 @@ if [ "${_gitcommit}" != "" ]; then
 else
 	source=("pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz"
 			'preferences-dialog.patch::https://github.com/manjaro/pamac/commit/5019f66b8673ac3a30f3e3174a85412ef9d72fd0.patch'
-			'hooks-progress-display.patch::https://github.com/manjaro/pamac/commit/2285ad17fdb5a8707618db7fcfd381032eb66951.patch')
+			'hooks-progress-display.patch::https://github.com/manjaro/pamac/commit/2285ad17fdb5a8707618db7fcfd381032eb66951.patch'
+			'size-calculation.patch::https://github.com/manjaro/pamac/commit/7af6ee34f0d8d1720ee34315f62f242ba3911b96.patch')
 fi
 
-md5sums=('' '' '')
+md5sums=('' '' '' '')
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
@@ -42,6 +43,7 @@ prepare() {
   # patches here
   patch -Np1 -i "$srcdir/preferences-dialog.patch"
   patch -Np1 -i "$srcdir/hooks-progress-display.patch"
+  patch -Np1 -i "$srcdir/size-calculation.patch"
 }
 
 build() {
