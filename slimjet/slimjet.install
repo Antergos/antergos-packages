@@ -1,6 +1,4 @@
 post_install() {
-  gtk-update-icon-cache -q -t -f usr/share/icons/hicolor
-  update-desktop-database -q
   chmod 4755 /opt/slimjet/slimjet-sandbox
 }
 
@@ -10,4 +8,6 @@ post_upgrade() {
 
 post_remove() {
   post_install
-}# -*- mode: bash;-*-
+}
+
+# -*- mode: bash;-*-
