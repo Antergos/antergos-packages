@@ -20,7 +20,7 @@ md5sums=('139cee71ab27eebef682ffbe69576b73')
 build() {
 	cd "${srcdir}/${_srcname}-${_commit}"
 
-	qmake-qt5 --prefix=/usr --libdir=/usr/lib
+	qmake-qt5 PREFIX=/usr LIBDIR=/usr/lib
 
 	make
 }
