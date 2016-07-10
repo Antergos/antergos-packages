@@ -10,13 +10,14 @@ arch=(i686 x86_64)
 license=(GPL LGPL)
 groups=('cinnamon')
 depends=('dbus-glib' 'cinnamon-desktop' 'libsm' 'libcanberra' 'libsystemd')
+optdepends=('qt5-styleplugins: Gtk theme/styles for QT apps')
 makedepends=('intltool' 'mesa' 'json-glib' 'xtrans' 'gnome-common')
 options=('!emptydirs')
 url="https://github.com/linuxmint/cinnamon-session"
 source=("${pkgname}-${pkgver}.zip::https://github.com/linuxmint/cinnamon-session/archive/${pkgver}.zip"
 		'qt57-theme-support.patch')
 md5sums=('5a477a4d8aa9cc8f92fb7a738334d3ec'
-		'a69d62529c0617d0914ac8421f853645')
+		'a02c05cddf74ec4ad9d6f71e2951a483')
 
 
 # BEGIN ANTBS METADATA

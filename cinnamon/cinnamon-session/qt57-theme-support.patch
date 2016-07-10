@@ -1,5 +1,5 @@
 diff --git a/cinnamon-session/main.c b/cinnamon-session/main.c
-index b2264ab..dda4d7b 100644
+index b2264ab..f3ce2c5 100644
 --- a/cinnamon-session/main.c
 +++ b/cinnamon-session/main.c
 @@ -296,6 +296,9 @@ main (int argc, char **argv)
@@ -12,7 +12,7 @@ index b2264ab..dda4d7b 100644
  
          /* Make sure that we have a session bus */
          if (!require_dbus_session (argc, argv, &error)) {
-@@ -383,8 +386,26 @@ main (int argc, char **argv)
+@@ -383,8 +386,25 @@ main (int argc, char **argv)
           */
          csm_util_setenv ("GNOME_DESKTOP_SESSION_ID", "this-is-deprecated");
  
@@ -36,16 +36,15 @@ index b2264ab..dda4d7b 100644
 +
 +        g_free(qt_platform_theme_current);
 +        g_free(qt_style_override_current);
-+        g_free(qt_platform_theme_new);
 +
  
          /* GTK Overlay scrollbars */
          settings = g_settings_new ("org.cinnamon.desktop.interface");
 diff --git a/configure.ac b/configure.ac
-index fa1b795..cad1bbb 100644
+index fa1b795..464c847 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -108,6 +108,18 @@ AC_SUBST(LOGIND_CFLAGS)
+@@ -108,6 +108,20 @@ AC_SUBST(LOGIND_CFLAGS)
  AC_SUBST(LOGIND_LIBS)
  
  dnl ====================================================================
@@ -58,13 +57,15 @@ index fa1b795..cad1bbb 100644
 +
 +if test x$enable_qt57_theme_support = xyes; then
 +    AC_DEFINE([HAVE_QT57], [1], [Have QT 5.7+])
++else
++    AC_DEFINE([HAVE_QT57], [0], [Have QT 5.7+])
 +fi
 +
 +dnl ====================================================================
  dnl X development libraries check
  dnl ====================================================================
  
-@@ -349,12 +361,13 @@ echo "
+@@ -349,12 +363,13 @@ echo "
  
          GConf support:            ${enable_gconf}
          Logind support:           ${have_logind}
