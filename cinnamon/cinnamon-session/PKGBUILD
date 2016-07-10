@@ -4,7 +4,7 @@
 
 pkgname=cinnamon-session
 pkgver=3.0.1
-pkgrel=3
+pkgrel=4
 pkgdesc="The Cinnamon Session Handler"
 arch=(i686 x86_64)
 license=(GPL LGPL)
@@ -12,25 +12,25 @@ groups=('cinnamon')
 depends=('dbus-glib' 'cinnamon-desktop' 'libsm' 'libcanberra' 'libsystemd')
 makedepends=('intltool' 'mesa' 'json-glib' 'xtrans' 'gnome-common')
 options=('!emptydirs')
-install=cinnamon-session.install
 url="https://github.com/linuxmint/cinnamon-session"
-source=(${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-session/archive/${pkgver}.tar.gz)
-sha256sums=('d8935747bc8aa70518e70a7d338eaf9109b5307d8a44d49dc57e0f15d69e9c89')
+source=("${pkgname}-${pkgver}.zip::https://github.com/linuxmint/cinnamon-session/archive/${pkgver}.zip"
+		'qt57-theme-support.patch')
+md5sums=('5a477a4d8aa9cc8f92fb7a738334d3ec'
+		'a69d62529c0617d0914ac8421f853645')
 
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cinnamon-session'
-
 # END ANTBS METADATA
 
 
 prepare() {
-  cd $pkgname-$pkgver
+	cd $pkgname-$pkgver
+	patch -Np1 -i ../qt57-theme-support.patch
 }
 
 build() {
@@ -42,14 +42,14 @@ build() {
 		--localstatedir=/var \
 		--libexecdir=/usr/lib/cinnamon-session \
 		--disable-schemas-compile \
-		--disable-gconf
-  make
+		--disable-gconf \
+		--enable-qt57-theme-support
+	make
 }
 
 package() {
-  cd $pkgname-$pkgver
-  make DESTDIR="$pkgdir" install
+	cd $pkgname-$pkgver
+	make DESTDIR="$pkgdir" install
 }
- 
 
- 
+# -*- mode: bash;-*-
