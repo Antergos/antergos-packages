@@ -30,6 +30,8 @@ _monitored_repo='cinnamon-session'
 
 prepare() {
 	cd $pkgname-$pkgver
+
+	# https://github.com/linuxmint/cinnamon-session/pull/75
 	patch -Np1 -i ../qt57-theme-support.patch
 }
 
