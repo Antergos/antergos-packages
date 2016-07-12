@@ -27,7 +27,7 @@ if [[ "True" = "${_eap}" ]]; then
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
 				"c6ffb4c3a14b4b6a90158fda92aab7dbee2bb32d9585b801682792966699919c")
 else
-	_srcfile="ideaIU-${_pkgver::(-1)}.tar.gz"
+	_srcfile="ideaIU-${_pkgver::(-2)}.tar.gz"
 	source=("http://download.jetbrains.com/idea/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
@@ -45,7 +45,7 @@ package() {
 	if [[ "True" = "${_eap}" ]]; then
 		cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
 	else
-		cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_pkgver::(-1)}/"* "${pkgdir}/opt/${pkgname}"
+		cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_pkgver::(-2)}/"* "${pkgdir}/opt/${pkgname}"
 	fi
 	
 	if [[ "i686" = "${CARCH}" ]]; then
