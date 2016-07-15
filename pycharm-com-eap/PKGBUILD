@@ -42,7 +42,7 @@ package() {
 	#if [[ "True" = "${_eap}" ]]; then
 	#	cp -R "${srcdir}/pycharm-community-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
 	#else
-		cp -R "${srcdir}/pycharm-community-${_pkgver::(-2)}/"* "${pkgdir}/opt/${pkgname}"
+		cp -R "${srcdir}/pycharm-community-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
 	#fi
 	
 	if [[ "i686" = "${CARCH}" ]]; then

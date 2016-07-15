@@ -43,7 +43,7 @@ package() {
 	#if [[ "True" = "${_eap}" ]]; then
 	#	cp -R --no-preserve=ownership "${srcdir}/pycharm-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
 	#else
-		cp -R --no-preserve=ownership "${srcdir}/pycharm-${_pkgver::(-2)}/"* "${pkgdir}/opt/${pkgname}"
+		cp -R --no-preserve=ownership "${srcdir}/pycharm-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
 	#fi
 	
 	if [[ "i686" = "${CARCH}" ]]; then
