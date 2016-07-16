@@ -1,10 +1,8 @@
-####                                      ####
 ###                                        ###
 ##                                          ##
 #       Antergos Repository Mirrorlist       #
 ##                                          ##
 ###                                        ###
-####                                      ####
 
 
 ###                              ###
@@ -36,6 +34,7 @@ Server = http://mirrors.nic.cz/antergos/$repo/$arch
 
 # France
 Server = http://cinnarch.polymorf.fr/$repo/$arch
+Server = http://eu.mirrors.coltondrg.com/antergos/$repo/$arch
 
 # England
 Server = http://www.mirrorservice.org/sites/repo.antergos.com/$repo/$arch
