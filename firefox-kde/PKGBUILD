@@ -5,7 +5,7 @@
 _pgo=true
 _pkgname=firefox
 pkgname=firefox-kde
-pkgver=45.0.1
+pkgver=47.0.1
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org with openSUSE KDE integration patches."
 arch=('i686' 'x86_64')
@@ -24,8 +24,7 @@ optdepends=('networkmanager: Location detection via available WiFi networks'
 conflicts=('firefox')
 provides=('firefox')
 options=('!emptydirs' '!makeflags')
-install=firefox.install
-_patchrev=6a889427cd4f
+_patchrev=4e5807284ef0
 _patchurl=http://www.rosenauer.org/hg/mozilla/raw-file/${_patchrev}
 source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/source/${_pkgname}-${pkgver}.source.tar.xz"
 		'mozconfig'
@@ -41,26 +40,29 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		$_patchurl/mozilla-kde.patch
 		$_patchurl/mozilla-language.patch
 		$_patchurl/mozilla-nongnome-proxies.patch
+		$_patchurl/mozilla-gtk3_20.patch
+		$_patchurl/mozilla-reduce-files-per-UnifiedBindings.patch
 		pgo_fix_missing_kdejs.patch
 		firefox-symbolic.svg
 		no-libnotify.patch
 )
-md5sums=('15c5222e3b0a6a766f0a1c5452ff5c31498454187165a281448954a5eb462e89'
-		'72a6572b9692cbb4a15d83de06e1674c4dbb7228999c5749c4f7ab9db5e0c516'
-		'c202e5e18da1eeddd2e1d81cb3436813f11e44585ca7357c4c5f1bddd4bec826'
-		'd86e41d87363656ee62e12543e2f5181aadcff448e406ef3218e91865ae775cd'
-		'4b50e9aec03432e21b44d18c4c97b2630bace606b033f7d556c9d3e3eb0f4fa4'
-		'b8cc5f35ec35fc96ac5c5a2477b36722e373dbb57eba87eb5ad1276e4df7236d'
-		'68e3a5b47c6d175cc95b98b069a15205f027cab83af9e075818d38610feb6213'
-		'746cb474c5a2c26fc474256e430e035e604b71b27df1003d4af85018fa263f4a'
-		'72abd31e89a41cddbd8165b0b9555465184c52c426e0998c9cb7786af94b5532'
-		'2017e1f7a71e8c3563c11fa48cc96de864388ff4fa8a124da3c30ba6129565a2'
-		'02e92f84dd31ed079be3e67509cf23d0d351e06bb690fcc091c904d906d2d690'
-		'cffc199f0d4d684792e6dbeec106077f4a6ac4bdf406b4fc67d46b330c3b4169'
-		'ce1b7a5bb217c31590bce30653aea5139b6401a01eda7bded7fd2f83a23d397b'
-		'e8289ea4c1f8191e1e23661312ceee2128b8e790501b9a589d0d7bfc4384553f'
-		''
-		'')
+md5sums=('aba4b673b10e3fdcee80f88300829613'
+         'ebc9a57420ee7c4d9b4e4d7249db4e44'
+         '9b02198df96be08f2a0a323ac2e6c2a2'
+         'dbf14588e85812ee769bd735823a0146'
+         '0d053487907de4376d67d8f499c5502b'
+         '05bb69d25fb3572c618e3adf1ee7b670'
+         '121a0d61ebe994e69f4428c13a4a5549'
+         '04ff0dcb88fd94363f9936701a58925e'
+         '6c9a8cb4bcaa71e5f98648b6baee9ccd'
+         'f9278c5e917f6d4faa9dadb555fec7f1'
+         '903307f923a459189a5a6062ff9df38c'
+         '0c684360f1df4536512d51873c1d243d'
+         'f6c4c052d5cf8b050f72e3db6677f176'
+         '4d240471a642270accd515199ca698e4'
+         '84a56c991883a9a7c38f01e0cb9561ac'
+         '961a929a85e02e00eb11e3e303a4bc0e'
+         '2fdf03e2bcb442342928863dc9635789')
 
 # Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
@@ -104,6 +106,8 @@ prepare() {
 	patch -Np1 -i "${srcdir}/firefox-no-default-ualocale.patch"
 	patch -Np1 -i "${srcdir}/firefox-branded-icons.patch"
 	patch -Np1 -i "${srcdir}/pgo_fix_missing_kdejs.patch"
+	patch -Np1 -i "${srcdir}/mozilla-gtk3_20.patch"
+	patch -Np1 -i "${srcdir}/mozilla-reduce-files-per-UnifiedBindings.patch"
 
 	# configure script misdetects the preprocessor without an optimization level
 	# https://bugs.archlinux.org/task/34644

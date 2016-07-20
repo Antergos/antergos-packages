@@ -1,8 +1,7 @@
-# $Id$
-# Maintainer: Ramon Buldó <ramon@manjaro.org>
+# Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=ckbcomp
-pkgver=1.134
+pkgver=1.147
 pkgrel=1
 pkgdesc="Compile a XKB keyboard description to a keymap suitable for loadkeys or kbdcontrol"
 arch=(any)
@@ -10,7 +9,7 @@ url="http://anonscm.debian.org/cgit/d-i/console-setup.git/"
 license=('GPL2')
 depends=('perl')
 source=("http://ftp.de.debian.org/debian/pool/main/c/console-setup/console-setup_${pkgver}.tar.xz")
-sha256sums=('a69eba80bdaa7459bd12d5e9a29adad28a50bf8935e0bc99962cd4ae7f554a50')
+sha256sums=('192d8f75b779be9ac085104dda821b44ce0973745cbab55c716dd858eb275c11')
 
 package() {
   cd console-setup-${pkgver}
