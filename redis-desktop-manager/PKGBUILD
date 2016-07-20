@@ -1,0 +1,79 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Vyacheslav Konovalov <vyachkonovalov@gmail.com>
+
+pkgname=redis-desktop-manager
+pkgver=0.8.7
+pkgrel=1
+pkgdesc='Cross-platform GUI management tool for Redis'
+arch=('x86_64')
+url='http://redisdesktop.com/'
+license=('LGPLv2.1')
+depends=('qt5-base' 'qt5-imageformats' 'qt5-tools' 'qt5-declarative' 'qt5-quickcontrols'
+		'qt5-graphicaleffects' 'qt5-svg' 'libssh2')
+makedepends=('git' 'python2')
+conflicts=('redis-desktop-manager-bin')
+source=("${pkgname}-${pkgver}::git+https://github.com/uglide/RedisDesktopManager.git#tag=${pkgver}"
+		'rdm.sh'
+		'rdm.desktop')
+md5sums=('SKIP'
+		'9b19b5dc979d4c0859694df23c3a5026'
+		'988fc093aa80d800fc4c8373fbfa2d1c')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='uglide'
+_monitored_repo='RedisDesktopManager'
+# END ANTBS METADATA
+
+
+prepare() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	git submodule update --init --recursive
+	git submodule add https://chromium.googlesource.com/linux-syscall-support 3rdparty/linux-syscall-support
+
+	python2 build/utils/set_version.py "${pkgver}" > src/version.h
+	python2 build/utils/set_version.py "${pkgver}" > 3rdparty/crashreporter/src/version.h
+
+	_lssdir='3rdparty/gbreakpad/src/third_party/lss/'
+	mkdir "${_lssdir}"
+	cp 3rdparty/linux-syscall-support/linux_syscall_support.h "${_lssdir}"
+	cd 3rdparty/gbreakpad
+	touch README
+}
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	rm -rf bin
+
+	cd 3rdparty/crashreporter
+	qmake-qt5 CONFIG+=release DESTDIR="${srcdir}/${pkgname}-${pkgver}/bin/linux/release" QMAKE_LFLAGS_RPATH=""
+	make
+
+	cd "${srcdir}/${pkgname}-${pkgver}/3rdparty/gbreakpad"
+	./configure
+	make
+
+	cd "${srcdir}/${pkgname}-${pkgver}/src"
+	qmake-qt5 && make
+}
+
+package() {
+	_instdir="${srcdir}/${pkgname}-${pkgver}/bin/linux/release"
+	_bindir="${pkgdir}/usr/share/redis-desktop-manager/bin"
+
+	mkdir -p "${_bindir}"
+	mkdir -p ${pkgdir}/usr/share/{licenses,pixmaps,applications}
+
+	install -Dm644 "${srcdir}/${pkgname}-${pkgver}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+	install -Dm755 "${_instdir}/rdm" "${_bindir}/rdm"
+	install -Dm755 "${_instdir}/crashreporter" "${_bindir}/crashreporter"
+	install -Dm755 "${srcdir}/rdm.sh" "${_bindir}/rdm.sh"
+	install -Dm644 "${srcdir}/${pkgname}-${pkgver}/src/resources/rdm.png" "${pkgdir}/usr/share/pixmaps/rdm.png"
+	install -Dm644 "${srcdir}/rdm.desktop" "${pkgdir}/usr/share/applications/rdm.desktop"
+
+	mkdir "${pkgdir}/usr/bin"
+	ln -s '/usr/share/redis-desktop-manager/bin/rdm.sh' "${pkgdir}/usr/bin/rdm"
+}
