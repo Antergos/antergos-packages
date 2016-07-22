@@ -11,18 +11,15 @@ license=('GPL')
 depends=('gtk-engines' 'gtk-engine-murrine' 'librsvg' 'mate-icon-theme')
 makedepends=('mate-common' 'icon-naming-utils')
 groups=('mate')
-source=("http://pub.mate-desktop.org/releases/themes/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('87a2254b0d9fe6deb93d58cba997ee12')
-install=${pkgname}.install
+source=("http://pub.mate-desktop.org/releases/themes/${pkgver::(-3)}/${pkgname}-${pkgver}.tar.xz")
+md5sums=('8ddefde8e0685963ab72b309dbe16d5c')
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='mate-desktop'
 _monitored_repo='mate-themes'
-
 # END ANTBS METADATA
 
 prepare() {
