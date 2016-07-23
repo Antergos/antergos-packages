@@ -62,3 +62,7 @@ Server = http://mirror.umd.edu/antergos/$repo/$arch
 Server = http://mirrors.acm.wpi.edu/antergos/$repo/$arch
 Server = http://antergos.x86innovations.com/$repo/$arch
 Server = http://repo.antergos.info/$repo/$arch
+
+# Vietnam
+Server = http://mirror.freedif.org/Antergos/$repo/$arch
+
