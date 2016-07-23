@@ -2,8 +2,8 @@
 # Contributor: Alexandre Filgueira <alexfilgueira@antergos.com>
 
 pkgname=cinnamon-menus
-pkgver=3.0.1
-pkgrel=2
+pkgver=3.0.2
+pkgrel=1
 pkgdesc="Cinnamon menu specifications"
 url="http://www.linuxmint.com"
 arch=('i686' 'x86_64')
@@ -16,13 +16,11 @@ md5sums=('')
 
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cinnamon-menus'
-
 # END ANTBS METADATA
 
 
