@@ -8,20 +8,18 @@ pkgdesc="MATE keyboard library"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('LGPL')
+groups=('mate')
 depends=('dconf' 'gtk3' 'iso-codes' 'libxklavier')
 makedepends=('mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 md5sums=('38783a2c4694911c1d1e606421bf86d4')
-install=${pkgname}.install
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='mate-desktop'
 _monitored_repo='libmatekbd'
-
 # END ANTBS METADATA
 
 build() {
