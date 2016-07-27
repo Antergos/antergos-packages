@@ -1,13 +1,14 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
+
 pkgname=pamac-dev
 pkgver=4.1.0
 _pkgver=4.1.0
 pkgrel=1
 _gitcommit="master"
-pkgdesc="A Gtk3 frontend for libalpm"
+pkgdesc='A Gtk3 frontend for libalpm'
 arch=('i686' 'x86_64')
-url="https://github.com/manjaro/pamac"
+url='https://github.com/manjaro/pamac'
 license=('GPL3')
 depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'vte3>=0.38' 'gtk3>=3.18'
 		'libnotify' 'desktop-file-utils' 'pacman>=5.0' 'pacman<5.1' 'gnutls>=3.4' 'yaourt')
@@ -16,23 +17,22 @@ backup=('etc/pamac.conf')
 provides=('pamac')
 conflicts=('pamac' 'pamac-aur')
 options=(!emptydirs)
-install=pamac.install
-
-
-if [ "${_gitcommit}" != "" ]; then
-	source=("git+https://github.com/manjaro/pamac")
-else
-	source=("pamac-$pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
-fi
-
+source=("pamac-$pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
 md5sums=('SKIP')
 
 
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='commits'
+_monitored_project='manjaro'
+_monitored_repo='pamac'
+# END ANTBS METADATA
+
 pkgver() {
-	{ [[ "${_gitcommit}" != "" ]] &&  cd "${srcdir}/pamac"; } || cd "${srcdir}/pamac-${_pkgver}"
+	cd "${srcdir}/pamac-${_pkgver}"
 
-	printf "%s.r%s" "$_pkgver" "$(git rev-list --count HEAD)"
-
+	printf "%s.r%s" "${_pkgver}" "$(git rev-list --count HEAD)"
 }
 
 
