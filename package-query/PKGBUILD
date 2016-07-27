@@ -11,11 +11,20 @@ arch=('i686' 'x86_64')
 url="https://github.com/archlinuxfr/package-query/"
 license=('GPL')
 depends=('pacman>=4.2' 'curl' 'yajl>=2.0')
-source=("https://github.com/archlinuxfr/${pkgname}/archive/${_pkgver}.zip")
-sha256sums=('51c9ae8703397a21035dd14814c79af6')
+source=("https://github.com/archlinuxfr/${pkgname}/archive/${_commit}.zip")
+md5sums=('')
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='archlinuxfr'
+_monitored_repo='package-query'
+# END ANTBS METADATA
+
 
 build() {
-cd "$srcdir/$pkgname-$_pkgver"
+	cd "$srcdir/$pkgname-$_pkgver"
 	./autogen.sh
 	./configure --localstatedir=/var --prefix=/usr --sysconfdir=/etc
 	make
