@@ -16,8 +16,8 @@ conflicts=("clion")
 groups=("development" "IDE" "editor" "jetbrains")
 
 if [[ "True" = "${_eap}" ]]; then
-	#_srcfile="CLion-${_buildver}.tar.gz"
-	_srcfile="CLion-${_pkgver::(-2)}-RC.tar.gz"
+	_srcfile="CLion-${_buildver}.tar.gz"
+	#_srcfile="CLion-${_pkgver::(-2)}-RC.tar.gz"
 	source=("http://download.jetbrains.com/cpp/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
