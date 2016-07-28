@@ -11,7 +11,7 @@ arch=('i686' 'x86_64')
 url="https://github.com/archlinuxfr/package-query/"
 license=('GPL')
 depends=('pacman>=4.2' 'curl' 'yajl>=2.0')
-source=("https://github.com/archlinuxfr/${pkgname}/archive/${_commit}.zip")
+source=("${pkgname}-${_pkgver}::https://github.com/archlinuxfr/${pkgname}/archive/${_commit}.zip")
 md5sums=('')
 
 # BEGIN ANTBS METADATA
