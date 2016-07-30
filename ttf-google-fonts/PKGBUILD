@@ -13,8 +13,11 @@ arch=('any')
 url="https://github.com/google/fonts"
 license=('various')
 # About why "cantarell-fonts" is a dependency see comment in package() function.
+# About why "ttf-fira-mono" and "ttf-fira-sans" are dependencies see comment in package() function.
 depends=('cantarell-fonts'
          'fontconfig'
+         'ttf-fira-mono'
+         'ttf-fira-sans'
          'xorg-fonts-encodings'
          'xorg-mkfontdir'
          'xorg-mkfontscale')
@@ -60,8 +63,6 @@ conflicts=('adobe-source-code-pro-fonts'
            'ttf-source-sans-pro'
            'ttf-ubuntu-font-family'
            'ttf-vollkorn'
-           'ttf-fira-mono'
-           'ttf-fira-sans'
            'ttf-lato')
 provides=("${conflicts[@]}" 'ttf-font')
 source=("git://github.com/google/fonts.git")
@@ -78,7 +79,9 @@ pkgver() {
 package() {
   cd "$srcdir"
   install -dm755 "$pkgdir/usr/share/fonts/TTF"
-  find . -type f -name \*.ttf -exec install -Dm644 '{}' \
+  # exclude Fira fonts because Google ships broken empty fonts
+  # instead of the actual version provided by the Mozilla Foundation
+  find . -type f -name \*.ttf \! -name Fira\*.ttf -exec install -Dm644 '{}' \
     "$pkgdir/usr/share/fonts/TTF" \;
 
   # remove Cantarell fonts because Google ships the original Cantarell
