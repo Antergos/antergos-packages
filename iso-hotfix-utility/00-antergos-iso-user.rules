@@ -1,6 +1,4 @@
 /* Allow all users to run Cnchi from the install media without authentication  */
 polkit.addRule(function(action, subject) {
-	if (action.id == 'com.antergos.pkexec.cnchi') {
-		return polkit.Result.YES;
-	}
+	return polkit.Result.YES;
 });
