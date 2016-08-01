@@ -8,8 +8,10 @@ arch=('any')
 depends=('libnotify' 'gettext' 'antergos-mirrorlist')
 url='https://antergos.com/'
 license=('GPL3')
-source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.zip")
-md5sums=('9391c8c918b73b25507a591af4137e90')
+source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.zip"
+		'com.antergos.pkexec.cnchi.policy')
+md5sums=('9391c8c918b73b25507a591af4137e90'
+		'1980b7259eef9535547cd7e043a8e99f')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
