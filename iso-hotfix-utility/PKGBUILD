@@ -9,7 +9,7 @@ depends=('libnotify' 'gettext' 'antergos-mirrorlist')
 url='https://antergos.com/'
 license=('GPL3')
 source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.zip")
-md5sums=('99c96462a490f2d7b1e6b5eeb09b3b01')
+md5sums=('9391c8c918b73b25507a591af4137e90')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
@@ -25,7 +25,7 @@ package() {
 	install -d "${pkgdir}/etc/iso-hotfix-utility.d"
 	install -d "${pkgdir}/usr/share/polkit-1/actions/"
 
-	install -m644 -t "${pkgdir}/usr/share/polkit-1/actions/" 'com.antergos.pkexec.cnchi.policy'
+	install -m644 -t "${pkgdir}/usr/share/polkit-1/actions" "${srcdir}/com.antergos.pkexec.cnchi.policy"
 	
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
