@@ -31,7 +31,7 @@ package() {
 	install -d "${pkgdir}/etc/polkit-1/rules.d"
 
 	install -m644 -t "${pkgdir}/usr/share/polkit-1/actions" "${srcdir}/com.antergos.pkexec.cnchi.policy"
-	install -m644 -t "${pkgdir}/etc/polkit-1/rules.d" "${scrdir}/00-antergos-iso-user.rules"
+	install -m644 -t "${pkgdir}/etc/polkit-1/rules.d" "${srcdir}/00-antergos-iso-user.rules"
 	
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
