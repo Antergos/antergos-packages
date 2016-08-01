@@ -12,20 +12,21 @@ source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.zip")
 md5sums=('99c96462a490f2d7b1e6b5eeb09b3b01')
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='antergos'
 _monitored_repo='iso-hotfix-utility'
-
 # END ANTBS METADATA
 
 
 package() { 
 	install -d "${pkgdir}/usr/bin"
 	install -d "${pkgdir}/etc/iso-hotfix-utility.d"
+	install -d "${pkgdir}/usr/share/polkit-1/actions/"
 
+	install -m644 -t "${pkgdir}/usr/share/polkit-1/actions/" 'com.antergos.pkexec.cnchi.policy'
+	
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
 	install -m777 -t "${pkgdir}/usr/bin" "${pkgname}"
