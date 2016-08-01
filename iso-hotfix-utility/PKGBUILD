@@ -2,16 +2,18 @@
 
 pkgname=iso-hotfix-utility
 pkgver=1.0.10
-pkgrel=1
+pkgrel=2
 pkgdesc='Make changes to linux live install media on-the-fly when the media is booted.'
 arch=('any')
 depends=('libnotify' 'gettext' 'antergos-mirrorlist')
 url='https://antergos.com/'
 license=('GPL3')
 source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.zip"
-		'com.antergos.pkexec.cnchi.policy')
+		'com.antergos.pkexec.cnchi.policy'
+		'00-antergos-iso-user.rules')
 md5sums=('9391c8c918b73b25507a591af4137e90'
-		'1980b7259eef9535547cd7e043a8e99f')
+		'1980b7259eef9535547cd7e043a8e99f'
+		'6b79340bbeaee55067846d3fb431e600')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
@@ -25,9 +27,11 @@ _monitored_repo='iso-hotfix-utility'
 package() { 
 	install -d "${pkgdir}/usr/bin"
 	install -d "${pkgdir}/etc/iso-hotfix-utility.d"
-	install -d "${pkgdir}/usr/share/polkit-1/actions/"
+	install -d "${pkgdir}/usr/share/polkit-1/actions"
+	install -d "${pkgdir}/etc/polkit-1/rules.d"
 
 	install -m644 -t "${pkgdir}/usr/share/polkit-1/actions" "${srcdir}/com.antergos.pkexec.cnchi.policy"
+	install -m644 -t "${pkgdir}/etc/polkit-1/rules.d" "${scrdir}/00-antergos-iso-user.rules"
 	
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
