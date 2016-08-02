@@ -26,6 +26,7 @@ _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='uglide'
 _monitored_repo='RedisDesktopManager'
+_monitored_match_pattern='/(\d{1,2}\.){1,2}\d(?=-*)/'
 # END ANTBS METADATA
 
 
