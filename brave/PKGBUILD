@@ -30,11 +30,9 @@ _monitored_match_pattern='/v(\d{1,2}\.){1,2}\d$/'
 
 
 build() {
-	[[ -z "${HOME}" ]] && export HOME='/home/antbs'
-
 	cd "${srcdir}/browser-laptop-${pkgver}dev"
-	npm install
-	CHANNEL=dev npm run build-package
+	HOME="${srcdir}" npm install
+	HOME="${srcdir}" CHANNEL=dev npm run build-package
 }
 
 package() {
