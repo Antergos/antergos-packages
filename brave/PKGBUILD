@@ -25,7 +25,7 @@ _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='brave'
 _monitored_repo='browser-laptop'
-_monitored_match_pattern='/v(\d{1,2}\.){1,2}\d/'
+_monitored_match_pattern='/v(\d{1,2}\.){1,2}\d$/'
 # END ANTBS METADATA
 
 
