@@ -10,8 +10,9 @@ pkgdesc='Web browser that blocks ads and trackers by default.'
 arch=('x86_64')
 url='https://www.brave.com/'
 license=('custom')
-depends=('gtk2' 'nss' 'alsa-lib' 'libnotify' 'gconf' 'libxtst' 'libxss' 'desktop-file-utils' 'ttf-font')
-makedepends=('npm' 'git')
+depends=('gtk2' 'nss' 'alsa-lib' 'libnotify' 'gconf' 'libxtst' 'libxss' 'desktop-file-utils'
+		'ttf-font')
+makedepends=('npm' 'git' 'python2')
 provides=('brave-browser')
 source=("https://github.com/brave/${_pkgname}/archive/v${pkgver}dev.tar.gz"
 		'brave.desktop')
@@ -25,14 +26,14 @@ _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='brave'
 _monitored_repo='browser-laptop'
-_monitored_match_pattern='/v(\d{1,2}\.){1,2}\d$/'
+_monitored_match_pattern='/v(\d{1,2}\.){1,2}\d(?!\w)/'
 # END ANTBS METADATA
 
 
 build() {
 	cd "${srcdir}/browser-laptop-${pkgver}dev"
-	HOME="${srcdir}" npm install
-	HOME="${srcdir}" CHANNEL=dev npm run build-package
+	PYTHON='/usr/bin/python2' HOME="${srcdir}" npm install
+	HOME="${srcdir}" CHANNEL='dev' npm run build-package
 }
 
 package() {
