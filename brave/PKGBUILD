@@ -4,8 +4,8 @@
 
 pkgname=brave
 _pkgname='browser-laptop'
-pkgver=0.11.2de-beta20.11.1
-pkgrel=11
+pkgver=0.11.1
+pkgrel=1
 pkgdesc='Web browser that blocks ads and trackers by default.'
 arch=('x86_64')
 url='https://www.brave.com/'
@@ -25,6 +25,7 @@ _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='brave'
 _monitored_repo='browser-laptop'
+_monitored_match_pattern='/v(\d{1,2}\.){1,2}\d/'
 # END ANTBS METADATA
 
 
