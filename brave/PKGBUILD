@@ -4,7 +4,7 @@
 
 pkgname=brave
 _pkgname='browser-laptop'
-pkgver=0.11.2de-beta2
+pkgver=0.11.1
 pkgrel=1
 pkgdesc='Web browser that blocks ads and trackers by default.'
 arch=('x86_64')
@@ -29,10 +29,10 @@ _monitored_match_pattern='/v(\d{1,2}\.){1,2}\d$/'
 # END ANTBS METADATA
 
 
-
 build() {
-	cd "${srcdir}/${_pkgname}-${pkgver}dev"
+	[[ -z "${HOME}" ]] && export HOME='/home/antbs'
 
+	cd "${srcdir}/browser-laptop-${pkgver}dev"
 	npm install
 	CHANNEL=dev npm run build-package
 }
