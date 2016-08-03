@@ -3,12 +3,12 @@
 # Contributor: Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
 
 pkgname=intellij-idea-ue-eap
-_buildver=162.1447.7
+_buildver=162.1447.26
 _pkgver=2016.2.1
-_eap="True"
+_eap="False"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
-pkgdesc="Intelligent Java IDE with out-of-the-box support for web, enterprise, and mobile frameworks. Early Access Program (EAP) Build."
+pkgdesc="Intelligent IDE with out-of-the-box support for web, enterprise, and mobile frameworks. Early Access Program (EAP) Build."
 arch=('any')
 options=('!strip')
 url="http://www.jetbrains.com/idea/"
@@ -21,13 +21,14 @@ groups=("development" "IDE" "editor" "jetbrains")
 
 if [[ "True" = "${_eap}" ]]; then
 	_srcfile="ideaIU-${_buildver}.tar.gz"
-	#_srcfile="ideaIU-16-Preview.tar.gz"
+	# _srcfile="ideaIU-16-Preview.tar.gz"
 	source=("http://download.jetbrains.com/idea/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
 				"c6ffb4c3a14b4b6a90158fda92aab7dbee2bb32d9585b801682792966699919c")
 else
-	_srcfile="ideaIU-${_pkgver::(-2)}.tar.gz"
+	# _srcfile="ideaIU-${_pkgver::(-2)}.tar.gz"
+	_srcfile="ideaIU-${_pkgver}.tar.gz"
 	source=("http://download.jetbrains.com/idea/${_srcfile}"
 			"${pkgname}.desktop")
 	sha256sums=($(wget -q "${source}.sha256" && cat "${_srcfile}.sha256" | cut -f1 -d" ")
@@ -45,7 +46,8 @@ package() {
 	if [[ "True" = "${_eap}" ]]; then
 		cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
 	else
-		cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_pkgver::(-2)}/"* "${pkgdir}/opt/${pkgname}"
+		# cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_pkgver::(-2)}/"* "${pkgdir}/opt/${pkgname}"
+		cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
 	fi
 	
 	if [[ "i686" = "${CARCH}" ]]; then
