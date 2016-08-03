@@ -41,7 +41,7 @@ source=("http://www.freedesktop.org/software/${pkgname}/releases/${pkgname}-${pk
 	'plymouth-update-initrd.patch')
 
 md5sums=('SKIP'
-         '9050b51ca1062b9c1d5c0918fa172437'
+         'cd9237e916e7f1bfa72561aac09be3d6'
          'd894033cfdb5d3cc31efa4a6121a150e'
          'fbdd5d04e3089a214b9056357434df86'
          '65eb269910f1b81e3f0970af456394ca'
