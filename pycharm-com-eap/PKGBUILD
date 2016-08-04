@@ -38,11 +38,11 @@ package() {
 		"${pkgdir}/usr/bin/" \
 		"${pkgdir}/usr/share/applications/"
 
-	if [[ "True" = "${_eap}" ]]; then
-		cp -R "${srcdir}/pycharm-community-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
-	else
+	#if [[ "True" = "${_eap}" ]]; then
+	#	cp -R "${srcdir}/pycharm-community-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
+	#else
 		cp -R "${srcdir}/pycharm-community-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
-	fi
+	#fi
 	
 	if [[ "i686" = "${CARCH}" ]]; then
 		rm -f "${pkgdir}/opt/${pkgname}/bin/libyjpagent-linux64.so"
