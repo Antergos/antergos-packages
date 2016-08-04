@@ -2,7 +2,7 @@
 # Contributor: Vyacheslav Konovalov <vyachkonovalov@gmail.com>
 
 pkgname=redis-desktop-manager
-pkgver=0.8.7-1-1
+pkgver=0.8.7
 pkgrel=1
 pkgdesc='Cross-platform GUI management tool for Redis'
 arch=('x86_64')
@@ -26,7 +26,6 @@ _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='uglide'
 _monitored_repo='RedisDesktopManager'
-_monitored_match_pattern='/(\d{1,2}\.){1,2}\d(?=-*)/'
 # END ANTBS METADATA
 
 
