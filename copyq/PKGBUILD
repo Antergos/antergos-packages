@@ -5,18 +5,24 @@ pkgname=copyq
 _realname=CopyQ
 pkgver=2.7.1
 pkgrel=1
-pkgdesc="Clipboard manager with searchable and editable history."
-url="https://github.com/hluk/CopyQ"
+pkgdesc='Clipboard manager with searchable and editable history.'
+url='https://github.com/hluk/CopyQ'
 groups=('tools')
 depends=('qt5-base' 'libxtst' 'qt5-webkit' 'qt5-svg' 'qt5-tools' 'qt5-script' 'libxfixes')
 makedepends=('cmake')
 license=('GPL3')
 arch=('i686' 'x86_64')
 source=("https://github.com/hluk/${_realname}/archive/v${pkgver}.tar.gz")
-#source=("git+http://github.com/hluk/CopyQ.git#commit=23d20db45132a688559cf566702861657d5cf2bd")
-md5sums=('')
-install=copyq.install
-_allowed_in=('main' 'staging')
+md5sums=('f0abc1c2f84928d483c5a8403a998d86')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='hluk'
+_monitored_repo='copyq'
+# END ANTBS METADATA
 
 build() {
 	mkdir "${srcdir}/build"
