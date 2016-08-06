@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=libmatekbd
-pkgver=1.14.1
+pkgver=1.15.0
 pkgrel=2
 pkgdesc="MATE keyboard library"
 url="http://mate-desktop.org"
