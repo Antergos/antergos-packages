@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-backgrounds
-pkgver=1.14.0
+pkgver=1.15.0
 pkgrel=2
 pkgdesc="Background images and metadata for MATE"
 url="http://mate-desktop.org"
