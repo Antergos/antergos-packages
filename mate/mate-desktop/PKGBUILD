@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-desktop
-pkgver=1.15.1
+pkgver=1.14.1
 pkgrel=2
 pkgdesc="Library with common API for various MATE modules"
 url="http://mate-desktop.org"
