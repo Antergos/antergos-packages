@@ -16,13 +16,12 @@ md5sums=('')
 conflicts=('arc-icon-theme-git')
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='horst3180'
 _monitored_repo='arc-icon-theme'
-
+_monitored_match_pattern='/\d{8}/'
 # END ANTBS METADATA
 
 build() {
@@ -40,3 +39,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
+
+# -*- mode: bash;-*-

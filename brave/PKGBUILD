@@ -57,3 +57,5 @@ package() {
 
 	mv "${pkgdir}"/usr/lib/brave/{LICENSE,LICENSES.chromium.html} "${pkgdir}/usr/share/licenses/brave/"
 }
+
+# -*- mode: bash;-*-
