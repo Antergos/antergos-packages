@@ -15,13 +15,12 @@ md5sums=('3d8d55e228b4ab82cf33004e314820e0')
 install=${pkgname}.install
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='mate-desktop'
 _monitored_repo='mate-desktop'
-
+_monitored_match_pattern='1.14'
 # END ANTBS METADATA
 
 build() {

@@ -15,11 +15,10 @@ source=("http://pub.mate-desktop.org/releases/themes/${pkgver::(-3)}/${pkgname}-
 md5sums=('8ddefde8e0685963ab72b309dbe16d5c')
 
 # BEGIN ANTBS METADATA
-_is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='mate-desktop'
-_monitored_repo='mate-themes'
+_monitored_match_pattern='3.20'
 # END ANTBS METADATA
 
 prepare() {

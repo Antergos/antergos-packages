@@ -19,13 +19,12 @@ source=("${pkgname}-${pkgver}::https://github.com/galculator/galculator/archive/
 md5sums=('085c79519e3e669f44e10c24b2795c27')
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='galculator'
 _monitored_repo='galculator'
-
+_monitored_match_pattern='1.14'
 # END ANTBS METADATA
 
 build() {

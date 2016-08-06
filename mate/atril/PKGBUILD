@@ -23,13 +23,12 @@ sha1sums=('7e1cd353202e9ae4a5ad63b093572d140dd0a7c3')
 install=${pkgname}.install
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='mate-desktop'
 _monitored_repo='atril'
-
+_monitored_match_pattern='1.14'
 # END ANTBS METADATA
 
 build() {

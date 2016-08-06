@@ -16,13 +16,12 @@ md5sums=('c72da5a4dc96fed61a189bc8d8026233')
 install=${pkgname}.install
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='mate-desktop'
 _monitored_repo='libmateweather'
-
+_monitored_match_pattern='1.14'
 # END ANTBS METADATA
 
 build() {
