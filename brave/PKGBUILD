@@ -31,13 +31,13 @@ _monitored_match_pattern='/(v(\d{1,2}\.){1,2}\ddev$)/'
 
 
 build() {
-	cd "${srcdir}/browser-laptop-${pkgver}dev"
+	cd "${srcdir}/browser-laptop-${pkgver}"
 	PYTHON='/usr/bin/python2' HOME="${srcdir}" npm install
 	HOME="${srcdir}" CHANNEL='dev' npm run build-package
 }
 
 package() {
-	cd "${srcdir}/browser-laptop-${pkgver}dev"
+	cd "${srcdir}/browser-laptop-${pkgver}"
 
 	install -dm0755 "${pkgdir}/usr/lib"
 
