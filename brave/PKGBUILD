@@ -11,7 +11,7 @@ arch=('x86_64')
 url='https://www.brave.com/'
 license=('custom')
 depends=('gtk2' 'nss' 'alsa-lib' 'libnotify' 'gconf' 'libxtst' 'libxss' 'desktop-file-utils'
-		'ttf-font')
+		'ttf-font' 'libgnome-keyring')
 makedepends=('npm' 'git' 'python2')
 provides=('brave-browser')
 source=("https://github.com/brave/${_pkgname}/archive/v${pkgver}.tar.gz"
