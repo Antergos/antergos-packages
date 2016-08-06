@@ -53,7 +53,7 @@ package() {
 
 	install -dm0755 "${pkgdir}/usr/share/licenses/brave"
 
-	cp --reflink=auto "${srcdir}/LICENSE.txt"  "${pkgdir}/usr/share/licenses/brave/MPL2"
+	cp --reflink=auto LICENSE.txt  "${pkgdir}/usr/share/licenses/brave/MPL2"
 
 	mv "${pkgdir}"/usr/lib/brave/{LICENSE,LICENSES.chromium.html} "${pkgdir}/usr/share/licenses/brave/"
 }
