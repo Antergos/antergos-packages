@@ -19,7 +19,7 @@ md5sums=()
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='commits'
+_monitored_type='releases'
 _monitored_project='archlinuxfr'
 _monitored_repo='yaourt'
 # END ANTBS METADATA
