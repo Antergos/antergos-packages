@@ -24,7 +24,6 @@ _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='galculator'
 _monitored_repo='galculator'
-_monitored_match_pattern='1.14'
 # END ANTBS METADATA
 
 build() {
