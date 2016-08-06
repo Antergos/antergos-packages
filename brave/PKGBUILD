@@ -10,6 +10,7 @@ pkgdesc='Web browser that blocks ads and trackers by default.'
 arch=('x86_64')
 url='https://www.brave.com/'
 license=('custom')
+groups=('browser')
 depends=('gtk2' 'nss' 'alsa-lib' 'libnotify' 'gconf' 'libxtst' 'libxss' 'desktop-file-utils'
 		'ttf-font' 'libgnome-keyring')
 makedepends=('npm' 'git' 'python2')
