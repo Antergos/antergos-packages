@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=caja
-pkgver=1.14.1
+pkgver=1.14.2
 pkgrel=2
 pkgdesc="File manager for the MATE desktop"
 url="http://mate-desktop.org"
