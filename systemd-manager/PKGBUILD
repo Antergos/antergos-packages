@@ -15,15 +15,15 @@ provides=('systemd-manager')
 conflicts=('systemd-manager-git')
 source=("${pkgname}.zip::https://github.com/mmstick/systemd-manager/archive/${pkgver}.zip")
 #source=("${pkgname}-${pkgver}::git+https://github.com/mmstick/systemd-manager.git")
-md5sums=('SKIP')
+md5sums=('2102236d96b118b82cd16362c5b1f4c8')
 
-_allowed_in='main'
+# BEGIN ANTBS METADATA
 _is_monitored='True'
-
-#pkgver() {
-#	cd "${srcdir}/${pkgname}-${_pkgver}"
-#	printf "%s.r%s" "${_pkgver}" "$(git rev-parse --short HEAD)"
-#}
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='mmstick'
+_monitored_repo='systemd-manager'
+# END ANTBS METADATA
 
 build() {
 	cd "${srcdir}/${pkgname}-${_pkgver}"
