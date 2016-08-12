@@ -38,9 +38,6 @@ prepare() {
   sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala 
   cd "$srcdir/pamac-$_pkgver/"
   # patches here
-  patch -Np1 -i "$srcdir/preferences-dialog.patch"
-  patch -Np1 -i "$srcdir/hooks-progress-display.patch"
-  patch -Np1 -i "$srcdir/size-calculation.patch"
 }
 
 build() {
