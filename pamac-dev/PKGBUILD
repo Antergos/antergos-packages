@@ -17,7 +17,7 @@ backup=('etc/pamac.conf')
 provides=('pamac')
 conflicts=('pamac' 'pamac-aur')
 options=(!emptydirs)
-source=("pamac-$pkgver.tar.gz::git+$url.git")
+source=("pamac-$pkgver::git+$url.git")
 md5sums=('SKIP')
 
 
