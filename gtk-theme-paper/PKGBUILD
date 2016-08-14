@@ -13,25 +13,23 @@ license=('GPL3')
 depends=('gtk-engine-murrine')
 conflicts=('paper-gtk-theme-git')
 makedepends=('git')
-install=${pkgname}.install
 source=("${_pkgname}-${pkgver}::https://github.com/snwh/${_pkgname}/archive/v${pkgver}.zip")
-#source=("${pkgname}::git+https://github.com/snwh/${_pkgname}.git")
-md5sums=('')
+md5sums=('f4bc59c037f24cf9a8d0925398b3e10a')
 
-#pkgver() {
-#  cd ${srcdir}/${pkgname}
-#
-#  printf "0.r%s" "$(git rev-list --count HEAD)"
-#}
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='snwh'
+_monitored_repo='paper-gtk-theme'
+# END ANTBS METADATA
+
 
 package() {
-    cd "${srcdir}/${_pkgname}-${pkgver}"
+	cd "${srcdir}/${_pkgname}-${pkgver}"
 
-    install -dm755 "${pkgdir}"/usr/share/themes/Paper
-    cp -dpr --no-preserve=ownership ./Paper "${pkgdir}"/usr/share/themes/
+	install -dm755 "${pkgdir}"/usr/share/themes/Paper
+	cp -dpr --no-preserve=ownership ./Paper "${pkgdir}"/usr/share/themes/
 
-    # Developer scripts explicitly not for end users
-    #install -dm755 "${pkgdir}"/usr/share/"${_pkgname}"
-    #cp -dpr --no-preserve=ownership ./*.py "${pkgdir}"/usr/share/"${_pkgname}"
-    #cp -dpr --no-preserve=ownership ./src "${pkgdir}"/usr/share/"${_pkgname}"
 }
