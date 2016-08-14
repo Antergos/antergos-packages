@@ -2,23 +2,48 @@
 # Contrubutor: Phillip Schichtel <phillip.public@schich.tel>
 
 pkgname=gtk-theme-adapta
+_theme_name=Adapta
 pkgver=3.21.2
 pkgrel=1
 pkgdesc="An adaptive Gtk+ theme based on Material Design Guidelines."
-arch=(any)
+arch=('any')
 url="https://github.com/tista500/Adapta"
 license=('GPL2')
-install="${pkgname}.install"
-depends=('gtk2' 'gtk3>3.18' 'gtk3<3.22')
-groups=('themes')
+depends=('gtk2' 'gtk-engine-murrine' 'gtk-engine-pixbuf' 'gtk3>3.18')
+makedepends=('glib2' 'ruby-sass' 'ruby-bundler' 'inkscape')
+groups=('themes themes::gtk')
 source=("https://github.com/tista500/Adapta/archive/${pkgver}.tar.gz")
-md5sums=('')
+md5sums=('fa79d9be0677aab1b92cab512f5d4aeb')
 
-_theme_name=Adapta
-_extracted_folder="${_theme_name}-$pkgver"
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='tista500'
+_monitored_repo='Adapta'
+_monitored_match_pattern='3.2'
+# END ANTBS METADATA
+
+
+build() {
+	cd "${_theme_name}-${pkgver}"
+	./autogen.sh \
+		--disable-unity \
+		--enable-gtk_next \
+		--enable-chrome \
+		--enable-plank \
+		--with-selection_color=#2196F3 \
+		--with-second_selection_color=#64B5F6 \
+		--with-accent_color=#F06292 \
+		--with-suggestion_color=#E91E63
+
+	make
+}
 
 package() {
-		target="${pkgdir}/usr/share/themes/${_theme_name}"
-		install -dm755 "$target"
-		cp -dpr --no-preserve=ownership "${_extracted_folder}/." -d "$target"
+	cd "${_theme_name}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
 }
+
+# -*- mode: bash;-*-
