@@ -4,15 +4,24 @@
 pkgname=scudcloud
 pkgver=1.27
 pkgrel=1
-pkgdesc="A Slack client for Linux"
+pkgdesc="A non official open-source Linux desktop client app for Slack."
 arch=('any')
 url="https://github.com/raelgc/scudcloud"
 license=('MIT')
 depends=('python' 'python-setuptools' 'python-dbus' 'python-pyqt4' 'hunspell-en')
 groups=('messaging')
-install=${pkgname}.install
 source=("https://github.com/raelgc/scudcloud/archive/v${pkgver}.tar.gz")
-sha256sums=('5d764e25d0ae2c1b09b9271ab754e74063d1bb710a5aa9bcc2ceccf113768169')
+md5sums=('12d3c9d2c1c7f46fb61fe26a419d0359')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='raelgc'
+_monitored_repo='scudcloud'
+# END ANTBS METADATA
+
 
 package() {
 	cd "${pkgname}-${pkgver}"
