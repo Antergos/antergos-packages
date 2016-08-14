@@ -14,10 +14,10 @@ makedepends=('mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
-		'pluma_diasable-python-plugins.patch')
+		'http://pkgs.fedoraproject.org/cgit/rpms/pluma.git/plain/pluma_diasable-python-plugins-1.5.patch')
 md5sums=('8386579dac1e16a4d93dfc5f668a206e'
-         '09b573a9a7f70dd15133b1201d41678c')
-install=${pkgname}.install
+		'09b573a9a7f70dd15133b1201d41678c')
+
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
