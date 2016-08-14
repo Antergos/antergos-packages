@@ -4,12 +4,13 @@
 
 pkgname=gtk-theme-paper
 _pkgname=paper-gtk-theme
-pkgver=2.1.02.1.0
+pkgver=2.1.0
 pkgrel=1
 pkgdesc="A modern desktop theme suite. Its design is mostly flat with a minimal use of shadows for depth."
 arch=('any')
 url="http://snwh.org/paper/theme/"
 license=('GPL3')
+groups=('themes' 'themes::gtk')
 depends=('gtk-engine-murrine')
 conflicts=('paper-gtk-theme-git')
 makedepends=('git')
