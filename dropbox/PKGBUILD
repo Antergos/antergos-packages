@@ -4,7 +4,7 @@
 # Contributor: David Manouchehri <d@32t.ca>
 
 pkgname=dropbox
-pkgver=7.4.30
+pkgver=8.4.19
 pkgrel=1
 pkgdesc="A free service that lets you bring your photos, docs, and videos anywhere and share them easily."
 arch=("i686" "x86_64")
@@ -24,13 +24,13 @@ source+=("dropbox.png"
 		"terms.txt"
 		"dropbox.service"
 		"dropbox@.service")
-md5sums=(''
-		''
-		''
-		''
-		'')
-md5sums_i686=('')
-md5sums_x86_64=('')
+md5sums=('2be5a57e477adf82a7d9b7fe77f22086'
+         'f3350cc0fb7b5f4fb6f2c0adda7e1260'
+         '9e140f8de1bab8f26165068bb2c5e8b4'
+         '2301498f15f87836ea9923269e2f23be'
+         'bf7692b7f5c823a5ef47deb10ce3b0dc')
+md5sums_i686=('a6fcaae5335027b226aac3c269471151')
+md5sums_x86_64=('15c9da8aa1721b1212617453b0a32917')
 
 package() {
 	install -d "$pkgdir"/opt
