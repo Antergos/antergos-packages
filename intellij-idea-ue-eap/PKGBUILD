@@ -37,6 +37,7 @@ fi
 
 package() {
 	cd "${srcdir}"
+	ls
 	install -dm 755 \
 		"${pkgdir}/opt/${pkgname}" \
 		"${pkgdir}/usr/bin/" \
