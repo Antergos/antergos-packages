@@ -46,7 +46,6 @@ package() {
 	if [[ "True" = "${_eap}" ]]; then
 		cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
 	else
-		cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_pkgver::(-2)}/"* "${pkgdir}/opt/${pkgname}"
 		cp -R --no-preserve=ownership "${srcdir}/idea-IU-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
 	fi
 	
