@@ -34,6 +34,15 @@ else
 				"c6ffb4c3a14b4b6a90158fda92aab7dbee2bb32d9585b801682792966699919c")
 fi
 
+# BEGIN ANTBS METADATA
+#_is_monitored='True'
+#_monitored_service='custom_xml'
+#_monitored_type='https://www.jetbrains.com/updates/updates.xml'
+#_monitored_project='./products/product[@name="IntelliJ IDEA"]/channel[@id="IDEA_EAP"]/build'
+#_monitored_repo='version,fullNumber'
+# END ANTBS METADATA
+
+
 package() {
 	cd "${srcdir}"
 	ls
