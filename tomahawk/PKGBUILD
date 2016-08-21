@@ -6,20 +6,19 @@
 pkgname=tomahawk
 pkgver=0.8.4
 _pkgver=${pkgver}
-pkgrel=1
+pkgrel=2
 pkgdesc='A Music Player App written in C++/Qt'
 arch=('i686' 'x86_64')
 url='http://tomahawk-player.org/'
 license=('GPL3')
 # NOTE: The phonon VLC backend supposedly supports networking better than the gstreamer backend.
-depends=('qt5-base' 'qt5-webkit' 'phonon-qt5' 'phonon-qt5-vlc' 'quazip-qt5' 'qtkeychain-qt5' 'attica-qt5'
+depends=('qt5-base' 'qt5-webkit' 'phonon-qt5' 'phonon-qt5-vlc' 'quazip-qt5' 'qtkeychain' 'attica-qt5'
 		'liblastfm-qt5' 'libechonest-qt5' 'sqlite' 'taglib>=1.10' 'lucene++' 'qca-qt5' 'telepathy-qt5'
 		'qt5-svg' 'qt5-imageformats' 'qt5-tools')
 makedepends=('cmake' 'extra-cmake-modules' 'sparsehash' 'boost' 'websocketpp' 'gnutls' 'git')
 groups=('music')
 source=("${pkgname}::git+https://github.com/tomahawk-player/tomahawk.git")
 md5sums=()
-install=tomahawk.install
 
 pkgver() {
 	cd "${pkgname}"
@@ -32,18 +31,18 @@ prepare() {
 }
 
 build() {
-  cd "build-qt5"
-  cmake "../${pkgname}" \
-        -DCMAKE_BUILD_TYPE=Release \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_INSTALL_LIBDIR=/usr/lib \
-        -DCMAKE_INSTALL_LIBEXECDIR="/usr/lib/${pkgname}" \
-        -DCMAKE_BUILD_WITH_QT4=OFF \
-        -DTAGLIB_MIN_VERSION=1.10
-  make
+	cd "build-qt5"
+	cmake "../${pkgname}" \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=/usr/lib \
+		-DCMAKE_INSTALL_LIBEXECDIR="/usr/lib/${pkgname}" \
+		-DCMAKE_BUILD_WITH_QT4=OFF \
+		-DTAGLIB_MIN_VERSION=1.10
+	make
 }
 
 package() {
-  cd "build-qt5"
-  make DESTDIR="${pkgdir}" install
+	cd "build-qt5"
+	make DESTDIR="${pkgdir}" install
 }
