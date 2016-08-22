@@ -32,6 +32,9 @@ Server = http://mirror.bjtu.edu.cn/cinnarch/$repo/$arch
 # Czech Republic
 Server = http://mirrors.nic.cz/antergos/$repo/$arch
 
+# Denmark
+Server = http://mirrors.dotsrc.org/antergos/$repo/$arch
+
 # France
 Server = http://cinnarch.polymorf.fr/$repo/$arch
 Server = http://eu.mirrors.coltondrg.com/antergos/$repo/$arch
