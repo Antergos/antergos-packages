@@ -1,8 +1,8 @@
 # Maintainer: Dustin Falgout <dustin@antergos.com>
 
 pkgname=trailbot-client
-pkgver=0.2.0
-pkgrel=1
+pkgver=0.2.00.2.0
+pkgrel=11
 pkgdesc='Trailbot desktop app for managing watchers, policies, and file events.' 
 arch=('x86_64')
 url='https://github.com/trailbot/client'
