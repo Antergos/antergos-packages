@@ -2,7 +2,7 @@
 
 pkgname=trailbot-client
 pkgver=0.2.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Trailbot desktop app for managing watchers, policies, and file events.' 
 arch=('x86_64')
 url='https://github.com/trailbot/client'
