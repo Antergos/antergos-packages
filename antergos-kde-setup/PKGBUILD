@@ -1,7 +1,7 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-kde-setup
-pkgver=0.1.8
+pkgver=0.1.7
 pkgrel=1
 pkgdesc="Setup configuration for Antergos KDE"
 url="http://www.antergos.com"
@@ -16,8 +16,8 @@ depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clement
 	'kscreen' 'ksshaskpass' 'ksysguard' 'kwallet-pam' 'kwalletmanager' 'kwayland-integration'
 	'kwin' 'kwrited' 'milou' 'nm-connection-editor' 'numix-frost-themes'
 	'numix-icon-theme-square' 'oxygen' 'plasma-desktop' 'plasma-nm'
-	'plasma-pa' 'plasma-workspace' 'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve' 
-	'spectacle' 'systemsettings' 'transmission-qt' 'user-manager'
+	'plasma-pa' 'plasma-workspace' 'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve-qt5'
+	'qtcurve-qt4' 'qtcurve-gtk2' 'spectacle' 'systemsettings' 'transmission-qt' 'user-manager'
 	'vlc' 'xdg-user-dirs' 'kdeconnect')
 makedepends=()
 _is_metapkg='yes'
