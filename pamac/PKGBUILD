@@ -2,8 +2,8 @@
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=pamac
-pkgver=4.2.0
-_pkgver=4.2.0
+pkgver=4.1.2
+_pkgver=4.1.2
 pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit=""
@@ -27,6 +27,16 @@ else
 fi
 
 md5sums=('')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='manjaro'
+_monitored_repo='pamac'
+# END ANTBS METADATA
+
 
 prepare() {
   if [ "$_gitcommit" != "" ]; then
