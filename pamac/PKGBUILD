@@ -4,7 +4,7 @@
 pkgname=pamac
 pkgver=4.1.3
 _pkgver=4.1.3
-pkgrel=1
+pkgrel=2
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit=""
 pkgdesc="A Gtk3 frontend for libalpm"
@@ -26,6 +26,7 @@ else
 	source=("pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
+source+=('remove-ai-makedep.patch::https://patch-diff.githubusercontent.com/raw/manjaro/pamac/pull/161.patch')
 md5sums=('')
 
 
@@ -48,6 +49,7 @@ prepare() {
   sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala 
   cd "$srcdir/pamac-$_pkgver/"
   # patches here
+  patch -Np1 -i ../remove-ai-makedep.patch
 }
 
 build() {
