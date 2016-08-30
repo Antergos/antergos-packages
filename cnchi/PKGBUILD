@@ -2,7 +2,7 @@
 
 _pkgname=Cnchi
 pkgname=cnchi
-pkgver=0.14.152
+pkgver=0.14.168
 _pkgver=${pkgver}
 pkgrel=1
 pkgdesc='Graphical Installer for Antergos Linux'
