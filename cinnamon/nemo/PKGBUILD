@@ -4,8 +4,8 @@
 
 pkgname=nemo
 pkgver=3.0.6
-pkgrel=1
-pkgdesc="Cinnamon file manager (Nautilus fork)"
+pkgrel=2
+pkgdesc="File manager for GTK-based desktops."
 arch=('i686' 'x86_64')
 url="https://github.com/linuxmint/nemo"
 license=('GPL')
@@ -15,7 +15,8 @@ depends=('libexif' 'gvfs' 'dconf' 'desktop-file-utils' 'exempi' 'python2'
 makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'gnome-common'
 			'python-gobject' 'python-polib' 'python2-gobject' 'python2-polib')
 options=('!emptydirs')
-source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/nemo/tarball/$pkgver")
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/nemo/tarball/$pkgver"
+		'fix-log-spam.patch::https://patch-diff.githubusercontent.com/raw/linuxmint/nemo/pull/1209.patch')
 sha256sums=('77d5c47a6657dfbaf66c9f80978ce8650595753138d27bd2adaebbe0e46c3e23')
 
 
@@ -38,6 +39,9 @@ prepare() {
 
 	# Rename 'Files' app name to avoid having the same as nautilus
 	sed -i 's/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in.in
+
+	# https://github.com/linuxmint/nemo/pull/1209
+	[[ '3.0.6' = "${pkgver}" && '2' = "${pkgrel}" ]] && patch -Np1 -i ../fix-log-spam.patch
 
 }
 
