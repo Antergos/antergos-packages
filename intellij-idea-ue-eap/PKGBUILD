@@ -37,8 +37,9 @@ fi
 # BEGIN ANTBS METADATA
 #_is_monitored='True'
 #_monitored_service='custom_xml'
-#_monitored_type='https://www.jetbrains.com/updates/updates.xml'
-#_monitored_project='./products/product[@name="IntelliJ IDEA"]/channel[@id="IDEA_EAP"]/build'
+#_monitored_type='attribute'
+#_monitored_url='https://www.jetbrains.com/updates/updates.xml'
+#_monitored_xpath='./products/product[@name="IntelliJ IDEA"]/channel[@id="IDEA_EAP"]/build'
 #_monitored_repo='version,fullNumber'
 # END ANTBS METADATA
 
