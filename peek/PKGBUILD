@@ -1,0 +1,42 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Maintainer: Philipp Wolfer <ph.wolfer@gmail.com>
+
+pkgname=peek
+pkgver=0.7.2
+pkgrel=1
+pkgdesc='An animated GIF recorder.'
+arch=('i686' 'x86_64')
+url='https://github.com/phw/peek'
+groups=('tools')
+license=('GPL3')
+depends=('gtk3' 'ffmpeg' 'imagemagick')
+makedepends=('cmake' 'vala' 'gettext')
+source=("${pkgname}-${pkgver}.zip::https://github.com/phw/peek/archive/v${pkgver}.zip")
+md5sums=('')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='phw'
+_monitored_repo='peek'
+# END ANTBS METADATA
+
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	cmake \
+		-DCMAKE_INSTALL_PREFIX="${pkgdir}/usr" \
+		-DBUILD_TESTS=OFF \
+		-DGSETTINGS_COMPILE=OFF .
+	make
+}
+
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make install
+}
+
+# -*- mode: bash;-*-
