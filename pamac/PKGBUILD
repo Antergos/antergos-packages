@@ -4,7 +4,7 @@
 pkgname=pamac
 pkgver=4.1.4
 _pkgver=4.1.4
-pkgrel=1
+pkgrel=1.1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit=""
 pkgdesc="A Gtk3 frontend for libalpm"
@@ -39,15 +39,16 @@ _monitored_repo='pamac'
 
 
 prepare() {
-  if [ "$_gitcommit" != "" ]; then
-    mv "$srcdir/pamac-$_gitcommit" "$srcdir/pamac-$pkgver"
-  fi
+	if [ "$_gitcommit" != "" ]; then
+		mv "$srcdir/pamac-$_gitcommit" "$srcdir/pamac-$pkgver"
+	fi
 
-  # adjust version string
-  cd "$srcdir/pamac-$_pkgver/src"
-  sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" manager_window.vala 
-  cd "$srcdir/pamac-$_pkgver/"
-  # patches here
+	# adjust version string
+	sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" src/manager_window.vala 
+	# don't install systemd timers for manjaro's pacman-mirrors script
+	sed -i '/pamac-mirrorlist/d' src/Makefile
+
+	# patches here
 }
 
 build() {

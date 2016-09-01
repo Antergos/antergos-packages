@@ -40,10 +40,11 @@ prepare() {
 	{ [[ "${_gitcommit}" != "" ]] &&  cd "${srcdir}/pamac"; } || cd "${srcdir}/pamac-${_pkgver}"
 
 	# adjust version string
-	sed -i -e "s|\"4.1.0\"|\"$pkgver-$pkgrel\"|g" src/transaction.vala 
+	sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" src/manager_window.vala 
+	# don't install systemd timers for manjaro's pacman-mirrors script
+	sed -i '/pamac-mirrorlist/d' src/Makefile
 
 	# patches here
-
 }
 
 build() {
