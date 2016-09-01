@@ -43,6 +43,8 @@ prepare() {
 		mv "$srcdir/pamac-$_gitcommit" "$srcdir/pamac-$pkgver"
 	fi
 
+	cd "$srcdir/pamac-$pkgver"
+
 	# adjust version string
 	sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" src/manager_window.vala 
 	# don't install systemd timers for manjaro's pacman-mirrors script
