@@ -1,48 +1,53 @@
-#Maintainer: Alex Filgueira <alexfilgueira@antergos.com>
+# Maintainer: Antergos Developers <dev@antergos.com>
 
-_pkgname=Cnchi
 pkgname=cnchi
-pkgver=0.14.173
-_pkgver=${pkgver}
+pkgver=0.14.178
 pkgrel=1
-pkgdesc='Graphical Installer for Antergos Linux'
-arch=(any)
-license=(GPL)
-url="https://github.com/Antergos/Cnchi"
-conflicts=(cnchi-dev)
-depends=(python pyalpm python-gobject python-dbus python-cairo python-requests
-         python-parted webkit2gtk upower python-mako iso-codes gptfdisk python-bugsnag upower)
-#source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/Cnchi/archive/master.tar.gz")
-source=("${pkgname}.tar")
+pkgdesc='A modern, flexible system installer for Linux'
+arch=('any')
+license=('GPL3')
+url='https://github.com/Antergos/Cnchi'
+depends=('python' 'pyalpm' 'python-gobject' 'python-dbus' 'python-cairo' 'python-requests'
+		'python-parted' 'webkit2gtk' 'upower' 'python-mako' 'iso-codes' 'gptfdisk'
+		'python-bugsnag' 'upower')
+conflicts=('cnchi-dev')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/Cnchi/archive/master.tar.gz")
 md5sums=('')
 
-pkgver() {
-  echo ${_pkgver}
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='cnchi'
+# END ANTBS METADATA
+
+
+build() {
+	cp -R ../po "${srcdir}/${pkgname}-${pkgver}"
 }
 
-build () {
-  cd "$srcdir/${pkgname}"
-}
 
 package() {
-	cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 
-	install -d ${pkgdir}/usr/share/locale/
-	install -d ${pkgdir}/usr/share/cnchi
+	install -d ${pkgdir}/usr/share/{cnchi,locale}
 	install -Dm755 "bin/${pkgname}" "${pkgdir}/usr/bin/cnchi"
 	install -Dm755 "${pkgname}.desktop" "${pkgdir}/usr/share/applications/cnchi.desktop"
+	
 	for i in cnchi bin data scripts ui; do
 		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
 	done
 
-  	for files in po/*; do
-    	if [ -f "$files" ] && [ "$files" != 'po/cnchi.pot' ]; then
-        	STRING_PO=`echo ${files#*/}`
-        	STRING=`echo ${STRING_PO%.po}`
-        	mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
-        	msgfmt $files -o ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/cnchi.mo
-        	echo "${STRING} installed..."
-    	fi
+	for files in po/*; do
+		if [ -f "$files" ] && [ "$files" != 'po/cnchi.pot' ]; then
+			STRING_PO=`echo ${files#*/}`
+			STRING=`echo ${STRING_PO%.po}`
+			mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
+			msgfmt $files -o ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/cnchi.mo
+		 	echo "${STRING} installed..."
+		fi
 	done
 }
 
