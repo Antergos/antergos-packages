@@ -8,7 +8,7 @@ ac_add_options --enable-rust
 
 # Release branding
 ac_add_options --enable-official-branding
-ac_add_options --enable-update-channel=release
+ac_add_options --enable-update-channel=beta
 MOZ_ADDON_SIGNING=1
 MOZ_REQUIRE_SIGNING=1
 

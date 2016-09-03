@@ -104,34 +104,32 @@ package() {
 
 	make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
 
-	install -Dm644 ../vendor.js "${pkgdir}/usr/lib/firefox/browser/defaults/preferences/vendor.js"
+	install -Dm644 ../vendor.js "${pkgdir}/usr/lib/${pkgname}/browser/defaults/preferences/vendor.js"
 
 	for i in 16 22 24 32 48 256; do
 		install -Dm644 "browser/branding/official/default${i}.png" \
-			"${pkgdir}/usr/share/icons/hicolor/${i}x${i}/apps/firefox.png"
+			"${pkgdir}/usr/share/icons/hicolor/${i}x${i}/apps/${pkgname}.png"
 	done
 
 	_branding='browser/branding/official'
 	_hicolor="${pkgdir}/usr/share/icons/hicolor"
-	install -Dm644 "${_branding}/content/icon64.png" "${_hicolor}/64x64/apps/firefox.png"
-	install -Dm644 "${_branding}/mozicon128.png" "${_hicolor}/128x128/apps/firefox.png"
-	install -Dm644 "${_branding}/content/about-logo.png" "${_hicolor}/192x192/apps/firefox.png"
-	install -Dm644 "${_branding}/content/about-logo@2x.png" "${_hicolor}/384x384/apps/firefox.png"
-	install -Dm644 ../firefox-symbolic.svg "${_hicolor}/symbolic/apps/firefox-symbolic.svg"
-
-	install -Dm644 ../firefox.desktop "${pkgdir}/usr/share/applications/firefox.desktop"
+	install -Dm644 "${_branding}/content/icon64.png" "${_hicolor}/64x64/apps/${pkgname}.png"
+	install -Dm644 "${_branding}/mozicon128.png" "${_hicolor}/128x128/apps/${pkgname}.png"
+	install -Dm644 "${_branding}/content/about-logo.png" "${_hicolor}/192x192/apps/${pkgname}.png"
+	install -Dm644 "${_branding}/content/about-logo@2x.png" "${_hicolor}/384x384/apps/${pkgname}.png"
+	install -Dm644 ../firefox-symbolic.svg "${_hicolor}/symbolic/apps/${pkgname}-symbolic.svg"
 
 	# Desktops
 	install -m644 *.desktop "${pkgdir}/usr/share/applications"
 
 	# Use system-provided dictionaries
-	rm -rf "${pkgdir}"/usr/lib/firefox/{dictionaries,hyphenation}
-	ln -s /usr/share/hunspell "${pkgdir}/usr/lib/firefox/dictionaries"
-	ln -s /usr/share/hyphen "${pkgdir}/usr/lib/firefox/hyphenation"
+	rm -rf "${pkgdir}/usr/lib/${pkgname}"/{dictionaries,hyphenation}
+	ln -s /usr/share/hunspell "${pkgdir}/usr/lib/${pkgname}/dictionaries"
+	ln -s /usr/share/hyphen "${pkgdir}/usr/lib/${pkgname}/hyphenation"
 	
 	# Replace duplicate binary with symlink
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=658850
-	ln -sf firefox "${pkgdir}/usr/lib/firefox/firefox-bin"
+	ln -sf firefox "${pkgdir}/usr/lib/${pkgname}/firefox-bin"
 }
 
 # -*- mode: bash;-*-
