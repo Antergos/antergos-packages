@@ -2,7 +2,7 @@
 # Contributor: D. Can Celasun <dcelasun[at]gmail[dot]com>
 
 pkgname=n1
-pkgver=0.4.51
+pkgver=0.4.47 
 buildver=b0ec335
 pkgrel=1
 pkgdesc="A mail client for Mac, Linux, and Windows that is built on the modern web and designed to be extended."
@@ -15,6 +15,17 @@ groups=('email')
 source=("https://github.com/nylas/N1/releases/download/${pkgver}/N1-${pkgver}.deb")
 install=${pkgname}.install
 md5sums=('6e07835b7aaa96a242af6c11cb8f1092')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='nylas'
+_monitored_repo='N1'
+# END ANTBS METADATA
+
+
 package() {
 	msg2 "Extracting data.tar.gz..."
 	bsdtar -xf data.tar.gz -C "${pkgdir}/"
