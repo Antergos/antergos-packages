@@ -2,67 +2,136 @@
 # Contributors: Achilleas Pipinellis, speed145a, Schnouki, Det
 
 pkgname=firefox-beta
-pkgver=49.0b6
+_pkgname=firefox
+pkgver=49.0b10
 _major=${pkgver/rc*}
 _build=${pkgver/*rc}
 pkgrel=1
-pkgdesc="Standalone web browser from mozilla.org - Beta"
+pkgdesc="Standalone web browser from mozilla.org - Beta Channel"
 arch=('i686' 'x86_64')
-url="https://www.mozilla.org/en-US/firefox/channel/#beta"
+url="https://www.mozilla.org/en-US/firefox/channel#beta"
 license=('MPL' 'GPL' 'LGPL')
 groups=('browser')
-depends=('alsa-lib' 'dbus-glib' 'desktop-file-utils' 'gtk2' 'gtk3' 'hicolor-icon-theme'
-		'icu' 'libevent' 'libvpx' 'libxt' 'mime-types' 'nss' 'sqlite')
-optdepends=('gst-plugins-base: vorbis decoding, ogg demuxing'
-			'gst-plugins-good: webm and mp4 demuxing'
-			'gst-plugins-bad: aac, vp8 and opus decoding'
-			'gst-plugins-ugly: h.264 and mp3 decoding'
-			'gst-libav: more decoders'
-			'libpulse: PulseAudio driver'
-			'networkmanager: Location detection via available WiFi networks')
+depends=('alsa-lib' 'dbus-glib' 'desktop-file-utils' 'ffmpeg' 'gtk2' 'gtk3' 'hunspell'
+		'icu' 'libevent' 'libvpx' 'libxt' 'mime-types' 'mozilla-common' 'nss'
+		'startup-notification' 'sqlite' 'ttf-font')
+makedepends=('unzip' 'zip' 'diffutils' 'python2' 'yasm' 'mesa' 'imake' 'gconf'
+			'libpulse' 'inetutils' 'xorg-server-xvfb' 'autoconf2.13' 'rust')
+optdepends=('networkmanager: Location detection via available WiFi networks'
+			'upower: Battery API')
 provides=("firefox=${pkgver}" 'firefox-beta' 'firefox-beta-bin')
 conflicts=('firefox-beta-bin' 'firefox-beta')
-source=("$pkgname.desktop")
-source_i686=("firefox-${pkgver}-i686.tar.bz2::https://ftp.mozilla.org/pub/firefox/releases/$pkgver/linux-i686/en-US/firefox-$pkgver.tar.bz2")
-source_x86_64=("firefox-${pkgver}-x86_64.tar.bz2::https://ftp.mozilla.org/pub/firefox/releases/$pkgver/linux-x86_64/en-US/firefox-$pkgver.tar.bz2")
+options=('!emptydirs' '!makeflags')
 
 if [[ "${_build}" != "${pkgver}" ]]; then
-	# RC
-	source_i686=("firefox-${_major}-i686.tar.bz2::https://ftp.mozilla.org/pub/firefox/candidates/$_major-candidates/build$_build/linux-i686/en-US/firefox-$_major.tar.bz2")
-	source_x86_64=("firefox-${_major}-x86_64.tar.bz2::https://ftp.mozilla.org/pub/firefox/candidates/$_major-candidates/build$_build/linux-x86_64/en-US/firefox-$_major.tar.bz2")
+	# Release Candidate
+	source=("https://ftp.mozilla.org/pub/firefox/candidates/$_major-candidates/build$_build/source/firefox-$pkgver.source.tar.xz")
+else
+	source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$pkgver/source/firefox-$pkgver.source.tar.xz")
 fi
 
+source+=("${pkgname}.desktop"
+		'mozconfig'
+		'firefox-install-dir.patch'
+		'vendor.js'
+		'firefox-symbolic.svg'
+		'no-libnotify.patch')
 md5sums=('259ea8127d1f3a72ac23db0a97455472')
-md5sums_i686=('55a131dead6f3943769c1f1f969ded8a')
-md5sums_x86_64=('a037d792be43db94acb21542e042c426')
+
+# Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
+# Note: These are for Antergos Linux use ONLY. For your own distribution, please
+# get your own set of keys. Feel free to contact info@antergos.com for
+# more information.
+_google_apps_domain='.apps.googleusercontent.com'
+_google_api_key='AIzaSyBPgpho0q0siP2tggJwIsDx8ykpp-Y76Xk'
+_google_default_client_id="523794628393-5f327td2rntpgvfvitoe2l36b2k4qdmq${_google_apps_domain}"
+_google_default_client_secret='PGTWmwZDJ5VjvFoCKfVc19cK'
+
+# Mozilla API keys (see https://location.services.mozilla.com/api)
+# Note: These are for Antergos Linux use ONLY. For your own distribution, please
+# get your own set of keys. Feel free to contact info@antergos.com for
+# more information.
+_mozilla_api_key='fa35d4d6-6529-436f-b3a1-8b9af187eca2'
+
+
+prepare() {
+	cd "${_pkgname}-${pkgver}"
+
+	cp ../mozconfig .mozconfig
+	patch -Np1 -i ../firefox-install-dir.patch
+
+	# Notifications with libnotify are broken
+	# https://bugzilla.mozilla.org/show_bug.cgi?id=1236150
+	patch -Np1 -i ../no-libnotify.patch
+
+	echo -n "$_google_api_key" >google-api-key
+	echo "ac_add_options --with-google-api-keyfile=\"$PWD/google-api-key\"" >>.mozconfig
+
+	echo -n "$_google_default_client_id $_google_default_client_secret" >google-oauth-api-key
+	echo "ac_add_options --with-google-oauth-api-keyfile=\"$PWD/google-oauth-api-key\"" >>.mozconfig
+
+	echo -n "$_mozilla_api_key" >mozilla-api-key
+	echo "ac_add_options --with-mozilla-api-keyfile=\"$PWD/mozilla-api-key\"" >>.mozconfig
+
+	mkdir "$srcdir/path"
+	ln -s /usr/bin/python2 "$srcdir/path/python"
+}
+
+
+build() {
+	cd "${_pkgname}-${pkgver}"
+
+	# _FORTIFY_SOURCE causes configure failures
+	CPPFLAGS+=" -O2"
+
+	# Hardening
+	LDFLAGS+=" -Wl,-z,now"
+
+	# GCC 6
+	CXXFLAGS+=" -fno-delete-null-pointer-checks -fno-lifetime-dse -fno-schedule-insns2"
+
+	export PATH="${srcdir}/path:$PATH"
+
+	# Do PGO
+	# xvfb-run -a -s "-extension GLX -screen 0 1280x1024x24" \
+	# make -f client.mk build MOZ_PGO=1
+	make -f client.mk build
+}
+
 
 package() {
-  # Create directories
-  msg2 "Creating directory structure..."
-  mkdir -p "${pkgdir}/usr/bin"
-  mkdir -p "${pkgdir}/usr/share/applications"
-  mkdir -p "${pkgdir}/usr/share/icons/hicolor/128x128/apps"
-  mkdir -p "${pkgdir}/opt"
+	cd "${_pkgname}-${pkgver}"
 
-  msg2 "Moving stuff in place..."
-  # Install
-  cp -r firefox/ "${pkgdir}/opt/${pkgname}"
+	make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
 
-  # /usr/bin link
-  ln -s /opt/$pkgname/firefox "${pkgdir}/usr/bin/${pkgname}"
-  ln -s /opt/$pkgname/firefox "${pkgdir}/usr/bin/${pkgname}-bin"
+	install -Dm644 ../vendor.js "${pkgdir}/usr/lib/firefox/browser/defaults/preferences/vendor.js"
 
-  # Desktops
-  install -m644 *.desktop "$pkgdir"/usr/share/applications/
+	for i in 16 22 24 32 48 256; do
+		install -Dm644 "browser/branding/official/default${i}.png" \
+			"${pkgdir}/usr/share/icons/hicolor/${i}x${i}/apps/firefox.png"
+	done
 
-  # Icons
-  for i in 16x16 22x22 24x24 32x32 48x48 256x256; do
-    install -d "$pkgdir"/usr/share/icons/hicolor/$i/apps/
-    ln -s /opt/$pkgname/browser/chrome/icons/default/default${i/x*}.png \
-          "$pkgdir"/usr/share/icons/hicolor/$i/apps/$pkgname.png
-  done
+	_branding='browser/branding/official'
+	_hicolor="${pkgdir}/usr/share/icons/hicolor"
+	install -Dm644 "${_branding}/content/icon64.png" "${_hicolor}/64x64/apps/firefox.png"
+	install -Dm644 "${_branding}/mozicon128.png" "${_hicolor}/128x128/apps/firefox.png"
+	install -Dm644 "${_branding}/content/about-logo.png" "${_hicolor}/192x192/apps/firefox.png"
+	install -Dm644 "${_branding}/content/about-logo@2x.png" "${_hicolor}/384x384/apps/firefox.png"
+	install -Dm644 ../firefox-symbolic.svg "${_hicolor}/symbolic/apps/firefox-symbolic.svg"
 
-  ln -s /opt/$pkgname/browser/icons/mozicon128.png \
-        "$pkgdir"/usr/share/icons/hicolor/128x128/apps/$pkgname.png
+	install -Dm644 ../firefox.desktop "${pkgdir}/usr/share/applications/firefox.desktop"
+
+	# Desktops
+	install -m644 *.desktop "${pkgdir}/usr/share/applications"
+
+	# Use system-provided dictionaries
+	rm -rf "${pkgdir}"/usr/lib/firefox/{dictionaries,hyphenation}
+	ln -s /usr/share/hunspell "${pkgdir}/usr/lib/firefox/dictionaries"
+	ln -s /usr/share/hyphen "${pkgdir}/usr/lib/firefox/hyphenation"
+	
+	# Replace duplicate binary with symlink
+	# https://bugzilla.mozilla.org/show_bug.cgi?id=658850
+	ln -sf firefox "${pkgdir}/usr/lib/firefox/firefox-bin"
 }
+
 # -*- mode: bash;-*-
