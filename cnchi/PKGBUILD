@@ -1,6 +1,7 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=cnchi
+_pkgname=Cnchi
 pkgver=0.14.178
 pkgrel=1
 pkgdesc='A modern, flexible system installer for Linux'
@@ -11,7 +12,7 @@ depends=('python' 'pyalpm' 'python-gobject' 'python-dbus' 'python-cairo' 'python
 		'python-parted' 'webkit2gtk' 'upower' 'python-mako' 'iso-codes' 'gptfdisk'
 		'python-bugsnag' 'upower')
 conflicts=('cnchi-dev')
-source=("${pkgname}-${pkgver}.zip::https://github.com/antergos/cnchi/archive/${pkgver}.zip")
+source=("${_pkgname}-${pkgver}.zip::https://github.com/antergos/cnchi/archive/${pkgver}.zip")
 md5sums=('40f996c8a36baa1b5ce8f14acc43d8ca')
 
 
@@ -25,12 +26,12 @@ _monitored_repo='cnchi'
 
 
 build() {
-	cp -R ../po "${srcdir}/${pkgname}-${pkgver}"
+	cp -R ../po "${srcdir}/${_pkgname}-${pkgver}"
 }
 
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${_pkgname}-${pkgver}"
 
 	install -d ${pkgdir}/usr/share/{cnchi,locale}
 	install -Dm755 "bin/${pkgname}" "${pkgdir}/usr/bin/cnchi"
