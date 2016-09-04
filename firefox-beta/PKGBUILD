@@ -120,7 +120,7 @@ package() {
 	install -Dm644 ../firefox-symbolic.svg "${_hicolor}/symbolic/apps/${pkgname}-symbolic.svg"
 
 	# Desktops
-	install -m644 *.desktop "${pkgdir}/usr/share/applications"
+	install -m644 ../"${pkgname}".desktop "${pkgdir}/usr/share/applications"
 
 	# Use system-provided dictionaries
 	rm -rf "${pkgdir}/usr/lib/${pkgname}"/{dictionaries,hyphenation}
