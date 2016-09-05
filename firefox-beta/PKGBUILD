@@ -12,14 +12,13 @@ arch=('i686' 'x86_64')
 url="https://www.mozilla.org/en-US/firefox/channel#beta"
 license=('MPL' 'GPL' 'LGPL')
 groups=('browser')
-depends=('alsa-lib' 'dbus-glib' 'desktop-file-utils' 'ffmpeg' 'gtk2' 'gtk3' 'hunspell'
-		'icu' 'libevent' 'libvpx' 'libxt' 'mime-types' 'mozilla-common' 'nss'
-		'startup-notification' 'sqlite' 'ttf-font')
+depends=('alsa-lib' 'dbus-glib' 'ffmpeg' 'gtk2' 'gtk3' 'hunspell' 'icu' 'libevent' 'libvpx'
+		'libxt' 'mime-types' 'mozilla-common' 'nss' 'startup-notification' 'sqlite' 'ttf-font')
 makedepends=('unzip' 'zip' 'diffutils' 'python2' 'yasm' 'mesa' 'imake' 'gconf'
 			'libpulse' 'inetutils' 'xorg-server-xvfb' 'autoconf2.13' 'rust')
 optdepends=('networkmanager: Location detection via available WiFi networks'
 			'upower: Battery API')
-provides=("firefox=${pkgver}" 'firefox-beta' 'firefox-beta-bin')
+provides=("firefox=${pkgver}")
 conflicts=('firefox-beta-bin' 'firefox-beta')
 options=('!emptydirs' '!makeflags')
 
@@ -72,6 +71,8 @@ prepare() {
 
 	echo -n "$_mozilla_api_key" >mozilla-api-key
 	echo "ac_add_options --with-mozilla-api-keyfile=\"$PWD/mozilla-api-key\"" >>.mozconfig
+
+	[[ 'i686' = "${CARCH}" ]] && echo 'ac_add_options --target=i686-unknown-linux-gnu' >>.mozconfig
 
 	mkdir "$srcdir/path"
 	ln -s /usr/bin/python2 "$srcdir/path/python"
