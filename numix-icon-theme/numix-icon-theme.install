@@ -1,12 +1,8 @@
 post-install() {
 	case $DESKTOP_SESSION in
 		kde*|*plasma*|lxqt*) 
-			sed -i 's|Faenza,Adwaita,gnome|Breeze,KFaenza|g' /usr/share/icons/Numix-Light/index.theme
-			sed -i 's|gnome,hicolor|Breeze,KFaenza,hicolor|g' /usr/share/icons/Numix/index.theme
-			rm /var/tmp/kdecache-${USER}/icon-cache.kcache
-		  ;;
-		*)
-		  gtk-update-icon-cache -ftq usr/share/icons/Numix usr/share/icons/Numix-Light
+			sed -i 's|Adwaita|Breeze|g' /usr/share/icons/Numix-Light/index.theme
+			sed -i 's|gnome|Breeze|g' /usr/share/icons/Numix/index.theme
 		  ;;
 	esac
 }
@@ -15,16 +11,5 @@ post-upgrade() {
 	post_install
 }
 
-post-remove() {
-  case $DESKTOP_SESSION in
-		kde*|*plasma*|lxqt*) 
-			rm /var/tmp/kdecache-${USER}/icon-cache.kcache
-		  ;;
-		*)
-		  gtk-update-icon-cache -ftq usr/share/icons/Numix usr/share/icons/Numix-Light
-		  ;;
-	esac
-}
 
-# vim: ts=2 sw=2 et:
 # -*- mode:bash; -*-

@@ -1,16 +1,13 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme
-pkgver=0.1834
-pkgrel=2
+pkgver=0.1881
+pkgrel=1
 pkgdesc="Base icon theme from the Numix project"
 arch=('any')
 url='http://numixproject.org/'
 license=('GPL3')
 depends=('gnome-icon-theme')
-optdepends=('faenza-icon-theme: fallback icons'
-			'breeze-icons: KDE'
-			'kfaenza-icon-theme: fallback icons (KDE)')
 makedepends=('git')
 options=('!strip')
 install="${pkgname}.install"
@@ -49,8 +46,8 @@ package() {
 	done
 
 	sed -i 's|Name=Numix Light|Name=Numix-Light|g' Numix-Light/index.theme
-	sed -i 's|Inherits=Numix|Inherits=Numix,Faenza,Adwaita,gnome,hicolor|g' Numix-Light/index.theme
-	sed -i 's|Inherits=gnome,hicolor|Inherits=Faenza,Adwaita,gnome,hicolor|g' Numix/index.theme
+	sed -i 's|Inherits=Numix|Inherits=Numix,Adwaita,gnome,hicolor|g' Numix-Light/index.theme
+	sed -i 's|Inherits=gnome,hicolor|Inherits=Adwaita,gnome,hicolor|g' Numix/index.theme
 
 	install -dm 755 "$pkgdir"/usr/share/icons
 	cp -dr --no-preserve='ownership' Numix "$pkgdir"/usr/share/icons/
