@@ -4,7 +4,7 @@
 
 pkgname=cinnamon-session
 pkgver=3.0.1
-pkgrel=4
+pkgrel=5
 pkgdesc="The Cinnamon Session Handler"
 arch=(i686 x86_64)
 license=(GPL LGPL)
@@ -15,9 +15,9 @@ makedepends=('intltool' 'mesa' 'json-glib' 'xtrans' 'gnome-common')
 options=('!emptydirs')
 url="https://github.com/linuxmint/cinnamon-session"
 source=("${pkgname}-${pkgver}.zip::https://github.com/linuxmint/cinnamon-session/archive/${pkgver}.zip"
-		'qt57-theme-support.patch')
+		'qt57-theme-support.patch::https://github.com/linuxmint/cinnamon-session/pull/75.patch')
 md5sums=('5a477a4d8aa9cc8f92fb7a738334d3ec'
-		'a02c05cddf74ec4ad9d6f71e2951a483')
+         '0de0e5a7120e4cb5ce0592f39f7cf518')
 
 
 # BEGIN ANTBS METADATA

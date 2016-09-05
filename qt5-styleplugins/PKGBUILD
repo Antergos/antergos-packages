@@ -2,19 +2,18 @@
 
 pkgname='qt5-styleplugins'
 _srcname='qtstyleplugins'
-pkgver=5.0.0
-pkgrel=2
+pkgver=5.0.0.1r22
+pkgrel=1
 pkgdesc='Additional style plugins for Qt5'
 arch=('i686' 'x86_64')
 url="https://github.com/qtproject/${_srcname}"
 license=('LGPL')
-
 depends=('qt5-base' 'gconf' 'gtk2' 'libx11')
 makedepends=('git')
 conflicts=("${pkgname}-git")
-_commit='5f2549b016b8da89160d6e2184ea83627bff92d6'
+_commit='7b11d50ac5eb0f9f069d0c73ada5796eac584217'
 source=("${_srcname}-${_commit}.zip::${url}/archive/${_commit}.zip")
-md5sums=('139cee71ab27eebef682ffbe69576b73')
+md5sums=('8fce012f80e3fcd4300ad9239df507ef')
 
 
 build() {
