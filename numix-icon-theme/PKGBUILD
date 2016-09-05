@@ -7,7 +7,7 @@ pkgdesc="Base icon theme from the Numix project"
 arch=('any')
 url='http://numixproject.org/'
 license=('GPL3')
-depends=('gnome-icon-theme')
+depends=('adwaita-icon-theme')
 makedepends=('git')
 options=('!strip')
 install="${pkgname}.install"
@@ -32,7 +32,7 @@ package() {
 			if [[ ${_name} =~ ${_regex} ]]; then
 				_noext="${_icon/.svg}"
 				_mono=$(echo "${_noext}""-symbolic.svg" | sed "s|${2}|scalable|")
-				if [[ -n ${_mono} ]] && [[ -e ${_mono} ]]; then
+				if [[ -n ${_mono} && -e ${_mono} ]]; then
 					rm "${_icon}"
 					cp -L "${_mono}" "${_icon}"
 				fi
@@ -45,9 +45,12 @@ package() {
 		patch_icons Numix ${size}
 	done
 
+	mv Numix/24/places/start-here.svg Numix/24/places/start-here-numix.svg
+	mv Numix/32/places/start-here.svg Numix/32/places/start-here-numix.svg
+
 	sed -i 's|Name=Numix Light|Name=Numix-Light|g' Numix-Light/index.theme
 	sed -i 's|Inherits=Numix|Inherits=Numix,Adwaita,gnome,hicolor|g' Numix-Light/index.theme
-	sed -i 's|Inherits=gnome,hicolor|Inherits=Adwaita,gnome,hicolor|g' Numix/index.theme
+	sed -i 's|Inherits=gnome|Inherits=Adwaita,gnome|g' Numix/index.theme
 
 	install -dm 755 "$pkgdir"/usr/share/icons
 	cp -dr --no-preserve='ownership' Numix "$pkgdir"/usr/share/icons/
