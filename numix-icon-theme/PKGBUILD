@@ -45,8 +45,8 @@ package() {
 		patch_icons Numix ${size}
 	done
 
-	mv Numix/24/places/start-here.svg Numix/24/places/start-here-numix.svg
-	mv Numix/32/places/start-here.svg Numix/32/places/start-here-numix.svg
+	mv Numix/24/places/start-here.svg Numix/24/places/start-here-Numix.svg
+	mv Numix/32/places/start-here.svg Numix/32/places/start-here-Numix.svg
 
 	sed -i 's|Name=Numix Light|Name=Numix-Light|g' Numix-Light/index.theme
 	sed -i 's|Inherits=Numix|Inherits=Numix,Adwaita,gnome,hicolor|g' Numix-Light/index.theme
