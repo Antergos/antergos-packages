@@ -90,7 +90,6 @@ prepare() {
 	patch -Np1 -i "${srcdir}/firefox-kde.patch"
 	patch -Np1 -i "${srcdir}/firefox-no-default-ualocale.patch"
 	patch -Np1 -i "${srcdir}/firefox-branded-icons.patch"
-	patch -Np1 -i "${srcdir}/pgo_fix_missing_kdejs.patch"
 	patch -Np1 -i "${srcdir}/mozilla-gtk3_20.patch"
 	patch -Np1 -i "${srcdir}/mozilla-reduce-files-per-UnifiedBindings.patch"
 
