@@ -2,29 +2,26 @@
 # Contributor: Weng Xuetian <wengxt@gmail.com>
 # Contributor: Thaodan <theodorstormgrade@gmail.com>
 
-_pgo=true
 _pkgname=firefox
 pkgname=firefox-kde
-pkgver=47.0.1
+pkgver=48.0.2
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org with openSUSE KDE integration patches."
 arch=('i686' 'x86_64')
 license=('MPL' 'GPL' 'LGPL')
 url="https://build.opensuse.org/package/show/mozilla:Factory/MozillaFirefox"
-depends=('gtk2' 'mozilla-common' 'libxt' 'startup-notification' 'mime-types'
-		'dbus-glib' 'alsa-lib' 'desktop-file-utils' 'hicolor-icon-theme'
-		'libvpx' 'icu'  'libevent' 'nss' 'hunspell' 'sqlite' 'ttf-font'
-		'kmozillahelper' 'gtk3' 'ffmpeg')
-makedepends=('unzip' 'zip' 'diffutils' 'python2' 'yasm' 'mesa' 'imake' 'gconf' 'libx11'
-			'xorg-server-xvfb' 'libpulse' 'gst-plugins-base-libs' 'inetutils')
+groups=('browser')
+depends=('alsa-lib' 'dbus-glib' 'ffmpeg' 'gtk2' 'gtk3' 'hunspell' 'icu' 'libevent' 'libvpx'
+		'libxt' 'mime-types' 'mozilla-common' 'nss' 'startup-notification' 'sqlite' 'ttf-font'
+		'kmozillahelper')
+makedepends=('unzip' 'zip' 'diffutils' 'python2' 'yasm' 'mesa' 'imake' 'gconf'
+			'libpulse' 'inetutils' 'xorg-server-xvfb' 'autoconf2.13' 'rust')
 optdepends=('networkmanager: Location detection via available WiFi networks'
-			'gst-plugins-good: MP3 playback'
-			'gst-plugins-ugly: MP3 playback'
 			'upower: Battery API')
+provides=("firefox=${pkgver}")
 conflicts=('firefox')
-provides=('firefox')
 options=('!emptydirs' '!makeflags')
-_patchrev=4e5807284ef0
+_patchrev=300ed867f7fd
 _patchurl=http://www.rosenauer.org/hg/mozilla/raw-file/${_patchrev}
 source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/source/${_pkgname}-${pkgver}.source.tar.xz"
 		'mozconfig'
@@ -32,6 +29,8 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		'firefox-install-dir.patch'
 		'vendor.js'
 		'kde.js'
+		'firefox-symbolic.svg'
+		'no-libnotify.patch'
 		# Firefox patchset
 		$_patchurl/firefox-branded-icons.patch
 		$_patchurl/firefox-kde.patch
@@ -41,64 +40,50 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		$_patchurl/mozilla-language.patch
 		$_patchurl/mozilla-nongnome-proxies.patch
 		$_patchurl/mozilla-gtk3_20.patch
-		$_patchurl/mozilla-reduce-files-per-UnifiedBindings.patch
-		pgo_fix_missing_kdejs.patch
-		firefox-symbolic.svg
-		no-libnotify.patch
-)
-md5sums=('aba4b673b10e3fdcee80f88300829613'
-         'ebc9a57420ee7c4d9b4e4d7249db4e44'
-         '9b02198df96be08f2a0a323ac2e6c2a2'
-         'dbf14588e85812ee769bd735823a0146'
-         '0d053487907de4376d67d8f499c5502b'
-         '05bb69d25fb3572c618e3adf1ee7b670'
-         '121a0d61ebe994e69f4428c13a4a5549'
-         '04ff0dcb88fd94363f9936701a58925e'
-         '6c9a8cb4bcaa71e5f98648b6baee9ccd'
-         'f9278c5e917f6d4faa9dadb555fec7f1'
-         '903307f923a459189a5a6062ff9df38c'
-         '0c684360f1df4536512d51873c1d243d'
-         'f6c4c052d5cf8b050f72e3db6677f176'
-         '4d240471a642270accd515199ca698e4'
-         '84a56c991883a9a7c38f01e0cb9561ac'
-         '961a929a85e02e00eb11e3e303a4bc0e'
-         '2fdf03e2bcb442342928863dc9635789')
+		$_patchurl/mozilla-reduce-files-per-UnifiedBindings.patch)
+md5sums=('bd6410592a8c608c0f771c056351493c'
+		'77334bc5b58c888e6c7db50718f11be1'
+		'9b02198df96be08f2a0a323ac2e6c2a2'
+		'dbf14588e85812ee769bd735823a0146'
+		'0d053487907de4376d67d8f499c5502b'
+		'75df0f88cc7a7fa7d522459e4ff82cc5'
+		'961a929a85e02e00eb11e3e303a4bc0e'
+		'2fdf03e2bcb442342928863dc9635789'
+		'3b3eb8c2747429887e4a03537932eac5'
+		'84c6a2bf45cfc2393821ec2f5ccd64c5'
+		'1fad9a988826d69fe712ea973e43f6da'
+		'91ee1935c2674f89d4f8f358de2f0dbc'
+		'903307f923a459189a5a6062ff9df38c'
+		'0c684360f1df4536512d51873c1d243d'
+		'e4c3fa5aed9663316ea6cdb9c533242f'
+		'4d240471a642270accd515199ca698e4')
 
 # Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
 # get your own set of keys. Feel free to contact info@antergos.com for
 # more information.
 _google_apps_domain='.apps.googleusercontent.com'
-_google_api_key=AIzaSyBPgpho0q0siP2tggJwIsDx8ykpp-Y76Xk
+_google_api_key='AIzaSyBPgpho0q0siP2tggJwIsDx8ykpp-Y76Xk'
 _google_default_client_id="523794628393-5f327td2rntpgvfvitoe2l36b2k4qdmq${_google_apps_domain}"
-_google_default_client_secret=PGTWmwZDJ5VjvFoCKfVc19cK
+_google_default_client_secret='PGTWmwZDJ5VjvFoCKfVc19cK'
 
 # Mozilla API keys (see https://location.services.mozilla.com/api)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
 # get your own set of keys. Feel free to contact info@antergos.com for
 # more information.
-_mozilla_api_key=fa35d4d6-6529-436f-b3a1-8b9af187eca2
+_mozilla_api_key='fa35d4d6-6529-436f-b3a1-8b9af187eca2'
+
 
 prepare() {
-	cd $_pkgname-$pkgver
+	cd "${_pkgname}-${pkgver}"
 
 	cp ../mozconfig .mozconfig
 	patch -Np1 -i ../firefox-install-dir.patch
-	
-	echo -n "${_google_api_key}" > google-api-key
-	echo "ac_add_options --with-google-api-keyfile=\"${PWD}/google-api-key\"" >> .mozconfig
 
-	echo -n "${_google_default_client_id} ${_google_default_client_secret}" > google-oauth-api-key
-	echo "ac_add_options --with-google-oauth-api-keyfile=\"${PWD}/google-oauth-api-key\"" >> .mozconfig
-
-	echo -n "${_mozilla_api_key}" > mozilla-api-key
-	echo "ac_add_options --with-mozilla-api-keyfile=\"${PWD}/mozilla-api-key\"" >> .mozconfig
-	
 	# Notifications with libnotify are broken
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=1236150
 	patch -Np1 -i ../no-libnotify.patch
 
-	msg "Patching for KDE"
 	patch -Np1 -i "${srcdir}/mozilla-nongnome-proxies.patch"
 	patch -Np1 -i "${srcdir}/mozilla-kde.patch"
 	patch -Np1 -i "${srcdir}/mozilla-language.patch"
@@ -109,75 +94,73 @@ prepare() {
 	patch -Np1 -i "${srcdir}/mozilla-gtk3_20.patch"
 	patch -Np1 -i "${srcdir}/mozilla-reduce-files-per-UnifiedBindings.patch"
 
-	# configure script misdetects the preprocessor without an optimization level
-	# https://bugs.archlinux.org/task/34644
-	sed -i '/ac_cpp=/s/$CPPFLAGS/& -O2/' configure
+	echo -n "$_google_api_key" >google-api-key
+	echo "ac_add_options --with-google-api-keyfile=\"$PWD/google-api-key\"" >>.mozconfig
 
-	# WebRTC build tries to execute "python" and expects Python 2
-	mkdir -p "${srcdir}/path"
-	ln -sf /usr/bin/python2 "${srcdir}/path/python"
+	echo -n "$_google_default_client_id $_google_default_client_secret" >google-oauth-api-key
+	echo "ac_add_options --with-google-oauth-api-keyfile=\"$PWD/google-oauth-api-key\"" >>.mozconfig
 
-	# Fix tab loading icon (flickers with libpng 1.6)
-	# https://bugzilla.mozilla.org/show_bug.cgi?id=841734
-	# TODO: Remove this; Firefox 34 might use CSS animations for the loading icon
-	# https://bugzilla.mozilla.org/show_bug.cgi?id=759252
-	#cp "${srcdir}/firefox-fixed-loading-icon.png" \
-	#  browser/themes/linux/tabbrowser/loading.png
+	echo -n "$_mozilla_api_key" >mozilla-api-key
+	echo "ac_add_options --with-mozilla-api-keyfile=\"$PWD/mozilla-api-key\"" >>.mozconfig
+
+	[[ 'i686' = "${CARCH}" ]] && echo 'ac_add_options --target=i686-unknown-linux-gnu' >>.mozconfig
+
+	mkdir "$srcdir/path"
+	ln -s /usr/bin/python2 "$srcdir/path/python"
 }
 
-build() {
 
-	cd ${_pkgname}-${pkgver}
+build() {
+	cd "${_pkgname}-${pkgver}"
+
+	# _FORTIFY_SOURCE causes configure failures
+	CPPFLAGS+=" -O2"
+
+	# Hardening
+	LDFLAGS+=" -Wl,-z,now"
+
+	# GCC 6
+	CXXFLAGS+=" -fno-delete-null-pointer-checks -fno-lifetime-dse -fno-schedule-insns2"
 
 	export PATH="${srcdir}/path:$PATH"
-	export PYTHON="/usr/bin/python2"
 
-	if [[ "$CARCH" = "i686" ]]; then
-		LDFLAGS='-Wl,--no-keep-memory' linux32 xvfb-run -a -s "-extension GLX -screen 0 1280x1024x24" make -f client.mk build MOZ_PGO=1
-	else
-		# LDFLAGS='-Wl,--no-keep-memory' make -f client.mk build
-		LDFLAGS='-Wl,--no-keep-memory' xvfb-run -a -s "-extension GLX -screen 0 1280x1024x24" make -f client.mk build MOZ_PGO=1
-	fi
+	# Do PGO
+	# xvfb-run -a -s "-extension GLX -screen 0 1280x1024x24" \
+	# make -f client.mk build MOZ_PGO=1
+	make -f client.mk build
 }
 
 package() {
-	cd ${_pkgname}-${pkgver}
+	cd "${_pkgname}-${pkgver}"
 
-	if [[ "$CARCH" = "i686" ]]; then
-		cp "${srcdir}/kde.js" obj-i686-pc-linux-gnu/dist/bin/defaults/pref
-		LDFLAGS='-Wl,--no-keep-memory' linux32 make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
-	else
-		cp "${srcdir}/kde.js" obj-x86_64-unknown-linux-gnu/dist/bin/defaults/pref
-		LDFLAGS='-Wl,--no-keep-memory' make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
-	fi
+	make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
 
-	install -Dm644 "${srcdir}/vendor.js" "${pkgdir}/usr/lib/firefox/browser/defaults/preferences/vendor.js"
-	install -Dm644 "${srcdir}/kde.js" "${pkgdir}/usr/lib/firefox/browser/defaults/preferences/kde.js"
+	install -Dm644 ../vendor.js "${pkgdir}/usr/lib/${_pkgname}/browser/defaults/preferences/vendor.js"
+	install -Dm644 ../kde.js "${pkgdir}/usr/lib/firefox/browser/defaults/preferences/kde.js"
 
 	for i in 16 22 24 32 48 256; do
-	    install -Dm644 browser/branding/official/default$i.png \
-	      "${pkgdir}/usr/share/icons/hicolor/${i}x${i}/apps/firefox.png"
+		install -Dm644 "browser/branding/official/default${i}.png" \
+			"${pkgdir}/usr/share/icons/hicolor/${i}x${i}/apps/${_pkgname}.png"
 	done
 
-	install -Dm644 browser/branding/official/content/icon64.png \
-		"${pkgdir}/usr/share/icons/hicolor/64x64/apps/firefox.png"
-	install -Dm644 browser/branding/official/mozicon128.png \
-		"${pkgdir}/usr/share/icons/hicolor/128x128/apps/firefox.png"
-	install -Dm644 browser/branding/official/content/about-logo.png \
-		"${pkgdir}/usr/share/icons/hicolor/192x192/apps/firefox.png"
-	install -Dm644 browser/branding/official/content/about-logo@2x.png \
-		"${pkgdir}/usr/share/icons/hicolor/384x384/apps/firefox.png"
-	install -Dm644 ../firefox-symbolic.svg \
-		"$pkgdir/usr/share/icons/hicolor/symbolic/apps/firefox-symbolic.svg"
+	_branding='browser/branding/official'
+	_hicolor="${pkgdir}/usr/share/icons/hicolor"
+	install -Dm644 "${_branding}/content/icon64.png" "${_hicolor}/64x64/apps/${_pkgname}.png"
+	install -Dm644 "${_branding}/mozicon128.png" "${_hicolor}/128x128/apps/${_pkgname}.png"
+	install -Dm644 "${_branding}/content/about-logo.png" "${_hicolor}/192x192/apps/${_pkgname}.png"
+	install -Dm644 "${_branding}/content/about-logo@2x.png" "${_hicolor}/384x384/apps/${_pkgname}.png"
+	install -Dm644 ../firefox-symbolic.svg "${_hicolor}/symbolic/apps/${_pkgname}-symbolic.svg"
 
-	install -Dm644 "${srcdir}/firefox.desktop" "${pkgdir}/usr/share/applications/firefox.desktop"
+	install -Dm644 ../firefox.desktop "${pkgdir}/usr/share/applications/firefox.desktop"
 
 	# Use system-provided dictionaries
-	rm -rf "${pkgdir}"/usr/lib/firefox/{dictionaries,hyphenation}
-	ln -s /usr/share/hunspell "${pkgdir}/usr/lib/firefox/dictionaries"
-	ln -s /usr/share/hyphen "${pkgdir}/usr/lib/firefox/hyphenation"
+	rm -rf "${pkgdir}/usr/lib/${pkgname}"/{dictionaries,hyphenation}
+	ln -s /usr/share/hunspell "${pkgdir}/usr/lib/${_pkgname}/dictionaries"
+	ln -s /usr/share/hyphen "${pkgdir}/usr/lib/${_pkgname}/hyphenation"
 
-	#workaround for now
-	#https://bugzilla.mozilla.org/show_bug.cgi?id=658850
-	ln -sf firefox "${pkgdir}/usr/lib/firefox/firefox-bin"
+	# Replace duplicate binary with symlink
+	# https://bugzilla.mozilla.org/show_bug.cgi?id=658850
+	ln -sf firefox "${pkgdir}/usr/lib/${_pkgname}/firefox-bin"
 }
+
+# -*- mode: bash;-*-
