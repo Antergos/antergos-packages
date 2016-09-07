@@ -1,9 +1,9 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=clion-eap
-_buildver=162.1967.3
+_buildver=162.1967.7
 _pkgver=2016.2.2
-_eap="True"
+_eap="False"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
 pkgdesc="Powerful C and C++ IDE. Early Access Program (EAP) build."
@@ -41,7 +41,7 @@ package() {
 	if [[ "True" = "${_eap}" ]]; then
 		cp -R --no-preserve=ownership "${srcdir}/clion-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
 	else
-		cp -R --no-preserve=ownership "${srcdir}/clion-${_pkgver::(-2)}/"* "${pkgdir}/opt/${pkgname}"
+		cp -R --no-preserve=ownership "${srcdir}/clion-${_pkgver)}/"* "${pkgdir}/opt/${pkgname}"
 	fi
 	
 	if [[ "i686" = "${CARCH}" ]]; then
