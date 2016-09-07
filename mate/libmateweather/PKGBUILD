@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=libmateweather
-pkgver=1.14.2
+pkgver=1.14.3
 pkgrel=2
 pkgdesc="Provides access to weather information from the Internet."
 url="http://mate-desktop.org"
