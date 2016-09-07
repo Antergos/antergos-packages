@@ -41,7 +41,7 @@ package() {
 	if [[ "True" = "${_eap}" ]]; then
 		cp -R --no-preserve=ownership "${srcdir}/clion-${_buildver}/"* "${pkgdir}/opt/${pkgname}"
 	else
-		cp -R --no-preserve=ownership "${srcdir}/clion-${_pkgver)}/"* "${pkgdir}/opt/${pkgname}"
+		cp -R --no-preserve=ownership "${srcdir}/clion-${_pkgver}/"* "${pkgdir}/opt/${pkgname}"
 	fi
 	
 	if [[ "i686" = "${CARCH}" ]]; then
