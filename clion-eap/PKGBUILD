@@ -1,9 +1,9 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=clion-eap
-_buildver=162.1967.7
-_pkgver=2016.2.2
-_eap="False"
+_buildver=163.3983.6
+_pkgver=2016.3.0
+_eap="True"
 pkgver="${_pkgver}.${_buildver}"
 pkgrel=1
 pkgdesc="Powerful C and C++ IDE. Early Access Program (EAP) build."
