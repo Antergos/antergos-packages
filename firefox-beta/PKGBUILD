@@ -24,7 +24,7 @@ options=('!emptydirs' '!makeflags')
 
 if [[ "${_build}" != "${pkgver}" ]]; then
 	# Release Candidate
-	source=("https://ftp.mozilla.org/pub/firefox/candidates/$_major-candidates/build$_build/source/firefox-$pkgver.source.tar.xz")
+	source=("https://ftp.mozilla.org/pub/firefox/candidates/$_major-candidates/build$_build/source/firefox-$_major.source.tar.xz")
 else
 	source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$pkgver/source/firefox-$pkgver.source.tar.xz")
 fi
