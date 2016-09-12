@@ -54,7 +54,7 @@ _mozilla_api_key='fa35d4d6-6529-436f-b3a1-8b9af187eca2'
 
 
 prepare() {
-	cd "${_pkgname}-${pkgver}" || "${_pkgname}-${_major}"
+	cd "${_pkgname}-${pkgver}" || cd "${_pkgname}-${_major}"
 
 	cp ../mozconfig .mozconfig
 	patch -Np1 -i ../firefox-install-dir.patch
@@ -80,7 +80,7 @@ prepare() {
 
 
 build() {
-	cd "${_pkgname}-${pkgver}" || "${_pkgname}-${_major}"
+	cd "${_pkgname}-${pkgver}" || cd "${_pkgname}-${_major}"
 
 	# _FORTIFY_SOURCE causes configure failures
 	CPPFLAGS+=" -O2"
@@ -101,7 +101,7 @@ build() {
 
 
 package() {
-	cd "${_pkgname}-${pkgver}" || "${_pkgname}-${_major}"
+	cd "${_pkgname}-${pkgver}" || cd "${_pkgname}-${_major}"
 
 	make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
 
