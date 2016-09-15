@@ -3,8 +3,8 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.4.589.11
-pkgrel=2
+pkgver=1.4.589.15
+pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 url="https://vivaldi.com"
 options=(!strip !zipman)
