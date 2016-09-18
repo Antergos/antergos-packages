@@ -6,32 +6,36 @@ _light=Numix-Frost-Light
 _branch=numix-frost-light
 _pkgver=3.5
 pkgver=${_pkgver}
-pkgrel=2
+pkgrel=1
 pkgdesc='Official Numix GTK theme - Antergos Edition'
 arch=('any')
 license=('GPL3')
 groups=('themes' 'themes::gtk')
 url='http://numixproject.org/'
-depends=('gtk-engine-murrine' 'gtk3>=3.16')
+depends=('gtk-engine-murrine' 'gtk3>=3.18')
 makedepends=('ruby-sass' 'npm' 'gulp')
 replaces=('gtk-theme-numix-frost')
 source=('git+https://github.com/Antergos/Numix-Frost.git')
-install=theme.install
 md5sums=('SKIP')
 
 
-pkgver() {
-	cd "${srcdir}/${_pkgname}"
-	printf "%s.r%s" "${_pkgver}" "$(git rev-list --count HEAD)"
-}
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='numix-frost'
+# END ANTBS METADATA
+
 
 package() {
 
 	# Numix-Frost
 	cd "${srcdir}/${_pkgname}"
+	git checkout "${pkgver}"
 	git submodule update --init -- includes/cinnamon
 	make
-	make DESTDIR=${pkgdir} install
+	make DESTDIR="${pkgdir}" install
 
 
 	# Cinnamon Theme
@@ -53,9 +57,10 @@ package() {
 	# Numix-Frost-Light
 	cd "${srcdir}/${_pkgname}"
 	git reset --hard origin/master
-	git checkout "${_branch}"
+	git checkout "${pkgver}-light"
 	make
-	make DESTDIR=${pkgdir} install
+	make DESTDIR="${pkgdir}" install
 
 }
+
 # -*- mode: bash;-*-
