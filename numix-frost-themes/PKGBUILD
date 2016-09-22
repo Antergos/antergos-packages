@@ -30,7 +30,7 @@ _monitored_repo='numix-frost'
 package() {
 
 	# Numix-Frost
-	cd "${srcdir}/${_pkgname}"
+	cd "${srcdir}/${_pkgname}/src"
 	git checkout "${pkgver}"
 	git submodule update --init -- includes/cinnamon
 	make
@@ -49,12 +49,12 @@ package() {
 
 	# GNOME Shell Theme
 	install -d "${pkgdir}/usr/share/themes/${_pkgname}/gnome-shell"
-	cd "${srcdir}/${_pkgname}/gnome-shell"
+	cd "${srcdir}/${_pkgname}/src/gnome-shell"
 	find . -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/$_pkgname/gnome-shell/{}" \;
 
 
 	# Numix-Frost-Light
-	cd "${srcdir}/${_pkgname}"
+	cd "${srcdir}/${_pkgname}/src"
 	git reset --hard origin/master
 	git checkout "${pkgver}-light"
 	make
