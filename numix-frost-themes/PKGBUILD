@@ -30,9 +30,9 @@ _monitored_repo='numix-frost'
 package() {
 
 	# Numix-Frost
-	cd "${srcdir}/${_pkgname}/src"
+	cd "${srcdir}/${_pkgname}"
 	git checkout "${pkgver}"
-	git submodule update --init -- includes/cinnamon
+	git submodule update --init -- src/includes/cinnamon
 	make
 	make DESTDIR="${pkgdir}" install
 
@@ -40,7 +40,7 @@ package() {
 	# Cinnamon Theme
 	sed -i 's%Numix-Cinnamon%Numix-Frost%g' includes/cinnamon/Numix-Cinnamon/cinnamon/theme.json
 	install -d "${pkgdir}/usr/share/themes/${_pkgname}/cinnamon"
-	cd includes/cinnamon/Numix-Cinnamon
+	cd src/includes/cinnamon/Numix-Cinnamon
 	scss --update --sourcemap=none cinnamon/sass:cinnamon
 	rm -rf cinnamon/sass
 	rm -f cinnamon/*.js
@@ -54,7 +54,7 @@ package() {
 
 
 	# Numix-Frost-Light
-	cd "${srcdir}/${_pkgname}/src"
+	cd "${srcdir}/${_pkgname}"
 	git reset --hard origin/master
 	git checkout "${pkgver}-light"
 	make
