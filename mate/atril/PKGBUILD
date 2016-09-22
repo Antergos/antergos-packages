@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=atril
-pkgver=1.14.2
+pkgver=1.16.0
 pkgrel=2
 pkgdesc="MATE document viewer"
 url="http://mate-desktop.org"
