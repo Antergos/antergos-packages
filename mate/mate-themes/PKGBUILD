@@ -18,7 +18,7 @@ md5sums=('8ddefde8e0685963ab72b309dbe16d5c')
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='mate-desktop'
-_monitored_match_pattern='3.20'
+_monitored_match_pattern='3.22'
 # END ANTBS METADATA
 
 prepare() {
