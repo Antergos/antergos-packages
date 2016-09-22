@@ -33,6 +33,7 @@ package() {
 	cd "${srcdir}/${_pkgname}"
 	git checkout "${pkgver}"
 	git submodule update --init -- src/includes/cinnamon
+	sed -i 's| unity ||g' scripts/utils.sh
 	make
 	make DESTDIR="${pkgdir}" install
 
@@ -57,6 +58,7 @@ package() {
 	cd "${srcdir}/${_pkgname}"
 	git reset --hard origin/master
 	git checkout "${pkgver}-light"
+	sed -i 's| unity ||g' scripts/utils.sh
 	make
 	make DESTDIR="${pkgdir}" install
 
