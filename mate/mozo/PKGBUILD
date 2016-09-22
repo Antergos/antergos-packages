@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mozo
-pkgver=1.14.1
+pkgver=1.16.0
 pkgrel=2
 pkgdesc="MATE menu editing tool"
 url="http://mate-desktop.org"
