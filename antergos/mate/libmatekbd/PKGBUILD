@@ -3,7 +3,7 @@
 
 pkgname=libmatekbd
 pkgver=1.15.0
-pkgrel=2
+pkgrel=1
 pkgdesc="MATE keyboard library"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -12,13 +12,11 @@ groups=('mate')
 depends=('dconf' 'gtk3' 'iso-codes' 'libxklavier')
 makedepends=('mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('38783a2c4694911c1d1e606421bf86d4')
+sha1sums=('79886718fdca006066897b78beb4d77c939817d3')
 
 # BEGIN ANTBS METADATA
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

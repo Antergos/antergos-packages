@@ -3,7 +3,7 @@
 
 pkgname=mate-icon-theme
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="MATE icon theme"
 url="http://mate-desktop.org"
 arch=('any')
@@ -13,16 +13,12 @@ makedepends=('icon-naming-utils' 'mate-common')
 options=(!strip !emptydirs)
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('0454b4c6ddff31ac97cddc75076ef47b')
-install=${pkgname}.install
+sha1sums=('e48ab88a0bf86ca99b1a7fbce8cf6ac4360c5443')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-icon-theme'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

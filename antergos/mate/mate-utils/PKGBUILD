@@ -3,7 +3,7 @@
 
 pkgname=mate-utils
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="Common MATE utilities for viewing disk usage, logs, and fonts, taking screenshots, managing dictionaries, and searching files"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -14,16 +14,12 @@ optdepends=('mate-panel: Look up words in dictionaries from the panel'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('79a46d5600de21d760690e9f544c66e8')
-install=${pkgname}.install
+sha1sums=('8435a42773bd2f5fcf27e2e6e71373fbf216eef9')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-utils'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

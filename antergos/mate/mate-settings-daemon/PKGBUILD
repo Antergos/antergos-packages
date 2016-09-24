@@ -3,7 +3,7 @@
 
 pkgname=mate-settings-daemon
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="The MATE Settings Daemon"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -16,16 +16,12 @@ groups=('mate')
 replaces=("${pkgname}-gstreamer" "${pkgname}-pulseaudio")
 conflicts=("${pkgname}-gstreamer" "${pkgname}-pulseaudio")
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('1195bfb30c1468a9061f8e9aa07260e8')
-install=${pkgname}.install
+sha1sums=('31ae6f516b9dec31c8756068cbc14e6c276b9609')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-settings-daemon'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

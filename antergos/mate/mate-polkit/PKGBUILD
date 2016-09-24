@@ -3,7 +3,7 @@
 
 pkgname=mate-polkit
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="PolicyKit integration for the MATE desktop"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -11,16 +11,13 @@ license=('LGPL')
 depends=('gtk3' 'polkit' 'accountsservice')
 makedepends=('gobject-introspection' 'mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('1259f8b245917ecfb22fc9d8ff309d2c')
+sha1sums=('d4add9b8ad5ffd249f961dbc7f69fd372013bd46')
 
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-polkit'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

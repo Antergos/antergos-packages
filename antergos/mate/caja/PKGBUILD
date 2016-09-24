@@ -3,7 +3,7 @@
 
 pkgname=caja
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="File manager for the MATE desktop"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -15,16 +15,12 @@ optdepends=('gstreamer: automatic media playback when mouseover'
 			'gvfs-smb: To connect to Samba/Windows shares')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('b43639c01a70c9c3cfbca9005656b073')
-install=${pkgname}.install
+sha1sums=('5d46c0ec4f8b757f85cb2da1c501e5cdfa16a042')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='caja'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

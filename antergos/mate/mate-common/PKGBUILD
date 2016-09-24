@@ -3,7 +3,7 @@
 
 pkgname=mate-common
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="Common development macros for MATE"
 arch=('any')
 license=('GPL')
@@ -11,15 +11,12 @@ groups=('mate-extra')
 depends=('autoconf' 'automake' 'gettext' 'gtk-doc' 'intltool' 'libtool' 'pkg-config')
 url="http://mate-desktop.org"
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('c09fb1f55beac76d314827c0286b0844')
+sha1sums=('5ab91d9e471b5819a5983e57b8d224855fbd93f1')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-common'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

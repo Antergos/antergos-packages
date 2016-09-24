@@ -3,7 +3,7 @@
 
 pkgname=mate-system-monitor
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="A system monitor for MATE"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -13,17 +13,13 @@ depends=('dconf' 'dbus-glib' 'glibmm' 'gtkmm' 'gtkmm3' 'libgtop' 'libwnck'
 makedepends=('docbook2x' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('a76a853a473fcffe32bedd401d61738a')
-install=${pkgname}.install
+sha1sums=('4d0c2bca7690f52b1278b5e83ce3231bc75469e2')
 
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-system-monitor'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

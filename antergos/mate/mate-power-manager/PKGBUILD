@@ -3,7 +3,7 @@
 
 pkgname=mate-power-manager
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="Power management tool for the MATE desktop"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -15,16 +15,12 @@ optdepends=('mate-panel: Set brightness and inhibit power management from the pa
 			'yelp: for reading MATE help documents')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 groups=('mate-extra')
-sha1sums=('286ac97658d18ea1fffa6e0a692a877727a44e41')
-install=${pkgname}.install
+sha1sums=('a7089947d4ac2151e2b8182f4d130aba08d804d2')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-power-manager'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 prepare() {

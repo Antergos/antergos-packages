@@ -3,7 +3,7 @@
 
 pkgname=libmateweather
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="Provides access to weather information from the Internet."
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -12,16 +12,12 @@ groups=('mate-extra')
 depends=('dconf' 'gtk3' 'libsoup')
 makedepends=('mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('c72da5a4dc96fed61a189bc8d8026233')
-install=${pkgname}.install
+sha1sums=('db775a80ec76ea0f8f9277a4b2011471eabaee65')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='libmateweather'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

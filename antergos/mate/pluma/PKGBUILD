@@ -3,7 +3,7 @@
 
 pkgname=pluma
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="A powerful text editor for the MATE Desktop"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -15,17 +15,14 @@ optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
 		'http://pkgs.fedoraproject.org/cgit/rpms/pluma.git/plain/pluma_diasable-python-plugins-1.5.patch')
-md5sums=('8386579dac1e16a4d93dfc5f668a206e'
-		'09b573a9a7f70dd15133b1201d41678c')
+sha1sums=('14a0497fade1e3fd40a39eafb28390975abd12a6'
+          '5a8d1ced985fd770d8246a2250bc11b4d10a3c49')
 
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='pluma'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 prepare() {

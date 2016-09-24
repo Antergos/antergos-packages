@@ -3,24 +3,21 @@
 
 pkgbase=caja-extensions
 pkgname=(caja-extensions-common caja-gksu caja-image-converter caja-open-terminal caja-sendto caja-share)
-pkgver=1.14.1
-pkgrel=2
+pkgver=1.16.0
+pkgrel=1
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('caja>=1.14' 'dbus-glib' 'gksu' 'gtk3' 'gupnp' 'imagemagick' 'samba' 'python-gobject')
 makedepends=('mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgbase}-${pkgver}.tar.xz")
-md5sums=('d43891792beef546cc87b38914f64572')
+sha1sums=('9b27e46a731b117815862229c38445ef94afa600')
 
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='caja-extensions'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 
@@ -62,8 +59,7 @@ package_caja-open-terminal() {
 	pkgdesc="A Caja extension for opening terminals in arbitrary local paths"
 	depends=('caja' 'caja-extensions-common')
 	groups=('mate-extra')
-	install=caja-open-terminal.install
-
+	
 	cd "${srcdir}/${pkgbase}-${pkgver}"
 	make -C open-terminal DESTDIR="${pkgdir}" install
 }
@@ -74,8 +70,7 @@ package_caja-sendto() {
 	groups=('mate-extra')
 	optdepends=('pidgin: Support for sending to instant messaging networks.'
 				'gajim: Support for sending to Jabber.')
-	install=caja-sendto.install
-
+	
 	cd "${srcdir}/${pkgbase}-${pkgver}"
 	make -C sendto DESTDIR="${pkgdir}" install
 }

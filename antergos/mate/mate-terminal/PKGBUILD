@@ -3,7 +3,7 @@
 
 pkgname=mate-terminal
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="The MATE Terminal Emulator"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -13,16 +13,12 @@ makedepends=('docbook2x' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('5c04daba17d994ad3d1b5f40f084df69')
-install=${pkgname}.install
+sha1sums=('d6002ed9e6ec7ce10ac824e1be4affaba19dfa8c')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-terminal'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

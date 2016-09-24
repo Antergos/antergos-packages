@@ -2,8 +2,8 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-desktop
-pkgver=1.14.1
-pkgrel=2
+pkgver=1.16.0
+pkgrel=1
 pkgdesc="Library with common API for various MATE modules"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -12,15 +12,12 @@ groups=('mate')
 depends=('dconf' 'gtk3' 'startup-notification' 'gobject-introspection')
 makedepends=('mate-common' 'yelp-tools')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('3d8d55e228b4ab82cf33004e314820e0')
+sha1sums=('624d2e7af6416cb81d1d0946ab66bbb34fc7d150')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-desktop'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

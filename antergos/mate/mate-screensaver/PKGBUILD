@@ -3,7 +3,7 @@
 
 pkgname=mate-screensaver
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc='Screensaver for MATE'
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -16,16 +16,12 @@ optdepends=('mate-power-manager: Add power management support.'
 			'rss-glx: Really slick screensavers.')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('fa6f55f00f33fb6fca007c30dd1d4736')
-install=${pkgname}.install
+sha1sums=('c682e5e3efdaf15e6834857165b469a8f3a17993')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-screensaver'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

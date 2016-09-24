@@ -3,7 +3,7 @@
 
 pkgname=atril
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="MATE document viewer"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -19,16 +19,12 @@ optdepends=('caja: Document Properties extension'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('7e1cd353202e9ae4a5ad63b093572d140dd0a7c3')
-install=${pkgname}.install
+sha1sums=('0573c0afdc81f29115409c42e06bd4fecb785302')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='atril'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

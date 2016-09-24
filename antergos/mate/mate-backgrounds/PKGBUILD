@@ -3,7 +3,7 @@
 
 pkgname=mate-backgrounds
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="Background images and metadata for MATE"
 url="http://mate-desktop.org"
 arch=('any')
@@ -11,15 +11,12 @@ license=('GPL')
 makedepends=('mate-common')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('0dd81659b362862f6da1f48900609a09133053bb')
+sha1sums=('02c3371b24df915cf6fd4168d79d310447c258ec')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-backgrounds'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

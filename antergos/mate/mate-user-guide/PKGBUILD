@@ -3,7 +3,7 @@
 
 pkgname=mate-user-guide
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="MATE User Guide"
 groups=('mate')
 url="http://mate-desktop.org"
@@ -12,16 +12,12 @@ license=('GPL' 'LGPL')
 depends=('yelp')
 makedepends=('mate-common' 'yelp-tools')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('553a172785de8255ff547287a091b29b')
-install=${pkgname}.install
+sha1sums=('2084e109511dd82c08aafd3a71aa63d4b008df1b')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-user-guide'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

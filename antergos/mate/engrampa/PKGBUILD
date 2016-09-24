@@ -3,7 +3,7 @@
 
 pkgname=engrampa
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="Archive file manipulator"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -20,17 +20,13 @@ optdepends=('unrar: for RAR uncompression'
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
 		fr-rpm-bsdtar.patch)
-md5sums=('387d47d7321f8ab79e41e041d357c887'
-		'effff0861b225f0460ffb46f6bf84ff3')
-install=${pkgname}.install
+sha1sums=('90865e0c59bec33ed899c3a0a8d2787aa09d526b'
+          '219b05a979bf6f249aaae27964f02345fd81168d')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='engrampa'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 prepare() {

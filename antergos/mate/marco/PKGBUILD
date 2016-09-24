@@ -3,7 +3,7 @@
 
 pkgname=marco
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="A window manager for MATE"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -14,16 +14,12 @@ makedepends=('mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('dc4770dea2d09b046f027064329b94e6fd53367b')
-install=${pkgname}.install
+sha1sums=('b9b3c14812fcb7ab5dfd2c3498eac639d2e63be6')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='marco'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

@@ -3,7 +3,7 @@
 
 pkgname=mate-session-manager
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="The MATE Session Handler"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -17,16 +17,12 @@ optdepends=('onboard: On-screen keyboard useful for mobility impaired users'
 			'xdg-user-dirs-gtk: Add autostart that prompts to rename user directories when switching locales')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('41b0b5dfd4a2978546119ed9721c95e1')
-install=${pkgname}.install
+sha1sums=('553b28bbbd9164e0403783db58015fa42d3ae38d')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-session-manager'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

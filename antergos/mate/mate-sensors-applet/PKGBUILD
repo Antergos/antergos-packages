@@ -3,7 +3,7 @@
 
 pkgname=mate-sensors-applet
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="A MATE Panel applet that displays readings from hardware sensors, including CPU temperature, fan speeds, and voltage readings."
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -13,16 +13,12 @@ makedepends=('docbook-xml' 'libxnvctrl' 'mate-common' 'rarian' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('61a310a3106267ab1463e4f014ff7eda')
-install=${pkgname}.install
+sha1sums=('71f7f75946ae0a0f3b266f79dcabc58a34a0ecba')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-sensors-applet'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {

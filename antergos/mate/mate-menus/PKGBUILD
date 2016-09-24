@@ -3,7 +3,7 @@
 
 pkgname=mate-menus
 pkgver=1.16.0
-pkgrel=2
+pkgrel=1
 pkgdesc="MATE menu specifications"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
@@ -12,15 +12,12 @@ depends=('glib2' 'python2' 'python')
 makedepends=('gobject-introspection' 'mate-common')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-md5sums=('0143cbc50fe69f9c9012c23cc007c91b')
+sha1sums=('40b73ae7a151259c32ecd150c8fb77b5dc696f62')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='mate-desktop'
-_monitored_repo='mate-menus'
-_monitored_match_pattern='1.14'
+_monitored_service='mate-desktop'
+_monitored_match_pattern='1.16'
 # END ANTBS METADATA
 
 build() {
