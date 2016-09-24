@@ -9,7 +9,7 @@ url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('desktop-file-utils' 'enchant' 'gtk3' 'gtksourceview3' 'iso-codes'
-		 'libsm' 'mate-desktop>=1.14' 'zenity')
+		 'libsm' 'zenity')
 makedepends=('mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')

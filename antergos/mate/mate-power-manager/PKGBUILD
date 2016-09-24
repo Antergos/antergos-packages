@@ -9,7 +9,7 @@ url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('dbus-glib' 'dconf' 'gtk3' 'libcanberra' 'libgnome-keyring'
-		 'libnotify' 'libunique3' 'mate-desktop>=1.14' 'upower')
+		 'libnotify' 'libunique3' 'upower')
 makedepends=('docbook2x' 'docbook-xml' 'mate-common' 'mate-panel' 'xmlto' 'yelp-tools')
 optdepends=('mate-panel: Set brightness and inhibit power management from the panel'
 			'yelp: for reading MATE help documents')

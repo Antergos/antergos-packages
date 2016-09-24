@@ -8,8 +8,8 @@ pkgdesc="The MATE Session Handler"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL' 'LGPL')
-depends=('dbus-glib' 'gtk3' 'libsm' 'libxtst' 'mate-desktop>=1.14'
-		 'mate-polkit>=1.14' 'mate-settings-daemon>=1.14' 'ttf-dejavu'
+depends=('dbus-glib' 'gtk3' 'libsm' 'libxtst' 'mate-desktop>=1.16'
+		 'mate-polkit>=1.16' 'mate-settings-daemon>=1.14' 'ttf-dejavu'
 		 'xdg-user-dirs')
 makedepends=('mate-common' 'xmlto' 'xtrans')
 optdepends=('onboard: On-screen keyboard useful for mobility impaired users'
@@ -32,7 +32,6 @@ build() {
 		--libexecdir=/usr/lib/${pkgname} \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
-		--with-gtk=3.0 \
 		--disable-upower
 	make
 }
