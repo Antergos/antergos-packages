@@ -6,7 +6,7 @@
 # Contributor: Alexander Fehr <pizzapunk gmail com>
 
 pkgname=galculator
-pkgver=2.1.42.1.4
+pkgver=2.1.4
 pkgrel=1
 pkgdesc='GTK+ based scientific calculator'
 arch=('i686' 'x86_64')
@@ -20,8 +20,10 @@ sha1sums=('085c79519e3e669f44e10c24b2795c27')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='mate-desktop'
+_monitored_service='github'
+_monitored_type='tags'
 _monitored_project='galculator'
+_monitored_repo='galculator'
 # END ANTBS METADATA
 
 build() {
