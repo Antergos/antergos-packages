@@ -8,32 +8,40 @@ pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
 url="https://github.com/antergos/lightdm-webkit2-greeter"
 license=('GPL3')
-makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common' 'exo')
-depends=('lightdm' 'webkit2gtk>=2.10.8' 'gtk3>=3.18' 'antergos-wallpapers' 'accountsservice')
+makedepends=('gobject-introspection' 'meson')
+depends=('lightdm' 'webkit2gtk>=2.10.8' 'antergos-wallpapers' 'accountsservice')
 provides=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
-conflicts=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 install=greeter.install
 backup=("etc/lightdm/${pkgname}.conf")
 source=("${pkgname}-${pkgver}::http://github.com/Antergos/lightdm-webkit2-greeter/archive/${pkgver}.zip")
-sha256sums=('')
+md5sums=('')
 groups=('system')
 
 
-#pkgver() {
-#	echo "${_pkgver}"
-#}
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='lightdm-webkit2-greeter'
+# END ANTBS METADATA
+
 
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
-	LIBS+="-ljavascriptcoregtk-4.0" ./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm --bindir=/usr/bin --sbindir=/usr/bin
-	make
+	mkdir build && cd build
+	
+	meson --prefix=/usr --libdir=lib ..
+	ninja
 }
 
 package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
-	make DESTDIR=$pkgdir install
+
+	DESTDIR=$pkgdir ninja install
+
 	sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' \
 		"${pkgdir}/etc/lightdm/${pkgname}.conf" \
 		"${pkgdir}/usr/share/lightdm-webkit/themes/antergos/js/greeter.js"
