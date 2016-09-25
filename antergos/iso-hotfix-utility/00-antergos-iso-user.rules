@@ -1,4 +1,0 @@
-/* Allow all users to run Cnchi from the install media without authentication  */
-polkit.addRule(function(action, subject) {
-	return polkit.Result.YES;
-});
