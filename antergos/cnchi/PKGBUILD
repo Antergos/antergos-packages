@@ -3,7 +3,7 @@
 pkgname=cnchi
 _pkgname=Cnchi
 pkgver=0.14.180
-pkgrel=1
+pkgrel=2
 pkgdesc='A modern, flexible system installer for Linux'
 arch=('any')
 license=('GPL3')
@@ -33,11 +33,11 @@ build() {
 package() {
 	cd "${srcdir}/${_pkgname}-${pkgver}"
 
-	sed -r -i 's|\/usr.+ -v|pkexec /usr/share/cnchi/bin/cnchi -s bugsnag|g' "bin/${pkgname}"
-
 	install -d ${pkgdir}/usr/share/{cnchi,locale}
 	install -Dm755 "bin/${pkgname}" "${pkgdir}/usr/bin/cnchi"
 	install -Dm755 "${pkgname}.desktop" "${pkgdir}/usr/share/applications/cnchi.desktop"
+
+	sed -r -i 's|\/usr.+ -v|pkexec /usr/share/cnchi/bin/cnchi -s bugsnag|g' "${pkgdir}/usr/bin/cnchi"
 	
 	for i in cnchi bin data scripts ui; do
 		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
