@@ -3,57 +3,60 @@
 # Contributor: twa022 <twa022 at gmail dot com>
 # Contributor: Giuseppe Borzi <gborzi _AT_ ieee _DOT_ org>
 # Contributor: ryooichi <ryooichi+arch AT gmail DOT com>
-# Real thanks goes to jelly, mike_93 and the original creators of mintmenu, usp, slab...
-# See also:
-#   http://bbs.archlinux.org/viewtopic.php?id=66987
-#   http://bbs.archlinux.org/viewtopic.php?id=68633
-#   http://github.com/jelly/archmenu
 
 _pkgname=mintmenu
 pkgname=mate-mint-menu
-pkgver=5.6.9
+pkgver=5.7.0alpha
 pkgrel=1
 pkgdesc="Linux Mint Menu for MATE"
 arch=('any')
 url="http://github.com/linuxmint/mintmenu"
 license=('GPL2')
-depends=('python2-gobject2' 'python2-xdg' 'xdg-utils' 'mozo' 'mate-panel>=1.8.0'
-         'python2-keybinder2' 'python2-xlib' 'pygtk' 'gksu')
+options=('!strip')
+depends=('python2-gobject' 'python2-xdg' 'xdg-utils' 'mozo' 'mate-panel>=1.16.0'
+		'python2-keybinder2' 'python2-xlib' 'gksu')
 optdepends=('mate-screensaver: lock screen button'
-            'pamac: package manager button')
-source=("http://packages.linuxmint.com/pool/main/m/mintmenu/mintmenu_${pkgver}.tar.xz"
-        'http://github.com/linuxmint/mint-translations/archive/master.tar.gz' 
-        'antergos_compat.patch'
-        'removescript')
-install=${pkgname}.install
-sha256sums=('' '' '' '')
+			'pamac: package manager button')
+# "http://packages.linuxmint.com/pool/main/m/mintmenu/mintmenu_${pkgver}.tar.xz"
+source=("${pkgname}-${pkgver}.zip::https://github.com/linuxmint/mintmenu/archive/master.zip"
+		'http://github.com/linuxmint/mint-translations/archive/master.tar.gz'
+		"gtk3-port.patch::https://github.com/linuxmint/mintmenu/pull/162.patch"
+		'removescript')
+md5sums=('df4cc1d88e2eead78ffdff000f43f490'
+         '4d6abb89e09046c50d5e7b7de3f243bf'
+         '2aa3bf3f34743b6bd8737b3722c4a567'
+         'bcdbc95fc35331f1f5e13a86b9d770f0')
+
+
 package() {
-  cd "$srcdir/mint-translations-master/po-export/mintmenu"
-  for files in ./*; do
-    	if [ -f "$files" ] && [ "$files" != 'po/mintmenu.pot' ]; then
-        	STRING_PO_F=`echo ${files#*/}`
-        	STRING_PO=`echo ${STRING_PO_F/mintmenu-}`
-        	STRING=`echo ${STRING_PO%.po}`
-        	mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
-        	msgfmt $files -o ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/mintmenu.mo
-        	echo "${STRING} installed..."
-    	fi
+	cd "$srcdir/mint-translations-master/po-export/mintmenu"
+
+	for files in ./*; do
+		if [ -f "$files" ] && [ "$files" != 'po/mintmenu.pot' ]; then
+			STRING_PO_F=`echo ${files#*/}`
+			STRING_PO=`echo ${STRING_PO_F/mintmenu-}`
+			STRING=`echo ${STRING_PO%.po}`
+			mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
+			msgfmt $files -o ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/mintmenu.mo
+		 	echo "${STRING} installed..."
+		fi
 	done
 
-  cd "$srcdir/${_pkgname}"
-  patch -Np1 -i "$srcdir/antergos_compat.patch"
-  rm -f usr/lib/linuxmint/mintMenu/*.pyc usr/lib/linuxmint/mintMenu/plugins/*pyc
-  
-  # Disable the software-manager entry under Places
-  sed -i "351s/true/false/" usr/share/glib-2.0/schemas/com.linuxmint.mintmenu.gschema.xml
-  
-  sed -i 's|xed.desktop|pluma.desktop|g' usr/lib/linuxmint/mintMenu/applications.list
-  
+	#cd "$srcdir/${_pkgname}"
+	cd "$srcdir/${_pkgname}-master"
+	patch -Np1 -i "${srcdir}/gtk3-port.patch"
 
-  cd "$srcdir/${_pkgname}"
-  cp -R usr "$pkgdir/"
-  install -m755 "$srcdir/removescript" "$pkgdir/usr/lib/linuxmint/mintMenu/"
-  cd "$pkgdir"/usr/lib/linuxmint/mintMenu
-  ./compile.py
+	# Disable the software-manager entry under Places
+	sed -i "351s/true/false/" usr/share/glib-2.0/schemas/com.linuxmint.mintmenu.gschema.xml
+
+	sed -i 's|xed.desktop|pluma.desktop|g' usr/lib/linuxmint/mintMenu/applications.list
+
+
+	#cd "$srcdir/${_pkgname}"
+	cd "$srcdir/${_pkgname}-master"
+	cp -R usr "$pkgdir/"
+	install -m755 "$srcdir/removescript" "$pkgdir/usr/lib/linuxmint/mintMenu/"
+	cd "$pkgdir"/usr/lib/linuxmint/mintMenu
+	./compile.py
 }
 # -*- mode: bash;-*-
