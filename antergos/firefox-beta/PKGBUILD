@@ -33,8 +33,7 @@ source+=("${pkgname}.desktop"
 		'mozconfig'
 		'firefox-install-dir.patch'
 		'vendor.js'
-		'firefox-symbolic.svg'
-		'no-libnotify.patch')
+		'firefox-symbolic.svg')
 md5sums=('259ea8127d1f3a72ac23db0a97455472')
 
 # Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
@@ -58,10 +57,6 @@ prepare() {
 
 	cp ../mozconfig .mozconfig
 	patch -Np1 -i ../firefox-install-dir.patch
-
-	# Notifications with libnotify are broken
-	# https://bugzilla.mozilla.org/show_bug.cgi?id=1236150
-	patch -Np1 -i ../no-libnotify.patch
 
 	echo -n "$_google_api_key" >google-api-key
 	echo "ac_add_options --with-google-api-keyfile=\"$PWD/google-api-key\"" >>.mozconfig
@@ -89,7 +84,7 @@ build() {
 	LDFLAGS+=" -Wl,-z,now"
 
 	# GCC 6
-	CXXFLAGS+=" -fno-delete-null-pointer-checks -fno-lifetime-dse -fno-schedule-insns2"
+	CXXFLAGS+=" -fno-delete-null-pointer-checks -fno-schedule-insns2"
 
 	export PATH="${srcdir}/path:$PATH"
 

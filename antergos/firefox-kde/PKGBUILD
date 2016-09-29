@@ -30,7 +30,6 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		'vendor.js'
 		'kde.js'
 		'firefox-symbolic.svg'
-		'no-libnotify.patch'
 		# Firefox patchset
 		$_patchurl/firefox-branded-icons.patch
 		$_patchurl/firefox-kde.patch
@@ -39,7 +38,6 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		$_patchurl/mozilla-kde.patch
 		$_patchurl/mozilla-language.patch
 		$_patchurl/mozilla-nongnome-proxies.patch
-		$_patchurl/mozilla-gtk3_20.patch
 		$_patchurl/mozilla-reduce-files-per-UnifiedBindings.patch)
 md5sums=('3ce01741b9eab6a2988b970127330dcd'
          '77334bc5b58c888e6c7db50718f11be1'
@@ -80,17 +78,12 @@ prepare() {
 	cp ../mozconfig .mozconfig
 	patch -Np1 -i ../firefox-install-dir.patch
 
-	# Notifications with libnotify are broken
-	# https://bugzilla.mozilla.org/show_bug.cgi?id=1236150
-	patch -Np1 -i ../no-libnotify.patch
-
 	patch -Np1 -i "${srcdir}/mozilla-nongnome-proxies.patch"
 	patch -Np1 -i "${srcdir}/mozilla-kde.patch"
 	patch -Np1 -i "${srcdir}/mozilla-language.patch"
 	patch -Np1 -i "${srcdir}/firefox-kde.patch"
 	patch -Np1 -i "${srcdir}/firefox-no-default-ualocale.patch"
 	patch -Np1 -i "${srcdir}/firefox-branded-icons.patch"
-	patch -Np1 -i "${srcdir}/mozilla-gtk3_20.patch"
 	patch -Np1 -i "${srcdir}/mozilla-reduce-files-per-UnifiedBindings.patch"
 
 	echo -n "$_google_api_key" >google-api-key
@@ -119,7 +112,7 @@ build() {
 	LDFLAGS+=" -Wl,-z,now"
 
 	# GCC 6
-	CXXFLAGS+=" -fno-delete-null-pointer-checks -fno-lifetime-dse -fno-schedule-insns2"
+	CXXFLAGS+=" -fno-delete-null-pointer-checks -fno-schedule-insns2"
 
 	export PATH="${srcdir}/path:$PATH"
 
