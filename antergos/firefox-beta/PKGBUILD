@@ -67,7 +67,10 @@ prepare() {
 	echo -n "$_mozilla_api_key" >mozilla-api-key
 	echo "ac_add_options --with-mozilla-api-keyfile=\"$PWD/mozilla-api-key\"" >>.mozconfig
 
-	[[ 'i686' = "${CARCH}" ]] && echo 'ac_add_options --target=i686-unknown-linux-gnu' >>.mozconfig
+	[[ 'i686' = "${CARCH}" ]] && {
+		echo 'ac_add_options --target=i686-unknown-linux-gnu' >>.mozconfig
+		echo 'export CROSS_COMPILE=1' >> .mozconfig
+	}
 
 	mkdir "$srcdir/path"
 	ln -s /usr/bin/python2 "$srcdir/path/python"
