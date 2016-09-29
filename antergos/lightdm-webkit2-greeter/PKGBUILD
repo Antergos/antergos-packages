@@ -40,7 +40,9 @@ build() {
 package() {
 	cd "${srcdir}/${pkgname}-${_pkgver}"
 
+	cd build
 	DESTDIR=$pkgdir ninja install
+	cd -
 
 	sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' \
 		"${pkgdir}/etc/lightdm/${pkgname}.conf" \
