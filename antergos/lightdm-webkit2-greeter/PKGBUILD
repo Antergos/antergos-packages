@@ -31,7 +31,7 @@ _monitored_repo='lightdm-webkit2-greeter'
 
 build() {
 	cd "${srcdir}/${pkgname}-${_pkgver}"
-	mkdir build && cd build
+	cd build
 	
 	meson --prefix=/usr --libdir=lib ..
 	ninja
