@@ -6,7 +6,7 @@
 
 _pkgname=mintmenu
 pkgname=mate-mint-menu
-pkgver=5.7.0alpha
+pkgver=5.7.0alpha2
 pkgrel=1
 pkgdesc="Linux Mint Menu for MATE"
 arch=('any')
@@ -14,12 +14,13 @@ url="http://github.com/linuxmint/mintmenu"
 license=('GPL2')
 options=('!strip')
 depends=('python2-gobject' 'python2-xdg' 'xdg-utils' 'mozo' 'mate-panel>=1.16.0'
-		'python2-keybinder2' 'python2-xlib' 'gksu')
+		'python2-keybinder2' 'python2-xlib' 'gksu' 'python2-six')
 optdepends=('mate-screensaver: lock screen button'
 			'pamac: package manager button')
 # "http://packages.linuxmint.com/pool/main/m/mintmenu/mintmenu_${pkgver}.tar.xz"
 source=("${pkgname}-${pkgver}.zip::https://github.com/linuxmint/mintmenu/archive/master.zip"
 		'http://github.com/linuxmint/mint-translations/archive/master.tar.gz'
+		'antergos_compat.patch'
 		"gtk3-port.patch::https://github.com/linuxmint/mintmenu/pull/162.patch"
 		'removescript')
 md5sums=('df4cc1d88e2eead78ffdff000f43f490'
