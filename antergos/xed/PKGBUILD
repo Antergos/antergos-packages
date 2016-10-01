@@ -1,0 +1,49 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Nate Simon <aurpkg (at natesimon.net)>
+
+pkgname=xed
+pkgver=1.0.6
+pkgrel=1
+pkgdesc="A small and lightweight text editor built with GTK3 by the X-Apps Project."
+arch=('i686' 'x86_64')
+license=('GPL-2')
+groups=('xapps' 'editor')
+depends=('gtksourceview3' 'enchant' 'desktop-file-utils' 'libsm')
+makedepends=('gnome-common' 'iso-codes')
+conflicts=('xed-git' 'xed-bin')
+url='https://github.com/linuxmint/xed'
+
+
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/${pkgver}.tar.gz")
+md5sums=('8c253539b14713884614b4836fa1089f')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='tags'
+_monitored_project='linuxmint'
+_monitored_repo='xed'
+# END ANTBS METADATA
+
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+
+	./autogen.sh \
+		--with-gtk=3.0 \
+		--prefix='/usr' \
+		--localstatedir='/var' \
+		--libexecdir='/usr/lib/xed'
+
+	make CFLAGS='-w -O2'
+}
+
+
+package(){
+	cd "${srcdir}/${pkgname}-${pkgver}"
+
+	make DESTDIR="${pkgdir}" install
+}
+
+# -*- mode: bash;-*-
