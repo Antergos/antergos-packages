@@ -3,12 +3,12 @@
 
 pkgname=xed
 pkgver=1.0.6
-pkgrel=1
+pkgrel=2
 pkgdesc="A small and lightweight text editor built with GTK3 by the X-Apps Project."
 arch=('i686' 'x86_64')
-license=('GPL-2')
+license=('GPL2')
 groups=('xapps' 'editor')
-depends=('gtksourceview3' 'enchant' 'desktop-file-utils' 'libsm')
+depends=('gtksourceview3' 'enchant' 'libsm')
 makedepends=('gnome-common' 'iso-codes')
 conflicts=('xed-git' 'xed-bin')
 url='https://github.com/linuxmint/xed'
