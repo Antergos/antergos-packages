@@ -24,7 +24,7 @@ md5sums=('3630a68e4c8a61a22d269c9041621a09'
 
 package() {
 	install -d "${pkgdir}"/opt
-	cp -R "${srcdir}"/gitKraken "${pkgdir}"/opt/gitkraken
+	cp -R "${srcdir}"/gitkraken "${pkgdir}"/opt/gitkraken
 
 	install -d "${pkgdir}"/usr/bin
 	ln -s /opt/gitkraken/gitkraken "${pkgdir}"/usr/bin/gitkraken
