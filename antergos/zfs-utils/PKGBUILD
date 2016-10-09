@@ -2,9 +2,9 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname="zfs-utils"
-_pkgver=0.6.5.7
-_rev=2187
-_kern=4.6.2_1
+_pkgver=0.6.5.8
+_rev=2019
+_kern=4.7.6_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
@@ -15,17 +15,17 @@ groups=("system")
 depends=("spl" "dkms" "linux-headers")
 makedepends=("git")
 conflicts=("zfs-utils" "zfs-utils-lts")
-_commit='f74b821a6696fef9e9953aae05941e99bf83800e'
-source=("${pkgname}::https://github.com/zfsonlinux/zfs/archive/${_commit}.zip"
+#_commit='f74b821a6696fef9e9953aae05941e99bf83800e'
+source=("${pkgname}::https://github.com/zfsonlinux/${pkgname}/archive/zfs-${_pkgver}.zip"
 		"zfs-utils.bash-completion-r1"
 		"zfs-utils.initcpio.install"
 		"zfs-utils.initcpio.hook")
-md5sums=('319e1b32be1404284e3bb63cb8e9addc'
+md5sums=('409ef11470958672c3d54fe2249ae484'
 		'9ddb0c8a94861f929d0fa741fdc49950'
 		'9ef4841abb85dee611828cc7e6f5c6fe'
 		'62ba32c6853c315ff231c396cf8bfdbb')
 
-_kernel='4.6.2-1-ARCH'
+_kernel='4.7.6-1-ARCH'
 
 #pkgver() {
 #	local _kernel='4.5.4_1'

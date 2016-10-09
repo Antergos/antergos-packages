@@ -19,6 +19,10 @@ systemd_unit_presets() {
 	done
 }
 
+systemd_units_reset() {
+	systemctl preset zfs-import-cache zfs-import-scan zfs-mount zfs-share zfs-zed zfs.target
+}
+
 check_initramfs() {
 	echo '>>> Updating module dependencies. Please wait ...'
 	
@@ -33,7 +37,8 @@ check_initramfs() {
 
 post_install() {
 	check_initramfs
-	systemd_unit_presets
+	#systemd_unit_presets
+	systemd_units_reset
 }
 
 post_remove() {

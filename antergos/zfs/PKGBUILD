@@ -2,9 +2,9 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-_pkgver=0.6.5.7
-_rev=2187
-_kern=4.6.2_1
+_pkgver=0.6.5.8
+_rev=2019
+_kern=4.7.6_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
@@ -16,11 +16,11 @@ conflicts=("zfs-git" "zfs-lts" "zfs-dkms")
 install=zfs.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-_commit='f74b821a6696fef9e9953aae05941e99bf83800e'
-source=("${pkgname}::https://github.com/zfsonlinux/${pkgname}/archive/${_commit}.zip")
-md5sums=('319e1b32be1404284e3bb63cb8e9addc')
+#_commit='f74b821a6696fef9e9953aae05941e99bf83800e'
+source=("${pkgname}::https://github.com/zfsonlinux/${pkgname}/archive/zfs-${_pkgver}.zip")
+md5sums=('409ef11470958672c3d54fe2249ae484')
 
-_kernel='4.6.2-1-ARCH'
+_kernel='4.7.6-1-ARCH'
 
 
 #pkgver() {
@@ -32,37 +32,37 @@ _kernel='4.6.2-1-ARCH'
 build() {
 	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
 	sed -i "s|<KERNVER>|${_kernel}|g" "${startdir}/${pkgname}.install"
-    cd "${srcdir}/${pkgname}-${_commit}"
-    ./autogen.sh
-    #scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
-    
-    _i686_target=""
-    [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"
-    
-    ./configure --prefix=/usr \
-                --sysconfdir=/etc \
-                --bindir=/usr/bin \
-                --sbindir=/usr/bin \
-                --libdir=/usr/lib \
-                --datadir=/usr/share \
-                --includedir=/usr/include \
-                --with-udevdir=/usr/lib/udev \
-                --libexecdir=/usr/lib/zfs \
-                --with-config=user \
-                ${_i686_target}
-    make
+	cd "${srcdir}/${pkgname}-${_commit}"
+	./autogen.sh
+	#scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
+
+	_i686_target=""
+	[[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"
+
+	./configure --prefix=/usr \
+		--sysconfdir=/etc \
+		--bindir=/usr/bin \
+		--sbindir=/usr/bin \
+		--libdir=/usr/lib \
+		--datadir=/usr/share \
+		--includedir=/usr/include \
+		--with-udevdir=/usr/lib/udev \
+		--libexecdir=/usr/lib/zfs \
+		--with-config=user \
+		${_i686_target}
+	make
 }
 
 package() {
-    dkmsdir="${pkgdir}/usr/src/zfs-${_pkgver}"
-    install -d "${dkmsdir}"
+	dkmsdir="${pkgdir}/usr/src/zfs-${_pkgver}"
+	install -d "${dkmsdir}"
 
 	cp -a "${srcdir}/${pkgname}-${_commit}"/. ${dkmsdir}
 
-    cd "${dkmsdir}"
-    ./autogen.sh
-    scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
-    chmod g-w,o-w -R .
+	cd "${dkmsdir}"
+	./autogen.sh
+	scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
+	chmod g-w,o-w -R .
 }
 
 # -*- mode: bash;-*-
