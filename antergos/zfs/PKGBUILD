@@ -32,7 +32,7 @@ _kernel='4.7.6-1-ARCH'
 build() {
 	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
 	sed -i "s|<KERNVER>|${_kernel}|g" "${startdir}/${pkgname}.install"
-	cd "${srcdir}/${pkgname}-${_commit}"
+	cd "${srcdir}/${pkgname}-${pkgname}-${_commit}"
 	./autogen.sh
 	#scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
 

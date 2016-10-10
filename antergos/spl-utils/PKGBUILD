@@ -31,7 +31,7 @@ _kernel='4.7.6-1-ARCH'
 #}
 
 build() {
-    cd "${srcdir}/spl-${_commit}"
+    cd "${srcdir}/spl-spl-${_commit}"
     ./autogen.sh
     
     _at_enable=""

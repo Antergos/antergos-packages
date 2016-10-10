@@ -34,7 +34,7 @@ _kernel='4.7.6-1-ARCH'
 #}
 
 build() {
-    cd "${srcdir}/zfs-${_commit}"
+    cd "${srcdir}/zfs-zfs-${_commit}"
     ./autogen.sh
     
     _i686_target=""
