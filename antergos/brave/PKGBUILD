@@ -18,7 +18,7 @@ provides=('brave-browser')
 source=('brave.desktop')
 _url_part="https://github.com/brave/${_pkgname}/archive/"
 
-if curl -ILf "${_url_part}/v${pkgver}.tar.gz"; then
+if curl -ILf "${_url_part}/v${pkgver}.tar.gz" > /dev/null 2>&1; then
 	source+=("${_url_part}/v${pkgver}.tar.gz")
 else
 	source+=("${_url_part}/${pkgver}.tar.gz")
