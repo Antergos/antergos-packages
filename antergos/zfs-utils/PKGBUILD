@@ -15,7 +15,7 @@ groups=("system")
 depends=("spl" "dkms" "linux-headers")
 makedepends=("git")
 conflicts=("zfs-utils" "zfs-utils-lts")
-#_commit='f74b821a6696fef9e9953aae05941e99bf83800e'
+_commit="${_pkgver}"
 source=("${pkgname}::https://github.com/zfsonlinux/${pkgname}/archive/zfs-${_pkgver}.zip"
 		"zfs-utils.bash-completion-r1"
 		"zfs-utils.initcpio.install"

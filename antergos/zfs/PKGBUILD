@@ -16,7 +16,7 @@ conflicts=("zfs-git" "zfs-lts" "zfs-dkms")
 install=zfs.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-#_commit='f74b821a6696fef9e9953aae05941e99bf83800e'
+_commit="${_pkgver}"
 source=("${pkgname}::https://github.com/zfsonlinux/${pkgname}/archive/zfs-${_pkgver}.zip")
 md5sums=('409ef11470958672c3d54fe2249ae484')
 
