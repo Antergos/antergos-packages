@@ -15,8 +15,15 @@ depends=('gtk2' 'nss' 'alsa-lib' 'libnotify' 'gconf' 'libxtst' 'libxss' 'desktop
 		'ttf-font' 'libgnome-keyring')
 makedepends=('npm' 'git' 'python2')
 provides=('brave-browser')
-source=("https://github.com/brave/${_pkgname}/archive/${pkgver}.tar.gz"
-		'brave.desktop')
+source=('brave.desktop')
+_url_part="https://github.com/brave/${_pkgname}/archive/"
+
+if curl -ILf "${_url_part}/v${pkgver}.tar.gz"; then
+	source+=("${_url_part}/v${pkgver}.tar.gz")
+else
+	source+=("${_url_part}/${pkgver}.tar.gz")
+fi
+
 md5sums=('a48762e20c308860765c238d5d89f782'
 		'816c6930c632ef34f9e530f9e5bcf96f')
 
