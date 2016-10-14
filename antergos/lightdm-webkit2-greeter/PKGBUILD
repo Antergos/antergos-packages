@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=lightdm-webkit2-greeter
-_pkgver=2.1.5rc1
-pkgver=2.1.5rc1
+_pkgver=2.1.52.1.5rc1
+pkgver=2.1.52.1.5rc1
 pkgrel=1
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
