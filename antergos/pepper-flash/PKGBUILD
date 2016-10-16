@@ -1,0 +1,41 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: ava1ar <mail(at)ava1ar(dot)me>
+
+pkgname=chromium-pepper-flash
+pkgdesc="Adobe's Pepper Flash plugin"
+pkgver=23.0.0.185
+pkgrel=1
+epoch=1
+arch=('i686' 'x86_64')
+url='http://www.adobe.com/software/flash/about/'
+license=('custom')
+
+depends=('gcc-libs')
+conflicts=('chromium-pepper-flash')
+provides=('chromium-pepper-flash')
+replaces=('chromium-pepper-flash')
+optdepends=(
+	'freshplayerplugin: Firefox support'
+	'flashplugin: Settings utility'
+)
+
+source=("http://wwwimages.adobe.com/content/dam/acom/en/legal/licenses-terms/pdf/Flash_Player_${pkgver%%.*}_0.pdf")
+
+_save_as="${pkgname}-${pkgver}.tar.gz"
+_src_url="https://fpdownload.adobe.com/pub/flashplayer/pdc/${pkgver}/flash_player_ppapi_linux"
+
+source_x86_64=("${_save_as}::${_src_url}.x86_64.tar.gz")
+source_i686=("${_save_as}::${_src_url}.i386.tar.gz")
+
+md5sums=('0208c2cf0629c79f2cd2d30016e0264f')
+md5sums_i686=('7cd969fc4912ff04ccc7bbd0dd1faead')
+md5sums_x86_64=('7cd969fc4912ff04ccc7bbd0dd1faead')
+
+package() {
+	install -Dm644 manifest.json libpepflashplayer.so -t "$pkgdir/usr/lib/PepperFlash/"
+	install -Dm644 Flash_Player_${pkgver%%.*}_0.pdf -t "$pkgdir/usr/share/licenses/$pkgname/"
+}
+
+
+# -*- mode: bash;-*-
+
