@@ -4,7 +4,7 @@
 pkgname=zfs
 _pkgver=0.6.5.8
 _rev=2019
-_kern=4.7.6_1
+_kern=4.8.2_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
@@ -20,8 +20,6 @@ _commit="${_pkgver}"
 source=("${pkgname}::https://github.com/zfsonlinux/${pkgname}/archive/zfs-${_pkgver}.zip")
 md5sums=('409ef11470958672c3d54fe2249ae484')
 
-_kernel='4.7.6-1-ARCH'
-
 
 #pkgver() {
 #	local _kernel='4.5.4_1'
@@ -31,7 +29,6 @@ _kernel='4.7.6-1-ARCH'
 
 build() {
 	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
-	sed -i "s|<KERNVER>|${_kernel}|g" "${startdir}/${pkgname}.install"
 	cd "${srcdir}/${pkgname}-${pkgname}-${_commit}"
 	./autogen.sh
 	#scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
@@ -57,7 +54,7 @@ package() {
 	dkmsdir="${pkgdir}/usr/src/zfs-${_pkgver}"
 	install -d "${dkmsdir}"
 
-	cp -a "${srcdir}/${pkgname}-${_commit}"/. ${dkmsdir}
+	cp -a "${srcdir}/${pkgname}-${pkgname}-${_commit}"/. ${dkmsdir}
 
 	cd "${dkmsdir}"
 	./autogen.sh

@@ -4,7 +4,7 @@
 pkgname=spl
 _pkgver=0.6.5.8
 _rev=964
-_kern=4.7.6_1
+_kern=4.8.2_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
 pkgdesc="Solaris Porting Layer kernel modules."
@@ -21,7 +21,6 @@ source=("${pkgname}::https://github.com/zfsonlinux/spl/archive/spl-${_pkgver}.zi
 md5sums=('3b98916ba77f91725252345dc5ff0788')
 install=spl.install
 
-_kernel='4.7.6-1-ARCH'
 
 #pkgver() {
 #	local _kernel='4.6.2_1'
@@ -31,7 +30,6 @@ _kernel='4.7.6-1-ARCH'
 
 build() {
 	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
-	sed -i "s|<KERNVER>|${_kernel}|g" "${startdir}/${pkgname}.install"
 	cd "${srcdir}/${pkgname}-${pkgname}-${_commit}"
 	./autogen.sh
 
@@ -52,7 +50,7 @@ package() {
 	dkmsdir="${pkgdir}/usr/src/spl-${_pkgver}"
 	install -d "${dkmsdir}"
 
-	cp -a "${srcdir}/${pkgname}-${_commit}"/. ${dkmsdir}
+	cp -a "${srcdir}/${pkgname}-${pkgname}-${_commit}"/. ${dkmsdir}
 
 	cd "${dkmsdir}"
 	./autogen.sh

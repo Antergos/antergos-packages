@@ -4,7 +4,7 @@
 pkgname='spl-utils'
 _pkgver=0.6.5.8
 _rev=964
-_kern=4.7.6_1
+_kern=4.8.2_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
 license=('CDDL')
@@ -20,8 +20,6 @@ _commit="${_pkgver}"
 source=("${pkgname}::https://github.com/zfsonlinux/spl/archive/spl-${_pkgver}.zip")
 md5sums=('3b98916ba77f91725252345dc5ff0788')
 
-
-_kernel='4.7.6-1-ARCH'
 
 #pkgver() {
 #	local _kernel='4.5.4_1'
@@ -47,7 +45,7 @@ build() {
 }
 
 package() {
-    cd "${srcdir}/spl-${_commit}"
+    cd "${srcdir}/spl-spl-${_commit}"
     make DESTDIR="${pkgdir}" install
     #install -D -m644 "${srcdir}"/spl-utils.hostid "${pkgdir}"/etc/hostid
 }

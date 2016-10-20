@@ -4,7 +4,7 @@
 pkgname="zfs-utils"
 _pkgver=0.6.5.8
 _rev=2019
-_kern=4.7.6_1
+_kern=4.8.2_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
@@ -25,7 +25,6 @@ md5sums=('409ef11470958672c3d54fe2249ae484'
 		'9ef4841abb85dee611828cc7e6f5c6fe'
 		'62ba32c6853c315ff231c396cf8bfdbb')
 
-_kernel='4.7.6-1-ARCH'
 
 #pkgver() {
 #	local _kernel='4.5.4_1'
@@ -55,7 +54,7 @@ build() {
 }
 
 package() {
-	cd "${srcdir}/zfs-${_commit}"
+	cd "${srcdir}/zfs-zfs-${_commit}"
     make DESTDIR="${pkgdir}" install
 
     # Remove uneeded files
