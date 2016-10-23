@@ -1,0 +1,42 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+
+_pkgname=lightdm-webkit2-greeter
+pkgname=lightdm-webkit2-greeter-next
+_pkgver=master
+pkgver=2.2beta1
+pkgrel=1
+pkgdesc="A webkit2 greeter for LightDM"
+arch=('i686' 'x86_64')
+url="https://github.com/antergos/lightdm-webkit2-greeter"
+license=('GPL3')
+makedepends=('gobject-introspection' 'meson')
+depends=('lightdm' 'webkit2gtk>=2.10.8' 'antergos-wallpapers' 'accountsservice')
+provides=('lightdm-webkit2-greeter' 'lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
+install=greeter.install
+backup=("etc/lightdm/${_pkgname}.conf")
+source=("${pkgname}-${_pkgver}.zip::http://github.com/Antergos/lightdm-webkit2-greeter/archive/master.zip")
+md5sums=('')
+groups=('system')
+
+
+
+build() {
+	cd "${srcdir}/${pkgname}-${_pkgver}/build"
+	
+	meson --prefix=/usr --libdir=lib ..
+	ninja
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${_pkgver}/build"
+
+	DESTDIR=$pkgdir ninja install
+	cd ..
+
+	sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' \
+		"${pkgdir}/etc/lightdm/${_pkgname}.conf" \
+		"${pkgdir}/usr/share/lightdm-webkit/themes/antergos/js/greeter.js"
+}
+
+# -*- mode: bash;-*-
+
