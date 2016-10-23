@@ -18,7 +18,9 @@ options=('!emptydirs')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/nemo/tarball/$pkgver"
 		'fix-log-spam.patch::https://patch-diff.githubusercontent.com/raw/linuxmint/nemo/pull/1209.patch'
 		'fix-desktop-redraw.patch::https://patch-diff.githubusercontent.com/raw/linuxmint/nemo/pull/1235.patch')
-md5sums=('77d5c47a6657dfbaf66c9f80978ce8650595753138d27bd2adaebbe0e46c3e23')
+md5sums=('e017ca57133444bccadcbe4ff057d1b6'
+		'0cf7fdfcdb459b3539db0b488cded6c0'
+		'0bbbd5343819eac15076c065581b83e8')
 
 
 # BEGIN ANTBS METADATA
