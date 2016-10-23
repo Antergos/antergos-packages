@@ -14,21 +14,21 @@ depends=('lightdm' 'webkit2gtk>=2.10.8' 'antergos-wallpapers' 'accountsservice')
 provides=('lightdm-webkit2-greeter' 'lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
 install=greeter.install
 backup=("etc/lightdm/${_pkgname}.conf")
-source=("${pkgname}-${_pkgver}.zip::http://github.com/Antergos/lightdm-webkit2-greeter/archive/master.zip")
+source=("${_pkgname}-${_pkgver}.zip::http://github.com/Antergos/lightdm-webkit2-greeter/archive/master.zip")
 md5sums=('')
 groups=('system')
 
 
 
 build() {
-	cd "${srcdir}/${pkgname}-${_pkgver}/build"
+	cd "${srcdir}/${_pkgname}-${_pkgver}/build"
 	
 	meson --prefix=/usr --libdir=lib ..
 	ninja
 }
 
 package() {
-	cd "${srcdir}/${pkgname}-${_pkgver}/build"
+	cd "${srcdir}/${_pkgname}-${_pkgver}/build"
 
 	DESTDIR=$pkgdir ninja install
 	cd ..
