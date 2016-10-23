@@ -4,7 +4,7 @@
 
 pkgname=nemo
 pkgver=3.0.6
-pkgrel=2
+pkgrel=2.1
 pkgdesc="File manager for GTK-based desktops."
 arch=('i686' 'x86_64')
 url="https://github.com/linuxmint/nemo"
@@ -16,8 +16,9 @@ makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'gnome-common'
 			'python-gobject' 'python-polib' 'python2-gobject' 'python2-polib')
 options=('!emptydirs')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/nemo/tarball/$pkgver"
-		'fix-log-spam.patch::https://patch-diff.githubusercontent.com/raw/linuxmint/nemo/pull/1209.patch')
-sha256sums=('77d5c47a6657dfbaf66c9f80978ce8650595753138d27bd2adaebbe0e46c3e23')
+		'fix-log-spam.patch::https://patch-diff.githubusercontent.com/raw/linuxmint/nemo/pull/1209.patch'
+		'fix-desktop-redraw.patch::https://patch-diff.githubusercontent.com/raw/linuxmint/nemo/pull/1235.patch')
+md5sums=('77d5c47a6657dfbaf66c9f80978ce8650595753138d27bd2adaebbe0e46c3e23')
 
 
 # BEGIN ANTBS METADATA
@@ -41,7 +42,11 @@ prepare() {
 	sed -i 's/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in.in
 
 	# https://github.com/linuxmint/nemo/pull/1209
-	[[ '3.0.6' = "${pkgver}" && '2' = "${pkgrel}" ]] && patch -Np1 -i ../fix-log-spam.patch
+	# https://github.com/linuxmint/nemo/pull/1235
+	[[ '3.0.6' = "${pkgver}" && '2.1' = "${pkgrel}" ]] && {
+		patch -Np1 -i ../fix-log-spam.patch
+		patch -Np1 -i ../fix-desktop-redraw.patch
+	}
 
 }
 
