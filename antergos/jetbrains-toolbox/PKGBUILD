@@ -1,0 +1,33 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contibutor: Frederik Schwan <frederik dot schwan at linux dot com>
+
+pkgname=jetbrains-toolbox
+pkgver=1.0.2095
+pkgrel=1
+pkgdesc="One-stop access to all your coding tools from JetBrains."
+url='http://www.jetbrains.com/toolbox/'
+arch=('x86_64' 'i686')
+options=('!strip')
+license=('custom')
+depends=('fuse')
+provides=()
+groups=('development' 'IDE' 'editor' 'jetbrains')
+source=("https://download.jetbrains.com/toolbox/${pkgname}-${pkgver}.tar.gz")
+		#"${pkgname}.desktop")
+sha256sums=($(wget -q "${source}.sha256" && cat "${pkgname}-${pkgver}.sha256" | cut -f1 -d" "))
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+
+	install -dm 755 \
+		"${pkgdir}/opt/${pkgname}" \
+		"${pkgdir}/usr/bin/" \
+		"${pkgdir}/usr/share/applications/"
+
+	# sed -i "s/Version=/Version=${pkgver}/g" "${pkgname}.desktop"
+	# install -m644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/"
+
+	install -Dm755 "${pkgname}" "${pkgdir}/opt/${pkgname}/${pkgname}"
+
+	ln -s "/opt/${pkgname}/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
+}
