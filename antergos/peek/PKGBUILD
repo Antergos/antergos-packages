@@ -28,7 +28,8 @@ build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
 	# Don't use /tmp while creating gifs since our /tmp is tmpfs!
-	sed -i 's|Exec=peek|Exec=env TMPDIR=/var/tmp peek|g' data/desktop/com.uploadedlobster.peek.desktop.in
+	sed -i 's|Exec=peek|Exec=env TMPDIR=/var/tmp peek|g;
+			s|DBusActivatable=true|DBusActivatable=false|g' data/desktop/com.uploadedlobster.peek.desktop.in
 	
 	cmake \
 		-DCMAKE_INSTALL_PREFIX="${pkgdir}/usr" \
