@@ -28,6 +28,10 @@ maybe_create_symlinks() {
 
 maybe_create_symlinks
 
-exec "${_jbl_toolbox_system_dir}/bin/jetbrains-toolbox" "$@"
+if is_first_run; then
+	exec "${_jbl_toolbox_system_dir}/jetbrains-toolbox" "$@"
+else
+	exec "${_jbl_toolbox_system_dir}/bin/jetbrains-toolbox" "$@"
+fi
 
 
