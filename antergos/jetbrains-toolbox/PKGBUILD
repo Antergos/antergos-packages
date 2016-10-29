@@ -6,11 +6,13 @@ pkgver=1.0.2095
 pkgrel=1.1
 pkgdesc="One-stop access to all your coding tools from JetBrains."
 url='http://www.jetbrains.com/toolbox/'
-arch=('x86_64' 'i686')
+arch=('any')
 options=('!strip')
 license=('custom')
 depends=('fuse')
-provides=()
+provides=('clion' 'clion-eap' 'phpstorm' 'phpstorm-eap' 'webstorm' 'webstorm-eap'
+	'pycharm-pro-eap' 'pycharm-com-eap' 'pycharm-eap' 'pycharm-professional' 'pycharm-community'
+	'intellij-idea-ultimate-edition' 'intellij-idea-community-edition' 'intellij-idea-ue-eap')
 groups=('development' 'IDE' 'editor' 'jetbrains')
 source=("https://download.jetbrains.com/toolbox/${pkgname}-${pkgver}.tar.gz"
 		"${pkgname}.desktop"
@@ -24,7 +26,7 @@ sha256sums=($(wget -q "${source}.sha256" && cat "${pkgname}-${pkgver}.tar.gz.sha
 	'c8a5b1af457f86013266cccf3cea561394881b3773a6eb1c9f571ff8fc2f4e60')
 
 # BEGIN ANTBS METADATA
-_autosum='True'
+_auto_sum='True'
 # END ANTBS METADATA
 
 
