@@ -3,7 +3,7 @@
 
 pkgname=jetbrains-toolbox
 pkgver=1.0.2095
-pkgrel=1
+pkgrel=1.1
 pkgdesc="One-stop access to all your coding tools from JetBrains."
 url='http://www.jetbrains.com/toolbox/'
 arch=('x86_64' 'i686')
@@ -12,22 +12,33 @@ license=('custom')
 depends=('fuse')
 provides=()
 groups=('development' 'IDE' 'editor' 'jetbrains')
-source=("https://download.jetbrains.com/toolbox/${pkgname}-${pkgver}.tar.gz")
-		#"${pkgname}.desktop")
-sha256sums=($(wget -q "${source}.sha256" && cat "${pkgname}-${pkgver}.sha256" | cut -f1 -d" "))
+source=("https://download.jetbrains.com/toolbox/${pkgname}-${pkgver}.tar.gz"
+		"${pkgname}.desktop"
+		'.settings.json'
+		'toolbox.svg'
+		'launcher.sh')
+sha256sums=($(wget -q "${source}.sha256" && cat "${pkgname}-${pkgver}.tar.gz.sha256" | cut -f1 -d" ")
+	'b7e4bc9fa3aa7ac05e17f731b5c47633dc5e23c18f69bba84ee9e56c87168509'
+	'1d583206859c21ba3d8898f0dffbaf3f6ae88c0e4ebeeb4868cc7e71aaf3895a'
+	'9e3784dc0bc10c0d7db7c01fa8874b4048ecb1d21fa2a82d4ff17c53cfacf70c'
+	'c8a5b1af457f86013266cccf3cea561394881b3773a6eb1c9f571ff8fc2f4e60')
+
 
 package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
 	install -dm 755 \
-		"${pkgdir}/opt/${pkgname}" \
+		"${pkgdir}/opt/JetBrains/Toolbox" \
 		"${pkgdir}/usr/bin/" \
-		"${pkgdir}/usr/share/applications/"
+		"${pkgdir}"/usr/share/{applications,pixmaps}
 
-	# sed -i "s/Version=/Version=${pkgver}/g" "${pkgname}.desktop"
-	# install -m644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/"
+	cp -t "${pkgdir}/opt/JetBrains/Toolbox" \
+		"${pkgname}" \
+		"${srcdir}/.settings.json"
 
-	install -Dm755 "${pkgname}" "${pkgdir}/opt/${pkgname}/${pkgname}"
+	cp "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/"
+	cp "${srcdir}/toolbox.svg" "${pkgdir}/usr/share/pixmaps/jetbrains-toolbox.svg"
 
-	ln -s "/opt/${pkgname}/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
+	cp "${srcdir}/launcher.sh" "${pkgdir}/usr/bin/${pkgname}"
+	chmod +x "${pkgdir}/usr/bin/${pkgname}"
 }
