@@ -3,7 +3,7 @@
 _pkgname=lightdm-webkit2-greeter
 pkgname=lightdm-webkit2-greeter-next
 _pkgver=master
-pkgver=2.2beta2
+pkgver=2.2beta3
 pkgrel=1
 pkgdesc="A webkit2 greeter for LightDM"
 arch=('i686' 'x86_64')
