@@ -1,0 +1,12 @@
+post_install() {
+
+	echo "$1" > /opt/JetBrains/Toolbox/.installed_version
+	find /opt/JetBrains -type d -exec chmod a+w {} \;
+
+}
+
+post_upgrade() {
+
+	post_install $1
+
+}
