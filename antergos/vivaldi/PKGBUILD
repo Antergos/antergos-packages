@@ -4,8 +4,9 @@
 
 pkgname=vivaldi
 pkgver=1.4.589.38
-pkgrel=1
+pkgrel=2
 pkgdesc='An advanced browser made with the power user in mind.'
+groups=('browser')
 url="https://vivaldi.com"
 options=(!strip !zipman)
 license=('custom')
