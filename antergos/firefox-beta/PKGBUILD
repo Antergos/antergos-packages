@@ -3,7 +3,7 @@
 
 pkgname=firefox-beta
 _pkgname=firefox
-pkgver=50.0b7
+pkgver=50.0rc2
 _major=${pkgver/rc*}
 _build=${pkgver/*rc}
 pkgrel=1
@@ -32,8 +32,7 @@ fi
 source+=("${pkgname}.desktop"
 		'mozconfig'
 		'firefox-install-dir.patch'
-		'vendor.js'
-		'firefox-symbolic.svg')
+		'vendor.js')
 md5sums=('259ea8127d1f3a72ac23db0a97455472')
 
 # Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
@@ -120,7 +119,6 @@ package() {
 	install -Dm644 "${_branding}/mozicon128.png" "${_hicolor}/128x128/apps/${pkgname}.png"
 	install -Dm644 "${_branding}/content/about-logo.png" "${_hicolor}/192x192/apps/${pkgname}.png"
 	install -Dm644 "${_branding}/content/about-logo@2x.png" "${_hicolor}/384x384/apps/${pkgname}.png"
-	install -Dm644 ../firefox-symbolic.svg "${_hicolor}/symbolic/apps/${pkgname}-symbolic.svg"
 
 	# Desktops
 	install -Dm644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications"
