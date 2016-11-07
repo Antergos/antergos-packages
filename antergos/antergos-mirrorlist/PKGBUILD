@@ -2,7 +2,7 @@
 
 pkgname=antergos-mirrorlist
 pkgver=20161107
-pkgrel=1
+pkgrel=2
 pkgdesc="Antergos mirrorlist for use by pacman"
 arch=('any')
 groups=('antergos-base')
