@@ -71,7 +71,7 @@ prepare() {
 	[[ 'i686' = "${CARCH}" ]] && {
 		_python="/32build/root${_python}"
 		echo 'ac_add_options --target=i686-unknown-linux-gnu' >>.mozconfig
-		echo 'export CROSS_COMPILE=1' >> .mozconfig
+		echo 'ac_add_options --host=i686-unknown-linux-gnu' >>.mozconfig
 	}
 
 	mkdir "$srcdir/path"
