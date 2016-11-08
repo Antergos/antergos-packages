@@ -4,7 +4,7 @@
 
 pkgname=cinnamon-desktop
 pkgver=3.2.0
-pkgrel=2
+pkgrel=1
 pkgdesc="Library with common API for various Cinnamon modules"
 url="https://github.com/linuxmint/cinnamon-desktop"
 arch=(i686 x86_64)
