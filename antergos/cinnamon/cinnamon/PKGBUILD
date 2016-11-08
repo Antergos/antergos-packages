@@ -25,23 +25,19 @@ depends=('accountsservice'          'cjs'                   'librsvg'           
 makedepends=('gnome-common' 'intltool' 'gtk-doc' 'gobject-introspection')
 options=('!emptydirs')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/Cinnamon/archive/$pkgver.tar.gz"
-		"set_wheel.patch"
-		"default-theme.patch"
-		"fix-missing-icons.patch")
-sha256sums=('1a3aafe4339948e44b2866b25ac6ecc70b021ef8edb674a9e2af0a59ef42d405'
-			'9f1d4f6b3391f6ff0a6761fa4bcfab297a5e1185a3d8ff24a760284b667366e2'
-			'566585873f38a79ec248b916645a2e081abec3c6d4df2c34339cde1f35375cc5'
-			'a73f704bc6a0fcd6a003f28be23f035eb506ace484ebb82a25826634226338b0')
+		'set_wheel.patch'
+		'default-theme.patch')
+md5sums=('2b319db1301caf18da2b0ada82006592'
+		'68adf4662e44e23c9165f2d1573b818b'
+		'fedebac6dbff56b4d45b2e312166b2c7')
 
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cinnamon'
-
 # END ANTBS METADATA
 
 
@@ -53,9 +49,6 @@ prepare() {
 
 	# Set default theme to 'cinnamon'
 	patch -Np1 -i ../default-theme.patch
-
-	# Fix missing icons with Adwaita theme
-	patch -Np1 -i ../fix-missing-icons.patch
 
 	# Python2 fix
 	find -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'

@@ -4,7 +4,7 @@
 
 pkgname=nemo
 pkgver=3.2.0
-pkgrel=2.1
+pkgrel=1
 pkgdesc="File manager for GTK-based desktops."
 arch=('i686' 'x86_64')
 url="https://github.com/linuxmint/nemo"
@@ -15,22 +15,16 @@ depends=('libexif' 'gvfs' 'dconf' 'desktop-file-utils' 'exempi' 'python2'
 makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'gnome-common'
 			'python-gobject' 'python-polib' 'python2-gobject' 'python2-polib')
 options=('!emptydirs')
-source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/nemo/tarball/$pkgver"
-		'fix-log-spam.patch::https://patch-diff.githubusercontent.com/raw/linuxmint/nemo/pull/1209.patch'
-		'fix-desktop-redraw.patch::https://patch-diff.githubusercontent.com/raw/linuxmint/nemo/pull/1235.patch')
-md5sums=('e017ca57133444bccadcbe4ff057d1b6'
-		'0cf7fdfcdb459b3539db0b488cded6c0'
-		'0bbbd5343819eac15076c065581b83e8')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/nemo/tarball/${pkgver}")
+md5sums=('6445589502b972cba66aaa649e68bb94')
 
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='nemo'
-
 # END ANTBS METADATA
 
 
@@ -42,14 +36,6 @@ prepare() {
 
 	# Rename 'Files' app name to avoid having the same as nautilus
 	sed -i 's/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in.in
-
-	# https://github.com/linuxmint/nemo/pull/1209
-	# https://github.com/linuxmint/nemo/pull/1235
-	[[ '3.0.6' = "${pkgver}" && '2.1' = "${pkgrel}" ]] && {
-		patch -Np1 -i ../fix-log-spam.patch
-		patch -Np1 -i ../fix-desktop-redraw.patch
-	}
-
 }
 
 

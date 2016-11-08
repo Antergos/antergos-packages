@@ -4,12 +4,12 @@
 
 pkgname=cinnamon-settings-daemon
 pkgver=3.2.0
-pkgrel=3.1
+pkgrel=1
 pkgdesc="The Cinnamon Settings daemon"
 arch=('i686' 'x86_64')
 license=('GPL')
 groups=('cinnamon')
-depends=('cinnamon-desktop' 'libibus' 'libcanberra-pulse' 'librsvg' 'nss' 'polkit'
+depends=('cinnamon-desktop' 'libibus' 'libcanberra-pulse' 'librsvg' 'nss' 'polkit' 'lcms2'
 		'pulseaudio-alsa' 'upower' 'libnotify' 'libgnomekbd' 'libwacom' 'dbus-glib')
 makedepends=('intltool' 'docbook-xsl' 'gnome-common' 'xf86-input-wacom')
 options=('!emptydirs')
@@ -19,24 +19,22 @@ md5sums=('c0b815a88d7512f1575af2b8e2a57b15')
 
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cinnamon-settings-daemon'
-
 # END ANTBS METADATA
 
 
 build() {
-	cd $pkgname-$pkgver
+	cd "${pkgname}-${pkgver}"
 
 	./autogen.sh \
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
-		--libexecdir=/usr/lib/$pkgname \
+		--libexecdir="/usr/lib/${pkgname}" \
 		--disable-static \
 		--enable-systemd \
 		--enable-polkit
@@ -45,8 +43,8 @@ build() {
 }
 
 package() {
-	cd $pkgname-$pkgver
-	make DESTDIR="$pkgdir" install
+	cd "${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
 }
  
 

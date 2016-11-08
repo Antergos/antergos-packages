@@ -4,20 +4,18 @@
 
 pkgname=cinnamon-session
 pkgver=3.2.0
-pkgrel=5
+pkgrel=1
 pkgdesc="The Cinnamon Session Handler"
-arch=(i686 x86_64)
-license=(GPL LGPL)
+arch=('i686' 'x86_64')
+license=('GPL' 'LGPL')
 groups=('cinnamon')
 depends=('dbus-glib' 'cinnamon-desktop' 'libsm' 'libcanberra' 'libsystemd')
 optdepends=('qt5-styleplugins: Gtk theme/styles for QT apps')
 makedepends=('intltool' 'mesa' 'json-glib' 'xtrans' 'gnome-common')
 options=('!emptydirs')
 url="https://github.com/linuxmint/cinnamon-session"
-source=("${pkgname}-${pkgver}.zip::https://github.com/linuxmint/cinnamon-session/archive/${pkgver}.zip"
-		'qt57-theme-support.patch::https://github.com/linuxmint/cinnamon-session/pull/75.patch')
-md5sums=('5a477a4d8aa9cc8f92fb7a738334d3ec'
-         '0de0e5a7120e4cb5ce0592f39f7cf518')
+source=("${pkgname}-${pkgver}.zip::https://github.com/linuxmint/cinnamon-session/archive/${pkgver}.zip")
+md5sums=('fe61e337b3f392ad6fa6c27ee2806b47')
 
 
 # BEGIN ANTBS METADATA
@@ -31,9 +29,6 @@ _monitored_repo='cinnamon-session'
 
 prepare() {
 	cd $pkgname-$pkgver
-
-	# https://github.com/linuxmint/cinnamon-session/pull/75
-	patch -Np1 -i ../qt57-theme-support.patch
 }
 
 build() {
