@@ -10,7 +10,7 @@ arch=('i686' 'x86_64')
 license=('GPL')
 groups=('cinnamon')
 depends=('cinnamon-desktop' 'libibus' 'libcanberra-pulse' 'librsvg' 'nss' 'polkit' 'lcms2'
-		'pulseaudio-alsa' 'upower' 'libnotify' 'libgnomekbd' 'libwacom' 'dbus-glib')
+		'pulseaudio-alsa' 'upower' 'libnotify' 'libgnomekbd' 'libwacom' 'dbus-glib' 'colord')
 makedepends=('intltool' 'docbook-xsl' 'gnome-common' 'xf86-input-wacom')
 options=('!emptydirs')
 url="https://github.com/linuxmint/cinnamon-settings-daemon"
