@@ -11,7 +11,7 @@ license=('GPL')
 groups=('cinnamon')
 depends=('cinnamon-desktop' 'libibus' 'libcanberra-pulse' 'librsvg' 'nss' 'polkit' 'lcms2'
 		'pulseaudio-alsa' 'upower' 'libnotify' 'libgnomekbd' 'libwacom' 'dbus-glib' 'colord')
-makedepends=('intltool' 'docbook-xsl' 'gnome-common' 'xf86-input-wacom')
+makedepends=('intltool' 'docbook-xsl' 'autoconf-archive' 'xf86-input-wacom' 'cups')
 options=('!emptydirs')
 url="https://github.com/linuxmint/cinnamon-settings-daemon"
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-settings-daemon/archive/${pkgver}.tar.gz")
