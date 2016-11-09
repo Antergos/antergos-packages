@@ -29,7 +29,7 @@ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/Cinnamon/arch
 		"themes.tar.gz::https://github.com/linuxmint/cinnamon-themes/archive/${_themes_commit}.tar.gz"
 		'set_wheel.patch'
 		'default-theme.patch')
-md5sums=('2b319db1301caf18da2b0ada82006592'
+md5sums=('a954caa4e4d817bed7e461a43750c47e'
          '3888cddad5faff248fffdd17fcf26d41'
          '68adf4662e44e23c9165f2d1573b818b'
          '089b7ec2aa9e2617e6fac026e9f04de8')
@@ -88,7 +88,8 @@ package() {
 	make DESTDIR="${pkgdir}" install
 
 	mkdir -p "${pkgdir}/usr/share/themes"
-	cp -R "${srcdir}"/cinnamon-themes*/* "${pkgdir}/usr/share/themes"
+	cd "${srcdir}"/cinnamon-themes*
+	cp -R usr/share/themes/* "${pkgdir}/usr/share/themes"
 }
 
 # -*- mode: bash;-*-
