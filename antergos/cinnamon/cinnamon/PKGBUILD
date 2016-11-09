@@ -5,7 +5,7 @@
 # Contributor: CReimer
 
 pkgname=cinnamon
-pkgver=3.2.1
+pkgver=3.2.0
 pkgrel=1
 pkgdesc='Linux Desktop featuring a traditional layout built using modern technologies.'
 arch=('i686' 'x86_64')
@@ -22,14 +22,17 @@ depends=('accountsservice'          'cjs'                   'librsvg'           
 		 'cinnamon-settings-daemon' 'libgnome-keyring'      'python2-cairo'          'webkitgtk'
 		 'cinnamon-translations'    'libgnomekbd'           'python2-dbus')
 
-makedepends=('gnome-common' 'intltool' 'gtk-doc' 'gobject-introspection')
+makedepends=('autoconf-archive' 'intltool' 'gtk-doc' 'gobject-introspection')
 options=('!emptydirs')
-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/Cinnamon/archive/$pkgver.tar.gz"
+_themes_commit='0da899f58c435153cb12bec9a41e7f5ad30b6633'
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/Cinnamon/archive/${pkgver}.tar.gz"
+		"themes.tar.gz::https://github.com/linuxmint/cinnamon-themes/archive/${_themes_commit}.tar.gz"
 		'set_wheel.patch'
 		'default-theme.patch')
 md5sums=('2b319db1301caf18da2b0ada82006592'
-		'68adf4662e44e23c9165f2d1573b818b'
-		'fedebac6dbff56b4d45b2e312166b2c7')
+         '3888cddad5faff248fffdd17fcf26d41'
+         '68adf4662e44e23c9165f2d1573b818b'
+         '089b7ec2aa9e2617e6fac026e9f04de8')
 
 
 # BEGIN ANTBS METADATA
@@ -83,6 +86,9 @@ build() {
 package() {
 	cd "${srcdir}"/Cinnamon*
 	make DESTDIR="${pkgdir}" install
+
+	mkdir -p "${pkgdir}/usr/share/themes"
+	cp -R "${srcdir}"/cinnamon-themes*/* "${pkgdir}/usr/share/themes"
 }
 
 # -*- mode: bash;-*-
