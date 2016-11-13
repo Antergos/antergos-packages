@@ -29,8 +29,6 @@ _monitored_repo='xplayer-plparser'
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
-	sed -i 's/PYTHON=python/PYTHON=python2/g' py-compile
-
 	./autogen.sh
 		--prefix="/usr" \
 		--localstatedir="/var" \
