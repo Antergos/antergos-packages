@@ -22,7 +22,7 @@ _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='tista500'
 _monitored_repo='Adapta'
-_monitored_match_pattern='/(\d\.\d+\.\d+\.\d{3,})$/'
+_monitored_match_pattern='/(\d\.\d+\.\d+\.\d{1,3})$/'
 # END ANTBS METADATA
 
 
