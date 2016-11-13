@@ -3,7 +3,7 @@
 
 pkgname=gtk-theme-adapta
 _theme_name=adapta-gtk-theme
-pkgver=3.22.1.159
+pkgver=3.22.3.20
 pkgrel=1
 pkgdesc="An adaptive Gtk+ theme based on Material Design Guidelines."
 arch=('any')
@@ -12,7 +12,7 @@ license=('GPL2')
 depends=('gtk2' 'gtk-engine-murrine' 'gtk-engines' 'gtk3>3.18')
 makedepends=('glib2' 'ruby-sass' 'ruby-bundler' 'inkscape')
 groups=('themes' 'themes::gtk')
-source=("https://github.com/tista500/Adapta/archive/${pkgver}.tar.gz")
+source=("https://github.com/adapta-project/${_theme_name}/archive/${pkgver}.tar.gz")
 md5sums=('fa79d9be0677aab1b92cab512f5d4aeb')
 
 
@@ -20,8 +20,8 @@ md5sums=('fa79d9be0677aab1b92cab512f5d4aeb')
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='releases'
-_monitored_project='tista500'
-_monitored_repo='Adapta'
+_monitored_project='adapta-project'
+_monitored_repo='adapta-gtk-theme'
 _monitored_match_pattern='/(\d\.\d+\.\d+\.\d{1,3})$/'
 # END ANTBS METADATA
 
