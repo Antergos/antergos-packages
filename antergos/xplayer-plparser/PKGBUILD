@@ -30,8 +30,8 @@ build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
 	./autogen.sh
-		--prefix="/usr" \
-		--localstatedir="/var" \
+		--prefix=/usr \
+		--localstatedir=/var \
 		--libexecdir="/usr/lib/${pkgname}"
 	make
 }
