@@ -6,7 +6,7 @@ post-install() {
 			rm /var/tmp/kdecache-${USER}/icon-cache.kcache
 		  ;;
 		*)
-		  gtk-update-icon-cache -ftq usr/share/icons/Numix-Square usr/share/icons/Numix-Square-Light
+		  echo
 		  ;;
 	esac
 }
@@ -17,7 +17,7 @@ post-upgrade() {
 			rm /var/tmp/kdecache-${USER}/icon-cache.kcache
 		  ;;
 		*)
-		  gtk-update-icon-cache -ftq usr/share/icons/Numix-Square usr/share/icons/Numix-Square-Light
+		  echo
 		  ;;
 	esac
 }
@@ -26,5 +26,5 @@ post-remove() {
   post-upgrade
 }
 
-# vim: ts=2 sw=2 et:
+
 # -*- mode: bash;-*-
