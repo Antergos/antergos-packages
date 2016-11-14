@@ -10,11 +10,27 @@ url='http://numixproject.org/'
 license=('custom')
 depends=('numix-icon-theme')
 replaces=('numix-icon-theme-square-kde')
-conflicts=('numix-icon-theme-square-kde')
+conflicts=('numix-icon-theme-square-git')
 options=('!strip')
 install="${pkgname}.install"
-source=("numix-icon-theme-square.zip")
+source=('git+http://github.com/numixproject/numix-icon-theme.git')
 md5sums=('')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='commits'
+_monitored_project='numixproject'
+_monitored_repo='numix-icon-theme-square'
+# END ANTBS METADATA
+
+
+pkgver() {
+	cd "${srcdir}/${pkgname}"
+
+	printf "0.r83_%s" "$(git rev-list --count HEAD)"
+}
 
 
 

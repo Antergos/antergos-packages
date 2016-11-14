@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme
-pkgver=0.1881
+pkgver=0.1890
 pkgrel=1
 pkgdesc="Base icon theme from the Numix project"
 arch=('any')
@@ -11,19 +11,33 @@ depends=('adwaita-icon-theme')
 makedepends=('git')
 options=('!strip')
 install="${pkgname}.install"
-source=("git+http://github.com/numixproject/numix-icon-theme.git")
-md5sums=('SKIP')
+source=('git+http://github.com/numixproject/numix-icon-theme.git'
+		'antergos-ball-for-dark-themes.svg'
+		'antergos-ball-for-light-themes.svg')
+md5sums=('SKIP'
+		'b53a44445cf8db72d38c13c93cb42abe'
+		'7285681ca2f956a4b4c3c0898c895eb8')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='commits'
+_monitored_project='numixproject'
+_monitored_repo='numix-icon-theme'
+# END ANTBS METADATA
 
 
 pkgver() {
 	cd "${srcdir}/${pkgname}"
-	printf "0.%s" "$(git rev-list --count HEAD)"
+	printf "0.r%s" "$(git rev-list --count HEAD)"
 }
 
-package() {
+
+build() {
 	cd "${srcdir}/${pkgname}"
 
-	patch_icons() {
+	patch_navigation_icons() {
 		cd "${srcdir}/${pkgname}"
 		_regex='(gtk-)*go(to)*-*(\w|-)+\.svg'
 		for _icon in ${1}/${2}/actions/**
@@ -40,19 +54,57 @@ package() {
 		done
 	}
 
+	patch_start_here_icons() {
+		PLACES_DIR="$1"
+		SIZE="$2"
+		VARIANT="$3"
+
+		OLD_NAME='start-here.svg'
+		START_HERE="${PLACES_DIR}/${OLD_NAME}"
+		NEW_NAME="${OLD_NAME/.svg}-Numix.svg"
+
+		[[ 'scalable' = "${SIZE}" ]] && {
+			OLD_NAME='start-here-symbolic.svg'
+			START_HERE="${PLACES_DIR}/${OLD_NAME}"
+			NEW_NAME="${OLD_NAME/-symbolic.svg}-Numix-symbolic.svg"
+		}
+
+		[[ -f "${START_HERE}" ]] && {
+
+			( cd "${PLACES_DIR}" && mv "${OLD_NAME}" "${NEW_NAME}" )
+
+			cp ../"antergos-ball-for-${VARIANT}-themes.svg" "${PLACES_DIR}/${OLD_NAME}"
+			sed -i "s|78.052307|${SIZE}.000000|g" "${PLACES_DIR}/${OLD_NAME}"
+		}
+
+		return 0
+	}
+
+
 	for size in 16 22 24
 	do
-		patch_icons Numix ${size}
+		( patch_navigation_icons Numix ${size} )
 	done
 
-	mv Numix/24/places/start-here.svg Numix/24/places/start-here-Numix.svg
-	mv Numix/32/places/start-here.svg Numix/32/places/start-here-Numix.svg
+	for size in 16 22 24 32 48 64 scalable
+	do
+		patch_start_here_icons "Numix/${size}/places" "${size}" 'dark'
+		patch_start_here_icons "Numix-Light/${size}/places" "${size}" 'light'
+	done
 
 	sed -i 's|Name=Numix Light|Name=Numix-Light|g' Numix-Light/index.theme
 	sed -i 's|Inherits=Numix|Inherits=Numix,Adwaita,gnome,hicolor|g' Numix-Light/index.theme
 	sed -i 's|Inherits=gnome|Inherits=Adwaita,gnome|g' Numix/index.theme
-
-	install -dm 755 "$pkgdir"/usr/share/icons
-	cp -dr --no-preserve='ownership' Numix "$pkgdir"/usr/share/icons/
-	cp -dr --no-preserve='ownership' Numix-Light "$pkgdir"/usr/share/icons/
 }
+
+
+package() {
+	cd "${srcdir}/${pkgname}"
+
+	install -dm 755 "${pkgdir}/usr/share/icons"
+	cp -r Numix "${pkgdir}/usr/share/icons"
+	cp -r Numix-Light "${pkgdir}/usr/share/icons"
+}
+
+# -*- mode:bash; -*-
+
