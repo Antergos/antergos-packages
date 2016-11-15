@@ -16,8 +16,7 @@ makedepends=('ruby-sass' 'npm' 'gulp')
 replaces=('gtk-theme-numix-frost')
 #source=('git+https://github.com/Antergos/Numix-Frost.git')
 source=("${pkgname}-${pkgver}::https://github.com/Antergos/Numix-Frost/archive/${pkgver}.zip")
-md5sums=('1e02fefbcb55089342e3395eea0d8402'
-		'0e5198a274e9c5f8e2bbff31afa3e566')
+md5sums=('1e02fefbcb55089342e3395eea0d8402')
 
 
 # BEGIN ANTBS METADATA
@@ -40,34 +39,14 @@ package() {
 	# Numix-Frost
 	cd "${srcdir}/${_pkgname}"
 	git checkout "${pkgver}"
-	git submodule update --init -- src/includes/cinnamon
 	sed -i 's| unity||g' scripts/utils.sh
-	make
 	make DESTDIR="${pkgdir}" install
-
-
-	# Cinnamon Theme
-	sed -i 's%Numix-Cinnamon%Numix-Frost%g' src/includes/cinnamon/Numix-Cinnamon/cinnamon/theme.json
-	install -d "${pkgdir}/usr/share/themes/${_pkgname}/cinnamon"
-	cd src/includes/cinnamon/Numix-Cinnamon
-	scss --update --sourcemap=none cinnamon/sass:cinnamon
-	rm -rf cinnamon/sass
-	rm -f cinnamon/*.js
-	cp -R --no-preserve=ownership cinnamon "$pkgdir/usr/share/themes/$_pkgname"
-
-
-	# GNOME Shell Theme
-	install -d "${pkgdir}/usr/share/themes/${_pkgname}/gnome-shell"
-	cd "${srcdir}/${_pkgname}/src/gnome-shell"
-	find . -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/$_pkgname/gnome-shell/{}" \;
 
 
 	# Numix-Frost-Light
 	cd "${srcdir}/${_light}"
 	git checkout "${pkgver}-light"
-	patch -Np1 -i ../fix-headerbar-regression.patch
 	sed -i 's| unity||g' scripts/utils.sh
-	make
 	make DESTDIR="${pkgdir}" install
 
 }
