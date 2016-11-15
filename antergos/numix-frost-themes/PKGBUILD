@@ -5,7 +5,7 @@ _pkgname=Numix-Frost
 _light=Numix-Frost-Light
 _branch=numix-frost-light
 pkgver=3.6.6
-pkgrel=1.1
+pkgrel=1
 pkgdesc='Official Numix GTK theme - Antergos Edition'
 arch=('any')
 license=('GPL3')
@@ -15,8 +15,7 @@ depends=('gtk-engine-murrine' 'gtk3>=3.18')
 makedepends=('ruby-sass' 'npm' 'gulp')
 replaces=('gtk-theme-numix-frost')
 #source=('git+https://github.com/Antergos/Numix-Frost.git')
-source=("${pkgname}-${pkgver}::https://github.com/Antergos/Numix-Frost/archive/${pkgver}.zip"
-		'fix-headerbar-regression.patch::https://github.com/Antergos/Numix-Frost/commit/c21a63a110206829511b25bfac8f7f42e91f93cc.patch')
+source=("${pkgname}-${pkgver}::https://github.com/Antergos/Numix-Frost/archive/${pkgver}.zip")
 md5sums=('1e02fefbcb55089342e3395eea0d8402'
 		'0e5198a274e9c5f8e2bbff31afa3e566')
 
@@ -41,7 +40,6 @@ package() {
 	# Numix-Frost
 	cd "${srcdir}/${_pkgname}"
 	git checkout "${pkgver}"
-	patch -Np1 -i ../fix-headerbar-regression.patch
 	git submodule update --init -- src/includes/cinnamon
 	sed -i 's| unity||g' scripts/utils.sh
 	make
