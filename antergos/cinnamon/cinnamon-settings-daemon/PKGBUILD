@@ -15,9 +15,9 @@ makedepends=('intltool' 'docbook-xsl' 'autoconf-archive' 'xf86-input-wacom' 'cup
 options=('!emptydirs')
 url="https://github.com/linuxmint/cinnamon-settings-daemon"
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-settings-daemon/archive/${pkgver}.tar.gz"
-		'http://pkgs.fedoraproject.org/cgit/rpms/cinnamon-settings-daemon.git/tree/csd-background-manager.patch')
+		'http://pkgs.fedoraproject.org/cgit/rpms/cinnamon-settings-daemon.git/plain/csd-background-manager.patch')
 md5sums=('388c96d551b46eb09ef4d5a71819c3a2'
-		'3214d5657bffb3c87e8a45ad5e36c658')
+         '569d2e9848186353897550ea0c7bcc45')
 
 
 # BEGIN ANTBS METADATA
