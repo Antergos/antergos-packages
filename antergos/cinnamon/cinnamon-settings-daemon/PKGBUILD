@@ -4,7 +4,7 @@
 
 pkgname=cinnamon-settings-daemon
 pkgver=3.2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="The Cinnamon Settings daemon"
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -14,8 +14,10 @@ depends=('cinnamon-desktop' 'libibus' 'libcanberra-pulse' 'librsvg' 'nss' 'polki
 makedepends=('intltool' 'docbook-xsl' 'autoconf-archive' 'xf86-input-wacom' 'cups')
 options=('!emptydirs')
 url="https://github.com/linuxmint/cinnamon-settings-daemon"
-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-settings-daemon/archive/${pkgver}.tar.gz")
-md5sums=('c0b815a88d7512f1575af2b8e2a57b15')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-settings-daemon/archive/${pkgver}.tar.gz"
+		'http://pkgs.fedoraproject.org/cgit/rpms/cinnamon-settings-daemon.git/tree/csd-background-manager.patch')
+md5sums=('388c96d551b46eb09ef4d5a71819c3a2'
+		'3214d5657bffb3c87e8a45ad5e36c658')
 
 
 # BEGIN ANTBS METADATA
@@ -29,6 +31,9 @@ _monitored_repo='cinnamon-settings-daemon'
 
 build() {
 	cd "${pkgname}-${pkgver}"
+
+	# https://github.com/linuxmint/Cinnamon/issues/5569#issuecomment-252537458
+	patch -Np1 -i ../csd-background-manager.patch
 
 	./autogen.sh \
 		--prefix=/usr \
