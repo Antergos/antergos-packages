@@ -4,32 +4,43 @@
 
 _pkgname=firefox
 pkgname=firefox-kde
-pkgver=49.0.1
+pkgver=50.0
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org with openSUSE KDE integration patches."
 arch=('i686' 'x86_64')
 license=('MPL' 'GPL' 'LGPL')
 url="https://build.opensuse.org/package/show/mozilla:Factory/MozillaFirefox"
 groups=('browser')
-depends=('alsa-lib' 'dbus-glib' 'ffmpeg' 'gtk2' 'gtk3' 'hunspell' 'icu' 'libevent' 'libvpx'
-		'libxt' 'mime-types' 'mozilla-common' 'nss' 'startup-notification' 'sqlite' 'ttf-font'
-		'kmozillahelper')
-makedepends=('unzip' 'zip' 'diffutils' 'python2' 'yasm' 'mesa' 'imake' 'gconf'
-			'libpulse' 'inetutils' 'xorg-server-xvfb' 'autoconf2.13' 'rust')
+
+depends=('alsa-lib'        'dbus-glib'  'ffmpeg'  'gtk2'
+        'gtk3'            'hunspell'   'icu'     'kmozillahelper'
+        'libevent'        'libvpx'     'libxt'   'mime-types'
+        'mozilla-common'  'nss'        'sqlite'  'startup-notification'
+        'ttf-font')
+
+makedepends=('autoconf2.13'  'cargo'      'diffutils'         'gconf'
+            'imake'         'inetutils'  'libpulse'          'mesa'
+            'python2'       'unzip'      'xorg-server-xvfb'  'yasm'
+            'zip')
+
 optdepends=('networkmanager: Location detection via available WiFi networks'
-			'upower: Battery API')
+           'upower: Battery API')
+
 provides=("firefox=${pkgver}")
 conflicts=('firefox')
 options=('!emptydirs' '!makeflags')
-_patchrev=9fc2ebe6d7f1
-_patchurl=http://www.rosenauer.org/hg/mozilla/raw-file/${_patchrev}
+_patchrev=a58cc7936ce7
+_patchurl="http://www.rosenauer.org/hg/mozilla/raw-file/${_patchrev}"
+_archpkg_git_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
+
 source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/source/${_pkgname}-${pkgver}.source.tar.xz"
+		"fix-wifi-scanner.diff::${_archpkg_git_url}/fix-wifi-scanner.diff?h=packages/firefox"
+		"firefox-install-dir.patch::${_archpkg_git_url}/firefox-install-dir.patch?h=packages/firefox"
+		"vendor.js::${_archpkg_git_url}/vendor.js?h=packages/firefox"
+		"rust-i686.patch::${_archpkg_git_url}/rust-i686.patch?h=packages/firefox"
 		'mozconfig'
 		'firefox.desktop'
-		'firefox-install-dir.patch'
-		'vendor.js'
 		'kde.js'
-		'firefox-symbolic.svg'
 		# Firefox patchset
 		$_patchurl/firefox-branded-icons.patch
 		$_patchurl/firefox-kde.patch
@@ -60,10 +71,7 @@ md5sums=('3ce01741b9eab6a2988b970127330dcd'
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
 # get your own set of keys. Feel free to contact info@antergos.com for
 # more information.
-_google_apps_domain='.apps.googleusercontent.com'
 _google_api_key='AIzaSyBPgpho0q0siP2tggJwIsDx8ykpp-Y76Xk'
-_google_default_client_id="523794628393-5f327td2rntpgvfvitoe2l36b2k4qdmq${_google_apps_domain}"
-_google_default_client_secret='PGTWmwZDJ5VjvFoCKfVc19cK'
 
 # Mozilla API keys (see https://location.services.mozilla.com/api)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
@@ -78,6 +86,13 @@ prepare() {
 	cp ../mozconfig .mozconfig
 	patch -Np1 -i ../firefox-install-dir.patch
 
+	# https://bugzilla.mozilla.org/show_bug.cgi?id=1314968
+	patch -Np1 -i ../fix-wifi-scanner.diff
+
+	# Build with the rust targets we actually ship
+	patch -Np1 -i ../rust-i686.patch
+
+	# KDE Integration Patches
 	patch -Np1 -i "${srcdir}/mozilla-nongnome-proxies.patch"
 	patch -Np1 -i "${srcdir}/mozilla-kde.patch"
 	patch -Np1 -i "${srcdir}/mozilla-language.patch"
@@ -89,21 +104,25 @@ prepare() {
 	echo -n "$_google_api_key" >google-api-key
 	echo "ac_add_options --with-google-api-keyfile=\"$PWD/google-api-key\"" >>.mozconfig
 
-	echo -n "$_google_default_client_id $_google_default_client_secret" >google-oauth-api-key
-	echo "ac_add_options --with-google-oauth-api-keyfile=\"$PWD/google-oauth-api-key\"" >>.mozconfig
-
 	echo -n "$_mozilla_api_key" >mozilla-api-key
 	echo "ac_add_options --with-mozilla-api-keyfile=\"$PWD/mozilla-api-key\"" >>.mozconfig
 
-	[[ 'i686' = "${CARCH}" ]] && echo 'ac_add_options --target=i686-unknown-linux-gnu' >>.mozconfig
+	[[ 'i686' = "${CARCH}" ]] && {
+		_python="/32build/root${_python}"
+		echo 'ac_add_options --target=i686-unknown-linux-gnu' >>.mozconfig
+		echo 'ac_add_options --host=i686-unknown-linux-gnu' >>.mozconfig
+	}
+
+	_python=/usr/bin/python2
 
 	mkdir "$srcdir/path"
-	ln -s /usr/bin/python2 "$srcdir/path/python"
+
+	ln -s ${_python} "$srcdir/path/python"
 }
 
 
 build() {
-	cd "${_pkgname}-${pkgver}"
+	cd "${_pkgname}-${pkgver}" || cd "${_pkgname}-${_majorver}"
 
 	# _FORTIFY_SOURCE causes configure failures
 	CPPFLAGS+=" -O2"
@@ -122,11 +141,12 @@ build() {
 	make -f client.mk build
 }
 
+
 package() {
 	cd "${_pkgname}-${pkgver}"
 
 	[[ "$CARCH" == "i686" ]] && cp "$srcdir/kde.js" obj-i686-unknown-linux-gnu/dist/bin/defaults/pref
-	[[ "$CARCH" == "x86_64" ]] && cp "$srcdir/kde.js" obj-x86_64-pc-linux-gnu/dist/bin/defaults/pref
+	[[ "$CARCH" == "x86_64" ]] && cp "$srcdir/kde.js" obj-x86_64-unknown-linux-gnu/dist/bin/defaults/pref
 
 	make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
 
@@ -144,7 +164,6 @@ package() {
 	install -Dm644 "${_branding}/mozicon128.png" "${_hicolor}/128x128/apps/${_pkgname}.png"
 	install -Dm644 "${_branding}/content/about-logo.png" "${_hicolor}/192x192/apps/${_pkgname}.png"
 	install -Dm644 "${_branding}/content/about-logo@2x.png" "${_hicolor}/384x384/apps/${_pkgname}.png"
-	install -Dm644 ../firefox-symbolic.svg "${_hicolor}/symbolic/apps/${_pkgname}-symbolic.svg"
 
 	install -Dm644 ../firefox.desktop "${pkgdir}/usr/share/applications/firefox.desktop"
 
