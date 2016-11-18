@@ -59,10 +59,7 @@ md5sums=('f71837c6349bd4c7b7b78d49eb393a99'
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
 # get your own set of keys. Feel free to contact info@antergos.com for
 # more information.
-_google_apps_domain='.apps.googleusercontent.com'
 _google_api_key='AIzaSyBPgpho0q0siP2tggJwIsDx8ykpp-Y76Xk'
-_google_default_client_id="523794628393-5f327td2rntpgvfvitoe2l36b2k4qdmq${_google_apps_domain}"
-_google_default_client_secret='PGTWmwZDJ5VjvFoCKfVc19cK'
 
 # Mozilla API keys (see https://location.services.mozilla.com/api)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
@@ -85,9 +82,6 @@ prepare() {
 
 	echo -n "$_google_api_key" >google-api-key
 	echo "ac_add_options --with-google-api-keyfile=\"$PWD/google-api-key\"" >>.mozconfig
-
-	echo -n "$_google_default_client_id $_google_default_client_secret" >google-oauth-api-key
-	echo "ac_add_options --with-google-oauth-api-keyfile=\"$PWD/google-oauth-api-key\"" >>.mozconfig
 
 	echo -n "$_mozilla_api_key" >mozilla-api-key
 	echo "ac_add_options --with-mozilla-api-keyfile=\"$PWD/mozilla-api-key\"" >>.mozconfig
