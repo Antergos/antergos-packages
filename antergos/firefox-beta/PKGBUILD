@@ -3,37 +3,57 @@
 
 pkgname=firefox-beta
 _pkgname=firefox
-pkgver=50.0rc2
-_major=${pkgver/rc*}
-_build=${pkgver/*rc}
+pkgver=51.0b1
 pkgrel=1
+_majorver="${pkgver/rc*}"
+_buildver="${pkgver/*rc}"
 pkgdesc="Standalone web browser from mozilla.org - Beta Channel"
 arch=('i686' 'x86_64')
 url="https://www.mozilla.org/en-US/firefox/channel#beta"
 license=('MPL' 'GPL' 'LGPL')
 groups=('browser')
-depends=('alsa-lib' 'dbus-glib' 'ffmpeg' 'gtk2' 'gtk3' 'hunspell' 'icu' 'libevent' 'libvpx'
-		'libxt' 'mime-types' 'mozilla-common' 'nss' 'startup-notification' 'sqlite' 'ttf-font')
-makedepends=('unzip' 'zip' 'diffutils' 'python2' 'yasm' 'mesa' 'imake' 'gconf'
-			'libpulse' 'inetutils' 'xorg-server-xvfb' 'autoconf2.13' 'rust')
+
+depends=('alsa-lib'  'dbus-glib'  'ffmpeg'                'gtk2'
+        'gtk3'      'hunspell'   'icu'                   'libevent'
+        'libvpx'    'libxt'      'mime-types'            'mozilla-common'
+        'nss'       'sqlite'     'startup-notification'  'ttf-font')
+
+makedepends=('autoconf2.13'  'cargo'      'diffutils'         'gconf'
+            'imake'         'inetutils'  'libpulse'          'mesa'
+            'python2'       'unzip'      'xorg-server-xvfb'  'yasm'
+            'zip')
+
 optdepends=('networkmanager: Location detection via available WiFi networks'
-			'upower: Battery API')
+           'upower: Battery API')
+
 provides=("firefox=${pkgver}")
 conflicts=('firefox-beta-bin' 'firefox-beta')
 options=('!emptydirs' '!makeflags')
+_rc_url="https://ftp.mozilla.org/pub/firefox/candidates/$_majorver-candidates/build$_buildver"
+_beta_url="https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}"
+_archpkg_git_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
 
-if [[ "${_build}" != "${pkgver}" ]]; then
+if [[ "${_buildver}" != "${pkgver}" ]]; then
 	# Release Candidate
-	source=("https://ftp.mozilla.org/pub/firefox/candidates/$_major-candidates/build$_build/source/firefox-$_major.source.tar.xz")
+	source=("${_rc_url}/source/firefox-$_majorver.source.tar.xz")
 else
-	source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$pkgver/source/firefox-$pkgver.source.tar.xz")
+	source=("${_beta_url}/source/firefox-${pkgver}.source.tar.xz")
 fi
 
-source+=("${pkgname}.desktop"
-		'mozconfig'
-		'firefox-install-dir.patch'
-		'vendor.js')
-md5sums=('259ea8127d1f3a72ac23db0a97455472')
+source+=("fix-wifi-scanner.diff::${_archpkg_git_url}/fix-wifi-scanner.diff?h=packages/firefox"
+		"firefox-install-dir.patch::${_archpkg_git_url}/firefox-install-dir.patch?h=packages/firefox"
+		"vendor.js::${_archpkg_git_url}/vendor.js?h=packages/firefox"
+		"rust-i686.patch::${_archpkg_git_url}/rust-i686.patch?h=packages/firefox"
+		"${pkgname}.desktop"
+		'mozconfig')
+
+md5sums=('f71837c6349bd4c7b7b78d49eb393a99'
+		'e2396b9918aa602427f80d48caf319b4'
+		'dbf14588e85812ee769bd735823a0146'
+		'aa9f776d2187cba09de65cbb02b39ca0'
+		'40b197fcf8c855b3902414f4d591b18b'
+		'259ea8127d1f3a72ac23db0a97455472'
+		'962721af2a2ca41e97563355ff2eed40')
 
 # Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
@@ -52,10 +72,16 @@ _mozilla_api_key='fa35d4d6-6529-436f-b3a1-8b9af187eca2'
 
 
 prepare() {
-	cd "${_pkgname}-${pkgver}" || cd "${_pkgname}-${_major}"
+	cd "${_pkgname}-${pkgver}" || cd "${_pkgname}-${_majorver}"
 
 	cp ../mozconfig .mozconfig
 	patch -Np1 -i ../firefox-install-dir.patch
+
+	# https://bugzilla.mozilla.org/show_bug.cgi?id=1314968
+	patch -Np1 -i ../fix-wifi-scanner.diff
+
+	# Build with the rust targets we actually ship
+	patch -Np1 -i ../rust-i686.patch
 
 	echo -n "$_google_api_key" >google-api-key
 	echo "ac_add_options --with-google-api-keyfile=\"$PWD/google-api-key\"" >>.mozconfig
@@ -75,13 +101,13 @@ prepare() {
 	}
 
 	mkdir "$srcdir/path"
-	
+
 	ln -s ${_python} "$srcdir/path/python"
 }
 
 
 build() {
-	cd "${_pkgname}-${pkgver}" || cd "${_pkgname}-${_major}"
+	cd "${_pkgname}-${pkgver}" || cd "${_pkgname}-${_majorver}"
 
 	# _FORTIFY_SOURCE causes configure failures
 	CPPFLAGS+=" -O2"
@@ -102,7 +128,7 @@ build() {
 
 
 package() {
-	cd "${_pkgname}-${pkgver}" || cd "${_pkgname}-${_major}"
+	cd "${_pkgname}-${pkgver}" || cd "${_pkgname}-${_majorver}"
 
 	make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
 
