@@ -3,7 +3,7 @@
 pkgname=cnchi
 _pkgname=Cnchi
 pkgver=0.14.193
-pkgrel=3
+pkgrel=1
 pkgdesc='A modern, flexible system installer for Linux'
 arch=('any')
 license=('GPL3')
