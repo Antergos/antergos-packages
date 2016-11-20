@@ -1,77 +1,58 @@
 #!/bin/bash
 
 
-_jbl_toolbox_user_dir="${HOME}/.local/share/JetBrains/Toolbox"
-_jbl_toolbox_system_dir='/opt/JetBrains/Toolbox'
-_jbl_user_version=''
-_jbl_system_version=''
+toolbox_user_dir="${HOME}/.local/share/JetBrains/Toolbox"
+toolbox_system_dir='/opt/JetBrains/Toolbox'
+toolbox_user_version=''
+toolbox_system_version=''
 
-[[ -d  "${_jbl_toolbox_user_dir}" ]] && _jbl_is_first_run='false' || _jbl_is_first_run='true'
-[[ 'false' = "${_jbl_is_first_run}" ]] 
-
-
-is_first_run() {
-	[[ 'true' = "${_jbl_is_first_run}" ]] && return 0
-	return 1
-}
+{ [[ -h "${toolbox_user_dir}" ]] && is_first_run='true'; } || is_first_run='false'
 
 
-maybe_create_symlinks() {
-	is_first_run || return 1
 
-	mkdir -p "${_jbl_toolbox_user_dir}"
-	ln -s "${_jbl_toolbox_system_dir}/.settings.json" "${_jbl_toolbox_user_dir}/.settings.json"
-	ln -s /usr/share/pixmaps/jetbrains-toolbox.svg "${_jbl_toolbox_user_dir}/toolbox.svg"
-
-	return 0
+setup_toolbox_user_directory() {
+	mkdir -p "${toolbox_user_dir}"
+	ln -s "${toolbox_system_dir}/.settings.json" "${toolbox_user_dir}/.settings.json"
+	ln -s /usr/share/pixmaps/jetbrains-toolbox.svg "${toolbox_user_dir}/toolbox.svg"
 }
 
 
 versions_match() {
-	_jbl_user_version=$(<"${_jbl_toolbox_user_dir}/.installed_version")
-	_jbl_system_version=$(<"${_jbl_toolbox_system_dir}/.installed_version")
+	toolbox_user_version=$(<"${toolbox_user_dir}/.installed_version")
+	toolbox_system_version=$(<"${toolbox_system_dir}/.installed_version")
 
-	[[ "${_jbl_user_version}" = "${_jbl_system_version}" ]] && return 0
+	[[ "${toolbox_user_version}" = "${toolbox_system_version}" ]] && return 0
 
 	return 1
 }
 
 
-is_first_run_after_upgrade() {
-	{ is_first_run || versions_match; } && return 1
-
-	return 0
+remove_symlink_to_binary() {
+	unlink "${toolbox_user_dir}/bin"
 }
 
 
-maybe_remove_symlink_to_binary() {
-	is_first_run_after_upgrade || return 1
-
-	unlink "${_jbl_toolbox_user_dir}/bin"
-
-	return 0
-}
-
-
-maybe_move_binary() {
-	is_first_run && return 1
-	[[ -h "${_jbl_toolbox_user_dir}/bin" ]] && return 1
-
-	cp -r "${_jbl_toolbox_user_dir}/bin" "${_jbl_toolbox_system_dir}"
-	rm -rf "${_jbl_toolbox_user_dir}/bin"
-	ln -s "${_jbl_toolbox_system_dir}/bin" "${_jbl_toolbox_user_dir}/bin"
-
-	
+move_binary_and_create_symlink() {
+	cp -r "${toolbox_user_dir}/bin" "${toolbox_system_dir}"
+	rm -rf "${toolbox_user_dir:?}/bin"
+	ln -s "${toolbox_system_dir}/bin" "${toolbox_user_dir}/bin"
 }
 
 
 
-maybe_create_symlinks || maybe_move_binary
+if [[ 'true' = "${is_first_run}" ]]; then
+	setup_toolbox_user_directory
+	exec "${toolbox_system_dir}/jetbrains-toolbox" "$@"
 
-if is_first_run; then
-	exec "${_jbl_toolbox_system_dir}/jetbrains-toolbox" "$@"
-else
-	exec "${_jbl_toolbox_system_dir}/bin/jetbrains-toolbox" "$@"
+elif ! [[ -h "${toolbox_user_dir}/bin" ]]; then
+	move_binary_and_create_symlink
+
+elif ! versions_match; then
+	remove_symlink_to_binary
+	cp "${toolbox_system_dir}/.installed_version" "${toolbox_user_dir}/.installed_version"
+	exec "${toolbox_system_dir}/jetbrains-toolbox" "$@"
 fi
 
+
+exec "${toolbox_system_dir}/bin/jetbrains-toolbox" "$@"
 

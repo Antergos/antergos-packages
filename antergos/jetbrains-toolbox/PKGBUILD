@@ -1,9 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
-# Contibutor: Frederik Schwan <frederik dot schwan at linux dot com>
 
 pkgname=jetbrains-toolbox
 pkgver=1.0.2095
-pkgrel=1.6
+pkgrel=1.7
 pkgdesc="One-stop access to all your coding tools from JetBrains."
 url='http://www.jetbrains.com/toolbox/'
 arch=('any')
@@ -48,3 +47,7 @@ package() {
 	cp "${srcdir}/launcher.sh" "${pkgdir}/usr/bin/${pkgname}"
 	chmod +x "${pkgdir}/usr/bin/${pkgname}"
 }
+
+
+# -*- mode: bash;-*-
+
