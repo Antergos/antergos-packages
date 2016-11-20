@@ -6,7 +6,7 @@ toolbox_system_dir='/opt/JetBrains/Toolbox'
 toolbox_user_version=''
 toolbox_system_version=''
 
-{ [[ -h "${toolbox_user_dir}" ]] && is_first_run='true'; } || is_first_run='false'
+{ [[ -d "${toolbox_user_dir}" ]] && is_first_run='false'; } || is_first_run='true'
 
 
 
@@ -54,5 +54,5 @@ elif ! versions_match; then
 fi
 
 
-exec "${toolbox_system_dir}/bin/jetbrains-toolbox" "$@"
+exec "${toolbox_user_dir}/bin/jetbrains-toolbox" "$@"
 
