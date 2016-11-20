@@ -16,8 +16,7 @@ makedepends=('gnome-shell' 'gnome-common' 'intltool')
 source=("$pkgname::https://github.com/micheleg/dash-to-dock/archive/extensions.gnome.org-${pkgver}.tar.gz")
 #source=("$pkgname::https://github.com/micheleg/dash-to-dock/archive/experimental_gnome-3.16.tar.gz")
 #source=("$pkgname::https://github.com/micheleg/dash-to-dock/archive/master.tar.gz")
-install='gschemas.install'
-sha256sums=('')
+md5sums=('')
 
 _archivename="dash-to-dock-extensions.gnome.org-${pkgver}"
 #_archivename="dash-to-dock-experimental_gnome-3.16"
