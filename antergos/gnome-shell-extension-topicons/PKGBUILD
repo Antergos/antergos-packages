@@ -1,25 +1,37 @@
-#Maintainer: Antergos Developers <dev@antergos.com>
+# Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=gnome-shell-extension-topicons
-pkgver=28
+pkgver=17
 pkgrel=1
-pkgdesc="Shows legacy tray icons on top."
+epoch=1
+pkgdesc="Shows legacy tray icons on the top panel."
 arch=('any')
-url="https://extensions.gnome.org/extension/495/topicons/"
-install='gnome-shell-extension-topicons.install'
+url="https://github.com/phocean/TopIcons-plus"
 license=('GPL')
-depends=('gnome-shell')
+makedepends=('gnome-common')
 groups=('gnome-shell-extensions')
-_uuid='topIcons@adel.gadllah@gmail.com'
-source=("${pkgname}-${pkgver}.zip::https://extensions.gnome.org/download-extension/${_uuid}.shell-extension.zip?version_tag=5335")
-md5sums=('952f9441825d7231b2ca1f40c8ec360b5cc0ea48ff26ca13e91c0744588d5ea0')
+source=("${pkgname}-${pkgver}.zip::${url}/archive/v${pkgver}.zip"
+		'Makefile')
+md5sums=('9d03664a515e1f397fb1666d50954853'
+         '22a255d9d5c765f2bcd765f4b95dc0fb')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='phocean'
+_monitored_repo='TopIcons-plus'
+# END ANTBS METADATA
+
 
 package() {
-  cd "${srcdir}"
+	cd "${srcdir}/TopIcons-plus-${pkgver}"
 
-  install -Dm644 "metadata.json" \
-    "${pkgdir}/usr/share/gnome-shell/extensions/${uuid}/metadata.json"
-  install -m644 "extension.js" \
-    "${pkgdir}/usr/share/gnome-shell/extensions/${uuid}/extension.js"
+	cp ../Makefile .
+
+	make
+	make DESTDIR="${pkgdir}" install
 }
+
 # -*- mode: bash;-*-
