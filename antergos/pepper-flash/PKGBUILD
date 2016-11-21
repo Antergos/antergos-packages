@@ -4,7 +4,7 @@
 pkgname=chromium-pepper-flash
 pkgdesc="Adobe's Pepper Flash plugin"
 pkgver=23.0.0.207
-pkgrel=2
+pkgrel=3
 epoch=1
 arch=('i686' 'x86_64')
 url='http://www.adobe.com/software/flash/about/'
@@ -12,7 +12,7 @@ license=('custom')
 depends=('gcc-libs')
 #conflicts=('chromium-pepper-flash')
 provides=('chromium-pepper-flash')
-replaces=('chromium-pepper-flash')
+#replaces=('chromium-pepper-flash')
 optdepends=(
 	'freshplayerplugin: Firefox support'
 	'flashplugin: Settings utility'
