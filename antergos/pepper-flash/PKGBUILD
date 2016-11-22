@@ -4,7 +4,7 @@
 pkgname=pepper-flash
 pkgdesc="Adobe's Pepper Flash plugin"
 pkgver=23.0.0.207
-pkgrel=4
+pkgrel=5
 epoch=1
 arch=('i686' 'x86_64')
 url='http://www.adobe.com/software/flash/about'
@@ -19,15 +19,14 @@ optdepends=(
 
 source=("http://wwwimages.adobe.com/content/dam/acom/en/legal/licenses-terms/pdf/Flash_Player_${pkgver%%.*}_0.pdf")
 
-_save_as="${pkgname}-${pkgver}.tar.gz"
 _src_url="https://fpdownload.adobe.com/pub/flashplayer/pdc/${pkgver}/flash_player_ppapi_linux"
 
-source_x86_64=("${_save_as}::${_src_url}.x86_64.tar.gz")
-source_i686=("${_save_as}::${_src_url}.i386.tar.gz")
+source_x86_64=("${pkgname}-${pkgver}.x86_64.tar.gz::${_src_url}.x86_64.tar.gz")
+source_i686=("${pkgname}-${pkgver}.i386.tar.gz::${_src_url}.i386.tar.gz")
 
 md5sums=('0208c2cf0629c79f2cd2d30016e0264f')
 md5sums_i686=('7cd969fc4912ff04ccc7bbd0dd1faead')
-md5sums_x86_64=('7cd969fc4912ff04ccc7bbd0dd1faead')
+md5sums_x86_64=('39e575c79859dcd4561598d2ff5efff9')
 
 package() {
 	install -Dm644 manifest.json libpepflashplayer.so -t "$pkgdir/usr/lib/PepperFlash/"
