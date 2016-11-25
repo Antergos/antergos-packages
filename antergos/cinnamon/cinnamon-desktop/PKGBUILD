@@ -4,7 +4,7 @@
 
 pkgname=cinnamon-desktop
 pkgver=3.2.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Library with common API for various Cinnamon modules"
 url="https://github.com/linuxmint/cinnamon-desktop"
 arch=(i686 x86_64)
@@ -14,20 +14,19 @@ depends=('gtk3' 'libxkbfile' 'python2' 'glib2' 'libgsystem' 'libpulse'
 		'gobject-introspection' 'python2-gobject')
 makedepends=('intltool' 'gnome-common')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-desktop/archive/${pkgver}.tar.gz"
-		"config.patch")
-md5sums=('b8ea3469806a90765454c204f83fed044917100ebdb83c850371dbae8c34656e'
-		'e2c20c35df78aaedcd2d2e4965369bc519f51072ab88d4ac9b01be9a48cf8cfd')
-_allowed_in=("staging")
+		'config.patch'
+		'https://github.com/linuxmint/cinnamon-desktop/pull/82.patch')
+md5sums=('1aaf67d3ae6e94236066805192778817'
+		'4e82d86d4c008e89c7681279146e4292'
+		'6369736d40adf9487ae7a7db8f8207f5')
 
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cinnamon-desktop'
-
 # END ANTBS METADATA
 
 
@@ -36,6 +35,9 @@ prepare() {
 
 	# Arch uses systemd
 	patch -Np1 -i ../config.patch
+
+	# https://github.com/linuxmint/cinnamon-desktop/pull/82
+	patch -Np1 -i ../82.patch
 }
 
 build() {
