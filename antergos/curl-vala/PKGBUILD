@@ -1,0 +1,24 @@
+# Maintainer: Antergos devs <devs@antergos.com>
+
+pkgname=curl-vala
+pkgver=20151218
+pkgrel=1
+pkgdesc="An object-oriented interface to libcurl for vala and gobject"
+arch=('any')
+url="https://github.com/Richard-W/curl-vala"
+license=('GPL3')
+depends=('libcurl-compat' 'vala')
+makedepends=('git' 'cmake')
+source=($pkgname-$pkgver.zip::https://github.com/Richard-W/curl-vala/archive/master.zip)
+sha1sums=('dfaf12d3e13f1bfc5e3ce326f0151dbf86753857')
+
+build() {
+  cd "${srcdir}/${pkgname}-master"
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd "$srcdir/${pkgname}-master"
+  make DESTDIR="${pkgdir}" install
+}
