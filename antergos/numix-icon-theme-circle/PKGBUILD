@@ -1,0 +1,24 @@
+# Maintainer: Antergos devs <devs@antergos.com>
+
+pkgname=numix-icon-theme-circle
+pkgver=20161123
+_pkgver=16-11-23
+pkgrel=1
+pkgdesc='Circle icon theme from the Numix project'
+arch=('any')
+url='http://numixproject.org/'
+license=('GPL3')
+depends=('numix-icon-theme')
+makedepends=('git')
+provides=('numix-circle-icon-theme' 'numix-circle-light-icon-theme' 'numix-icon-theme-circle')
+conflicts=('numix-circle-icon-theme' 'numix-circle-light-icon-theme' 'numix-circle-icon-theme-git')
+#options=('!strip')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/numixproject/${pkgname}/archive/${_pkgver}.tar.gz")
+sha256sums=('99f8b6f93e6748d7b5e1307c2b15234063b30bcd263404a35c7c00c768fbb1f5')
+
+package() {
+  cd ${pkgname}-${_pkgver}
+
+  install -dm 755 "${pkgdir}"/usr/share/icons
+  cp -dr --no-preserve='ownership' Numix-Circle{,-Light} "${pkgdir}"/usr/share/icons/
+}
