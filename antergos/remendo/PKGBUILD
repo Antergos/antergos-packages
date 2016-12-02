@@ -2,23 +2,30 @@
 
 pkgname=(remendo)
 pkgver=0.1.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Remendo Antergos warning system"
 arch=(x86_64)
 url="http://www.antergos.com/"
 license=(GPL3)
 depends=('systemd' 'polkit' 'glib2>=2.42' 'dbus-glib' 'curl-vala')
-optdepends=('remendo-gtk')
 makedepends=('cmake' 'gobject-introspection' 'vala' 'git')
 install=remendo.install
 source=("${pkgname}-${pkgver}::git://github.com/karasu/remendo")
 sha256sums=('SKIP')
 
 build() {
+  # d-bus service
   cd ${srcdir}/${pkgname}-${pkgver}/service
   mkdir -p build
   cd build
-  cmake -DCMAKE_INSTALL_PREFIX=${pkgdir}/usr -DOPT_DYNAMIC_LIBRARY=TRUE -DCMAKE_BUILD_TYPE=Release ..
+  cmake -DCMAKE_INSTALL_PREFIX=${pkgdir}/usr -DCMAKE_BUILD_TYPE=Release ..
+  make
+
+  # gtk notifier
+  cd ${srcdir}/${pkgname}-${pkgver}/gtk
+  mkdir -p build
+  cd build
+  cmake -DCMAKE_INSTALL_PREFIX=${pkgdir}/usr -DCMAKE_BUILD_TYPE=Release ..
   make
 }
 
@@ -27,15 +34,26 @@ package() {
   install -d "${pkgdir}/usr/bin"
   make INSTALL_ROOT=${pkgdir} install
 
+  cd "${srcdir}/${pkgname}-${pkgver}/gtk/build"
+  install -d "${pkgdir}/usr/bin"
+  make INSTALL_ROOT=${pkgdir} install
+
   install -d "${pkgdir}/etc/dbus-1/system.d"
   install -d "${pkgdir}/usr/share/dbus-1/services"
   install -d "${pkgdir}/usr/share/polkit-1/actions"
   install -d "${pkgdir}/usr/lib/systemd/system/"
 
-  cd "${srcdir}/${pkgname}-${pkgver}/service"
-  cp dbus/com.antergos.remendo.conf "${pkgdir}/etc/dbus-1/system.d/"
-  cp dbus/com.antergos.remendo.service "${pkgdir}/usr/share/dbus-1/services/"
-  cp polkit/com.antergos.remendo.policy "${pkgdir}/usr/share/polkit-1/actions/"
-  cp systemd/remendo.service "${pkgdir}/usr/lib/systemd/system/"
-}
+  cd "${srcdir}/${pkgname}-${pkgver}"
 
+  cp service/dbus/com.antergos.remendo.conf "${pkgdir}/etc/dbus-1/system.d/"
+  cp service/dbus/com.antergos.remendo.service "${pkgdir}/usr/share/dbus-1/services/"
+  cp service/polkit/com.antergos.remendo.policy "${pkgdir}/usr/share/polkit-1/actions/"
+  cp service/systemd/remendo.service "${pkgdir}/usr/lib/systemd/system/"
+
+  install -d "${pkgdir}/usr/share/${pkgname}"
+  cp data/events.xml "${pkgdir}/usr/share/${pkgname}"
+  cp data/remendo.db "${pkgdir}/usr/share/${pkgname}"
+
+  install -d "${pkgdir}/usr/share/applications"
+  cp "gtk/${pkgname}.desktop" "${pkgdir}/usr/share/applications"
+}
