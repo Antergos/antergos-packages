@@ -11,8 +11,7 @@ depends=('systemd' 'polkit' 'glib2>=2.42' 'dbus-glib')
 optdepends=('remendo-gtk')
 makedepends=('cmake' 'gobject-introspection' 'vala' 'git')
 install=remendo.install
-_commit=d7e577c53c2e41d7333966a93c722052abbd908b
-source=("${pkgname}-${pkgver}::git://github.com/karasu/remendo#commit=$_commit")
+source=("${pkgname}-${pkgver}::git://github.com/karasu/remendo")
 sha256sums=('SKIP')
 
 build() {

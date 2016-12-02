@@ -1,0 +1,20 @@
+# Maintainer: Antergos devs <devs@antergos.com>
+
+pkgname=(remendo-data)
+_pkgname=remendo
+pkgver=0.1.1
+pkgrel=1
+pkgdesc="Remendo Antergos warning system (data files)"
+arch=(x86_64)
+url="http://www.antergos.com/"
+license=(GPL3)
+optdepends=('remendo' 'remendo-gtk')
+source=("${_pkgname}-${pkgver}::git://github.com/karasu/${_pkgname}")
+sha256sums=('SKIP')
+
+package() {
+  cd "${srcdir}/${_pkgname}-${pkgver}/data"
+  install -d "${pkgdir}/usr/share/${_pkgver}"
+  cp events.xml "${pkgdir}/usr/share/${_pkgver}"
+  cp remendo.db "${pkgdir}/usr/share/${_pkgver}"
+}
