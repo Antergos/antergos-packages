@@ -3,7 +3,7 @@
 pkgname=(remendo-data)
 _pkgname=remendo
 pkgver=0.1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Remendo Antergos warning system (data files)"
 arch=(x86_64)
 url="http://www.antergos.com/"
@@ -14,7 +14,7 @@ sha256sums=('SKIP')
 
 package() {
   cd "${srcdir}/${_pkgname}-${pkgver}/data"
-  install -d "${pkgdir}/usr/share/${_pkgver}"
-  cp events.xml "${pkgdir}/usr/share/${_pkgver}"
-  cp remendo.db "${pkgdir}/usr/share/${_pkgver}"
+  install -d "${pkgdir}/usr/share/${_pkgname}"
+  cp events.xml "${pkgdir}/usr/share/${_pkgname}"
+  cp remendo.db "${pkgdir}/usr/share/${_pkgname}"
 }
