@@ -2,12 +2,12 @@
 
 pkgname=(remendo)
 pkgver=0.1.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Remendo Antergos warning system"
 arch=(x86_64)
 url="http://www.antergos.com/"
 license=(GPL3)
-depends=('systemd' 'polkit' 'glib2>=2.42' 'dbus-glib')
+depends=('systemd' 'polkit' 'glib2>=2.42' 'dbus-glib' 'curl-vala')
 optdepends=('remendo-gtk')
 makedepends=('cmake' 'gobject-introspection' 'vala' 'git')
 install=remendo.install
