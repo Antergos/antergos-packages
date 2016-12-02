@@ -1,54 +1,42 @@
-# $Id$
-# Maintainer : Alexandre Filgueira <faidoc@gmail.com
+# Maintainer: Antergos devs <devs@antergos.com>
 
-pkgbase=remendo
-pkgname=('remendo' 'remendo-gtk')
-pkgver=0.1
+pkgname=(remendo)
+pkgver=0.1.2
 pkgrel=1
-arch=('i686' 'x86_64')
-url="http://www.antergos.com"
-license=('GPL3')
-makedepends=('intltool' 'pkg-config')
-source=($pkgbase.tar.gz::https://github.com/Antergos/remendo/archive/v$pkgver.tar.gz
-        $pkgbase.sudoers
-        $pkgbase-gtk.desktop)
-sha256sums=('8e52331ca23ba0fa56b3dd2994988252554b9f2f3dc0e137f9878bde2f8923fc'
-            'efdba52f18bd3ed6dd888deadd542d22bc82f481a6ec24f05ff229c546d61351'
-            '6f20ea4e97383138daaee557b65216da461392896b0caf2416a2bd0bdcb07aa8')
+pkgdesc="Remendo Antergos warning system"
+arch=(x86_64)
+url="http://www.antergos.com/"
+license=(GPL3)
+depends=('systemd' 'polkit' 'glib2>=2.42' 'dbus-glib')
+optdepends=('remendo-gtk')
+makedepends=('cmake' 'gobject-introspection' 'vala' 'git')
+install=remendo.install
+_commit=d7e577c53c2e41d7333966a93c722052abbd908b
+source=("${pkgname}-${pkgver}::git://github.com/karasu/remendo#commit=$_commit")
+sha256sums=('SKIP')
 
 build() {
-  cd $pkgbase-$pkgver
-
-  ./autogen.sh --prefix=/usr
-  make
-  cd remendo-gtk
-  ./autogen.sh --prefix=/usr
+  cd ${srcdir}/${pkgname}-${pkgver}/service
+  mkdir -p build
+  cd build
+  cmake -DCMAKE_INSTALL_PREFIX=${pkgdir}/usr -DOPT_DYNAMIC_LIBRARY=TRUE -DCMAKE_BUILD_TYPE=Release ..
   make
 }
-package_remendo() {
-  pkgdesc="Handler daemon"
-  depends=('curl' 'libxml2')
 
-  cd $pkgbase-$pkgver
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}/service/build"
+  install -d "${pkgdir}/usr/bin"
+  make INSTALL_ROOT=${pkgdir} install
 
-  make -C remendo DESTDIR="$pkgdir" install
-  mkdir -p $pkgdir/var/lib/remendo
-  mkdir -p $pkgdir/etc/sudoers.d/
-  cp $srcdir/remendo.sudoers $pkgdir/etc/sudoers.d/20-remendo
+  install -d "${pkgdir}/etc/dbus-1/system.d"
+  install -d "${pkgdir}/usr/share/dbus-1/services"
+  install -d "${pkgdir}/usr/share/polkit-1/actions"
+  install -d "${pkgdir}/usr/lib/systemd/system/"
 
+  cd "${srcdir}/${pkgname}-${pkgver}/service"
+  cp dbus/com.antergos.remendo.conf "${pkgdir}/etc/dbus-1/system.d/"
+  cp dbus/com.antergos.remendo.service "${pkgdir}/usr/share/dbus-1/services/"
+  cp polkit/com.antergos.remendo.policy "${pkgdir}/usr/share/polkit-1/actions/"
+  cp systemd/remendo.service "${pkgdir}/usr/lib/systemd/system/"
 }
 
-package_remendo-gtk() {
-  pkgdesc="Event viewer for Remendo (GTK)"
-  depends=('gtk3' 'python' 'python-gobject' 'libxml2' 'remendo')
-
-  cd $pkgbase-$pkgver
-
-  make -C remendo-gtk DESTDIR="$pkgdir" install
-  #make -C po DESTDIR="$pkgdir" install
-
-  mkdir -p $pkgdir/etc/xdg/autostart
-  cp $srcdir/remendo-gtk.desktop $pkgdir/etc/xdg/autostart/
-
-}
-# -*- mode: bash;-*-

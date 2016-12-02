@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=0.1
-Terminal=false
-Type=Application
-Exec=sudo /usr/bin/remendo --gtk
-Name=Remendo
-GenericName=Remendo
-Comment=Pacman's event handler
-
