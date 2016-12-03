@@ -24,6 +24,7 @@ _monitored_project='hluk'
 _monitored_repo='copyq'
 # END ANTBS METADATA
 
+
 build() {
 	mkdir "${srcdir}/build"
 	cd "${srcdir}/build"
