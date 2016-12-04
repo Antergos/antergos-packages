@@ -19,7 +19,7 @@ license=('GPL2')
 url="https://github.com/linuxmint/nemo-extensions"
 groups=('cinnamon')
 depends=('nemo' 'file-roller' 'cjs' 'clutter-gtk' 'clutter-gst' 'gst-plugins-good' 'libmusicbrainz5'
-		'evince' 'gtksourceview3' 'webkit2gtk' 'python2-gobject' 'seahorse-nautilus' 'samba')
+		'evince' 'gtksourceview3' 'webkit2gtk' 'python2-gobject' 'seahorse-nautilus' 'samba' 'libgnome-keyring')
 makedepends=('gconf' 'gnome-common' 'gtk-doc' 'intltool' 'gobject-introspection')
 options=('!emptydirs')
 source=("${pkgbase}-${pkgver}.tar.gz::https://github.com/linuxmint/nemo-extensions/archive/${_pkgver}.tar.gz")
@@ -114,7 +114,7 @@ package_nemo-python() {
 
 package_nemo-seahorse(){
 	pkgdesc="PGP encryption and signing extension for Nemo"
-	depends=(nemo seahorse-nautilus)
+	depends=('nemo' 'seahorse-nautilus' 'libgnome-keyring')
 
 	cd ${pkgbase}-${_pkgver}/nemo-seahorse
 	make DESTDIR="${pkgdir}" install
