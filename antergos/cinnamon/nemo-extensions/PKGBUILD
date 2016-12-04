@@ -23,7 +23,6 @@ depends=('nemo' 'file-roller' 'cjs' 'clutter-gtk' 'clutter-gst' 'gst-plugins-goo
 makedepends=('gconf' 'gnome-common' 'gtk-doc' 'intltool' 'gobject-introspection')
 options=('!emptydirs')
 source=("${pkgbase}-${pkgver}.tar.gz::https://github.com/linuxmint/nemo-extensions/archive/${_pkgver}.tar.gz"
-		'gpgversion.patch'
 		'clutter-gst3.patch'
 		'nemo-preview-webkit2-port.patch')
 sha256sums=('' '' '' '')
