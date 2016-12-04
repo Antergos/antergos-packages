@@ -10,7 +10,7 @@ pkgdesc="Dropbox for Linux - Nemo extension"
 arch=('i686' 'x86_64')
 url="https://github.com/linuxmint/nemo-extensions"
 license=('custom:CC-BY-ND-3' 'GPL')
-depends=('libnotify' 'nemo>=3.0' 'nemo<3.1' 'hicolor-icon-theme' 'dropbox')
+depends=('libnotify' 'nemo>=3.2' 'hicolor-icon-theme' 'dropbox')
 makedepends=('python2-docutils' 'python2' 'pygtk')
 install=${pkgname}.install
 options=('!libtool' '!emptydirs')

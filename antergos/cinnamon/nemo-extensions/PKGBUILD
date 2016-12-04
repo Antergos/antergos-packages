@@ -46,9 +46,6 @@ prepare() {
 	# Python2 fix
 	find -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
 
-	# GPG version in testing
-	patch -Np1 -i ../gpgversion.patch
-
 	# Fix path for nemo-python
 	sed -i 's|libdirsuffix="/i386-linux-gnu/"|libdirsuffix=""|' nemo-python/m4/python.m4
 
