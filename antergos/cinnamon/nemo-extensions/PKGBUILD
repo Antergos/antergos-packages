@@ -11,9 +11,9 @@ pkgname=('nemo-fileroller'
 #'nemo-pastebin'
 #'nemo-compare'
 #'nemo-rabbitvcs'
-pkgver=3.0.0
-_pkgver=3.0.0
-pkgrel=3
+pkgver=3.2.0
+_pkgver=3.2.0
+pkgrel=1
 arch=('i686' 'x86_64')
 license=('GPL2')
 url="https://github.com/linuxmint/nemo-extensions"
