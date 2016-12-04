@@ -3,7 +3,7 @@
 # Contributor: Antergos Devs <devs@antergos.com>
 
 pkgname=gnome-shell-extension-dash-to-dock
-pkgver=v54
+pkgver=v55
 pkgrel=1
 epoch=1
 pkgdesc="A gnome-shell extension that transforms the dash into an intellihide dock"
