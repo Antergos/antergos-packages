@@ -22,9 +22,7 @@ depends=('nemo' 'file-roller' 'cjs' 'clutter-gtk' 'clutter-gst' 'gst-plugins-goo
 		'evince' 'gtksourceview3' 'webkit2gtk' 'python2-gobject' 'seahorse-nautilus' 'samba')
 makedepends=('gconf' 'gnome-common' 'gtk-doc' 'intltool' 'gobject-introspection')
 options=('!emptydirs')
-source=("${pkgbase}-${pkgver}.tar.gz::https://github.com/linuxmint/nemo-extensions/archive/${_pkgver}.tar.gz"
-		'clutter-gst3.patch'
-		'nemo-preview-webkit2-port.patch')
+source=("${pkgbase}-${pkgver}.tar.gz::https://github.com/linuxmint/nemo-extensions/archive/${_pkgver}.tar.gz")
 sha256sums=('' '' '' '')
 
 
@@ -47,10 +45,6 @@ prepare() {
 
 	# Fix path for nemo-python
 	sed -i 's|libdirsuffix="/i386-linux-gnu/"|libdirsuffix=""|' nemo-python/m4/python.m4
-
-	cd nemo-preview
-	patch -Np1 -i ../../clutter-gst3.patch
-	patch -Np1 -i ../../nemo-preview-webkit2-port.patch
 }
 
 build() {
