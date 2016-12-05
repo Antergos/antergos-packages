@@ -2,12 +2,12 @@
 
 pkgname=antergos-welcome
 pkgver=0.0.2
-pkgrel=4
+pkgrel=5
 pkgdesc='Welcome screen for Antergos Linux'
 arch=(any)
 license=(GPL)
 url="https://github.com/Antergos/antergos-welcome"
-depends=(python python-gobject python-dbus webkitgtk3 python-simplejson)
+depends=('python-gobject' 'python-dbus' 'webkitgtk3' 'python-simplejson' 'notification-daemon')
 makedepends=('git')
 source=("${pkgname}-${pkgver}::git://github.com/Antergos/antergos-welcome")
 sha256sums=('SKIP')
