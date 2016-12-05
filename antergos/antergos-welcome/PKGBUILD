@@ -1,26 +1,28 @@
-#Maintainer: Gustau Castells <karasu@antergos.com>
+# Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-welcome
 pkgver=0.0.2
-pkgrel=3
+pkgrel=4
 pkgdesc='Welcome screen for Antergos Linux'
 arch=(any)
 license=(GPL)
 url="https://github.com/Antergos/antergos-welcome"
 depends=(python python-gobject python-dbus webkitgtk3 python-simplejson)
-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/antergos-welcome/archive/v${pkgver}.tar.gz")
-sha256sums=('722d95b1c6fc23cc683d069941026c96d76a10c685bd6638d8afed150f9208f9')
+makedepends=('git')
+source=("${pkgname}-${pkgver}::git://github.com/Antergos/antergos-welcome")
+sha256sums=('SKIP')
 
 build ()
 {
-  cd "$srcdir/$pkgname-$pkgver"
+    cd "${srcdir}/${pkgname}-${pkgver}"
 }
 
 package() {
-	cd ${srcdir}/${pkgname}-$pkgver
+    cd ${srcdir}/${pkgname}-${pkgver}
 
-	install -d ${pkgdir}/usr/share/antergos-welcome
-	install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
-	cp -R data/* "${pkgdir}/usr/share/antergos-welcome/"
+    install -d ${pkgdir}/usr/share/${pkgname}
+    install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
+    cp -R data/* "${pkgdir}/usr/share/${pkgname}/"
 }
+
 # -*- mode: bash;-*-
