@@ -1,0 +1,39 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: nontlikeuname
+
+pkgname=meson-git
+_pkgver=0.36.0
+pkgrel=1
+pkgdesc="Next-generation build system built with python and powered by Ninja."
+arch=('any')
+url="http://mesonbuild.com/"
+license=('Apache')
+depends=('python' 'ninja')
+provides=("${pkgname%-git}")
+conflicts=("${pkgname%-git}")
+source=('git+https://github.com/mesonbuild/meson.git')
+md5sums=('SKIP')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='commits'
+_monitored_project='mesonbuild'
+_monitored_repo='meson'
+# END ANTBS METADATA
+
+
+pkgver() {
+	cd "$srcdir/${pkgname%-git}"
+	printf "%sr%s" "${_pkgver}" "$(git rev-list tag.. --count)"
+}
+
+
+package() {
+	cd "$srcdir/${pkgname%-git}"
+	python setup.py install --root="$pkgdir" --optimize=1
+	install -D -m644 COPYING $pkgdir/usr/share/licenses/$pkgname/COPYING
+}
+
+# -*- mode: bash;-*-
