@@ -27,7 +27,8 @@ _monitored_repo='meson'
 
 pkgver() {
 	cd "$srcdir/${pkgname%-git}"
-	printf "%sr%s" "${_pkgver}" "$(git rev-list tag.. --count)"
+	LAST_STABLE_RELEASE=$(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=1))
+	printf "%sr%s" "${_pkgver}" "$(git rev-list "${LAST_STABLE_RELEASE}".. --count)"
 }
 
 
