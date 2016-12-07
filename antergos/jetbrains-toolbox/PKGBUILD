@@ -23,7 +23,7 @@ sha256sums=($(wget -q "${source}.sha256" && cat "${pkgname}-${pkgver}.tar.gz.sha
 			'b7e4bc9fa3aa7ac05e17f731b5c47633dc5e23c18f69bba84ee9e56c87168509'
 			'1d583206859c21ba3d8898f0dffbaf3f6ae88c0e4ebeeb4868cc7e71aaf3895a'
 			'9e3784dc0bc10c0d7db7c01fa8874b4048ecb1d21fa2a82d4ff17c53cfacf70c'
-			'5a85d07c24d176bfb0d34daf4f42875c5bce29550717ce8751bca315f78097e9')
+			'f464003ef90326f7cd1fd17118d73e144686b4cf99c9567af72e61506448f4da')
 
 
 package() {

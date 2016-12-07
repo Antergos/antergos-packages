@@ -16,6 +16,8 @@ setup_toolbox_user_directory() {
 	ln -s /usr/share/pixmaps/jetbrains-toolbox.svg "${toolbox_user_dir}/toolbox.svg"
 	cp /usr/share/applications/jetbrains-toolbox.desktop "${HOME}/.config/autostart"
 	chmod a-w "${HOME}/.config/autostart/jetbrains-toolbox.desktop"
+	cp /usr/share/applications/jetbrains-toolbox.desktop "${HOME}/.local/share/applications"
+	chmod a-w "${HOME}/.local/share/applications/jetbrains-toolbox.desktop"
 }
 
 
