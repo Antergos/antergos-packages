@@ -14,10 +14,15 @@ setup_toolbox_user_directory() {
 	mkdir -p "${toolbox_user_dir}"
 	ln -s "${toolbox_system_dir}/.settings.json" "${toolbox_user_dir}/.settings.json"
 	ln -s /usr/share/pixmaps/jetbrains-toolbox.svg "${toolbox_user_dir}/toolbox.svg"
+	cp /usr/share/applications/jetbrains-toolbox.desktop "${HOME}/.config/autostart"
+	chmod a-w "${HOME}/.config/autostart/jetbrains-toolbox.desktop"
 }
 
 
 versions_match() {
+	[[ -e "${toolbox_user_dir}/.installed_version" ]] || return 1
+	[[ -e "${toolbox_system_dir}/.installed_version" ]] || return 1
+
 	toolbox_user_version=$(<"${toolbox_user_dir}/.installed_version")
 	toolbox_system_version=$(<"${toolbox_system_dir}/.installed_version")
 
@@ -39,9 +44,15 @@ move_binary_and_create_symlink() {
 }
 
 
+copy_lastest_installed_version_file() {
+	cp "${toolbox_system_dir}/.installed_version" "${toolbox_user_dir}/.installed_version"
+}
+
+
 
 if [[ 'true' = "${is_first_run}" ]]; then
 	setup_toolbox_user_directory
+	copy_lastest_installed_version_file
 	exec "${toolbox_system_dir}/jetbrains-toolbox" "$@"
 
 elif ! [[ -h "${toolbox_user_dir}/bin" ]]; then
@@ -49,7 +60,7 @@ elif ! [[ -h "${toolbox_user_dir}/bin" ]]; then
 
 elif ! versions_match; then
 	remove_symlink_to_binary
-	cp "${toolbox_system_dir}/.installed_version" "${toolbox_user_dir}/.installed_version"
+	copy_lastest_installed_version_file
 	exec "${toolbox_system_dir}/jetbrains-toolbox" "$@"
 fi
 
