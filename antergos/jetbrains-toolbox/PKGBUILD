@@ -2,7 +2,8 @@
 
 pkgname=jetbrains-toolbox
 pkgver=1.0.2095
-pkgrel=2
+pkgrel=1
+epoch=2
 pkgdesc="One-stop access to all your coding tools from JetBrains."
 url='http://www.jetbrains.com/toolbox/'
 arch=('any')
