@@ -2,15 +2,16 @@
 
 pkgname=mediawriter
 _pkgname=MediaWriter
-pkgver=4.0.7r336
+pkgver=4.0.7r345
 pkgrel=1
 pkgdesc='A cross-platform tool for easily creating bootable USB installation media for Antergos.'
 arch=('x86_64')
 url='https://github.com/Antergos/MediaWriter'
 license=('GPL2')
 depends=('qt5-base' 'qt5-imageformats' 'qt5-tools' 'qt5-declarative' 'qt5-graphicaleffects' 'qt5-svg')
+makedepends=('transifex-client')
 source=("${pkgname}-${pkgver}.zip::https://github.com/Antergos/mediawriter/archive/master.zip")
-md5sums=('70faf691cdf14b4efb8cf3beff15b135')
+md5sums=('')
 
 
 # BEGIN ANTBS METADATA
