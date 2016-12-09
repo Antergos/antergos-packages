@@ -10,7 +10,7 @@ arch=('any')
 url='https://github.com/transifex/transifex-client'
 license=('GPL2')
 depends=('python' 'python-distribute' 'python-urllib3')
-source=("https://github.com/transifex/transifex-client/${pkgver}.tar.gz")
+source=("https://github.com/transifex/transifex-client/archive/${pkgver}.tar.gz")
 md5sums=('')
 
 # BEGIN ANTBS METADATA
