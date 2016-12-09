@@ -25,13 +25,13 @@ md5sums=('70faf691cdf14b4efb8cf3beff15b135')
 build() {
 	cd "${srcdir}/${_pkgname}-master"
 
-	qmake-qt5 PREFIX=/usr DESTDIR="${pkgdir}" .
-	make DESTDIR="${pkgdir}"
+	INSTALL_ROOT="${pkgdir}" qmake-qt5 PREFIX=/usr .
+	make
 }
 
 
 package() {
 	cd "${srcdir}/${_pkgname}-master"
 
-	make DESTDIR="${pkgdir}" install
+	INSTALL_ROOT="${pkgdir}" make install
 }
