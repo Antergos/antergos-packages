@@ -19,10 +19,10 @@ setup_toolbox_user_directory() {
 	cp /usr/share/applications/jetbrains-toolbox.desktop "${HOME}/.config/autostart"
 	sed -i 's|bin\/jetbrains-toolbox|bin/jetbrains-toolbox --minimize|g' \
 		"${HOME}/.config/autostart/jetbrains-toolbox.desktop"
-	chmod a-w "${HOME}/.config/autostart/jetbrains-toolbox.desktop"
+	chmod 000 "${HOME}/.config/autostart/jetbrains-toolbox.desktop"
 
 	cp /usr/share/applications/jetbrains-toolbox.desktop "${HOME}/.local/share/applications"
-	chmod a-w "${HOME}/.local/share/applications/jetbrains-toolbox.desktop"
+	chmod 000 "${HOME}/.local/share/applications/jetbrains-toolbox.desktop"
 }
 
 
