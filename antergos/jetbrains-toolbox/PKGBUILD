@@ -2,7 +2,7 @@
 
 pkgname=jetbrains-toolbox
 pkgver=1.0.2095
-pkgrel=1
+pkgrel=1.1
 epoch=2
 pkgdesc="One-stop access to all your coding tools from JetBrains."
 url='http://www.jetbrains.com/toolbox/'
@@ -21,10 +21,10 @@ source=("https://download.jetbrains.com/toolbox/${pkgname}-${pkgver}.tar.gz"
 		'toolbox.svg'
 		'launcher.sh')
 sha256sums=($(wget -q "${source}.sha256" && cat "${pkgname}-${pkgver}.tar.gz.sha256" | cut -f1 -d" ")
-			'b7e4bc9fa3aa7ac05e17f731b5c47633dc5e23c18f69bba84ee9e56c87168509'
+			'da6c0c134387b2bbaa64bb2cd5df004ef50db47a440bbdf620f01bbfb509a1ff'
 			'1d583206859c21ba3d8898f0dffbaf3f6ae88c0e4ebeeb4868cc7e71aaf3895a'
 			'9e3784dc0bc10c0d7db7c01fa8874b4048ecb1d21fa2a82d4ff17c53cfacf70c'
-			'f464003ef90326f7cd1fd17118d73e144686b4cf99c9567af72e61506448f4da')
+			'006c6454fc16a65be6f96aea1fdef5e5c237ef8e873c3df7facf2d9d1f8affae')
 
 
 package() {

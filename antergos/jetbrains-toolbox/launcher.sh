@@ -12,10 +12,15 @@ toolbox_system_version=''
 
 setup_toolbox_user_directory() {
 	mkdir -p "${toolbox_user_dir}"
+
 	ln -s "${toolbox_system_dir}/.settings.json" "${toolbox_user_dir}/.settings.json"
 	ln -s /usr/share/pixmaps/jetbrains-toolbox.svg "${toolbox_user_dir}/toolbox.svg"
+
 	cp /usr/share/applications/jetbrains-toolbox.desktop "${HOME}/.config/autostart"
+	sed -i 's|bin\/jetbrains-toolbox|bin/jetbrains-toolbox --minimize|g' \
+		"${HOME}/.config/autostart/jetbrains-toolbox.desktop"
 	chmod a-w "${HOME}/.config/autostart/jetbrains-toolbox.desktop"
+
 	cp /usr/share/applications/jetbrains-toolbox.desktop "${HOME}/.local/share/applications"
 	chmod a-w "${HOME}/.local/share/applications/jetbrains-toolbox.desktop"
 }
