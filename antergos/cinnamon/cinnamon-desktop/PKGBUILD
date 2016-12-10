@@ -13,12 +13,10 @@ groups=('cinnamon')
 depends=('gtk3' 'libxkbfile' 'python2' 'glib2' 'libgsystem' 'libpulse'
 		'gobject-introspection' 'python2-gobject')
 makedepends=('intltool' 'gnome-common')
-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-desktop/archive/${pkgver}.tar.gz"
-		'config.patch'
-		'https://github.com/linuxmint/cinnamon-desktop/pull/82.patch')
-md5sums=('1aaf67d3ae6e94236066805192778817'
-		'4e82d86d4c008e89c7681279146e4292'
-		'6369736d40adf9487ae7a7db8f8207f5')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/${pkgver}.tar.gz"
+		'config.patch')
+md5sums=('44b6b9da051246afce8dfbb1b1382827'
+         '4e82d86d4c008e89c7681279146e4292')
 
 
 # BEGIN ANTBS METADATA
@@ -35,9 +33,6 @@ prepare() {
 
 	# Arch uses systemd
 	patch -Np1 -i ../config.patch
-
-	# https://github.com/linuxmint/cinnamon-desktop/pull/82
-	patch -Np1 -i ../82.patch
 }
 
 build() {
