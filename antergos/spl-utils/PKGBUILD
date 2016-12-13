@@ -4,16 +4,15 @@
 pkgname='spl-utils'
 _pkgver=0.6.5.8
 _rev=964
-_kern=4.8.2_1
+_kern=4.8.13_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
-pkgrel=1
+pkgrel=2
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
 groups=("system" "zfs")
 depends=("dkms")
-provides=("spl-utils" "spl-utils-dkms")
-conflicts=("spl-utils-dkms" "spl-utils-lts" "spl-utils-git")
-makedepends=("git")
+provides=("spl-utils-dkms=${pkgver}")
+conflicts=("spl-utils-dkms")
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
 _commit="${_pkgver}"
@@ -21,33 +20,34 @@ source=("${pkgname}::https://github.com/zfsonlinux/spl/archive/spl-${_pkgver}.zi
 md5sums=('3b98916ba77f91725252345dc5ff0788')
 
 
-#pkgver() {
+# pkgver() {
 #	local _kernel='4.5.4_1'
-#    cd "${srcdir}/spl"
-#    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
-#    
-#}
+#	cd "${srcdir}/spl"
+#	printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
+#
+# }
 
 build() {
-    cd "${srcdir}/spl-spl-${_commit}"
-    ./autogen.sh
-    
-    _at_enable=""
-    [ "${CARCH}" == "i686"  ] && _at_enable="--enable-atomic-spinlocks"
+	cd "${srcdir}/spl-spl-${_commit}"
+	./autogen.sh
 
-    ./configure --prefix=/usr \
-                --libdir=/usr/lib \
-                --sbindir=/usr/bin \
-                --with-config=user \
-                ${_at_enable}
+	{ [[ "${CARCH}" == i686 ]] && _at_enable="--enable-atomic-spinlocks"; } || _at_enable=""
+	{ [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"; } || _i686_target=""
 
-    make
+	./configure --prefix=/usr \
+		--libdir=/usr/lib \
+		--sbindir=/usr/bin \
+		--with-config=user \
+		${_at_enable} \
+		${_i686_target}
+
+	make
 }
 
 package() {
-    cd "${srcdir}/spl-spl-${_commit}"
-    make DESTDIR="${pkgdir}" install
-    #install -D -m644 "${srcdir}"/spl-utils.hostid "${pkgdir}"/etc/hostid
+	cd "${srcdir}/spl-spl-${_commit}"
+	make DESTDIR="${pkgdir}" install
+	#install -D -m644 "${srcdir}"/spl-utils.hostid "${pkgdir}"/etc/hostid
 }
 
 # -*- mode: bash;-*-

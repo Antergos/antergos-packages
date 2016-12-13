@@ -4,26 +4,25 @@
 pkgname="zfs-utils"
 _pkgver=0.6.5.8
 _rev=2019
-_kern=4.8.2_1
+_kern=4.8.13_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
-pkgrel=1
+pkgrel=2
 pkgdesc="Kernel module support files for the Zettabyte File System."
 url="http://zfsonlinux.org/"
 license=('CDDL')
 arch=("i686" "x86_64")
 groups=("system")
-depends=("spl" "dkms" "linux-headers")
-makedepends=("git")
-conflicts=("zfs-utils" "zfs-utils-lts")
+depends=("spl=${pkgver/2019/964}")
+conflicts=("zfs-utils-dkms-git")
 _commit="${_pkgver}"
 source=("${pkgname}::https://github.com/zfsonlinux/zfs/archive/zfs-${_pkgver}.zip"
 		"zfs-utils.bash-completion-r1"
 		"zfs-utils.initcpio.install"
 		"zfs-utils.initcpio.hook")
 md5sums=('409ef11470958672c3d54fe2249ae484'
-		'9ddb0c8a94861f929d0fa741fdc49950'
-		'9ef4841abb85dee611828cc7e6f5c6fe'
-		'62ba32c6853c315ff231c396cf8bfdbb')
+         '9ddb0c8a94861f929d0fa741fdc49950'
+         '110b48d872a7a7d2884496267f92418a'
+         '62ba32c6853c315ff231c396cf8bfdbb')
 
 
 #pkgver() {
@@ -33,36 +32,35 @@ md5sums=('409ef11470958672c3d54fe2249ae484'
 #}
 
 build() {
-    cd "${srcdir}/zfs-zfs-${_commit}"
-    ./autogen.sh
-    
-    _i686_target=""
-    [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"
+	cd "${srcdir}/zfs-zfs-${_commit}"
+	./autogen.sh
 
-    ./configure --prefix=/usr \
-                --sysconfdir=/etc \
-                --sbindir=/usr/bin \
-                --with-mounthelperdir=/usr/bin \
-                --libdir=/usr/lib \
-                --datadir=/usr/share \
-                --includedir=/usr/include \
-                --with-udevdir=/usr/lib/udev \
-                --libexecdir=/usr/lib/zfs \
-                --with-config=user \
-                ${_i686_target}
-    make
+	{ [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"; } || _i686_target=""
+
+	./configure --prefix=/usr \
+		--sysconfdir=/etc \
+		--sbindir=/usr/bin \
+		--with-mounthelperdir=/usr/bin \
+		--libdir=/usr/lib \
+		--datadir=/usr/share \
+		--includedir=/usr/include \
+		--with-udevdir=/usr/lib/udev \
+		--libexecdir=/usr/lib/zfs \
+		--with-config=user \
+		${_i686_target}
+	make
 }
 
 package() {
 	cd "${srcdir}/zfs-zfs-${_commit}"
-    make DESTDIR="${pkgdir}" install
+	make DESTDIR="${pkgdir}" install
 
-    # Remove uneeded files
-    rm -r "${pkgdir}"/etc/init.d
-    rm -r "${pkgdir}"/usr/lib/dracut
+	# Remove uneeded files
+	rm -r "${pkgdir}"/etc/init.d
+	rm -r "${pkgdir}"/usr/lib/dracut
 
-    install -D -m644 "${srcdir}"/zfs-utils.initcpio.hook "${pkgdir}"/usr/lib/initcpio/hooks/zfs
-    install -D -m644 "${srcdir}"/zfs-utils.initcpio.install "${pkgdir}"/usr/lib/initcpio/install/zfs
-    install -D -m644 "${srcdir}"/zfs-utils.bash-completion-r1 "${pkgdir}"/usr/share/bash-completion/completions/zfs
+	install -D -m644 "${srcdir}"/zfs-utils.initcpio.hook "${pkgdir}"/usr/lib/initcpio/hooks/zfs
+	install -D -m644 "${srcdir}"/zfs-utils.initcpio.install "${pkgdir}"/usr/lib/initcpio/install/zfs
+	install -D -m644 "${srcdir}"/zfs-utils.bash-completion-r1 "${pkgdir}"/usr/share/bash-completion/completions/zfs
 }
 # -*- mode: bash;-*-

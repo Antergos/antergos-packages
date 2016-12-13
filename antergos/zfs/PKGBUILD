@@ -4,15 +4,14 @@
 pkgname=zfs
 _pkgver=0.6.5.8
 _rev=2019
-_kern=4.8.2_1
+_kern=4.8.13_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
-pkgrel=1
+pkgrel=2
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
-makedepends=("git" "linux-headers" "linux")
-depends=("spl" "zfs-utils" "dkms" "linux-headers" "linux")
-provides=("zfs-dkms")
-conflicts=("zfs-git" "zfs-lts" "zfs-dkms")
+depends=("spl=${pkgver/2019/964}" "zfs-utils=${pkgver}" "dkms" "linux-headers" "linux<4.9")
+provides=("zfs-dkms=${pkgver}")
+conflicts=("zfs-git" "zfs-dkms")
 install=zfs.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
@@ -21,20 +20,18 @@ source=("${pkgname}::https://github.com/zfsonlinux/${pkgname}/archive/zfs-${_pkg
 md5sums=('409ef11470958672c3d54fe2249ae484')
 
 
-#pkgver() {
+# pkgver() {
 #	local _kernel='4.5.4_1'
-#    cd "${srcdir}/${pkgname}-${_commit}"
-#    printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
-#}
+#	cd "${srcdir}/${pkgname}-${_commit}"
+#	printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
+# }
 
 build() {
-	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
 	cd "${srcdir}/${pkgname}-${pkgname}-${_commit}"
 	./autogen.sh
-	#scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
+	# scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
 
-	_i686_target=""
-	[[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"
+	{ [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"; } || _i686_target=""
 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \

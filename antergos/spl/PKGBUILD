@@ -4,15 +4,15 @@
 pkgname=spl
 _pkgver=0.6.5.8
 _rev=964
-_kern=4.8.2_1
+_kern=4.8.13_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
-pkgrel=1
+pkgrel=2
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")
-depends=("dkms" "spl-utils" "linux-headers")
-provides=("spl-dkms")
-conflicts=("spl-git" "spl-lts" "spl-dkms")
+depends=("dkms" "spl-utils=${pkgver}" "linux-headers")
+provides=("spl-dkms=${pkgver}")
+conflicts=("spl-dkms")
 install=spl.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
@@ -29,19 +29,19 @@ install=spl.install
 #}
 
 build() {
-	sed -i "s|<PKGVER>|${_pkgver}|g" "${startdir}/${pkgname}.install"
 	cd "${srcdir}/${pkgname}-${pkgname}-${_commit}"
 	./autogen.sh
 
-	_at_enable=""
-	[ "${CARCH}" == "i686"  ] && _at_enable="--enable-atomic-spinlocks"
+	{ [[ "${CARCH}" == i686 ]] && _at_enable="--enable-atomic-spinlocks"; } || _at_enable=""
+	{ [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"; } || _i686_target=""
 
 	./configure \
 		--prefix=/usr \
 		--libdir=/usr/lib \
 		--sbindir=/usr/bin \
 		--with-config=user \
-		${_at_enable}
+		${_at_enable} \
+		${_i686_target}
 
 	make
 }
