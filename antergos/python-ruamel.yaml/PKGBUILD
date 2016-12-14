@@ -1,0 +1,24 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Meir Kriheli <mkriheli@gmail.com>
+
+pkgname=python-ruamel.yaml
+_pkgname="${pkgname#*-}"
+pkgver=0.13.4
+pkgrel=1
+pkgdesc='YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order.'
+arch=('i686' 'x86_64')
+url="https://bitbucket.org/ruamel/yaml"
+license=('MIT')
+groups=('devel')
+depends=('python' 'libyaml')
+makedepends=('python-pip')
+source=("https://bitbucket.org/ruamel/yaml/get/default.tar.gz")
+md5sums=('13c8ac31f395352247dd213a1c7abb87')
+
+
+package() {
+	cd "$srcdir/${_pkgname}-${pkgver}"
+	pip install --prefix="${pkgdir}/usr" .
+}
+
+# -*- mode: bash;-*-
