@@ -17,7 +17,7 @@ md5sums=('13c8ac31f395352247dd213a1c7abb87')
 
 
 package() {
-	cd "$srcdir/${_pkgname}-${pkgver}"
+	cd "${srcdir}/ruamel"**
 	pip install --prefix="${pkgdir}/usr" .
 }
 
