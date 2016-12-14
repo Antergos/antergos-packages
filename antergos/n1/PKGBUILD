@@ -4,17 +4,18 @@
 pkgname=n1
 pkgver=0.4.402
 buildver=b0ec335
-pkgrel=1
+pkgrel=2
 pkgdesc="A mail client for Mac, Linux, and Windows that is built on the modern web and designed to be extended."
 arch=('x86_64')
 url="https://nylas.com/N1/"
 license=('GPLv3')
 depends=('gtk2' 'libgnome-keyring' 'desktop-file-utils' 'python2' 'gconf' 'nodejs'
 		'libnotify' 'libxtst' 'nss' 'alsa-lib' 'xdg-utils')
+optdepends=('gnome-keyring: provides secret service')
 groups=('email') 
 source=("https://github.com/nylas/N1/releases/download/${pkgver}/N1-${pkgver}.deb")
 install=${pkgname}.install
-md5sums=('6e07835b7aaa96a242af6c11cb8f1092')
+md5sums=('SKIP')
 
 
 # BEGIN ANTBS METADATA
