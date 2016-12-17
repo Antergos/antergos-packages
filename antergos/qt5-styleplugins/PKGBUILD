@@ -2,8 +2,8 @@
 
 pkgname='qt5-styleplugins'
 _srcname='qtstyleplugins'
-pkgver=5.0.0.1r29
-pkgrel=2
+pkgver=5.0.0.1r32
+pkgrel=1
 pkgdesc='Additional style plugins for Qt5'
 arch=('i686' 'x86_64')
 url="https://github.com/qtproject/${_srcname}"
