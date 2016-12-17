@@ -3,7 +3,7 @@
 
 pkgname=kde-servicemenus-rootactions
 pkgver=2.8.7
-pkgrel=3
+pkgrel=4
 pkgdesc="Allows admin users to perform several root only actions from dolphin via kdesu/kdesudo"
 arch=(any)
 url="http://www.kde-apps.org/content/show.php?content=48411"
