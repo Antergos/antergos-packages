@@ -3,7 +3,7 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.5.658.44
+pkgver=1.6.689.34
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
