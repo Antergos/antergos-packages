@@ -2,7 +2,7 @@
 
 pkgname=antergos-kde-setup
 pkgver=0.1.8
-pkgrel=2
+pkgrel=3
 pkgdesc="Setup configuration for Antergos KDE"
 url="http://www.antergos.com"
 arch=('any')
@@ -11,7 +11,7 @@ depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clement
 	'dolphin' 'dolphin-plugins' 'dvd+rw-tools' 'ffmpegthumbs' 'gwenview' 'k3b'
 	'kate' 'kcalc' 'kde-gtk-config' 'kdialog' 'kfind'
 	'okular' 'kdegraphics-thumbnailers' 'kdenetwork-kopete'
-	'kdesudo' 'kdeutils-sweeper' 'kdelibs4support'
+	'kdesudo' 'kdeutils-sweeper' 'kdelibs4support' 'kde-servicemenus-rootactions'
 	'kfaenza-icon-theme' 'kipi-plugins' 'khelpcenter' 'kinfocenter' 'kmenuedit' 'konsole'
 	'kscreen' 'ksshaskpass' 'ksysguard' 'kwallet-pam' 'kwalletmanager' 'kwayland-integration'
 	'kwin' 'kwrited' 'milou' 'nm-connection-editor' 'numix-frost-themes'
