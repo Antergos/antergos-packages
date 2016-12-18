@@ -43,7 +43,7 @@ package() {
 	cd ..
 
 	sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' \
-		"${pkgdir}/etc/lightdm/${_pkgname}.conf" \
+		"${pkgdir}/etc/lightdm/${pkgname}.conf" \
 		"${pkgdir}/usr/share/lightdm-webkit/themes/antergos/js/greeter.js"
 }
 
