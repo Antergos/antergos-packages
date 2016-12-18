@@ -1,21 +1,20 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=lightdm-webkit2-greeter
-_pkgver=2.2
 pkgver=2.2
 pkgrel=1
-pkgdesc="A webkit2 greeter for LightDM"
+pkgdesc='A webkit2 greeter for LightDM'
 arch=('i686' 'x86_64')
-url="https://github.com/antergos/lightdm-webkit2-greeter"
+url='https://github.com/antergos/lightdm-webkit2-greeter'
 license=('GPL3')
-#makedepends=('gobject-introspection' 'meson')
-makedepends=('gnome-doc-utils' 'gobject-introspection' 'intltool' 'gnome-common' 'exo')
-depends=('lightdm' 'webkit2gtk>=2.10.8' 'antergos-wallpapers' 'accountsservice')
-provides=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
-replaces=('lightdm-webkit-greeter' 'lightdm-webkit-theme-antergos')
+makedepends=('gobject-introspection' 'meson-git')
+depends=('lightdm' 'webkit2gtk>=2.12' 'antergos-wallpapers' 'accountsservice')
+provides=('lightdm-webkit2-greeter' 'lightdm-webkit-greeter')
+conflicts=('lightdm-webkit2-greeter' 'lightdm-webkit-theme-antergos')
+replaces=('lightdm-webkit-theme-antergos')
 install=greeter.install
 backup=("etc/lightdm/${pkgname}.conf")
-source=("${pkgname}-${pkgver}::http://github.com/Antergos/lightdm-webkit2-greeter/archive/${_pkgver}.zip")
+source=("${pkgname}-${pkgver}.zip::http://github.com/Antergos/lightdm-webkit2-greeter/archive/${pkgver}.zip")
 md5sums=('')
 groups=('system')
 
@@ -31,27 +30,20 @@ _monitored_repo='lightdm-webkit2-greeter'
 
 
 build() {
-	cd "${srcdir}/${pkgname}-${_pkgver}"
-	#cd build
+	cd "${srcdir}/${pkgname}-${pkgver}/build"
 	
-	#meson --prefix=/usr --libdir=lib ..
-	#ninja
-
-	./autogen.sh --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/lightdm --bindir=/usr/bin --sbindir=/usr/bin
-	make
+	meson --prefix=/usr --libdir=lib ..
+	ninja
 }
 
 package() {
-	cd "${srcdir}/${pkgname}-${_pkgver}"
+	cd "${srcdir}/${pkgname}-${pkgver}/build"
 
-	#cd build
-	#DESTDIR=$pkgdir ninja install
-	#cd -
-
-	make DESTDIR=$pkgdir install
+	DESTDIR=${pkgdir} ninja install
+	cd ..
 
 	sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' \
-		"${pkgdir}/etc/lightdm/${pkgname}.conf" \
+		"${pkgdir}/etc/lightdm/${_pkgname}.conf" \
 		"${pkgdir}/usr/share/lightdm-webkit/themes/antergos/js/greeter.js"
 }
 
