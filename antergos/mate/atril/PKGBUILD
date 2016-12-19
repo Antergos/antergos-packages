@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=atril
-pkgver=1.16.0
+pkgver=1.16.1
 pkgrel=1
 pkgdesc="MATE document viewer"
 url="http://mate-desktop.org"
@@ -19,7 +19,7 @@ optdepends=('caja: Document Properties extension'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('0573c0afdc81f29115409c42e06bd4fecb785302')
+sha1sums=('7a05ec3e856335ce6a49a97f545ab401d9221f6e')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

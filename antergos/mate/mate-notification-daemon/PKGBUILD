@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-notification-daemon
-pkgver=1.16.0
+pkgver=1.16.1
 pkgrel=1
 pkgdesc="Notification daemon for MATE"
 url="http://mate-desktop.org"
@@ -13,7 +13,7 @@ depends=('dconf' 'dbus-glib' 'gtk3' 'libcanberra' 'libwnck3' 'libnotify')
 makedepends=('mate-common')
 provides=('notification-daemon')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('e3dbd1b91706503162f75103b3aa6d46335a4c94')
+sha1sums=('510f0e1b99acfa886910190afd0be94da5cf6fe1')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

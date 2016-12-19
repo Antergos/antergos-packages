@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=caja
-pkgver=1.16.0
+pkgver=1.16.1
 pkgrel=1
 pkgdesc="File manager for the MATE desktop"
 url="http://mate-desktop.org"
@@ -15,7 +15,7 @@ optdepends=('gstreamer: automatic media playback when mouseover'
 			'gvfs-smb: To connect to Samba/Windows shares')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('5d46c0ec4f8b757f85cb2da1c501e5cdfa16a042')
+sha1sums=('c050e203917c5a378fba5c7091ab29d8e22e86c9')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

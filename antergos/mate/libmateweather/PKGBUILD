@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=libmateweather
-pkgver=1.16.0
+pkgver=1.16.1
 pkgrel=1
 pkgdesc="Provides access to weather information from the Internet."
 url="http://mate-desktop.org"
@@ -12,7 +12,7 @@ groups=('mate-extra')
 depends=('dconf' 'gtk3' 'libsoup')
 makedepends=('mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('db775a80ec76ea0f8f9277a4b2011471eabaee65')
+sha1sums=('912eb67104da9414eb47c4a9b0631735d2528794')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
