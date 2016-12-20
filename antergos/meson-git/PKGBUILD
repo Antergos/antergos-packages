@@ -2,8 +2,8 @@
 # Contributor: nontlikeuname
 
 pkgname=meson-git
-pkgver=0.38.0
-_pkgver=0.38.0
+pkgver=0.37.0
+_pkgver=0.37.0
 pkgrel=1
 pkgdesc="Next-generation build system built with python and powered by Ninja."
 arch=('any')
