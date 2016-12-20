@@ -2,9 +2,9 @@
 # Contributor: nontlikeuname
 
 pkgname=meson-git
-pkgver=8c24fc7761f70798694ee8fc89e2b080e82910b92c83bd16fc03afd2d8605734dce1ffc1946bf3d23fad3cbb8184c412061ac5543b7f7d73efa4c946d766475176b1dc2a7d7e7e9f1cb9947c65db31d70.37.0
-_pkgver=8c24fc7761f70798694ee8fc89e2b080e82910b92c83bd16fc03afd2d8605734dce1ffc1946bf3d23fad3cbb8184c412061ac5543b7f7d73efa4c946d766475176b1dc2a7d7e7e9f1cb9947c65db31d70.37.0
-pkgrel=11111
+pkgver=0.37.0
+_pkgver=0.37.0
+pkgrel=1
 pkgdesc="Next-generation build system built with python and powered by Ninja."
 arch=('any')
 url="http://mesonbuild.com/"
