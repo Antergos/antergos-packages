@@ -1,4 +1,4 @@
-# Maintainer: Mark Huo <markhuomian at gmail dot com>
+# Maintainer: Antergos Developers <devs@antergos.com>
 pkgname=python-libnfs
 _pkgname=libnfs-python
 pkgver=1.0.4
