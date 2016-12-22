@@ -1,0 +1,31 @@
+# Maintainer: Mark Huo <markhuomian at gmail dot com>
+pkgname=python-libnfs
+_pkgname=libnfs-python
+pkgver=1.0.4
+pkgrel=1
+pkgdesc="NFS client for python"
+arch=('any')
+url="https://github.com/sahlberg/libnfs-python"
+license=('LGPL')
+depends=('python' 'libnfs')
+makedepends=('python-setuptools' 'python-pip' 'swig' 'libnfs')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/sahlberg/libnfs-python/archive/master.zip")
+
+
+md5sums=('SKIP')
+
+prepare() {
+    cd "${srcdir}/${_pkgname}-master/libnfs"
+    make
+
+    cd "${srcdir}/${_pkgname}-master"
+}
+
+package() {
+    local python_version=$(python --version)
+    local python_path="${pkgdir}/usr/lib/python${python_version:7:3}/site-packages"
+    mkdir -p "$python_path"
+    export PYTHONPATH=$PYTHONPATH:"$python_path"
+    cd "${srcdir}/${_pkgname}-master"
+    python setup.py install --prefix="$pkgdir/usr" --optimize=1
+}
