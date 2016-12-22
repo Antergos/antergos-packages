@@ -9,23 +9,16 @@ url="https://github.com/sahlberg/libnfs-python"
 license=('LGPL')
 depends=('python' 'libnfs')
 makedepends=('python-setuptools' 'python-pip' 'swig' 'libnfs')
+options=(!emptydirs)
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/sahlberg/libnfs-python/archive/master.zip")
-
-
 md5sums=('SKIP')
 
 prepare() {
     cd "${srcdir}/${_pkgname}-master/libnfs"
     make
-
-    cd "${srcdir}/${_pkgname}-master"
 }
 
 package() {
-    local python_version=$(python --version)
-    local python_path="${pkgdir}/usr/lib/python${python_version:7:3}/site-packages"
-    mkdir -p "$python_path"
-    export PYTHONPATH=$PYTHONPATH:"$python_path"
     cd "${srcdir}/${_pkgname}-master"
-    python setup.py install --prefix="$pkgdir/usr" --optimize=1
+    python setup.py install --root="${pkgdir}" --optimize=1
 }
