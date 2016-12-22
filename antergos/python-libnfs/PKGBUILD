@@ -13,7 +13,7 @@ options=(!emptydirs)
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/sahlberg/libnfs-python/archive/master.zip")
 md5sums=('SKIP')
 
-prepare() {
+build() {
     cd "${srcdir}/${_pkgname}-master/libnfs"
     make
 }
