@@ -5,7 +5,7 @@
 
 pkgname=cinnamon-screensaver
 pkgver=3.2.12
-pkgrel=2
+pkgrel=3
 pkgdesc="Screensaver designed to integrate well with the Cinnamon desktop."
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -13,7 +13,7 @@ groups=('cinnamon')
 url="https://github.com/linuxmint/cinnamon-screensaver"
 backup=(etc/pam.d/cinnamon-screensaver)
 depends=('cinnamon-desktop' 'cinnamon-translations' 'dbus-glib' 'libgnomekbd' 'webkit2gtk'
-		'python-setproctitle')
+		'python-setproctitle' 'python-cairo')
 makedepends=('intltool' 'gnome-common')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/cinnamon-screensaver/archive/$pkgver.tar.gz"
 		'cinnamon-screensaver.pam'
