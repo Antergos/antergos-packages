@@ -10,12 +10,13 @@ pkgdesc="Screensaver designed to integrate well with the Cinnamon desktop."
 arch=('i686' 'x86_64')
 license=('GPL')
 groups=('cinnamon')
-url="https://github.com/linuxmint/cinnamon-screensaver"
-backup=(etc/pam.d/cinnamon-screensaver)
+url='https://github.com/linuxmint/cinnamon-screensaver'
+backup=('etc/pam.d/cinnamon-screensaver')
 depends=('cinnamon-desktop' 'cinnamon-translations' 'dbus-glib' 'libgnomekbd' 'webkit2gtk'
-		'python-setproctitle' 'python-cairo')
+		'python-setproctitle' 'python-cairo' 'python-gobject' 'xscreensaver' 'gnome-keyring'
+		'accountsservice' 'python-xlib' 'xapps')
 makedepends=('intltool' 'gnome-common')
-source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/cinnamon-screensaver/archive/$pkgver.tar.gz"
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/$pkgver.tar.gz"
 		'cinnamon-screensaver.pam'
 		'https://github.com/linuxmint/cinnamon-screensaver/pull/189.patch')
 md5sums=('3442b58f7dd2d0b0e2bbe6ef3c03c0c8'
