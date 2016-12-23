@@ -1,11 +1,11 @@
-# Maintainer: Alexandre Filgueira <alexfilgueira@cinnarch.com>
+# Maintainer: Antergos Developers <dev@antergos.com>
 # Based on gnome-screensaver package:
 # Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 # Jan de Groot <jgc@archlinux.org>
 
 pkgname=cinnamon-screensaver
 pkgver=3.2.12
-pkgrel=1
+pkgrel=2
 pkgdesc="Screensaver designed to integrate well with the Cinnamon desktop."
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -15,38 +15,43 @@ backup=(etc/pam.d/cinnamon-screensaver)
 depends=('cinnamon-desktop' 'cinnamon-translations' 'dbus-glib' 'libgnomekbd' 'webkit2gtk'
 		'python-setproctitle')
 makedepends=('intltool' 'gnome-common')
-source=($pkgname-$pkgver.tar.gz::https://github.com/linuxmint/cinnamon-screensaver/archive/$pkgver.tar.gz
-       cinnamon-screensaver.pam)
-sha256sums=('de32ab1852b605835ea0ca41f248d18b32d7805d479eb6fd5877d4de92dbb784'
-            'c34925177c883dc4935408a4679e984855b14ef18a208bb5c7c3e5be3817619a')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/cinnamon-screensaver/archive/$pkgver.tar.gz"
+		'cinnamon-screensaver.pam'
+		'https://github.com/linuxmint/cinnamon-screensaver/pull/189.patch')
+md5sums=('3442b58f7dd2d0b0e2bbe6ef3c03c0c8'
+		'd1f02c3b438115563cdd1a4905a53310'
+		'c5f2e2c9a0af021891885dd37e7c76d3')
 
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cinnamon-screensaver'
-
 # END ANTBS METADATA
 
 
 build() {
-  cd $pkgname-$pkgver
+	cd "${pkgname}-${pkgver}"
 
-  ./autogen.sh --prefix=/usr --sysconfdir=/etc \
-               --libexecdir=/usr/lib/cinnamon-screensaver \
-               --localstatedir=/var \
-               --with-mit-ext --with-systemd
-  make
+	# https://github.com/linuxmint/cinnamon-screensaver/pull/189
+	patch -Np1 -i ../189.patch
+
+	./autogen.sh \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--libexecdir=/usr/lib/cinnamon-screensaver \
+		--localstatedir=/var \
+		--with-mit-ext \
+		--with-systemd
+	make
 }
 
 package() {
-  cd $pkgname-$pkgver
-  make DESTDIR="$pkgdir" install
-  install -Dm644 ../cinnamon-screensaver.pam "$pkgdir/etc/pam.d/cinnamon-screensaver"
+	cd "${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+	install -Dm644 ../cinnamon-screensaver.pam "${pkgdir}/etc/pam.d/cinnamon-screensaver"
 }
- 
 
- 
+# -*- mode: bash;-*-
