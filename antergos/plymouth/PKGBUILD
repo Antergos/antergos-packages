@@ -35,32 +35,24 @@ source=("git+https://anongit.freedesktop.org/git/plymouth#commit=0e65b86c"
 		'plymouth-update-initrd.patch')
 
 md5sums=('SKIP'
-         '9050b51ca1062b9c1d5c0918fa172437'
+         '4ded1b5deede3b82b5375141f5c580be'
          'd894033cfdb5d3cc31efa4a6121a150e'
          'fbdd5d04e3089a214b9056357434df86'
          '65eb269910f1b81e3f0970af456394ca'
-         'c36da17cb580ff901960e73d56a7d88c'
-         'dcacff05835053242f52b9e375248ec3'
-         'd1804c9f0064fb5862338a0c29d84fa5'
-         '22130f7e6b20d2a43dbed924de75180b'
-         '870ea3e63c6989e2badf79d1fbafa914'
-         'fb2eb948e2198cfb54cc2b710a05ee61'
-         '78340207f7391c682601b1b36baed14d'
          '32f04fdbd1eb94ade30d1e63fdcdd9b5'
-         '8e4b5075702a69ec25508de0badf366c'
-         '165a39dbedcc6e123c8ca05d5b4b2e25'
+         '40c6899440c1bf55ed99eaaffee79501'
          'f79edbbb30c71b0dbcd102c7dd31660b'
          '0357775c16b5f90f1af485e6a4c80a9e')
 
 prepare() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}"
 	patch -p1 -i $srcdir/plymouth-set-default-theme.in.patch
 	patch -p1 -i $srcdir/plymouth-update-initrd.patch
 #	patch -p1 -i $srcdir/plymouth-quit.service.in.patch
 }
 
 build() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}"
 	
 	LDFLAGS="$LDFLAGS -ludev" ./autogen.sh \
 		--prefix=/usr \
@@ -89,7 +81,7 @@ build() {
 }
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}"
 
 	make DESTDIR="$pkgdir" install
 	install -Dm644 ../antergos-logo.png "$pkgdir/usr/share/plymouth/antergos-logo.png"
