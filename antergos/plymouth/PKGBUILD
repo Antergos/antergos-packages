@@ -4,19 +4,19 @@
 
 pkgbase=plymouth
 pkgname=('plymouth' 'plymouth-theme-antergos')
-pkgver=0.9.2.r2026
+pkgver=0.9.2.r2031
 pkgrel=1
 pkgdesc='A graphical boot splash screen with kernel mode-setting support'
 url='http://www.freedesktop.org/wiki/Software/Plymouth'
 arch=('i686' 'x86_64')
 license=('GPL')
-install=plymouth.install
-depends=('libdrm' 'pango' 'systemd' 'gtk3' 'cairo' 'libpng' 'ttf-dejavu')
+depends=('libdrm' 'pango' 'systemd' 'gtk3' 'cairo' 'libpng' 'ttf-dejavu'
+		'plymouth-theme-antergos')
 makedepends=('docbook-xsl' 'linux-headers')
 options=('!libtool' '!emptydirs')
 conflicts=('plymouth-git')
 backup=('etc/plymouth/plymouthd.conf')
-source=("git+https://anongit.freedesktop.org/git/plymouth#commit=0e65b86c"
+source=("git+https://anongit.freedesktop.org/git/plymouth#commit=18dd7558"
 		'https://github.com/antergos/plymouth-theme-antergos/archive/1.0.tar.gz'
 		'plymouth.encrypt_hook'
 		'plymouth.encrypt_install'
@@ -97,7 +97,7 @@ package_plymouth-theme-antergos() {
 	pkgver=1.0
 	pkgdesc='Default plymouth theme for Antergos'
 	arch=('any')
-	depends=('plymouth')
+	depends=()
 
 	cd "${srcdir}/plymouth-theme-antergos-${pkgver}"
 	make DESTDIR="${pkgdir}" install
