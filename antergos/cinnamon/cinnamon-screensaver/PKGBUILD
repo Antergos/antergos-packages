@@ -5,7 +5,7 @@
 
 pkgname=cinnamon-screensaver
 pkgver=3.2.12
-pkgrel=3
+pkgrel=4
 pkgdesc="Screensaver designed to integrate well with the Cinnamon desktop."
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -13,15 +13,14 @@ groups=('cinnamon')
 url='https://github.com/linuxmint/cinnamon-screensaver'
 backup=('etc/pam.d/cinnamon-screensaver')
 depends=('cinnamon-desktop' 'cinnamon-translations' 'dbus-glib' 'libgnomekbd' 'webkit2gtk'
-		'python-setproctitle' 'python-cairo' 'python-gobject' 'xscreensaver' 'gnome-keyring'
+		'python-setproctitle' 'python-cairo' 'python-gobject' 'gnome-keyring'
 		'accountsservice' 'python-xlib' 'xapps')
+optdepends=('xscreensaver')
 makedepends=('intltool' 'gnome-common')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/$pkgver.tar.gz"
-		'cinnamon-screensaver.pam'
 		'https://github.com/linuxmint/cinnamon-screensaver/pull/189.patch')
 md5sums=('3442b58f7dd2d0b0e2bbe6ef3c03c0c8'
-		'd1f02c3b438115563cdd1a4905a53310'
-		'c5f2e2c9a0af021891885dd37e7c76d3')
+         '266160e7351b86096ed6bde7a5e5c119')
 
 
 # BEGIN ANTBS METADATA
@@ -52,7 +51,6 @@ build() {
 package() {
 	cd "${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
-	install -Dm644 ../cinnamon-screensaver.pam "${pkgdir}/etc/pam.d/cinnamon-screensaver"
 }
 
 # -*- mode: bash;-*-
