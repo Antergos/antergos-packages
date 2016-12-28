@@ -1,0 +1,35 @@
+# Maintainer: Antergos Developers <devs@antergos.com>
+# Original Author: Benjamin ROBIN <dev@benjarobin.fr>
+
+pkgname=mt7630e
+pkgver=2.3.8
+pkgrel=1
+pkgdesc="MT7630e PCIe Wifi driver"
+arch=('i686' 'x86_64') 
+url="http://www.mediatek.com/en/downloads/mt7630-pcie/"
+license=('GPL') 
+depends=('dkms' 'linux-headers')
+install=mt7630e.install 
+source=("mt7630e::git+https://github.com/benjarobin/MT7630E.git#tag=v${pkgver}"
+        'dkms.conf')
+md5sums=('SKIP'
+         '2b0d2c38fac1a785795bb5279d966585')
+
+#pkgver() {
+#    cd "${pkgname}"
+#    git describe --tags --long | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
+#}
+
+package() {
+    cd "${pkgname}"
+    
+    mkdir -p "${pkgdir}/usr/src/${pkgname}-${pkgver}"
+    cp -RL --no-preserve='ownership' rt2x00/* "${pkgdir}/usr/src/${pkgname}-${pkgver}/"
+    rm -f "${pkgdir}/usr/src/${pkgname}-${pkgver}"/*.sh
+    install -m644 "${srcdir}/dkms.conf" "${pkgdir}/usr/src/${pkgname}-${pkgver}/"
+    
+    install -D -m644 "firmware/Wi-FI/MT7650E234.bin" "${pkgdir}/usr/lib/firmware/MT7650E234.bin"
+    
+    mkdir -p "$pkgdir/usr/lib/modules-load.d/"
+    echo mt7630e > "$pkgdir/usr/lib/modules-load.d/mt7630e.conf"
+}
