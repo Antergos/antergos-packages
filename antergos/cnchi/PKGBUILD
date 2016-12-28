@@ -3,7 +3,7 @@
 pkgname=cnchi
 _pkgname=Cnchi
 pkgver=0.14.204
-pkgrel=1
+pkgrel=2
 pkgdesc='A modern, flexible system installer for Linux'
 arch=('any')
 license=('GPL3')
@@ -36,6 +36,7 @@ package() {
 	install -d ${pkgdir}/usr/share/{cnchi,locale}
 	install -Dm755 "bin/${pkgname}" "${pkgdir}/usr/bin/cnchi"
 	install -Dm755 "${pkgname}.desktop" "${pkgdir}/usr/share/applications/cnchi.desktop"
+        install -Dm644 "data/images/antergos/antergos-icon.png" "${pkgdir}/usr/share/pixmaps/cnchi.png"
 
 	sed -r -i 's|\/usr.+ -v|pkexec /usr/share/cnchi/bin/cnchi -s bugsnag|g' "${pkgdir}/usr/bin/cnchi"
 	
