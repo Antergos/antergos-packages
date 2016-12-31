@@ -31,7 +31,7 @@ _monitored_repo='numix-icon-theme'
 
 pkgver() {
 	cd "${srcdir}/${pkgname}"
-	printf "0.r%s" "$(git rev-list --count HEAD)"
+	printf "0.r%s.1" "$(git rev-list --count HEAD)"
 }
 
 
@@ -75,7 +75,7 @@ build() {
 			( cd "${PLACES_DIR}" && mv "${OLD_NAME}" "${NEW_NAME}" )
 
 			cp ../"antergos-ball-for-${VARIANT}-themes.svg" "${PLACES_DIR}/${OLD_NAME}"
-			sed -i "s|78.052307|${SIZE}.000000|g" "${PLACES_DIR}/${OLD_NAME}"
+			sed -ri "s@78\.052307@${SIZE}.000000@g" "${PLACES_DIR}/${OLD_NAME}"
 		}
 
 		return 0
