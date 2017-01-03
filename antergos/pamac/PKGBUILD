@@ -4,7 +4,7 @@
 pkgname=pamac
 pkgver=4.1.7
 _pkgver=4.1.7
-pkgrel=2
+pkgrel=1
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit=""
 pkgdesc="A Gtk3 frontend for libalpm"
@@ -23,8 +23,7 @@ options=(!emptydirs)
 if [ "${_gitcommit}" != "" ]; then
 	source=("pamac-$pkgver-$pkgrel.tar.gz::$url/archive/$_gitcommit.tar.gz")
 else
-	source=("pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz"
-			"aur-search.patch::https://github.com/manjaro/pamac/commit/9bcd61cfb7228f8318c5c8b95e8a78436d51e156.patch")
+	source=("pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
 md5sums=('1615b837a97a7caf69301862aa5a2fdf')
@@ -52,7 +51,7 @@ prepare() {
 	sed -i '/pamac-mirrorlist/d' src/Makefile
 
 	# patches here
-	patch -p1 -i "$srcdir/aur-search.patch"
+
 }
 
 build() {
