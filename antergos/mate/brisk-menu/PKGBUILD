@@ -1,15 +1,15 @@
 # Maintainer: Antergos Developers <dustin@antergos.com>
 
 pkgname=brisk-menu
-pkgver=0.2.0
-pkgrel=1
+pkgver=0.1.2
+pkgrel=1.1
 pkgdesc='Modern, efficient menu for the MATE Desktop Environment.'
 arch=('i686' 'x86_64')
 url='https://github.com/solus-project/brisk-menu'
 license=('GPL2')
 groups=('mate')
 depends=('gtk3' 'mate-panel')
-makedepends=('gnome-common')
+#makedepends=('gnome-common')
 source=("https://github.com/solus-project/${pkgname}/releases/download/v${pkgver}/${pkgname}-${pkgver}.tar.xz")
 md5sums=('cb148fcabcbc3c111c5b7f26ef3fa613')
 
