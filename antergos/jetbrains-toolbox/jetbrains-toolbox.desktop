@@ -7,5 +7,6 @@ StartupNotify=false
 Categories=Development;IDE;
 Terminal=false
 X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-delay=30
 StartupWMClass=jetbrains-toolbox
 MimeType=x-scheme-handler/jetbrains;
