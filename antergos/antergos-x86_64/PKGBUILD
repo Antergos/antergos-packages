@@ -2,7 +2,7 @@
 # THIS IS A DUMMY PKGBUILD FOR TRACKING ISO META INFORMATION. IT WILL NOT BUILD A PACKAGE.
 
 pkgname=antergos-x86_64
-pkgver="$(date +%Y.%m.%d)"
+pkgver="$(date +'%y.%-m')"
 pkgrel=1
 pkgdesc='Dummy pkgbuild for tracking ISO builds on the build server.'
 arch=('x86_64')
