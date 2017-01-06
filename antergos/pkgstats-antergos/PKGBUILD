@@ -22,7 +22,7 @@ _monitored_repo='pkgstats-antergos'
 # END ANTBS METADATA
 
 package() { 
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}"*
 	make DESTDIR="${pkgdir}" install
 }
 
