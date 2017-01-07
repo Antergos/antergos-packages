@@ -22,7 +22,7 @@ _monitored_repo='flags'
 
 
 package() {
-	cd ${pkgname}-${pkgver}
+	cd "flags-${pkgver}"
 	cp -R usr ${pkgdir}
 }
 
