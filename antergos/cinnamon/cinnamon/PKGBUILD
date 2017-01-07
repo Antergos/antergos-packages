@@ -98,7 +98,7 @@ package() {
 	cp -R usr/share/themes/* "${pkgdir}/usr/share/themes"
 
 	# Cinnamon assumes this directory always exists (it probably does on Ubuntu)
-	touch "${pkgdir}/etc/xdg/applications-merged"
+	mkdir -p "${pkgdir}/etc/xdg/menus/applications-merged"
 }
 
 # -*- mode: bash;-*-
