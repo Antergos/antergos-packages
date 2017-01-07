@@ -1,0 +1,29 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+
+pkgname=iso-flag-png
+pkgver=1.0.1
+pkgrel=1
+pkgdesc='ISO country flags in PNG format.'
+arch=('any')
+groups=('cinnamon')
+url='https://github.com/linuxmint/flags'
+license=('custom')
+source=("https://github.com/linuxmint/flags/archive/${pkgver}.tar.gz")
+md5sums=('c88e415cfe142a5f0cbe10488d296242e91e8e0f3bb7802ad94d3a5747bf5f88')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='tags'
+_monitored_project='linuxmint'
+_monitored_repo='flags'
+# END ANTBS METADATA
+
+
+package() {
+	cd ${pkgname}-${pkgver}
+	cp -R usr ${pkgdir}
+}
+
+# -*- mode: bash;-*-
