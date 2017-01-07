@@ -20,7 +20,8 @@ depends=('accountsservice'          'cjs'                   'librsvg'           
 		 'cinnamon-screensaver'     'gconf'                 'network-manager-applet' 'python2-ptyprocess'
 		 'cinnamon-session'         'gstreamer'             'polkit-gnome'           'python2-pyinotify'
 		 'cinnamon-settings-daemon' 'libgnomekbd'           'python2-cairo'          'webkitgtk'
-		 'cinnamon-translations'    'libgnome-keyring'      'python2-dbus'           'xapps')
+		 'cinnamon-translations'    'libgnome-keyring'      'python2-dbus'           'xapps'
+		 'libkeybinder3')
 
 makedepends=('autoconf-archive' 'intltool' 'gtk-doc' 'gobject-introspection')
 conflicts=('mint-cinnamon-themes')
