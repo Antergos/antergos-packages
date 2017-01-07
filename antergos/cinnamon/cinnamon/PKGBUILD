@@ -25,7 +25,6 @@ depends=('accountsservice'          'cjs'                    'libkeybinder3'    
 
 makedepends=('autoconf-archive' 'intltool' 'gtk-doc' 'gobject-introspection')
 conflicts=('mint-cinnamon-themes')
-options=('!emptydirs')
 _themes_commit='e43a0d1ca2542308ef62f59cc1499769b20f48c9'
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/Cinnamon/archive/${pkgver}.tar.gz"
 		"themes.tar.gz::https://github.com/linuxmint/cinnamon-themes/archive/${_themes_commit}.tar.gz"
