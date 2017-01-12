@@ -10,13 +10,11 @@ post_install() {
 		local_share="${home_dir}/.local/share/applications/jetbrains-toolbox.desktop"
 
 		cp /usr/share/applications/jetbrains-toolbox.desktop "${autostart}"
-		sed -i 's|bin\/jetbrains-toolbox|bin/jetbrains-toolbox --minimize|g' "${autostart}"
-		chown 0:0 "${autostart}"
-		chmod 755 "${autostart}"
+		sed -i 's|bin\/jetbrains-toolbox|bin/jetbrains-toolbox --minimize|g' "${autostart}" &>>/dev/null
+		chmod 555 "${autostart}"
 
-		cp /usr/share/applications/jetbrains-toolbox.desktop "${local_share}"
-		chown 0:0 "${local_share}"
-		chmod 755 "${local_share}"
+		cp /usr/share/applications/jetbrains-toolbox.desktop "${local_share}" &>>/dev/null
+		chmod 555 "${local_share}"
 	done
 }
 
