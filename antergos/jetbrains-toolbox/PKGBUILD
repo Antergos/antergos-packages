@@ -2,7 +2,7 @@
 
 pkgname=jetbrains-toolbox
 pkgver=1.1.2143
-pkgrel=2
+pkgrel=3
 epoch=2
 pkgdesc="One-stop access to all your coding tools from JetBrains."
 url='http://www.jetbrains.com/toolbox/'
@@ -11,10 +11,11 @@ options=('!strip' 'emptydirs')
 license=('custom')
 depends=('fuse')
 provides=('clion' 'clion-eap' 'phpstorm' 'phpstorm-eap' 'webstorm' 'webstorm-eap' 'rubymine' 'rubymine-eap'
-	'pycharm-pro-eap' 'pycharm-com-eap' 'pycharm-eap' 'pycharm-professional' 'pycharm-community'
-	'intellij-idea-ultimate-edition' 'intellij-idea-community-edition' 'intellij-idea-ue-eap')
+		'pycharm-pro-eap' 'pycharm-com-eap' 'pycharm-eap' 'pycharm-professional' 'pycharm-community'
+		'intellij-idea-ultimate-edition' 'intellij-idea-community-edition' 'intellij-idea-ue-eap')
 groups=('development' 'IDE' 'editor' 'jetbrains')
 install="${pkgname}.install"
+backup=('opt/JetBrains/Toolbox/.settings.json')
 source=("https://download.jetbrains.com/toolbox/${pkgname}-${pkgver}.tar.gz"
 		"${pkgname}.desktop"
 		'.settings.json'
@@ -24,7 +25,7 @@ sha256sums=($(wget -q "${source}.sha256" && cat "${pkgname}-${pkgver}.tar.gz.sha
 			'ec837e9d12f010957cf274bb846bc758619d041fb07dfde716ef6f4a4b5dd0a7'
 			'1d583206859c21ba3d8898f0dffbaf3f6ae88c0e4ebeeb4868cc7e71aaf3895a'
 			'9e3784dc0bc10c0d7db7c01fa8874b4048ecb1d21fa2a82d4ff17c53cfacf70c'
-			'009c10e49d5b7e1c032e52b89c169f8663fe1899c0ac4d77fb4fc2df2dc3fd51')
+			'eef5c15f2412247745b306854076b9c4bc1788cac97e54145daff6ce1cc3a16d')
 
 
 package() {
