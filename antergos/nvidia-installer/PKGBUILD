@@ -2,7 +2,7 @@
 
 pkgname=nvidia-installer
 pkgver=0.0.5
-pkgrel=1
+pkgrel=2
 pkgdesc="Script to setup nvidia drivers in Antergos"
 url="http://www.antergos.com"
 arch=('any')
@@ -12,15 +12,16 @@ source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
 sha256sums=('SKIP')
 
 # BEGIN ANTBS METADATA
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='antergos'
-_monitored_repo='nvidia-installer'
+#_is_monitored='True'
+#_monitored_service='github'
+#_monitored_type='releases'
+#_monitored_project='antergos'
+#_monitored_repo='nvidia-installer'
 # END ANTBS METADATA
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
   install -Dm755 ${pkgname} ${pkgdir}/usr/bin/${pkgname}
 }
+
 # -*- mode: bash;-*-
