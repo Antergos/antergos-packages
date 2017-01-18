@@ -2,13 +2,13 @@
 
 pkgname=lightdm-webkit2-greeter
 pkgver=2.2.1
-pkgrel=1
+pkgrel=2
 pkgdesc='A webkit2 greeter for LightDM'
 arch=('i686' 'x86_64')
 url='https://github.com/antergos/lightdm-webkit2-greeter'
 license=('GPL3')
 makedepends=('gobject-introspection' 'meson-git')
-depends=('lightdm' 'webkit2gtk>=2.12' 'antergos-wallpapers' 'accountsservice')
+depends=('lightdm' 'webkit2gtk>=2.12' 'webkit2gtk<2.14.3' 'antergos-wallpapers' 'accountsservice')
 provides=('lightdm-webkit2-greeter' 'lightdm-webkit-greeter')
 conflicts=('lightdm-webkit2-greeter' 'lightdm-webkit-theme-antergos')
 replaces=('lightdm-webkit-theme-antergos')
