@@ -3,12 +3,13 @@
 
 pkgname=mate-desktop
 pkgver=1.16.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Library with common API for various MATE modules"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL' 'LGPL')
 groups=('mate')
+provides=('mate-desktop-gtk3' 'mate-desktop-schemas')
 depends=('dconf' 'gtk3' 'startup-notification' 'gobject-introspection')
 makedepends=('mate-common' 'yelp-tools')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
