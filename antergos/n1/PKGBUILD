@@ -4,7 +4,7 @@
 pkgname=n1
 pkgver=1.5.0
 buildver=b0ec335
-pkgrel=1
+pkgrel=3
 pkgdesc="A mail client for Mac, Linux, and Windows that is built on the modern web and designed to be extended."
 arch=('x86_64')
 url="https://nylas.com/N1/"
