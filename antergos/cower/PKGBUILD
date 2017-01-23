@@ -14,7 +14,7 @@ md5sums=('f141e441b7775df3d3a1ba3a80bc3d1d')
 
 build() {
   cd "$pkgname-$pkgver"
-
+  PATH=$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
   make
   sed '/^$/q' cower.c >LICENSE
 }
