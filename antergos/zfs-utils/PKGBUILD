@@ -4,9 +4,9 @@
 pkgname="zfs-utils"
 _pkgver=0.6.5.8
 _rev=2019
-_kern=4.8.13_1
+_kern=4.9.6_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
-pkgrel=2
+pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
 url="http://zfsonlinux.org/"
 license=('CDDL')
