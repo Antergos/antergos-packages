@@ -4,12 +4,12 @@
 pkgname=zfs
 _pkgver=0.6.5.8
 _rev=2019
-_kern=4.8.13_1
+_kern=4.9.6_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
-pkgrel=2
+pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
-depends=("spl=${pkgver/2019/964}" "zfs-utils=${pkgver}" "dkms" "linux-headers" "linux<4.9")
+depends=("spl=${pkgver/2019/964}" "zfs-utils=${pkgver}" "dkms" "linux-headers" "linux<4.10")
 provides=("zfs-dkms=${pkgver}")
 conflicts=("zfs-git" "zfs-dkms")
 install=zfs.install
