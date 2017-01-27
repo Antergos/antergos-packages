@@ -3,7 +3,7 @@
 
 pkgname=firefox-beta
 _pkgname=firefox
-pkgver=51.0b11
+pkgver=52.0b1
 pkgrel=1
 _majorver="${pkgver/rc*}"
 _buildver="${pkgver/*rc}"
@@ -47,7 +47,7 @@ source+=("fix-wifi-scanner.diff::${_archpkg_git_url}/fix-wifi-scanner.diff?h=pac
 		"${pkgname}.desktop"
 		'mozconfig')
 
-md5sums=('f71837c6349bd4c7b7b78d49eb393a99'
+md5sums=('41c4fae7ac3a0cf5e0af59edf460a106'
 		'e2396b9918aa602427f80d48caf319b4'
 		'dbf14588e85812ee769bd735823a0146'
 		'aa9f776d2187cba09de65cbb02b39ca0'
