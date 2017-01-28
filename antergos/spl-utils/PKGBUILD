@@ -2,8 +2,8 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname='spl-utils'
-_pkgver=0.6.5.8
-_rev=964
+_pkgver=0.7.0rc3
+_rev=1017
 _kern=4.9.6_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
@@ -15,20 +15,14 @@ provides=("spl-utils-dkms=${pkgver}")
 conflicts=("spl-utils-dkms")
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-_commit="${_pkgver}"
-source=("${pkgname}::https://github.com/zfsonlinux/spl/archive/spl-${_pkgver}.zip")
-md5sums=('3b98916ba77f91725252345dc5ff0788')
+_commit='f5c5286daa5f76532d7a8a7988d6a42cfd58038c'
+source=("https://github.com/zfsonlinux/spl/archive/${_commit}.zip")
+md5sums=('85e4abd5e7508e16af079bc960c3cd13')
 
 
-# pkgver() {
-#	local _kernel='4.5.4_1'
-#	cd "${srcdir}/spl"
-#	printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
-#
-# }
 
 build() {
-	cd "${srcdir}/spl-spl-${_commit}"
+	cd "${srcdir}/spl-${_commit}"
 	./autogen.sh
 
 	{ [[ "${CARCH}" == i686 ]] && _at_enable="--enable-atomic-spinlocks"; } || _at_enable=""
@@ -45,9 +39,8 @@ build() {
 }
 
 package() {
-	cd "${srcdir}/spl-spl-${_commit}"
+	cd "${srcdir}/spl-${_commit}"
 	make DESTDIR="${pkgdir}" install
-	#install -D -m644 "${srcdir}"/spl-utils.hostid "${pkgdir}"/etc/hostid
 }
 
 # -*- mode: bash;-*-
