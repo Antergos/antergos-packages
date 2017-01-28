@@ -4,8 +4,9 @@
 # Contributor: Gaetan Bisson <bisson@archlinux.org>
 
 pkgname=broadcom-wl
+_pkgver=6.30.223.271
 pkgver=6.30.223.271
-pkgrel=6
+pkgrel=1
 pkgdesc='Broadcom 802.11abgn hybrid Linux networking device driver'
 url='http://www.broadcom.com/support/802.11/linux_sta.php'
 arch=('i686' 'x86_64')
@@ -35,6 +36,12 @@ md5sums_x86_64=('115903050c41d466161784d4c843f4f9')
 
 _kernver="$(pacman -Sl core | grep ' linux ' | cut -d ' ' -f 3)-ARCH"
 
+
+
+pkgver() {
+	echo "${_pkgver}_${_kernver}"
+}
+
 prepare() {
 	patch -p1 -i license.patch
 	patch -p1 -i wl_linux.c.patch
@@ -43,7 +50,7 @@ prepare() {
 
 	sed -e "/BRCM_WLAN_IFNAME/s:eth:wlan:" -i src/wl/sys/wl_linux.c
 
-	sed -e "s/@PACKAGE_VERSION@/${pkgver}/" dkms.conf.in > dkms.conf
+	sed -e "s/@PACKAGE_VERSION@/${_pkgver}/" dkms.conf.in > dkms.conf
 }
 
 package() {
