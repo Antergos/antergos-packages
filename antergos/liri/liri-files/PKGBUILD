@@ -18,7 +18,7 @@ md5sums=('')
 
 
 # BEGIN ANTBS METADATA
-_is_monitored='True'
+_is_monitored='False'
 _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='lirios'
