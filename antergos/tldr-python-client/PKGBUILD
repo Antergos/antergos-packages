@@ -12,8 +12,8 @@ depends=('python')
 makedepends=('python-setuptools')
 license=('MIT')
 arch=('any')
-source=("https://github.com/tldr-pages/${pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('fcb6a4a4e4cbd00ddbd814958e865395')
+source=("git+https://github.com/tldr-pages/${pkgname}.git#tag=${pkgver}")
+md5sums=('SKIP')
 
 
 # BEGIN ANTBS METADATA
@@ -26,13 +26,13 @@ _monitored_repo='tldr-python-client'
 
 
 build() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}"
 	python setup.py build
 }
 
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}"
 	python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
 }
 
