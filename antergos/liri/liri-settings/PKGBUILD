@@ -32,7 +32,7 @@ prepare() {
 
 build() {
 	cd build
-	cmake ../"${_gitname}-${pkgver} "\
+	cmake ../"${_gitname}-${pkgver}" \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DKDE_INSTALL_LIBDIR=lib \
