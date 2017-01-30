@@ -14,7 +14,7 @@ license=('MIT')
 arch=('any')
 _repo='tldr-python-client'
 source=("https://github.com/tldr-pages/${_repo}/archive/${pkgver}.tar.gz")
-md5sums=('a6a995e5fdcd5fcf6064fa2f85a0afd8')
+md5sums=('fcb6a4a4e4cbd00ddbd814958e865395')
 
 
 # BEGIN ANTBS METADATA
