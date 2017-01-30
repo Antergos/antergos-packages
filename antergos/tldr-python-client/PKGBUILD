@@ -14,7 +14,8 @@ license=('MIT')
 arch=('any')
 source=("git+https://github.com/tldr-pages/${pkgname}.git#tag=${pkgver}"
 		'https://github.com/tldr-pages/tldr-python-client/pull/32.patch')
-md5sums=('SKIP')
+md5sums=('SKIP'
+		'617fa4da21aefb6b5688d97d5fb12955')
 
 
 # BEGIN ANTBS METADATA
