@@ -30,7 +30,7 @@ prepare() {
 
 build() {
 	cd build
-	cmake ../${_gitname} \
+	cmake ../"${_gitname}-${pkgver} "\
 		-DCMAKE_INSTALL_PREFIX=/usr
 	make
 }

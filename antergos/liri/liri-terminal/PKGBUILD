@@ -38,7 +38,7 @@ build() {
 	cd -
 
 	cd build
-	cmake ../${_gitname} \
+	cmake ../"${_gitname}-${pkgver} "\
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DKDE_INSTALL_LIBDIR=lib \
