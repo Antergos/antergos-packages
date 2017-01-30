@@ -1,0 +1,45 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+
+pkgname=greenisland
+pkgver=0.9.0.1
+pkgrel=1
+pkgdesc="Qt-based compositor infrastructure for Wayland"
+arch=('any')
+url='https://github.com/greenisland/greenisland'
+license=('GPL2' 'GPL3' 'LGPL3')
+depends=('systemd' 'wayland-protocols' 'libdrm' 'libinput' 'qt5-declarative'
+         'xkeyboard-config' 'libxkbcommon' 'fontconfig' 'freetype2')
+makedepends=('extra-cmake-modules' 'xcb-util-cursor' 'libxcursor')
+_gitname="${pkgname}"
+source=("https://github.com/greenisland/${_gitname}/releases/archive/v${pkgver}.tar.gz")
+md5sums=('')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='greenisland'
+_monitored_repo='greenisland'
+# END ANTBS METADATA
+
+
+prepare() {
+	mkdir -p build
+}
+
+build() {
+	cd build
+	cmake ../${_gitname} \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DKDE_INSTALL_LIBDIR=lib \
+		-DKDE_INSTALL_LIBEXECDIR=lib
+	make
+}
+
+package() {
+	cd build
+	make DESTDIR="${pkgdir}" install
+}

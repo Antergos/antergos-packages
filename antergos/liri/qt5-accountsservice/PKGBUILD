@@ -1,0 +1,46 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+
+pkgname=qt5-accountsservice
+pkgver=0.7.0
+pkgrel=1
+pkgdesc="Qt-style wrapper for Accounts Service"
+arch=('any')
+url='https://github.com/lirios/qtaccountsservice'
+license=('LGPL3')
+depends=('qt5-declarative')
+makedepends=('extra-cmake-modules')
+conflicts=('qtaccountsservice-git')
+groups=('liri')
+_gitname="${pkgname/5-}"
+source=("https://github.com/lirios/${_gitname}/releases/archive/v${pkgver}.tar.gz")
+md5sums=('')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='lirios'
+_monitored_repo='liri-qtaccountsservice'
+# END ANTBS METADATA
+
+
+prepare() {
+	mkdir -p build
+}
+
+build() {
+	cd build
+	cmake ../${_gitname} \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DKDE_INSTALL_LIBDIR=lib \
+		-DKDE_INSTALL_LIBEXECDIR=lib
+	make
+}
+
+package() {
+	cd build
+	make DESTDIR="${pkgdir}" install
+}
