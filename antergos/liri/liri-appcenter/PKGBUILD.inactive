@@ -6,14 +6,14 @@ pkgver=0.1.0
 pkgrel=1
 pkgdesc='App Center for Liri OS'
 arch=('x86_64')
-url='https://github.com/lirios/liri-appcenter'
+url='https://github.com/lirios/appcenter'
 license=('GPL3')
 depends=('vibe' 'karchive' 'flatpak')
 makedepends=('extra-cmake-modules')
 conflicts=('liri-appcenter-git')
 groups=('liri')
 _gitname="${pkgname/liri-}"
-source=("https://github.com/lirios/${_gitname}/releases/archive/v${pkgver}.tar.gz")
+source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
 md5sums=('')
 
 

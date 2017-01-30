@@ -12,7 +12,7 @@ makedepends=('extra-cmake-modules')
 conflicts=('liri-themes-git')
 groups=('liri')
 _gitname="${pkgname/liri-}"
-source=("https://github.com/lirios/${_gitname}/releases/archive/v${pkgver}.tar.gz")
+source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
 md5sums=('')
 
 

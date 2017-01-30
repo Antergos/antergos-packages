@@ -12,7 +12,7 @@ depends=('systemd' 'wayland-protocols' 'libdrm' 'libinput' 'qt5-declarative'
          'xkeyboard-config' 'libxkbcommon' 'fontconfig' 'freetype2')
 makedepends=('extra-cmake-modules' 'xcb-util-cursor' 'libxcursor')
 _gitname="${pkgname}"
-source=("https://github.com/greenisland/${_gitname}/releases/archive/v${pkgver}.tar.gz")
+source=("https://github.com/greenisland/${_gitname}/archive/v${pkgver}.tar.gz")
 md5sums=('')
 
 

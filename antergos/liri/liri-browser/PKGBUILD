@@ -1,18 +1,16 @@
-# Maintainer: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 
-pkgname=liri-browser-git
-pkgver=20161207.1af8536
+
+pkgname=liri-browser
+pkgver=0.9.0
 pkgrel=1
 pkgdesc="Liri Browser"
-arch=('i686' 'x86_64' 'armv6h' 'armv7h')
-url='https://liri.io'
+arch=('x86_64')
+url='https://github.com/lirios/browser'
 license=('GPL3')
-depends=('fluid-git' 'slime-engine-git')
-makedepends=('git')
-conflicts=('liri-browser')
-replaces=('liri-browser')
-provides=('liri-browser')
-groups=('liri-git')
+depends=('fluid' 'slime-engine')
+groups=('liri')
 
 _gitroot="git://github.com/lirios/browser.git"
 _gitbranch=develop

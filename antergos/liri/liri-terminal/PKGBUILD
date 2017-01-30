@@ -14,7 +14,7 @@ conflicts=('hawaii-terminal-git' 'papyros-terminal-git' 'papyros-qmltermwidget-g
 provides=('liri-terminal')
 groups=('liri')
 _gitname="${pkgname/liri-}"
-source=("https://github.com/lirios/${_gitname}/releases/archive/v${pkgver}.tar.gz")
+source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
 md5sums=('')
 
 

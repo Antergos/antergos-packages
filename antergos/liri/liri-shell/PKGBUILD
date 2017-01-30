@@ -15,7 +15,7 @@ makedepends=('extra-cmake-modules')
 conflicts=('hawaii-shell-git' 'papyros-shell-git' 'liri-shell-git')
 groups=('liri')
 _gitname="${pkgname/liri-}"
-source=("https://github.com/lirios/${_gitname}/releases/archive/v${pkgver}.tar.gz")
+source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
 md5sums=('')
 
 # BEGIN ANTBS METADATA

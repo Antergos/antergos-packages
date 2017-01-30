@@ -15,7 +15,7 @@ conflicts=('libhawaii' 'libhawaii-git' 'libpapyros' 'libpapyros-git')
 replaces=('libhawaii' 'libpapyros')
 groups=('liri')
 _gitname="${pkgname}"
-source=("https://github.com/lirios/${_gitname}/releases/archive/v${pkgver}.tar.gz")
+source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
 md5sums=('')
 
 
