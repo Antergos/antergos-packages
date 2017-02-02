@@ -2,8 +2,8 @@
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=pamac-dev
-pkgver=4.1.8
-_pkgver=4.1.8
+pkgver=4.2.0
+_pkgver=4.2.0
 pkgrel=1
 _gitcommit="master"
 pkgdesc='A Gtk3 frontend for libalpm'

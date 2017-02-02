@@ -1,0 +1,56 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+
+pkgname=liri-terminal
+pkgver=0.9.0
+pkgrel=1
+pkgdesc="Terminal application and modules for Liri OS"
+arch=('x86_64')
+url='https://github.com/lirios/terminal'
+license=('GPL3')
+depends=('vibe' 'glib2' 'dconf')
+makedepends=('extra-cmake-modules')
+conflicts=('hawaii-terminal-git' 'papyros-terminal-git' 'papyros-qmltermwidget-git')
+provides=('liri-terminal')
+groups=('liri')
+_gitname="${pkgname/liri-}"
+source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
+md5sums=('')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='False'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='lirios'
+_monitored_repo='liri-terminal'
+# END ANTBS METADATA
+
+
+prepare() {
+	mkdir -p build
+}
+
+build() {
+	cd ${srcdir}/qmltermwidget
+	qmake
+	make
+	cd -
+
+	cd build
+	cmake ../"${_gitname}-${pkgver}" \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DKDE_INSTALL_LIBDIR=lib \
+		-DKDE_INSTALL_LIBEXECDIR=lib
+	make
+}
+
+package() {
+	cd ${srcdir}/qmltermwidget
+	make INSTALL_ROOT="${pkgdir}" install
+	cd -
+
+	cd build
+	make DESTDIR="${pkgdir}" install
+}

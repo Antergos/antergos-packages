@@ -1,0 +1,39 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+
+
+pkgname=liri-browser
+pkgver=0.9.0
+pkgrel=1
+pkgdesc="Liri Browser"
+arch=('x86_64')
+url='https://github.com/lirios/browser'
+license=('GPL3')
+depends=('fluid' 'slime-engine')
+groups=('liri')
+
+_gitroot="git://github.com/lirios/browser.git"
+_gitbranch=develop
+_gitname=browser
+source=(${_gitname}::${_gitroot}#branch=${_gitbranch})
+md5sums=('SKIP')
+
+pkgver() {
+	cd ${srcdir}/${_gitname}
+	echo "$(git log -1 --format="%cd" --date=short | tr -d '-').$(git log -1 --format="%h")"
+}
+
+prepare() {
+	mkdir -p build
+}
+
+build() {
+	cd build
+	PREFIX=/usr qmake CONFIG+=QTWEBENGINE_ENABLED ../${_gitname}
+	make
+}
+
+package() {
+	cd build
+	make INSTALL_ROOT="${pkgdir}" install
+}

@@ -2,11 +2,11 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl
-_pkgver=0.6.5.8
-_rev=964
-_kern=4.8.13_1
+_pkgver=0.7.0rc3
+_rev=1017
+_kern=4.9.6_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
-pkgrel=2
+pkgrel=1
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")
@@ -16,20 +16,14 @@ conflicts=("spl-dkms")
 install=spl.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-_commit="${_pkgver}"
-source=("${pkgname}::https://github.com/zfsonlinux/spl/archive/spl-${_pkgver}.zip")
-md5sums=('3b98916ba77f91725252345dc5ff0788')
+_commit='f5c5286daa5f76532d7a8a7988d6a42cfd58038c'
+source=("https://github.com/zfsonlinux/spl/archive/${_commit}.zip")
+md5sums=('85e4abd5e7508e16af079bc960c3cd13')
 install=spl.install
 
 
-#pkgver() {
-#	local _kernel='4.6.2_1'
-#	cd "${srcdir}/spl"
-#	printf "%s.r%s_%s" "${_pkgver}" "$(git rev-list --count HEAD)" "${_kernel}"
-#}
-
 build() {
-	cd "${srcdir}/${pkgname}-${pkgname}-${_commit}"
+	cd "${srcdir}/${pkgname}-${_commit}"
 	./autogen.sh
 
 	{ [[ "${CARCH}" == i686 ]] && _at_enable="--enable-atomic-spinlocks"; } || _at_enable=""
@@ -50,7 +44,7 @@ package() {
 	dkmsdir="${pkgdir}/usr/src/spl-${_pkgver}"
 	install -d "${dkmsdir}"
 
-	cp -a "${srcdir}/${pkgname}-${pkgname}-${_commit}"/. ${dkmsdir}
+	cp -a "${srcdir}/${pkgname}-${_commit}"/. ${dkmsdir}
 
 	cd "${dkmsdir}"
 	./autogen.sh

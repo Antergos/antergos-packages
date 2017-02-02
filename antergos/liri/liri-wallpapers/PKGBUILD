@@ -1,0 +1,41 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+
+pkgname=liri-wallpapers
+pkgver=0.9.0
+pkgrel=1
+pkgdesc="Wallpapers for Liri OS"
+arch=('any')
+url='https://github.com/lirios/wallpapers'
+license=('CCPL')
+makedepends=('extra-cmake-modules')
+conflicts=('hawaii-wallpapers-git' 'liri-wallpapers')
+groups=('liri')
+_gitname="${pkgname/liri-}"
+source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
+md5sums=('')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='False'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='lirios'
+_monitored_repo='liri-wallpapers'
+# END ANTBS METADATA
+
+prepare() {
+	mkdir -p build
+}
+
+build() {
+	cd build
+	cmake ../"${_gitname}-${pkgver}" \
+		-DCMAKE_INSTALL_PREFIX=/usr
+	make
+}
+
+package() {
+	cd build
+	make DESTDIR="${pkgdir}" install
+}
