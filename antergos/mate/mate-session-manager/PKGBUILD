@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-session-manager
-pkgver=1.16.0
+pkgver=1.16.1
 pkgrel=1
 pkgdesc="The MATE Session Handler"
 url="http://mate-desktop.org"
@@ -17,7 +17,7 @@ optdepends=('onboard: On-screen keyboard useful for mobility impaired users'
 			'xdg-user-dirs-gtk: Add autostart that prompts to rename user directories when switching locales')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('553b28bbbd9164e0403783db58015fa42d3ae38d')
+sha1sums=('510d4ffd3b15fddfefeae3c126ca23b31166bcb1')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

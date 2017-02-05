@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-power-manager
-pkgver=1.16.0
+pkgver=1.16.1
 pkgrel=1
 pkgdesc="Power management tool for the MATE desktop"
 url="http://mate-desktop.org"
@@ -15,7 +15,7 @@ optdepends=('mate-panel: Set brightness and inhibit power management from the pa
 			'yelp: for reading MATE help documents')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 groups=('mate-extra')
-sha1sums=('a7089947d4ac2151e2b8182f4d130aba08d804d2')
+sha1sums=('a0c40097a87f8201f510828f4b2278563c6131fc')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
