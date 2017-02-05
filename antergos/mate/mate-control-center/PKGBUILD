@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-control-center
-pkgver=1.16.0
+pkgver=1.16.1
 pkgrel=1
 pkgdesc="The Control Center for MATE"
 url="http://mate-desktop.org"
@@ -16,7 +16,7 @@ makedepends=('docbook2x' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('452b0dd1025ba33f3f1c11e6d5220477dfffe4a8')
+sha1sums=('49f65c992fdc27e0c5c57cd57e7143813b67d76b')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

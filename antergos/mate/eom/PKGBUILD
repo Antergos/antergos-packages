@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=eom
-pkgver=1.16.0
+pkgver=1.16.1
 pkgrel=1
 pkgdesc="An image viewing and cataloging program for MATE"
 url="http://mate-desktop.org"
@@ -16,7 +16,7 @@ makedepends=('gobject-introspection' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('9c2d032f971a1296a2300c9cacdeb4cef931ac20')
+sha1sums=('125c51120c15f96cb012530ebdbffceb73fb01cb')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
