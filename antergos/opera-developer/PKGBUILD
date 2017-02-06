@@ -2,7 +2,7 @@
 # Contributor: Christian Hesse <mail@eworm.de>
 
 pkgname=opera-developer
-pkgver=44.0.2487.0
+pkgver=44.0.2494.0
 pkgrel=1
 pkgdesc='A fast and secure web browser and Internet suite - developer stream'
 arch=('i686' 'x86_64')
