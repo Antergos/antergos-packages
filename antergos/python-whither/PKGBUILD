@@ -10,7 +10,7 @@ depends=('python-pyqt5' 'qt5-webengine' 'python-ruamel.yaml')
 makedepends=('python-setuptools')
 license=('GPL')
 arch=('any')
-source=("https://files.pythonhosted.org/packages/source/w/${pkgname}/${pkgname}-${pkgver}.tar.gz")
+source=("https://files.pythonhosted.org/packages/source/w/${_module}/${_module}-${pkgver}.tar.gz")
 md5sums=('78d608f86abd16b834f9669111afbdc4')
 
 build() {
