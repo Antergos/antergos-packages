@@ -14,21 +14,21 @@ provides=('lightdm-greeter' 'lightdm-webkit2-greeter')
 replaces=('lightdm-webkit2-greeter-next')
 backup=("etc/lightdm/${_pkgname}.conf")
 source=("${_pkgname}-${_pkgver}.zip::http://github.com/Antergos/lightdm-webkit2-greeter/archive/master.zip")
-md5sums=('')
+md5sums=('d7af7824c52518f1fe62c2ad57639dcb')
 groups=('system')
 
 
 package() {
-	cd "${srcdir}/${_pkgname}-${_pkgver}"
+	cd "${srcdir}/lightdm-webkit2-greeter-${_pkgver}"
 
-	make \
+	make -j1 \
 		DESTDIR="${pkgdir}" \
 		background_images_dir=/usr/share/antergos/wallpapers \
 		install
 
 	sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' \
 		"${pkgdir}/etc/lightdm/${_pkgname}.conf" \
-		"${pkgdir}/usr/share/web-greeter/themes/default/js/greeter.js"
+		"${pkgdir}/usr/share/web-greeter/themes/antergos/js/greeter.js"
 }
 
 # -*- mode: bash;-*-
