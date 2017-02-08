@@ -35,6 +35,7 @@ _monitored_repo='brltty'
 build() {
 	cd "${srcdir}/brltty-BRLTTY-${pkgver}"
 	
+	./autogen
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \

@@ -93,7 +93,7 @@ package() {
 		> "$pkgdir/usr/share/licenses/$pkgname/eula.txt"
 
 	# Install ffmpeg codec
-	(cd "$srcdir/chromium-$pkgver" \
+	(cd "$srcdir/chromium-$_chromium" \
 		&& install -Dm644 out/Release/libffmpeg.so "$pkgdir/opt/vivaldi/libffmpeg.so")
 
 	# Extract and install widevine codec

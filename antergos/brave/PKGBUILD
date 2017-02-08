@@ -19,13 +19,13 @@ source=('brave.desktop')
 _url_part="https://github.com/brave/${_pkgname}/archive/"
 
 if curl -ILf "${_url_part}/v${pkgver}.tar.gz" > /dev/null 2>&1; then
-	source+=("${_url_part}/v${pkgver}.tar.gz")
+	source+=("git+${_url_part/\/archive\/}.git#tag=v${pkgver}")
 else
-	source+=("${_url_part}/${pkgver}.tar.gz")
+	source+=("git+${_url_part/\/archive\/}.git#tag=${pkgver}")
 fi
 
-md5sums=('a48762e20c308860765c238d5d89f782'
-		'816c6930c632ef34f9e530f9e5bcf96f')
+md5sums=('816c6930c632ef34f9e530f9e5bcf96f'
+         'SKIP')
 
 
 # BEGIN ANTBS METADATA
@@ -39,13 +39,13 @@ _monitored_match_pattern='/(v*(\d{1,2}\.){1,2}\ddev$)/'
 
 
 build() {
-	cd "${srcdir}/browser-laptop-${pkgver}"
+	cd "${srcdir}/browser-laptop"
 	PYTHON='/usr/bin/python2' HOME="${srcdir}" npm install
 	HOME="${srcdir}" CHANNEL='dev' npm run build-package
 }
 
 package() {
-	cd "${srcdir}/browser-laptop-${pkgver}"
+	cd "${srcdir}/browser-laptop"
 
 	install -dm0755 "${pkgdir}/usr/lib"
 
