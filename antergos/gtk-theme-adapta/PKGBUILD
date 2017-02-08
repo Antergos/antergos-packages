@@ -22,7 +22,6 @@ _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='adapta-project'
 _monitored_repo='adapta-gtk-theme'
-_monitored_match_pattern='/(3\.22\.\d+\.\d{1,3})$/'
 # END ANTBS METADATA
 
 
