@@ -1,3 +1,4 @@
+# $Id$
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=cnchi
@@ -8,13 +9,12 @@ pkgdesc='A modern, flexible system installer for Linux'
 arch=('any')
 license=('GPL3')
 url='https://github.com/Antergos/Cnchi'
-depends=('python' 'pyalpm' 'python-gobject' 'python-dbus' 'python-cairo' 'python-requests'
-		'python-parted' 'webkit2gtk' 'upower' 'python-mako' 'iso-codes' 'gptfdisk'
-		'python-bugsnag' 'upower')
+depends=('python' 'pyalpm' 'python-gobject' 'python-dbus' 'python-cairo'
+        'python-requests' 'python-parted' 'webkit2gtk' 'upower' 'python-mako'
+        'iso-codes' 'gptfdisk' 'python-bugsnag')
 conflicts=('cnchi-dev')
-source=("${_pkgname}-${pkgver}.zip::https://github.com/antergos/cnchi/archive/${pkgver}.zip")
-md5sums=('40f996c8a36baa1b5ce8f14acc43d8ca')
-
+source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/antergos/cnchi/archive/${pkgver}.tar.gz")
+sha256sums=('693da2b4ef8c50ef4f51d325bb0a7710e9ed2762b1a573cb711d29095622b746')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
@@ -24,22 +24,16 @@ _monitored_project='antergos'
 _monitored_repo='cnchi'
 # END ANTBS METADATA
 
-
-build() {
-	cp -R ../po "${srcdir}/${_pkgname}-${pkgver}"
-}
-
-
 package() {
 	cd "${srcdir}/${_pkgname}-${pkgver}"
 
 	install -d ${pkgdir}/usr/share/{cnchi,locale}
 	install -Dm755 "bin/${pkgname}" "${pkgdir}/usr/bin/cnchi"
 	install -Dm755 "${pkgname}.desktop" "${pkgdir}/usr/share/applications/cnchi.desktop"
-        install -Dm644 "data/images/antergos/antergos-icon.png" "${pkgdir}/usr/share/pixmaps/cnchi.png"
+    install -Dm644 "data/images/antergos/antergos-icon.png" "${pkgdir}/usr/share/pixmaps/cnchi.png"
 
 	sed -r -i 's|\/usr.+ -v|pkexec /usr/share/cnchi/bin/cnchi -s bugsnag|g' "${pkgdir}/usr/bin/cnchi"
-	
+
 	for i in cnchi bin data scripts ui; do
 		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
 	done
@@ -54,5 +48,3 @@ package() {
 		fi
 	done
 }
-
-# -*- mode: bash;-*-
