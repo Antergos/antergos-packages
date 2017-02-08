@@ -98,7 +98,7 @@ package() {
 
 	# Extract and install widevine codec
 	mkdir "${srcdir}/chrome" && cd "${srcdir}/chrome"
-	bsdtar -xf ../chrome.rpm libwidevinecdm.so
+	bsdtar -xf ../chrome.rpm opt/google/chrome/libwidevinecdm.so
 
 	# Copy to Vivaldi directory for now. We might add a symlink when package is installed (using alpm hook).
 	cp opt/google/chrome/libwidevinecdm.so "${pkgdir}/opt/vivaldi"
