@@ -52,6 +52,7 @@ build() {
 	cd "$srcdir/chromium-$_chromium"
 
 	export PATH="$srcdir/python2-path:$PATH"
+	export HOME="$srcdir"
 
 	local args=('ffmpeg_branding="ChromeOS"' 'proprietary_codecs=true' 'enable_hevc_demuxing=true'
 				'use_gconf=false' 'use_gio=false' 'use_gnome_keyring=false' 'use_kerberos=false'
