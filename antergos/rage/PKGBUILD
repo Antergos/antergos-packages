@@ -8,7 +8,7 @@ pkgdesc='Video Player based on EFL'
 arch=('i686' 'x86_64')
 url="https://www.enlightenment.org/p.php?p=about/rage"
 license=('BSD')
-depends=('elementary')
+depends=('efl')
 source=("http://download.enlightenment.org/rel/apps/$pkgname/$pkgname-$pkgver.tar.xz")
 md5sums=('f656e037bf0724f1539dd37e90000da3')
 
