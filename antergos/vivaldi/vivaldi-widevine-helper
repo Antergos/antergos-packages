@@ -1,0 +1,47 @@
+#!/bin/bash
+
+CHROME='/opt/google/chrome/chrome'
+WIDEVINE_CHROME='/opt/google/chrome/libwidevinecdm.so'
+WIDEVINE_VIVALDI='/opt/vivaldi/libwidevinecdm.so'
+
+
+do_pre_install_transaction_check() {
+	if [[ 'google-chrome' = "$1" && -f "${WIDEVINE_CHROME}" ]]; then
+		# Chrome is about to be installed. Remove our copy of the widevine codec.
+		rm -rf /opt/google/chrome
+
+	elif [[ 'vivaldi' = "$1" && ! -f "${WIDEVINE_CHROME}" ]]; then
+		# Vivaldi is about to be installed. Since Chrome isn't installed we'll put a copy
+		# of the widevine codec where Chrome would normally put it (so Vivaldi can find it).
+		mkdir -p /opt/google/chrome
+		cp "${WIDEVINE_VIVALDI}" /opt/google/chrome
+	fi
+}
+
+
+do_post_install_transaction_check() {
+	if [[ 'vivaldi' = "$1" && ! -f "${WIDEVINE_CHROME}" ]]; then
+		# Vivaldi was just installed. Since Chrome isn't installed we'll put a copy
+		# of the widevine codec where Chrome would normally put it (so Vivaldi can find it).
+		mkdir -p /opt/google/chrome
+		cp "${WIDEVINE_VIVALDI}" /opt/google/chrome
+	fi
+}
+
+
+do_post_remove_transaction_check() {
+	if [[ 'google-chrome' = "$1" ]]; then
+		# Chrome was just removed. Since Chrome isn't installed anymore we'll put a copy
+		# of the widevine codec where Chrome would put it (so Vivaldi can find it).
+		mkdir -p /opt/google/chrome
+		cp "${WIDEVINE_VIVALDI}" /opt/google/chrome
+
+	elif [[ 'vivaldi' = "$1" && ! -f "${CHROME}" ]]; then
+		# Vivaldi was just removed and Chrome isn't installed.
+		# Remove our copy of the widevine codec.
+		rm -rf /opt/google/chrome
+	fi
+}
+
+
+"do_$1_transaction_check" $2

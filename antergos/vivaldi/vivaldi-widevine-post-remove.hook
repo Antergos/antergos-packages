@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Remove
+Type = Package
+Target = google-chrome
+Target = vivaldi
+
+[Action]
+Description = Ensuring Vivaldi has access to widevine codec.
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/vivaldi-widevine-helper post_remove
+NeedsTargets

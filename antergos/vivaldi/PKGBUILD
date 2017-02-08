@@ -4,22 +4,67 @@
 
 pkgname=vivaldi
 pkgver=1.6.689.46
-pkgrel=1
+_chromium=54.0.2840.100
+pkgrel=2
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
 url="https://vivaldi.com"
-options=(!strip !zipman)
-license=('custom')
+options=('!strip' '!zipman')
+license=('custom' 'LGPL2.1')
 arch=('i686' 'x86_64')
 depends=('gtk2' 'nss' 'libxtst' 'gconf' 'libxss' 'freetype2' 'ttf-font'
 		'desktop-file-utils' 'shared-mime-info' 'alsa-lib' 'hicolor-icon-theme')
-makedepends=('w3m')
-optdepends=('vivaldi-ffmpeg-codecs: playback of proprietary video/audio'
-			'google-chrome: Widevine DRM Plugin')
+makedepends=('w3m' 'gtk2' 'libexif' 'libpulse' 'libxss' 'ninja' 'nss'
+			'pciutils' 'python2' 'xdg-utils')
+provides=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
+conflicts=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
+replaces=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
+noextract=('chrome.rpm')
 source_i686=("https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.i386.rpm")
 source_x86_64=("https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.x86_64.rpm")
-md5sums_i686=('')
-md5sums_x86_64=('')
+source=("https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
+		"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
+		'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html')
+md5sums=('07c7231180b9122d5389e77536a7271b'
+         'c5dc892cedafc12768e26a00ad8a9174'
+         'd50d8f0a6940791eabc41c4f64e6a3cf')
+md5sums_i686=('6d359bb80c62407f7e457c20102ab889')
+md5sums_x86_64=('83b017605dc4c3c66c3716d7d3934953')
+
+
+prepare() {
+	cd "$srcdir/chromium-$_chromium"
+
+	# Use Python 2
+	find . -name '*.py' -exec sed -i -r 's|/usr/bin/python$|&2|g' {} +
+
+	# There are still a lot of relative calls which need a workaround
+	[[ -d "$srcdir/python2-path" ]] && rm -rf "$srcdir/python2-path"
+	mkdir "$srcdir/python2-path"
+	ln -s /usr/bin/python2 "$srcdir/python2-path/python"
+
+	# chromium 46 gives an error about a missing file
+	# workaround create empty
+	# touch chrome/test/data/webui/i18n_process_css_test.html
+}
+
+build() {
+	cd "$srcdir/chromium-$_chromium"
+
+	export PATH="$srcdir/python2-path:$PATH"
+
+	local args=('ffmpeg_branding="ChromeOS"' 'proprietary_codecs=true' 'enable_hevc_demuxing=true'
+				'use_gconf=false' 'use_gio=false' 'use_gnome_keyring=false' 'use_kerberos=false'
+				'use_cups=false' 'use_sysroot=false' 'use_gold=false' 'linux_use_bundled_binutils=false'
+				'fatal_linker_warnings=false' 'treat_warnings_as_errors=false' 'is_clang=false'
+				'is_component_build=true' 'is_debug=false' 'symbol_level=0')
+
+	python2 tools/gn/bootstrap/bootstrap.py -v --gn-gen-args "${args[*]}"
+	out/Release/gn gen out/Release -v --args="${args[*]}" --script-executable=/usr/bin/python2
+
+	ninja -C out/Release -v media/ffmpeg
+}
+
 
 package() {
 	cp -a {opt,usr} "${pkgdir}"
@@ -30,8 +75,7 @@ package() {
 	# make /usr/bin/vivaldi available if its not there
 	if [[ ! -e "$pkgdir/usr/bin/vivaldi-stable" ]]; then
 		install -dm 755 "$pkgdir/usr/bin"
-		ln -sf /opt/vivaldi/vivaldi \
-		"$pkgdir/usr/bin/vivaldi-stable"
+		ln -sf /opt/vivaldi/vivaldi "$pkgdir/usr/bin/vivaldi-stable"
 	fi
 
 	# install icons
@@ -47,5 +91,25 @@ package() {
 		| sed -rne 's/.*(<html lang.*>.*html>).*/\1/p' \
 		| w3m -I 'utf-8' -T 'text/html' \
 		> "$pkgdir/usr/share/licenses/$pkgname/eula.txt"
+
+	# Install ffmpeg codec
+	(cd "$srcdir/chromium-$pkgver" \
+		&& install -Dm644 out/Release/libffmpeg.so "$pkgdir/opt/vivaldi/libffmpeg.so")
+
+	# Extract and install widevine codec
+	mkdir "${srcdir}/chrome" && cd "${srcdir}/chrome"
+	bsdtar -xf ../chrome.rpm libwidevinecdm.so
+
+	# Copy to Vivaldi directory for now. We might add a symlink when package is installed (using alpm hook).
+	cp opt/google/chrome/libwidevinecdm.so "${pkgdir}/opt/vivaldi"
+	
+	# Chrome license
+	cp "${srcdir}/chrome-eula_text.html" "${pkgdir}/usr/share/licenses/${pkgname}"
+
+	# ALPM Hooks
+	mkdir -p "${pkgdir}/usr/share/libalpm"/{hooks,scripts}
+	cp "${srcdir}"/*.hook "${pkgdir}/usr/share/libalpm/hooks"
+	install -dm755 "${srcdir}"/vivaldi-widevine-helper "${pkgdir}/usr/share/libalpm/scripts/vivaldi-widevine-helper"
 }
 
+# -*- mode: bash;-*
