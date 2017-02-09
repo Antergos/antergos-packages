@@ -1,12 +1,12 @@
 #Maintainer: Xyne <ac xunilhcra enyx, backwards>
 pkgname=powerpill
 pkgver=2016.5
-pkgrel=1
+pkgrel=2
 pkgdesc='Pacman wrapper for parallel and segmented downloads.'
 arch=(any)
 license=(GPL)
 url="http://xyne.archlinux.ca/projects/powerpill"
-depends=(python3 pyalpm 'pm2ml' reflector aria2 python3-xcpf)
+depends=(python3 pyalpm 'pm2ml' reflector aria2 python-xcpf)
 optdepends=('rsync: Rsync download support' 'python3-threaded_servers: internal Pacserve support')
 backup=(etc/powerpill/powerpill.json)
 source=(http://xyne.archlinux.ca/projects/powerpill/src/powerpill-${pkgver}.tar.xz)
