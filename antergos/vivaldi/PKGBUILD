@@ -3,9 +3,9 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.6.689.46
-_chromium=54.0.2840.100
-pkgrel=2
+pkgver=1.7.735.46
+_chromium=56.0.2924.88
+pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
 url="https://vivaldi.com"
@@ -42,10 +42,6 @@ prepare() {
 	[[ -d "$srcdir/python2-path" ]] && rm -rf "$srcdir/python2-path"
 	mkdir "$srcdir/python2-path"
 	ln -s /usr/bin/python2 "$srcdir/python2-path/python"
-
-	# chromium 46 gives an error about a missing file
-	# workaround create empty
-	# touch chrome/test/data/webui/i18n_process_css_test.html
 }
 
 build() {
@@ -102,6 +98,7 @@ package() {
 	bsdtar -xf ../chrome.rpm opt/google/chrome/libwidevinecdm.so
 
 	# Copy to Vivaldi directory for now. We might add a symlink when package is installed (using alpm hook).
+	unlink "${pkgdir}/opt/vivaldi/libwidevinecdm.so" || true
 	cp opt/google/chrome/libwidevinecdm.so "${pkgdir}/opt/vivaldi"
 	
 	# Chrome license
