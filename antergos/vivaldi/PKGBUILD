@@ -4,7 +4,7 @@
 
 pkgname=vivaldi
 pkgver=1.7.735.46
-_chromium=56.0.2924.88
+_chromium=56.0.2924.87
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
