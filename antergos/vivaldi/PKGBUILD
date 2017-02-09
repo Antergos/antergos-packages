@@ -106,8 +106,8 @@ package() {
 
 	# ALPM Hooks
 	mkdir -p "${pkgdir}/usr/share/libalpm"/{hooks,scripts}
-	cp "${srcdir}"/*.hook "${pkgdir}/usr/share/libalpm/hooks"
-	install -dm755 "${srcdir}"/vivaldi-widevine-helper "${pkgdir}/usr/share/libalpm/scripts/vivaldi-widevine-helper"
+	cp "${srcdir}"/../*.hook "${pkgdir}/usr/share/libalpm/hooks"
+	install -dm755 "${srcdir}"/../vivaldi-widevine-helper "${pkgdir}/usr/share/libalpm/scripts/vivaldi-widevine-helper"
 }
 
 # -*- mode: bash;-*
