@@ -3,7 +3,7 @@
 _pkgname=web-greeter
 pkgname=web-greeter-next
 _pkgver=master
-pkgver=3.0.0alpha1
+pkgver=3.0.0alpha2
 pkgrel=1
 pkgdesc='A modern, visually appealing greeter for LightDM.'
 arch=('any')
@@ -15,7 +15,7 @@ provides=('lightdm-greeter' 'lightdm-webkit2-greeter')
 replaces=('lightdm-webkit2-greeter-next')
 backup=("etc/lightdm/${_pkgname}.conf")
 source=("${_pkgname}-${_pkgver}.zip::http://github.com/Antergos/lightdm-webkit2-greeter/archive/master.zip")
-md5sums=('d7af7824c52518f1fe62c2ad57639dcb')
+md5sums=('')
 groups=('system')
 
 
