@@ -5,7 +5,7 @@ pkgname=gfxboot
 _pkgver=4.5.13
 _pkgrel=1.1
 pkgver="${_pkgver}.${_pkgrel}"
-pkgrel=1
+pkgrel=2
 arch=('i686' 'x86_64')
 license=(GPL)
 install=gfxboot.install
@@ -21,8 +21,6 @@ options=(docs)
 
 
 package() {
-  
-  
   #rpmextract.sh ${pkgname}-${pkgver}-${_pkgver}.src.rpm 2>/dev/null
   
   cd $srcdir
@@ -43,4 +41,5 @@ package() {
   install -m 644 ../gfxboot.html ${pkgdir}/usr/share/doc/gfxboot
 
 }
+
 # -*- mode: bash;-*-
