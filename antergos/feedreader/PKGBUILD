@@ -11,8 +11,7 @@ pkgdesc='A simple feedreader desktop client for web services like Tiny Tiny RSS.
 arch=('i686' 'x86_64')
 url='https://github.com/jangernert/FeedReader'
 license=('GPL3')
-depends=('sqlite3' 'gtk3' 'webkit2gtk' 'libnotify' 'html2text' 'libsoup'
-		'json-glib' 'libsecret' 'rest')
+depends=('sqlite3' 'libnotify' 'html2text' 'libsoup' 'gnome-online-accounts' 'libgee')
 makedepends=('vala' 'gobject-introspection' 'cmake')
 groups=('rss')
 source=("https://github.com/jangernert/FeedReader/archive/v${pkgver}.tar.gz")
