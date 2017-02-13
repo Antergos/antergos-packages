@@ -3,7 +3,7 @@
 _pkgname=web-greeter
 pkgname=web-greeter-next
 _pkgver=master
-pkgver=3.0.0alpha4
+pkgver=3.0.0alpha5
 pkgrel=1
 pkgdesc='A modern, visually appealing greeter for LightDM.'
 arch=('any')
@@ -27,9 +27,6 @@ package() {
 		DESTDIR="${pkgdir}" \
 		background_images_dir=/usr/share/antergos/wallpapers \
 		install
-
-	sed -i 's|\/usr\/share\/backgrounds|\/usr\/share\/antergos\/wallpapers|g' \
-		"${pkgdir}/usr/share/web-greeter/themes/default/js/greeter.js"
 }
 
 # -*- mode: bash;-*-
