@@ -2,7 +2,7 @@
 
 pkgname=python-whither
 _module="${pkgname#*-}"
-pkgver=0.2.1
+pkgver=0.2.5
 pkgrel=1
 pkgdesc='Desktop application SDK for creating Universal Linux Applications.'
 url="https://github.com/antergos/whither"
@@ -11,7 +11,7 @@ makedepends=('python-setuptools')
 license=('GPL')
 arch=('any')
 source=("https://files.pythonhosted.org/packages/source/w/${_module}/${_module}-${pkgver}.tar.gz")
-md5sums=('f287455eac3e18c3d22ca29337015524')
+md5sums=('48bb8c3ea43df1eb47bc00a2e1ac196f')
 
 build() {
 	cd "${srcdir}/${_module}-${pkgver}"
