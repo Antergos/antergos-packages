@@ -15,7 +15,7 @@ depends=('gtk2' 'git' 'nss' 'libnotify' 'libxtst' 'libgnome-keyring' 'gconf'
 source=(
 	"https://release.gitkraken.com/linux/v${pkgver}.tar.gz"
 	'GitKraken.desktop'
-	'gitkraken'
+	'gitkraken-launcher'
 	'gitkraken.png'
 	'eula.html'
 )
@@ -30,7 +30,7 @@ package() {
 	cp -R "${srcdir}/gitkraken" "${pkgdir}/opt/gitkraken"
 
 	install -d "${pkgdir}"/usr/bin
-	install -Dm755 gitkraken "${pkgdir}/usr/bin/gitkraken"
+	install -Dm755 gitkraken-launcher "${pkgdir}/usr/bin/gitkraken"
 
 	install -Dm644 ./eula.html "${pkgdir}/usr/share/licenses/${pkgname}/eula.html"
 	install -Dm644 ./GitKraken.desktop "${pkgdir}/usr/share/applications/GitKraken.desktop"
