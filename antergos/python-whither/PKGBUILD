@@ -13,6 +13,16 @@ arch=('any')
 source=("https://files.pythonhosted.org/packages/source/w/${_module}/${_module}-${pkgver}.tar.gz")
 md5sums=('48bb8c3ea43df1eb47bc00a2e1ac196f')
 
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='tags'
+_monitored_project='antergos'
+_monitored_repo='whither'
+# END ANTBS METADATA
+
+
 build() {
 	cd "${srcdir}/${_module}-${pkgver}"
 	python setup.py build
