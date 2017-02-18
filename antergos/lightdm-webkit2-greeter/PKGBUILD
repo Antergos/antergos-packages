@@ -1,7 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=lightdm-webkit2-greeter
-pkgver=2.2.3
+_pkgname=web-greeter
+pkgver=2.2.2
 pkgrel=1
 pkgdesc='A webkit2 greeter for LightDM'
 arch=('i686' 'x86_64')
@@ -14,7 +15,7 @@ conflicts=('lightdm-webkit2-greeter' 'lightdm-webkit-theme-antergos')
 replaces=('lightdm-webkit-theme-antergos')
 install=greeter.install
 backup=("etc/lightdm/${pkgname}.conf")
-source=("${pkgname}-${pkgver}.zip::http://github.com/Antergos/lightdm-webkit2-greeter/archive/${pkgver}.zip")
+source=("http://github.com/Antergos/${_pkgname}/archive/${pkgver}.zip")
 md5sums=('')
 groups=('system')
 
@@ -24,20 +25,20 @@ _is_monitored='True'
 _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='antergos'
-_monitored_repo='lightdm-webkit2-greeter'
+_monitored_repo='web-greeter'
 # END ANTBS METADATA
 
 
 
 build() {
-	cd "${srcdir}/${pkgname}-${pkgver}/build"
+	cd "${srcdir}/${_pkgname}-${pkgver}/build"
 	
 	meson --prefix=/usr --libdir=lib ..
 	ninja
 }
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}/build"
+	cd "${srcdir}/${_pkgname}-${pkgver}/build"
 
 	DESTDIR=${pkgdir} ninja install
 	cd ..
