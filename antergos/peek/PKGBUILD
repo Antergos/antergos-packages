@@ -27,6 +27,8 @@ _monitored_repo='peek'
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
+	sed -i 's|DBusActivatable|#DBusActivatable|g' data/desktop/com.uploadedlobster.peek.desktop.in
+
 	cmake \
 		-DCMAKE_INSTALL_PREFIX="${pkgdir}/usr" \
 		-DBUILD_TESTS=OFF \
