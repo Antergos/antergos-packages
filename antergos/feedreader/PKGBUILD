@@ -39,7 +39,7 @@ build() {
 
 package() {
 	cd "${srcdir}/${_pkgname}-${pkgver}/build"
-	make DESTDIR="${pkgdir}" install
+	make install
 }
 
 # -*- mode: bash;-*-
