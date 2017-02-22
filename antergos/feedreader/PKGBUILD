@@ -6,7 +6,7 @@
 pkgname=feedreader
 _pkgname=FeedReader
 pkgver=2.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc='A simple feedreader desktop client for web services like Tiny Tiny RSS.'
 arch=('i686' 'x86_64')
 url='https://github.com/jangernert/FeedReader'
