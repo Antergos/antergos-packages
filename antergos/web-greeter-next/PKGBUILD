@@ -3,7 +3,7 @@
 _pkgname=web-greeter
 pkgname=web-greeter-next
 _pkgver=master
-pkgver=3.0.0beta2
+pkgver=3.0.0beta3
 pkgrel=1
 pkgdesc='A modern, visually appealing greeter for LightDM.'
 arch=('any')
