@@ -3,19 +3,19 @@
 
 pkgname=tldr-python-client
 pkgver='0.3'
-pkgrel=2
+pkgrel=3
 pkgdesc='Command line client for tldr, a collection of simplified and community-driven man pages.'
 url='https://github.com/tldr-pages/tldr-python-client'
 provides=('tldr-client')
 conflicts=('tldr-client')
-depends=('python')
+depends=('python' 'python-colorama')
 makedepends=('python-setuptools')
 license=('MIT')
 arch=('any')
-source=("git+https://github.com/tldr-pages/${pkgname}.git#tag=${pkgver}"
-		'https://github.com/tldr-pages/tldr-python-client/pull/32.patch')
-md5sums=('SKIP'
-		'617fa4da21aefb6b5688d97d5fb12955')
+_commit='2e6d55f938909c3bd754887b094c4f6951d656a9'
+source=("git+https://github.com/tldr-pages/${pkgname}.git#commit=${_commit}")
+#source=("git+https://github.com/tldr-pages/${pkgname}.git#tag=${pkgver}")
+md5sums=('SKIP')
 
 
 # BEGIN ANTBS METADATA
@@ -29,9 +29,6 @@ _monitored_repo='tldr-python-client'
 
 build() {
 	cd "${srcdir}/${pkgname}"
-
-	# https://github.com/tldr-pages/tldr-python-client/pull/32
-	patch -Np1 -i ../32.patch
 
 	python setup.py build
 }
