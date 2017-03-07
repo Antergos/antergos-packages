@@ -3,7 +3,7 @@
 
 pkgname=firefox-beta
 _pkgname=firefox
-pkgver=52.0b7
+pkgver=53.0b1
 pkgrel=1
 _majorver="${pkgver/rc*}"
 _buildver="${pkgver/*rc}"
@@ -59,13 +59,13 @@ md5sums=('5208db5509939cc05a218c4e9ca21b1d'
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
 # get your own set of keys. Feel free to contact info@antergos.com for
 # more information.
-_google_api_key='AIzaSyBPgpho0q0siP2tggJwIsDx8ykpp-Y76Xk'
+_google_='AIzaSyBPgpho0q0siP2tggJwIsDx8ykpp-Y76Xk'
 
 # Mozilla API keys (see https://location.services.mozilla.com/api)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
 # get your own set of keys. Feel free to contact info@antergos.com for
 # more information.
-_mozilla_api_key='fa35d4d6-6529-436f-b3a1-8b9af187eca2'
+_mozilla_='fa35d4d6-6529-436f-b3a1-8b9af187eca2'
 
 
 prepare() {
@@ -80,10 +80,10 @@ prepare() {
 	# Build with the rust targets we actually ship
 	patch -Np1 -i ../rust-i686.patch
 
-	echo -n "$_google_api_key" >google-api-key
+	echo -n "$_google_" >google-api-key
 	echo "ac_add_options --with-google-api-keyfile=\"$PWD/google-api-key\"" >>.mozconfig
 
-	echo -n "$_mozilla_api_key" >mozilla-api-key
+	echo -n "$_mozilla_" >mozilla-api-key
 	echo "ac_add_options --with-mozilla-api-keyfile=\"$PWD/mozilla-api-key\"" >>.mozconfig
 
 	_python=/usr/bin/python2

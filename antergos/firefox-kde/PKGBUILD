@@ -4,7 +4,7 @@
 
 _pkgname=firefox
 pkgname=firefox-kde
-pkgver=51.0.1
+pkgver=52.0
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org with openSUSE KDE integration patches."
 arch=('i686' 'x86_64')
@@ -13,23 +13,24 @@ url="https://build.opensuse.org/package/show/mozilla:Factory/MozillaFirefox"
 groups=('browser')
 
 depends=('alsa-lib'        'dbus-glib'  'ffmpeg'  'gtk2'
-        'gtk3'   		'hunspell'   'icu'     'kmozillahelper'
+        'gtk3'            'hunspell'   'icu'     'kmozillahelper'
         'libevent'        'libvpx'     'libxt'   'mime-types'
         'mozilla-common'  'nss'        'sqlite'  'startup-notification'
         'ttf-font')
 
-makedepends=('autoconf2.13'  'cargo'      'diffutils'		'gconf'
-   		'imake'		'inetutils'  'libpulse' 		'mesa'
-   		'python2'       'unzip'      'xorg-server-xvfb'  'yasm'
-   		'zip')
+makedepends=('autoconf2.13'  'cargo'      'diffutils'        'gconf'
+			'imake'         'inetutils'  'libpulse'         'mesa'
+			'python2'       'unzip'      'xorg-server-xvfb' 'yasm'
+			'zip')
 
 optdepends=('networkmanager: Location detection via available WiFi networks'
-  		'upower: Battery API')
+			'upower: Battery API'
+			'speech-dispatcher: Text-to-Speech')
 
 provides=("firefox=${pkgver}")
 conflicts=('firefox')
 options=('!emptydirs' '!makeflags')
-_patchrev=3604ed712e16
+_patchrev=ce8a98f8d8d7
 _patchurl="http://www.rosenauer.org/hg/mozilla/raw-file/${_patchrev}"
 _archpkg_git_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
 
@@ -70,13 +71,13 @@ md5sums=('05d8d655983d21d5059d5c886b2e6a9c'
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
 # get your own set of keys. Feel free to contact info@antergos.com for
 # more information.
-_google_api_key='AIzaSyBPgpho0q0siP2tggJwIsDx8ykpp-Y76Xk'
+_google_='AIzaSyBPgpho0q0siP2tggJwIsDx8ykpp-Y76Xk'
 
 # Mozilla API keys (see https://location.services.mozilla.com/api)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
 # get your own set of keys. Feel free to contact info@antergos.com for
 # more information.
-_mozilla_api_key='fa35d4d6-6529-436f-b3a1-8b9af187eca2'
+_mozilla_='fa35d4d6-6529-436f-b3a1-8b9af187eca2'
 
 
 prepare() {
@@ -100,10 +101,10 @@ prepare() {
 	patch -Np1 -i "${srcdir}/firefox-branded-icons.patch"
 	patch -Np1 -i "${srcdir}/mozilla-reduce-files-per-UnifiedBindings.patch"
 
-	echo -n "$_google_api_key" >google-api-key
+	echo -n "$_google_" >google-api-key
 	echo "ac_add_options --with-google-api-keyfile=\"$PWD/google-api-key\"" >>.mozconfig
 
-	echo -n "$_mozilla_api_key" >mozilla-api-key
+	echo -n "$_mozilla_" >mozilla-api-key
 	echo "ac_add_options --with-mozilla-api-keyfile=\"$PWD/mozilla-api-key\"" >>.mozconfig
 
 	[[ 'i686' = "${CARCH}" ]] && {
