@@ -11,7 +11,7 @@ pkgdesc="A Gtk3 frontend for libalpm"
 arch=('i686' 'x86_64')
 url="https://github.com/manjaro/pamac"
 license=('GPL3')
-depends=('glib2>=2.46' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'yaourt' 'vte3>=0.38'
+depends=('glib2>=2.46' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'vte3>=0.38'
 		'gtk3>=3.18' 'libnotify' 'desktop-file-utils' 'pacman' 'gnutls>=3.4')
 makedepends=('gettext' 'itstool' 'vala>=0.28')
 backup=('etc/pamac.conf')
@@ -26,7 +26,7 @@ else
 	source=("pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
-md5sums=('1615b837a97a7caf69301862aa5a2fdf')
+md5sums=('1cc1b28b4a1bc20af1800b9e35f288a3')
 
 
 # BEGIN ANTBS METADATA
