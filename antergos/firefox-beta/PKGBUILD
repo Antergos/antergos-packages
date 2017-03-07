@@ -42,7 +42,7 @@ fi
 
 source+=("fix-wifi-scanner.diff::${_archpkg_git_url}/fix-wifi-scanner.diff?h=packages/firefox"
 		"firefox-install-dir.patch::${_archpkg_git_url}/firefox-install-dir.patch?h=packages/firefox"
-		"vendor.js::${_archpkg_git_url}/vendor.js?h=packages/firefox"
+		'vendor.js'
 		"rust-i686.patch::${_archpkg_git_url}/rust-i686.patch?h=packages/firefox"
 		"${pkgname}.desktop"
 		'mozconfig')
