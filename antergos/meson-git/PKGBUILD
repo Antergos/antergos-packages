@@ -4,7 +4,7 @@
 pkgname=meson-git
 pkgver=0.39.0
 _pkgver=0.39.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Next-generation build system built with python and powered by Ninja."
 arch=('any')
 url="http://mesonbuild.com/"
