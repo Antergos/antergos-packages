@@ -43,15 +43,13 @@ fi
 source+=("fix-wifi-scanner.diff::${_archpkg_git_url}/fix-wifi-scanner.diff?h=packages/firefox"
 		"firefox-install-dir.patch::${_archpkg_git_url}/firefox-install-dir.patch?h=packages/firefox"
 		'vendor.js'
-		"rust-i686.patch::${_archpkg_git_url}/rust-i686.patch?h=packages/firefox"
 		"${pkgname}.desktop"
 		'mozconfig')
 
-md5sums=('5208db5509939cc05a218c4e9ca21b1d'
+md5sums=('ee947f2784ef7256c34a2aeda61f29da'
          'e2396b9918aa602427f80d48caf319b4'
          'dbf14588e85812ee769bd735823a0146'
          'aa9f776d2187cba09de65cbb02b39ca0'
-         '40b197fcf8c855b3902414f4d591b18b'
          '259ea8127d1f3a72ac23db0a97455472'
          '962721af2a2ca41e97563355ff2eed40')
 
