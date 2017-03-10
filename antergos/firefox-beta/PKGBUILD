@@ -75,9 +75,6 @@ prepare() {
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=1314968
 	patch -Np1 -i ../fix-wifi-scanner.diff
 
-	# Build with the rust targets we actually ship
-	patch -Np1 -i ../rust-i686.patch
-
 	echo -n "$_google_" >google-api-key
 	echo "ac_add_options --with-google-api-keyfile=\"$PWD/google-api-key\"" >>.mozconfig
 
