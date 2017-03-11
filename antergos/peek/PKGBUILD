@@ -9,10 +9,10 @@ arch=('i686' 'x86_64')
 url='https://github.com/phw/peek'
 groups=('tools')
 license=('GPL3')
-depends=('gtk3' 'ffmpeg' 'imagemagick')
+depends=('gtk3' 'ffmpeg' 'imagemagick' 'libkeybinder3')
 makedepends=('cmake' 'vala' 'gettext')
 source=("${pkgname}-${pkgver}.zip::https://github.com/phw/peek/archive/v${pkgver}.zip")
-md5sums=('')
+md5sums=('0f1171f848dca524d16a86ead6b5d730')
 
 
 # BEGIN ANTBS METADATA
@@ -27,7 +27,7 @@ _monitored_repo='peek'
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
-	sed -i 's|DBusActivatable|#DBusActivatable|g' data/desktop/com.uploadedlobster.peek.desktop.in
+	# sed -i 's|DBusActivatable|#DBusActivatable|g' data/desktop/com.uploadedlobster.peek.desktop.in
 
 	cmake \
 		-DCMAKE_INSTALL_PREFIX="${pkgdir}/usr" \
