@@ -53,7 +53,7 @@ prepare() {
 	find -type f -exec sed -i \
 	-e 's|^#!/usr/bin/env python$|&2|' \
 	-e 's|^#!/usr/bin/python$|&2|' \
-	-e "s|'python'|'&2'|" {} \;
+	-e "s|'(python)'|'\12'|" {} \;
 }
 
 
