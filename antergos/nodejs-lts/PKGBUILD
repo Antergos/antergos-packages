@@ -39,7 +39,7 @@ _validpgpkeys=(
 
 
 # BEGIN ANTBS METADATA
-_autosums='True'
+_autosum='True'
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
