@@ -1,0 +1,91 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Felix Yan <felixonmars@archlinux.org>
+# Contributor:  Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+# Contributor: Thomas Dziedzic < gostrc at gmail >
+# Contributor: James Campos <james.r.campos@gmail.com>
+# Contributor: BlackEagle < ike DOT devolder AT gmail DOT com >
+# Contributor: Dongsheng Cai <dongsheng at moodle dot com>
+# Contributor: Masutu Subric <masutu.arch at googlemail dot com>
+# Contributor: TIanyi Cui <tianyicui@gmail.com>
+
+pkgname=nodejs-lts
+pkgver=6.10.0
+pkgrel=1
+pkgdesc="JavaScript runtime built on Chrome's V8 JavaScript engine."
+arch=('x86_64')
+url='http://nodejs.org/'
+license=('MIT')
+depends=('openssl' 'zlib' 'icu' 'libuv' 'http-parser' 'c-ares')
+makedepends=('python2' 'procps-ng' 'git')
+provides=("nodejs=${pkgver}" "npm=${pkgver}")
+conflicts=('nodejs' 'npm')
+source=(
+	"https://nodejs.org/dist/v${pkgver}/node-v${pkgver}.tar.xz"
+	"https://nodejs.org/dist/v${pkgver}/SHASUMS256.txt" #{,.asc}
+)
+sha256sums=(
+	$(wget -q "${source[1]}" && grep "node-v${pkgver}.tar.xz" SHASUMS256.txt | cut -f1 -d ' ')
+	$(sha256sum SHASUMS256.txt | cut -f1 -d ' ')
+	# 'SKIP'
+)
+_validpgpkeys=(
+	'94AE36675C464D64BAFA68DD7434390BDBE9B9C5' 'FD3A5288F042B6850C66B31F09FE44734EB7990E'
+	'71DCFD284A79C3B38668286BC97EC7A07EDE3FC1' 'DD8F2338BAE7501E3DD5AC78C273792F7D83545D'
+	'C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8' 'B9AE9905FFD7803F25714661B63B535A4C206CA9'
+	'56730D5401028683275BD23C23EFEFE93C4CFFFE'
+)
+# source PKGBUILD && gpg --keyserver pool.sks-keyservers.net --recv-keys "${validpgpkeys[@]}"
+# validpgpkeys=("${_validpgpkeys[@]}") # https://github.com/nodejs/node#release-team
+
+
+# BEGIN ANTBS METADATA
+_autosums='True'
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='tags'
+_monitored_project='nodejs'
+_monitored_repo='node'
+_monitored_match_pattern='v6.'
+# END ANTBS METADATA
+
+
+prepare() {
+	find -type f -exec sed -i \
+	-e 's|^#!/usr/bin/env python$|&2|' \
+	-e 's|^#!/usr/bin/python$|&2|' \
+	-e "s|'python'|'&2'|" {} \;
+}
+
+
+build() {
+	export PYTHON=python2
+
+	cd "node-v${pkgver}"
+	./configure \
+		--prefix=/usr \
+		--with-intl=system-icu \
+		--shared-openssl \
+		--shared-zlib \
+		--shared-libuv \
+		--shared-http-parser \
+		--shared-cares
+
+	make
+}
+
+
+check() {
+	cd "node-v${pkgver}"
+	# Expected failure: https://github.com/nodejs/node/issues/11627
+	make test || warning "Tests failed"
+}
+
+
+package() {
+	cd "node-v${pkgver}"
+	make DESTDIR="$pkgdir" install
+
+	install -D -m644 LICENSE "$pkgdir"/usr/share/licenses/nodejs/LICENSE
+}
+
+# -*- mode: bash;-*-
