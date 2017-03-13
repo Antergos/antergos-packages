@@ -21,12 +21,12 @@ provides=("nodejs=${pkgver}" "npm=${pkgver}")
 conflicts=('nodejs' 'npm')
 source=(
 	"https://nodejs.org/dist/v${pkgver}/node-v${pkgver}.tar.xz"
-	"https://nodejs.org/dist/v${pkgver}/SHASUMS256.txt" #{,.asc}
+	"https://nodejs.org/dist/v${pkgver}/SHASUMS256.txt"{,.sig}
 )
 sha256sums=(
 	$(wget -q "${source[1]}" && grep "node-v${pkgver}.tar.xz" SHASUMS256.txt | cut -f1 -d ' ')
 	$(sha256sum SHASUMS256.txt | cut -f1 -d ' ')
-	# 'SKIP'
+	'SKIP'
 )
 _validpgpkeys=(
 	'94AE36675C464D64BAFA68DD7434390BDBE9B9C5' 'FD3A5288F042B6850C66B31F09FE44734EB7990E'
@@ -35,7 +35,8 @@ _validpgpkeys=(
 	'56730D5401028683275BD23C23EFEFE93C4CFFFE'
 )
 # source PKGBUILD && gpg --keyserver pool.sks-keyservers.net --recv-keys "${validpgpkeys[@]}"
-# validpgpkeys=("${_validpgpkeys[@]}") # https://github.com/nodejs/node#release-team
+
+validpgpkeys=("${_validpgpkeys[@]}") # https://github.com/nodejs/node#release-team
 
 
 # BEGIN ANTBS METADATA
