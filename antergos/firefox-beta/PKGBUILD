@@ -52,7 +52,7 @@ md5sums=('ee947f2784ef7256c34a2aeda61f29da'
          'dbf14588e85812ee769bd735823a0146'
          'aa9f776d2187cba09de65cbb02b39ca0'
          '259ea8127d1f3a72ac23db0a97455472'
-         '962721af2a2ca41e97563355ff2eed40')
+         '607a21e13dc1539889484ae0fbbc4999')
 
 # Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
@@ -123,7 +123,7 @@ package() {
 	make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
 
 	mv "${pkgdir}/usr/lib/firefox" "${pkgdir}/usr/lib/firefox-beta"
-	mv "${pkgdir}/usr/bin/firefox" "${pkgdir}/usr/bin/firefox-beta"
+	unlink "${pkgdir}/usr/bin/firefox"
 
 	install -Dm644 ../vendor.js "${pkgdir}/usr/lib/${pkgname}/browser/defaults/preferences/vendor.js"
 
