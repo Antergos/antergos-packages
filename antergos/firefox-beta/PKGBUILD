@@ -123,6 +123,7 @@ package() {
 	make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
 
 	mv "${pkgdir}/usr/lib/firefox" "${pkgdir}/usr/lib/firefox-beta"
+	mv "${pkgdir}/usr/bin/firefox" "${pkgdir}/usr/bin/firefox-beta"
 
 	install -Dm644 ../vendor.js "${pkgdir}/usr/lib/${pkgname}/browser/defaults/preferences/vendor.js"
 
@@ -139,7 +140,7 @@ package() {
 	install -Dm644 "${_branding}/content/about-logo@2x.png" "${_hicolor}/384x384/apps/${pkgname}.png"
 
 	# Desktops
-	install -Dm644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications"
+	install -Dm644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
 
 	# Use system-provided dictionaries
 	rm -rf "${pkgdir}/usr/lib/${pkgname}"/{dictionaries,hyphenation}
