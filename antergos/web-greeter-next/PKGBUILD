@@ -3,11 +3,11 @@
 _pkgname=web-greeter
 pkgname=web-greeter-next
 _pkgver=master
-pkgver=3.0.0beta4
+pkgver=3.0.0rc1
 pkgrel=1
 pkgdesc='A modern, visually appealing greeter for LightDM.'
 arch=('any')
-url="https://github.com/antergos/lightdm-webkit2-greeter"
+url='https://github.com/antergos/web-greeter'
 license=('GPL3')
 depends=('lightdm' 'python-whither' 'python-gobject' 'accountsservice' 'antergos-wallpapers')
 optdepends=('at-spi2-core: a11y support')
