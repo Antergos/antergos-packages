@@ -147,7 +147,7 @@ package() {
 	ln -s /usr/share/hyphen "${pkgdir}/usr/lib/${pkgname}/hyphenation"
 
 	# Install a wrapper to avoid confusion about binary path
-	install -Dm755 /dev/stdin "$pkgdir/usr/bin/firefox-beta" <<<'#!/bin/sh'
+	echo '#!/bin/sh' > "$pkgdir/usr/bin/firefox-beta"
 	echo 'exec /usr/lib/firefox-beta/firefox "\$@"' >> "$pkgdir/usr/bin/firefox-beta"
 
 	# Replace duplicate binary with wrapper
