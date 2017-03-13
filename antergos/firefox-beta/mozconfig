@@ -32,5 +32,3 @@ ac_add_options --disable-updater
 ac_add_options --disable-crashreporter
 
 STRIP_FLAGS="--strip-debug"
-
-# vim:set ft=sh:

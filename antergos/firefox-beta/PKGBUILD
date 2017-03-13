@@ -4,12 +4,12 @@
 pkgname=firefox-beta
 _pkgname=firefox
 pkgver=53.0b1
-pkgrel=1
+pkgrel=2
 _majorver="${pkgver/rc*}"
 _buildver="${pkgver/*rc}"
-pkgdesc="Standalone web browser from mozilla.org - Beta Channel"
+pkgdesc='Standalone web browser from mozilla.org - Beta Channel'
 arch=('i686' 'x86_64')
-url="https://www.mozilla.org/en-US/firefox/channel#beta"
+url='https://www.mozilla.org/en-US/firefox/channel#beta'
 license=('MPL' 'GPL' 'LGPL')
 groups=('browser')
 
@@ -27,8 +27,9 @@ optdepends=('networkmanager: Location detection via available WiFi networks'
            'upower: Battery API')
 
 provides=("firefox=${pkgver}")
-conflicts=('firefox-beta-bin' 'firefox-beta')
+conflicts=('firefox-beta-bin')
 options=('!emptydirs' '!makeflags')
+
 _rc_url="https://ftp.mozilla.org/pub/firefox/candidates/$_majorver-candidates/build$_buildver"
 _beta_url="https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}"
 _archpkg_git_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
@@ -121,6 +122,8 @@ package() {
 
 	make -f client.mk DESTDIR="${pkgdir}" INSTALL_SDK= install
 
+	mv "${pkgdir}/usr/lib/firefox" "${pkgdir}/usr/lib/firefox-beta"
+
 	install -Dm644 ../vendor.js "${pkgdir}/usr/lib/${pkgname}/browser/defaults/preferences/vendor.js"
 
 	for i in 16 22 24 32 48 256; do
@@ -142,10 +145,14 @@ package() {
 	rm -rf "${pkgdir}/usr/lib/${pkgname}"/{dictionaries,hyphenation}
 	ln -s /usr/share/hunspell "${pkgdir}/usr/lib/${pkgname}/dictionaries"
 	ln -s /usr/share/hyphen "${pkgdir}/usr/lib/${pkgname}/hyphenation"
-	
-	# Replace duplicate binary with symlink
+
+	# Install a wrapper to avoid confusion about binary path
+	install -Dm755 /dev/stdin "$pkgdir/usr/bin/firefox-beta" <<<'#!/bin/sh'
+	echo 'exec /usr/lib/firefox-beta/firefox "\$@"' >> "$pkgdir/usr/bin/firefox-beta"
+
+	# Replace duplicate binary with wrapper
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=658850
-	ln -sf firefox "${pkgdir}/usr/lib/${pkgname}/firefox-bin"
+	ln -srf "$pkgdir/usr/bin/firefox-beta" "$pkgdir/usr/lib/firefox-beta/firefox-bin"
 }
 
 # -*- mode: bash;-*-
