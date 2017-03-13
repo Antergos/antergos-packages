@@ -148,7 +148,7 @@ package() {
 	ln -s /usr/share/hyphen "${pkgdir}/usr/lib/${pkgname}/hyphenation"
 
 	# Install a wrapper to avoid confusion about binary path
-	touch "$pkgdir/usr/bin/firefox-beta"
+	mkdir -p "$pkgdir/usr/bin"
 	echo '#!/bin/sh' > "$pkgdir/usr/bin/firefox-beta"
 	echo 'exec /usr/lib/firefox-beta/firefox "\$@"' >> "$pkgdir/usr/bin/firefox-beta"
 	chmod 777 "$pkgdir/usr/bin/firefox-beta"
