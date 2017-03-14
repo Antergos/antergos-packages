@@ -3,8 +3,8 @@
 
 pkgname=firefox-beta
 _pkgname=firefox
-pkgver=53.0b1
-pkgrel=2
+pkgver=53.0b2
+pkgrel=1
 _majorver="${pkgver/rc*}"
 _buildver="${pkgver/*rc}"
 pkgdesc='Standalone web browser from mozilla.org - Beta Channel'
