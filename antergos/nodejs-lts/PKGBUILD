@@ -25,7 +25,7 @@ source=(
 )
 sha256sums=(
 	$(wget -q "${source[1]}" && grep "node-v${pkgver}.tar.xz" SHASUMS256.txt | cut -f1 -d ' ')
-	$(sha256sum SHASUMS256.txt | cut -f1 -d ' ')
+	'SKIP'
 	'SKIP'
 )
 _validpgpkeys=(
@@ -34,7 +34,7 @@ _validpgpkeys=(
 	'C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8' 'B9AE9905FFD7803F25714661B63B535A4C206CA9'
 	'56730D5401028683275BD23C23EFEFE93C4CFFFE'
 )
-# source PKGBUILD && gpg --keyserver pool.sks-keyservers.net --recv-keys "${validpgpkeys[@]}"
+gpg --keyserver pool.sks-keyservers.net --recv-keys "${_validpgpkeys[@]}"
 
 validpgpkeys=("${_validpgpkeys[@]}") # https://github.com/nodejs/node#release-team
 
