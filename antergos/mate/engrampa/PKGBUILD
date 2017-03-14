@@ -19,6 +19,7 @@ optdepends=('unrar: for RAR uncompression'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
+_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 		fr-rpm-bsdtar.patch)
 sha1sums=('90865e0c59bec33ed899c3a0a8d2787aa09d526b'
           '219b05a979bf6f249aaae27964f02345fd81168d')

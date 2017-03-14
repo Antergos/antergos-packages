@@ -14,6 +14,7 @@ optdepends=('mate-panel: Look up words in dictionaries from the panel'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=('8435a42773bd2f5fcf27e2e6e71373fbf216eef9')
 
 # BEGIN ANTBS METADATA

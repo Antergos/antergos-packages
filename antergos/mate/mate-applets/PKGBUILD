@@ -16,6 +16,7 @@ replaces=('mate-netspeed' 'mate-netspeed-gtk3')
 conflicts=('mate-netspeed' 'mate-netspeed-gtk3')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=('6e6b51089bcb6450a466ba358b71fcfd7aba3a6a')
 
 # BEGIN ANTBS METADATA

@@ -13,6 +13,7 @@ makedepends=('wget' 'caja' 'libcanberra' 'libnotify' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=('7b241f0d969005653a164223b4d458beb9256910')
 
 # BEGIN ANTBS METADATA

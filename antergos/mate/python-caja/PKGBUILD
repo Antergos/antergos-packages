@@ -11,6 +11,7 @@ license=('GPL')
 depends=('caja' 'python-gobject')
 makedepends=('wget' 'mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=('9c4125cbe8485174c59e85cb77290826de6e3435')
 
 # BEGIN ANTBS METADATA

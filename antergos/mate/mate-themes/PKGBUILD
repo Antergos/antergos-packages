@@ -12,6 +12,7 @@ depends=('gtk-engines' 'gtk-engine-murrine' 'librsvg' 'mate-icon-theme')
 makedepends=('wget' 'mate-common' 'icon-naming-utils')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/themes/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=('8ddefde8e0685963ab72b309dbe16d5c')
 
 # BEGIN ANTBS METADATA

@@ -17,6 +17,7 @@ optdepends=(	'djvulibre: DjVu support'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=($(wget -q "${source[1]}" && grep "node-v${pkgver}.tar.xz" SHASUMS256.txt | cut -f1 -d ' '))
 
 # BEGIN ANTBS METADATA

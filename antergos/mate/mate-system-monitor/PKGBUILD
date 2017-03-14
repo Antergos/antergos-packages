@@ -12,6 +12,7 @@ depends=('dbus-glib' 'glibmm' 'gtkmm' 'gtkmm3' 'libgtop' 'libwnck' 'libwnck3' 'l
 makedepends=('wget' 'docbook2x' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=('4d0c2bca7690f52b1278b5e83ce3231bc75469e2')
 
 

@@ -11,6 +11,7 @@ groups=('mate-extra')
 depends=('autoconf' 'automake' 'gettext' 'gtk-doc' 'intltool' 'libtool' 'pkg-config')
 url="http://mate-desktop.org"
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=('5ab91d9e471b5819a5983e57b8d224855fbd93f1')
 
 # BEGIN ANTBS METADATA

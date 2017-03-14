@@ -53,7 +53,7 @@ search_replace() {
 } 
 
 insert_after() {
-	sed -i "/${1}/a ${2}" PKGBUILD
+	sed -i -E "/${1}/a ${2}" PKGBUILD
 }
 
 

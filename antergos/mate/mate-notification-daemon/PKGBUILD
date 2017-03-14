@@ -13,6 +13,7 @@ depends=('dbus-glib' 'gtk3' 'libcanberra' 'libwnck3' 'libnotify')
 makedepends=('wget' 'mate-common')
 provides=('notification-daemon')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=('510f0e1b99acfa886910190afd0be94da5cf6fe1')
 
 # BEGIN ANTBS METADATA
