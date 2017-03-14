@@ -3,7 +3,7 @@
 #
 #  utils.sh
 #
-#  Copyright © 2016 Antergos
+#  Copyright © 2016-2017 Antergos
 #
 #  This file is part of The Antergos Build Server, (AntBS).
 #
@@ -32,5 +32,24 @@
 #    PACKAGE MAINTAINERS' UTILS 
 ##
 ###
+
+
+_package_group_action() {
+	local group _command group_directory
+
+	group="$1"
+	_command="$2"
+	shift 2
+
+	group_directory="${REPO_DIR}/${group}"
+	echo "$group $_command"
+
+	for pkgdir in "${group_directory}"/*
+	do
+		[[ -h "${pkgdir}" ]] && continue
+
+		( { cd "${pkgdir}" && "${_command}" "$@"; } || echo "ERROR exit status in ${pkgdir}" )
+	done
+}
 
 

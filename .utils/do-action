@@ -3,7 +3,7 @@
 #
 #  utils.sh
 #
-#  Copyright © 2016 Antergos
+#  Copyright © 2016-2017 Antergos
 #
 #  This file is part of The Antergos Build Server, (AntBS).
 #
@@ -33,27 +33,50 @@
 ##
 ###
 
+THIS_DIR=$(dirname $(realpath "${BASH_SOURCE[0]}"))
+GIT_ROOT=$(dirname "${THIS_DIR}")
+REPO_DIR="${GIT_ROOT}/antergos"
 
-_batch_updpkgsums_for_group() {
-	local group_directory=../antergos/$1
+source "${THIS_DIR}/common"
 
-	for pkgdir in "${group_directory}"/*
-	do
-		[[ -h "${pkgdir}" ]] && continue
 
-		cd "${pkgdir}"
-		updpkgsums
-		rm *.tar.xz
-		cd -
-	done
-
+update_checksums() {
+	updpkgsums && git clean -x
 }
+
+update_pkgver() {
+	sed -i -E "s/(pkgver=)([0-9.]+)/\1${1}/g" PKGBUILD
+}
+
+search_replace() {
+	sed -i -E "s/${1}/${2}/g" PKGBUILD
+} 
 
 
 
 case $1 in
-	updpkgsums)
-		_batch_updpkgsums_for_group $2
+
+	update-checksums)
+		if [[ "$2" =~ ^-g|--group$ ]]; then
+			_package_group_action $3 'update_checksums'
+		fi
+
+		exit $?
+	;;
+
+	update-pkgver)
+		if [[ "$2" =~ ^-g|--group$ ]]; then
+			_package_group_action $3 'update_pkgver' $4
+		fi
+
+		exit $?
+	;;
+
+	search-replace)
+		if [[ "$2" =~ ^-g|--group$ ]]; then
+			_package_group_action $3 'search_replace' $4 $5
+		fi
+
 		exit $?
 	;;
 

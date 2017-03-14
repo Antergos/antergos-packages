@@ -2,14 +2,13 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=caja
-pkgver=1.16.2
+pkgver=1.18.0
 pkgrel=1
-pkgdesc="File manager for the MATE desktop"
-url="http://mate-desktop.org"
+pkgdesc='File manager for the MATE desktop'
+url='http://mate-desktop.org'
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dbus' 'desktop-file-utils' 'exempi' 'gtk3' 'gvfs' 'libexif' 'python-gobject'
-		'libunique3' 'libxt' 'mate-desktop>=1.14' 'startup-notification')
+depends=('exempi' 'gtk3' 'gvfs' 'libexif' 'python-gobject' 'libxt' 'mate-desktop' 'startup-notification')
 makedepends=('gobject-introspection' 'mate-common')
 optdepends=('gstreamer: automatic media playback when mouseover'
 			'gvfs-smb: To connect to Samba/Windows shares')
@@ -20,7 +19,7 @@ sha1sums=('7d4088e151435ccfea442f03b796a9e0f3f56a69')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -28,8 +27,6 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--libexecdir=/usr/lib/${pkgname} \
-		--with-gtk=3.0 \
-		--enable-unique \
 		--enable-introspection \
 		--disable-static \
 		--disable-update-mimedb
@@ -40,8 +37,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 

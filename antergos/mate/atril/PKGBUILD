@@ -2,18 +2,16 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=atril
-pkgver=1.16.1
+pkgver=1.18.0
 pkgrel=1
-pkgdesc="MATE document viewer"
-url="http://mate-desktop.org"
+pkgdesc='MATE document viewer'
+url='http://mate-desktop.org'
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dconf' 'dbus' 'desktop-file-utils' 'gtk3' 'libsecret' 'libsm' 'libspectre'
-		 'mathjax' 'poppler-glib' 'webkitgtk2' 'zlib')
-makedepends=('caja>=1.16' 'djvulibre' 'gobject-introspection' 'libgxps'
-			 'mate-common' 'texlive-bin' 'yelp-tools')
-optdepends=('caja: Document Properties extension'
-			'djvulibre: DjVu support'
+depends=('gtk3' 'libsecret' 'libsm' 'libspectre' 'mathjax' 'poppler-glib' 'webkitgtk' 'zlib')
+makedepends=('caja' 'djvulibre' 'gobject-introspection' 'libgxps' 'mate-common'
+			'texlive-bin' 'yelp-tools')
+optdepends=(	'djvulibre: DjVu support'
 			'libgxps: XPS support'
 			'texlive-bin: DVI support'
 			'yelp: for reading MATE help documents')
@@ -24,7 +22,7 @@ sha1sums=('7a05ec3e856335ce6a49a97f545ab401d9221f6e')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -32,7 +30,6 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--libexecdir=/usr/lib/${pkgname} \
-		--with-gtk=3.0 \
 		--enable-gtk-doc \
 		--enable-djvu \
 		--enable-dvi \
@@ -50,8 +47,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 
