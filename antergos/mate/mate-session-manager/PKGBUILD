@@ -10,7 +10,7 @@ arch=('i686' 'x86_64')
 license=('GPL' 'LGPL')
 depends=('dbus-glib' 'gtk3' 'libsm' 'libxtst' 'mate-desktop'
 		 'mate-polkit' 'mate-settings-daemon' 'ttf-dejavu' 'xdg-user-dirs')
-makedepends=('mate-common' 'xmlto' 'xtrans')
+makedepends=('wget' 'mate-common' 'xmlto' 'xtrans')
 optdepends=('onboard: On-screen keyboard useful for mobility impaired users'
 			'orca: Screen reader for blind or visually impaired individuals'
 			'xdg-user-dirs-gtk: Add autostart that prompts to rename user directories when switching locales')

@@ -10,7 +10,7 @@ arch=('i686' 'x86_64')
 license=('LGPL')
 groups=('mate-extra')
 depends=('dconf' 'gtk3' 'libsoup')
-makedepends=('mate-common')
+makedepends=('wget' 'mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('912eb67104da9414eb47c4a9b0631735d2528794')
 

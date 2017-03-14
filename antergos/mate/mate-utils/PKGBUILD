@@ -9,7 +9,7 @@ url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('desktop-file-utils' 'gtk3' 'libcanberra' 'libgtop' 'libsm' 'zlib')
-makedepends=('mate-common' 'mate-panel' 'rarian' 'yelp-tools')
+makedepends=('wget' 'mate-common' 'mate-panel' 'rarian' 'yelp-tools')
 optdepends=('mate-panel: Look up words in dictionaries from the panel'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')

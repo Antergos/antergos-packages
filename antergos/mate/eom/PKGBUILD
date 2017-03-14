@@ -12,7 +12,7 @@ depends=('dbus-glib' 'desktop-file-utils' 'gobject-introspection-runtime'
 		'gtk3' 'exempi' 'lcms2' 'libexif' 'libjpeg-turbo' 'librsvg'
 		'mate-desktop' 'python-gobject'
 		'startup-notification' 'zlib')
-makedepends=('gobject-introspection' 'mate-common' 'yelp-tools')
+makedepends=('wget' 'gobject-introspection' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")

@@ -11,7 +11,7 @@ license=('GPL')
 depends=('dbus-glib' 'gtk3' 'libwnck3' 'libcanberra' 'libice'
 		 'libmateweather' 'librsvg' 'libsm' 'libsoup' 'libxau'
 		 'mate-menus' 'mate-desktop')
-makedepends=('gobject-introspection' 'mate-common' 'yelp-tools')
+makedepends=('wget' 'gobject-introspection' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 groups=('mate')

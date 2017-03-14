@@ -10,7 +10,7 @@ url="http://mate-desktop.org"
 arch=('any')
 license=('GPL' 'LGPL')
 depends=('yelp')
-makedepends=('mate-common' 'yelp-tools')
+makedepends=('wget' 'mate-common' 'yelp-tools')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('2084e109511dd82c08aafd3a71aa63d4b008df1b')
 

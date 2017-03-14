@@ -9,7 +9,7 @@ url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('LGPL')
 depends=('gtk3' 'polkit' 'accountsservice')
-makedepends=('gobject-introspection' 'mate-common')
+makedepends=('wget' 'gobject-introspection' 'mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('d4add9b8ad5ffd249f961dbc7f69fd372013bd46')
 

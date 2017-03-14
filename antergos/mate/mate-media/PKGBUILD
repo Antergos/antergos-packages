@@ -9,7 +9,7 @@ pkgdesc="MATE Media Tools"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('gtk3' 'libcanberra' 'libmatemixer' 'libunique3' 'mate-desktop>=1.14')
-makedepends=('mate-common')
+makedepends=('wget' 'mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 groups=('mate-extra')
 replaces=("${pkgname}-gstreamer" "${pkgname}-pulseaudio")

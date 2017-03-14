@@ -10,7 +10,7 @@ arch=('i686' 'x86_64')
 license=('GPL')
 depends=('gtk3' 'libcanberra' 'libgtop' 'libice' 'libsm' 'libxt'
 		'mate-desktop' 'startup-notification' 'zenity')
-makedepends=('mate-common' 'yelp-tools')
+makedepends=('wget' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")

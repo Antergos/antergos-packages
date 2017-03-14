@@ -12,7 +12,7 @@ depends=('dbus-glib' 'desktop-file-utils' 'gsettings-desktop-schemas' 'gtk3'
 		 'mate-desktop' 'mate-icon-theme' 'mate-menus' 'mate-settings-daemon'
 		 'marco' 'libgtop' 'libmatekbd' 'librsvg' 'libxss'
 		 'libxt' 'startup-notification')
-makedepends=('docbook2x' 'mate-common' 'yelp-tools')
+makedepends=('wget' 'docbook2x' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")

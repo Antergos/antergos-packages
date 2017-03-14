@@ -9,7 +9,7 @@ url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('caja' 'dbus-glib' 'gksu' 'gtk3' 'gupnp' 'imagemagick' 'samba' 'python-gobject')
-makedepends=('mate-common')
+makedepends=('wget' 'mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgbase}-${pkgver}.tar.xz")
 sha1sums=('9b27e46a731b117815862229c38445ef94afa600')
 

@@ -11,7 +11,7 @@ license=('GPL' 'LGPL')
 groups=('mate')
 provides=('mate-desktop-gtk3' 'mate-desktop-schemas')
 depends=('gtk3' 'startup-notification' 'gobject-introspection')
-makedepends=('mate-common' 'yelp-tools')
+makedepends=('wget' 'mate-common' 'yelp-tools')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('624d2e7af6416cb81d1d0946ab66bbb34fc7d150')
 

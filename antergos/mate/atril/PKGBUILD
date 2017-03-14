@@ -9,7 +9,7 @@ url='http://mate-desktop.org'
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('gtk3' 'libsecret' 'libsm' 'libspectre' 'mathjax' 'poppler-glib' 'webkitgtk' 'zlib')
-makedepends=('caja' 'djvulibre' 'gobject-introspection' 'libgxps' 'mate-common'
+makedepends=('wget' 'caja' 'djvulibre' 'gobject-introspection' 'libgxps' 'mate-common'
 			'texlive-bin' 'yelp-tools')
 optdepends=(	'djvulibre: DjVu support'
 			'libgxps: XPS support'
@@ -17,7 +17,7 @@ optdepends=(	'djvulibre: DjVu support'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=('7a05ec3e856335ce6a49a97f545ab401d9221f6e')
+sha1sums=($(wget -q "${source[1]}" && grep "node-v${pkgver}.tar.xz" SHASUMS256.txt | cut -f1 -d ' '))
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

@@ -10,7 +10,7 @@ arch=('i686' 'x86_64')
 license=('GPL')
 depends=('dbus-glib' 'libmatekbd' 'libnotify' 'libxss' 'mate-desktop'
 		 'mate-menus' 'mate-session-manager')
-makedepends=('mate-common' 'xmlto')
+makedepends=('wget' 'mate-common' 'xmlto')
 optdepends=('mate-power-manager: Add power management support.'
 			'mate-screensaver-hacks: Additional screensavers.'
 			'rss-glx: Really slick screensavers.')
