@@ -15,7 +15,7 @@ groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
 _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 		'http://pkgs.fedoraproject.org/cgit/rpms/pluma.git/plain/pluma_diasable-python-plugins-1.5.patch')
-sha1sums=('14a0497fade1e3fd40a39eafb28390975abd12a6'
+sha1sums=($(wget -q "${_sha1sums_url}" sha1sums=('14a0497fade1e3fd40a39eafb28390975abd12a6'sha1sums=('14a0497fade1e3fd40a39eafb28390975abd12a6' grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
           '5a8d1ced985fd770d8246a2250bc11b4d10a3c49')
 
 

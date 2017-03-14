@@ -16,7 +16,7 @@ optdepends=('yelp: for reading MATE help documents')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 groups=('mate')
-sha1sums=('58d011e2340d17e5c678725c22bfbddc96a6f7d4')
+sha1sums=($(wget -q "${_sha1sums_url}" sha1sums=('58d011e2340d17e5c678725c22bfbddc96a6f7d4')sha1sums=('58d011e2340d17e5c678725c22bfbddc96a6f7d4') grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA
 _monitored_service='mate-desktop'

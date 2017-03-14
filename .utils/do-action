@@ -49,7 +49,7 @@ update_pkgver() {
 }
 
 search_replace() {
-	sed -i -E "s/${1}/${2}/g" PKGBUILD
+	sed -i -E "s/${1}/${2}/" PKGBUILD
 } 
 
 insert_after() {
