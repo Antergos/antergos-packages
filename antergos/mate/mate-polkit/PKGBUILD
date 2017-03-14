@@ -16,6 +16,7 @@ sha1sums=('d4add9b8ad5ffd249f961dbc7f69fd372013bd46')
 
 
 # BEGIN ANTBS METADATA
+_autosums='True'
 _is_monitored='True'
 _monitored_service='mate-desktop'
 _monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'

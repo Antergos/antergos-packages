@@ -15,6 +15,7 @@ _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=('5ab91d9e471b5819a5983e57b8d224855fbd93f1')
 
 # BEGIN ANTBS METADATA
+_autosums='True'
 _is_monitored='True'
 _monitored_service='mate-desktop'
 _monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'

@@ -56,6 +56,10 @@ insert_after() {
 	sed -i -E "/${1}/a ${2}" PKGBUILD
 }
 
+insert_before() {
+	sed -i -E "/${1}/i ${2}" PKGBUILD
+}
+
 
 case $1 in
 
@@ -86,6 +90,14 @@ case $1 in
 	insert-after)
 		if [[ "$2" =~ ^-g|--group$ ]]; then
 			_package_group_action $3 'insert_after' "$4" "$5"
+		fi
+
+		exit $?
+	;;
+
+	insert-before)
+		if [[ "$2" =~ ^-g|--group$ ]]; then
+			_package_group_action $3 'insert_before' "$4" "$5"
 		fi
 
 		exit $?

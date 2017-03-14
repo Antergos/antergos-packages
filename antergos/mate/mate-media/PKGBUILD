@@ -18,6 +18,7 @@ conflicts=("${pkgname}-gstreamer" "${pkgname}-pulseaudio")
 sha1sums=('e071d27c13e80b182f10a33d7a190825642d6f75')
 
 # BEGIN ANTBS METADATA
+_autosums='True'
 _is_monitored='True'
 _monitored_service='mate-desktop'
 _monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
