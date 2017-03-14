@@ -21,7 +21,7 @@ depends=('alsa-lib'  'dbus-glib'  'ffmpeg'                'gtk2'
 makedepends=('autoconf2.13'  'cargo'      'diffutils'         'gconf'
             'imake'         'inetutils'  'libpulse'          'mesa'
             'python2'       'unzip'      'xorg-server-xvfb'  'yasm'
-            'zip'           'gpg')
+            'zip'           'gnupg')
 
 optdepends=('networkmanager: Location detection via available WiFi networks'
            'upower: Battery API')
