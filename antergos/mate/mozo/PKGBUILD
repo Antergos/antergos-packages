@@ -2,13 +2,13 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mozo
-pkgver=1.16.0
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="MATE menu editing tool"
 url="http://mate-desktop.org"
 arch=('any')
 license=('GPL')
-depends=('mate-menus>=1.14' 'python2-gobject')
+depends=('mate-menus' 'python2-gobject')
 makedepends=('mate-common')
 groups=('mate-extra')
 conflicts=("${pkgname}-gtk3")
@@ -18,7 +18,7 @@ sha1sums=('bd9b1e70a6976940d40ef78f58c11a96ffa41a26')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -32,8 +32,6 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
+
 
 # -*- mode: bash;-*-
- 

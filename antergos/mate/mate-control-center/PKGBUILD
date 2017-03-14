@@ -2,15 +2,15 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-control-center
-pkgver=1.16.1
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="The Control Center for MATE"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dbus-glib' 'dconf' 'desktop-file-utils' 'gsettings-desktop-schemas' 'gtk3'
-		 'mate-desktop>=1.14' 'mate-icon-theme' 'mate-menus>=1.14' 'mate-settings-daemon>=1.14'
-		 'marco>=1.14' 'libgtop' 'libmatekbd>=1.14' 'libunique3' 'librsvg' 'libxss'
+depends=('dbus-glib' 'desktop-file-utils' 'gsettings-desktop-schemas' 'gtk3'
+		 'mate-desktop' 'mate-icon-theme' 'mate-menus' 'mate-settings-daemon'
+		 'marco' 'libgtop' 'libmatekbd' 'librsvg' 'libxss'
 		 'libxt' 'startup-notification')
 makedepends=('docbook2x' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
@@ -21,7 +21,7 @@ sha1sums=('49f65c992fdc27e0c5c57cd57e7143813b67d76b')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -31,7 +31,6 @@ build() {
 		--sysconfdir=/etc \
 		--sbindir=/usr/bin \
 		--localstatedir=/var \
-		--with-gtk=3.0 \
 		--disable-static \
 		--disable-update-mimedb
 	make
@@ -42,8 +41,6 @@ package() {
 	make DESTDIR="${pkgdir}" install
 	rm -f "${pkgdir}/usr/share/applications/mimeinfo.cache"
 }
- 
- 
+
 
 # -*- mode: bash;-*-
- 

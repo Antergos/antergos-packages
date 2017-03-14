@@ -2,13 +2,13 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=python-caja
-pkgver=1.16.0
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="Python binding for Caja. Enables support for property page and menu item extensions that are written in Python"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('caja>=1.14' 'python-gobject')
+depends=('caja' 'python-gobject')
 makedepends=('mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 sha1sums=('9c4125cbe8485174c59e85cb77290826de6e3435')
@@ -16,7 +16,7 @@ sha1sums=('9c4125cbe8485174c59e85cb77290826de6e3435')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -33,8 +33,4 @@ package() {
 	make DESTDIR="${pkgdir}" install
 }
 
- 
- 
-
 # -*- mode: bash;-*-
- 

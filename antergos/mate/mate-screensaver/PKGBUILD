@@ -2,14 +2,14 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-screensaver
-pkgver=1.16.1
+pkgver=1.18.0
 pkgrel=1
 pkgdesc='Screensaver for MATE'
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dbus-glib' 'libmatekbd>=1.14' 'libnotify' 'libxss' 'mate-desktop>=1.14'
-		 'mate-menus>=1.14' 'mate-session-manager>=1.14')
+depends=('dbus-glib' 'libmatekbd' 'libnotify' 'libxss' 'mate-desktop'
+		 'mate-menus' 'mate-session-manager')
 makedepends=('mate-common' 'xmlto')
 optdepends=('mate-power-manager: Add power management support.'
 			'mate-screensaver-hacks: Additional screensavers.'
@@ -21,7 +21,7 @@ sha1sums=('81dc31f96028a168456b8435e291090b789a3bea')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -35,7 +35,6 @@ build() {
 		--with-mit-ext \
 		--with-libnotify \
 		--enable-locking \
-		--with-gtk=3.0 \
 		--without-console-kit \
 		--disable-static
 	make
@@ -45,8 +44,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 

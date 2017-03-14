@@ -2,14 +2,13 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-system-monitor
-pkgver=1.16.0
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="A system monitor for MATE"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dconf' 'dbus-glib' 'glibmm' 'gtkmm' 'gtkmm3' 'libgtop' 'libwnck'
-		 'libwnck3' 'librsvg')
+depends=('dbus-glib' 'glibmm' 'gtkmm' 'gtkmm3' 'libgtop' 'libwnck' 'libwnck3' 'librsvg')
 makedepends=('docbook2x' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
@@ -19,7 +18,7 @@ sha1sums=('4d0c2bca7690f52b1278b5e83ce3231bc75469e2')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -28,7 +27,6 @@ build() {
 		--prefix=/usr \
 		--libexecdir=/usr/lib/${pkgname} \
 		--localstatedir=/var \
-		--with-gtk=3.0 \
 		--disable-static
 	make
 }
@@ -38,8 +36,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 

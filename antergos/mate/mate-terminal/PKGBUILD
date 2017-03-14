@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-terminal
-pkgver=1.16.2
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="The MATE Terminal Emulator"
 url="http://mate-desktop.org"
@@ -13,12 +13,12 @@ makedepends=('docbook2x' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-sha1sums=d8e37caeec8ede639c6c9bc4b95ac0ae23765cf2('99f9de97e35b6739c1b6ee07bd7d8819ee01bf7a')
+sha1sums=('99f9de97e35b6739c1b6ee07bd7d8819ee01bf7a')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -34,8 +34,6 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
+
 
 # -*- mode: bash;-*-
- 

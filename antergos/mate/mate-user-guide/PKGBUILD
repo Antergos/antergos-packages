@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-user-guide
-pkgver=1.16.0
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="MATE User Guide"
 groups=('mate')
@@ -17,7 +17,7 @@ sha1sums=('2084e109511dd82c08aafd3a71aa63d4b008df1b')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {

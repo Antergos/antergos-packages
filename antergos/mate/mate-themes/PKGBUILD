@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-themes
-pkgver=3.22.1
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="Default themes for the MATE desktop"
 url="http://mate-desktop.org"

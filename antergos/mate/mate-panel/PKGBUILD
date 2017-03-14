@@ -2,15 +2,15 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-panel
-pkgver=1.16.0
-pkgrel=2
+pkgver=1.18.0
+pkgrel=1
 pkgdesc="Desktop panel for MATE"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dbus-glib' 'dconf' 'gtk3' 'libwnck3' 'libcanberra' 'libice'
-		 'libmateweather>=1.16' 'librsvg' 'libsm' 'libsoup' 'libxau'
-		 'mate-menus>=1.16' 'mate-desktop>=1.16')
+depends=('dbus-glib' 'gtk3' 'libwnck3' 'libcanberra' 'libice'
+		 'libmateweather' 'librsvg' 'libsm' 'libsoup' 'libxau'
+		 'mate-menus' 'mate-desktop')
 makedepends=('gobject-introspection' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
@@ -19,7 +19,7 @@ sha1sums=('58d011e2340d17e5c678725c22bfbddc96a6f7d4')
 
 # BEGIN ANTBS METADATA
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -29,7 +29,6 @@ build() {
 		--libexecdir=/usr/lib/${pkgname} \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
-		--with-gtk=3.0 \
 		--enable-introspection \
 		--disable-static
 	make
@@ -39,8 +38,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 

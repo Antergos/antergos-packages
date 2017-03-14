@@ -2,14 +2,14 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=marco
-pkgver=1.16.0
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="A window manager for MATE"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('gtk3' 'libcanberra' 'libgtop' 'libice' 'libsm' 'libxt'
-		'mate-desktop>=1.14' 'startup-notification' 'zenity')
+		'mate-desktop' 'startup-notification' 'zenity')
 makedepends=('mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate')
@@ -19,7 +19,7 @@ sha1sums=('b9b3c14812fcb7ab5dfd2c3498eac639d2e63be6')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -28,7 +28,6 @@ build() {
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
-		--with-gtk=3.0 \
 		--enable-startup-notification \
 		--disable-static
 	make
@@ -38,8 +37,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 

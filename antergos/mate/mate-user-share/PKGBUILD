@@ -2,14 +2,14 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-user-share
-pkgver=1.16.0
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="User level public file sharing via WebDAV for MATE."
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dbus-glib' 'dconf' 'libunique3' 'mod_dnssd' 'gtk3')
-makedepends=('caja>=1.14' 'libcanberra' 'libnotify' 'mate-common' 'yelp-tools')
+depends=('dbus-glib' 'dconf' 'mod_dnssd' 'gtk3')
+makedepends=('caja' 'libcanberra' 'libnotify' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
@@ -18,7 +18,7 @@ sha1sums=('7b241f0d969005653a164223b4d458beb9256910')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -28,8 +28,7 @@ build() {
 		--libexec=/usr/lib/${pkgname} \
 		--sysconfdir=/etc \
 		--disable-static \
-		--disable-bluetooth \
-		--with-gtk=3.0
+		--disable-bluetooth
 	make
 }
 
@@ -38,8 +37,6 @@ package() {
 	make  DESTDIR="${pkgdir}" install
 	rm -f "${pkgdir}/usr/share/mate-user-share/dav_user_2.0.conf"
 }
- 
- 
+
 
 # -*- mode: bash;-*-
- 

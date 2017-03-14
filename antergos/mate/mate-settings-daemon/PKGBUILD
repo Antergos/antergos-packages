@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-settings-daemon
-pkgver=1.16.1
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="The MATE Settings Daemon"
 url="http://mate-desktop.org"
@@ -21,7 +21,7 @@ sha1sums=('8fcb4ae0571e9bd507b47a67e0e4245e6558693e')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -32,7 +32,6 @@ build() {
 		--sbindir=/usr/bin \
 		--libexecdir=/usr/lib/${pkgname} \
 		--sysconfdir=/etc \
-		--with-gtk=3.0 \
 		--enable-polkit \
 		--disable-static
 	make
@@ -42,8 +41,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 

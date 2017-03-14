@@ -2,14 +2,14 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=engrampa
-pkgver=1.16.0
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="Archive file manipulator"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('bzip2' 'desktop-file-utils' 'gtk3' 'gzip' 'libarchive' 'tar')
-makedepends=('caja>=1.16' 'mate-common' 'yelp-tools')
+makedepends=('caja' 'mate-common' 'yelp-tools')
 optdepends=('unrar: for RAR uncompression'
 			'zip: for ZIP archives'
 			'unzip: for ZIP archives'
@@ -26,7 +26,7 @@ sha1sums=('90865e0c59bec33ed899c3a0a8d2787aa09d526b'
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 prepare() {
@@ -40,8 +40,7 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--libexecdir=/usr/lib/${pkgname} \
-		--disable-static \
-		--disable-packagekit
+		--disable-static
 	make
 }
 
@@ -49,8 +48,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 

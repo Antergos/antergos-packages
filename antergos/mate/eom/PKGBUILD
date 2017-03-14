@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=eom
-pkgver=1.16.1
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="An image viewing and cataloging program for MATE"
 url="http://mate-desktop.org"
@@ -10,7 +10,7 @@ arch=('i686' 'x86_64')
 license=('GPL')
 depends=('dbus-glib' 'desktop-file-utils' 'gobject-introspection-runtime'
 		'gtk3' 'exempi' 'lcms2' 'libexif' 'libjpeg-turbo' 'librsvg'
-		'mate-desktop>=1.14' 'python-gobject'
+		'mate-desktop' 'python-gobject'
 		'startup-notification' 'zlib')
 makedepends=('gobject-introspection' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
@@ -21,7 +21,7 @@ sha1sums=('125c51120c15f96cb012530ebdbffceb73fb01cb')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -32,7 +32,6 @@ build() {
 		--sbindir=/usr/bin \
 		--libexecdir=/usr/lib/${pkgname} \
 		--localstatedir=/var \
-		--with-gtk=3.0 \
 		--with-librsvg \
 		--disable-python
 	make
@@ -42,8 +41,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 

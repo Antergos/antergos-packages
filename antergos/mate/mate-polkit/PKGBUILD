@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-polkit
-pkgver=1.16.0
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="PolicyKit integration for the MATE desktop"
 url="http://mate-desktop.org"
@@ -17,7 +17,7 @@ sha1sums=('d4add9b8ad5ffd249f961dbc7f69fd372013bd46')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -36,8 +36,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 

@@ -2,13 +2,13 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-sensors-applet
-pkgver=1.16.1
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="A MATE Panel applet that displays readings from hardware sensors, including CPU temperature, fan speeds, and voltage readings."
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dbus' 'gtk3' 'libatasmart' 'libnotify' 'lm_sensors' 'mate-panel>=1.14')
+depends=('dbus' 'gtk3' 'libatasmart' 'libnotify' 'lm_sensors' 'mate-panel')
 makedepends=('docbook-xml' 'libxnvctrl' 'mate-common' 'rarian' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
@@ -18,7 +18,7 @@ sha1sums=('a588b17b8c7ae3d01bb0871a37fa9d726c4637a1')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -26,7 +26,6 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--libexecdir=/usr/lib/${pkgname} \
-		--with-gtk=3.0 \
 		--disable-static
   make
 }
@@ -35,8 +34,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 

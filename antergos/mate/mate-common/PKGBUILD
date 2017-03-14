@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-common
-pkgver=1.16.0
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="Common development macros for MATE"
 arch=('any')
@@ -16,7 +16,7 @@ sha1sums=('5ab91d9e471b5819a5983e57b8d224855fbd93f1')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -30,8 +30,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 

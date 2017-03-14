@@ -2,14 +2,14 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-notification-daemon
-pkgver=1.16.1
+pkgver=1.18.0
 pkgrel=1
 pkgdesc="Notification daemon for MATE"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL' 'LGPL')
 groups=('mate')
-depends=('dconf' 'dbus-glib' 'gtk3' 'libcanberra' 'libwnck3' 'libnotify')
+depends=('dbus-glib' 'gtk3' 'libcanberra' 'libwnck3' 'libnotify')
 makedepends=('mate-common')
 provides=('notification-daemon')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
@@ -18,7 +18,7 @@ sha1sums=('510f0e1b99acfa886910190afd0be94da5cf6fe1')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -34,8 +34,6 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
+
 
 # -*- mode: bash;-*-
- 

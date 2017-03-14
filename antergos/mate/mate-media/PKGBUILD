@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-media
-pkgver=1.16.0
+pkgver=1.18.0
 pkgrel=1
 url="http://mate-desktop.org"
 pkgdesc="MATE Media Tools"
@@ -19,7 +19,7 @@ sha1sums=('e071d27c13e80b182f10a33d7a190825642d6f75')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='mate-desktop'
-_monitored_match_pattern='1.16'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
@@ -29,7 +29,6 @@ build() {
 		--sysconfdir=/etc \
 		--libexecdir=/usr/lib/${pkgname} \
 		--localstatedir=/var \
-		--with-gtk=3.0 \
 		--disable-static
 	make
 }
@@ -38,8 +37,5 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
- 
- 
 
 # -*- mode: bash;-*-
- 

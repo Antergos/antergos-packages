@@ -42,13 +42,12 @@ _package_group_action() {
 	shift 2
 
 	group_directory="${REPO_DIR}/${group}"
-	echo "$group $_command"
 
 	for pkgdir in "${group_directory}"/*
 	do
 		[[ -h "${pkgdir}" ]] && continue
 
-		( { cd "${pkgdir}" && "${_command}" "$@"; } || echo "ERROR exit status in ${pkgdir}" )
+		( { cd "${pkgdir}" && "${_command}" "$@"; } || echo "ERROR exit status in ${pkgdir}"; )
 	done
 }
 
