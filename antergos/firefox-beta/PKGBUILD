@@ -36,23 +36,36 @@ _archpkg_git_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
 
 if [[ "${_buildver}" != "${pkgver}" ]]; then
 	# Release Candidate
-	source=("${_rc_url}/source/firefox-$_majorver.source.tar.xz")
+	_srcfile="source/firefox-${_majorver}.source.tar.xz"
+	_srcurl="${_rc_url}"
 else
-	source=("${_beta_url}/source/firefox-${pkgver}.source.tar.xz")
+	_srcfile="source/firefox-${pkgver}.source.tar.xz"
+	_srcurl="${_beta_url}"
 fi
 
-source+=("fix-wifi-scanner.diff::${_archpkg_git_url}/fix-wifi-scanner.diff?h=packages/firefox"
-		"firefox-install-dir.patch::${_archpkg_git_url}/firefox-install-dir.patch?h=packages/firefox"
-		'vendor.js'
-		"${pkgname}.desktop"
-		'mozconfig')
+validpgpkeys=('14F26682D0916CDD81E37B6D61B7B526D98F0353') # Mozilla Software Releases <release@mozilla.com>
+gpg --keyserver pool.sks-keyservers.net --recv-keys "${validpgpkeys[0]}"
 
-md5sums=('ee947f2784ef7256c34a2aeda61f29da'
-         'e2396b9918aa602427f80d48caf319b4'
-         'dbf14588e85812ee769bd735823a0146'
-         'aa9f776d2187cba09de65cbb02b39ca0'
-         '259ea8127d1f3a72ac23db0a97455472'
-         '607a21e13dc1539889484ae0fbbc4999')
+source=(
+	"${_srcurl}/${_srcfile}"
+	"${_srcurl}/SHA256SUMS"{,.asc}
+	"fix-wifi-scanner.diff::${_archpkg_git_url}/fix-wifi-scanner.diff?h=packages/firefox"
+	"firefox-install-dir.patch::${_archpkg_git_url}/firefox-install-dir.patch?h=packages/firefox"
+	'vendor.js'
+	"${pkgname}.desktop"
+	'mozconfig'
+)
+
+sha256sums=(
+	$(wget -q "${source[1]}" && grep "${_srcfile}" SHA256SUMS | cut -f1 -d ' ')
+	'SKIP'
+	'SKIP'
+	'9765bca5d63fb5525bbd0520b7ab1d27cabaed697e2fc7791400abc3fa4f13b8'
+	'd86e41d87363656ee62e12543e2f5181aadcff448e406ef3218e91865ae775cd'
+	'93c5df00f409988bbfa890ac175103476ead3af68f7501973ee70bd11dc472f8'
+	'0d997e5142d6ba7b1f29a22a68f06690ae2f9eed477238937b97375019f80834'
+	'2be4f98d67aa083e73e241cd5ad48cfc64c13ebc773265e0b066a25154583b06'
+)
 
 # Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
