@@ -21,7 +21,7 @@ groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
 _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 		fr-rpm-bsdtar.patch)
-sha1sums=($(wget -q "${_sha1sums_url}" sha1sums=('90865e0c59bec33ed899c3a0a8d2787aa09d526b'sha1sums=('90865e0c59bec33ed899c3a0a8d2787aa09d526b' grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
+sha1sums=('90865e0c59bec33ed899c3a0a8d2787aa09d526b'
           '219b05a979bf6f249aaae27964f02345fd81168d')
 
 # BEGIN ANTBS METADATA

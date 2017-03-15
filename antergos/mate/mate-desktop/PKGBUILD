@@ -14,7 +14,7 @@ depends=('gtk3' 'startup-notification' 'gobject-introspection')
 makedepends=('wget' 'mate-common' 'yelp-tools')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
-sha1sums=($(wget -q "${_sha1sums_url}" sha1sums=('624d2e7af6416cb81d1d0946ab66bbb34fc7d150')sha1sums=('624d2e7af6416cb81d1d0946ab66bbb34fc7d150') grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
+sha1sums=('624d2e7af6416cb81d1d0946ab66bbb34fc7d150')
 
 # BEGIN ANTBS METADATA
 _autosums='True'

@@ -12,7 +12,7 @@ depends=('gtk3' 'polkit' 'accountsservice')
 makedepends=('wget' 'gobject-introspection' 'mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
-sha1sums=($(wget -q "${_sha1sums_url}" sha1sums=('d4add9b8ad5ffd249f961dbc7f69fd372013bd46')sha1sums=('d4add9b8ad5ffd249f961dbc7f69fd372013bd46') grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
+sha1sums=('d4add9b8ad5ffd249f961dbc7f69fd372013bd46')
 
 
 # BEGIN ANTBS METADATA

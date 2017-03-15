@@ -17,7 +17,7 @@ optdepends=('mate-power-manager: Add power management support.'
 groups=('mate-extra')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
-sha1sums=($(wget -q "${_sha1sums_url}" sha1sums=('81dc31f96028a168456b8435e291090b789a3bea')sha1sums=('81dc31f96028a168456b8435e291090b789a3bea') grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
+sha1sums=('81dc31f96028a168456b8435e291090b789a3bea')
 
 # BEGIN ANTBS METADATA
 _autosums='True'
