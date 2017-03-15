@@ -12,7 +12,7 @@ depends=('caja' 'dbus-glib' 'gksu' 'gtk3' 'gupnp' 'imagemagick' 'samba' 'python-
 makedepends=('wget' 'mate-common')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgbase}-${pkgver}.tar.xz")
 _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
-sha1sums=('9b27e46a731b117815862229c38445ef94afa600')
+sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 
 # BEGIN ANTBS METADATA

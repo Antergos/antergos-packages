@@ -1,0 +1,87 @@
+#!/bin/python
+# -*- coding: utf-8 -*-
+#
+#  do
+#
+#  Copyright © 2017 Antergos
+#
+#  This file is part of The Antergos Build Server, (AntBS).
+#
+#  AntBS is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  AntBS is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  The following additional terms are in effect as per Section 7 of the license:
+#
+#  The preservation of all legal notices and author attributions in
+#  the material or in the Appropriate Legal Notices displayed
+#  by works containing it is required.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with AntBS; If not, see <http://www.gnu.org/licenses/>.
+
+""" Command-line PKGBUILD Maintenance Utility """
+
+import re
+import os
+import click
+
+
+GROUPS = click.Choice(['mate', 'cinnamon'])
+THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_DIR = os.path.realpath(os.path.join(THIS_DIR, '../antergos'))
+MATE_DIR = os.path.join(REPO_DIR, 'mate')
+CINNAMON_DIR = os.path.join(REPO_DIR, 'cinnamon')
+
+
+def _replace_in_file(path, what_to_replace, replace_it_with, count):
+    content = open(path, 'r').read()
+    result, count = re.subn(what_to_replace, replace_it_with, content, count=count, flags=re.M)
+
+    if result == content:
+        return count
+
+    with open(path, 'w') as _file:
+        _file.write(result)
+
+    return count
+
+
+def _get_directory_path(group):
+    path = REPO_DIR
+
+    if 'mate' == group:
+        path = MATE_DIR
+    elif 'cinnamon' == group:
+        path = CINNAMON_DIR
+
+    return path
+
+
+@click.group()
+def do():
+    pass
+
+
+@do.command()
+@click.option('-g', '--group', type=GROUPS, help='Limit scope to PKGBUILDS in group')
+@click.option('-c', '--count', default=0, help='The maximum number of occurrences to be replaced')
+@click.argument('what-to-replace')
+@click.argument('replace-it-with')
+def replace(group, count, what_to_replace, replace_it_with):
+    dirpath = _get_directory_path(group)
+    pkgbuilds = (os.path.join(dirpath, pkgdir, 'PKGBUILD') for pkgdir in os.listdir(dirpath))
+
+    for pkgbuild in pkgbuilds:
+        replaced_count = _replace_in_file(pkgbuild, what_to_replace, replace_it_with, count)
+        click.echo(f'{pkgbuild}: {replaced_count} occurrences replaced')
+
+
+if __name__ == '__main__':
+    do()

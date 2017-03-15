@@ -15,7 +15,7 @@ _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 groups=('mate-extra')
 replaces=("${pkgname}-gstreamer" "${pkgname}-pulseaudio")
 conflicts=("${pkgname}-gstreamer" "${pkgname}-pulseaudio")
-sha1sums=('e071d27c13e80b182f10a33d7a190825642d6f75')
+sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA
 _autosums='True'

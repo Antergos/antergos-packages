@@ -13,7 +13,7 @@ depends=('yelp')
 makedepends=('wget' 'mate-common' 'yelp-tools')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
-sha1sums=('2084e109511dd82c08aafd3a71aa63d4b008df1b')
+sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA
 _autosums='True'

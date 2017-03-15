@@ -17,7 +17,7 @@ depends=('gtk3')
 makedepends=('wget' 'intltool' 'mate-common')
 source=("${pkgname}-${pkgver}::https://github.com/galculator/galculator/archive/v${pkgver}.zip")
 _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
-sha1sums=('085c79519e3e669f44e10c24b2795c27')
+sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA
 _autosums='True'

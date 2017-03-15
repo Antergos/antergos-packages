@@ -13,7 +13,7 @@ makedepends=('wget' 'gobject-introspection' 'mate-common')
 groups=('mate')
 source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
-sha1sums=('40b73ae7a151259c32ecd150c8fb77b5dc696f62')
+sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA
 _autosums='True'
