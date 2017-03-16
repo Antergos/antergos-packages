@@ -12,8 +12,8 @@ depends=('python' 'pyalpm' 'python-gobject' 'python-dbus' 'python-cairo' 'python
 		'python-parted' 'webkit2gtk' 'upower' 'python-mako' 'iso-codes' 'gptfdisk'
 		'python-bugsnag' 'upower')
 conflicts=('cnchi-dev')
-source=("${_pkgname}-${pkgver}.zip::https://github.com/antergos/cnchi/archive/${pkgver}.zip")
-md5sums=('40f996c8a36baa1b5ce8f14acc43d8ca')
+source=("${_pkgname}-${pkgver}.zip::https://github.com/antergos/cnchi/archive/v${pkgver}.zip")
+md5sums=('e9538dc02800d655a2b539f41cd28fde')
 
 
 # BEGIN ANTBS METADATA
