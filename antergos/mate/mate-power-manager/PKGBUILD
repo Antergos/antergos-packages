@@ -23,12 +23,6 @@ _monitored_service='mate-desktop'
 _monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
-prepare() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
-
-	# Work around a problem where the .sgml fails to parse.
-	sed -e 's:@HAVE_DOCBOOK2MAN_TRUE@.*::' -i man/Makefile.in
-}
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
