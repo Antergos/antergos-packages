@@ -8,10 +8,9 @@ pkgdesc="An image viewing and cataloging program for MATE"
 url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('dbus-glib' 'desktop-file-utils' 'gobject-introspection-runtime'
-		'gtk3' 'exempi' 'lcms2' 'libexif' 'libjpeg-turbo' 'librsvg'
-		'mate-desktop' 'python-gobject'
-		'startup-notification' 'zlib')
+depends=('dbus-glib' 'desktop-file-utils' 'gobject-introspection-runtime' 'libpeas'
+		'gtk3' 'exempi' 'lcms2' 'libexif' 'libjpeg-turbo' 'librsvg' 'mate-desktop'
+		'python-gobject' 'startup-notification' 'zlib')
 makedepends=('wget' 'gobject-introspection' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
@@ -34,8 +33,7 @@ build() {
 		--sbindir=/usr/bin \
 		--libexecdir=/usr/lib/${pkgname} \
 		--localstatedir=/var \
-		--with-librsvg \
-		--disable-python
+		--with-librsvg
 	make
 }
 
