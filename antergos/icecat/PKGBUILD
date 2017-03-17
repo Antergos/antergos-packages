@@ -6,10 +6,10 @@
 # Contributor: Muhammad 'MJ' Jassim <UnbreakableMJ@gmail.com> 
 
 pkgname=icecat
-pkgver=45.5.1
+pkgver=45.7.0
 pkgrel=1
 pkgdesc="GNU version of the Firefox browser."
-arch=(i686 x86_64)
+arch=('i686' 'x86_64')
 url="http://www.gnu.org/software/gnuzilla/"
 license=('GPL' 'MPL' 'LGPL')
 depends=('gtk2' 'mozilla-common' 'libxt' 'startup-notification' 'mime-types' 'dbus-glib'
