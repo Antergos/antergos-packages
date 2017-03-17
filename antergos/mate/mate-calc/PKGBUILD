@@ -1,20 +1,19 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Martin Wimpress <code@flexion.org>
-# Contributor: Balló György <ballogyor+arch at gmail dot com>
-# Contributor: Bartłomiej Piotrowski <barthalion@gmail.com>
-# Contributor: SpepS <dreamspepser at yahoo dot it>
-# Contributor: Alexander Fehr <pizzapunk gmail com>
 
-pkgname=galculator
-pkgver=2.1.4
+pkgname=mate-calc
+pkgver=1.18.0
 pkgrel=1
-pkgdesc='GTK+ based scientific calculator'
+pkgdesc='Calculator for MATE'
 arch=('i686' 'x86_64')
-url='http://galculator.sourceforge.net/'
+url='http://www.mate-desktop.org'
 license=('GPL')
 groups=('mate-extra')
 depends=('gtk3')
-makedepends=('wget' 'intltool' 'mate-common')
+makedepends=('wget' 'intltool' 'flex' 'bison' 'mate-common' 'perl-xml-parser' 'yelp-tools')
+conflicts=('galculator' 'mate-calc-git')
+replaces=('galculator')
+provides=('mate-calc' 'galculator')
 source=("${pkgname}-${pkgver}::https://github.com/galculator/galculator/archive/v${pkgver}.zip")
 _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
@@ -22,10 +21,7 @@ sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA
 # BEGIN ANTBS METADATA
 _autosums='True'
 _is_monitored='True'
-_monitored_service='github'
-_monitored_type='tags'
-_monitored_project='galculator'
-_monitored_repo='galculator'
+_monitored_service='mate-desktop'
 # END ANTBS METADATA
 
 build() {
