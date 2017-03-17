@@ -4,6 +4,9 @@ post_install() {
 
 	[[ -e "${_logo}" ]] || ln -s "${_logo_src}" "${_logo}"
 
+	# Don't take any action on non-graphical environments
+	which X || return 0
+
 	/usr/bin/antergos-repo-priority.py 'True' || /usr/bin/antergos-notify.sh
 }
 
