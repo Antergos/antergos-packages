@@ -5,7 +5,7 @@ pkgname=mate-panel
 pkgver=1.18.0
 pkgrel=1
 pkgdesc="Desktop panel for MATE"
-url="http://mate-desktop.org"
+url="https://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('dbus-glib' 'gtk3' 'libwnck3' 'libcanberra' 'libice'
@@ -13,8 +13,8 @@ depends=('dbus-glib' 'gtk3' 'libwnck3' 'libcanberra' 'libice'
 		 'mate-menus' 'mate-desktop')
 makedepends=('wget' 'gobject-introspection' 'mate-common' 'yelp-tools')
 optdepends=('yelp: for reading MATE help documents')
-source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
+source=("https://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 groups=('mate')
 sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 

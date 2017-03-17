@@ -5,7 +5,7 @@ pkgname=atril
 pkgver=1.18.0
 pkgrel=1
 pkgdesc='MATE document viewer'
-url='http://mate-desktop.org'
+url='https://mate-desktop.org'
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('gtk3' 'libsecret' 'libsm' 'libspectre' 'mathjax' 'poppler-glib' 'webkitgtk' 'zlib')
@@ -16,8 +16,8 @@ optdepends=(	'djvulibre: DjVu support'
 			'texlive-bin: DVI support'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')
-source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
+source=("https://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA

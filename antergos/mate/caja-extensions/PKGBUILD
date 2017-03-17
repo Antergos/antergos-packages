@@ -5,13 +5,13 @@ pkgbase=caja-extensions
 pkgname=(caja-extensions-common caja-gksu caja-image-converter caja-open-terminal caja-sendto caja-share)
 pkgver=1.18.0
 pkgrel=2
-url="http://mate-desktop.org"
+url="https://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('caja' 'dbus-glib' 'gksu' 'gtk3' 'gupnp' 'imagemagick' 'samba' 'python-gobject')
 makedepends=('wget' 'mate-common')
-source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgbase}-${pkgver}.tar.xz")
-_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
+source=("https://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgbase}-${pkgver}.tar.xz")
+_sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgbase}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 

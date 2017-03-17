@@ -5,7 +5,7 @@ pkgname=engrampa
 pkgver=1.18.0
 pkgrel=1
 pkgdesc="Archive file manipulator"
-url="http://mate-desktop.org"
+url="https://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('bzip2' 'desktop-file-utils' 'gtk3' 'gzip' 'libarchive' 'tar')
@@ -18,9 +18,9 @@ optdepends=('unrar: for RAR uncompression'
 			'unace: extraction tool for the proprietary ace archive format'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')
-source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
+source=("https://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
 		fr-rpm-bsdtar.patch)
-_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
+_sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1)
           '219b05a979bf6f249aaae27964f02345fd81168d')
 

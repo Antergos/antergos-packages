@@ -5,7 +5,7 @@ pkgname=mate-utils
 pkgver=1.18.0
 pkgrel=1
 pkgdesc="Common MATE utilities for viewing disk usage, logs, and fonts, taking screenshots, managing dictionaries, and searching files"
-url="http://mate-desktop.org"
+url="https://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('desktop-file-utils' 'gtk3' 'libcanberra' 'libgtop' 'libsm' 'zlib')
@@ -13,8 +13,8 @@ makedepends=('wget' 'mate-common' 'mate-panel' 'rarian' 'yelp-tools')
 optdepends=('mate-panel: Look up words in dictionaries from the panel'
 			'yelp: for reading MATE help documents')
 groups=('mate-extra')
-source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
+source=("https://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA

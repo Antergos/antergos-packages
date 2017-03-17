@@ -5,7 +5,7 @@ pkgname=pluma
 pkgver=1.18.0
 pkgrel=1
 pkgdesc="A powerful text editor for the MATE Desktop"
-url="http://mate-desktop.org"
+url="https://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('desktop-file-utils' 'enchant' 'gtk3' 'gtksourceview3' 'iso-codes' 'libsm' 'zenity' 'libpeas')
@@ -13,9 +13,9 @@ makedepends=('wget' 'mate-common' 'yelp-tools' 'python2' 'python')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=(
-	"http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
+	"https://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
 )
-_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
+_sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=(
 	$(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1)
 )

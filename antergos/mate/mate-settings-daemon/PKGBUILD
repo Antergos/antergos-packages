@@ -5,7 +5,7 @@ pkgname=mate-settings-daemon
 pkgver=1.18.0
 pkgrel=1
 pkgdesc="The MATE Settings Daemon"
-url="http://mate-desktop.org"
+url="https://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('dbus-glib' 'dconf' 'fontconfig' 'gtk3' 'libcanberra-pulse'
@@ -15,8 +15,8 @@ makedepends=('wget' 'mate-common')
 groups=('mate')
 replaces=("${pkgname}-gstreamer" "${pkgname}-pulseaudio")
 conflicts=("${pkgname}-gstreamer" "${pkgname}-pulseaudio")
-source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
+source=("https://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA

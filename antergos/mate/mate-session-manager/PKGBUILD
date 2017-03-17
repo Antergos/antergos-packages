@@ -5,7 +5,7 @@ pkgname=mate-session-manager
 pkgver=1.18.0
 pkgrel=1
 pkgdesc="The MATE Session Handler"
-url="http://mate-desktop.org"
+url="https://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL' 'LGPL')
 depends=('dbus-glib' 'gtk3' 'libsm' 'libxtst' 'mate-desktop'
@@ -15,8 +15,8 @@ optdepends=('onboard: On-screen keyboard useful for mobility impaired users'
 			'orca: Screen reader for blind or visually impaired individuals'
 			'xdg-user-dirs-gtk: Add autostart that prompts to rename user directories when switching locales')
 groups=('mate')
-source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
+source=("https://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA

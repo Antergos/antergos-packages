@@ -5,15 +5,15 @@ pkgname=mate-desktop
 pkgver=1.18.0
 pkgrel=1
 pkgdesc="Library with common API for various MATE modules"
-url="http://mate-desktop.org"
+url="https://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL' 'LGPL')
 groups=('mate')
 provides=('mate-desktop-gtk3' 'mate-desktop-schemas')
 depends=('gtk3' 'startup-notification' 'gobject-introspection')
 makedepends=('wget' 'mate-common' 'yelp-tools')
-source=("http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
+source=("https://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA
