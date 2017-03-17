@@ -19,7 +19,7 @@ depends=('accountsservice'          'cjs'                    'libkeybinder3'    
 		                            'gnome-themes-standard' 'networkmanager'         'python2-pillow'
 		 'cinnamon-screensaver'     'gconf'                 'network-manager-applet' 'python2-ptyprocess'
 		 'cinnamon-session'                                 'polkit-gnome'           'python2-pyinotify'
-		 'cinnamon-settings-daemon' 'libgnomekbd'           'python2-cairo'          'webkitgtk'
+		 'cinnamon-settings-daemon' 'libgnomekbd'           'python2-cairo'          'webkit2gtk'
 		 'cinnamon-translations'    'libgnome-keyring'      'python-dbus'            'python2-dbus'
 		 'xapps'                    'wget'                  'iso-flag-png')
 
