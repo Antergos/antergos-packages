@@ -9,7 +9,7 @@ url='http://mate-desktop.org'
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('gtk3' 'libsecret' 'libsm' 'libspectre' 'mathjax' 'poppler-glib' 'webkitgtk' 'zlib')
-makedepends=('wget' 'caja-extensions-common' 'djvulibre' 'gobject-introspection' 'libgxps' 'mate-common'
+makedepends=('wget' 'caja-extensions' 'djvulibre' 'gobject-introspection' 'libgxps' 'mate-common'
 			'texlive-bin' 'yelp-tools')
 optdepends=(	'djvulibre: DjVu support'
 			'libgxps: XPS support'
