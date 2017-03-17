@@ -30,7 +30,7 @@ prepare() {
 	cd "${srcdir}/${_pkgname}-${pkgver}"
 
 	# Don't update icon cache
-	sed -i 's|install \(CODE|#|g' CMakeLists.txt
+	sed -i 's|install (CODE|#|g' CMakeLists.txt
 }
 
 build() {
