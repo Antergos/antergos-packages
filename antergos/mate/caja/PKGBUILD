@@ -8,7 +8,8 @@ pkgdesc='File manager for the MATE desktop'
 url='http://mate-desktop.org'
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('exempi' 'gtk3' 'gvfs' 'libexif' 'python-gobject' 'libxt' 'mate-desktop' 'startup-notification')
+depends=('exempi' 'gtk3' 'gvfs' 'libexif' 'python-gobject' 'libxt' 'mate-desktop'
+		'startup-notification' 'libnotify')
 makedepends=('wget' 'gobject-introspection' 'mate-common')
 optdepends=('gstreamer: automatic media playback when mouseover'
 			'gvfs-smb: To connect to Samba/Windows shares')

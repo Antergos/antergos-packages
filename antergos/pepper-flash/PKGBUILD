@@ -3,7 +3,7 @@
 
 pkgname=pepper-flash
 pkgdesc="Adobe's Pepper Flash plugin"
-pkgver=24.0.0.221
+pkgver=25.0.0.127
 pkgrel=1
 epoch=1
 arch=('i686' 'x86_64')
