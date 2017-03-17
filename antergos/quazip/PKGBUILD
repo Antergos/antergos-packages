@@ -21,9 +21,8 @@ md5sums=('2ba7dd8b1d6dd588374c9fab5c46e76e')
 build() {
   mkdir -p build
   cd build
-  
-  cmake ../$pkgname-$pkgver -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_WITH_QT4:BOOL=OFF 
--DCMAKE_CXX_FLAGS="$CFLAGS -fPIC"
+
+  cmake ../$pkgname-$pkgver -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_WITH_QT4:BOOL=OFF -DCMAKE_CXX_FLAGS="$CFLAGS -fPIC"
   make
 }
 
@@ -31,4 +30,3 @@ package() {
   cd build
   make DESTDIR="$pkgdir" install
 }
-
