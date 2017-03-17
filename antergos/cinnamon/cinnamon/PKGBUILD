@@ -19,8 +19,8 @@ depends=('accountsservice'          'cjs'                    'libkeybinder3'    
 		                            'gnome-themes-standard' 'networkmanager'         'python2-pillow'
 		 'cinnamon-screensaver'     'gconf'                 'network-manager-applet' 'python2-ptyprocess'
 		 'cinnamon-session'                                 'polkit-gnome'           'python2-pyinotify'
-		 'cinnamon-settings-daemon' 'libgnomekbd'           'python2-cairo'          'webkitgtk'
-		 'cinnamon-translations'    'libgnome-keyring'      'python-dbus'            'python2-dbus'
+		 'cinnamon-settings-daemon' 'libgnomekbd'           'python2-cairo'          'cinnamon-translations'
+		 'libgnome-keyring'	    'python-dbus'           'python2-dbus'
 		 'xapps'                    'wget'                  'iso-flag-png')
 
 makedepends=('autoconf-archive' 'intltool' 'gtk-doc' 'gobject-introspection')
