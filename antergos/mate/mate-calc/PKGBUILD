@@ -14,8 +14,8 @@ makedepends=('wget' 'intltool' 'flex' 'bison' 'mate-common' 'perl-xml-parser' 'y
 conflicts=('galculator' 'mate-calc-git')
 replaces=('galculator')
 provides=('mate-calc' 'galculator')
-source=("${pkgname}-${pkgver}::https://github.com/galculator/galculator/archive/v${pkgver}.zip")
-_sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
+source=("https://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
+_sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA
