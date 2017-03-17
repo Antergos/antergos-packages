@@ -9,17 +9,15 @@ url="http://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
 depends=('desktop-file-utils' 'enchant' 'gtk3' 'gtksourceview3' 'iso-codes' 'libsm' 'zenity')
-makedepends=('wget' 'mate-common' 'yelp-tools' 'python2' 'python3')
+makedepends=('wget' 'mate-common' 'yelp-tools' 'python2' 'python')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
 source=(
 	"http://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz"
-	'http://pkgs.fedoraproject.org/cgit/rpms/pluma.git/plain/pluma_diasable-python-plugins-1.5.patch'
 )
 _sha1sums_url="http://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=(
 	$(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1)
-	'5a8d1ced985fd770d8246a2250bc11b4d10a3c49'
 )
 
 
@@ -32,9 +30,6 @@ _monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 
 prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
-
-	# disable non working python plugins for gtk3
-	# patch -Np1 -i ../pluma_diasable-python-plugins-1.5.patch
 }
 
 build() {
