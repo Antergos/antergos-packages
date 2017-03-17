@@ -6,13 +6,13 @@
 pkgname=tomahawk
 pkgver=0.8.4
 _pkgver=${pkgver}
-pkgrel=4
+pkgrel=5
 pkgdesc='A Music Player App written in C++/Qt'
 arch=('i686' 'x86_64')
 url='http://tomahawk-player.org/'
 license=('GPL3')
 # NOTE: The phonon VLC backend supposedly supports networking better than the gstreamer backend.
-depends=('qt5-base' 'qt5-webkit' 'phonon-qt5' 'phonon-qt5-vlc' 'quazip-qt5' 'qtkeychain' 'attica-qt5'
+depends=('qt5-base' 'qt5-webkit' 'phonon-qt5' 'phonon-qt5-vlc' 'quazip' 'qtkeychain' 'attica-qt5'
 		'liblastfm-qt5' 'libechonest-qt5' 'sqlite' 'taglib>=1.10' 'lucene++' 'qca-qt5' 'telepathy-qt5'
 		'qt5-svg' 'qt5-imageformats' 'qt5-tools')
 makedepends=('cmake' 'extra-cmake-modules' 'sparsehash' 'boost' 'websocketpp' 'gnutls' 'git')
