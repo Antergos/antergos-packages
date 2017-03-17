@@ -22,6 +22,7 @@ sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA
 _autosums='True'
 _is_monitored='True'
 _monitored_service='mate-desktop'
+_monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 # END ANTBS METADATA
 
 build() {
