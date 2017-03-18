@@ -3,13 +3,13 @@
 
 pkgname=mate-media
 pkgver=1.18.0
-pkgrel=1
+pkgrel=2
 url="https://mate-desktop.org"
 pkgdesc="MATE Media Tools"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('gtk3' 'libcanberra' 'libmatemixer' 'libunique3' 'mate-desktop>=1.14')
-makedepends=('wget' 'mate-common')
+depends=('gtk3' 'libcanberra')
+makedepends=('wget' 'mate-common' 'libmatemixer' 'mate-desktop')
 source=("https://pub.mate-desktop.org/releases/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
 _sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
 groups=('mate-extra')
