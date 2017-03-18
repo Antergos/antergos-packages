@@ -10,7 +10,7 @@ arch=('i686' 'x86_64')
 license=('GPL')
 depends=('gtk3' 'libgxps' 'libsecret' 'libsm' 'libspectre' 'mathjax' 'poppler-glib' 'webkit2gtk'
 		'zlib' 'gsfonts' 'djvulibre' 't1lib' 'libarchive')
-makedepends=('wget' 'caja-extensions' 'gobject-introspection' 'mate-common' 'docbook-xsl' 'python'
+makedepends=('wget' 'caja-extensions-common' 'gobject-introspection' 'mate-common' 'docbook-xsl' 'python'
 			'texlive-bin' 'yelp-tools' 'texlive-core')
 optdepends=('texlive-bin: DVI support'
 			'yelp: for reading MATE help documents')
