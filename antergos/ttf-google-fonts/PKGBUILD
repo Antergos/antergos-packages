@@ -6,11 +6,11 @@
 # Contributor: Alexander De Sousa <archaur.xandy21@spamgourmet.com>
 
 pkgname=ttf-google-fonts
-pkgver=20150316
+pkgver=20170318
 pkgrel=1
-pkgdesc="TrueType fonts from the Google Fonts project"
+pkgdesc='TrueType fonts from the Google Fonts project'
 arch=('any')
-url="https://github.com/google/fonts"
+url='https://github.com/google/fonts'
 license=('various')
 # About why "cantarell-fonts" is a dependency see comment in package() function.
 depends=('cantarell-fonts'
@@ -18,7 +18,6 @@ depends=('cantarell-fonts'
          'xorg-fonts-encodings'
          'xorg-mkfontdir'
          'xorg-mkfontscale')
-makedepends=('git')
 
 conflicts=('adobe-source-code-pro-fonts'
            'adobe-source-sans-pro-fonts'
