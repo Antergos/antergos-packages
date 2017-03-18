@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-themes
-pkgver=1.18.0
+pkgver=3.22.7
 pkgrel=1
 pkgdesc="Default themes for the MATE desktop"
 url="https://mate-desktop.org"
@@ -12,11 +12,12 @@ depends=('gtk-engines' 'gtk-engine-murrine' 'librsvg' 'mate-icon-theme')
 makedepends=('wget' 'mate-common' 'icon-naming-utils')
 groups=('mate')
 source=("https://pub.mate-desktop.org/releases/themes/${pkgver::(-2)}/${pkgname}-${pkgver}.tar.xz")
-_sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
+_sha1sums_url="https://pub.mate-desktop.org/releases/themes/${pkgver::(-2)}/SHA1SUMS"
 sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA
 _monitored_service='mate-desktop'
+_monitored_project='themes'
 _monitored_match_pattern='3.22'
 # END ANTBS METADATA
 
@@ -35,8 +36,6 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
-
-
 
 # -*- mode: bash;-*-
 
