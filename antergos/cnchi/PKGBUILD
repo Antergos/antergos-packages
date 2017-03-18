@@ -3,7 +3,7 @@
 pkgname=cnchi
 _pkgname=Cnchi
 pkgver=0.14.256
-pkgrel=1
+pkgrel=2
 pkgdesc='A modern, flexible system installer for Linux'
 arch=('any')
 license=('GPL3')
@@ -13,7 +13,7 @@ depends=('python' 'pyalpm' 'python-gobject' 'python-dbus' 'python-cairo' 'python
 		'python-bugsnag' 'upower')
 conflicts=('cnchi-dev')
 source=("${_pkgname}-${pkgver}.zip::https://github.com/antergos/cnchi/archive/v${pkgver}.zip")
-md5sums=('e9538dc02800d655a2b539f41cd28fde')
+md5sums=('c33c96d1cb9306b7a7dd83412c251c75')
 
 
 # BEGIN ANTBS METADATA
