@@ -2,9 +2,9 @@
 # Contributor: nontlikeuname
 
 pkgname=meson-git
-pkgver=0.39.0
-_pkgver=0.39.0
-pkgrel=2
+pkgver=0.39.1
+_pkgver=0.39.1
+pkgrel=1
 pkgdesc="Next-generation build system built with python and powered by Ninja."
 arch=('any')
 url="http://mesonbuild.com/"
@@ -28,7 +28,7 @@ _monitored_repo='meson'
 pkgver() {
 	cd "$srcdir/${pkgname%-git}"
 	LAST_STABLE_RELEASE=$(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=1))
-	printf "%sr%s" "${_pkgver}" "$(git rev-list "${LAST_STABLE_RELEASE}".. --count)"
+	printf "%sr%s" "${LAST_STABLE_RELEASE}" "$(git rev-list "${LAST_STABLE_RELEASE}".. --count)"
 }
 
 
