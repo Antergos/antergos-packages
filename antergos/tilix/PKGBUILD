@@ -10,9 +10,11 @@ url="http://github.com/gnunn1/terminix"
 license=('MPL')
 depends=('gtk3' 'gsettings-desktop-schemas' 'vte3' 'liblphobos')
 optdepends=(
-	'python2-nautilus: for "Open Terminix Here" support in nautilus'
-	'nemo-python: for "Open Terminix Here" support in nemo'
+	'python2-nautilus: for "Open Tilix Here" support in nautilus'
+	'nemo-python: for "Open Tilix Here" support in nemo'
 )
+replaces=('Terminix')
+conflicts=('Terminix')
 source=(
 	"https://github.com/gnunn1/terminix/releases/download/${pkgver}/${pkgname}.zip"
 	'com.gexperts.Tilix.gschema.override'
