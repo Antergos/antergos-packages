@@ -14,10 +14,11 @@ optdepends=(
 	'nemo-python: for "Open Terminix Here" support in nemo'
 )
 source=(
-	"https://github.com/gnunn1/terminix/releases/download/$pkgver/terminix.zip"
+	"https://github.com/gnunn1/terminix/releases/download/${pkgver}/${pkgname}.zip"
 	'com.gexperts.Tilix.gschema.override'
 )
-md5sums=('7c9e74d669b23f5e38c67f34f9f4fecb')
+md5sums=('20d2969d686408051330e9645e70987b'
+         '1ef2c4a8c3fe40c026e405727402da0b')
 
 
 # BEGIN ANTBS METADATA
