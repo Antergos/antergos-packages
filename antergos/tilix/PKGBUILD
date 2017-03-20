@@ -13,8 +13,8 @@ optdepends=(
 	'python2-nautilus: for "Open Tilix Here" support in nautilus'
 	'nemo-python: for "Open Tilix Here" support in nemo'
 )
-replaces=('Terminix')
-conflicts=('Terminix')
+replaces=('terminix')
+conflicts=('terminix')
 source=(
 	"https://github.com/gnunn1/terminix/releases/download/${pkgver}/${pkgname}.zip"
 	'com.gexperts.Tilix.gschema.override'
