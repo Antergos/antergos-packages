@@ -21,6 +21,9 @@ Server = http://sourceforge.net/projects/antergos/files/mirror/$repo/$arch
 ##                                ##
 ###                              ###
 
+# Bulgaria
+Server = http://mirror.host.ag/antergos/$repo/$arch
+
 # Canada
 Server = http://wynsrv.antergos.info/$repo/$arch
 
@@ -44,6 +47,7 @@ Server = http://www.mirrorservice.org/sites/repo.antergos.com/$repo/$arch
 
 # Germany
 Server = http://mirror.de.leaseweb.net/antergos/$repo/$arch
+Server = http://antergos-mirror-a.alpix.eu/$repo/$arch
 
 # Greece
 Server = http://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
