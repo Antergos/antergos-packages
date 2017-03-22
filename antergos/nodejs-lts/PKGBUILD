@@ -16,7 +16,7 @@ arch=('x86_64')
 url='http://nodejs.org/'
 license=('MIT')
 depends=('openssl' 'zlib' 'icu' 'libuv' 'http-parser' 'c-ares')
-makedepends=('python2' 'procps-ng' 'git' 'gpg')
+makedepends=('python2' 'procps-ng' 'git' 'gnupg')
 provides=("nodejs=${pkgver}" "npm=${pkgver}")
 conflicts=('nodejs' 'npm')
 source=(
