@@ -3,7 +3,7 @@
 
 pkgname=firefox-beta
 _pkgname=firefox
-pkgver=53.0b4
+pkgver=53.0b5
 pkgrel=1
 _majorver="${pkgver/rc*}"
 _buildver="${pkgver/*rc}"
@@ -82,6 +82,10 @@ _mozilla_='fa35d4d6-6529-436f-b3a1-8b9af187eca2'
 
 # BEGIN ANTBS METADATA
 _is_monitored='False'
+_monitored_service='http'
+_monitored_type='firefox'
+_monitored_version_url='https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/'
+_monitored_version_url='https://ftp.mozilla.org/pub/firefox/candidates/'
 _autosums='True'
 # END ANTBS METADATA
 
