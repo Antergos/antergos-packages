@@ -4,7 +4,7 @@
 
 _pkgname=firefox
 pkgname=firefox-kde
-pkgver=52.0
+pkgver=52.0.1
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org with openSUSE KDE integration patches."
 arch=('i686' 'x86_64')
@@ -51,7 +51,7 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		$_patchurl/mozilla-language.patch
 		$_patchurl/mozilla-nongnome-proxies.patch
 		$_patchurl/mozilla-reduce-files-per-UnifiedBindings.patch)
-md5sums=('76cf84d46590f60f13b0b3dda65d19ae'
+md5sums=('5374ed76d3bd5a2c1254b2d3997768a9'
          'e2396b9918aa602427f80d48caf319b4'
          'dbf14588e85812ee769bd735823a0146'
          'aa9f776d2187cba09de65cbb02b39ca0'
