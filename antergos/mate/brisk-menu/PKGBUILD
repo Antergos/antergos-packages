@@ -11,12 +11,10 @@ groups=('mate')
 depends=('gtk3' 'mate-panel')
 makedepends=('wget' 'gnome-common')
 source=("https://github.com/solus-project/${pkgname}/releases/download/v${pkgver}/${pkgname}-${pkgver}.tar.xz")
-_sha1sums_url="https://pub.mate-desktop.org/releases/${pkgver::(-2)}/SHA1SUMS"
-md5sums=('76104267448188a1074d714e6f32b187')
+md5sums=('7075b166b111526917c92eeec0c2063b')
 
 
 # BEGIN ANTBS METADATA
-_autosums='True'
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='releases'
