@@ -3,8 +3,8 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.7.735.46
-_chromium=56.0.2924.87
+pkgver=1.8.770.50
+_chromium=57.0.2987.21 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
