@@ -33,16 +33,34 @@ import os
 import click
 
 
-GROUPS = click.Choice(['mate', 'cinnamon'])
+GROUPS = click.Choice(['mate', 'cinnamon', 'liri'])
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.realpath(os.path.join(THIS_DIR, '../antergos'))
+
 MATE_DIR = os.path.join(REPO_DIR, 'mate')
 CINNAMON_DIR = os.path.join(REPO_DIR, 'cinnamon')
+LIRI_DIR = os.path.join(REPO_DIR, 'liri')
+
+GROUP_DIRS = {
+    'cinnamon': CINNAMON_DIR,
+    'liri': LIRI_DIR,
+    'mate': MATE_DIR,
+}
 
 
-def _replace_in_file(path, what_to_replace, replace_it_with, count):
+def _replace_in_file(path, what_to_replace, replace_it_with, count, simple):
     content = open(path, 'r').read()
-    result, count = re.subn(what_to_replace, replace_it_with, content, count=count, flags=re.M)
+
+    if not simple:
+        result, count = re.subn(what_to_replace, replace_it_with, content, count=count, flags=re.M)
+    else:
+        _args = [what_to_replace, replace_it_with]
+        
+        if count > 0:
+            _args.append(count)
+
+        result = content.replace(*_args)
+        count = count if count else 'all'
 
     if result == content:
         return count
@@ -54,12 +72,10 @@ def _replace_in_file(path, what_to_replace, replace_it_with, count):
 
 
 def _get_directory_path(group):
-    path = REPO_DIR
-
-    if 'mate' == group:
-        path = MATE_DIR
-    elif 'cinnamon' == group:
-        path = CINNAMON_DIR
+    try:
+        path = GROUP_DIRS[group]
+    except KeyError:
+        path = REPO_DIR
 
     return path
 
@@ -72,14 +88,19 @@ def do():
 @do.command()
 @click.option('-g', '--group', type=GROUPS, help='Limit scope to PKGBUILDS in group')
 @click.option('-c', '--count', default=0, help='The maximum number of occurrences to be replaced')
+@click.option('-s', '--simple', is_flag=True, help='WHAT_TO_REPLACE is a simple string')
 @click.argument('what-to-replace')
 @click.argument('replace-it-with')
-def replace(group, count, what_to_replace, replace_it_with):
+def replace(group, count, simple, what_to_replace, replace_it_with):
     dirpath = _get_directory_path(group)
-    pkgbuilds = (os.path.join(dirpath, pkgdir, 'PKGBUILD') for pkgdir in os.listdir(dirpath))
+    pkgbuilds = (
+        os.path.join(dirpath, pkgdir, 'PKGBUILD')
+        for pkgdir in os.listdir(dirpath)
+        if os.path.exists(os.path.join(dirpath, pkgdir, 'PKGBUILD'))
+    )
 
     for pkgbuild in pkgbuilds:
-        replaced_count = _replace_in_file(pkgbuild, what_to_replace, replace_it_with, count)
+        replaced_count = _replace_in_file(pkgbuild, what_to_replace, replace_it_with, count, simple)
         click.echo(f'{pkgbuild}: {replaced_count} occurrences replaced')
 
 
