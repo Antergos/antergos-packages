@@ -31,4 +31,4 @@ package() {
 	rm -rf "${pkgdir}/usr/share/icons/ubuntu"**
 }
 
-# -*- mode: bash;-*-
+

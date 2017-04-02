@@ -36,4 +36,4 @@ package() {
 	make -C build DESTDIR="${pkgdir}" install
 }
 
-# -*- mode: bash;-*-
+

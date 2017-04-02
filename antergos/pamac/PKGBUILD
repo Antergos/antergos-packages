@@ -66,4 +66,4 @@ package() {
   make prefix="$pkgdir"/usr sysconfdir="$pkgdir"/etc install
 }
 
-# -*- mode: bash;-*-
+

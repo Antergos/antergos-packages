@@ -67,4 +67,4 @@ package() {
 	install -Dm 644 broadcom-wl-dkms.conf "${pkgdir}/etc/modprobe.d/broadcom-wl-dkms.conf"
 }
 
-# -*- mode: bash;-*-
+

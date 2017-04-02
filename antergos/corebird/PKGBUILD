@@ -37,5 +37,5 @@ package() {
 	make DESTDIR="${pkgdir}" install
 }
 
-# -*- mode: bash;-*-
+
 

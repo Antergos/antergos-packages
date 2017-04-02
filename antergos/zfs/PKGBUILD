@@ -53,4 +53,4 @@ package() {
 	chmod g-w,o-w -R .
 }
 
-# -*- mode: bash;-*-
+

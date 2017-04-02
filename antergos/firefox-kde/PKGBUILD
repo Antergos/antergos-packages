@@ -177,4 +177,4 @@ package() {
 	ln -sf firefox "${pkgdir}/usr/lib/${_pkgname}/firefox-bin"
 }
 
-# -*- mode: bash;-*-
+

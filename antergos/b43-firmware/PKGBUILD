@@ -26,4 +26,4 @@ package() {
 	# Messages
 	#msg "You should add 'b43' to the 'MODULES' array of your '/etc/rc.conf' file."
 }
-# -*- mode: bash;-*-
+

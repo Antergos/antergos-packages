@@ -37,4 +37,4 @@ package() {
   install -d ${pkgdir}/usr/share/applications
   install -m644 "$srcdir/${pkgname}.desktop" "$pkgdir/usr/share/applications"
 }
-# -*- mode: bash;-*-
+

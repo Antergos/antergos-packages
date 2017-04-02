@@ -61,4 +61,4 @@ package() {
 	ln -s "/usr/share/${pkgname}/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
 }
 
-# -*- mode: bash;-*-
+

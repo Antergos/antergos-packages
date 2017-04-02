@@ -29,5 +29,5 @@ package() {
 		install
 }
 
-# -*- mode: bash;-*-
+
 

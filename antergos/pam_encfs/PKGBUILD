@@ -25,4 +25,4 @@ package() {
 	cp pam_encfs.conf ${pkgdir}/etc/security
 }
 
-# -*- mode: bash;-*-
+

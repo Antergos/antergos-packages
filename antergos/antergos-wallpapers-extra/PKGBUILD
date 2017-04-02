@@ -39,4 +39,4 @@ package() {
 	sed -i 's|gnome-wp-list|cinnamon-wp-list|g' "${_bg_path}"
 }
 
-# -*- mode: bash;-*-
+

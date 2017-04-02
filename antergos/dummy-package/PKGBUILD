@@ -21,4 +21,4 @@ package_dummy-package() {
 package_dummy-package-git() {
 	true
 }
-# -*- mode: bash;-*-
+

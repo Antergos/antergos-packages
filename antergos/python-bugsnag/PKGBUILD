@@ -22,4 +22,4 @@ package() {
 	python setup.py install --prefix=/usr --root="${pkgdir}" --skip-build
 }
 
-# -*- mode: bash;-*-
+

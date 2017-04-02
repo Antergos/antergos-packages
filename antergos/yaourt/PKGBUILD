@@ -34,4 +34,4 @@ package() {
 	make PREFIX=/usr sysconfdir=/etc localstatedir=/var DESTDIR="$pkgdir" install
 }
 
-# -*- mode: bash;-*-
+

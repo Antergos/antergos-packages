@@ -60,4 +60,4 @@ package() {
 	done
 }
 
-# -*- mode: bash;-*-
+

@@ -17,4 +17,4 @@ package() {
 	install -m755 Keyboard/ckbcomp ${pkgdir}/usr/bin/
 }
  
-# -*- mode: bash;-*-
+

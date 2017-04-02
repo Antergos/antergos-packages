@@ -67,4 +67,4 @@ package() {
     	fi
 	done
 }
-# -*- mode: bash;-*-
+

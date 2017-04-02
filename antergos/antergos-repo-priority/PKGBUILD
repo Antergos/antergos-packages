@@ -45,4 +45,4 @@ package() {
 	done
 }
 
-# -*- mode: bash;-*-
+

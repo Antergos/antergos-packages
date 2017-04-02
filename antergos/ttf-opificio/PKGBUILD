@@ -16,4 +16,4 @@ package() {
   install -dm755 "${pkgdir}"/usr/share/fonts/TTF
   install -m644 *.ttf "${pkgdir}"/usr/share/fonts/TTF/
 }
-# -*- mode: bash;-*-
+

@@ -25,4 +25,4 @@ package() {
     cp -R data/* "${pkgdir}/usr/share/${pkgname}/"
 }
 
-# -*- mode: bash;-*-
+

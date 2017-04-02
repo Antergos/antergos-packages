@@ -22,4 +22,4 @@ package() {
 	install -d $pkgdir/usr/share/themes/$__dstname
 	cp -r $srcdir/$__realname/openbox-3 $pkgdir/usr/share/themes/$__dstname
 }
-# -*- mode: bash;-*-
+

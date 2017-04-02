@@ -41,4 +41,4 @@ package() {
   cd $srcdir
   tar -xvzf kfaenza-icon-patch-0.3.tar.gz -C $pkgdir/usr/share/icons/KFaenza/
 }
-# -*- mode: bash;-*-
+

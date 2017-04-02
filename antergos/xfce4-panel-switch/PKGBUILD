@@ -25,4 +25,4 @@ package() {
   cd ${srcdir}/${_pkgname}-${pkgver}
   make install DESTDIR=${pkgdir}
 }
-# -*- mode: bash;-*-
+

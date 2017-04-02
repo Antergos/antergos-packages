@@ -35,4 +35,4 @@ package() {
   install -Dm644 MIT "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
   rm -f "$pkgdir/usr/share/man/man1/psd-overlay-helper.1.gz"
 }
-# -*- mode: bash;-*-
+

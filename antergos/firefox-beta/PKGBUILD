@@ -175,4 +175,4 @@ package() {
 	ln -srf "$pkgdir/usr/bin/firefox-beta" "$pkgdir/usr/lib/firefox-beta/firefox-bin"
 }
 
-# -*- mode: bash;-*-
+

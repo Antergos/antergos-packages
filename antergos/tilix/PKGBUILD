@@ -37,4 +37,4 @@ package() {
 	cp "${startdir}/com.gexperts.Tilix.gschema.override" "${pkgdir}/usr/share/glib-2.0/schemas"
 }
 
-# -*- mode: bash;-*-
+

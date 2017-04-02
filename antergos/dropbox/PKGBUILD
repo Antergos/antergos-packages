@@ -50,4 +50,4 @@ package() {
 	rm -f "$pkgdir"/opt/dropbox/library.zip
 	ln -s dropbox "$pkgdir"/opt/dropbox/library.zip
 }
-# -*- mode: bash;-*-
+

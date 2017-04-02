@@ -92,4 +92,4 @@ package() {
 	install -D -m644 LICENSE "$pkgdir"/usr/share/licenses/nodejs/LICENSE
 }
 
-# -*- mode: bash;-*-
+

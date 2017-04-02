@@ -29,4 +29,4 @@ package () {
 	install -Dm644 "ppl.conf" "$pkgdir/etc/ppl.conf"
 }
 
-# -*- mode: bash;-*-
+

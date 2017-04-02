@@ -19,4 +19,4 @@ package() {
   install -Dm644 $srcdir/AboriginalSansREGULAR.ttf $pkgdir/usr/share/fonts/TTF/AboriginalSansREGULAR.ttf
 }
 
-# -*- mode: bash;-*-
+

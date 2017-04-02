@@ -103,4 +103,4 @@ package_plymouth-theme-antergos() {
 	make DESTDIR="${pkgdir}" install
 }
 
-# -*- mode: bash;-*-
+

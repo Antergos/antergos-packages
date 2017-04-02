@@ -53,4 +53,4 @@ package() {
 	cp -r Numix-Square-Light "${pkgdir}/usr/share/icons/"
 }
 
-# -*- mode: bash;-*-
+

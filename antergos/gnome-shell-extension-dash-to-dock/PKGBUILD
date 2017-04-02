@@ -33,4 +33,4 @@ package() {
 		# "${pkgdir}/usr/share/glib-2.0/schemas/org.gnome.shell.extensions.dash-to-dock.gschema.xml"
 }
 
-# -*- mode: bash;-*-
+

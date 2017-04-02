@@ -28,4 +28,4 @@ package() {
 	cp ${srcdir}/${pkgname}-master/confirmDialog.js .
 }
 
-# -*- mode: bash;-*-
+

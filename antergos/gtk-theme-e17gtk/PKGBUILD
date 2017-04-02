@@ -14,4 +14,4 @@ package() {
   mkdir -p "$pkgdir"/usr/share/themes
   cp -r "$srcdir"/E17gtk "$pkgdir"/usr/share/themes
 }
-# -*- mode: bash;-*-
+
