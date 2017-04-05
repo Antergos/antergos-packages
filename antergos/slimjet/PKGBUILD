@@ -29,7 +29,7 @@ _monitored_service='http'
 _monitored_type='file'
 _monitored_file_url='http://www.slimjetbrowser.com/release/slimjet_amd64.deb'
 _monitored_version_url='http://www.slimjet.com/en/dlpage.php'
-_monitored_version_pattern='Stable Version\s*\(\s*([\d\.]+)\s*\)'
+_monitored_version_pattern='/Stable Version\s*\(\s*([\d\.]+)\s*\)/'
 # END ANTBS METADATA
 
 
