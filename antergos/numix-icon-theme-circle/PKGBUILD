@@ -1,8 +1,8 @@
 # Maintainer: Antergos devs <devs@antergos.com>
 
 pkgname=numix-icon-theme-circle
-pkgver=20161123
-_pkgver=16-11-23
+pkgver=20170405
+_pkgver=17-04-05
 pkgrel=1
 pkgdesc='Circle icon theme from the Numix project'
 arch=('any')
