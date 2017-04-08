@@ -10,10 +10,8 @@ url="https://github.com/phocean/TopIcons-plus"
 license=('GPL')
 makedepends=('gnome-common')
 groups=('gnome-shell-extensions')
-source=("${pkgname}-${pkgver}.zip::${url}/archive/v${pkgver}.zip"
-		'Makefile')
-md5sums=('9d03664a515e1f397fb1666d50954853'
-         '22a255d9d5c765f2bcd765f4b95dc0fb')
+source=("${pkgname}-${pkgver}.zip::${url}/archive/v${pkgver}.zip")
+md5sums=('9d03664a515e1f397fb1666d50954853')
 
 
 # BEGIN ANTBS METADATA
@@ -29,10 +27,7 @@ _monitored_match_pattern='/[\d.]+/'
 package() {
 	cd "${srcdir}/TopIcons-plus-${pkgver}"
 
-	cp ../Makefile .
-
-	make
-	make DESTDIR="${pkgdir}" install
+	make INSTALL_PATH="${pkgdir}/usr/share/gnome-shell/extensions" install
 }
 
 
