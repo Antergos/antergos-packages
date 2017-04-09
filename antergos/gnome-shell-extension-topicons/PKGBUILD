@@ -20,7 +20,7 @@ _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='phocean'
 _monitored_repo='TopIcons-plus'
-_monitored_match_pattern='/(\d|\.)+/'
+_monitored_match_pattern='/\d+/'
 # END ANTBS METADATA
 
 
