@@ -30,10 +30,12 @@
 
 import re
 import os
+import subprocess
+
 import click
 
 
-GROUPS = click.Choice(['mate', 'cinnamon', 'liri'])
+GROUPS_CHOICE = click.Choice(['mate', 'cinnamon', 'liri'])
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.realpath(os.path.join(THIS_DIR, '../antergos'))
 
@@ -47,6 +49,9 @@ GROUP_DIRS = {
     'mate': MATE_DIR,
 }
 
+GROUPS = {}
+PATHS = {}
+
 
 def _replace_in_file(path, what_to_replace, replace_it_with, count, simple):
     content = open(path, 'r').read()
@@ -55,7 +60,7 @@ def _replace_in_file(path, what_to_replace, replace_it_with, count, simple):
         result, count = re.subn(what_to_replace, replace_it_with, content, count=count, flags=re.M)
     else:
         _args = [what_to_replace, replace_it_with]
-        
+
         if count > 0:
             _args.append(count)
 
@@ -71,7 +76,34 @@ def _replace_in_file(path, what_to_replace, replace_it_with, count, simple):
     return count
 
 
-def _get_directory_path(group):
+def _run_command(all: bool, group: str, pkgname: str, cmd: list) -> None:
+    paths = []
+
+    if not PATHS:
+        _find_paths()
+
+    if all:
+        paths = [path for pkg, path in PATHS.items()]
+
+    elif group:
+        paths = [path for pkg, path in GROUPS[group].items()]
+
+    elif pkgname:
+        paths = [PATHS[pkgname]]
+
+    if 'updpkgsums' in cmd:
+        _paths = [
+            path for path in paths
+            if '_auto_sums' not in open(os.path.join(path, 'PKGBUILD'), 'r').read()
+        ]
+
+        paths = _paths
+
+    for path in paths:
+        subprocess.run(cmd, cwd=path, universal_newlines=True)
+
+
+def _get_group_directory(group):
     try:
         path = GROUP_DIRS[group]
     except KeyError:
@@ -80,19 +112,54 @@ def _get_directory_path(group):
     return path
 
 
+def _is_active_package(pkgdir: os.DirEntry):
+    return all((
+        pkgdir.is_dir(),
+        not pkgdir.is_symlink(),
+        os.path.exists(os.path.join(pkgdir.path, 'PKGBUILD'))
+    ))
+
+
+def _find_paths():
+    with os.scandir(REPO_DIR) as dirlist:
+        paths = {
+            d.name: d.path
+            for d in dirlist
+            if _is_active_package(d) and d not in GROUP_DIRS
+        }
+
+    group_paths = {}
+
+    for group in GROUP_DIRS:
+        with os.scandir(GROUP_DIRS[group]) as dirlist:
+            GROUPS[group] = [d for d in dirlist if d.is_dir() and not d.is_symlink()]
+
+        with os.scandir(GROUP_DIRS[group]) as dirlist:
+            group_paths.update({
+                d.name: d.path
+                for d in dirlist
+                if _is_active_package(d)
+            })
+
+    paths.update(group_paths)
+    PATHS.update(paths)
+
+    click.echo(PATHS)
+
+
 @click.group()
 def do():
     pass
 
 
 @do.command()
-@click.option('-g', '--group', type=GROUPS, help='Limit scope to PKGBUILDS in group')
+@click.option('-g', '--group', type=GROUPS_CHOICE, help='Limit scope to PKGBUILDS in group')
 @click.option('-c', '--count', default=0, help='The maximum number of occurrences to be replaced')
 @click.option('-s', '--simple', is_flag=True, help='WHAT_TO_REPLACE is a simple string')
 @click.argument('what-to-replace')
 @click.argument('replace-it-with')
 def replace(group, count, simple, what_to_replace, replace_it_with):
-    dirpath = _get_directory_path(group)
+    dirpath = _get_group_directory(group)
     pkgbuilds = (
         os.path.join(dirpath, pkgdir, 'PKGBUILD')
         for pkgdir in os.listdir(dirpath)
@@ -102,6 +169,22 @@ def replace(group, count, simple, what_to_replace, replace_it_with):
     for pkgbuild in pkgbuilds:
         replaced_count = _replace_in_file(pkgbuild, what_to_replace, replace_it_with, count, simple)
         click.echo(f'{pkgbuild}: {replaced_count} occurrences replaced')
+
+
+@do.command()
+@click.option('-a', '--all', is_flag=True, help='Generate .SRCINFO files for all packages.')
+@click.option('-g', '--group', type=GROUPS_CHOICE, help='Generate .SRCINFO files for packages in group.')
+@click.argument('pkgname', default='')
+def mksrcinfo(all, group, pkgname):
+    _run_command(all, group, pkgname, ['mksrcinfo'])
+
+
+@do.command()
+@click.option('-a', '--all', is_flag=True, help='Update checksums for all packages.')
+@click.option('-g', '--group', type=GROUPS_CHOICE, help='Update checksums for packages in group.')
+@click.argument('pkgname', default='')
+def updpkgsums(all, group, pkgname):
+    _run_command(all, group, pkgname, ['mksrcinfo'])
 
 
 if __name__ == '__main__':
