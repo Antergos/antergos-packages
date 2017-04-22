@@ -184,7 +184,7 @@ def mksrcinfo(all, group, pkgname):
 @click.option('-g', '--group', type=GROUPS_CHOICE, help='Update checksums for packages in group.')
 @click.argument('pkgname', default='')
 def updpkgsums(all, group, pkgname):
-    _run_command(all, group, pkgname, ['mksrcinfo'])
+    _run_command(all, group, pkgname, ['updpkgsums'])
 
 
 if __name__ == '__main__':
