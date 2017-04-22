@@ -10,7 +10,7 @@ arch=('x86_64' 'i686')
 license=('GPL3' 'LGPL3')
 depends=('liblouis' 'libxml2')
 makedepends=('autoconf-archive' 'java-environment' 'help2man')
-source=("https://github.com/liblouis/${pkgname}/archive/v${_pkgver}.tar.gz")
+source=("${pkgname}-${_pkgver}::https://github.com/liblouis/${pkgname}/archive/v${_pkgver}.tar.gz")
 md5sums=('4699dff59a6941158ca169a889dd7c3d')
 
 # BEGIN ANTBS METADATA
@@ -24,6 +24,7 @@ _monitored_repo='liblouisutdml'
 build() {
 	cd "${srcdir}/${pkgname}-${_pkgver}"
 
+	./autogen.sh
 	./configure \
 		--prefix=/usr \
 		--libexecdir=/usr/lib/${pkgname}
