@@ -76,6 +76,12 @@ def _replace_in_file(path, what_to_replace, replace_it_with, count, simple):
     return count
 
 
+def _has_autosums(path: str) -> bool:
+    content = open(path, 'r').read()
+
+    return '_autosums' in content or '_auto_sums' in content
+
+
 def _run_command(all: bool, group: str, pkgname: str, cmd: list) -> None:
     paths = []
 
@@ -86,18 +92,16 @@ def _run_command(all: bool, group: str, pkgname: str, cmd: list) -> None:
         paths = [path for pkg, path in PATHS.items()]
 
     elif group:
-        paths = [path for pkg, path in GROUPS[group].items()]
+        paths = [path for path in GROUPS[group]]
 
     elif pkgname:
         paths = [PATHS[pkgname]]
 
     if 'updpkgsums' in cmd:
-        _paths = [
+        paths = [
             path for path in paths
-            if '_auto_sums' not in open(os.path.join(path, 'PKGBUILD'), 'r').read()
+            if not _has_autosums(os.path.join(path, 'PKGBUILD'))
         ]
-
-        paths = _paths
 
     for path in paths:
         subprocess.run(cmd, cwd=path, universal_newlines=True)
@@ -143,8 +147,6 @@ def _find_paths():
 
     paths.update(group_paths)
     PATHS.update(paths)
-
-    click.echo(PATHS)
 
 
 @click.group()
