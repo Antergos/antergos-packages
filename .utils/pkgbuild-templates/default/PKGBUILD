@@ -1,0 +1,42 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+
+pkgname=
+pkgver=
+pkgrel=1
+pkgdesc=''
+url=''
+arch=('x86_64')
+license=('GPL')
+depends=('')
+makedepends=('')
+optdepends=('')
+groups=('')
+source=()
+md5sums=()
+
+# BEGIN ANTBS METADATA
+_autosums='False'
+_is_monitored='True'
+_monitored_service='github'
+_monitored_project=''
+_monitored_repo=''
+_monitored_match_pattern='Optional - remove if not needed.'
+# END ANTBS METADATA
+
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+
+	./configure \
+		--prefix=/usr \
+		--libexecdir=/usr/lib/${pkgname}
+
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+
+	make DESTDIR="${pkgdir}" install
+}
+
