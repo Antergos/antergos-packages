@@ -1,0 +1,41 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+
+pkgname=liblouisutdml
+pkgver=2.7.0alpha1
+_pkgver=2.7.0-alpha1
+pkgrel=1
+pkgdesc='Complete braille transcription services for xml, html, and text documents.'
+url='https://github.com/liblouis/liblouisutdml'
+arch=('x86_64' 'i686')
+license=('GPL3' 'LGPL3')
+depends=('liblouis' 'libxml2')
+makedepends=('autoconf-archive' 'java-environment' 'help2man')
+source=("https://github.com/liblouis/${pkgname}/archive/v${_pkgver}.tar.gz")
+md5sums=('4699dff59a6941158ca169a889dd7c3d')
+
+# BEGIN ANTBS METADATA
+_autosums='False'
+_is_monitored='True'
+_monitored_service='github'
+_monitored_project='liblouis'
+_monitored_repo='liblouisutdml'
+_monitored_match_pattern='Optional - remove if not needed.'
+# END ANTBS METADATA
+
+
+build() {
+	cd "${srcdir}/${pkgname}-${_pkgver}"
+
+	./configure \
+		--prefix=/usr \
+		--libexecdir=/usr/lib/${pkgname}
+
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${_pkgver}"
+
+	make DESTDIR="${pkgdir}" install
+}
+
