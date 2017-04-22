@@ -16,8 +16,8 @@ source=("${pkgname}-${pkgver}::git+https://github.com/uglide/RedisDesktopManager
 		'rdm.sh'
 		'rdm.desktop')
 md5sums=('SKIP'
-		'9b19b5dc979d4c0859694df23c3a5026'
-		'988fc093aa80d800fc4c8373fbfa2d1c')
+         '9b19b5dc979d4c0859694df23c3a5026'
+         '988fc093aa80d800fc4c8373fbfa2d1c')
 
 
 # BEGIN ANTBS METADATA

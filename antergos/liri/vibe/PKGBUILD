@@ -16,7 +16,7 @@ replaces=('libhawaii' 'libpapyros')
 groups=('liri')
 _gitname="${pkgname}"
 source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
-md5sums=('')
+md5sums=('4a715c7744d65ce6c2cdbea43e3bca03')
 
 
 # BEGIN ANTBS METADATA

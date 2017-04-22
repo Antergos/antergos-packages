@@ -29,8 +29,8 @@ source_i686=("https://mirrors.kernel.org/gnu/gnuzilla/${pkgver}/${pkgname}-${pkg
 md5sums=('e81ad01dbc16ba28bf92ba4b7c309ca7'
          'd93fe402b87cd000a869e1fd6badc6c9'
          '0d053487907de4376d67d8f499c5502b')
-md5sums_i686=('5b0c9b1b1074e97c337367c27134e059')
-md5sums_x86_64=('21a9c1ef035a6c46760ec726f854c50d')
+md5sums_i686=('b52d32dae777253d09aac7e39b64a3e8')
+md5sums_x86_64=('8eb34c6852785ee964958cf58404c68c')
 
 
 package () {

@@ -15,7 +15,7 @@ optdepends=('gnome-keyring: provides secret service')
 groups=('email') 
 source=("https://github.com/nylas/N1/releases/download/${pkgver}/N1-${pkgver}.deb")
 install=${pkgname}.install
-md5sums=('SKIP')
+md5sums=('0510570bc107f4329c99b62719d774c4')
 
 
 # BEGIN ANTBS METADATA

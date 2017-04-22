@@ -15,7 +15,7 @@ url='https://github.com/linuxmint/xed'
 
 
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('8c253539b14713884614b4836fa1089f')
+md5sums=('8733f4f6137020117b6b1239fd342417')
 
 
 # BEGIN ANTBS METADATA

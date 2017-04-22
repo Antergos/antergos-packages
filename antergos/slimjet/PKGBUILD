@@ -19,8 +19,8 @@ options=('!emptydirs' '!strip')
 groups=('browser')
 source_i686=("${pkgname}_i386.deb::http://www.slimjet.com/release/${pkgname}_i386.deb")
 source_x86_64=("${pkgname}_amd64.deb::http://www.slimjet.com/release/${pkgname}_amd64.deb")
-md5sums_i686=('')
-md5sums_x86_64=('')
+md5sums_i686=('c8391c12c7045e5f79816af21d350b72')
+md5sums_x86_64=('d004029ad512c39076ab85fdce5ad87c')
 
 
 # BEGIN ANTBS METADATA

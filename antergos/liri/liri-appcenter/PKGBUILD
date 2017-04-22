@@ -14,7 +14,7 @@ conflicts=('liri-appcenter-git')
 groups=('liri')
 _gitname="${pkgname/liri-}"
 source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
-md5sums=('')
+md5sums=('7cd5a28e9c098604d21cb6f547c37f29')
 
 
 # BEGIN ANTBS METADATA

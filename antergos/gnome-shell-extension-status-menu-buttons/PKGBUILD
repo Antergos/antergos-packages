@@ -13,7 +13,7 @@ replaces=('gnome-shell-extension-lockscreen-lightdm')
 conflicts=('gnome-shell-extension-lockscreen-lightdm')
 install=buttons.install
 source=("https://github.com/lots0logs/${pkgname}/archive/master.zip")
-sha256sums=('9f2cd1fb6e33b118e2e42c61f9a8e89d14da792ab5c09924ee0a5ccb22670326')
+sha256sums=('854a3c611fb4a36d75a65c82da58e7e7fa320e87c37ae95336a2d6bd5c72183e')
 
 build() {
 	cd ${srcdir}

@@ -12,7 +12,7 @@ depends=('gtk3' 'rest' 'gstreamer' 'gstreamer' 'gst-plugins-base' 'gst-plugins-g
 		'gst-plugins-bad' 'gst-libav' 'gspell')
 makedepends=('vala' 'gnome-common')
 source=("https://github.com/baedert/corebird/archive/${pkgver}.tar.gz")
-md5sums=('6dce0b5325cf518ffaed143a4522510e')
+md5sums=('ec7e8a97b27ffa407e525aa0ebc05967')
 
 
 # BEGIN ANTBS METADATA

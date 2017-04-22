@@ -16,7 +16,7 @@ optdepends=('gtk2: Netscape plugin support'
             'gst-libav: nonfree media decoding')
 options=('!emptydirs')
 source=("http://webkitgtk.org/releases/webkitgtk-${pkgver}.tar.xz")
-md5sums=('adcbee440d81acfb1ead9ada91bd5e79')
+md5sums=('cb08302a3e140f5487fe757262cf5267')
 
 prepare() {
   mkdir build

@@ -13,7 +13,7 @@ install=$pkgname.install
 source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz"
         'grub2-theme-antergos.install')
 sha256sums=('a80a36bde5fcaa998b72ae8df98ad6c68b8666301b83ccdb0f28c5e0c5ad52a6'
-            '6d2a983554dad557f732029354d5163756ddf0cf024e0fc21df91f4c54b11310')
+            '9841d39f9fdc97de61b78961cd5d491eefaa16e42e9cee1f26e2678445c423b7')
 _allowed_in='main, staging'
 
 package() {

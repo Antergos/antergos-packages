@@ -17,7 +17,7 @@ source=('Makefile'
         'antergos-revoked'
         'antergos-trusted')
 sha256sums=('50eb363938b1ca31d22e702e6e5befc7010d7bacabe55ed884c6f5c4c001cf16'
-            '7e0ead3e7642712fdf26f817fe0fea8e0a2db9cc89b2823ef90749918ee565a8'
+            '18f3ee2735c547b53025c6f850c7535cbdf1f1f6a2d84a679f77c530f6d80dcc'
             'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
             '49c399e9874cf806541565e4a9be15b82b20f58dfb0dbe258e949fe171424d73')
 

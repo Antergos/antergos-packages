@@ -11,7 +11,7 @@ url='https://github.com/transifex/transifex-client'
 license=('GPL2')
 depends=('python' 'python-distribute' 'python-urllib3')
 source=("https://github.com/transifex/transifex-client/archive/${pkgver}.tar.gz")
-md5sums=('')
+md5sums=('521bf5615e22adc7741edb35ef4acd3a')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

@@ -16,8 +16,8 @@ source=('git+http://github.com/numixproject/numix-icon-theme.git'
 		'antergos-ball-for-dark-themes.svg'
 		'antergos-ball-for-light-themes.svg')
 md5sums=('SKIP'
-		'b53a44445cf8db72d38c13c93cb42abe'
-		'7285681ca2f956a4b4c3c0898c895eb8')
+         'b53a44445cf8db72d38c13c93cb42abe'
+         '7285681ca2f956a4b4c3c0898c895eb8')
 
 
 # BEGIN ANTBS METADATA

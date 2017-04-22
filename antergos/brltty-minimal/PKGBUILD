@@ -19,8 +19,8 @@ options=('!emptydirs')
 install=brltty.install
 source=("https://github.com/brltty/brltty/archive/BRLTTY-${pkgver}.tar.gz"
 		'brltty.service')
-md5sums=('7835871c911effd286040225bf5355f8'
-		'0cad54bb5470122535f5e3a11d5ca123')
+md5sums=('101d39e4cde6c6fb177f43fa61fb8eeb'
+         '0cad54bb5470122535f5e3a11d5ca123')
 
 
 # BEGIN ANTBS METADATA

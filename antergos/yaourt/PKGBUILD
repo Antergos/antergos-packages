@@ -14,7 +14,7 @@ optdepends=('aurvote: vote for favorite packages from AUR'
 			'rsync: retrieve PKGBUILD from official repositories')
 backup=('etc/yaourtrc')
 source=("https://github.com/archlinuxfr/yaourt/archive/${pkgver}.zip")
-md5sums=()
+md5sums=('d1eab5ecc6c009df90727cc7711424ef')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

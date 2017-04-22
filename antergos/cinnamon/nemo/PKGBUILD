@@ -16,7 +16,7 @@ makedepends=('gtk-doc' 'gobject-introspection' 'intltool' 'gnome-common'
 			'python-gobject' 'python-polib' 'python2-gobject' 'python2-polib')
 options=('!emptydirs')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/nemo/tarball/${pkgver}")
-md5sums=('6445589502b972cba66aaa649e68bb94')
+md5sums=('54a0bb1e4d83bdaa041c6199c6a3680d')
 
 
 # BEGIN ANTBS METADATA

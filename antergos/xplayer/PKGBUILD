@@ -16,7 +16,7 @@ conflicts=('xplayer-git')
 url='https://github.com/linuxmint/xplayer'
 
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('6295bb19c2125a5439636809e61d9306')
+md5sums=('ffcf02fe7c421f552e4639afa7495aa5')
 
 
 # BEGIN ANTBS METADATA

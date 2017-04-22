@@ -16,7 +16,7 @@ options=('!emptydirs')
 url="https://github.com/linuxmint/cinnamon-settings-daemon"
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-settings-daemon/archive/${pkgver}.tar.gz"
 		'http://pkgs.fedoraproject.org/cgit/rpms/cinnamon-settings-daemon.git/plain/csd-background-manager.patch')
-md5sums=('388c96d551b46eb09ef4d5a71819c3a2'
+md5sums=('c2d20f81d266a243e325298a45fd0510'
          '569d2e9848186353897550ea0c7bcc45')
 
 

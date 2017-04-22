@@ -15,7 +15,7 @@ depends=('gtk3' 'libxkbfile' 'python2' 'glib2' 'libgsystem' 'libpulse'
 makedepends=('intltool' 'gnome-common')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/${pkgver}.tar.gz"
 		'config.patch')
-md5sums=('44b6b9da051246afce8dfbb1b1382827'
+md5sums=('dea9c0db8b97b7872ccdce2d6adab276'
          '4e82d86d4c008e89c7681279146e4292')
 
 

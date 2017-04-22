@@ -13,7 +13,7 @@ conflicts=('liri-themes-git')
 groups=('liri')
 _gitname="${pkgname/liri-}"
 source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
-md5sums=('')
+md5sums=('9971cc7af6cb3a3ca9bd682022c1b750')
 
 
 # BEGIN ANTBS METADATA

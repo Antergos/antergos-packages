@@ -17,7 +17,7 @@ makedepends=('intltool' 'gnome-common' 'docbook-xsl')
 license=('GPL')
 options=('!emptydirs')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-control-center/archive/$pkgver.tar.gz")
-md5sums=('ffc8fdf5cd980eeff512de5c68198f5f')
+md5sums=('b7750bd99216b00a151193192ec0ec23')
 
 
 # BEGIN ANTBS METADATA

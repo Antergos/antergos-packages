@@ -19,8 +19,8 @@ source=(
 	"https://github.com/gnunn1/terminix/releases/download/${pkgver}/${pkgname}.zip"
 	'com.gexperts.Tilix.gschema.override'
 )
-md5sums=('20d2969d686408051330e9645e70987b'
-         '1ef2c4a8c3fe40c026e405727402da0b')
+md5sums=('1a7943de5ba739f6b7db61e50a5b6e49'
+         '6bdbf9269e37d0b771f6a6530f568b59')
 
 
 # BEGIN ANTBS METADATA

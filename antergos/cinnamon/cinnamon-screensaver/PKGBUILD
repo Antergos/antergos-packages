@@ -19,7 +19,7 @@ optdepends=('xscreensaver')
 makedepends=('intltool' 'gnome-common')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/$pkgver.tar.gz"
 		'https://github.com/linuxmint/cinnamon-screensaver/pull/189.patch')
-md5sums=('3442b58f7dd2d0b0e2bbe6ef3c03c0c8'
+md5sums=('a8d5f01cf4e6a1746161359a2b3f095b'
          '266160e7351b86096ed6bde7a5e5c119')
 
 

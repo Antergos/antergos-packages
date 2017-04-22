@@ -23,8 +23,9 @@ source=("${pkgname}-${pkgver}.zip::https://github.com/linuxmint/mintmenu/archive
 		'antergos_compat.patch'
 		"gtk3-port.patch::https://github.com/linuxmint/mintmenu/pull/162.patch"
 		'removescript')
-md5sums=('df4cc1d88e2eead78ffdff000f43f490'
-         '4d6abb89e09046c50d5e7b7de3f243bf'
+md5sums=('d9d329e1ec19dcd7809bcf8487f9f22c'
+         'c20125e503fa22fdf86412cc03c303a4'
+         '504d2ca0b4771146ee03c5137fc7b80b'
          '2aa3bf3f34743b6bd8737b3722c4a567'
          'bcdbc95fc35331f1f5e13a86b9d770f0')
 

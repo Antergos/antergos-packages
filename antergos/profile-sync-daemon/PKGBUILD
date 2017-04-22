@@ -13,7 +13,7 @@ conflicts=('firefox-sync' 'goanysync' 'go-anysync-git' 'iceweasel-sync'
 		'tmpfs-store' 'tmpfs-sync' 'user-profile-sync-daemon')
 source=("$pkgname-$pkgver::https://github.com/graysky2/profile-sync-daemon/archive/v$pkgver.tar.gz")
 install=psd.install
-sha256sums=('')
+md5sums=('159cabc39972be8d72e760a0025b5cd9')
 
 # BEGIN ANTBS METADATA
 _allowed_in=('main' 'staging')

@@ -16,7 +16,7 @@ install="${pkgname}.install"
 source=('git+http://github.com/numixproject/numix-icon-theme-square.git'
 		'https://github.com/numixproject/numix-icon-theme-square/pull/5.patch')
 md5sums=('SKIP'
-		'94bea0f075e8dd0dc9bf1d0f8bacded8')
+         '94bea0f075e8dd0dc9bf1d0f8bacded8')
 
 
 # BEGIN ANTBS METADATA

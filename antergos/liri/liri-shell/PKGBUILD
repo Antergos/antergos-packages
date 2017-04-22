@@ -16,7 +16,7 @@ conflicts=('hawaii-shell-git' 'papyros-shell-git' 'liri-shell-git')
 groups=('liri')
 _gitname="${pkgname/liri-}"
 source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
-md5sums=('')
+md5sums=('afb7e96ddf02f56e08871f79bbfddf48')
 
 # BEGIN ANTBS METADATA
 _is_monitored='False'

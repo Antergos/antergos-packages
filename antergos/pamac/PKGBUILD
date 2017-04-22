@@ -26,7 +26,7 @@ else
 	source=("pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
 fi
 
-md5sums=('1cc1b28b4a1bc20af1800b9e35f288a3')
+md5sums=('3090c9b61478602513914fc3b9eda66c')
 
 
 # BEGIN ANTBS METADATA

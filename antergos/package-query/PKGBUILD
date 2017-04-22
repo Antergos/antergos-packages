@@ -12,7 +12,7 @@ url="https://github.com/archlinuxfr/package-query/"
 license=('GPL')
 depends=('pacman>=4.2' 'curl' 'yajl>=2.0')
 source=("${pkgname}-${_pkgver}::https://github.com/archlinuxfr/${pkgname}/archive/${_commit}.zip")
-md5sums=('')
+md5sums=('0c4466a26766fa673ec28293d2482865')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

@@ -13,7 +13,7 @@ depends=('gtk2' 'gtk-engine-murrine' 'gtk-engines' 'gtk3')
 makedepends=('glib2' 'sassc' 'inkscape')
 groups=('themes' 'themes::gtk')
 source=("https://github.com/adapta-project/${_theme_name}/archive/${pkgver}.tar.gz")
-md5sums=('fa79d9be0677aab1b92cab512f5d4aeb')
+md5sums=('1146a7c19444b7c92c021d7bb7ee9182')
 
 
 # BEGIN ANTBS METADATA

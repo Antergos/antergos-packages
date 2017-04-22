@@ -11,7 +11,7 @@ depends=('gettext' 'pacman' 'sed' 'systemd' 'awk' 'grep')
 provides=('pkgstats=2.3')
 conflicts=('pkgstats')
 source=("https://github.com/Antergos/${pkgname}/archive/master.zip")
-md5sums=('9391c8c918b73b25507a591af4137e90')
+md5sums=('881d3dbc653d40c6ee87560282aefc80')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

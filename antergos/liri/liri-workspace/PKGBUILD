@@ -15,7 +15,7 @@ conflicts=('hawaii-workspace-git' 'liri-workspace')
 groups=('liri')
 _gitname="${pkgname/liri-}"
 source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
-md5sums=('')
+md5sums=('8969143c6e50c2bb6cc4f69d963ca509')
 
 
 # BEGIN ANTBS METADATA

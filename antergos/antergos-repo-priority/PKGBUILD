@@ -11,7 +11,7 @@ url="https://antergos.com/"
 license=('GPL')
 install="${pkgname}.install"
 source=("${pkgname}-${pkgver}.zip::https://github.com/Antergos/${pkgname}/archive/${pkgver}.zip")
-md5sums=('5f2a9e5e7cc4c9d9b86668dd32316653')
+md5sums=('f69bd477ad812ad72383945f2af458fd')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

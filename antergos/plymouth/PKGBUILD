@@ -28,15 +28,15 @@ source=("git+https://anongit.freedesktop.org/git/plymouth#commit=18dd7558"
 		'display-manager.conf')
 
 md5sums=('SKIP'
-		'a2f2c3fff630636872424f409ab3bc3b'
-		'fbdd5d04e3089a214b9056357434df86'
-		'65eb269910f1b81e3f0970af456394ca'
-		'32f04fdbd1eb94ade30d1e63fdcdd9b5'
-		'40c6899440c1bf55ed99eaaffee79501'
-		'165a39dbedcc6e123c8ca05d5b4b2e25'
-		'f79edbbb30c71b0dbcd102c7dd31660b'
-		'0357775c16b5f90f1af485e6a4c80a9e'
-		'150b4946afce1250ae3a9628445a57f3')
+         'a2f2c3fff630636872424f409ab3bc3b'
+         'fbdd5d04e3089a214b9056357434df86'
+         '65eb269910f1b81e3f0970af456394ca'
+         '32f04fdbd1eb94ade30d1e63fdcdd9b5'
+         '40c6899440c1bf55ed99eaaffee79501'
+         '165a39dbedcc6e123c8ca05d5b4b2e25'
+         'f79edbbb30c71b0dbcd102c7dd31660b'
+         '0357775c16b5f90f1af485e6a4c80a9e'
+         '150b4946afce1250ae3a9628445a57f3')
 
 
 prepare() {

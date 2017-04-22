@@ -16,7 +16,7 @@ depends=('clutter' 'gobject-introspection-runtime' 'cinnamon-desktop' 'libcanber
 makedepends=('intltool' 'gnome-doc-utils' 'gnome-common' 'gobject-introspection' 'gtk-doc') 
 options=('!emptydirs')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxmint/muffin/archive/$pkgver.tar.gz")
-md5sums=('68b4bfcf83683c502f53e3d8074862c5')
+md5sums=('62a960615fd943db082652289331e4d5')
 _allowed_in=('staging')
 
 

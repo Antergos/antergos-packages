@@ -15,7 +15,7 @@ makedepends=('pkgconfig' 'boost')
 conflicts=('abiword' 'abiword-plugins')
 url='http://www.abisource.com'
 source=("$_pkgname-$pkgver.tar.gz::http://abisource.com/downloads/$_pkgname/$pkgver/source/$_pkgname-$pkgver.tar.gz")
-md5sums=('e094f6fbf0afc5c5538b4894888e7c346f8ee8f49c9d24821dd696d0734865c6')
+md5sums=('cda6dd58c747c133b421cc7eb18f5796')
 
 build() {
 	cd $_pkgname-$pkgver

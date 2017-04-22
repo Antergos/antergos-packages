@@ -14,7 +14,7 @@ provides=('numix-circle-icon-theme' 'numix-circle-light-icon-theme' 'numix-icon-
 conflicts=('numix-circle-icon-theme' 'numix-circle-light-icon-theme' 'numix-circle-icon-theme-git')
 #options=('!strip')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/numixproject/${pkgname}/archive/${_pkgver}.tar.gz")
-sha256sums=('99f8b6f93e6748d7b5e1307c2b15234063b30bcd263404a35c7c00c768fbb1f5')
+sha256sums=('d277ba6af1fc77f0ecd3912c3ac82114c84ed860b953ec94bb69b49c58585c8f')
 
 package() {
   cd ${pkgname}-${_pkgver}

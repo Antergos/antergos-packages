@@ -14,7 +14,7 @@ conflicts=('xplayer-plparser-git')
 url='https://github.com/linuxmint/xplayer-plparser'
 
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('6295bb19c2125a5439636809e61d9306')
+md5sums=('586fe3e544a4ebf0d450861ac65efb49')
 
 
 # BEGIN ANTBS METADATA

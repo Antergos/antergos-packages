@@ -18,7 +18,7 @@ depends=('qt5-base' 'qt5-webkit' 'phonon-qt5' 'phonon-qt5-vlc' 'quazip' 'qtkeych
 makedepends=('cmake' 'extra-cmake-modules' 'sparsehash' 'boost' 'websocketpp' 'gnutls' 'git')
 groups=('music')
 source=("${pkgname}::git+https://github.com/tomahawk-player/tomahawk.git")
-md5sums=()
+md5sums=('SKIP')
 
 pkgver() {
 	cd "${pkgname}"

@@ -11,7 +11,7 @@ makedepends=('python-setuptools')
 license=('GPL')
 arch=('any')
 source=("https://files.pythonhosted.org/packages/source/w/${_module}/${_module}-${pkgver}.tar.gz")
-md5sums=('48bb8c3ea43df1eb47bc00a2e1ac196f')
+md5sums=('58b426230330fd6ef9bf0e7c509360c2')
 
 
 # BEGIN ANTBS METADATA

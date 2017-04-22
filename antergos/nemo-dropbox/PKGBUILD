@@ -17,7 +17,7 @@ options=('!libtool' '!emptydirs')
 
 source=("http://packages.linuxmint.com/pool/main/n/$pkgname/${pkgname}_${pkgver}%2b${_mintrel}.tar.gz")
 #http://packages.linuxmint.com/pool/main/n/$pkgname/$pkgname_$pkgver%2b$_mintrel.tar.gz
-md5sums=('725d19b9fa05fad32daa9ca5affb29c4')
+md5sums=('24d6028fd8de431e5d1ae65e7a3c7f1c')
 
 build() {
 	cd ${pkgname}-${pkgver}+${_mintrel}

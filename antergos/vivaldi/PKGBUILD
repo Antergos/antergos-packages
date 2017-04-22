@@ -24,11 +24,10 @@ source_x86_64=("https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.
 source=("https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
 		"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 		'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html')
-md5sums=('b687feb24ca152a0b0a2ab5df5cd28d2'
-         'c5dc892cedafc12768e26a00ad8a9174'
+md5sums=('e517736d7c515269f995f4ac44d342c7'
+         'ef09421ad97b8dd2b73172884d9c45e2'
          'd50d8f0a6940791eabc41c4f64e6a3cf')
-md5sums_i686=('4cfebf6dbd17b471332876c74623bd4d')
-md5sums_x86_64=('6e331a647d77b392906c014fb9bf89b3')
+md5sums_x86_64=('d743f6abdfed237384229f0a93ba056b')
 
 
 prepare() {

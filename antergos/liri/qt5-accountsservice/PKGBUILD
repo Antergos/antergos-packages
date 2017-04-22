@@ -14,7 +14,7 @@ conflicts=('qtaccountsservice-git')
 groups=('liri')
 _gitname="${pkgname/5-}"
 source=("https://github.com/lirios/${_gitname}/archive/v${pkgver}.tar.gz")
-md5sums=('')
+md5sums=('a939b6d554e59975d6df526f77c439e0')
 
 
 # BEGIN ANTBS METADATA

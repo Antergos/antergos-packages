@@ -11,7 +11,7 @@ license=('GPL')
 makedepends=('gnome-common')
 groups=('gnome-shell-extensions')
 source=("${pkgname}-${pkgver}.zip::${url}/archive/v${pkgver}.zip")
-md5sums=('9d03664a515e1f397fb1666d50954853')
+md5sums=('23065fe05e234b821ec6741b40ba8711')
 
 
 # BEGIN ANTBS METADATA

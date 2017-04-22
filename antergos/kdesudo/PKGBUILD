@@ -12,7 +12,7 @@ depends=("kdebase-runtime" "sudo" "kdelibs4support" "karchive")
 makedepends=("cmake" "automoc4" "kde-dev-scripts")
 options=(!emptydirs)
 source=('kdesudo.tar.gz')
-md5sums=('')
+md5sums=('db152fc5c1ea8b31fd5c2aeedcc860ab')
 
 
 build() {

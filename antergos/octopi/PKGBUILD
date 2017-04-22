@@ -25,7 +25,7 @@ else
   source=("octopi-${pkgver}.tar.gz::https://github.com/aarnt/octopi/archive/v${pkgver}.tar.gz")
 fi
 source+=('octopi-repoeditor.desktop')
-sha256sums=('97248e1f52565183ec69334d485141f6eaff1988c221cbd0dfd34c8b433ace75'
+sha256sums=('e01c6d959e5663797771b95b47951e3ad11a9abbc7cbb009f1f835404c5ff43e'
             'd2b2aaf515b096dd75dfe62e45e1d16c0d365d7342960cc36e4d19a0ee2f3e00')
 
             

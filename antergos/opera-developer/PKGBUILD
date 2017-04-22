@@ -17,8 +17,8 @@ groups=('browser')
 options=(!strip)
 source_i686=("http://get.geo.opera.com/pub/${pkgname}/${pkgver}/linux/${pkgname}_${pkgver}_i386.deb")
 source_x86_64=("http://get.geo.opera.com/pub/${pkgname}/${pkgver}/linux/${pkgname}_${pkgver}_amd64.deb")
-md5sums_i686=('171949aeaa2bccb6878ccab25c8e1d11')
-md5sums_x86_64=('88f3b29671d1000d477d7f2503764883')
+md5sums_i686=('4159d33c80da3710199566cf52c16e3a')
+md5sums_x86_64=('9679b910abaf3463d37ee2561db6029f')
 
 #prepare() {
 #}

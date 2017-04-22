@@ -13,8 +13,8 @@ options=('!strip')
 depends=("chromium")
 source=('chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html')
 source_x86_64=("https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm")
-md5sums=('')
-md5sums_x86_64=('')
+md5sums=('d50d8f0a6940791eabc41c4f64e6a3cf')
+md5sums_x86_64=('ef09421ad97b8dd2b73172884d9c45e2')
 
 
 package() {

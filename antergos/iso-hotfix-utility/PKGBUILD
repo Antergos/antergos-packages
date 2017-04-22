@@ -9,7 +9,7 @@ depends=('libnotify' 'gettext' 'antergos-mirrorlist')
 url='https://antergos.com/'
 license=('GPL3')
 source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.zip")
-md5sums=('9391c8c918b73b25507a591af4137e90')
+md5sums=('5708ca4efdab558b4b6ec1b964e74c88')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

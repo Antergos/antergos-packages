@@ -9,3 +9,4 @@ license=(GPL)
 depends=(ttf-aboriginal-sans ttf-indic-otf ttf-khmer ttf-myanmar3 ttf-tlwg divehi-fonts)
 source=()
 
+
