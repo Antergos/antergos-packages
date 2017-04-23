@@ -3,8 +3,8 @@
 
 pkgbase=caja-extensions
 pkgname=(caja-extensions-common caja-gksu caja-image-converter caja-open-terminal caja-sendto caja-share)
-pkgver=1.18.0
-pkgrel=2
+pkgver=1.18.1
+pkgrel=1
 url="https://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
