@@ -3,7 +3,7 @@
 
 pkgname=python-xcgf
 pkgver=2017
-pkgrel=1
+pkgrel=2
 pkgdesc="Xyne's common general functions, for internal use."
 arch=('any')
 license=('GPL')
@@ -11,6 +11,7 @@ url='http://xyne.archlinux.ca/projects/python3-xcgf'
 depends=('python')
 replaces=('python3-xcgf')
 conflicts=('python3-xcgf')
+provides=('python3-xcgf')
 source=("http://xyne.archlinux.ca/projects/python3-xcgf/src/python3-xcgf-${pkgver}.tar.xz")
 md5sums=('37ef9d4a150e427d09312f1808ecc92a')
 
@@ -19,4 +20,3 @@ package () {
 	python setup.py install --prefix=/usr --root="$pkgdir" --optimize=1
 }
 
-# -*- mode: bash;-*

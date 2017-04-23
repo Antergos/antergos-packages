@@ -3,7 +3,7 @@
 
 pkgname=python-xcpf
 pkgver=2017
-pkgrel=1
+pkgrel=2
 pkgdesc="Xyne's common Pacman functions, for internal use."
 arch=('any')
 license=('GPL')
@@ -11,6 +11,7 @@ url='http://xyne.archlinux.ca/projects/python3-xcpf'
 depends=('python' 'pyalpm' 'python-xcgf')
 replaces=('python3-xcpf')
 conflicts=('python3-xcpf')
+provides=('python3-xcgf')
 source=("http://xyne.archlinux.ca/projects/python3-xcpf/src/python3-xcpf-${pkgver}.tar.xz")
 md5sums=('52fc784491685654fb5b6312d0e7aa63')
 
