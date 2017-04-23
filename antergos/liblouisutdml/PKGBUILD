@@ -16,6 +16,7 @@ md5sums=('4699dff59a6941158ca169a889dd7c3d')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='github'
+_monitored_type='releases'
 _monitored_project='liblouis'
 _monitored_repo='liblouisutdml'
 # END ANTBS METADATA
