@@ -3,7 +3,7 @@
 # Contributor: Rafael Fontenelle <rafaelff@gnome.org>
 
 pkgname=chrome-gnome-shell
-pkgver=8
+pkgver=9
 pkgrel=1
 pkgdesc="Native integration of extensions.gnome.org with GNOME Shell for Chromium-based browsers."
 arch=('any')
@@ -13,8 +13,8 @@ depends=('gnome-shell' 'python-requests' 'python-gobject')
 makedepends=('cmake' 'jq')
 replaces=('gs-chrome-connector')
 conflicts=('gs-chrome-connector' "${pkgname}-git")
-source=('https://git.gnome.org/browse/chrome-gnome-shell/snapshot/chrome-gnome-shell-8.tar.xz')
-md5sums=('14e0cd17a9bffe05acf2aeea670dfd9a')
+source=("https://git.gnome.org/browse/chrome-gnome-shell/snapshot/chrome-gnome-shell-v${pkgver}.tar.xz")
+md5sums=('cbc7ae29bee7d52460880d12cf4b6632')
 
 
 prepare() {

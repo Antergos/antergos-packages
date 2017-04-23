@@ -2,10 +2,10 @@
 # Contributor: Alessio Biancalana <dottorblaster@gmail.com>
 
 pkgname=gfxboot
-_pkgver=4.5.13
+_pkgver=4.5.20
 _pkgrel=1.1
 pkgver="${_pkgver}.${_pkgrel}"
-pkgrel=2
+pkgrel=1
 arch=('i686' 'x86_64')
 license=(GPL)
 install=gfxboot.install
@@ -15,7 +15,7 @@ depends=('perl-html-parser' 'freetype2' 'cpio' 'nasm')
 makedepends=('rpmextract')
 source=("http://download.opensuse.org/repositories/openSUSE:/Factory/standard/src/${pkgname}-${_pkgver}-${_pkgrel}.src.rpm"
 		'gfxboot.html')
-md5sums=('927c9ab16ea0e7cbc958a92c88f26499'
+md5sums=('a6be990bf9a5a621eef40a17f6e65df3'
          'f824c5bc2f716f8029677cae6956c1c7')
 options=(docs)
 

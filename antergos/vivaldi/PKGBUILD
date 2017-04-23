@@ -3,7 +3,7 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.8.770.50
+pkgver=1.8.770.56
 _chromium=57.0.2987.21 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
@@ -27,7 +27,7 @@ source=("https://commondatastorage.googleapis.com/chromium-browser-official/chro
 md5sums=('e517736d7c515269f995f4ac44d342c7'
          'ef09421ad97b8dd2b73172884d9c45e2'
          'd50d8f0a6940791eabc41c4f64e6a3cf')
-md5sums_x86_64=('d743f6abdfed237384229f0a93ba056b')
+md5sums_x86_64=('1095ee793654d4cd11dc8baf5652d9dd')
 
 
 prepare() {

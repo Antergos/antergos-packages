@@ -1,7 +1,7 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=kmozillahelper
-_pkgver=0.6.5
+_pkgver=5.0.1
 pkgver=${_pkgver}
 pkgrel=1
 pkgdesc="Mozilla KDE integration by openSUSE."
@@ -13,11 +13,11 @@ makedepends=("cmake" "automoc4" "extra-cmake-modules" "git")
 provides=("kmozillahelper-frameworks" "kmozillahelper-kf5")
 conflicts=("kmozillahelper-frameworks" "kmozillahelper-kf5")
 replaces=("kmozillahelper-frameworks" "kmozillahelper-kf5")
-source=("git+https://github.com/openSUSE/kmozillahelper.git")
-md5sums=('SKIP')
+source=("${pkgname}-${pkgver}::https://github.com/openSUSE/kmozillahelper/archive/v${pkgver}.tar.gz")
+md5sums=('58816fb988dc01a1b141a1d70ecd70ef')
 
 pkgver() {
-	cd ${pkgname}
+	cd "${pkgname}-${pkgver}"
 	printf '%s.r%s' "${pkgver}" "$(git rev-list --count HEAD)"
 }
 
@@ -28,7 +28,7 @@ build() {
 	cmake -DCMAKE_INSTALL_PREFIX=/usr \
 		-DBUILD_TESTING=OFF \
 		-DCMAKE_BUILD_TYPE=Release \
-		"${srcdir}/${pkgname}"
+		"${srcdir}/${pkgname}-${pkgver}"
 	make
 }
 

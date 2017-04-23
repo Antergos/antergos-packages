@@ -31,6 +31,7 @@
 import re
 import os
 import subprocess
+from typing import Union
 
 import click
 
@@ -51,77 +52,6 @@ GROUP_DIRS = {
 
 GROUPS = {}
 PATHS = {}
-
-
-def _replace_in_file(path, what_to_replace, replace_it_with, count, simple):
-    content = open(path, 'r').read()
-
-    if not simple:
-        result, count = re.subn(what_to_replace, replace_it_with, content, count=count, flags=re.M)
-    else:
-        _args = [what_to_replace, replace_it_with]
-
-        if count > 0:
-            _args.append(count)
-
-        result = content.replace(*_args)
-        count = count if count else 'all'
-
-    if result == content:
-        return count
-
-    with open(path, 'w') as _file:
-        _file.write(result)
-
-    return count
-
-
-def _has_autosums(path: str) -> bool:
-    content = open(path, 'r').read()
-
-    return '_autosums' in content or '_auto_sums' in content
-
-
-def _run_command(all: bool, group: str, pkgname: str, cmd: list) -> None:
-    paths = []
-
-    if not PATHS:
-        _find_paths()
-
-    if all:
-        paths = [path for pkg, path in PATHS.items()]
-
-    elif group:
-        paths = [path for path in GROUPS[group]]
-
-    elif pkgname:
-        paths = [PATHS[pkgname]]
-
-    if 'updpkgsums' in cmd:
-        paths = [
-            path for path in paths
-            if not _has_autosums(os.path.join(path, 'PKGBUILD'))
-        ]
-
-    for path in paths:
-        subprocess.run(cmd, cwd=path, universal_newlines=True)
-
-
-def _get_group_directory(group):
-    try:
-        path = GROUP_DIRS[group]
-    except KeyError:
-        path = REPO_DIR
-
-    return path
-
-
-def _is_active_package(pkgdir: os.DirEntry):
-    return all((
-        pkgdir.is_dir(),
-        not pkgdir.is_symlink(),
-        os.path.exists(os.path.join(pkgdir.path, 'PKGBUILD'))
-    ))
 
 
 def _find_paths():
@@ -149,6 +79,86 @@ def _find_paths():
     PATHS.update(paths)
 
 
+def _get_group_directory(group):
+    try:
+        path = GROUP_DIRS[group]
+    except KeyError:
+        path = REPO_DIR
+
+    return path
+
+
+def _has_autosums(path: str) -> bool:
+    content = open(path, 'r').read()
+
+    return '_autosums' in content or '_auto_sums' in content
+
+
+def _is_active_package(pkgdir: os.DirEntry):
+    return all((
+        pkgdir.is_dir(),
+        not pkgdir.is_symlink(),
+        os.path.exists(os.path.join(pkgdir.path, 'PKGBUILD'))
+    ))
+
+
+def _replace_in_file(path, what_to_replace, replace_it_with, count, simple):
+    content = open(path, 'r').read()
+
+    if not simple:
+        result, count = re.subn(what_to_replace, replace_it_with, content, count=count, flags=re.M)
+    else:
+        _args = [what_to_replace, replace_it_with]
+
+        if count > 0:
+            _args.append(count)
+
+        result = content.replace(*_args)
+        count = count if count else 'all'
+
+    if result == content:
+        return count
+
+    with open(path, 'w') as _file:
+        _file.write(result)
+
+    return count
+
+
+def _run_command(all: bool, group: str, pkgs: list, cmd: list) -> None:
+    paths = []
+
+    if not PATHS:
+        _find_paths()
+
+    if all:
+        paths = [path for pkg, path in PATHS.items()]
+
+    elif group:
+        paths = [path for path in GROUPS[group]]
+
+    elif pkgs:
+        paths = [PATHS[p] for p in pkgs]
+
+    paths = {
+        path: set(os.listdir(path)) for path in paths
+        if 'updpkgsums' not in cmd or not _has_autosums(os.path.join(path, 'PKGBUILD'))
+    }
+
+    for path, contents in paths.items():
+        subprocess.run(cmd, cwd=path, universal_newlines=True)
+
+        new_contents = set(os.listdir(path))
+
+        if contents == new_contents:
+            continue
+
+        to_remove = [f for f in new_contents - contents if f not in ['PKGBUILD', '.SRCINFO']]
+
+        for item in to_remove:
+            os.remove(os.path.join(path, item))
+
+
 @click.group()
 def do():
     pass
@@ -173,20 +183,29 @@ def replace(group, count, simple, what_to_replace, replace_it_with):
         click.echo(f'{pkgbuild}: {replaced_count} occurrences replaced')
 
 
-@do.command()
+@do.command(help='Update .SRCINFO for packages.')
 @click.option('-a', '--all', is_flag=True, help='Generate .SRCINFO files for all packages.')
-@click.option('-g', '--group', type=GROUPS_CHOICE, help='Generate .SRCINFO files for packages in group.')
-@click.argument('pkgname', default='')
-def mksrcinfo(all, group, pkgname):
-    _run_command(all, group, pkgname, ['mksrcinfo'])
+@click.option('-g', '--group', type=GROUPS_CHOICE, help='Generate .SRCINFO for packages in group.')
+@click.argument('packages', nargs=-1)
+def mksrcinfo(all, group, packages):
+    _run_command(all, group, packages, ['mksrcinfo'])
 
 
-@do.command()
+@do.command(help='Update checksums for packages.')
 @click.option('-a', '--all', is_flag=True, help='Update checksums for all packages.')
 @click.option('-g', '--group', type=GROUPS_CHOICE, help='Update checksums for packages in group.')
-@click.argument('pkgname', default='')
-def updpkgsums(all, group, pkgname):
-    _run_command(all, group, pkgname, ['updpkgsums'])
+@click.argument('packages', nargs=-1)
+def updpkgsums(all, group, packages):
+    _run_command(all, group, packages, ['updpkgsums'])
+
+
+@do.command(help='Update checksums AND .SRCINFO for packages.')
+@click.option('-a', '--all', is_flag=True, help='Update checksums and .SRCINFO for all packages.')
+@click.option('-g', '--group', type=GROUPS_CHOICE, help='Update checksums and .SRCINFO for packages in group.')
+@click.argument('packages', nargs=-1)
+def update(all, group, packages):
+    _run_command(all, group, packages, ['updpkgsums'])
+    _run_command(all, group, packages, ['mksrcinfo'])
 
 
 if __name__ == '__main__':

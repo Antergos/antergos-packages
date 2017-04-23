@@ -5,7 +5,7 @@
 # Contributor: Giovanni Scafora <giovanni@archlinux.org>
 
 pkgname=brltty-minimal
-pkgver=5.3.1
+pkgver=5.5
 pkgrel=1
 pkgdesc='Braille display driver for Linux/Unix'
 arch=('i686' 'x86_64')
@@ -19,16 +19,17 @@ options=('!emptydirs')
 install=brltty.install
 source=("https://github.com/brltty/brltty/archive/BRLTTY-${pkgver}.tar.gz"
 		'brltty.service')
-md5sums=('101d39e4cde6c6fb177f43fa61fb8eeb'
+md5sums=('36ff2aa924f03a238b11b02d06122581'
          '0cad54bb5470122535f5e3a11d5ca123')
 
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='brltty'
 _monitored_repo='brltty'
+_monitored_match_pattern='(?<=BRLTTY-)[\d.]+'
 # END ANTBS METADATA
 
 
