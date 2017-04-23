@@ -4,7 +4,7 @@
 
 _pkgname=firefox
 pkgname=firefox-kde
-pkgver=52.0.2
+pkgver=53.0
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org with openSUSE KDE integration patches."
 arch=('i686' 'x86_64')
@@ -30,7 +30,7 @@ optdepends=('networkmanager: Location detection via available WiFi networks'
 provides=("firefox=${pkgver}")
 conflicts=('firefox')
 options=('!emptydirs' '!makeflags')
-_patchrev=ce8a98f8d8d7
+_patchrev=4665fe34fbce
 _patchurl="http://www.rosenauer.org/hg/mozilla/raw-file/${_patchrev}"
 _archpkg_git_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
 
@@ -38,7 +38,6 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		"fix-wifi-scanner.diff::${_archpkg_git_url}/fix-wifi-scanner.diff?h=packages/firefox"
 		"firefox-install-dir.patch::${_archpkg_git_url}/firefox-install-dir.patch?h=packages/firefox"
 		'vendor.js'
-		"rust-i686.patch::${_archpkg_git_url}/rust-i686.patch?h=packages/firefox"
 		'mozconfig'
 		'firefox.desktop'
 		'kde.js'
@@ -51,18 +50,17 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		$_patchurl/mozilla-language.patch
 		$_patchurl/mozilla-nongnome-proxies.patch
 		$_patchurl/mozilla-reduce-files-per-UnifiedBindings.patch)
-md5sums=('5374ed76d3bd5a2c1254b2d3997768a9'
+md5sums=('73175f850d4ff6068c6af674df20477c'
          'e2396b9918aa602427f80d48caf319b4'
          'dbf14588e85812ee769bd735823a0146'
          'aa9f776d2187cba09de65cbb02b39ca0'
-         '40b197fcf8c855b3902414f4d591b18b'
          '935111ca236a798f9c6b4b9f8ffb1442'
          '9b02198df96be08f2a0a323ac2e6c2a2'
          '75df0f88cc7a7fa7d522459e4ff82cc5'
-         '3b3eb8c2747429887e4a03537932eac5'
-         '688b522c10f805261f07c085848487eb'
+         '46a4971f26c990a66b913ba700c7f3fa'
+         '906efefafcbe3efd44c8827f699c05e2'
          '1fad9a988826d69fe712ea973e43f6da'
-         '4ac0c221feeee260172acf50581b2246'
+         '2ab6215a97ff35fbb46eea83df68f0c7'
          'fa6ac817f576b486419b5f308116a7cd'
          '0c684360f1df4536512d51873c1d243d'
          '4d240471a642270accd515199ca698e4')
@@ -88,9 +86,6 @@ prepare() {
 
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=1314968
 	patch -Np1 -i ../fix-wifi-scanner.diff
-
-	# Build with the rust targets we actually ship
-	patch -Np1 -i ../rust-i686.patch
 
 	# KDE Integration Patches
 	patch -Np1 -i "${srcdir}/mozilla-nongnome-proxies.patch"
