@@ -1,4 +1,4 @@
 #!/bin/bash
 
-export LD_PRELOAD=/usr/lib/libcurl.so.3
+export LD_PRELOAD=/usr/lib/libcurl.so.3:/usr/lib/libssl.so.1.0.0
 exec /opt/gitkraken/gitkraken
