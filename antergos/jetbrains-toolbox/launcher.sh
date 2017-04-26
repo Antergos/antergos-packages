@@ -62,6 +62,6 @@ elif ! versions_match; then
 	exec "${toolbox_system_dir}/jetbrains-toolbox" "$@"
 fi
 
-
+export LD_LIBRARY_PATH="/usr/lib/openssl-1.0:$LD_LIBRARY_PATH"
 exec "${toolbox_user_dir}/bin/jetbrains-toolbox" "$@"
 
