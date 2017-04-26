@@ -9,7 +9,7 @@ url='http://www.jetbrains.com/toolbox/'
 arch=('any')
 options=('!strip' 'emptydirs')
 license=('custom')
-depends=('fuse')
+depends=('fuse' 'openssl-1.0')
 provides=('clion' 'clion-eap' 'phpstorm' 'phpstorm-eap' 'webstorm' 'webstorm-eap' 'rubymine' 'rubymine-eap'
 		'pycharm-pro-eap' 'pycharm-com-eap' 'pycharm-eap' 'pycharm-professional' 'pycharm-community'
 		'intellij-idea-ultimate-edition' 'intellij-idea-community-edition' 'intellij-idea-ue-eap')

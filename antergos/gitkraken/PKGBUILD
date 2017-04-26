@@ -11,7 +11,7 @@ arch=('x86_64')
 license=('custom')
 groups=('development')
 depends=('gtk2' 'git' 'nss' 'libnotify' 'libxtst' 'libgnome-keyring' 'gconf'
-		'alsa-lib' 'libcurl-compat')
+		'alsa-lib' 'libcurl-compat' 'openssl-1.0')
 source=(
 	"https://release.gitkraken.com/linux/v${pkgver}.tar.gz"
 	'GitKraken.desktop'
