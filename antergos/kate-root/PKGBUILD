@@ -1,38 +1,41 @@
-# $Id$
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Maintainer: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
-pkgbase=kate
-pkgname=('kwrite-root'
-         'kate-root')
+pkgname=('kate-root')
+_pkgname=kate
 pkgver=17.04.0
 pkgrel=3
 arch=('x86_64')
 license=('GPL' 'LGPL' 'FDL')
 makedepends=('extra-cmake-modules' 'kdoctools' 'python' 'plasma-framework' 'knewstuff' 'ktexteditor'
              'threadweaver' 'kitemmodels' 'kactivities')
-source=("https://download.kde.org/stable/applications/${pkgver}/src/${pkgbase}-${pkgver}.tar.xz"
-	kate-root.patch
-	kwrite-root.patch)
+source=("https://download.kde.org/stable/applications/${pkgver}/src/${_pkgname}-${pkgver}.tar.xz"
+	kate-root.patch)
 sha256sums=('6c8d1936a2ec3a7c3c71e353da11e483251875f51846b9609667f9beee1a6042'
-            'dedb32281d4cc271c982147e2ce9da3a3e75373838712fc65209b8fcdd720033'
-            '58e8306312392077b74be5c66d3c95b1249cfe656e974879e3aebfee5884b95d')
+            'dedb32281d4cc271c982147e2ce9da3a3e75373838712fc65209b8fcdd720033')
 options=(!emptydirs)
+
+pkgdesc="Advanced Text Editor"
+groups=('kde-applications' 'kdebase')
+url="https://www.kde.org/applications/utilities/kate/"
+depends=('knewstuff' 'ktexteditor' 'threadweaver' 'kitemmodels' 'kactivities' 'hicolor-icon-theme')
+replaces=('kdesdk-kate' 'kate')
+conflicts=('kdesdk-kate' 'kate')
+provides=('kdesdk-kate' 'kate')
+optdepends=('konsole: open a terminal in Kate')
+
 
 prepare() {
   mkdir -p build
 
-  cd ${pkgbase}-${pkgver}/kate
+  cd ${_pkgname}-${pkgver}/kate
   patch -Np1 -i "${srcdir}/kate-root.patch"
-
-  cd ../kwrite
-  patch -Np1 -i "${srcdir}/kwrite-root.patch"
 }
 
 build() {
   cd build
-  cmake ../${pkgbase}-${pkgver} \
+  cmake ../${_pkgname}-${pkgver} \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DKDE_INSTALL_LIBDIR=lib \
@@ -41,36 +44,7 @@ build() {
   make
 }
 
-package_kwrite-root() {
-  pkgdesc="Text Editor"
-  groups=('kde-applications' 'kdebase')
-  url="https://www.kde.org/applications/utilities/kwrite/"
-  depends=('ktexteditor' 'kactivities' 'hicolor-icon-theme')
-  replaces=('kdebase-kwrite' 'kwrite')
-  conflicts=('kdebase-kwrite' 'kwrite')
-  provides=('kdebase-kwrite' 'kwrite')
-
-  cd build
-  make DESTDIR="${pkgdir}" install
-
-  find "$pkgdir" -type f -name '*kate*' -exec rm {} \;
-  rm -r "$pkgdir"/usr/lib/qt/plugins/ktexteditor \
-        "$pkgdir"/usr/share/doc/HTML/*/{kate,katepart} \
-        "$pkgdir"/usr/share/katexmltools \
-        "$pkgdir"/usr/share/locale/*/LC_MESSAGES/{kterustcompletion,tabswitcherplugin}.mo \
-        "$pkgdir"/usr/share/plasma/plasmoids
-}
-
-package_kate-root() {
-  pkgdesc="Advanced Text Editor"
-  groups=('kde-applications' 'kdebase')
-  url="https://www.kde.org/applications/utilities/kate/"
-  depends=('knewstuff' 'ktexteditor' 'threadweaver' 'kitemmodels' 'kactivities' 'hicolor-icon-theme')
-  replaces=('kdesdk-kate' 'kate')
-  conflicts=('kdesdk-kate' 'kate')
-  provides=('kdesdk-kate' 'kate')
-  optdepends=('konsole: open a terminal in Kate')
-
+package() {
   cd build
   make DESTDIR="${pkgdir}" install
 
