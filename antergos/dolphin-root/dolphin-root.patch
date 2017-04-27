@@ -1,0 +1,17 @@
+--- src/main.cpp	2017-04-27 19:07:13.709011861 +0200
++++ src/main-root.cpp	2017-04-27 19:12:01.286608378 +0200
+@@ -42,14 +42,6 @@
+ 
+ extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
+ {
+-#ifndef Q_OS_WIN
+-    // Check whether we are running as root
+-    if (getuid() == 0) {
+-        std::cout << "Executing Dolphin as root is not possible." << std::endl;
+-        return EXIT_FAILURE;
+-    }
+-#endif
+-
+     QApplication app(argc, argv);
+     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("system-file-manager"), app.windowIcon()));
