@@ -1,0 +1,19 @@
+--- src/main.cpp	2017-04-27 19:44:20.360049695 +0200
++++ src/main1.cpp	2017-04-27 19:45:39.674474136 +0200
+@@ -49,16 +49,6 @@
+ 
+ extern "C" Q_DECL_EXPORT int main(int argc, char **argv)
+ {
+-#ifndef Q_OS_WIN
+-    /**
+-     * Check whether we are running as root
+-     **/
+-    if (getuid() == 0) {
+-        std::cout << "Executing KWrite as root is not possible. To edit files as root use:" << std::endl;
+-        std::cout << "SUDO_EDITOR=kwrite sudoedit <file>" << std::endl;
+-        return 0;
+-    }
+-#endif
+     /**
+      * Create application first
+      * Enforce application name even if the executable is renamed

@@ -1,0 +1,19 @@
+--- src/main.cpp	2017-04-27 19:44:06.347139195 +0200
++++ src/main1.cpp	2017-04-27 19:45:24.708211869 +0200
+@@ -59,16 +59,6 @@
+ 
+ int main(int argc, char **argv)
+ {
+-#ifndef Q_OS_WIN
+-    /**
+-     * Check whether we are running as root
+-     **/
+-    if (getuid() == 0) {
+-        std::cout << "Executing Kate as root is not possible. To edit files as root use:" << std::endl;
+-        std::cout << "SUDO_EDITOR=kate sudoedit <file>" << std::endl;
+-        return 0;
+-    }
+-#endif
+     /**
+      * init resources from our static lib
+      */
