@@ -63,6 +63,9 @@ Server = http://mirror.yandex.ru/mirrors/cinnarch/$repo/$arch
 # Spain
 Server = http://softlibre.unizar.es/cinnarch/$repo/$arch
 
+# Sweden
+Server = http://ftp.acc.umu.se/mirror/antergos.com/$repo/$arch
+
 # USA
 Server = http://mirrors.tuxns.net/antergos/$repo/$arch
 Server = http://mirror.us.leaseweb.net/antergos/$repo/$arch
@@ -73,4 +76,5 @@ Server = http://repo.antergos.info/$repo/$arch
 
 # Vietnam
 Server = http://mirror.freedif.org/Antergos/$repo/$arch
+Server = http://mirror.vinahost.vn/antergos/$repo/$arch
 
