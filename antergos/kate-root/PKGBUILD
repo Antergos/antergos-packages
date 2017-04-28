@@ -5,7 +5,7 @@
 pkgname=('kate-root')
 _pkgname=kate
 pkgver=17.04.0
-pkgrel=3
+pkgrel=4
 arch=('x86_64')
 license=('GPL' 'LGPL' 'FDL')
 makedepends=('extra-cmake-modules' 'kdoctools' 'python' 'plasma-framework' 'knewstuff' 'ktexteditor'
@@ -20,7 +20,6 @@ pkgdesc="Advanced Text Editor"
 groups=('kde-applications' 'kdebase')
 url="https://www.kde.org/applications/utilities/kate/"
 depends=('knewstuff' 'ktexteditor' 'threadweaver' 'kitemmodels' 'kactivities' 'hicolor-icon-theme')
-replaces=('kdesdk-kate' 'kate')
 conflicts=('kdesdk-kate' 'kate')
 provides=('kdesdk-kate' 'kate')
 optdepends=('konsole: open a terminal in Kate')
