@@ -6,7 +6,7 @@
 pkgname=dolphin-root
 _pkgname=dolphin
 pkgver=17.04.0
-pkgrel=1
+pkgrel=2
 pkgdesc="File Manager"
 arch=(x86_64)
 url="https://kde.org/applications/system/dolphin/"
@@ -15,8 +15,8 @@ depends=(baloo-widgets knewstuff kio-extras kuiserver kcmutils)
 makedepends=(extra-cmake-modules kdoctools python)
 optdepends=('kde-cli-tools: for editing file type options' 'ffmpegthumbs: video thumbnails' 
             'ruby: installing new service menus from KDE Store' 'kdegraphics-thumbnailers: PDF and PS thumbnails' 'konsole: terminal panel')
-conflicts=('kdebase-dolphin<15.08')
-replaces=(kdebase-dolphin dolphin)
+conflicts=('kdebase-dolphin<15.08' dolphin)
+provides=(kdebase-dolphin dolphin)
 groups=(kde-applications kdebase)
 source=("https://download.kde.org/stable/applications/$pkgver/src/$_pkgname-$pkgver.tar.xz"
 	dolphin-root.patch)
