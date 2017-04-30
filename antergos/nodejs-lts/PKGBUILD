@@ -10,7 +10,7 @@
 
 pkgname=nodejs-lts
 pkgver=6.10.2
-pkgrel=1
+pkgrel=2
 pkgdesc="JavaScript runtime built on Chrome's V8 JavaScript engine."
 arch=('x86_64')
 url='http://nodejs.org/'
