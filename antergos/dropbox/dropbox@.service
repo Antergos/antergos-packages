@@ -1,6 +1,6 @@
 [Unit]
 Description=Dropbox
-After=local-fs.target network.target systemd-user-sessions
+After=local-fs.target network.target systemd-user-sessions.target
 
 [Service]
 Type=simple
@@ -13,4 +13,3 @@ Environment=DISPLAY=:0
 
 [Install]
 WantedBy=multi-user.target
-

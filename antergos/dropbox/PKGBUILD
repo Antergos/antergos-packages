@@ -5,9 +5,9 @@
 
 pkgname=dropbox
 pkgver=25.4.28
-pkgrel=1
+pkgrel=2
 pkgdesc="A free service that lets you bring your photos, docs, and videos anywhere and share them easily."
-arch=("i686" "x86_64")
+arch=("x86_64")
 url="http://www.dropbox.com"
 license=(custom)
 depends=("dbus-glib" "libsm" "libxslt")
@@ -15,22 +15,18 @@ conflicts=("dropbox-experimental")
 groups=('cloud-storage')
 options=('!strip' '!upx')
 install="dropbox.install"
-
-
-source_i686=("https://d1ilhw0800yew8.cloudfront.net/client/dropbox-lnx.x86-${pkgver}.tar.gz")
-source_x86_64=("https://d1ilhw0800yew8.cloudfront.net/client/dropbox-lnx.x86_64-${pkgver}.tar.gz")
-source+=("dropbox.png"
-		"dropbox.desktop"
-		"terms.txt"
-		"dropbox.service"
-		"dropbox@.service")
-md5sums=('2be5a57e477adf82a7d9b7fe77f22086'
+source=("https://d1ilhw0800yew8.cloudfront.net/client/dropbox-lnx.x86_64-${pkgver}.tar.gz"
+        "dropbox.png"
+        "dropbox.desktop"
+        "terms.txt"
+        "dropbox.service"
+        "dropbox@.service")
+md5sums=('1816b71534744bfde2245752ea7ff84f'
+         '2be5a57e477adf82a7d9b7fe77f22086'
          'f3350cc0fb7b5f4fb6f2c0adda7e1260'
          '9e140f8de1bab8f26165068bb2c5e8b4'
          '2301498f15f87836ea9923269e2f23be'
          'bf7692b7f5c823a5ef47deb10ce3b0dc')
-md5sums_i686=('306888741ec9295d6669d96f53e60733')
-md5sums_x86_64=('1816b71534744bfde2245752ea7ff84f')
 
 #https://www.dropbox.com/release_notes/rss.xml
 
@@ -50,4 +46,3 @@ package() {
 	rm -f "$pkgdir"/opt/dropbox/library.zip
 	ln -s dropbox "$pkgdir"/opt/dropbox/library.zip
 }
-
