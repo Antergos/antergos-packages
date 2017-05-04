@@ -11,11 +11,11 @@ arch=(i686 x86_64)
 license=(GPL LGPL)
 groups=('cinnamon')
 depends=('gtk3' 'libxkbfile' 'python2' 'glib2' 'libgsystem' 'libpulse'
-		'gobject-introspection' 'python2-gobject')
+		'gobject-introspection' 'python2-gobject' 'accountsservice')
 makedepends=('intltool' 'gnome-common')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/${pkgver}.tar.gz"
 		'config.patch')
-md5sums=('dea9c0db8b97b7872ccdce2d6adab276'
+md5sums=('776448c29d43989a7432c23c32497e3f'
          '4e82d86d4c008e89c7681279146e4292')
 
 

@@ -4,16 +4,16 @@
 
 pkgname=cjs
 pkgver=3.4.0
-pkgrel=1.1
+pkgrel=1
 pkgdesc="Javascript Bindings for Cinnamon"
 arch=(i686 x86_64)
 url="https://github.com/linuxmint/cjs"
 license=(GPL)
 groups=('cinnamon')
-depends=(cairo gobject-introspection-runtime js dbus-glib)
-makedepends=(gnome-common python2 gobject-introspection)
+depends=('cairo' 'gobject-introspection-runtime' 'js38' 'dbus-glib')
+makedepends=('gnome-common' 'python2' 'gobject-introspection')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cjs/archive/${pkgver}.tar.gz")
-md5sums=('afaf516ce47815142c4386be194fe9da')
+md5sums=('f44a290adafb84b18c73a1a501058fcb')
 
 
 # BEGIN ANTBS METADATA

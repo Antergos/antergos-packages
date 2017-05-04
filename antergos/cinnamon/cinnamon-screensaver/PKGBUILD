@@ -5,7 +5,7 @@
 
 pkgname=cinnamon-screensaver
 pkgver=3.4.0
-pkgrel=4
+pkgrel=1
 pkgdesc="Screensaver designed to integrate well with the Cinnamon desktop."
 arch=('i686' 'x86_64')
 license=('GPL')
@@ -17,10 +17,8 @@ depends=('cinnamon-desktop' 'cinnamon-translations' 'dbus-glib' 'libgnomekbd' 'w
 		'accountsservice' 'python-xlib' 'xapps')
 optdepends=('xscreensaver')
 makedepends=('intltool' 'gnome-common')
-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/$pkgver.tar.gz"
-		'https://github.com/linuxmint/cinnamon-screensaver/pull/189.patch')
-md5sums=('a8d5f01cf4e6a1746161359a2b3f095b'
-         '266160e7351b86096ed6bde7a5e5c119')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/$pkgver.tar.gz")
+md5sums=('3ef632b19ab85ed8566c3f575271c6c7')
 
 
 # BEGIN ANTBS METADATA
@@ -34,9 +32,6 @@ _monitored_repo='cinnamon-screensaver'
 
 build() {
 	cd "${pkgname}-${pkgver}"
-
-	# https://github.com/linuxmint/cinnamon-screensaver/pull/189
-	patch -Np1 -i ../189.patch
 
 	./autogen.sh \
 		--prefix=/usr \
