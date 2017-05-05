@@ -16,6 +16,8 @@ _sha1sums_url="https://pub.mate-desktop.org/releases/themes/${pkgver::(-2)}/SHA1
 sha1sums=($(wget -q "${_sha1sums_url}" && grep "${pkgname}-${pkgver}.tar.xz" SHA1SUMS | cut -f1))
 
 # BEGIN ANTBS METADATA
+_autosums='True'
+_is_monitored='True'
 _monitored_service='mate-desktop'
 _monitored_project='themes'
 _monitored_match_pattern='3.22'
