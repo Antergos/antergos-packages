@@ -21,7 +21,7 @@ depends=('accountsservice'          'cjs'                    'libkeybinder3'    
 		 'cinnamon-session'                                 'polkit-gnome'           'python2-pyinotify'
 		 'cinnamon-settings-daemon' 'libgnomekbd'           'python2-cairo'          'webkit2gtk'
 		 'cinnamon-translations'    'libgnome-keyring'      'python-dbus'            'python2-dbus'
-		 'xapps'                    'wget'                  'iso-flag-png')
+		 'xapps'                    'wget'                  'iso-flag-png'           'systemd-manager')
 
 makedepends=('autoconf-archive' 'intltool' 'gtk-doc' 'gobject-introspection')
 conflicts=('mint-cinnamon-themes')
