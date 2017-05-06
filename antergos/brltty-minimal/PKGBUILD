@@ -29,7 +29,7 @@ _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='brltty'
 _monitored_repo='brltty'
-_monitored_match_pattern='(?<=BRLTTY-)[\d.]+'
+_monitored_match_pattern='/(?<=BRLTTY-)[\d.]+/'
 # END ANTBS METADATA
 
 
