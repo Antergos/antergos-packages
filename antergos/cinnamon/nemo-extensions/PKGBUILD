@@ -22,8 +22,12 @@ depends=('nemo' 'file-roller' 'cjs' 'clutter-gtk' 'clutter-gst' 'gst-plugins-goo
 		'libgnome-keyring' 'python2-mutagen')
 makedepends=('gnome-common' 'gtk-doc' 'intltool' 'gobject-introspection' 'python2-distutils-extra'
 			'python2-docutils' 'pygtk' 'python2-gobject2')
-source=("${pkgbase}-${pkgver}.tar.gz::https://github.com/linuxmint/nemo-extensions/archive/${pkgver}.tar.gz")
-sha256sums=('68dadce98c17321c3c22e596452a1b7aa0842c5faa05688734430857e037b3f2')
+source=("${pkgbase}-${pkgver}.tar.gz::https://github.com/linuxmint/nemo-extensions/archive/${pkgver}.tar.gz"
+		'https://github.com/linuxmint/nemo-extensions/pull/212.patch'
+		'https://github.com/linuxmint/nemo-extensions/pull/213.patch')
+md5sums=('b8aff74acc98be098fe46a54dcb5c35f'
+         '8d600fa3592f32733af5adb3d627ef78'
+         'e675f49ed826492d8e402a1005d08f94')
 
 
 # BEGIN ANTBS METADATA
@@ -49,28 +53,18 @@ _setup.py() {
 prepare() {
 	cd ${pkgbase}-${pkgver}
 
+	# seahorse-nautilus conflict
+	# https://github.com/linuxmint/nemo-extensions/pull/213.patch
+	patch -Np1 -i ../212.patch
+
+	# nemo-dropbox makefile error
+	# https://github.com/linuxmint/nemo-extensions/pull/213.patch
+	patch -Np1 -i ../213.patch
+
 	# Python2 fix
 	find -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
 	sed -i 's/<<EOF | python/&2/g' nemo-dropbox/configure.ac
 	sed -i 's|python|&2|g' nemo-dropbox/Makefile.am
-
-	# Fix error in nemo-dropbox Makefile
-	sed -i 's|dropbox.txt.in dropbox|dropbox dropbox.txt.in|g' nemo-dropbox/Makefile.am
-
-	# Fix path for nemo-python
-	sed -i 's|libdirsuffix="/i386-linux-gnu/"|libdirsuffix=""|' nemo-python/m4/python.m4
-
-	# Fix conflict with nautilus-seahorse
-	cd nemo-seahorse
-	sed -i '
-		s|\("seahorse-tool"\)|("seahorse-tool-nemo")|g;
-		s| seahorse-tool | seahorse-tool-nemo |g;
-		s|org.gnome.seahorse.nautilus|org.nemo.seahorse|g' \
-		nemo-ext/nemo-seahorse.c \
-		tool/seahorse-tool.1 \
-		data/org.gnome.seahorse.nautilus.convert \
-		data/org.gnome.seahorse.nautilus.gschema.xml \
-		data/org.gnome.seahorse.nautilus.window.gschema.xml
 }
 
 build() {
@@ -96,13 +90,6 @@ build() {
 	for pkg in "${_configure_pkgs[@]}"
 	do
 		cd "${pkg}"
-		
-		if [[ "${pkg}" = 'nemo-seahorse' ]]; then
-			_extra_args='--program-suffix=-nemo'
-		else
-			_extra_args=''
-		fi
-
  		PYTHON=python2 autoreconf -fi
 
 		if [[ "${pkg}" = 'nemo-dropbox' ]]; then
@@ -115,8 +102,7 @@ build() {
 			--localstatedir=/var \
 			--libexecdir="/usr/lib/${pkg}" \
 			--disable-static \
-			--disable-schemas-compile \
-			"${_extra_args}"
+			--disable-schemas-compile
 		make
 		cd -
 	done
@@ -153,7 +139,7 @@ package_nemo-audio-tab() {
 }
 
 package_nemo-emblems() {
-	pkgdesc="Change your folder and file emblems in Nemo"
+	pkgdesc='Change your folder and file emblems in Nemo'
 	depends=('nemo-python')
 	makedepends=('python2-distutils-extra')
 
@@ -205,18 +191,6 @@ package_nemo-seahorse(){
 	depends=('nemo' 'libcryptui' 'gcr' 'libgnome-keyring')
 
 	_make_install
-
-	# Conflict with seahorse-nautilus
-	cd "${pkgdir}/usr/share/applications"
-	mv seahorse-pgp-encrypted.desktop nemo-seahorse-pgp-encrypted.desktop
-	mv seahorse-pgp-signature.desktop nemo-seahorse-pgp-signature.desktop
-	mv seahorse-pgp-keys.desktop nemo-seahorse-pgp-keys.desktop
-	cd "${pkgdir}/usr/share/GConf/gsettings"
-	mv org.gnome.seahorse.nautilus.convert org.nemo.seahorse.convert
-	cd "${pkgdir}/usr/share/glib-2.0/schemas"
-	mv org.gnome.seahorse.nautilus.gschema.xml org.nemo.seahorse.gschema.xml
-	mv org.gnome.seahorse.nautilus.window.gschema.xml org.nemo.seahorse.window.gschema.xml
-
 }
 
 package_nemo-share(){
@@ -225,61 +199,5 @@ package_nemo-share(){
 
 	_make_install
 }
-
-# package_nemo-media-columns(){
-# 	cd ${pkgbase}-${_pkgver}/nemo-media-columns
-
-# 	pkgdesc=("A Nemo extension to display music/EXIF and PDF metadata info in the Nemo List View")
-# 	arch=(any)
-
-#   install -d ${pkgdir}/usr/share/nemo-python/extensions/
-# 	install -Dm755 ${srcdir}/nemo-media-columns.py \
-# 			${pkgdir}/usr/share/nemo-python/extensions/nemo-media-columns.py
-# }
-
-# package_nemo-pastebin(){
-# 	cd ${pkgbase}-${_pkgver}/nemo-pastebin
-
-# 	pkgdesc="Nemo extension to send files to a pastebin"
-# 	arch=(any)
-# 	depends=(nemo pastebinit nemo-python)
-#   install=nemo-pastebin.install
-
-# 	python2 ./setup.py install --prefix=/usr --root=${pkgdir} \
-# 		--no-compile -O0
-# }
-
-# package_nemo-compare() {
-#   cd ${pkgbase}-${_pkgver}/nemo-compare
-
-#   pkgdesc="Context menu comparison extension for Nemo file manager"
-#   depends=(python2 python2-xdg meld nemo-python)
-
-#   install -d ${pkgdir}/usr/share/applications/
-#   install -d ${pkgdir}/usr/share/nemo-compare/
-
-#   install -Dm755 ${srcdir}/data/nemo-compare-preferences.desktop \
-#                   /usr/share/applications/nemo-compare-preferences.desktop
-#   install -Dm755 ${srcdir}/data/nemo-compare-notification \
-#                   /usr/share/nemo-compare/nemo-compare-notification
-#   install -Dm755 ${srcdir}/src/nemo-compare.py \
-#                   /usr/share/nemo-compare/nemo-compare.py
-#   install -Dm755 ${srcdir}/src/utils.py \
-#                   /usr/share/nemo-compare/utils.py
-#   install -Dm755 ${srcdir}/src/nemo-compare-preferences.py \
-#                   /usr/share/nemo-compare/nemo-compare-preferences.py
-
-# }
-
-
-# package_nemo-rabbitvcs(){
-# 	cd ${pkgbase}-${_pkgver}/nemo-rabbitvcs
-
-#   depends=(nemo-python python2-dbus)
-
-#   install -d ${pkgdir}/usr/share/nemo-python/extensions/
-#   install -Dm755 ${srcdir}/RabbitVCS.py \
-#       ${pkgdir}/usr/share/nemo-python/extensions/RabbitVCS.py
-# }
 
  
