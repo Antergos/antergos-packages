@@ -2,7 +2,7 @@
 # Contributor: Nate Simon <aurpkg (at natesimon.net)>
 
 pkgname=xplayer
-pkgver=1.4.0
+pkgver=1.4.1
 pkgrel=1
 pkgdesc="Simple cross-desktop media player built with GTK3 by the XApps Project."
 arch=('i686' 'x86_64')
