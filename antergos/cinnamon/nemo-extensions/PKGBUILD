@@ -106,7 +106,7 @@ build() {
  		PYTHON=python2 autoreconf -fi
 
 		if [[ "${pkg}" = 'nemo-dropbox' ]]; then
-			sed -i 's|rst2man.py|/usr/bin/rst2man2.py|g' configure
+			sed -i 's|python rst2man.py|python2 /usr/bin/rst2man2.py|g' configure
 		fi
 
 		PYTHON=python2 ./configure \
