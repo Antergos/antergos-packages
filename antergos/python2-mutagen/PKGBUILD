@@ -1,0 +1,29 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+
+pkgname='python2-mutagen'
+pkgver=1.37
+pkgrel=1
+pkgdesc='Read and write audio tags for many formats'
+url='https://github.com/quodlibet/mutagen'
+depends=('python2')
+makedepends=('python2-setuptools')
+license=('GPL2')
+arch=('any')
+source=("https://github.com/quodlibet/mutagen/archive/release-${pkgver}.tar.gz")
+md5sums=('32ba118e6cd78b670182139d05e89023')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='tags'
+_monitored_project='mutagen'
+_monitored_repo='quodlibet'
+_monitored_match_pattern='/(?<=release-)[\d.]+/'
+# END ANTBS METADATA
+
+
+package() {
+	cd "${srcdir}/${pkgname#*-}-${pkgver}"
+	python2 setup.py install --root="${pkgdir}" --optimize=1
+}
