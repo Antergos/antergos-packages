@@ -3,7 +3,6 @@
 pkgbase=nemo-extensions
 pkgname=(
 	'nemo-audio-tab'
-	'nemo-emblems'
 	'nemo-fileroller'
 	'nemo-preview'
 	'nemo-python'
@@ -11,6 +10,7 @@ pkgname=(
 	'nemo-seahorse'
 	'nemo-dropbox'
 	'nemo-terminal'
+	'nemo-emblems'
 )
 pkgver=3.4.0
 pkgrel=1
@@ -140,17 +140,6 @@ package_nemo-audio-tab() {
 	_setup.py
 }
 
-package_nemo-emblems() {
-	pkgdesc='Change your folder and file emblems in Nemo'
-	arch=('any')
-	depends=('nemo-python')
-	makedepends=('python2-distutils-extra')
-
-	_setup.py
-
-	pkgver=3.4.1
-}
-
 package_nemo-dropbox() {
 	pkgdesc='Dropbox integration for Nemo'
 	license=('CCPL' 'GPL')
@@ -223,5 +212,16 @@ package_nemo-terminal() {
 	install -Dm644 \
 		pixmap/logo_120x120.png \
 		"${pkgdir}/usr/share/nemo-terminal/logo_120x120.png"
+}
+
+package_nemo-emblems() {
+	pkgdesc='Change your folder and file emblems in Nemo'
+	arch=('any')
+	depends=('nemo-python')
+	makedepends=('python2-distutils-extra')
+
+	_setup.py
+
+	pkgver=3.4.1
 }
  
