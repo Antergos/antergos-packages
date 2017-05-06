@@ -24,6 +24,6 @@ _monitored_match_pattern='/(?<=release-)[\d.]+/'
 
 
 package() {
-	cd "${srcdir}/${pkgname#*-}-${pkgver}"
+	cd "${srcdir}/${pkgname#*-}-release-${pkgver}"
 	python2 setup.py install --root="${pkgdir}" --optimize=1
 }
