@@ -1,5 +1,4 @@
-# $Id: PKGBUILD 159711 2016-01-31 21:45:19Z bgyorgy $
-# Maintainer: Alexandre Filgueira <alexfilgueira@antergos.com>
+# Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgbase=nemo-extensions
 pkgname=(
@@ -52,7 +51,9 @@ prepare() {
 
 	# Python2 fix
 	find -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
-	sed -i 's/<<EOF | python/&2/g' nemo-dropbox/configure.ac
+	sed -i '
+		s/<<EOF | python/&2/g;
+		s|python2 rst2man2.py|python2 rst2man2.py|g' nemo-dropbox/configure.ac
 	sed -i 's|python|&2|g' nemo-dropbox/Makefile.am
 
 	# Fix error in nemo-dropbox Makefile
