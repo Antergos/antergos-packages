@@ -4,12 +4,12 @@
 
 _pkgname=firefox
 pkgname=firefox-kde
-pkgver=53.0
+pkgver=53.0.2
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org with openSUSE KDE integration patches."
 arch=('i686' 'x86_64')
 license=('MPL' 'GPL' 'LGPL')
-url="https://build.opensuse.org/package/show/mozilla:Factory/MozillaFirefox"
+url='https://build.opensuse.org/package/show/mozilla:Factory/MozillaFirefox'
 groups=('browser')
 
 depends=('alsa-lib'        'dbus-glib'  'ffmpeg'  'gtk2'
@@ -30,13 +30,21 @@ optdepends=('networkmanager: Location detection via available WiFi networks'
 provides=("firefox=${pkgver}")
 conflicts=('firefox')
 options=('!emptydirs' '!makeflags')
-_patchrev=4665fe34fbce
+_patchrev=28f802837a7a
 _patchurl="http://www.rosenauer.org/hg/mozilla/raw-file/${_patchrev}"
 _archpkg_git_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
+_m4parse_cargo_patch='0001-Bug-1338655-Don-t-try-to-build-mp4parse-bindings.-r-.patch'
 
-source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/source/${_pkgname}-${pkgver}.source.tar.xz"
+validpgpkeys=('14F26682D0916CDD81E37B6D61B7B526D98F0353') # Mozilla Software Releases <release@mozilla.com>
+# gpg --keyserver pool.sks-keyservers.net --recv-keys "${validpgpkeys[0]}"
+
+_srcurl="https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/source"
+_srcfile="${_pkgname}-${pkgver}.source.tar.xz"
+source=("${_srcurl}/${_srcfile}"
+		"${_srcurl}/SHA256SUMS"{,.asc}
 		"fix-wifi-scanner.diff::${_archpkg_git_url}/fix-wifi-scanner.diff?h=packages/firefox"
 		"firefox-install-dir.patch::${_archpkg_git_url}/firefox-install-dir.patch?h=packages/firefox"
+		"${_m4parse_cargo_patch}::${_archpkg_git_url}/${_m4parse_cargo_patch}?h=packages/firefox"
 		'vendor.js'
 		'mozconfig'
 		'firefox.desktop'
@@ -50,20 +58,25 @@ source=("https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/sour
 		$_patchurl/mozilla-language.patch
 		$_patchurl/mozilla-nongnome-proxies.patch
 		$_patchurl/mozilla-reduce-files-per-UnifiedBindings.patch)
-md5sums=('73175f850d4ff6068c6af674df20477c'
-         'e2396b9918aa602427f80d48caf319b4'
-         'dbf14588e85812ee769bd735823a0146'
-         'aa9f776d2187cba09de65cbb02b39ca0'
-         '935111ca236a798f9c6b4b9f8ffb1442'
-         '9b02198df96be08f2a0a323ac2e6c2a2'
-         '75df0f88cc7a7fa7d522459e4ff82cc5'
-         '46a4971f26c990a66b913ba700c7f3fa'
-         '906efefafcbe3efd44c8827f699c05e2'
-         '1fad9a988826d69fe712ea973e43f6da'
-         '2ab6215a97ff35fbb46eea83df68f0c7'
-         'fa6ac817f576b486419b5f308116a7cd'
-         '0c684360f1df4536512d51873c1d243d'
-         '4d240471a642270accd515199ca698e4')
+md5sums=(
+	$(wget -q "${source[1]}" && grep "${_srcfile}" SHA256SUMS | cut -f1 -d ' ')
+	'SKIP'
+	'SKIP'
+	'e2396b9918aa602427f80d48caf319b4'
+	'dbf14588e85812ee769bd735823a0146'
+	'4d338d1b4b9308284979e3d19401b98d'
+	'aa9f776d2187cba09de65cbb02b39ca0'
+	'1b3309a37dac0fb7cc61136efe86a9a1'
+	'9b02198df96be08f2a0a323ac2e6c2a2'
+	'75df0f88cc7a7fa7d522459e4ff82cc5'
+	'46a4971f26c990a66b913ba700c7f3fa'
+	'906efefafcbe3efd44c8827f699c05e2'
+	'1fad9a988826d69fe712ea973e43f6da'
+	'2ab6215a97ff35fbb46eea83df68f0c7'
+	'fa6ac817f576b486419b5f308116a7cd'
+	'0c684360f1df4536512d51873c1d243d'
+	'4d240471a642270accd515199ca698e4'
+)
 
 # Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
 # Note: These are for Antergos Linux use ONLY. For your own distribution, please
@@ -78,16 +91,28 @@ _google_='AIzaSyBPgpho0q0siP2tggJwIsDx8ykpp-Y76Xk'
 _mozilla_='fa35d4d6-6529-436f-b3a1-8b9af187eca2'
 
 
+# BEGIN ANTBS METADATA
+_autosums='True'
+_is_monitored='False'
+_monitored_service='http'
+_monitored_type='firefox'
+_monitored_version_url=''
+# END ANTBS METADATA
+
+
 prepare() {
 	cd "${_pkgname}-${pkgver}"
 
 	cp ../mozconfig .mozconfig
+	
+	# BEGIN Patches From Official Arch Package
 	patch -Np1 -i ../firefox-install-dir.patch
-
-	# https://bugzilla.mozilla.org/show_bug.cgi?id=1314968
 	patch -Np1 -i ../fix-wifi-scanner.diff
+	patch -Np1 -i ../"${_m4parse_cargo_patch}"
+	# END Patches From Official Arch Package
 
-	# KDE Integration Patches
+
+	# BEGIN openSUSE's KDE Integration Patches
 	patch -Np1 -i "${srcdir}/mozilla-nongnome-proxies.patch"
 	patch -Np1 -i "${srcdir}/mozilla-kde.patch"
 	patch -Np1 -i "${srcdir}/mozilla-language.patch"
@@ -95,6 +120,7 @@ prepare() {
 	patch -Np1 -i "${srcdir}/firefox-no-default-ualocale.patch"
 	patch -Np1 -i "${srcdir}/firefox-branded-icons.patch"
 	patch -Np1 -i "${srcdir}/mozilla-reduce-files-per-UnifiedBindings.patch"
+	# END openSUSE's KDE Integration Patches
 
 	echo -n "$_google_" >google-api-key
 	echo "ac_add_options --with-google-api-keyfile=\"$PWD/google-api-key\"" >>.mozconfig
