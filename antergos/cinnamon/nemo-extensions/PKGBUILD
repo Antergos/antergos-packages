@@ -2,27 +2,28 @@
 # Maintainer: Alexandre Filgueira <alexfilgueira@antergos.com>
 
 pkgbase=nemo-extensions
-pkgname=('nemo-fileroller'
-		'nemo-preview'
-		'nemo-python'
-		'nemo-share'
-		'nemo-seahorse')
-#'nemo-media-columns'
-#'nemo-pastebin'
-#'nemo-compare'
-#'nemo-rabbitvcs'
+pkgname=(
+	'nemo-audio-tab'
+	'nemo-emblems'
+	'nemo-fileroller'
+	'nemo-preview'
+	'nemo-python'
+	'nemo-share'
+	'nemo-seahorse'
+	'nemo-dropbox'
+)
 pkgver=3.4.0
-_pkgver=3.4.0
 pkgrel=1
 arch=('i686' 'x86_64')
 license=('GPL2')
 url="https://github.com/linuxmint/nemo-extensions"
 groups=('cinnamon')
 depends=('nemo' 'file-roller' 'cjs' 'clutter-gtk' 'clutter-gst' 'gst-plugins-good' 'libmusicbrainz5'
-		'evince' 'gtksourceview3' 'webkit2gtk' 'python2-gobject' 'seahorse-nautilus' 'samba' 'libgnome-keyring')
-makedepends=('gconf' 'gnome-common' 'gtk-doc' 'intltool' 'gobject-introspection')
-options=('!emptydirs')
-source=("${pkgbase}-${pkgver}.tar.gz::https://github.com/linuxmint/nemo-extensions/archive/${_pkgver}.tar.gz")
+		'evince' 'gtksourceview3' 'webkit2gtk' 'python2-gobject' 'libcryptui' 'gcr' 'samba'
+		'libgnome-keyring' 'python2-mutagen')
+makedepends=('gnome-common' 'gtk-doc' 'intltool' 'gobject-introspection' 'python2-distutils-extra'
+			'python2-docutils' 'pygtk' 'python2-gobject2')
+source=("${pkgbase}-${pkgver}.tar.gz::https://github.com/linuxmint/nemo-extensions/archive/${pkgver}.tar.gz")
 sha256sums=('68dadce98c17321c3c22e596452a1b7aa0842c5faa05688734430857e037b3f2')
 
 
@@ -35,99 +36,190 @@ _monitored_repo='nemo-extensions'
 # END ANTBS METADATA
 
 
+_make_install() {
+	cd "${pkgbase}-${pkgver}/${pkgname}"
+	make DESTDIR="${pkgdir}" install
+}
+
+_setup.py() {
+	cd "${pkgbase}-${pkgver}/${pkgname}"
+	python2 ./setup.py install --root="${pkgdir}" --prefix=/usr --optimize=1
+	cd -
+}
+
 prepare() {
-	cd ${pkgbase}-${_pkgver}
+	cd ${pkgbase}-${pkgver}
 
 	# Python2 fix
 	find -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
+	sed -i 's/<<EOF | python/&2/g' nemo-dropbox/configure.ac
+	sed -i 's|python|&2|g' nemo-dropbox/Makefile.am
+
+	# Fix error in nemo-dropbox Makefile
+	sed -i 's|dropbox.txt.in dropbox|dropbox dropbox.txt.in|g' nemo-dropbox/Makefile.am
 
 	# Fix path for nemo-python
 	sed -i 's|libdirsuffix="/i386-linux-gnu/"|libdirsuffix=""|' nemo-python/m4/python.m4
+
+	# Fix conflict with nautilus-seahorse
+	cd nemo-seahorse
+	sed -i '
+		s|\("seahorse-tool"\)|("seahorse-tool-nemo")|g;
+		s| seahorse-tool | seahorse-tool-nemo |g;
+		s|org.gnome.seahorse.nautilus|org.nemo.seahorse|g' \
+		nemo-ext/nemo-seahorse.c \
+		tool/seahorse-tool.1 \
+		data/org.gnome.seahorse.nautilus.convert \
+		data/org.gnome.seahorse.nautilus.gschema.xml \
+		data/org.gnome.seahorse.nautilus.window.gschema.xml
 }
 
 build() {
-	cd ${pkgbase}-${_pkgver}
+	cd ${pkgbase}-${pkgver}
 
-	_configure_pkgs="nemo-fileroller nemo-seahorse nemo-share"
-	for dir in ${_configure_pkgs}
+	_configure_pkgs=(
+		'nemo-dropbox'
+		'nemo-fileroller'
+		'nemo-seahorse'
+		'nemo-share'
+	)
+
+	_autogen_pkgs=(
+		'nemo-preview'
+		'nemo-python'
+	)
+
+	_distutils_pkgs=(
+		'nemo-audio-tab'
+		'nemo-emblems'
+	)
+
+	for pkg in "${_configure_pkgs[@]}"
 	do
-		pushd ${dir}
- 		autoreconf -fi
-		./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib/${dir} \
-			--disable-static --disable-schemas-compile
+		cd "${pkg}"
+		
+		if [[ "${pkg}" = 'nemo-seahorse' ]]; then
+			_extra_args='--program-suffix=-nemo'
+		else
+			_extra_args=''
+		fi
+
+ 		PYTHON=python2 autoreconf -fi
+		PYTHON=python2 ./configure \
+			--prefix=/usr \
+			--sysconfdir=/etc \
+			--localstatedir=/var \
+			--libexecdir="/usr/lib/${pkg}" \
+			--disable-static \
+			--disable-schemas-compile \
+			"${_extra_args}"
 		make
-		popd
+		cd -
 	done
 
-	_autogen_pkgs="nemo-preview nemo-python"
-	for dir in ${_autogen_pkgs}
+
+	for pkg in "${_autogen_pkgs[@]}"
 	do
-		pushd ${dir}
-		PYTHON=/usr/bin/python2 ./autogen.sh --prefix=/usr --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib/${dir} \
-			--disable-static --disable-schemas-compile
+		cd "${pkg}"
+		PYTHON=/usr/bin/python2 ./autogen.sh \
+			--prefix=/usr \
+			--sysconfdir=/etc \
+			--localstatedir=/var \
+			--libexecdir="/usr/lib/${pkg}" \
+			--disable-static \
+			--disable-schemas-compile
 		make
-		popd
+		cd -
 	done
 
-	# # nemo-pastebin
-	# cd nemo-pastebin
-	# python2 ./setup.py build --build-base ${srcdir}/build/ || return 1
-	# cd ..
+	for pkg in "${_distutils_pkgs[@]}"
+	do
+		cd "${pkg}"
+		python2 ./setup.py build
+		cd -
+	done
+}
 
-	# nemo-media-columns
-	# Nothing to do here
-	# Required python2-pypdf from AUR
+package_nemo-audio-tab() {
+	pkgdesc="View audio tag information from within Nemo's file properties tab"
+	depends=('nemo-python' 'python2-mutagen')
+	makedepends=('python2-distutils-extra')
 
-	# nemo-compare
-	# cd nemo-compare
+	_setup.py
+}
 
-	# nemo-rabbitvcs
-	# Nothing to do here
+package_nemo-emblems() {
+	pkgdesc="Change your folder and file emblems in Nemo"
+	depends=('nemo-python')
+	makedepends=('python2-distutils-extra')
 
+	_setup.py
+}
+
+package_nemo-dropbox() {
+	pkgdesc='Dropbox integration for Nemo'
+	license=('CCPL' 'GPL')
+	depends=('nemo' 'dropbox' 'libnotify')
+	makedepends=('python2-docutils' 'pygtk' 'python2-gobject2')
+
+	_make_install
+
+	# remove dropbox executables since they'll be provided by the 'dropbox' package
+	rm "${pkgdir}/usr/bin/dropbox"
+	rm "${pkgdir}/usr/share/applications/dropbox.desktop"  
+	rm "${pkgdir}/usr/share/man/man1/dropbox.1"
+	rm -rf "${pkgdir}/usr/share/pixmap"
+	rm -rf "${pkgdir}/usr/share/icons"
 }
 
 package_nemo-fileroller(){
-	pkgdesc="File archiver extension for Nemo"
-	depends=(nemo file-roller)
+	pkgdesc='File Roller integration for Nemo'
+	depends=('nemo' 'file-roller')
 
-	cd ${pkgbase}-${_pkgver}/nemo-fileroller
-	make DESTDIR="${pkgdir}" install
+	_make_install
 }
 
 package_nemo-preview(){
-	pkgdesc="GtkClutter and Javascript-based quick previewer for Nemo"
-	depends=(nemo cjs clutter-gtk clutter-gst libmusicbrainz5 evince gtksourceview3 webkit2gtk)
+	pkgdesc='Quick file previewer for Nemo'
+	depends=('nemo' 'cjs' 'clutter-gtk' 'clutter-gst' 'libmusicbrainz5' 'evince'
+			'gtksourceview3' 'webkit2gtk' 'gst-plugins-good' 'gst-libav')
+	makedepends=('gnome-common')
 
-	cd ${pkgbase}-${_pkgver}/nemo-preview
-	make DESTDIR="${pkgdir}" install
+	_make_install
 }
 
 package_nemo-python() {
-	pkgdesc="Python2 binding for Nemo components"
-	depends=(nemo python2-gobject)
+	pkgdesc='Python2 binding for Nemo components'
+	depends=('nemo' 'python2-gobject')
+	makedepends=('gnome-common')
 
-	cd ${pkgbase}-${_pkgver}/nemo-python
-	make DESTDIR="${pkgdir}" install
+	_make_install
 }
 
 package_nemo-seahorse(){
-	pkgdesc="PGP encryption and signing extension for Nemo"
-	depends=('nemo' 'seahorse-nautilus' 'libgnome-keyring')
+	pkgdesc='OpenPGP extension for Nemo'
+	depends=('nemo' 'libcryptui' 'gcr' 'libgnome-keyring')
 
-	cd ${pkgbase}-${_pkgver}/nemo-seahorse
-	make DESTDIR="${pkgdir}" install
+	_make_install
 
-	# seahorse-tool is already in seahorse-nautilus package
-	make -C data DESTDIR="${pkgdir}" uninstall
-	make -C tool DESTDIR="${pkgdir}" uninstall
+	# Conflict with seahorse-nautilus
+	cd "${pkgdir}/usr/share/applications"
+	mv seahorse-pgp-encrypted.desktop nemo-seahorse-pgp-encrypted.desktop
+	mv seahorse-pgp-signature.desktop nemo-seahorse-pgp-signature.desktop
+	mv seahorse-pgp-keys.desktop nemo-seahorse-pgp-keys.desktop
+	cd "${pkgdir}/usr/share/GConf/gsettings"
+	mv org.gnome.seahorse.nautilus.convert org.nemo.seahorse.convert
+	cd "${pkgdir}/usr/share/glib-2.0/schemas"
+	mv org.gnome.seahorse.nautilus.gschema.xml org.nemo.seahorse.gschema.xml
+	mv org.gnome.seahorse.nautilus.window.gschema.xml org.nemo.seahorse.window.gschema.xml
+
 }
 
 package_nemo-share(){
-	pkgdesc="Samba extension for Nemo"
-	depends=(nemo samba)
+	pkgdesc='Samba extension for Nemo'
+	depends=('nemo' 'samba')
 
-	cd ${pkgbase}-${_pkgver}/nemo-share
-	make DESTDIR="${pkgdir}" install
+	_make_install
 }
 
 # package_nemo-media-columns(){
