@@ -10,6 +10,7 @@ pkgname=(
 	'nemo-share'
 	'nemo-seahorse'
 	'nemo-dropbox'
+	'nemo-terminal'
 )
 pkgver=3.4.0
 pkgrel=1
@@ -19,14 +20,14 @@ url="https://github.com/linuxmint/nemo-extensions"
 groups=('cinnamon')
 depends=('nemo' 'file-roller' 'cjs' 'clutter-gtk' 'clutter-gst' 'gst-plugins-good' 'libmusicbrainz5'
 		'evince' 'gtksourceview3' 'webkit2gtk' 'python2-gobject' 'libcryptui' 'gcr' 'samba'
-		'libgnome-keyring' 'python2-mutagen')
+		'libgnome-keyring' 'python2-mutagen' 'vte3')
 makedepends=('gnome-common' 'gtk-doc' 'intltool' 'gobject-introspection' 'python2-distutils-extra'
 			'python2-docutils' 'pygtk' 'python2-gobject2')
 source=("${pkgbase}-${pkgver}.tar.gz::https://github.com/linuxmint/nemo-extensions/archive/${pkgver}.tar.gz"
 		'https://github.com/linuxmint/nemo-extensions/pull/212.patch'
 		'https://github.com/linuxmint/nemo-extensions/pull/213.patch')
 md5sums=('b8aff74acc98be098fe46a54dcb5c35f'
-         '8d600fa3592f32733af5adb3d627ef78'
+         '18add2b336536faca17e48da2ec96cd4'
          'e675f49ed826492d8e402a1005d08f94')
 
 
@@ -132,6 +133,7 @@ build() {
 
 package_nemo-audio-tab() {
 	pkgdesc="View audio tag information from within Nemo's file properties tab"
+	arch=('any')
 	depends=('nemo-python' 'python2-mutagen')
 	makedepends=('python2-distutils-extra')
 
@@ -139,7 +141,9 @@ package_nemo-audio-tab() {
 }
 
 package_nemo-emblems() {
+	pkgver=3.4.1
 	pkgdesc='Change your folder and file emblems in Nemo'
+	arch=('any')
 	depends=('nemo-python')
 	makedepends=('python2-distutils-extra')
 
@@ -200,4 +204,23 @@ package_nemo-share(){
 	_make_install
 }
 
+package_nemo-terminal() {
+	pkgdesc='Embedded terminal for Nemo'
+	arch=('any')
+	depends=('nemo-python' 'python2-gobject' 'vte3')
+
+	cd "${pkgbase}-${pkgver}/${pkgname}"
+
+	install -Dm755 \
+		src/nemo_terminal.py \
+		"${pkgdir}/usr/share/nemo-python/extensions/nemo_terminal.py"
+
+	install -Dm644 \
+		src/org.nemo.extensions.nemo-terminal.gschema.xml \
+		"${pkgdir}/usr/share/glib-2.0/schemas/org.nemo.extensions.nemo-terminal.gschema.xml"
+
+	install -Dm644 \
+		pixmap/logo_120x120.png \
+		"${pkgdir}/usr/share/nemo-terminal/logo_120x120.png"
+}
  
