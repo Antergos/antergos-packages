@@ -141,13 +141,14 @@ package_nemo-audio-tab() {
 }
 
 package_nemo-emblems() {
-	pkgver=3.4.1
 	pkgdesc='Change your folder and file emblems in Nemo'
 	arch=('any')
 	depends=('nemo-python')
 	makedepends=('python2-distutils-extra')
 
 	_setup.py
+
+	pkgver=3.4.1
 }
 
 package_nemo-dropbox() {
