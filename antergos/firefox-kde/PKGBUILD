@@ -58,24 +58,24 @@ source=("${_srcurl}/${_srcfile}"
 		$_patchurl/mozilla-language.patch
 		$_patchurl/mozilla-nongnome-proxies.patch
 		$_patchurl/mozilla-reduce-files-per-UnifiedBindings.patch)
-md5sums=(
+sha256sums=(
 	$(wget -q "${source[1]}" && grep "${_srcfile}" SHA256SUMS | cut -f1 -d ' ')
 	'SKIP'
 	'SKIP'
-	'e2396b9918aa602427f80d48caf319b4'
-	'dbf14588e85812ee769bd735823a0146'
-	'4d338d1b4b9308284979e3d19401b98d'
-	'aa9f776d2187cba09de65cbb02b39ca0'
-	'1b3309a37dac0fb7cc61136efe86a9a1'
-	'9b02198df96be08f2a0a323ac2e6c2a2'
-	'75df0f88cc7a7fa7d522459e4ff82cc5'
-	'46a4971f26c990a66b913ba700c7f3fa'
-	'906efefafcbe3efd44c8827f699c05e2'
-	'1fad9a988826d69fe712ea973e43f6da'
-	'2ab6215a97ff35fbb46eea83df68f0c7'
-	'fa6ac817f576b486419b5f308116a7cd'
-	'0c684360f1df4536512d51873c1d243d'
-	'4d240471a642270accd515199ca698e4'
+	'9765bca5d63fb5525bbd0520b7ab1d27cabaed697e2fc7791400abc3fa4f13b8'
+	'd86e41d87363656ee62e12543e2f5181aadcff448e406ef3218e91865ae775cd'
+	'413cd6d366d78f325d80ebebccfd0afa0d266b40b2e54b66ba2fa03c15f3ea67'
+	'93c5df00f409988bbfa890ac175103476ead3af68f7501973ee70bd11dc472f8'
+	'5c76fd10141b9ef3c61d7ced9113a30dcd09c4a14c1f844dfe90031ce9fb047f'
+	'c202e5e18da1eeddd2e1d81cb3436813f11e44585ca7357c4c5f1bddd4bec826'
+	'0850a8a8dea9003c67a8ee1fa5eb19a6599eaad9f2ad09db753b74dc5048fdbc'
+	'c85a37e71f2bd511fac88d41ca0618ee375c49fc86bc2beddf6dc17c3f17508d'
+	'02299760bae1d8bfc3d1d11b8867d8d5b9f44ee0101dc2a1d3277ba6ab4132bd'
+	'b941790009bb9eda46c2d96fb0d1c83b0fe2d1acf74754ab08e6b18c1e0c6b16'
+	'db8a35b5fcbd3191b137ab9dec1294d9e4eb6fcab4915acf68377018c5c51780'
+	'2720e418edaab7b305087b325604fe134dab1b743dae6e924aba7b4bd73ea389'
+	'e8289ea4c1f8191e1e23661312ceee2128b8e790501b9a589d0d7bfc4384553f'
+	'e525a83698e3363378f4582b43fd61c4002161acc84514188685e8b28b7cfbcf'
 )
 
 # Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
