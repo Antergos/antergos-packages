@@ -38,7 +38,7 @@ _m4parse_cargo_patch='0001-Bug-1338655-Don-t-try-to-build-mp4parse-bindings.-r-.
 validpgpkeys=('14F26682D0916CDD81E37B6D61B7B526D98F0353') # Mozilla Software Releases <release@mozilla.com>
 # gpg --keyserver pool.sks-keyservers.net --recv-keys "${validpgpkeys[0]}"
 
-_srcurl="https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${pkgver}/source"
+_srcurl="https://ftp.mozilla.org/pub/firefox/releases/${pkgver}/source"
 _srcfile="${_pkgname}-${pkgver}.source.tar.xz"
 source=("${_srcurl}/${_srcfile}"
 		"${_srcurl}/SHA256SUMS"{,.asc}
