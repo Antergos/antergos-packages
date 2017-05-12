@@ -1,7 +1,7 @@
-# Maintainer: Gustau Castells <karasu@antergos.com>
+# Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-openbox-setup
-pkgver=0.3.4
+pkgver=0.3.5
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
@@ -9,27 +9,24 @@ arch=('any')
 license=('GPL2')
 _is_metapkg='yes'
 install=${pkgname}.install
-depends=('bash' 'openbox' 'openbox-menu' 'xorg-xinit' 'pcmanfm' 'nitrogen' 'plank' 
-	'tint2' 'volumeicon' 'conky' 'conky-manager' 'compton' 'numix-frost-themes' 
-	'numix-icon-theme' 'plank-theme-numix' 'gmrun' 'lxmenu-data' 'obkey' 'oblogout')
+depends=('antergos-gsettings' 'bash' 'openbox' 'openbox-menu' 'xorg-xinit' 'pcmanfm' 'nitrogen'
+         'plank' 'tint2' 'volumeicon' 'conky' 'conky-manager' 'compton' 'numix-frost-themes'
+	 'numix-icon-theme' 'plank-theme-numix' 'gmrun' 'lxmenu-data' 'obkey' 'oblogout')
 source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
 sha256sums=('SKIP')
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+    cd "${srcdir}/${pkgname}-${pkgver}"
 
-	install -d "${pkgdir}/usr/share/${pkgname}"
+    install -d "${pkgdir}/usr/share/${pkgname}"
 	
-	cp -R -t "${pkgdir}/usr/share/${pkgname}" {etc,home,usr}
+    cp -R -t "${pkgdir}/usr/share/${pkgname}" {etc,home,usr}
 
-	# install install.sh file
-	install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
+    # install install.sh file
+    install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
 
-	# install 90_antergos.gschema.override
-	install -Dm644 90_antergos.gschema.override "{$pkgname}/usr/share/glib-2.0/schemas/90_antergos.gschema.override"
-
-	# create a symlink to install.sh
-	mkdir -p "${pkgdir}/usr/bin"
-	ln -s "/usr/share/${pkgname}/install.sh" "${pkgdir}/usr/bin/antergos-openbox-setup"
+    # create a symlink to install.sh
+    mkdir -p "${pkgdir}/usr/bin"
+    ln -s "/usr/share/${pkgname}/install.sh" "${pkgdir}/usr/bin/antergos-openbox-setup"
 }
 
