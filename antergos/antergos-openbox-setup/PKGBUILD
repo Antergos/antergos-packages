@@ -1,7 +1,7 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-openbox-setup
-pkgver=0.3.3
+pkgver=0.3.4
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://www.antergos.com"
