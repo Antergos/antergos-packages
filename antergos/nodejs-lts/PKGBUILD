@@ -10,7 +10,7 @@
 
 pkgname=nodejs-lts
 pkgver=6.10.3
-pkgrel=2
+pkgrel=1
 pkgdesc="JavaScript runtime built on Chrome's V8 JavaScript engine."
 arch=('x86_64')
 url='http://nodejs.org/'
@@ -34,8 +34,7 @@ _validpgpkeys=(
 	'C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8' 'B9AE9905FFD7803F25714661B63B535A4C206CA9'
 	'56730D5401028683275BD23C23EFEFE93C4CFFFE'
 )
-gpg --keyserver pool.sks-keyservers.net --recv-keys "${_validpgpkeys[@]}"
-
+# gpg --keyserver pool.sks-keyservers.net --recv-keys "${_validpgpkeys[@]}"
 validpgpkeys=("${_validpgpkeys[@]}") # https://github.com/nodejs/node#release-team
 
 
