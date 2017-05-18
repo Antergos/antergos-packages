@@ -2,7 +2,7 @@
 
 pkgname=pacaur
 pkgver=4.7.8
-pkgrel=1
+pkgrel=2
 pkgdesc='An AUR helper that minimizes user interaction'
 arch=('any')
 url='https://github.com/rmarquis/pacaur'
@@ -55,9 +55,8 @@ package() {
 	do
 		pofile="${pofile#*/}"
 		lang="${pofile%.po}"
-		
-		mkdir -p $pkgdir/usr/share/locale/$lang/LC_MESSAGES
-		msgfmt "${pofile}" -o $pkgdir/usr/share/locale/$lang/LC_MESSAGES/pacaur.mo
+		mkdir -p $pkgdir/usr/share/locale/${lang##*/}/LC_MESSAGES
+		msgfmt "${pofile}" -o $pkgdir/usr/share/locale/${lang##*/}/LC_MESSAGES/pacaur.mo
 	done
 }
 
