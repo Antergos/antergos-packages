@@ -3,8 +3,8 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.8.770.56
-_chromium=57.0.2987.21 # https://omahaproxy.appspot.com
+pkgver=1.9.818.49
+_chromium=58.0.3029.110 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
@@ -23,27 +23,40 @@ source_i686=("https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.i3
 source_x86_64=("https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.x86_64.rpm")
 source=("https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
 		"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
-		'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html')
-md5sums=('e517736d7c515269f995f4ac44d342c7'
-         'ef09421ad97b8dd2b73172884d9c45e2'
-         'd50d8f0a6940791eabc41c4f64e6a3cf')
-md5sums_x86_64=('1095ee793654d4cd11dc8baf5652d9dd')
+		'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
+		'chromium-last-commit-position-r1.patch'
+		'https://raw.githubusercontent.com/gentoo/gentoo/master/www-client/chromium/files/chromium-gn-bootstrap-r2.patch'
+)
+md5sums=('aca4aeff806e1230912aa9c9df6b7be7'
+         '4c801a72da26e4686a5b151d794ebc57'
+         'd50d8f0a6940791eabc41c4f64e6a3cf'
+         '3354997dd0bfde3443499133a6e16a85'
+         '776649f56b8f7bcad7f23d496bba8042')
+md5sums_x86_64=('576a64a1f433a3d831375c98153e72ab')
 
 
 prepare() {
 	cd "$srcdir/chromium-$_chromium"
 
-	# Use Python 2
-	find . -name '*.py' -exec sed -i -r 's|/usr/bin/python$|&2|g' {} +
+  	# Use Python 2
+  	find . -name '*.py' -exec sed -r 's|/usr/bin/python$|&2|g' -i {} +
+  	find . -name '*.py' -exec sed -r 's|/usr/bin/env python$|&2|g' -i {} +
 
 	# There are still a lot of relative calls which need a workaround
 	[[ -d "$srcdir/python2-path" ]] && rm -rf "$srcdir/python2-path"
 	mkdir "$srcdir/python2-path"
 	ln -s /usr/bin/python2 "$srcdir/python2-path/python"
+
+  	# chromium 46 gives an error about a missing file
+  	# workaround create empty
+  	touch chrome/test/data/webui/i18n_process_css_test.html
+
+	patch -p1 -i "$srcdir/chromium-last-commit-position-r1.patch"
+ 	patch -p1 -i "$srcdir/chromium-gn-bootstrap-r2.patch"
 }
 
 build() {
-	cd "$srcdir/chromium-$_chromium"
+  cd "$srcdir/chromium-$_chromium"
 
 	export PATH="$srcdir/python2-path:$PATH"
 	export HOME="$srcdir"
