@@ -1,7 +1,7 @@
 # Maintainer: Antergos Developers <dustin@antergos.com>
 
 pkgname=brisk-menu
-pkgver=0.3.5
+pkgver=0.4.0
 pkgrel=1
 pkgdesc='Modern, efficient menu for the MATE Desktop Environment.'
 arch=('i686' 'x86_64')
