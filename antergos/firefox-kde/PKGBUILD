@@ -30,7 +30,7 @@ optdepends=('networkmanager: Location detection via available WiFi networks'
 provides=("firefox=${pkgver}")
 conflicts=('firefox')
 options=('!emptydirs' '!makeflags')
-_patchrev=3dafce6546a4
+_patchrev=188c3f40f0da
 _patchurl="http://www.rosenauer.org/hg/mozilla/raw-file/${_patchrev}"
 _archpkg_git_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
 _m4parse_cargo_patch='0001-Bug-1338655-Don-t-try-to-build-mp4parse-bindings.-r-.patch'
