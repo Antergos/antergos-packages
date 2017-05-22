@@ -4,7 +4,7 @@
 
 pkgname=('kate-root')
 _pkgname=kate
-pkgver=17.04.0
+pkgver=17.04.1
 pkgrel=4
 arch=('x86_64')
 license=('GPL' 'LGPL' 'FDL')
