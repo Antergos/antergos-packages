@@ -3,7 +3,7 @@
 
 pkgname=firefox-beta
 _pkgname=firefox
-pkgver=54.0b6
+pkgver=54.0b9
 pkgrel=1
 _majorver="${pkgver/rc*}"
 _buildver="${pkgver/*rc}"
@@ -43,7 +43,10 @@ else
 	_srcurl="${_beta_url}"
 fi
 
-validpgpkeys=('14F26682D0916CDD81E37B6D61B7B526D98F0353') # Mozilla Software Releases <release@mozilla.com>
+validpgpkeys=(
+	'14F26682D0916CDD81E37B6D61B7B526D98F0353'
+	'F2EF4E6E6AE75B95F11F1EB51C69C4E55E9905DB'
+) # Mozilla Software Releases <release@mozilla.com>
 # gpg --keyserver pool.sks-keyservers.net --recv-keys "${validpgpkeys[0]}"
 
 source=(
