@@ -2,9 +2,9 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl
-_pkgver=0.7.0rc3
-_rev=1017
-_kern=4.9.6_1
+_pkgver=0.7.0rc4
+_rev=1
+_kern=4.11.2_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
 pkgdesc="Solaris Porting Layer kernel modules."
@@ -16,9 +16,9 @@ conflicts=("spl-dkms")
 install=spl.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-_commit='f5c5286daa5f76532d7a8a7988d6a42cfd58038c'
+_commit='3665037f301b83144d198676f06a782f3273676f'
 source=("https://github.com/zfsonlinux/spl/archive/${_commit}.zip")
-md5sums=('85e4abd5e7508e16af079bc960c3cd13')
+md5sums=('d9f44fa6a99a970c20fd83f3943051d8')
 install=spl.install
 
 
