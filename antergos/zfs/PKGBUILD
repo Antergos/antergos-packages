@@ -2,9 +2,9 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-_pkgver=0.7.0rc3
-_rev=2609
-_kern=4.9.6_1
+_pkgver=0.7.0rc4
+_rev=2861
+_kern=4.11.2_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
@@ -15,14 +15,15 @@ conflicts=("zfs-git" "zfs-dkms")
 install=zfs.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-_commit='10a3f8885904558c2a406151c4cf960371c34934'
-source=("https://github.com/zfsonlinux/${pkgname}/archive/${_commit}.zip")
-md5sums=('f91a42244dfc05e17cc97e40d68b91cd')
+_commit=''
+_tag='zfs-0.7.0-rc4'
+source=("https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip")
+md5sums=('0bfe9ad104d446d7e0277abc4e579b83')
 
 
 
 build() {
-	cd "${srcdir}/${pkgname}-${_commit}"
+	cd "${srcdir}/${pkgname}-${_tag}"
 	./autogen.sh
 
 	{ [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"; } || _i686_target=""
@@ -42,10 +43,10 @@ build() {
 }
 
 package() {
-	dkmsdir="${pkgdir}/usr/src/zfs-${_pkgver}"
+	dkmsdir="${pkgdir}/usr/src/zfs-${_tag}"
 	install -d "${dkmsdir}"
 
-	cp -a "${srcdir}/${pkgname}-${_commit}"/. ${dkmsdir}
+	cp -a "${srcdir}/${pkgname}-${_tag}"/. ${dkmsdir}
 
 	cd "${dkmsdir}"
 	./autogen.sh

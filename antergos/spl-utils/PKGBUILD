@@ -1,9 +1,9 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
-pkgname='spl-utils'
+pkgname=spl-utils
 _pkgver=0.7.0rc4
-_rev=1
+_rev=1026
 _kern=4.11.2_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
@@ -15,14 +15,15 @@ provides=("spl-utils-dkms=${pkgver}")
 conflicts=("spl-utils-dkms")
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
-_commit='3665037f301b83144d198676f06a782f3273676f'
-source=("https://github.com/zfsonlinux/spl/archive/${_commit}.zip")
-md5sums=('d9f44fa6a99a970c20fd83f3943051d8')
+_commit=''
+_tag='spl-0.7.0-rc4'
+source=("https://github.com/zfsonlinux/spl/archive/${_tag}.zip")
+md5sums=('1b76c0f3440ceb2e6962186f0b55a371')
 
 
 
 build() {
-	cd "${srcdir}/spl-${_commit}"
+	cd "${srcdir}/spl-${_tag}"
 	./autogen.sh
 
 	{ [[ "${CARCH}" == i686 ]] && _at_enable="--enable-atomic-spinlocks"; } || _at_enable=""
@@ -39,7 +40,7 @@ build() {
 }
 
 package() {
-	cd "${srcdir}/spl-${_commit}"
+	cd "${srcdir}/spl-${_tag}"
 	make DESTDIR="${pkgdir}" install
 }
 
