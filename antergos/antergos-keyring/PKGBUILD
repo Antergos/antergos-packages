@@ -17,6 +17,7 @@ md5sums=('c1c8befbaa883051efc52d3296893e79')
 
 package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
+	[[ -e antergos-revoked ]] || touch antergos-revoked
 	make PREFIX=/usr DESTDIR=${pkgdir} install
 }
 
