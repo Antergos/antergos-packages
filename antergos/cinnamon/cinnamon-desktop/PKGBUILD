@@ -3,7 +3,7 @@
 # Contributor:  Jan de Groot <jan@archlinux.org>
 
 pkgname=cinnamon-desktop
-pkgver=3.4.0
+pkgver=3.4.1
 pkgrel=1
 pkgdesc="Library with common API for various Cinnamon modules"
 url="https://github.com/linuxmint/cinnamon-desktop"
