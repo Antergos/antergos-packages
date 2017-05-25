@@ -43,7 +43,7 @@ build() {
 }
 
 package() {
-	dkmsdir="${pkgdir}/usr/src/zfs-${_tag}"
+	dkmsdir="${pkgdir}/usr/src/zfs-${_pkgver}"
 	install -d "${dkmsdir}"
 
 	cp -a "${srcdir}/${pkgname}-${_tag}"/. ${dkmsdir}
