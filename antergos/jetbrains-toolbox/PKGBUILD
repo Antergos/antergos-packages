@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=jetbrains-toolbox
-pkgver=1.2.2314
-pkgrel=3
+pkgver=1.3.2421
+pkgrel=1
 epoch=2
 pkgdesc="One-stop access to all your coding tools from JetBrains."
 url='http://www.jetbrains.com/toolbox/'
