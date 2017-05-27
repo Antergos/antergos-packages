@@ -6,7 +6,7 @@
 pkgname=broadcom-wl
 _pkgver=6.30.223.271
 pkgver=6.30.223.271
-pkgrel=1
+pkgrel=2
 pkgdesc='Broadcom 802.11abgn hybrid Linux networking device driver'
 url='http://www.broadcom.com/support/802.11/linux_sta.php'
 arch=('i686' 'x86_64')
@@ -21,21 +21,23 @@ source=('broadcom-wl-dkms.conf'
 		'wl_linux.c.patch'
 		'dkms.conf.in'
 		'linux47.patch'
-		'linux48.patch')
-source_i686=("http://www.broadcom.com/docs/linux_sta/hybrid-v35-nodebug-pcoem-${pkgver//./_}.tar.gz")
-source_x86_64=("http://www.broadcom.com/docs/linux_sta/hybrid-v35_64-nodebug-pcoem-${pkgver//./_}.tar.gz")
+		'linux48.patch'
+		'linux411.patch')
+_base_url='https://docs.broadcom.com/docs-and-downloads/docs/linux_sta'
+source_i686=("${_base_url}/hybrid-v35-nodebug-pcoem-${pkgver//./_}.tar.gz")
+source_x86_64=("${_base_url}/hybrid-v35_64-nodebug-pcoem-${pkgver//./_}.tar.gz")
 
 md5sums=('72664135416b0284c4fedd57374ecfcc'
          'b053c628d70990a3403927982134045c'
          'dce5ab7d327dc69f65b7774e9cf933c8'
          'b5b6ec0039e6acd379cca964f561210b'
          'c5074307a37698b11780237beb8f52b2'
-         '6ba8d147afe6112112b03af593ae38a0')
-md5sums_i686=('f51d3a26a5b52910383667ce8fc1cbea')
-md5sums_x86_64=('f51d3a26a5b52910383667ce8fc1cbea')
+         '6ba8d147afe6112112b03af593ae38a0'
+         '8191ab1f3e25983fc34b7180edbacfff')
+md5sums_i686=('4e75f4cb7d87f690f9659ffc478495f0')
+md5sums_x86_64=('115903050c41d466161784d4c843f4f9')
 
 _kernver="$(pacman -Sl core | grep ' linux ' | cut -d ' ' -f 3)-ARCH"
-
 
 
 pkgver() {
@@ -47,6 +49,7 @@ prepare() {
 	patch -p1 -i wl_linux.c.patch
 	patch -p1 -i linux47.patch
 	patch -p1 -i linux48.patch
+	patch -p1 -i linux411.patch
 
 	sed -e "/BRCM_WLAN_IFNAME/s:eth:wlan:" -i src/wl/sys/wl_linux.c
 
