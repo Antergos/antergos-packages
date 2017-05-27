@@ -50,3 +50,4 @@ Reference: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=839629
  		wl->scan_request = NULL;
  	}
  
+
