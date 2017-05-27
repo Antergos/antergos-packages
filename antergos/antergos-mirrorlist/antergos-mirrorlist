@@ -48,6 +48,7 @@ Server = http://www.mirrorservice.org/sites/repo.antergos.com/$repo/$arch
 # Germany
 Server = http://mirror.de.leaseweb.net/antergos/$repo/$arch
 Server = http://antergos-mirror-a.alpix.eu/$repo/$arch
+Server = http://mirror.alpix.eu/antergos/$repo/$arch
 
 # Greece
 Server = http://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
@@ -56,6 +57,9 @@ Server = http://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
 Server = http://mirror.nl.leaseweb.net/antergos/$repo/$arch
 Server = http://ftp1.nluug.nl/os/Linux/distr/antergos/$repo/$arch
 Server = http://ftp2.nluug.nl/os/Linux/distr/antergos/$repo/$arch
+
+# Portugal
+Server = http://glua.ua.pt/pub/antergos/$repo/$arch
 
 # Russia
 Server = http://mirror.yandex.ru/mirrors/cinnarch/$repo/$arch
