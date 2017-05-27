@@ -4,7 +4,7 @@
 pkgname=pamac-dev
 pkgver=4.3.5
 _pkgver=4.3.5
-pkgrel=1
+pkgrel=2
 _gitcommit="master"
 pkgdesc='A Gtk3 frontend for libalpm'
 arch=('i686' 'x86_64')
