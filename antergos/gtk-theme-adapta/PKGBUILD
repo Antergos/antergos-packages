@@ -3,7 +3,7 @@
 
 pkgname=gtk-theme-adapta
 _theme_name=adapta-gtk-theme
-pkgver=3.91.0.22
+pkgver=3.91.0.28
 pkgrel=1
 pkgdesc="An adaptive Gtk+ theme based on Material Design Guidelines."
 arch=('any')
