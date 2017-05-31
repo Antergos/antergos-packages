@@ -9,11 +9,11 @@ pkgdesc="An adaptive Gtk+ theme based on Material Design Guidelines."
 arch=('any')
 url="https://github.com/tista500/Adapta"
 license=('GPL2')
-depends=('gtk2' 'gtk-engine-murrine' 'gtk-engines' 'gtk3')
+depends=('gtk2' 'gtk-engine-murrine' 'gtk-engines' 'gtk3' 'gnome-shell')
 makedepends=('glib2' 'sassc' 'inkscape')
 groups=('themes' 'themes::gtk')
 source=("https://github.com/adapta-project/${_theme_name}/archive/${pkgver}.tar.gz")
-md5sums=('1146a7c19444b7c92c021d7bb7ee9182')
+md5sums=('bfe7d731a263122fc670283668df3300')
 
 
 # BEGIN ANTBS METADATA
