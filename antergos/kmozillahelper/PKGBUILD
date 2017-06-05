@@ -16,10 +16,6 @@ replaces=("kmozillahelper-frameworks" "kmozillahelper-kf5")
 source=("${pkgname}-${pkgver}::https://github.com/openSUSE/kmozillahelper/archive/v${pkgver}.tar.gz")
 md5sums=('58816fb988dc01a1b141a1d70ecd70ef')
 
-pkgver() {
-	cd "${pkgname}-${pkgver}"
-	printf '%s.r%s' "${pkgver}" "$(git rev-list --count HEAD)"
-}
 
 build() {
 	mkdir -p "${srcdir}/${pkgname}-build"

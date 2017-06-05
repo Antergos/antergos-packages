@@ -14,9 +14,8 @@ depends=('clutter-gtk' 'clutter-gst' 'xplayer-plparser' 'desktop-file-utils' 'is
 makedepends=('gnome-common' 'gtk-doc' 'gobject-introspection' 'vala')
 conflicts=('xplayer-git')
 url='https://github.com/linuxmint/xplayer'
-
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('ffcf02fe7c421f552e4639afa7495aa5')
+md5sums=('193d80c1bdb9323275bfe1e8134175b5')
 
 
 # BEGIN ANTBS METADATA

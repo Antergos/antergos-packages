@@ -12,10 +12,8 @@ depends=('gtksourceview3' 'enchant' 'libsm')
 makedepends=('gnome-common' 'iso-codes')
 conflicts=('xed-git' 'xed-bin')
 url='https://github.com/linuxmint/xed'
-
-
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('8733f4f6137020117b6b1239fd342417')
+md5sums=('8c4c48616044f4dc285871b05040a650')
 
 
 # BEGIN ANTBS METADATA

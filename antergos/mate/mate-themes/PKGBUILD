@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-themes
-pkgver=3.22.7
+pkgver=3.22.11
 pkgrel=1
 pkgdesc="Default themes for the MATE desktop"
 url="https://mate-desktop.org"
@@ -38,6 +38,4 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
-
-# -*- mode: bash;-*-
 

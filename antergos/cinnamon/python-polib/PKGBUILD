@@ -1,4 +1,4 @@
-# $Id$
+# Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Esteban V. Carnevale <alfplayer@mailoo.com>
 
 pkgname=(python-polib python2-polib)
@@ -10,8 +10,8 @@ url='https://pypi.python.org/pypi/polib'
 arch=('any')
 license=('MIT')
 depends=('python python2')
-source=("https://pypi.python.org/packages/source/p/${_pkgname}/${_pkgname}-${pkgver}.tar.gz")
-sha256sums=('43ce60d05ffa442ba9d3c5722193aadb93c38174b9fb471c8ea7ccbf8349bbca')
+source=("https://files.pythonhosted.org/packages/source/p/${_pkgname}/${_pkgname}-${pkgver}.tar.gz")
+sha256sums=('5affe3d915eb5b4773f4ce164817e383eea0306115cdaf9b64008b3aea8202df')
 
 
 build() {

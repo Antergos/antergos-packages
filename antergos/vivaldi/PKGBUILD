@@ -3,8 +3,8 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.8.770.56
-_chromium=57.0.2987.21 # https://omahaproxy.appspot.com
+pkgver=1.9.818.50 # https://update.vivaldi.com/update/1.0/relnotes/1.9.818.50.html
+_chromium=58.0.3029.110 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
@@ -19,19 +19,26 @@ provides=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 conflicts=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 replaces=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 noextract=('chrome.rpm')
-source_i686=("https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.i386.rpm")
-source_x86_64=("https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.x86_64.rpm")
-source=("https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
-		"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
-		'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html')
-md5sums=('e517736d7c515269f995f4ac44d342c7'
-         'ef09421ad97b8dd2b73172884d9c45e2'
-         'd50d8f0a6940791eabc41c4f64e6a3cf')
-md5sums_x86_64=('1095ee793654d4cd11dc8baf5652d9dd')
+source=("https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.x86_64.rpm")
+_archgit_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
+source=(
+	"https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
+	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
+	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
+	"chromium-gn-bootstrap-r2.patch::${_archgit_url}/chromium-gn-bootstrap-r2.patch?h=packages/chromium"
+)
+md5sums=(
+	'aca4aeff806e1230912aa9c9df6b7be7'
+	'4c801a72da26e4686a5b151d794ebc57'
+	'd50d8f0a6940791eabc41c4f64e6a3cf'
+	'776649f56b8f7bcad7f23d496bba8042'
+)
 
 
 prepare() {
 	cd "$srcdir/chromium-$_chromium"
+	
+	patch -Np1 -i ../../chromium-gn-bootstrap-r2.patch
 
 	# Use Python 2
 	find . -name '*.py' -exec sed -i -r 's|/usr/bin/python$|&2|g' {} +
@@ -122,4 +129,3 @@ package() {
 	install -Dm755 "${srcdir}"/../vivaldi-widevine-helper "${pkgdir}/usr/share/libalpm/scripts/vivaldi-widevine-helper"
 }
 
-# -*- mode: bash;-*
