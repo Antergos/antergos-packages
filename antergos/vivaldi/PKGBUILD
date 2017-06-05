@@ -3,7 +3,8 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.9.818.50 # https://update.vivaldi.com/update/1.0/relnotes/1.9.818.50.html
+pkgver=1.9.818.50
+# https://update.vivaldi.com/update/1.0/relnotes/1.9.818.50.html
 _chromium=58.0.3029.110 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
