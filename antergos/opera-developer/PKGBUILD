@@ -2,7 +2,7 @@
 # Contributor: Christian Hesse <mail@eworm.de>
 
 pkgname=opera-developer
-pkgver=46.0.2602.0
+pkgver=47.0.2615.0
 pkgrel=1
 pkgdesc='A fast and secure web browser and Internet suite - developer stream'
 arch=('x86_64')
@@ -16,7 +16,7 @@ optdepends=(
 groups=('browser')
 options=(!strip)
 source=("http://ftp.opera.com/pub/${pkgname}/${pkgver}/linux/${pkgname}_${pkgver}_amd64.deb")
-md5sums=('45b4acda464ebc4f701dd9b3b3337d84')
+md5sums=('b73d0d0bd3cede855f134945eb805f46')
 
 
 package() {
