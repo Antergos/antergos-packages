@@ -1,0 +1,37 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+_pkgname=golang-goconvey-dev
+pkgname=go-goconvey
+pkgver=1.5.0.1
+pkgrel=1
+pkgdesc='Go testing in the browser.'
+arch=('any')
+url="https://github.com/smartystreets/goconvey"
+license=('custom')
+makedepends=('go')
+#options=('!strip' 'staticlibs')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/g/golang-goconvey-dev/golang-goconvey-dev_1.5.0.orig.tar.gz")
+sha256sums=('e7d57f4cc8490940d2e8b284ec91c7c8a2ac2d63344a0c92ae90f670efb46d44')
+
+_gobuild_dir="${_pkgname}-build"
+_gopkg="github.com/smartystreets/goconvey"
+
+prepare() {
+  mkdir -p "${_gobuild_dir}"/src/"${_gopkg}"
+  cp -r "${_pkgname}-${pkgver}"/* "${_gobuild_dir}"/src/"${_gopkg}"/
+}
+
+build() {
+  GOPATH="${srcdir}/${_gobuild_dir}" go build -o "${srcdir}"/goconvey "${_gopkg}"
+}
+
+package() {
+  install -d "${pkgdir}"/usr/{bin,lib/go/site/src}
+  install -m755 "${srcdir}"/goconvey "${pkgdir}"/usr/bin/goconvey
+  install -Dm644 "${srcdir}/${_pkgname}-${pkgver}"/LICENSE.md "${pkgdir}"/usr/share/licenses/goconvey/LICENSE
+
+  cp -r "${_gobuild_dir}"/src/* "${pkgdir}"/usr/lib/go/site/src/
+  cp -r "${_gobuild_dir}"/src/* "${pkgdir}"/usr/lib/go/site/src/
+  rm -rf "${pkgdir}"/usr/lib/go/site/src/${_gopkg}/{debian,*.md}
+}

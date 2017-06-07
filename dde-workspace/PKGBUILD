@@ -1,0 +1,73 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+_pkgname=deepin-desktop-environment
+pkgbase=dde-workspace
+pkgname=('dde-workspace' 'lightdm-deepin-greeter')
+pkgver=2.1.20150202093855
+_pkgver=2.1+20150202093855~5b89873137
+pkgrel=1
+arch=('i686' 'x86_64')
+url="https://gitcafe.com/Deepin/dde-workspace"
+license=('GPL3')
+groups=('deepin')
+makedepends=('cmake' 'go' 'coffee-script' 'go-gettext-go' 'webkitgtk'
+             'libdeepin-webkit' 'lightdm' 'cairo' 'dbus-glib' 'python2')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-desktop-environment/deepin-desktop-environment_2.1+20150202093855~5b89873137.tar.gz"
+        "default-display-manager")
+sha256sums=('5dbb5972e4920e0ebbf5f7128846ef8f2bfac52fa53673c360b4c261bc081ec1'
+            '3667d6cce9a00f0b8c8bc27250b2ceaf421382d3b4e687a5bcea4c64292030df')
+
+prepare() {
+  cp -r "${_pkgname}-${_pkgver}" "${_pkgname}-${_pkgver}-greeter"
+
+  cd "${srcdir}"/${_pkgname}-${_pkgver}
+  sed "/add_subdirectory(greeter)/d" -i app/CMakeLists.txt || die "sed failed"
+}
+
+build() {
+  cd "${_pkgname}-${_pkgver}"
+
+  #export PYTHON=/usr/bin/python2
+  mkdir -p build && cd build/
+  cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release && make
+
+  gcc -o ../debian/default-terminal ../debian/default-terminal.c `pkg-config --libs --cflags glib-2.0 gio-unix-2.0`
+
+  cd "${srcdir}"/${_pkgname}-${_pkgver}-greeter
+
+  mkdir -p build && cd build/
+  cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release && make
+}
+
+package_dde-workspace() {
+  pkgdesc="Linux Deepin desktop environment."
+  depends=('dde-control-center' 'deepin-menu' 'deepin-artwork'
+           'libdeepin-webkit' 'cairo' 'dbus-glib' 'python2')
+  optdepends=('lightdm-deepin-greeter')
+  replaces=("deepin-desktop-environment" "deepin-workspace")
+  install="${pkgbase}.install"
+
+  cd "${_pkgname}-${_pkgver}"/build
+
+  make install DESTDIR="${pkgdir}"
+
+  install -dm755 "${pkgdir}"/{etc/{X11,sysctl.d},usr/share/backgrounds}
+
+  install -m644 ../debian/30-deepin-inotify-limit.conf "${pkgdir}"/etc/sysctl.d/
+  install -m755 ../debian/default-terminal "${pkgdir}"/usr/bin/
+  install -m644 "${srcdir}"/default-display-manager "${pkgdir}"/etc/X11/
+
+  ## add default background..
+  install -m644 ../resources/greeter/images/background/default_background.jpg "${pkgdir}"/usr/share/backgrounds/
+}
+
+package_lightdm-deepin-greeter() {
+  pkgdesc="Lightdm greeter for Linux Deepin desktop environment."
+  depends=('cairo' 'gtk3' 'libdeepin-webkit' 'lightdm' 'nodejs' 'python2')
+
+  cd "${srcdir}"/${_pkgname}-${_pkgver}-greeter/build/app/greeter
+
+  make install DESTDIR="${pkgdir}"
+  chmod 0700 "${pkgdir}"/var/lib/polkit-1
+}

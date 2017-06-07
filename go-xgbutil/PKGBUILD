@@ -1,0 +1,34 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+_pkgname=golang-xgbutil
+pkgname=go-xgbutil
+pkgver=1.git20140610
+pkgrel=1
+pkgdesc='xgbutil is a utility library designed to work with the X Go Binding.'
+arch=('any')
+url="https://github.com/BurntSushi/xgbutil"
+license=('GPL2')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/g/golang-xgbutil/golang-xgbutil_1~git20140610.orig.tar.xz")
+sha256sums=('cdabe369dc467421394e7e795dbc0722d8d589068c84348f0da17cfcc576c74d')
+
+_gobuild_dir="${pkgname}-build"
+_gopkg="github.com/BurntSushi/xgbutil"
+
+prepare() {
+  mkdir -p "${_gobuild_dir}"/src/"${_gopkg}"
+  cp -r "${srcdir}"/{ewmh,gopher,icccm,keybind,motif,mousebind,xcursor,xevent,xgraphics,xinerama,xprop,xrect,xwindow,*.go} "${_gobuild_dir}"/src/"${_gopkg}"/
+}
+
+#build() {
+#       GOPATH="${srcdir}/${_gobuild_dir}" go install "${_gopkg}"
+#       GOPATH="${srcdir}/${_gobuild_dir}" go install "${_gopkg}"/{ewmh,gopher,icccm,keybind,motif,mousebind,xcursor,xevent,xgraphics,xinerama,xprop,xrect,xwindow}
+#}
+
+package() {
+  depends=('go-xgb' 'go-graphics-go' 'go-jamslam-freetype-go')
+
+  mkdir -p "${pkgdir}"/usr/lib/go/site/src
+  cp -r "${_gobuild_dir}"/src/* "${pkgdir}"/usr/lib/go/site/src/
+  #cp -r "${_gobuild_dir}"/pkg/* "${pkgdir}"/usr/lib/go/site/pkg/
+}

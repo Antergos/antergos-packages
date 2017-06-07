@@ -1,0 +1,33 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-default-gsettings
+pkgver=0.2.20141216171821
+_pkgver=0.2+20141216171821~2cf686e3fa
+pkgrel=1
+pkgdesc='deepin default settings of gsettings'
+arch=('any')
+groups=('deepin')
+url="https://gitcafe.com/Deepin/default-gsettings"
+license=('GPL3')
+install="${pkgname}.install"
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-default-gsettings/deepin-default-gsettings_0.2+20141216171821~2cf686e3fa.tar.gz"
+        'arch-fix.patch')
+sha256sums=('0cce133851f4b46512637f2528a57281b3e0d571cbf636b0f0fa117e58fc8d9c'
+            '544d96c73c5d26a5a7d33cf27daec62e199f2c0e9f2094253baae48c3aa0784a')
+
+prepare() {
+  cd "${pkgname}-${_pkgver}"
+
+  cat *.override >> gsettings-override
+  patch -p0 -i "${srcdir}/arch-fix.patch"
+}
+
+package() {
+  depends=('deepin-gtk-theme' 'deepin-icon-theme')
+
+  cd "${pkgname}-${_pkgver}"
+
+  install -dm 755 "${pkgdir}"/usr/share/glib-2.0/schemas
+  install -m 644 gsettings-override "${pkgdir}"/usr/share/glib-2.0/schemas/99_${pkgname}.gschema.override
+}

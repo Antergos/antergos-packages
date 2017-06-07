@@ -1,0 +1,30 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=dde-api
+pkgver=0.0.2.20150107093816
+_pkgver=0.0.2+20150107093816~d93500c16a
+pkgrel=1
+pkgdesc='Go-lang bingdings for dde-daemon'
+arch=('i686' 'x86_64')
+url="https://gitcafe.com/Deepin/dde-api"
+license=('GPL3')
+depends=('glib2' 'gdk-pixbuf2' 'gtk3' 'libcanberra' 'libxi' 'rfkill')
+makedepends=('go' 'go-dlib' 'go-xgb' 'go-xgbutil'
+             'go-fsnotify' 'dde-go-dbus-factory')
+groups=('deepin')
+options=(staticlibs)
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/dde-api/dde-api_0.0.2+20150107093816~d93500c16a.tar.gz")
+sha256sums=('7a45f0c64513c9be7e7795fcb58c1c3eb694e6a1a6a36fb6037281e1dc72e813')
+
+build(){
+  cd "${pkgname}-${_pkgver}"
+
+  make GOPATH="/usr/lib/go/site"
+}
+
+package() {
+  cd "${pkgname}-${_pkgver}"
+
+  make DESTDIR="${pkgdir}" install
+}

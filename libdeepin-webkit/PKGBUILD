@@ -1,0 +1,57 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+_pkgname=deepin-webkit
+pkgname=libdeepin-webkit
+pkgver=1.8.2.2.20141124213858
+_pkgver=1.8.2.2+20141124213858~2494240496
+pkgrel=1
+pkgdesc='A fork of webkit-gtk for Linux Deepin desktop eviroment'
+arch=('i686' 'x86_64')
+url="http://www.linuxdeepin.com/"
+license=('LGPL' 'GPL' 'BSD' 'custom')
+groups=('deepin')
+depends=('geoclue' 'libxt' 'libxslt' 'sqlite' 'libsoup' 'enchant'
+         'libgl' 'gtk3' 'gstreamer0.10-base-plugins' 'libsecret'
+         'libwebp' 'harfbuzz-icu')
+makedepends=('gtk2' 'gperf' 'gobject-introspection' 'python2' 'mesa'
+             'gtk-doc' 'gawk' 'chrpath' 'bison' 'perl' 'flex')
+optdepends=('gtk2: Netscape plugin support')
+provides=('deepin-webkit')
+replaces=('deepin-webkit')
+options=(!libtool !emptydirs)
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-webkit/deepin-webkit_1.8.2.2+20141124213858~2494240496.tar.gz"
+        "webkit-gtk-1.8.2-bison-2.6.patch"
+        "DerivedSources.tar.gz")
+sha256sums=('ffc3472c9098384b6c2c6f4f8a4f8a477acf317053b5c0880a639100fc8ad8ee'
+            'cea36d9a955e4f5c2cd2fe2037ff63067217596e88cbbaa1da2ecc7546d3cd44'
+            '7a5fbc735dcda90faeafb26778a741ebe1a5fcf0cfb44de5369db42aa60561df')
+
+prepare(){
+  cd "${_pkgname}-${_pkgver}"
+
+  patch -p1 -i "${srcdir}"/webkit-gtk-1.8.2-bison-2.6.patch
+}
+
+build() {
+  cd "${_pkgname}-${_pkgver}"
+
+  export CFLAGS="$CFLAGS -Wall -Wl,--as-needed"
+  export LDFLAGS="$LDFLAGS -Wl,--no-keep-memory"
+
+  PYTHON=/usr/bin/python2 ./configure \
+        --prefix=/usr \
+        --disable-silent-rules \
+        --with-gtk=3.0 \
+        --disable-webgl
+  make
+}
+
+package() {
+  cd "${_pkgname}-${_pkgver}"
+
+  make DESTDIR="$pkgdir" install
+
+  rm -rf "$pkgdir"/usr/{bin,include,share}
+  mv "${pkgdir}"/usr/lib/pkgconfig/webkitgtk-3.0.pc "${pkgdir}"/usr/lib/pkgconfig/deepin-webkit-3.0.pc
+}

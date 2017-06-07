@@ -1,0 +1,37 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-icon-theme
+pkgver=13.06.13.20150114160019
+_pkgver=13.06.13+20150114160019~dff58a2dad
+pkgrel=1
+pkgdesc="This package is DeepinIconTheme which inherits the faenza-icon-theme."
+arch=('any')
+url="https://gitcafe.com/Deepin/deepin-icon-theme"
+license=('LGPL3')
+makedepends=('inkscape')
+groups=('deepin')
+options=(!strip)
+install="${pkgname}.install"
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-icon-theme/deepin-icon-theme_13.06.13+20150114160019~dff58a2dad.tar.gz")
+sha256sums=('f897855958c5cd8bdc5660965d4771e2927d0b1269a476256928967e6de6e042')
+
+prepare() {
+  cd "${pkgname}-${_pkgver}"
+
+  sed 's\python\python2\' -i Makefile
+}
+
+build() {
+  cd "${pkgname}-${_pkgver}"
+
+  make
+}
+
+package() {
+  depends=('flattr-icon-theme' 'deepin-cursor-theme' 'gtk-update-icon-cache')
+
+  cd "${pkgname}-${_pkgver}"
+
+  make DESTDIR="$pkgdir" install
+}

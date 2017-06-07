@@ -1,0 +1,29 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-notifications
+pkgver=0.3.20141216180805
+_pkgver=0.3+20141216180805~a93d61767c
+pkgrel=1
+pkgdesc="System notifications for linuxdeepin desktop environment."
+arch=('i686' 'x86_64')
+url="https://gitcafe.com/Deepin/deepin-notifications"
+license=('GPL3')
+groups=('deepin')
+depends=('qt5-declarative' 'qt5-svg')
+conflicts=('notify-osd')
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-notifications/deepin-notifications_0.3+20141216180805~a93d61767c.tar.gz")
+sha256sums=('79e34f468591630b10ad7b88d084c64aa265680d1c1597068b29fbdde028e0b5')
+
+build() {
+  cd "${pkgname}-${_pkgver}"
+
+  qmake PREFIX=/usr
+  make
+}
+
+package() {
+  cd "${pkgname}-${_pkgver}"
+
+  make INSTALL_ROOT="${pkgdir}" install
+}

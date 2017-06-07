@@ -1,0 +1,44 @@
+# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
+# Maintainer: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-movie
+pkgver=2.2.20150211132515
+_pkgver=2.2+20150211132515~f8f651edba
+pkgrel=1
+pkgdesc='deepin movie for linuxdeepin desktop environment'
+arch=('any')
+url="https://github.com/linuxdeepin/deepin-movie"
+license=('GPL3')
+makedepends=('python2-sip' 'deepin-gettext-tools')
+groups=('deepin-extra')
+install="${pkgname}.install"
+source=("http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-movie/deepin-movie_2.2+20150211132515~f8f651edba.tar.gz")
+sha256sums=('4bb5e3ed1f1c346090cb11081916e10a3ef7d2277c3330d768bf49d63eefe385')
+
+prepare() {
+  cd "${pkgname}-${_pkgver}"
+
+  sed 's\python\python2\' -i Makefile
+
+  # fix python version
+  find -iname "*.py" | xargs sed -i 's=\(^#! */usr/bin.*\)python *$=\1python2='
+}
+
+build() {
+  cd "${pkgname}-${_pkgver}"
+
+  make
+}
+
+package() {
+  depends=('qt5-declarative' 'qt5-quickcontrols' 'qt5-multimedia' 'qt5-webkit'
+           'qt5-graphicaleffects' 'qt5-imageformats' 'qt5-systems'
+           'python2-ass' 'python2-magic' 'python2-peewee' 'python2-pyqt5'
+           'python2-pysrt' 'python2-setproctitle' 'python2-xpybutil'
+           'dde-go-dbus-factory' 'deepin-menu' 'deepin-qml-widgets' 'deepin-ui'
+           'desktop-file-utils' 'enca' 'mediainfo' 'qtav')
+
+  cd "${pkgname}-${_pkgver}"
+
+  make DESTDIR="${pkgdir}" install
+}
