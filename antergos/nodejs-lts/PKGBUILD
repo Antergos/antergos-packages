@@ -9,7 +9,7 @@
 # Contributor: TIanyi Cui <tianyicui@gmail.com>
 
 pkgname=nodejs-lts
-pkgver=6.10.3
+pkgver=6.11.0
 pkgrel=1
 pkgdesc="JavaScript runtime built on Chrome's V8 JavaScript engine."
 arch=('x86_64')
