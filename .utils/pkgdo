@@ -1,7 +1,7 @@
 #!/bin/python
 # -*- coding: utf-8 -*-
 #
-#  do
+#  pkgdo
 #
 #  Copyright © 2017 Antergos
 #
@@ -32,11 +32,11 @@ import re
 import os
 import subprocess
 from typing import Union
+import json
 
 import click
 
 
-GROUPS_CHOICE = click.Choice(['mate', 'cinnamon', 'liri'])
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.realpath(os.path.join(THIS_DIR, '../antergos'))
 
@@ -50,8 +50,20 @@ GROUP_DIRS = {
     'mate': MATE_DIR,
 }
 
+ATTRIBUTES = {
+    'gtk': 'gtk3',
+    'qt': 'qt5-base',
+}
+
 GROUPS = {}
 PATHS = {}
+ATTRIBUTES_PATHS = {
+    'gtk': [],
+    'qt': [],
+}
+
+GROUPS_CHOICE = click.Choice(GROUP_DIRS.keys())
+ATTRIBUTES_CHOICE = click.Choice(ATTRIBUTES.keys())
 
 
 def _find_paths():
@@ -77,6 +89,14 @@ def _find_paths():
 
     paths.update(group_paths)
     PATHS.update(paths)
+
+    for pkgname, path in PATHS.items():
+        with open(f'{path}/PKGBUILD', 'r') as PKGBUILD:
+            contents = PKGBUILD.read()
+
+            for attribute, dep in ATTRIBUTES.items():
+                if dep in contents:
+                    ATTRIBUTES_PATHS[attribute].append(path)
 
 
 def _get_group_directory(group):
@@ -201,6 +221,7 @@ def updpkgsums(all, group, packages):
 
 @do.command(help='Update checksums AND .SRCINFO for packages.')
 @click.option('-a', '--all', is_flag=True, help='Update checksums and .SRCINFO for all packages.')
+#@click.option('-a', '--attribute', type=GROUPS_CHOICE, help='Limit scope to PKGBUILDS with attribute')
 @click.option('-g', '--group', type=GROUPS_CHOICE, help='Update checksums and .SRCINFO for packages in group.')
 @click.argument('packages', nargs=-1)
 def update(all, group, packages):

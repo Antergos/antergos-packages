@@ -3,7 +3,7 @@
 
 pkgname=redis-desktop-manager
 pkgver=0.8.8
-pkgrel=2
+pkgrel=3
 pkgdesc='Cross-platform GUI management tool for Redis'
 arch=('x86_64')
 url='http://redisdesktop.com/'

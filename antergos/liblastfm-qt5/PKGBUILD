@@ -6,7 +6,7 @@
 pkgname=liblastfm-qt5
 _pkgname=liblastfm
 pkgver=1.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A Qt5 C++ library for the Last.fm webservices"
 arch=('i686' 'x86_64')
 url='https://github.com/lastfm/liblastfm/'

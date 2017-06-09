@@ -6,7 +6,7 @@
 pkgname=libechonest-qt5
 _pkgname=libechonest
 pkgver=2.3.1
-pkgrel=2
+pkgrel=3
 pkgdesc="C++ library for interfacing with Echo Nest"
 arch=('i686' 'x86_64')
 url='https://projects.kde.org/projects/playground/libs/libechonest'

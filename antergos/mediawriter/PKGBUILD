@@ -3,7 +3,7 @@
 pkgname=mediawriter
 _pkgname=MediaWriter
 pkgver=4.0.7r348
-pkgrel=1
+pkgrel=2
 pkgdesc='A cross-platform tool for easily creating bootable USB installation media for Antergos.'
 arch=('x86_64')
 url='https://github.com/Antergos/MediaWriter'

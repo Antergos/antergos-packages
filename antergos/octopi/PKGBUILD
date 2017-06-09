@@ -3,7 +3,7 @@
 pkgname=octopi
 pkgdesc="A powerful Qt5 Pacman frontend."
 pkgver=0.8.1
-pkgrel=1
+pkgrel=2
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 #_gitcommit="master"
 arch=('i686' 'x86_64')

@@ -6,7 +6,7 @@
 pkgname=dolphin-root
 _pkgname=dolphin
 pkgver=17.04.1
-pkgrel=2
+pkgrel=3
 pkgdesc="File Manager"
 arch=(x86_64)
 url="https://kde.org/applications/system/dolphin/"
@@ -20,7 +20,7 @@ provides=(kdebase-dolphin dolphin)
 groups=(kde-applications kdebase)
 source=("https://download.kde.org/stable/applications/$pkgver/src/$_pkgname-$pkgver.tar.xz"
 	dolphin-root.patch)
-sha256sums=('be98d39a63e1fb9a77d79fbb04019cecaf0452d0616d518518e71d2c3fbe2227'
+sha256sums=('27ae075eeb5811c4a3b2f64edb7316c17ac114bb1fa7ee866cc04def99352be7'
             'b4969d7367d1304f460862946fa44ce46bc429dac2c48d09a8559d6ab98ca8d2')
 
 prepare() {
