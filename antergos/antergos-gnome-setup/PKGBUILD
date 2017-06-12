@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-gnome-setup
-pkgver=0.0.1
+pkgver=0.0.2
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Gnome"
 url="http://www.antergos.com"

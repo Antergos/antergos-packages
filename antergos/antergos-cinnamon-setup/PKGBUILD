@@ -1,0 +1,35 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=antergos-cinnamon-setup
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="Setup configuration for Antergos Cinnamon"
+url="http://www.antergos.com"
+arch=('any')
+license=('GPL2')
+_is_metapkg='yes'
+install=${pkgname}.install
+makedepends=()
+depends=('accountsservice' 'antergos-gsettings' 'antergos-wallpapers'
+  'antergos-welcome' 'cdrtools' 'ffmpegthumbnailer' 'gst-libav'
+  'gst-plugins-bad' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-ugly'
+  'gstreamer-vaapi' 'libdvdcss' 'lightdm' 'lightdm-webkit2-greeter'
+  'light-locker' 'light-locker-settings' 'mesa' 'mesa-vdpau' 'numix-frost-themes'
+  'numix-icon-theme' 'numix-icon-theme-square' 'orca' 'pamac' 'pavucontrol'
+  'pulseaudio' 'pulseaudio-alsa' 'qt5-styleplugins' 'qt5ct' 'ttf-bitstream-vera'
+  'ttf-dejavu' 'ttf-liberation' 'upower' 'xf86-input-synaptics' 'xf86-video-fbdev'
+  'xf86-video-vesa' 'xorg-apps' 'xorg-fonts' 'xorg-server' 'xorg-xinit' 'xorg-xkill'
+  'antergos-gnome-defaults-list' 'baobab' 'brasero' 'cinnamon'
+  'cinnamon-control-center' 'cinnamon-desktop' 'cinnamon-menus' 'cinnamon-session'
+  'cinnamon-settings-daemon' 'cinnamon-screensaver' 'cjs' 'eog' 'evince'
+  'file-roller' 'gedit' 'gnome-calculator' 'gnome-common' 'gnome-disk-utility'
+  'gnome-font-viewer' 'gnome-keyring' 'gnome-music' 'gnome-photos'
+  'gnome-screenshot' 'gnome-system-monitor' 'gnome-terminal' 'gnome-themes-standard'
+  'gvfs-google' 'gvfs-mtp' 'gvfs-smb' 'hicolor-icon-theme' 'libgnome-keyring'
+  'muffin' 'nemo' 'nemo-fileroller' 'nemo-preview' 'nemo-share'
+  'network-manager-applet' 'networkmanager-openvpn' 'networkmanager-pptp'
+  'python-pysmbc' 'totem' 'transmission-gtk' 'xdg-user-dirs-gtk' 'zuki-themes')
+
+package() {
+    true
+}

@@ -8,7 +8,7 @@ do_antergos_setup() {
 		exit 1
 	fi
 	
-	[[ -n "${_ANT_USER}" ]] && /usr/bin/antergos-gnome-setup "${_ANT_USER}" "${1}"
+	[[ -n "${_ANT_USER}" ]] && /usr/bin/antergos-cinnamon-setup "${_ANT_USER}" "${1}"
 }
 
 post_install() {
