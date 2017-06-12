@@ -1,8 +1,8 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-gsettings
-pkgver=1.0.0
-pkgrel=2
+pkgver=1.0.1
+pkgrel=1
 pkgdesc="Setup configuration for Antergos GTK3 Desktop Environments"
 url="http://www.antergos.com"
 arch=('any')
