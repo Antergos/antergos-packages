@@ -18,12 +18,12 @@ md5sums=('cbc7ae29bee7d52460880d12cf4b6632')
 
 
 prepare() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}-v${pkgver}"
 	mkdir -p 'build'
 }
 
 build() {
-	cd "${srcdir}/${pkgname}-${pkgver}/build"
+	cd "${srcdir}/${pkgname}-v${pkgver}/build"
 	cmake \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib  \
@@ -32,6 +32,6 @@ build() {
 }
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}/build"
+	cd "${srcdir}/${pkgname}-v${pkgver}/build"
 	make DESTDIR="${pkgdir}" install
 }

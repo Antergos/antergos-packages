@@ -67,7 +67,7 @@ prepare() {
 build() {
 	export PYTHON=python2
 	export PKG_CONFIG_PATH=/usr/lib/openssl-1.0/pkgconfig
-
+	export CXXFLAGS="${CXXFLAGS} -Wimplicit-fallthrough=0"
 	cd "node-v${pkgver}"
 
 	./configure \
