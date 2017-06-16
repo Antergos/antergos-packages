@@ -19,12 +19,12 @@ makedepends=('w3m' 'libexif' 'libpulse' 'libxss' 'ninja' 'pciutils' 'python2' 'x
 provides=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 conflicts=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 replaces=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
-#noextract=('chrome.rpm')
-source=("https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.x86_64.rpm")
+noextract=('chrome.rpm')
 _archgit_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
 _clientnative_patch='0001-ClientNativePixmapFactoryDmabuf-uses-ioctl-instead-o.patch'
 _kernelversion_patch='0001-Fix-kernel-version-condition-for-including-dma-buf.h.patch'
 source=(
+	"https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.x86_64.rpm"
 	"https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
@@ -33,13 +33,16 @@ source=(
 	"chromium-blink-gcc7.patch::${_archgit_url}/chromium-blink-gcc7.patch?h=packages/chromium"
 	"chromium-v8-gcc7.patch::${_archgit_url}/chromium-v8-gcc7.patch?h=packages/chromium"
 )
-md5sums=('3a2ad41fc23a569255f18ccacaf744e4'
-         'd6b67101b10a7c86801207831a287824'
-         'd50d8f0a6940791eabc41c4f64e6a3cf'
-         '7ad48853453a431b689c1ff97378840a'
-         'de9345fb5cd756ed43c4ea7b9223e5ee'
-         '034bc28a6988f3d6d1e7f291ec95365c'
-         'c2f283eee77d4123a0952d9ee277ec3c')
+md5sums=(
+	'ff0d7a06ef5473f2b94a3c157b90ea53'
+	'3a2ad41fc23a569255f18ccacaf744e4'
+	'd6b67101b10a7c86801207831a287824'
+	'd50d8f0a6940791eabc41c4f64e6a3cf'
+	'7ad48853453a431b689c1ff97378840a'
+	'de9345fb5cd756ed43c4ea7b9223e5ee'
+	'034bc28a6988f3d6d1e7f291ec95365c'
+	'c2f283eee77d4123a0952d9ee277ec3c'
+)
 
 
 prepare() {
