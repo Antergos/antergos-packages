@@ -3,9 +3,9 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.9.818.50
-# https://update.vivaldi.com/update/1.0/relnotes/1.9.818.50.html
-_chromium=58.0.3029.110 # https://omahaproxy.appspot.com
+pkgver=1.10.867.38
+# https://update.vivaldi.com/update/1.0/relnotes/1.10.867.38.html
+_chromium=59.0.3071.86 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
@@ -13,33 +13,47 @@ url="https://vivaldi.com"
 options=('!strip' '!zipman')
 license=('custom' 'LGPL2.1')
 arch=('x86_64')
-depends=('gtk2' 'nss' 'libxtst' 'gconf' 'libxss' 'freetype2' 'ttf-font' 'nspr'
+depends=('gtk3' 'nss' 'libxtst' 'gconf' 'libxss' 'freetype2' 'ttf-font' 'nspr'
 		'desktop-file-utils' 'shared-mime-info' 'alsa-lib' 'hicolor-icon-theme')
-makedepends=('w3m' 'libexif' 'libpulse' 'libxss' 'ninja' 'pciutils' 'python2' 'xdg-utils' 'gtk3')
+makedepends=('w3m' 'libexif' 'libpulse' 'libxss' 'ninja' 'pciutils' 'python2' 'xdg-utils' 'nodejs')
 provides=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 conflicts=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 replaces=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 noextract=('chrome.rpm')
 source=("https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.x86_64.rpm")
 _archgit_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
+_clientnative_patch='0001-ClientNativePixmapFactoryDmabuf-uses-ioctl-instead-o.patch'
+_kernelversion_patch='0001-Fix-kernel-version-condition-for-including-dma-buf.h.patch'
 source=(
 	"https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
-	"chromium-gn-bootstrap-r2.patch::${_archgit_url}/chromium-gn-bootstrap-r2.patch?h=packages/chromium"
+	"${_clientnative_patch}::${_archgit_url}/${_clientnative_patch}?h=packages/chromium"
+	"${_kernelversion_patch}::${_archgit_url}/${_kernelversion_patch}?h=packages/chromium"
+	"chromium-blink-gcc7.patch::${_archgit_url}/chromium-blink-gcc7.patch?h=packages/chromium"
+	"chromium-v8-gcc7.patch::${_archgit_url}/chromium-v8-gcc7.patch?h=packages/chromium"
 )
-md5sums=(
-	'aca4aeff806e1230912aa9c9df6b7be7'
-	'4c801a72da26e4686a5b151d794ebc57'
-	'd50d8f0a6940791eabc41c4f64e6a3cf'
-	'776649f56b8f7bcad7f23d496bba8042'
-)
+md5sums=('3a2ad41fc23a569255f18ccacaf744e4'
+         'd6b67101b10a7c86801207831a287824'
+         'd50d8f0a6940791eabc41c4f64e6a3cf'
+         '7ad48853453a431b689c1ff97378840a'
+         'de9345fb5cd756ed43c4ea7b9223e5ee'
+         '034bc28a6988f3d6d1e7f291ec95365c'
+         'c2f283eee77d4123a0952d9ee277ec3c')
 
 
 prepare() {
 	cd "$srcdir/chromium-$_chromium"
-	
-	patch -Np1 -i ../../chromium-gn-bootstrap-r2.patch
+
+	# https://bugs.chromium.org/p/chromium/issues/detail?id=707604
+	patch -Np1 -i ../../'0001-ClientNativePixmapFactoryDmabuf-uses-ioctl-instead-o.patch'
+	patch -Np1 -i ../../'0001-Fix-kernel-version-condition-for-including-dma-buf.h.patch'
+
+	# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=853347
+	patch -Np1 -i ../../chromium-blink-gcc7.patch
+
+	# https://bugs.chromium.org/p/chromium/issues/detail?id=614289
+	patch -Np1 -i ../../chromium-v8-gcc7.patch
 
 	# Use Python 2
 	find . -name '*.py' -exec sed -i -r 's|/usr/bin/python$|&2|g' {} +
@@ -48,6 +62,9 @@ prepare() {
 	[[ -d "$srcdir/python2-path" ]] && rm -rf "$srcdir/python2-path"
 	mkdir "$srcdir/python2-path"
 	ln -s /usr/bin/python2 "$srcdir/python2-path/python"
+
+	mkdir -p third_party/node/linux/node-linux-x64/bin
+	ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
 }
 
 build() {
@@ -55,6 +72,8 @@ build() {
 
 	export PATH="$srcdir/python2-path:$PATH"
 	export HOME="$srcdir"
+	export TMPDIR="$srcdir/temp"
+	mkdir -p "$TMPDIR"
 
 	local args=('ffmpeg_branding="Chrome"'
 				'proprietary_codecs=true'
@@ -67,14 +86,15 @@ build() {
 				'use_sysroot=false'
 				'use_gold=false'
 				'linux_use_bundled_binutils=false'
+				'use_gtk3=true'
 				'fatal_linker_warnings=false'
 				'treat_warnings_as_errors=false'
 				'is_clang=false'
 				'is_component_build=true'
 				'is_debug=false'
-				'symbol_level=0')
-
-	[[ "${CARCH}" = 'i686' ]] && args+=('target_cpu="x86"')
+				'symbol_level=0'
+				'enable_nacl=false'
+				'enable_swiftshader=false')
 
 	python2 tools/gn/bootstrap/bootstrap.py -v --gn-gen-args "${args[*]}"
 	out/Release/gn gen out/Release -v --args="${args[*]}" --script-executable=/usr/bin/python2
