@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-control-center
-pkgver=1.18.1
+pkgver=1.18.2
 pkgrel=1
 pkgdesc="The Control Center for MATE"
 url="https://mate-desktop.org"
