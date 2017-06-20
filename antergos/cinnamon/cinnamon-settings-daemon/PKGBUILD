@@ -3,7 +3,7 @@
 # Contributor: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgname=cinnamon-settings-daemon
-pkgver=3.4.1
+pkgver=3.4.2
 pkgrel=1
 pkgdesc="The Cinnamon Settings daemon"
 arch=('i686' 'x86_64')
