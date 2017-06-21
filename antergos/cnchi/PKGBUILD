@@ -13,8 +13,8 @@ depends=('python' 'pyalpm' 'python-gobject' 'python-dbus' 'python-cairo' 'python
 		'python-bugsnag' 'upower')
 makedepends=('transifex-client')
 conflicts=('cnchi-dev')
-source=("${_pkgname}-${pkgver}.zip::https://github.com/antergos/cnchi/archive/v${pkgver}.zip")
-md5sums=('a38a37ee30b6892c39d4f7532df3abef')
+source=("${_pkgname}-${pkgver}.zip::https://github.com/antergos/cnchi/archive/${pkgver}.zip")
+md5sums=('96f959b8e078517786aa952702a5f7bb')
 
 
 # BEGIN ANTBS METADATA
