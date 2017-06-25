@@ -1,7 +1,7 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=antergos-alerts
-pkgver=17.6.25.1
+pkgver=17.6.25
 pkgrel=1
 pkgdesc='Notifys users when new antergos alerts are issued.'
 arch=('any')
@@ -12,7 +12,7 @@ groups=('antergos-base')
 url="https://antergos.com/"
 license=('GPL3')
 source=("${pkgname}-${pkgver}.zip::https://github.com/Antergos/${pkgname}/archive/${pkgver}.zip")
-md5sums=('d901236653ea8babad1a62b806343f82')
+md5sums=('cabcfcc20522a1233bcaef558b868531')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
