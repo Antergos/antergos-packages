@@ -2,12 +2,13 @@
 
 pkgname=antergos-mirrorlist
 pkgver=20170527
-pkgrel=1
+pkgrel=2
 pkgdesc="Antergos mirrorlist for use by pacman"
 arch=('any')
 groups=('antergos-base')
 url="http://www.antergos.com/"
 license=('GPL')
+depends=('antergos-alerts')
 backup=(etc/pacman.d/antergos-mirrorlist)
 source=(antergos-mirrorlist)
 md5sums=('0f7c95f6ab31c77e1119c4ddd32e95a9')
