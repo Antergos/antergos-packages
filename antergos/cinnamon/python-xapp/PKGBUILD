@@ -1,0 +1,30 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+
+pkgname=python-xapp
+pkgver=1.0.1
+pkgrel=1
+pkgdesc='Python Xapp library'
+arch=('any')
+license=('GPL2')
+groups=('cinnamon')
+url='https://github.com/linuxmint/python-xapp'
+depends=('python' 'python-psutil')
+makedepends=('python-setuptools')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/$pkgver.tar.gz")
+md5sums=('99614b14e6dff73e8d0ba345b9ce567a')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='tags'
+_monitored_project='linuxmint'
+_monitored_repo='python-xapp'
+# END ANTBS METADATA
+
+
+package() {
+	cd "${pkgname}-${pkgver}"
+	python setup.py install --root="${pkgdir}" --optimize=1
+}
+
