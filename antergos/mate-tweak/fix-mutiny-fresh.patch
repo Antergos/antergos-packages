@@ -1,6 +1,6 @@
-diff -Naur ubuntu-mate-settings-16.04.1.orig/usr/share/mate-panel/layouts/mutiny-fresh.panel ubuntu-mate-settings-16.04.1/usr/share/mate-panel/layouts/mutiny-fresh.panel
---- ubuntu-mate-settings-16.04.1.orig/usr/share/mate-panel/layouts/mutiny-fresh.panel	2016-02-21 19:16:14.000000000 +0100
-+++ ubuntu-mate-settings-16.04.1/usr/share/mate-panel/layouts/mutiny-fresh.panel	2016-02-26 04:51:48.024833424 +0100
+diff -Naur ubuntu-mate-settings-17.10.11.orig/usr/share/mate-panel/layouts/mutiny-fresh.panel ubuntu-mate-settings-17.10.11/usr/share/mate-panel/layouts/mutiny-fresh.panel
+--- ubuntu-mate-settings-17.10.11.orig/usr/share/mate-panel/layouts/mutiny-fresh.panel	2016-02-21 19:16:14.000000000 +0100
++++ ubuntu-mate-settings-17.10.11/usr/share/mate-panel/layouts/mutiny-fresh.panel	2016-02-26 04:51:48.024833424 +0100
 @@ -16,6 +16,14 @@
  screen=0
  size=24
