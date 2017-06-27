@@ -3,9 +3,9 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.10.867.38
-# https://update.vivaldi.com/update/1.0/relnotes/1.10.867.38.html
-_chromium=59.0.3071.86 # https://omahaproxy.appspot.com
+pkgver=1.10.867.42
+# https://update.vivaldi.com/update/1.0/relnotes/1.10.867.42.html
+_chromium=59.0.3071.104 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
@@ -33,16 +33,14 @@ source=(
 	"chromium-blink-gcc7.patch::${_archgit_url}/chromium-blink-gcc7.patch?h=packages/chromium"
 	"chromium-v8-gcc7.patch::${_archgit_url}/chromium-v8-gcc7.patch?h=packages/chromium"
 )
-md5sums=(
-	'ff0d7a06ef5473f2b94a3c157b90ea53'
-	'3a2ad41fc23a569255f18ccacaf744e4'
-	'd6b67101b10a7c86801207831a287824'
-	'd50d8f0a6940791eabc41c4f64e6a3cf'
-	'7ad48853453a431b689c1ff97378840a'
-	'de9345fb5cd756ed43c4ea7b9223e5ee'
-	'034bc28a6988f3d6d1e7f291ec95365c'
-	'c2f283eee77d4123a0952d9ee277ec3c'
-)
+md5sums=('009ac220970e7461ff5acf61ef84acdd'
+         '4a315c89d6fc567b5982316767a8faef'
+         'ee059bdb6389da97cc810d763b21a0da'
+         'd50d8f0a6940791eabc41c4f64e6a3cf'
+         '7ad48853453a431b689c1ff97378840a'
+         'de9345fb5cd756ed43c4ea7b9223e5ee'
+         '034bc28a6988f3d6d1e7f291ec95365c'
+         'c2f283eee77d4123a0952d9ee277ec3c')
 
 
 prepare() {
