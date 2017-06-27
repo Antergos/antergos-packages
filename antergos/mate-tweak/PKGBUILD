@@ -12,7 +12,7 @@ url="https://bitbucket.org/ubuntu-mate/mate-tweak"
 license=('GPL')
 depends=(
 	'gtk3' 'libnotify' 'mate-applets' 'python-configobj' 'python-gobject' 'python-psutil'
-	'python-setproctitle' 'mate-desktop-common'
+	'python-setproctitle' 'mate-common'
 )
 makedepends=('python-distutils-extra' 'python-setuptools')
 optdepends=(
