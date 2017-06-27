@@ -1,40 +1,46 @@
-# Maintainer: Antergos devs <devs@antergos.com>
+# Maintainer: Antergos Developers <devs@antergos.com>
 # Contributor: Brenton Horne <brentonhorne77 at gmail dot com>
 # Contributor: Balló György <ballogyor+arch at gmail dot com>
 
 pkgname=mate-tweak
-pkgver=16.10.5
-_umsver=16.10.7
+pkgver=17.10.7
+_umsver=17.10.11
 pkgrel=1
-pkgdesc="Tweak tool for MATE, a fork of MintDesktop - GTK3 version."
+pkgdesc="Tweak tool for MATE"
 arch=('any')
 url="https://bitbucket.org/ubuntu-mate/mate-tweak"
 license=('GPL')
-depends=('gtk3' 'libnotify' 'mate-applets' 'python-configobj' 'python-gobject' 'python-psutil' 'python-setproctitle')
+depends=(
+	'gtk3' 'libnotify' 'mate-applets' 'python-configobj' 'python-gobject' 'python-psutil'
+	'python-setproctitle' 'mate-desktop-common'
+)
 makedepends=('python-distutils-extra' 'python-setuptools')
-optdepends=('mate-applet-dock: for Mutiny panel layout'
-            'mate-menu: to enable advanced menu'
-            'mate-netbook-gtk3: for Netbook panel layout'
-            'plank: for Cupertino panel layout'
-            'synapse: to enable launcher'
-            'tilda: to enable pull-down terminal'
-            'topmenu-gtk: for Mutiny panel layout')
-source=("$pkgname-$pkgver.tar.gz::https://bitbucket.org/ubuntu-mate/$pkgname/get/$pkgver.tar.gz"
-        "https://launchpad.net/ubuntu/+archive/primary/+files/ubuntu-mate-settings_$_umsver.tar.xz"
-        "fix-mutiny-fresh.patch")
-sha256sums=('dac113407663ee2660a3d304e07dc2b762c5ac493a2db7ef34609d4d153308fe'
-            'bf0046befe9b8704e5b9972fc86da3847b0b458b72a186f8ebf5d7b30ee591ac'
+optdepends=(
+	'mate-applet-dock: for Mutiny panel layout'
+	'mate-netbook: for Netbook panel layout'
+	'plank: for Cupertino panel layout'
+	'synapse: to enable launcher'
+	'tilda: to enable pull-down terminal'
+	'topmenu-gtk: for Mutiny panel layout'
+)
+source=(
+	"$pkgname-$pkgver.tar.gz::https://bitbucket.org/ubuntu-mate/$pkgname/get/$pkgver.tar.gz"
+	"https://launchpad.net/ubuntu/+archive/primary/+files/ubuntu-mate-settings_$_umsver.tar.xz"
+	"fix-mutiny-fresh.patch"
+)
+sha256sums=('73779d7d047d2e88c9a0cd3eb8005917e5da38504f449c3bbf17c344df245a2a'
+            'e08054b9ee01e84932a4d2745bcf2754f7ea6c61a611aeabe00e7ac2ed120353'
             'ac2ade84a532486c50245a176d370f0815330f13df07fd62e133afe0383db5fc')
 
 prepare() {
-  cd ubuntu-mate-$pkgname-*
-  sed -i 's|/usr/lib/mate-applets/topmenu-mate-panel-applet|/usr/lib/topmenu-gtk/topmenu-mate-panel-applet|' mate-tweak
-  cd ../ubuntu-mate-settings
-  patch -Np1 -i ../fix-mutiny-fresh.patch
+	cd ubuntu-mate-$pkgname-*
+	sed -i 's|/usr/lib/mate-applets/topmenu-mate-panel-applet|/usr/lib/topmenu-gtk/topmenu-mate-panel-applet|' mate-tweak
+	cd ../ubuntu-mate-settings
+	patch -Np1 -i ../fix-mutiny-fresh.patch
 }
 
 package() {
-  cd ubuntu-mate-$pkgname-*
-  python3 setup.py install --root="$pkgdir" --optimize=1
-  cp -r "$srcdir"/ubuntu-mate-settings/usr/share/mate-panel "$pkgdir/usr/share"
+	cd ubuntu-mate-$pkgname-*
+	python setup.py install --root="$pkgdir" --optimize=1
+	cp -r "$srcdir"/ubuntu-mate-settings/usr/share/mate-panel "$pkgdir/usr/share"
 }
