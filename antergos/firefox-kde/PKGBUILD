@@ -4,7 +4,7 @@
 
 _pkgname=firefox
 pkgname=firefox-kde
-pkgver=54.0
+pkgver=54.0.1
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org with openSUSE KDE integration patches."
 arch=('x86_64')
@@ -31,7 +31,7 @@ optdepends=('networkmanager: Location detection via available WiFi networks'
 provides=("firefox=${pkgver}")
 conflicts=('firefox')
 options=('!emptydirs' '!makeflags' '!strip')
-_patchrev=593707d5c013
+_patchrev=53443ffb496a
 _patchurl="http://www.rosenauer.org/hg/mozilla/raw-file/${_patchrev}"
 _archpkg_git_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
 
