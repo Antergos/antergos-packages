@@ -2,11 +2,12 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl
-_pkgver=0.7.0rc4
-_rev=1026
-_kern=4.11.2_1
-pkgver="${_pkgver}.r${_rev}.${_kern}"
+_pkgver=0.6.5.10
+_rev='+git0'
+_kern=4.11.7_1
+pkgver="${_pkgver}${_rev}.${_kern}"
 pkgrel=1
+epoch=1
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")
@@ -17,9 +18,9 @@ install=spl.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag='spl-0.7.0-rc4'
+_tag='spl-0.6.5.10'
 source=("https://github.com/zfsonlinux/spl/archive/${_tag}.zip")
-md5sums=('1b76c0f3440ceb2e6962186f0b55a371')
+md5sums=('ad8b084453fa6678578ec4a9773ef3bf')
 install=spl.install
 
 
