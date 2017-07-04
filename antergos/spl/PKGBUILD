@@ -6,7 +6,7 @@ _pkgver=0.6.5.10
 _rev='+git0'
 _kern=4.11.7_1
 pkgver="${_pkgver}${_rev}.${_kern}"
-pkgrel=1
+pkgrel=2
 epoch=1
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
@@ -19,10 +19,19 @@ arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
 _tag='spl-0.6.5.10'
-source=("https://github.com/zfsonlinux/spl/archive/${_tag}.zip")
-md5sums=('ad8b084453fa6678578ec4a9773ef3bf')
+source=(
+	"https://github.com/zfsonlinux/spl/archive/${_tag}.zip"
+	'spl-dont-take-spin-lock-on-rwlock-owner.patch::https://github.com/zfsonlinux/spl/commit/4f8e643afe9d8cc558566e1dda05ef597cb2526e.patch'
+)
+md5sums=('ad8b084453fa6678578ec4a9773ef3bf'
+         '0b63bc0830502045ef3078606e59e6f1')
 install=spl.install
 
+
+prepare() {
+	cd "${srcdir}/${pkgname}-${_tag}"
+	patch -Np1 -i ../spl-dont-take-spin-lock-on-rwlock-owner.patch
+}
 
 build() {
 	cd "${srcdir}/${pkgname}-${_tag}"
