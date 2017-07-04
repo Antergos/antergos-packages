@@ -13,7 +13,7 @@ url="http://zfsonlinux.org/"
 license=('CDDL')
 arch=("i686" "x86_64")
 groups=("system")
-depends=("spl=${pkgver/2861/1026}")
+depends=("spl=1:${pkgver}")
 conflicts=("zfs-utils-dkms-git")
 _commit=''
 _tag='zfs-0.6.5.10'

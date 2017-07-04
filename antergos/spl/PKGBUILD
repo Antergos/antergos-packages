@@ -11,7 +11,7 @@ epoch=1
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")
-depends=("dkms" "spl-utils=${pkgver}" "linux-headers")
+depends=("dkms" "spl-utils=1:${pkgver}" "linux-headers")
 provides=("spl-dkms=${pkgver}")
 conflicts=("spl-dkms")
 install=spl.install
