@@ -5,8 +5,8 @@
 
 pkgname=dolphin-root
 _pkgname=dolphin
-pkgver=17.04.1
-pkgrel=3
+pkgver=17.04.2
+pkgrel=1
 pkgdesc="File Manager"
 arch=(x86_64)
 url="https://kde.org/applications/system/dolphin/"
