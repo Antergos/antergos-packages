@@ -2,7 +2,7 @@
 
 pkgname=antergos-wallpapers-deepin
 pkgver=0.2
-pkgrel=1
+pkgrel=2
 pkgdesc='Extra wallpapers suited for Deepin and contributed by the Antergos User Community'
 arch=('any')
 url='https://antergos.com'
