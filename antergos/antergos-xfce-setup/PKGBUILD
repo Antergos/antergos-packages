@@ -2,7 +2,7 @@
 
 pkgname=antergos-xfce-setup
 pkgver=0.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Setup configuration for Antergos XFCE"
 url="http://www.antergos.com"
 arch=('any')
