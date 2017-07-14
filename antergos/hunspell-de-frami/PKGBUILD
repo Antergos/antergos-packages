@@ -1,22 +1,22 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=hunspell-de-frami
+_pkgname=de_DE_frami
 pkgver=20170112
-pkgrel=1
+pkgrel=2
 pkgdesc="German (Austria, Germany, Switzerland) spelling dictionaries, hyphenation rules, and thesaurus"
 arch=('any')
 url="http://www.openoffice.org/de"
 license=('GPL2' 'custom')
 depends=('hunspell')
-source=(http://download.services.openoffice.org/contrib/dictionaries/de_DE_frami.zip)
-md5sums=('ebaa2489e42d6a75f51aaa8c06a54784')
+source=(${_pkgname}.zip::https://extensions.libreoffice.org/extensions/german-de-de-frami-dictionaries/2017-01-12/@@download/file/dict-de_DE-frami_2017-01-12.oxt)
+md5sums=('ea35a6a6761655107da3e99ee56c171f')
 
 package() 
 {
-    cd ${srcdir}
-    bsdtar -xf de_DE_frami.zip
-    install -D -m 644 de_DE_frami.aff ${pkgdir}/usr/share/myspell/dicts/de_DE_frami.aff
-    install -D -m 644 de_DE_frami.dic ${pkgdir}/usr/share/myspell/dicts/de_DE_frami.dic
+    cd ${srcdir}/${_pkgname}
+    install -D -m 644 ${_pkgname}.aff ${pkgdir}/usr/share/myspell/dicts/${_pkgname}.aff
+    install -D -m 644 ${_pkgname}.dic ${pkgdir}/usr/share/myspell/dicts/${_pkgname}.dic
 
     # symlinks are needed    
     install -dm755 ${pkgdir}/usr/share/hunspell
