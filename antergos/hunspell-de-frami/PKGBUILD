@@ -6,7 +6,7 @@ pkgver=20170112
 pkgrel=2
 pkgdesc="German (Austria, Germany, Switzerland) spelling dictionaries, hyphenation rules, and thesaurus"
 arch=('any')
-url="http://www.openoffice.org/de"
+url="https://wiki.documentfoundation.org/Language_support_of_LibreOffice"
 license=('GPL2' 'custom')
 depends=('hunspell')
 source=(${_pkgname}.zip::https://extensions.libreoffice.org/extensions/german-de-de-frami-dictionaries/2017-01-12/@@download/file/dict-de_DE-frami_2017-01-12.oxt)
@@ -15,12 +15,12 @@ md5sums=('ea35a6a6761655107da3e99ee56c171f')
 package() 
 {
     cd ${srcdir}/${_pkgname}
-    install -D -m 644 ${_pkgname}.aff ${pkgdir}/usr/share/myspell/dicts/${_pkgname}.aff
-    install -D -m 644 ${_pkgname}.dic ${pkgdir}/usr/share/myspell/dicts/${_pkgname}.dic
 
-    # symlinks are needed    
-    install -dm755 ${pkgdir}/usr/share/hunspell
-    for file in ${pkgdir}/usr/share/myspell/dicts/*; do
-        ln -s /usr/share/myspell/dicts/$(basename $file) ${pkgdir}/usr/share/hunspell/$(basename $file)
-    done
+    install -D -m 644 ${_pkgname}.aff ${pkgdir}/usr/share/hunspell/${_pkgname}.aff
+    install -D -m 644 ${_pkgname}.dic ${pkgdir}/usr/share/hunspell/${_pkgname}.dic
+
+    # symlinks are needed
+    install -dm755 ${pkgdir}/usr/share/myspell/dicts
+    ln -s /usr/share/hunspell/${_pkgname}.aff ${pkgdir}/usr/share/myspell/dicts/${_pkgname}.aff
+    ln -s /usr/share/hunspell/${_pkgname}.dic ${pkgdir}/usr/share/myspell/dicts/${_pkgname}.dic
 }
