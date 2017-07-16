@@ -6,7 +6,7 @@ pkgname=vivaldi
 pkgver=1.10.867.48
 # https://update.vivaldi.com/update/1.0/relnotes/1.10.867.48.html
 _chromium=59.0.3071.104 # https://omahaproxy.appspot.com
-pkgrel=1
+pkgrel=2
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
 url="https://vivaldi.com"
@@ -106,6 +106,9 @@ build() {
 
 package() {
 	cp -a {opt,usr} "${pkgdir}"
+
+	# File conflicts with exo package
+	rm "${pkgdir}/usr/share/xfce4/helpers/vivaldi.desktop"
 
 	# suid sanbox
 	chmod 4755 "${pkgdir}/opt/vivaldi/vivaldi-sandbox"
