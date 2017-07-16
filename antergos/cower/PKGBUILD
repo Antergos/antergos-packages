@@ -10,7 +10,7 @@ license=('MIT')
 depends=('curl' 'openssl' 'pacman' 'yajl')
 makedepends=('perl')
 source=("https://github.com/falconindy/$pkgname/archive/$pkgver.tar.gz")
-md5sums=('f141e441b7775df3d3a1ba3a80bc3d1d')
+md5sums=('ce76b1dc1bd984983f14d752c6b08d74')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
@@ -18,13 +18,13 @@ _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='falconindy'
 _monitored_repo='cower'
+_monitored_match_pattern='/\d+/'
 # END ANTBS METADATA
 
 build() {
 	cd "$pkgname-$pkgver"
-	PATH=$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 	make
-	  sed '/^$/q' cower.c >LICENSE
+	sed '/^$/q' src/cower.c >LICENSE
 }
 
 package() {
