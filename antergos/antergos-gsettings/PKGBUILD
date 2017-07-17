@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-gsettings
-pkgver=1.0.1
+pkgver=1.0.2
 pkgrel=1
 pkgdesc="Setup configuration for Antergos GTK3 Desktop Environments"
 url="http://www.antergos.com"
@@ -18,4 +18,5 @@ package() {
     install -Dm644 90_antergos_cinnamon.gschema.override "${pkgdir}/usr/share/glib-2.0/schemas/90_antergos_cinnamon.gschema.override"
     install -Dm644 90_antergos_mate.gschema.override "${pkgdir}/usr/share/glib-2.0/schemas/90_antergos_mate.gschema.override"
     install -Dm644 90_antergos_mate_mintmenu.gschema.override "${pkgdir}/usr/share/glib-2.0/schemas/90_antergos_mate_mintmenu.gschema.override"
+    install -Dm644 92_antergos_deepin.gschema.override "${pkgdir}/usr/share/glib-2.0/schemas/92_antergos_deepin.gschema.override"
 }
