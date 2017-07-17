@@ -2,35 +2,35 @@
 # Contributor: Rob McCathie <korrode AT gmail>
 
 pkgname=light-locker-settings
-pkgver=1.5.2
-_pkgver=${pkgver}
-pkgrel=3
+pkgver=1.5.3
+pkgrel=1
 pkgdesc="Just a simple settings dialog for light-locker"
 arch=('any')
 url="https://github.com/lots0logs/${pkgname}"
 license=('GPL3')
-depends=('light-locker' 'python-gobject>=3.18' 'python-psutil')
+depends=('light-locker' 'python-gobject' 'python-psutil')
 makedepends=('intltool')
-# source=("${url}/${pkgver%.*}/${pkgver}/+download/${pkgname}-${pkgver}.tar.bz2" "bugfix.patch")
-source=("$pkgname-$pkgver::git+https://github.com/lots0logs/light-locker-settings.git")
-sha1sums=('SKIP')
+source=("https://github.com/antergos/light-locker-settings/archive/${pkgver}.tar.gz")
+md5sums=('9532dc32f3a1edbefe9f93e75dd73c16')
 
-#prepare() {
-#    cd $srcdir/$pkgname-$pkgver
-#    patch -p1 -i $srcdir/bugfix.patch
-#}
-pkgver() {
-	echo ${_pkgver}
-}
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='light-locker-settings'
+# END ANTBS METADATA
+
 
 build() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
-  ./configure --prefix=/usr
-  make
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure --prefix=/usr
+	make
 }
 
 package() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
-  make DESTDIR="${pkgdir}" install
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
 }
 
