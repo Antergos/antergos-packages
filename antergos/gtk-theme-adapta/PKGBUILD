@@ -3,21 +3,24 @@
 
 pkgname=gtk-theme-adapta
 _theme_name=adapta-gtk-theme
-pkgver=3.91.0.79
-pkgrel=2
+pkgver=3.91.0.150
+pkgrel=1
 pkgdesc="An adaptive Gtk+ theme based on Material Design Guidelines."
 arch=('any')
 url="https://github.com/tista500/Adapta"
 license=('GPL2')
-depends=('gtk2' 'gtk-engine-murrine' 'gtk-engines' 'gtk3')
-makedepends=('glib2' 'sassc' 'inkscape' 'gnome-shell')
+# depends=('gtk2' 'gtk-engine-murrine' 'gtk-engines' 'gtk3')
+depends=('adapta-gtk-theme')
+# makedepends=('glib2' 'sassc' 'inkscape' 'gnome-shell')
 groups=('themes' 'themes::gtk')
-source=("https://github.com/adapta-project/${_theme_name}/archive/${pkgver}.tar.gz")
-md5sums=('bfe7d731a263122fc670283668df3300')
+# source=("https://github.com/adapta-project/${_theme_name}/archive/${pkgver}.tar.gz")
+# md5sums=('bfe7d731a263122fc670283668df3300')
+source=()
+md5sums=()
 
 
 # BEGIN ANTBS METADATA
-_is_monitored='True'
+_is_monitored='False'
 _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='adapta-project'
@@ -26,6 +29,8 @@ _monitored_repo='adapta-gtk-theme'
 
 
 build() {
+	return 0
+
 	cd "${_theme_name}-${pkgver}"
 	./autogen.sh \
 		--disable-unity \
@@ -41,6 +46,8 @@ build() {
 }
 
 package() {
+	return 0
+
 	cd "${_theme_name}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 }
