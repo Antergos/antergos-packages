@@ -2,8 +2,8 @@
 # Contributor: tuxce <tuxce.net@gmail.com>
 
 pkgname=package-query
-pkgver=1.8.r380
-_pkgver=1.8
+pkgver=1.9.r380
+_pkgver=1.9
 _commit='dc45413df71a8e5364e52f845417a56aa6706c57'
 pkgrel=2
 pkgdesc="Query ALPM and AUR"
