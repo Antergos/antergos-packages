@@ -3,7 +3,7 @@
 pkgname=antergos-alerts
 pkgver=17.6.25
 pkgrel=1
-pkgdesc='Notifys users when new antergos alerts are issued.'
+pkgdesc='Notifies users when new antergos alerts are issued.'
 arch=('any')
 depends=('pacman' 'python-termcolor' 'libnotify' 'gettext')
 replaces=('antergos-repo-priority')
