@@ -2,23 +2,23 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-_pkgver=0.7.0rc4
-_rev=2861
-_kern=4.11.9_1
+_pkgver=0.7.0
+_rev=2997
+_kern=4.12.3_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
-depends=("spl=${pkgver/2861/1026}" "zfs-utils=${pkgver}" "dkms" "linux-headers" "linux<4.12")
+depends=("spl=${pkgver/2997/1038}" "zfs-utils=${pkgver}" "dkms" "linux-headers" "linux<4.13")
 provides=("zfs-dkms=${pkgver}")
 conflicts=("zfs-git" "zfs-dkms")
 install=zfs.install
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag='zfs-0.7.0-rc4'
+_tag='zfs-0.7.0'
 source=("https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip")
-md5sums=('0bfe9ad104d446d7e0277abc4e579b83')
+md5sums=('0c5294f000801dcf2ea88dee100cc935')
 
 
 

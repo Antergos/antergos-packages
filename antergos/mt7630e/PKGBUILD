@@ -2,7 +2,7 @@
 # Original Author: Benjamin ROBIN <dev@benjarobin.fr>
 
 pkgname=mt7630e
-pkgver=2.3.8
+pkgver=2.3.9
 pkgrel=1
 pkgdesc="MT7630e PCIe Wifi driver"
 arch=('i686' 'x86_64') 

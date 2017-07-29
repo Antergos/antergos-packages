@@ -2,9 +2,9 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs-utils
-_pkgver=0.7.0rc4
-_rev=2861
-_kern=4.11.9_1
+_pkgver=0.7.0
+_rev=2997
+_kern=4.12.3_1
 pkgver="${_pkgver}.r${_rev}.${_kern}"
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
@@ -12,15 +12,15 @@ url="http://zfsonlinux.org/"
 license=('CDDL')
 arch=("i686" "x86_64")
 groups=("system")
-depends=("spl=${pkgver/2861/1026}")
+depends=("spl=${pkgver/2997/1038}")
 conflicts=("zfs-utils-dkms-git")
 _commit=''
-_tag='zfs-0.7.0-rc4'
+_tag='zfs-0.7.0'
 source=("https://github.com/zfsonlinux/zfs/archive/${_tag}.zip"
 		"zfs-utils.bash-completion-r1"
 		"zfs-utils.initcpio.install"
 		"zfs-utils.initcpio.hook")
-md5sums=('0bfe9ad104d446d7e0277abc4e579b83'
+md5sums=('0c5294f000801dcf2ea88dee100cc935'
          '9ddb0c8a94861f929d0fa741fdc49950'
          '110b48d872a7a7d2884496267f92418a'
          '62ba32c6853c315ff231c396cf8bfdbb')
