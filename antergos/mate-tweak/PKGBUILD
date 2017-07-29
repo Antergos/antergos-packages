@@ -31,12 +31,12 @@ md5sums=('cee338f5ab399ce4ac7bb93ff01c9930'
          '5b94ce4befe4954b8e780707b8cf7510')
 
 prepare() {
-	cd ubuntu-mate-$pkgname-*
+	cd "${srcdir}/${pkgname}-${pkgver}"
 	sed -i 's|/usr/lib/mate-applets/topmenu-mate-panel-applet|/usr/lib/topmenu-gtk/topmenu-mate-panel-applet|' mate-tweak
 }
 
 package() {
-	cd ubuntu-mate-$pkgname-*
+	cd "${srcdir}/${pkgname}-${pkgver}"
 	python setup.py install --root="$pkgdir" --optimize=1
 	cp -r "$srcdir"/ubuntu-mate-settings/usr/share/mate-panel "$pkgdir/usr/share"
 }
