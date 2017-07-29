@@ -3,33 +3,82 @@
 pkgname=antergos-kde-setup
 pkgver=0.1.8
 pkgrel=3
-pkgdesc="Setup configuration for Antergos KDE"
-url="http://www.antergos.com"
+pkgdesc='Setup configuration for Antergos KDE'
+url='http://www.antergos.com'
 arch=('any')
 license=('GPL3')
-depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clementine'
-	'dolphin' 'dolphin-plugins' 'dvd+rw-tools' 'ffmpegthumbs' 'gwenview' 'k3b'
-	'kate' 'kcalc' 'kde-gtk-config' 'kdialog' 'kfind'
-	'okular' 'kdegraphics-thumbnailers' 'kdenetwork-kopete'
-	'kdesudo' 'kdeutils-sweeper' 'kdelibs4support' 'kde-servicemenus-rootactions'
-	'kfaenza-icon-theme' 'kipi-plugins' 'khelpcenter' 'kinfocenter' 'kmenuedit' 'konsole'
-	'kscreen' 'ksshaskpass' 'ksysguard' 'kwallet-pam' 'kwalletmanager' 'kwayland-integration'
-	'kwin' 'kwrited' 'milou' 'nm-connection-editor' 'numix-frost-themes'
-	'numix-icon-theme-square' 'oxygen' 'plasma-desktop' 'plasma-nm'
-	'plasma-pa' 'plasma-workspace' 'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve-qt5'
-	'qtcurve-qt4' 'qtcurve-gtk2' 'qtcurve-utils' 'spectacle' 'systemsettings' 'transmission-qt'
-	'user-manager' 'vlc' 'xdg-user-dirs' 'kdeconnect')
-makedepends=()
+depends=(
+	'ark'
+	'aspell-en'
+	'breeze'
+	'breeze-gtk'
+	'breeze-kde4'
+	'cdrdao'
+	'clementine'
+	'dolphin'
+	'dolphin-plugins'
+	'dvd+rw-tools'
+	'ffmpegthumbs'
+	'gwenview'
+	'k3b'
+	'kate'
+	'kcalc'
+	'kdeconnect'
+	'kdegraphics-thumbnailers'
+	'kde-gtk-config'
+	'kdelibs4support'
+	'kdenetwork-kopete'
+	'kde-servicemenus-rootactions'
+	'kdesudo'
+	'kdeutils-sweeper'
+	'kdialog'
+	'kfaenza-icon-theme'
+	'kfind'
+	'khelpcenter'
+	'kinfocenter'
+	'kipi-plugins'
+	'kmenuedit'
+	'konsole'
+	'kscreen'
+	'ksshaskpass'
+	'ksysguard'
+	'kwalletmanager'
+	'kwallet-pam'
+	'kwayland-integration'
+	'kwin'
+	'kwrited'
+	'milou'
+	'nm-connection-editor'
+	'numix-frost-themes'
+	'numix-icon-theme-square'
+	'okular'
+	'oxygen'
+	'plasma-desktop'
+	'plasma-nm'
+	'plasma-pa'
+	'plasma-workspace'
+	'plasma-workspace-wallpapers'
+	'powerdevil'
+	'qtcurve-gtk2'
+	'qtcurve-qt4'
+	'qtcurve-qt5'
+	'qtcurve-utils'
+	'spectacle'
+	'systemsettings'
+	'transmission-qt'
+	'user-manager'
+	'vlc'
+	'xdg-user-dirs'
+)
 _is_metapkg='yes'
 install=${pkgname}.install
-conflicts=()
-replaces=()
-backup=()
 source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
-sha256sums=('SKIP')
+md5sums=('SKIP')
+
 
 package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
+
 	install -d "${pkgdir}/usr/share/${pkgname}"
 	find . -maxdepth 1 -type d ! -path '*.git/*' -exec cp -R {} "${pkgdir}/usr/share/${pkgname}" \;
 	find . -maxdepth 1 -type f ! -path '*.git/*' -exec cp {} "${pkgdir}/usr/share/${pkgname}" \;
