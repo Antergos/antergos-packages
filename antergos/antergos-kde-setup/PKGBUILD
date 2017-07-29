@@ -1,8 +1,8 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-kde-setup
-pkgver=0.1.8
-pkgrel=3
+pkgver=0.1.9
+pkgrel=1
 pkgdesc='Setup configuration for Antergos KDE'
 url='http://www.antergos.com'
 arch=('any')
@@ -53,6 +53,7 @@ depends=(
 	'numix-icon-theme-square'
 	'okular'
 	'oxygen'
+	'pamac-tray-appindicator'
 	'plasma-desktop'
 	'plasma-nm'
 	'plasma-pa'
