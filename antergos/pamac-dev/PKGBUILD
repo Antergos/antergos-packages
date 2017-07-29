@@ -32,7 +32,9 @@ _monitored_repo='pamac'
 pkgver() {
 	cd "${srcdir}/pamac-${_pkgver}"
 
-	printf "%s.r%s" "$(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=1))" "$(git rev-list --count HEAD)"
+	_tag="$(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=1))"
+
+	printf "%s.r%s" "${_tag/v}" "$(git rev-list --count HEAD)"
 }
 
 
