@@ -1,22 +1,23 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 
-pkgname=pamac-dev
+pkgname=(pamac-dev pamac-tray-appindicator-dev)
 pkgver=4.9.0
 _pkgver=4.9.0
 pkgrel=1
 _gitcommit="master"
-pkgdesc='A Gtk3 frontend for libalpm'
+pkgdesc='A GTK3 frontend for libalpm'
 arch=('i686' 'x86_64')
 url='https://github.com/manjaro/pamac'
 license=('GPL3')
-depends=('glib2' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'vte3' 'gtk3'
-		'libnotify' 'desktop-file-utils' 'pacman>=5.0' 'pacman<5.1' 'gnutls')
-makedepends=('gettext' 'itstool' 'vala' 'git')
+depends=(
+	'glib2' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'vte3' 'gtk3'
+	'libnotify' 'desktop-file-utils' 'pacman>=5.0' 'pacman<5.1' 'gnutls'
+)
+makedepends=('gettext' 'itstool' 'vala' 'git' 'libappindicator-gtk3')
 backup=('etc/pamac.conf')
 provides=('pamac')
 conflicts=('pamac' 'pamac-aur')
-options=(!emptydirs)
 source=("pamac-$pkgver::git+$url.git")
 md5sums=('SKIP')
 
@@ -29,39 +30,62 @@ _monitored_project='manjaro'
 _monitored_repo='pamac'
 # END ANTBS METADATA
 
+
+_cd_srcdir() {
+	{ [[ "${_gitcommit}" != "" ]] &&  cd "${srcdir}/pamac"; } || cd "${srcdir}/pamac-${_pkgver}"
+}
+
+
 pkgver() {
 	cd "${srcdir}/pamac-${_pkgver}"
 
 	_tag="$(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=1))"
 
-	printf "%s.r%s" "${_tag/v}" "$(git rev-list --count HEAD)"
+	printf "%s.git+%s" "${_tag/v}" "$(git rev-list --count HEAD)"
 }
 
 
 prepare() {
-	{ [[ "${_gitcommit}" != "" ]] &&  cd "${srcdir}/pamac"; } || cd "${srcdir}/pamac-${_pkgver}"
+	_cd_srcdir
 
 	# adjust version string
 	sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" src/manager_window.vala 
 	# don't install systemd timers for manjaro's pacman-mirrors script
-	sed -i '/pamac-mirrorlist/d' src/Makefile
+	sed -i '/pamac-mirrorlist/d' Makefile
 
 	# patches here
 }
 
 build() {
-	{ [[ "${_gitcommit}" != "" ]] &&  cd "${srcdir}/pamac"; } || cd "${srcdir}/pamac-${_pkgver}"
+	_cd_srcdir
 
-	# build
 	make all
-
 }
 
-package() {
-	{ [[ "${_gitcommit}" != "" ]] &&  cd "${srcdir}/pamac"; } || cd "${srcdir}/pamac-${_pkgver}"
+package_pamac-dev() {
+	optdepends=(
+		'polkit-gnome: needed for authentification in Cinnamon, Gnome'
+		'lxsession: needed for authentification in Xfce, LXDE etc.'
+		'pamac-dev-tray-appindicator: tray icon for KDE'
+	)
+	conflicts=('pamac')
+	provides=('pamac')
+	backup=('etc/pamac.conf')
 
-	make prefix="$pkgdir"/usr sysconfdir="$pkgdir"/etc install
 
+	_cd_srcdir
+	make prefix="${pkgdir}/usr" sysconfdir="${pkgdir}/etc" install
+}
+
+package_pamac-tray-appindicator-dev() {
+	pkgdesc='Tray icon using appindicator for improved KDE support.'
+	depends=('pamac-dev' 'libappindicator-gtk3')
+	conflicts=('pamac-tray-appindicator')
+	provides=('pamac-tray-appindicator')
+
+	_cd_srcdir
+	make use_appindicator=true
+	make prefix="${pkgdir}/usr" sysconfdir="${pkgdir}/etc" install_pamac-tray-appindicator
 }
 
 
