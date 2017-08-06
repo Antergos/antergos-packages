@@ -2,8 +2,8 @@
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=(pamac pamac-tray-appindicator)
-pkgver=4.9.1
-_pkgver=4.9.1
+pkgver=5.0.0
+_pkgver=5.0.0
 pkgrel=1
 pkgdesc='A GTK3 frontend for libalpm'
 arch=('i686' 'x86_64')
@@ -17,7 +17,7 @@ makedepends=('gettext' 'itstool' 'vala' 'git' 'libappindicator-gtk3')
 backup=('etc/pamac.conf')
 conflicts=('pamac-dev')
 source=("pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
-md5sums=('23a9a35792300ef4a474e8b46a133500')
+md5sums=('8f2dcd5e7f95787587e90b2bf23d3ad4')
 
 
 # BEGIN ANTBS METADATA
