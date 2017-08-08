@@ -5,7 +5,7 @@
 # Contributor: CReimer
 
 pkgname=cinnamon
-pkgver=3.4.4
+pkgver=3.4.5
 pkgrel=1
 pkgdesc='Linux Desktop featuring a traditional layout built using modern technologies.'
 arch=('i686' 'x86_64')
