@@ -3,10 +3,10 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.10.867.48
-# https://update.vivaldi.com/update/1.0/relnotes/1.10.867.48.html
-_chromium=59.0.3071.104 # https://omahaproxy.appspot.com
-pkgrel=2
+pkgver=1.11.917.39
+# https://update.vivaldi.com/update/1.0/relnotes/1.11.917.39.html
+_chromium=60.0.3112.90 # https://omahaproxy.appspot.com
+pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
 url="https://vivaldi.com"
@@ -21,40 +21,33 @@ conflicts=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 replaces=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 noextract=('chrome.rpm')
 _archgit_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
-_clientnative_patch='0001-ClientNativePixmapFactoryDmabuf-uses-ioctl-instead-o.patch'
-_kernelversion_patch='0001-Fix-kernel-version-condition-for-including-dma-buf.h.patch'
 source=(
 	"https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.x86_64.rpm"
 	"https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
-	"${_clientnative_patch}::${_archgit_url}/${_clientnative_patch}?h=packages/chromium"
-	"${_kernelversion_patch}::${_archgit_url}/${_kernelversion_patch}?h=packages/chromium"
 	"chromium-blink-gcc7.patch::${_archgit_url}/chromium-blink-gcc7.patch?h=packages/chromium"
 	"chromium-v8-gcc7.patch::${_archgit_url}/chromium-v8-gcc7.patch?h=packages/chromium"
+	"chromium-gn-bootstrap-r8.patch::${_archgit_url}/chromium-gn-bootstrap-r8.patch?h=packages/chromium"
 )
-md5sums=('7ae94f176a2b6fe2067953edbdce3fd6'
-         '4a315c89d6fc567b5982316767a8faef'
-         'ee059bdb6389da97cc810d763b21a0da'
+md5sums=('27e2eea85fc797fa95595046864db2aa'
+         '75f9199e5e0b31e9fbfbaf1f3071b411'
+         'f736f425fd0f3045a5556185436a8e3a'
          'd50d8f0a6940791eabc41c4f64e6a3cf'
-         '7ad48853453a431b689c1ff97378840a'
-         'de9345fb5cd756ed43c4ea7b9223e5ee'
          '034bc28a6988f3d6d1e7f291ec95365c'
-         'c2f283eee77d4123a0952d9ee277ec3c')
+         'c2f283eee77d4123a0952d9ee277ec3c'
+         '3d379c46c547a21d6f20fc1c1761bff1')
 
 
 prepare() {
 	cd "$srcdir/chromium-$_chromium"
-
-	# https://bugs.chromium.org/p/chromium/issues/detail?id=707604
-	patch -Np1 -i ../../'0001-ClientNativePixmapFactoryDmabuf-uses-ioctl-instead-o.patch'
-	patch -Np1 -i ../../'0001-Fix-kernel-version-condition-for-including-dma-buf.h.patch'
 
 	# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=853347
 	patch -Np1 -i ../../chromium-blink-gcc7.patch
 
 	# https://bugs.chromium.org/p/chromium/issues/detail?id=614289
 	patch -Np1 -i ../../chromium-v8-gcc7.patch
+	patch -Np1 -i ../../chromium-gn-bootstrap-r8.patch
 
 	# Use Python 2
 	find . -name '*.py' -exec sed -i -r 's|/usr/bin/python$|&2|g' {} +
