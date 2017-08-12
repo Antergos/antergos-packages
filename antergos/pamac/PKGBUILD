@@ -4,7 +4,7 @@
 pkgname=(pamac pamac-tray-appindicator)
 pkgver=5.0.0
 _pkgver=5.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc='A GTK3 frontend for libalpm'
 arch=('i686' 'x86_64')
 url='https://github.com/manjaro/pamac'
@@ -16,8 +16,12 @@ depends=(
 makedepends=('gettext' 'itstool' 'vala' 'git' 'libappindicator-gtk3')
 backup=('etc/pamac.conf')
 conflicts=('pamac-dev')
-source=("pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz")
-md5sums=('8f2dcd5e7f95787587e90b2bf23d3ad4')
+source=(
+	"pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz"
+	'file-db-background.patch::https://github.com/manjaro/pamac/commit/9c6c435b05bb9bfc336d100947860da17a1cce0e.patch'
+)
+md5sums=('8f2dcd5e7f95787587e90b2bf23d3ad4'
+         '667af9874df96c8413dad014bbc2bd40')
 
 
 # BEGIN ANTBS METADATA
@@ -38,7 +42,7 @@ prepare() {
 	sed -i '/pamac-mirrorlist/d' Makefile
 
 	# patches here
-
+	patch -p1 -i "${srcdir}/file-db-background.patch"
 }
 
 build() {
