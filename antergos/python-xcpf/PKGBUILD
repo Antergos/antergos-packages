@@ -2,13 +2,14 @@
 # Contributor: Xyne <ac xunilhcra enyx, backwards>
 
 pkgname=python-xcpf
-pkgver=2017.5
+_pkgname=python3-xcpf
+pkgver=2017.8
 pkgrel=1
 pkgdesc="Xyne's common Pacman functions, for internal use."
 arch=('any')
 license=('GPL')
 url='http://xyne.archlinux.ca/projects/python3-xcpf'
-depends=('python' 'pyalpm' 'python-xcgf')
+depends=('python' 'pyalpm' 'python-xcgf' 'python-xdg' 'python-memoizedb')
 replaces=('python3-xcpf')
 conflicts=('python3-xcpf')
 provides=('python3-xcpf')
@@ -16,7 +17,7 @@ source=("http://xyne.archlinux.ca/projects/python3-xcpf/src/python3-xcpf-${pkgve
 md5sums=('5570c2c5e2c00c45592569aa2db814cb')
 
 package () {
-	cd "$srcdir/python3-xcpf-$pkgver"
+	cd "$srcdir/$_pkgname-$pkgver"
 	python setup.py install --prefix=/usr --root="$pkgdir" --optimize=1
 }
 
