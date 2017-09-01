@@ -8,11 +8,20 @@ pkgdesc="Setup configuration for Antergos Cinnamon"
 url="http://www.antergos.com"
 arch=('any')
 license=('GPL2')
-_is_metapkg='yes'
 install=${pkgname}.install
 makedepends=()
 depends=('antergos-gsettings')
 
+# ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='desktop-setups'
+# END ANTBS METADATA
+
 package() {
-    true
+    cd "${srcdir}/${_pkgname}-${pkgver}"
+    install -d "${pkgdir}/usr/share/antergos-desktop-setups/cinnamon"
+    install -m644 cinnamon/* "${pkgdir}/usr/share/antergos-desktop-setups/cinnamon"
 }
