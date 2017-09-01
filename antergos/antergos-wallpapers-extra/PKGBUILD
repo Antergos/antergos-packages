@@ -2,12 +2,12 @@
 
 pkgname=antergos-wallpapers-extra
 pkgver=0.2
-pkgrel=2
+pkgrel=3
 pkgdesc='Extra wallpapers contributed by the Antergos User Community'
 arch=('any')
 url='https://antergos.com'
 license=('CCPL:by-nc-sa')
-source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz")
+source=("https://github.com/Antergos/wallpapers-extra/archive/${pkgver}.tar.gz")
 sha256sums=('487afbe739aff7d9db9aa5f476928a606522af2deb3779529c0d9eba27ad44d5')
 
 # ANTBS METADATA
@@ -33,7 +33,6 @@ package() {
 	
 	# Cinnamon
 	_bg_path="${pkgdir}/usr/share/cinnamon-background-properties/antergos-extra.xml"
-
 	install -d "${pkgdir}/usr/share/cinnamon-background-properties"
 	cp --no-preserve=ownership antergos-extra-backgrounds-4-3.xml "${_bg_path}"
 	sed -i 's|gnome-wp-list|cinnamon-wp-list|g' "${_bg_path}"
