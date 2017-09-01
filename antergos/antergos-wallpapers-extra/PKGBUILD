@@ -17,7 +17,7 @@ _is_monitored='True'
 _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='antergos'
-_monitored_repo='antergos-wallpapers-extra'
+_monitored_repo='wallpapers-extra'
 
 # END ANTBS METADATA
 
