@@ -24,9 +24,9 @@ _monitored_repo='wallpapers-extra'
 package() {
 	cd "${srcdir}/${_pkgname}-${pkgver}"
 
-	install -d "${pkgdir}/usr/share/antergos/wallpapers-extra"
-	install -m644 *.jpg "${pkgdir}/usr/share/antergos/wallpapers-extra/"
-	install -m644 *.png "${pkgdir}/usr/share/antergos/wallpapers-extra/"
+	install -d "${pkgdir}/usr/share/antergos/${_pkgname}"
+	install -m644 *.jpg "${pkgdir}/usr/share/antergos/${_pkgname}/"
+	install -m644 *.png "${pkgdir}/usr/share/antergos/${_pkgname}/"
 
 	# GNOME
 	install -d "${pkgdir}/usr/share/gnome-background-properties"
@@ -38,5 +38,3 @@ package() {
 	cp --no-preserve=ownership antergos-extra-backgrounds-4-3.xml "${_bg_path}"
 	sed -i 's|gnome-wp-list|cinnamon-wp-list|g' "${_bg_path}"
 }
-
-
