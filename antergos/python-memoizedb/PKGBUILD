@@ -1,0 +1,26 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Original Maintainer: Xyne <ac xunilhcra enyx, backwards>
+pkgname=python-memoizedb
+_pkgname=python3-memoizedb
+pkgver=2017.3.30
+pkgrel=1
+pkgdesc='Generic data retrieval memoizer that uses an sqlite database to cache data.'
+arch=(any)
+license=(GPL)
+url="http://xyne.archlinux.ca/projects/python3-memoizedb"
+depends=('python')
+replaces=('python3-memoizedb')
+conflicts=('python3-memoizedb')
+provides=('python3-memoizedb')
+source=("http://xyne.archlinux.ca/projects/python3-memoizedb/src/python3-memoizedb-2017.3.30.tar.xz")
+md5sums=(22be1c358596a97a372c17f8a23c705a)
+
+package ()
+{
+  cd "$srcdir/$_pkgname-$pkgver"
+  python setup.py install --prefix=/usr --root="$pkgdir" --optimize=1
+}
+
+
+# vim: set ts=2 sw=2 et:
+
