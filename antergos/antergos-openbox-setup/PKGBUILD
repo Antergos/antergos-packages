@@ -10,7 +10,14 @@ license=('GPL2')
 depends=('antergos-desktop' 'openbox' 'openbox-menu' 'compton' 'plank-theme-numix' 'lxmenu-data' 'obkey' 'oblogout')
 install=${pkgname}.install
 
+# ANTBS METADATA
 _is_metapkg='yes'
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='antergos-desktop'
+# END ANTBS METADATA
 
 package() {
     true
