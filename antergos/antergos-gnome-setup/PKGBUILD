@@ -1,36 +1,14 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-gnome-setup
-pkgver=0.0.2
+pkgver=0.1
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Gnome"
-url="http://www.antergos.com"
+url="http://github.com/Antergos/antergos-desktop/gnome"
 arch=('any')
 license=('GPL2')
-_is_metapkg='yes'
 install=${pkgname}.install
-makedepends=()
-depends=('accountsservice' 'antergos-gsettings' 'antergos-wallpapers' 'antergos-welcome'
-    'cdrtools' 'ffmpegthumbnailer' 'gst-libav' 'gst-plugins-bad' 'gst-plugins-base'
-    'gst-plugins-good' 'gst-plugins-ugly' 'gstreamer-vaapi' 'hunspell-de' 'hunspell-en'
-    'hunspell-es' 'hunspell-fr' 'hunspell-he' 'hunspell-it' 'hunspell-ro' 'hunspell-el'
-    'hunspell-hu' 'hunspell-nl' 'hunspell-pl' 'libdvdcss' 'lightdm' 'lightdm-webkit2-greeter'
-    'light-locker' 'light-locker-settings' 'mesa' 'mesa-vdpau' 'numix-frost-themes'
-    'numix-icon-theme' 'numix-icon-theme-square' 'orca' 'pamac' 'pavucontrol' 'pulseaudio'
-    'pulseaudio-alsa' 'qt5-styleplugins' 'qt5ct' 'ttf-bitstream-vera' 'ttf-dejavu'
-    'ttf-liberation' 'upower' 'xf86-input-synaptics' 'xf86-video-fbdev' 'xf86-video-vesa'
-    'xorg-server' 'xorg-xinit' 'xorg-xkill'
-    'antergos-gnome-defaults-list' 'baobab' 'brasero' 'evince' 'eog' 'file-roller'
-    'gedit' 'gnome-backgrounds' 'gnome-calculator' 'gnome-calendar' 'gnome-contacts'
-    'gnome-control-center' 'gnome-documents' 'gnome-disk-utility' 'gnome-font-viewer'
-    'gnome-keyring' 'gnome-logs' 'gnome-maps' 'gnome-music' 'gnome-photos'
-    'gnome-screenshot' 'gnome-shell' 'gnome-shell-extensions' 'gnome-shell-extension-dash-to-dock'
-    'gnome-shell-extension-status-menu-buttons' 'gnome-sound-recorder' 'gnome-system-monitor'
-    'gnome-terminal' 'gnome-themes-standard' 'gnome-tweak-tool' 'gnome-weather'
-    'gvfs-google' 'gvfs-mtp' 'gvfs-smb' 'hicolor-icon-theme' 'libgnome-keyring'
-    'nautilus' 'network-manager-applet' 'networkmanager-openvpn' 'networkmanager-pptp'
-    'polari' 'python-pysmbc' 'seahorse' 'totem' 'transmission-gtk' 'xdg-user-dirs-gtk'
-    'xscreensaver')
+depends=('antergos-desktop')
 
 package() {
     true
