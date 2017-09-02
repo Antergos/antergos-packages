@@ -8,7 +8,7 @@ url="http://github.com/Antergos/antergos-desktop/cinnamon"
 arch=('any')
 license=('GPL2')
 install=${pkgname}.install
-depends=('antergos-desktop')
+depends=('antergos-desktop' 'cinnamon')
 
 package() {
     true
