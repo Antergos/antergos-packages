@@ -1,0 +1,17 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=antergos-deepin-setup
+pkgver=0.1
+pkgrel=1
+pkgdesc="Setup configuration for Antergos Deepin"
+url="http://github.com/Antergos/antergos-desktop/deepin"
+arch=('any')
+license=('GPL2')
+depends=('antergos-desktop'')
+install=${pkgname}.install
+
+_is_metapkg='yes'
+
+package() {
+    true
+}
