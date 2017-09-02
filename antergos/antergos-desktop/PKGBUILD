@@ -1,0 +1,23 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=antergos-desktop
+pkgver=0.0.1
+pkgrel=1
+pkgdesc='Setup configuration for Antergos Desktops'
+url='http://www.antergos.com'
+arch=('any')
+license=('GPL3')
+depends=('antergos-gsettings')
+source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
+md5sums=('SKIP')
+
+
+package() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+
+    install -d "${pkgdir}/usr/share/${pkgname}"
+    cp -R * "${pkgdir}/usr/share/${pkgname}"
+
+    install -m755 install.sh "${pkgdir}/usr/bin/${pkgname}"
+}
+
