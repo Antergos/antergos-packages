@@ -11,6 +11,14 @@ license=('CCPL:by-nc-sa')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
 md5sums=('bd5a39459981bfe7f56d70a539d93e55')
 
+# ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='wallpapers'
+# END ANTBS METADATA
+
 package() {
 	cd "${srcdir}/${_pkgname}-${pkgver}"
 
