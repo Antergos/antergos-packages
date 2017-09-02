@@ -1,0 +1,7 @@
+post_install() {
+    echo ">>> Copy /etc/skel/.dir_colors file to your $HOME folder to use it"
+}
+
+post_upgrade() {
+    echo ">>> Copy /etc/skel/.dir_colors file to your $HOME folder to use it"
+}

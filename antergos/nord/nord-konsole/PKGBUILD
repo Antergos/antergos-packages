@@ -1,0 +1,18 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=nord-konsole
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="An arctic, north-bluish clean and elegant Konsole Terminal color theme"
+arch=("any")
+url="https://github.com/arcticicestudio/nord-konsole"
+license=("Apache", "CC-BY-SA-4.0")
+depends=("konsole")
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/arcticicestudio/${pkgname}/archive/v${pkgver}.tar.gz")
+md5sums=("a7ba11bb4e621b2a71f4259237f57e7e")
+groups=('nord')
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  install -Dm644 "src/nord.colorscheme" "${pkgdir}/usr/share/konsole/nord.colorscheme"
+}

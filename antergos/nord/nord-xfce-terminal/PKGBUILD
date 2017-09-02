@@ -9,11 +9,11 @@ arch=("any")
 url="https://github.com/arcticicestudio/nord-xfce-terminal"
 license=("Apache", "CC-BY-SA-4.0")
 depends=("xfce4-terminal")
-makedepends=("git")
-source=("$pkgname::git+https://github.com/arcticicestudio/${pkgname}.git")
-md5sums=("SKIP")
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/arcticicestudio/${pkgname}/archive/v${pkgver}.tar.gz")
+md5sums=("28403616222a15f9a2c3f5a86462556a")
+groups=('nord')
 
 package() {
-  cd "${srcdir}/${pkgname}"
+  cd "${srcdir}/${pkgname}-${pkgver}"
   install -Dm644 "src/nord.theme" "${pkgdir}/usr/share/xfce4/terminal/colorschemes/nord.theme"
 }

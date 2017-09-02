@@ -1,0 +1,9 @@
+post_install() {
+    # Create nord gnome-terminal profile
+    /usr/bin/nord-gnome-terminal
+}
+
+post_upgrade() {
+    # Create nord gnome-terminal profile
+    /usr/bin/nord-gnome-terminal
+}

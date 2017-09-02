@@ -1,0 +1,22 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=nord-dircolors
+pkgver=0.1.1
+pkgrel=1
+pkgdesc="An arctic, north-bluish clean and elegant dircolors color theme"
+arch=("any")
+url="https://github.com/arcticicestudio/nord-dircolors"
+license=("Apache", "CC-BY-SA-4.0")
+depends=("")
+optdepends=("")
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/arcticicestudio/${pkgname}/archive/v${pkgver}.tar.gz")
+md5sums=("a7ba11bb4e621b2a71f4259237f57e7e")
+groups=('nord')
+backup=('root/.dir_colors' '/etc/skel/.dir_colors')
+install=${pkgname}.install
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  install -Dm644 "src/dir_colors" "${pkgdir}/etc/skel/.dircolors"
+  install -Dm644 "src/dir_colors" "${pkgdir}/root/.dircolors"
+}
