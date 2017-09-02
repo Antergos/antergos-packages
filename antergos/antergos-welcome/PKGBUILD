@@ -1,28 +1,30 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-welcome
-pkgver=0.0.3
+_pkgname=welcome
+pkgver=0.1
 pkgrel=1
 pkgdesc='Welcome screen for Antergos Linux'
 arch=(any)
 license=(GPL)
-url="https://github.com/Antergos/antergos-welcome"
-depends=('python-gobject' 'python-dbus' 'webkit2gtk' 'python-simplejson' 'notification-daemon' 'pamac')
+url="https://github.com/Antergos/welcome"
+depends=('python-gobject' 'python-dbus' 'webkit2gtk' 'python-simplejson' 'notification-daemon')
 makedepends=('git')
-source=("${pkgname}-${pkgver}::git://github.com/Antergos/antergos-welcome")
-sha256sums=('SKIP')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
+md5sums=('SKIP')
 
-build ()
-{
-    cd "${srcdir}/${pkgname}-${pkgver}"
-}
+# ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='welcome'
+# END ANTBS METADATA
 
 package() {
-    cd ${srcdir}/${pkgname}-${pkgver}
+    cd ${srcdir}/${_pkgname}-${pkgver}
 
     install -d ${pkgdir}/usr/share/${pkgname}
     install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
     cp -R data/* "${pkgdir}/usr/share/${pkgname}/"
 }
-
-
