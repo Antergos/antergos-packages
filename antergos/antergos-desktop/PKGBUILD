@@ -2,7 +2,7 @@
 
 pkgname=antergos-desktop
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Setup configuration for Antergos Desktops'
 url='http://www.antergos.com'
 arch=('any')
@@ -11,12 +11,11 @@ depends=('antergos-gsettings')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz")
 md5sums=('1c45fe13cc43facb150c273657c1dd1e')
 
-
 package() {
     cd "${srcdir}/${pkgname}-${pkgver}"
 
-    install -d "${pkgdir}/usr/share/${pkgname}"
-    cp -R * "${pkgdir}/usr/share/${pkgname}"
+    install -d "${pkgdir}/usr/share/antergos/desktop"
+    cp -R * "${pkgdir}/usr/share/antergos/desktop"
 
     install -d "${pkgdir}/usr/bin"
     install -m755 install.sh "${pkgdir}/usr/bin/${pkgname}"
