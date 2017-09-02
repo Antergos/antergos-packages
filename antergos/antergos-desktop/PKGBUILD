@@ -18,6 +18,7 @@ package() {
     install -d "${pkgdir}/usr/share/${pkgname}"
     cp -R * "${pkgdir}/usr/share/${pkgname}"
 
+    install -d "${pkgdir}/usr/bin"
     install -m755 install.sh "${pkgdir}/usr/bin/${pkgname}"
 }
 
