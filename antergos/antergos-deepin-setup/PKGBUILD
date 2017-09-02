@@ -10,9 +10,8 @@ license=('GPL2')
 depends=('antergos-desktop'')
 install=${pkgname}.install
 
-_is_metapkg='yes'
-
 # ANTBS METADATA
+_is_metapkg='yes'
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='releases'
