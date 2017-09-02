@@ -1,32 +1,18 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-openbox-setup
-pkgver=0.3.6
+pkgver=0.3.7
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Openbox"
-url="http://www.antergos.com"
+url="http://github.com/Antergos/antergos-desktop/openbox"
 arch=('any')
 license=('GPL2')
-_is_metapkg='yes'
+depends=('antergos-desktop' 'openbox' 'openbox-menu' 'compton' 'plank-theme-numix' 'lxmenu-data' 'obkey' 'oblogout')
 install=${pkgname}.install
-depends=('antergos-gsettings' 'bash' 'openbox' 'openbox-menu' 'xorg-xinit' 'pcmanfm' 'nitrogen'
-         'plank' 'tint2' 'volumeicon' 'conky' 'conky-manager' 'compton' 'numix-frost-themes'
-	 'numix-icon-theme' 'plank-theme-numix' 'gmrun' 'lxmenu-data' 'obkey' 'oblogout')
-source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
-sha256sums=('SKIP')
+
+_is_metapkg='yes'
 
 package() {
-    cd "${srcdir}/${pkgname}-${pkgver}"
-
-    install -d "${pkgdir}/usr/share/${pkgname}"
-	
-    cp -R -t "${pkgdir}/usr/share/${pkgname}" {etc,home,usr}
-
-    # install install.sh file
-    install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
-
-    # create a symlink to install.sh
-    mkdir -p "${pkgdir}/usr/bin"
-    ln -s "/usr/share/${pkgname}/install.sh" "${pkgdir}/usr/bin/antergos-openbox-setup"
+    true
 }
 

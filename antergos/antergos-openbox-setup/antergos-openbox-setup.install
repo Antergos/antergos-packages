@@ -8,7 +8,7 @@ do_antergos_setup() {
 		exit 1
 	fi
 	
-	[[ -n "${_ANT_USER}" ]] && /usr/bin/antergos-openbox-setup "${_ANT_USER}" "${1}"
+	[[ -n "${_ANT_USER}" ]] && /usr/bin/antergos-desktop openbox "${_ANT_USER}" "${1}"
 }
 
 post_install() {
