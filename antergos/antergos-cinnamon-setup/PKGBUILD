@@ -12,6 +12,14 @@ install=${pkgname}.install
 
 _is_metapkg='yes'
 
+# ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='antergos-desktop'
+# END ANTBS METADATA
+
 package() {
     true
 }
