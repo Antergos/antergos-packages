@@ -1,4 +1,4 @@
-# Maintainer: Gustau Castells <karasu@antergos.com>
+# Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-enlightenment-setup
 pkgver=0.1
@@ -9,6 +9,8 @@ arch=('any')
 license=('GPL2')
 depends=('antergos-desktop' 'enlightenment' 'connman' 'ttf-bitstream-vera' 'ttf-dejavu')
 install=${pkgname}.install
+
+_is_metapkg='yes'
 
 package() {
     true

@@ -10,6 +10,8 @@ license=('GPL2')
 depends=('antergos-desktop' 'cinnamon')
 install=${pkgname}.install
 
+_is_metapkg='yes'
+
 package() {
     true
 }
