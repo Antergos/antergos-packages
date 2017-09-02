@@ -1,15 +1,23 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-gsettings
-pkgver=1.0.4
+pkgver=1.1
 pkgrel=1
 pkgdesc="Setup configuration for Antergos GTK3 Desktop Environments"
 url="http://www.antergos.com"
 arch=('any')
 license=('GPL3')
 depends=('gsettings-desktop-schemas' 'dconf')
-source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz")
 md5sums=('SKIP')
+
+# ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='antergos-gsettings'
+# END ANTBS METADATA
 
 package() {
     cd "${srcdir}/${pkgname}-${pkgver}"
