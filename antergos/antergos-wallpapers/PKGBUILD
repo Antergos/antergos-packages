@@ -1,17 +1,18 @@
 # Maintainer: Alexandre Filgueira <faidoc@gmail.com>
 
 pkgname=antergos-wallpapers
+_pkgname=wallpapers
 pkgver=0.7
-pkgrel=1
-pkgdesc='The default wallpapers for Antergos'
+pkgrel=2
+pkgdesc='Default wallpapers for Antergos Linux'
 arch=('any')
 url='http://www.antergos.com'
 license=('CCPL:by-nc-sa')
-source=("http://antergos.com/${pkgname}-${pkgver}.zip")
-md5sums=('cd09fe9d1dd72af28ba334f9e63e6b95')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
+md5sums=('bd5a39459981bfe7f56d70a539d93e55')
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/${_pkgname}-${pkgver}"
 
 	install -d "${pkgdir}/usr/share/antergos/wallpapers"
 	install -m644 *.jpg "${pkgdir}/usr/share/antergos/wallpapers/"
