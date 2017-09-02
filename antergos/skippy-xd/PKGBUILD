@@ -2,15 +2,14 @@
 
 pkgname=skippy-xd
 pkgver=52.33b4de5
-pkgrel=1
+pkgrel=2
 pkgdesc="A full-screen task-switcher for X11, similar to Apple's Expose."
 url="http://code.google.com/p/skippy-xd/"
 license=('GPL')
 depends=('libxinerama' 'libxcomposite' 'libxdamage' 'libxft' 'xorg-server' 'giflib')
 makedepends=('git')
 arch=('i686' 'x86_64')
-#source=("git://github.com/penguinpowernz/skippy-xd.git")
-source=("git://github.com/Antergos/skippy-xd.git")
+source=("git://github.com/penguinpowernz/skippy-xd.git")
 md5sums=('SKIP')
 
 # see also https://wiki.archlinux.org/index.php/VCS_PKGBUILD_Guidelines
