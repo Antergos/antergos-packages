@@ -1,20 +1,15 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-cinnamon-setup
-_pkgname=desktop-setups
-pkgver=0.0.1
-pkgrel=2
+pkgver=0.1
+pkgrel=1
 pkgdesc="Setup configuration for Antergos Cinnamon"
-url="http://www.antergos.com"
+url="http://github.com/Antergos/antergos-desktop/cinnamon"
 arch=('any')
 license=('GPL2')
 install=${pkgname}.install
-depends=('antergos-gsettings')
-source=("${_pkgname}-${pkgver}::git+https://github.com/Antergos/${_pkgname}.git")
-md5sums=('SKIP')
+depends=('antergos-desktop')
 
 package() {
-    cd "${srcdir}/${_pkgname}-${pkgver}"
-    install -d "${pkgdir}/usr/share/antergos-desktop-setups/cinnamon"
-    install -m644 cinnamon/* "${pkgdir}/usr/share/antergos-desktop-setups/cinnamon"
+    true
 }
