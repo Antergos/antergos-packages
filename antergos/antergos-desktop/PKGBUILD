@@ -1,15 +1,15 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-desktop
-pkgver=0.0.1
+pkgver=0.1
 pkgrel=1
 pkgdesc='Setup configuration for Antergos Desktops'
 url='http://www.antergos.com'
 arch=('any')
 license=('GPL3')
 depends=('antergos-gsettings')
-source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
-md5sums=('SKIP')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz")
+md5sums=('1c45fe13cc43facb150c273657c1dd1e')
 
 
 package() {
