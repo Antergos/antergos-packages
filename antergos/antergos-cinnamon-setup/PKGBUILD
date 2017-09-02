@@ -7,8 +7,8 @@ pkgdesc="Setup configuration for Antergos Cinnamon"
 url="http://github.com/Antergos/antergos-desktop/cinnamon"
 arch=('any')
 license=('GPL2')
-install=${pkgname}.install
 depends=('antergos-desktop' 'cinnamon')
+install=${pkgname}.install
 
 package() {
     true

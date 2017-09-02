@@ -1,31 +1,16 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=antergos-enlightenment-setup
-pkgver=0.0.7
+pkgver=0.1
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Enlightenment"
-url="http://www.antergos.com"
+url="http://github.com/Antergos/antergos-desktop/enlightenment"
 arch=('any')
 license=('GPL2')
-depends=('ark' 'enlightenment' 'connman' 'econnman' 'emotion_generic_players'
-'rage' 'terminology' 'xdg-user-dirs-gtk' 'ttf-bitstream-vera' 'ttf-dejavu'
-'udisks2' 'vlc')
-_is_metapkg='yes'
+depends=('antergos-desktop' 'enlightenment' 'connman' 'ttf-bitstream-vera' 'ttf-dejavu')
 install=${pkgname}.install
-#source=("https://github.com/Antergos/${pkgname}/archive/v${pkgver}.tar.gz")
-source=("${pkgname}-${pkgver}::git+https://github.com/Antergos/${pkgname}.git")
-sha256sums=('SKIP')
 
 package() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
-  install -d "${pkgdir}/usr/share/${pkgname}"
-  cp -R -t "${pkgdir}/usr/share/${pkgname}" home
-
-  # install.sh file
-  install -Dm755 install.sh ${pkgdir}/usr/share/${pkgname}/install.sh
-
-  # create a symlink to install.sh
-  mkdir -p "${pkgdir}/usr/bin"
-  ln -s "/usr/share/${pkgname}/install.sh" "${pkgdir}/usr/bin/antergos-enlightenment-setup"
+    true
 }
 
