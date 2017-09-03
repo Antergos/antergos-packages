@@ -8,7 +8,10 @@ arch=("any")
 url="https://github.com/arcticicestudio/nord-dircolors"
 license=("Apache", "CC-BY-SA-4.0")
 depends=("")
-optdepends=("")
+optdepends=('nord-gnome-terminal: Gnome Terminal support'
+            'nord-konsole: Konsole Terminal support'
+            'nord-termite: Termite Terminal support'
+            'nord-xfce-terminal: XFCE Terminal support' )
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/arcticicestudio/${pkgname}/archive/v${pkgver}.tar.gz")
 md5sums=("a7ba11bb4e621b2a71f4259237f57e7e")
 groups=('nord')
