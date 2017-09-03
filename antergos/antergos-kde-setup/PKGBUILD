@@ -1,8 +1,8 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-kde-setup
-pkgver=0.1.9
-pkgrel=2
+pkgver=0.3
+pkgrel=1
 pkgdesc='Setup configuration for Antergos KDE Plasma'
 url='http://github.com/Antergos/antergos-desktop/plasma'
 arch=('any')
