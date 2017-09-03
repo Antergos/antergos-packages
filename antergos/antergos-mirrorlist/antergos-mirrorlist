@@ -25,7 +25,7 @@ Server = http://sourceforge.net/projects/antergos/files/mirror/$repo/$arch
 Server = http://mirror.host.ag/antergos/$repo/$arch
 
 # Canada
-Server = http://wynsrv.antergos.info/$repo/$arch
+Server = http://wynsrv.antergos.info/antergos/$repo/$arch
 
 # China
 Server = http://mirrors.ustc.edu.cn/antergos/$repo/$arch
