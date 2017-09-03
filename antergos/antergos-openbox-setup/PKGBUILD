@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-openbox-setup
-pkgver=0.3.7
+pkgver=0.3
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Openbox"
 url="http://github.com/Antergos/antergos-desktop/openbox"
