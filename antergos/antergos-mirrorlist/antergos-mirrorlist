@@ -30,7 +30,6 @@ Server = http://wynsrv.antergos.info/$repo/$arch
 # China
 Server = http://mirrors.ustc.edu.cn/antergos/$repo/$arch
 Server = http://mirrors.tuna.tsinghua.edu.cn/antergos/$repo/$arch
-Server = http://mirror.bjtu.edu.cn/cinnarch/$repo/$arch
 
 # Czech Republic
 Server = http://mirrors.nic.cz/antergos/$repo/$arch
@@ -53,6 +52,9 @@ Server = http://mirror.alpix.eu/antergos/$repo/$arch
 # Greece
 Server = http://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
 
+# Japan
+Server = http://mirror.antergos.jp/$repo/$arch
+
 # Netherlands
 Server = http://mirror.nl.leaseweb.net/antergos/$repo/$arch
 Server = http://ftp1.nluug.nl/os/Linux/distr/antergos/$repo/$arch
@@ -71,14 +73,9 @@ Server = http://softlibre.unizar.es/cinnarch/$repo/$arch
 Server = http://ftp.acc.umu.se/mirror/antergos.com/$repo/$arch
 
 # USA
-Server = http://mirrors.tuxns.net/antergos/$repo/$arch
 Server = http://mirror.us.leaseweb.net/antergos/$repo/$arch
+Server = http://mirrors.tuxns.net/antergos/$repo/$arch
 Server = http://mirror.umd.edu/antergos/$repo/$arch
 Server = http://mirrors.acm.wpi.edu/antergos/$repo/$arch
-Server = http://antergos.x86innovations.com/$repo/$arch
 Server = http://repo.antergos.info/$repo/$arch
-
-# Vietnam
-Server = http://mirror.freedif.org/Antergos/$repo/$arch
-Server = http://mirror.vinahost.vn/antergos/$repo/$arch
 
