@@ -2,18 +2,31 @@
 
 pkgname=antergos-xfce-setup
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Setup configuration for Antergos XFCE"
 url="http://github.com/Antergos/antergos-desktop/xfce"
 arch=('any')
 license=('GPL2')
-depends=('antergos-desktop' 'evince' 'file-roller' 'gamin' 'gnome-calculator' 'gnome-disk-utility' 'gnome-keyring' 'gvfs-google' 'gvfs-mtp'
-    'mousepad' 'network-manager-applet' 'networkmanager-openvpn' 'networkmanager-pptp' 'parole' 'python-pysmbc' 'polkit-gnome' 'pragha'
-    'ristretto' 'thunar-archive-plugin' 'thunar-volman' 'transmission-gtk' 'tumbler' 'xdg-user-dirs-gtk' 'xfce4' 'xfburn'
-    'xfce4-battery-plugin' 'xfce4-datetime-plugin' 'xfce4-notifyd' 'xfce4-pulseaudio-plugin' 'xfce4-screenshooter' 'xfce4-taskmanager')
+depends=('antergos-desktop' 'evince' 'exo' 'file-roller' 'gamin' 'garcon'
+    'gnome-calculator' 'gnome-disk-utility' 'gnome-keyring' 'gtk-xfce-engine'
+    'gvfs-google' 'gvfs-mtp' 'mousepad' 'network-manager-applet'
+    'networkmanager-openvpn' 'networkmanager-pptp' 'parole' 'python-pysmbc'
+    'polkit-gnome' 'pragha' 'ristretto' 'thunar' 'thunar-archive-plugin'
+    'thunar-volman' 'transmission-gtk' 'tumbler' 'xdg-user-dirs-gtk' 'xfburn'
+    'xfce4-appfinder' 'xfce4-panel' 'xfce4-battery-plugin' 'xfce4-datetime-plugin'
+    'xfce4-notifyd' 'xfce4-power-manager' 'xfce4-pulseaudio-plugin'
+    'xfce4-screenshooter' 'xfce4-session' 'xfce4-taskmanager' 'xfce4-terminal'
+    'xfce4-settings' 'xfconf' 'xfdesktop' 'xfwm4' 'xfwm4-themes')
 install=${pkgname}.install
 
+# ANTBS METADATA
 _is_metapkg='yes'
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='antergos-desktop'
+# END ANTBS METADATA
 
 package() {
     true
