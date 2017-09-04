@@ -47,7 +47,8 @@ post_install() {
 	systemd_units_reset
 }
 
-# post_remove() {
+post_remove() {
+	true
 #	dkms remove "zfs/${_PKGVER}" --all
 
 #	if (grep -v '#' /etc/mkinitcpio.conf | grep zfs >/dev/null); then
@@ -55,7 +56,7 @@ post_install() {
 #		echo '>>> list in mkinitcpio.conf! You will need to remove "zfs" from the '
 #		echo '>>> "hooks" list and then regenerate the initial ramdisk.'
 #	fi
-# }
+}
 
 post_upgrade() {
 	post_install
