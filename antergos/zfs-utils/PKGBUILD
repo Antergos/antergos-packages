@@ -2,36 +2,31 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs-utils
-_pkgver=0.7.0
-_rev=2997
-_kern=4.12.3_1
-pkgver="${_pkgver}.r${_rev}.${_kern}"
+_pkgver=0.7.1
+_kern=4128
+pkgver="${_pkgver}.${_kern}"
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
 url="http://zfsonlinux.org/"
 license=('CDDL')
-arch=("i686" "x86_64")
+arch=("x86_64")
 groups=("system")
-depends=("spl=${pkgver/2997/1038}")
+depends=("spl=${pkgver}")
 conflicts=("zfs-utils-dkms-git")
 _commit=''
-_tag='zfs-0.7.0'
+_tag='zfs-0.7.1'
 source=("https://github.com/zfsonlinux/zfs/archive/${_tag}.zip"
-		"zfs-utils.bash-completion-r1"
-		"zfs-utils.initcpio.install"
-		"zfs-utils.initcpio.hook")
-md5sums=('0c5294f000801dcf2ea88dee100cc935'
+	"zfs-utils.bash-completion-r1"
+	"zfs-utils.initcpio.install"
+	"zfs-utils.initcpio.hook")
+md5sums=('1a2b2fe26c3b0b11fd76c9cfdf6b8da8'
          '9ddb0c8a94861f929d0fa741fdc49950'
          '110b48d872a7a7d2884496267f92418a'
          '62ba32c6853c315ff231c396cf8bfdbb')
 
-
 build() {
 	cd "${srcdir}/zfs-${_tag}"
 	./autogen.sh
-
-	{ [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"; } || _i686_target=""
-
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
 		--sbindir=/usr/bin \
@@ -41,8 +36,7 @@ build() {
 		--includedir=/usr/include \
 		--with-udevdir=/usr/lib/udev \
 		--libexecdir=/usr/lib/zfs \
-		--with-config=user \
-		${_i686_target}
+		--with-config=user
 	make
 }
 
@@ -58,4 +52,3 @@ package() {
 	install -D -m644 "${srcdir}"/zfs-utils.initcpio.install "${pkgdir}"/usr/lib/initcpio/install/zfs
 	install -D -m644 "${srcdir}"/zfs-utils.bash-completion-r1 "${pkgdir}"/usr/share/bash-completion/completions/zfs
 }
-
