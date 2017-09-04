@@ -2,40 +2,31 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl-utils
-_pkgver=0.7.0
-_rev=1038
-_kern=4.12.3_1
-pkgver="${_pkgver}.r${_rev}.${_kern}"
+_pkgver=0.7.1
+_kern=4.12.8_2
+pkgver="${_pkgver}.${_kern}"
 pkgrel=1
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
 groups=("system" "zfs")
 depends=("dkms")
-provides=("spl-utils-dkms=${pkgver}")
+provides=("spl-utils-dkms")
 conflicts=("spl-utils-dkms")
-arch=("i686" "x86_64")
+arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag='spl-0.7.0'
+_tag='spl-0.7.1'
 source=("https://github.com/zfsonlinux/spl/archive/${_tag}.zip")
-md5sums=('1b115bcf162373a300729ac718f73468')
-
+md5sums=('f893c5cad2c04df5712c808afffa780a')
 
 
 build() {
 	cd "${srcdir}/spl-${_tag}"
 	./autogen.sh
-
-	{ [[ "${CARCH}" == i686 ]] && _at_enable="--enable-atomic-spinlocks"; } || _at_enable=""
-	{ [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"; } || _i686_target=""
-
 	./configure --prefix=/usr \
 		--libdir=/usr/lib \
 		--sbindir=/usr/bin \
-		--with-config=user \
-		${_at_enable} \
-		${_i686_target}
-
+		--with-config=user
 	make
 }
 
