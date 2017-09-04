@@ -2,32 +2,26 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-_pkgver=0.7.0
-_rev=2997
-_kern=4.12.3_1
-pkgver="${_pkgver}.r${_rev}.${_kern}"
+_pkgver=0.7.1
+_kern=4128
+pkgver="${_pkgver}.${_kern}"
 pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
-depends=("spl=${pkgver/2997/1038}" "zfs-utils=${pkgver}" "dkms" "linux-headers" "linux<4.13")
+depends=("spl=${pkgver}" "zfs-utils=${pkgver}" "dkms" "linux-headers" "linux<4.13")
 provides=("zfs-dkms=${pkgver}")
 conflicts=("zfs-git" "zfs-dkms")
 install=zfs.install
-arch=("i686" "x86_64")
+arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag='zfs-0.7.0'
+_tag='zfs-0.7.1'
 source=("https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip")
-md5sums=('0c5294f000801dcf2ea88dee100cc935')
-
-
+md5sums=('1a2b2fe26c3b0b11fd76c9cfdf6b8da8')
 
 build() {
 	cd "${srcdir}/${pkgname}-${_tag}"
 	./autogen.sh
-
-	{ [[ "${CARCH}" == i686 ]] && _i686_target="--target=i686-linux-gnu"; } || _i686_target=""
-
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
 		--bindir=/usr/bin \
@@ -37,8 +31,7 @@ build() {
 		--includedir=/usr/include \
 		--with-udevdir=/usr/lib/udev \
 		--libexecdir=/usr/lib/zfs \
-		--with-config=user \
-		${_i686_target}
+		--with-config=user
 	make
 }
 
@@ -53,5 +46,3 @@ package() {
 	scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n zfs
 	chmod g-w,o-w -R .
 }
-
-
