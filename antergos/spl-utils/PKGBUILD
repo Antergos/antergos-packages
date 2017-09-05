@@ -19,7 +19,6 @@ _tag='spl-0.7.1'
 source=("https://github.com/zfsonlinux/spl/archive/${_tag}.zip")
 md5sums=('f893c5cad2c04df5712c808afffa780a')
 
-
 build() {
 	cd "${srcdir}/spl-${_tag}"
 	./autogen.sh
