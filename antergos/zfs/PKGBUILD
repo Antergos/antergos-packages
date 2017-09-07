@@ -3,7 +3,7 @@
 
 pkgname=zfs
 _pkgver=0.7.1
-_kern=4128
+_kern=41210
 pkgver="${_pkgver}.${_kern}"
 pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
