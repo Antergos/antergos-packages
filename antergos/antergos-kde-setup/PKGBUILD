@@ -13,7 +13,7 @@ depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clement
     'kipi-plugins' 'kmenuedit' 'konsole' 'kscreen' 'ksshaskpass' 'ksysguard' 'kwalletmanager' 'kwallet-pam' 'kwayland-integration' 'kwin'
     'kwrited' 'milou' 'nm-connection-editor' 'numix-frost-themes' 'numix-icon-theme-square' 'okular' 'oxygen' 'pamac-tray-appindicator'
     'plasma-desktop' 'plasma-nm' 'plasma-pa' 'plasma-workspace' 'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve-gtk2' 'qtcurve-qt4'
-    'qtcurve-qt5' 'qtcurve-utils' 'spectacle' 'systemsettings' 'transmission-qt' 'user-manager'	'vlc' 'xdg-user-dirs')
+    'qtcurve-kde' 'qtcurve-utils' 'spectacle' 'systemsettings' 'transmission-qt' 'user-manager'	'vlc' 'xdg-user-dirs')
 install=${pkgname}.install
 
 # ANTBS METADATA
