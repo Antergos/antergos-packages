@@ -4,7 +4,7 @@
 # Contributor: David Manouchehri <d@32t.ca>
 
 pkgname=dropbox
-pkgver=32.4.23
+pkgver=34.4.20
 pkgrel=1
 pkgdesc="A free service that lets you bring your photos, docs, and videos anywhere and share them easily."
 arch=("x86_64")
@@ -21,7 +21,7 @@ source=("https://d1ilhw0800yew8.cloudfront.net/client/dropbox-lnx.x86_64-${pkgve
         "terms.txt"
         "dropbox.service"
         "dropbox@.service")
-md5sums=('40f7c552c259ac76d1c2ddd11aba4510'
+md5sums=('65dcb4c49a6808f2495912b4cc84a7ce'
          '2be5a57e477adf82a7d9b7fe77f22086'
          'f3350cc0fb7b5f4fb6f2c0adda7e1260'
          '9e140f8de1bab8f26165068bb2c5e8b4'
