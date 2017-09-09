@@ -2,9 +2,7 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl
-_pkgver=0.7.1
-_kern=41210
-pkgver="${_pkgver}.${_kern}"
+pkgver=0.7.1
 pkgrel=1
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
@@ -43,5 +41,3 @@ package() {
 	scripts/dkms.mkconf -v ${pkgver} -f dkms.conf -n spl
 	chmod g-w,o-w -R .
 }
-
-
