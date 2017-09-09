@@ -2,9 +2,7 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs-utils
-_pkgver=0.7.1
-_kern=41210
-pkgver="${_pkgver}.${_kern}"
+pkgver=0.7.1
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
 url="http://zfsonlinux.org/"
@@ -23,7 +21,6 @@ md5sums=('1a2b2fe26c3b0b11fd76c9cfdf6b8da8'
          '9ddb0c8a94861f929d0fa741fdc49950'
          '110b48d872a7a7d2884496267f92418a'
          '62ba32c6853c315ff231c396cf8bfdbb')
-
 
 build() {
 	cd "${srcdir}/zfs-${_tag}"
