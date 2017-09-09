@@ -3,7 +3,7 @@
 
 pkgname=spl-utils
 pkgver=0.7.1
-pkgrel=1
+pkgrel=2
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
 groups=("system" "zfs")
