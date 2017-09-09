@@ -3,7 +3,7 @@
 
 pkgname=zfs
 pkgver=0.7.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
 depends=("spl=${pkgver}" "zfs-utils=${pkgver}" "dkms" "linux-headers" "linux<4.13")
@@ -34,7 +34,7 @@ build() {
 }
 
 package() {
-	dkmsdir="${pkgdir}/usr/src/zfs-${_pkgver}"
+	dkmsdir="${pkgdir}/usr/src/zfs-${pkgver}"
 	install -d "${dkmsdir}"
 
 	cp -a "${srcdir}/${pkgname}-${_tag}"/. ${dkmsdir}
