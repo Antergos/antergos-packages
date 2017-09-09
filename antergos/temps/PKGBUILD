@@ -1,0 +1,34 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+# AUR Maintainer: Bilal ELmoussaoui <bil.elmoussaoui@gmail.com>
+
+pkgname=temps
+_pkgbase=Temps
+pkgrel=1
+pkgver=0.7.0
+_pkgver="v$pkgver"
+pkgdesc="Simple menubar application based on Electron with actual weather information and forecast"
+url="https://github.com/jackd248/temps"
+provides=('temps')
+arch=('x86_64')
+license=('MIT')
+makedepends=('unzip')
+backup=()
+install=''
+source=(
+    "${_pkgbase}.desktop"
+    "${_pkgbase}.png"
+    "${url}/releases/download/${_pkgver}/${_pkgbase}-linux-x64.zip")
+sha256sums=(
+    '0a14c60b053eff6d6342a71e472d0b3cac4468ff11285778404e05d52aa7ed59'
+    '93228edce78347773d41a0fc4159f13b802b686d5b3807644868a44cc179ec83'
+    '6252c1d76336e752882e29e85cf2fd51cf06148de3e479f8102a261e1eedd182')
+
+package() {
+    install -d "$pkgdir"/opt
+    cp -R "$srcdir"/Temps-linux-x64 "$pkgdir"/opt/Temps
+    install -d "$pkgdir"/usr/bin
+    ln -sf ../../opt/Temps/Temps "$pkgdir"/usr/bin/temps
+
+    install -D -m644 "./${_pkgbase}.desktop" "${pkgdir}/usr/share/applications/${_pkgbase}.desktop"
+    install -D -m644 "./${_pkgbase}.png" "${pkgdir}/usr/share/pixmaps/${_pkgbase}.png"
+}
