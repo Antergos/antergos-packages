@@ -3,7 +3,7 @@
 pkgname=antergos-wallpapers-deepin
 _pkgname=wallpapers-deepin
 pkgver=0.3
-pkgrel=2
+pkgrel=3
 pkgdesc='Extra wallpapers suited for Deepin and contributed by the Antergos User Community'
 arch=('any')
 url='https://antergos.com'
@@ -11,13 +11,13 @@ license=('CCPL:by-nc-sa')
 source=("https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
 sha256sums=('eec24915cfd418c0aba0cd601bb4a917e30e751fe5678d023c56c85fe389c6cd')
 
-# ANTBS METADATA
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='antergos'
-_monitored_repo='wallpapers-deepin'
-# END ANTBS METADATA
+## ANTBS METADATA
+#_is_monitored='True'
+#_monitored_service='github'
+#_monitored_type='releases'
+#_monitored_project='antergos'
+#_monitored_repo='wallpapers-deepin'
+## END ANTBS METADATA
 
 package() {
 	cd "${srcdir}/${_pkgname}-${pkgver}"
