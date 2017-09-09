@@ -2,9 +2,7 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-_pkgver=0.7.1
-_kern=41210
-pkgver="${_pkgver}.${_kern}"
+pkgver=0.7.1
 pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
@@ -18,7 +16,6 @@ _commit=''
 _tag='zfs-0.7.1'
 source=("https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip")
 md5sums=('1a2b2fe26c3b0b11fd76c9cfdf6b8da8')
-
 
 build() {
 	cd "${srcdir}/${pkgname}-${_tag}"
