@@ -1,8 +1,8 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-desktop
-pkgver=0.4
-pkgrel=2
+pkgver=0.5
+pkgrel=1
 pkgdesc='Setup configuration for Antergos Desktops'
 url='http://www.antergos.com'
 arch=('any')
@@ -11,13 +11,13 @@ depends=('antergos-gsettings')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz")
 md5sums=('1c45fe13cc43facb150c273657c1dd1e')
 
-# ANTBS METADATA
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='antergos'
-_monitored_repo='antergos-desktop'
-# END ANTBS METADATA
+## ANTBS METADATA
+#_is_monitored='True'
+#_monitored_service='github'
+#_monitored_type='releases'
+#_monitored_project='antergos'
+#_monitored_repo='antergos-desktop'
+## END ANTBS METADATA
 
 package() {
     cd "${srcdir}/${pkgname}-${pkgver}"
