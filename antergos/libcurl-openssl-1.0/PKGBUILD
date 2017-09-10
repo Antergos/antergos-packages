@@ -12,9 +12,8 @@ url='https://curl.haxx.se'
 license=('MIT')
 depends=('curl' 'glibc' 'krb5' 'openssl-1.0' 'libpsl' 'zlib' 'libssh2.so')
 options=('strip')
-source=("https://curl.haxx.se/download/curl-${pkgver}.tar.gz"{,.asc})
-sha512sums=('59c236f46e13faf9124cecab991b139e57376b1b5a5db13005f55ffece67191f0f7ecb954ae14e382a561d34f8b652b532755746d0cda79713b56857833951c5'
-            'SKIP')
+source=("https://curl.haxx.se/download/curl-${pkgver}.tar.gz")
+sha512sums=('59c236f46e13faf9124cecab991b139e57376b1b5a5db13005f55ffece67191f0f7ecb954ae14e382a561d34f8b652b532755746d0cda79713b56857833951c5')
 
 build() {
   cd curl-${pkgver}
