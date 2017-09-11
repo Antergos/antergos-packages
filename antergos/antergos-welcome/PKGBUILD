@@ -2,7 +2,7 @@
 
 pkgname=antergos-welcome
 _pkgname=welcome
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc='Welcome screen for Antergos Linux'
 arch=(any)
@@ -23,11 +23,21 @@ _monitored_repo='welcome'
 package() {
     cd "${srcdir}/${_pkgname}-${pkgver}"
 
-    install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
-    install -Dm755 "${pkgname}d" "${pkgdir}/usr/bin/${pkgname}d"
+    # Install antergos-welcomed (dbus service)
+    install -d "${pkgdir}/usr/share/antergos/welcomed"
+    cp -R src/welcomed/. "${pkgdir}/usr/share/antergos/welcomed"
+    install -Dm755 bin/antergos-welcomed "${pkgdir}/usr/bin/antergos-welcomed"
 
+    # Install d-bus setup files
+    install -m644 src/welcomed/dbus/com.antergos.welcome.service "${pkgdir}/usr/share/dbus-1/system-services"
+    install -m644 src/welcomed/dbus/com.antergos.welcome.conf "${pkgdir}/etc/dbus-1/system.d"
+    install -m644 src/welcomed/dbus/com.antergos.welcome.policy "${pkgdir}/usr/share/polkit-1/actions"
+
+    # Install antergos-welcome (client app)
+    install -d "${pkgdir}/usr/share/antergos/welcome"
+    cp src/*.py "${pkgdir}/usr/share/antergos/welcome"
+    install -Dm755 bin/antergos-welcome "${pkgdir}/usr/bin/antergos-welcome"
     install -Dm644 antergos-welcome.desktop "${pkgdir}/usr/share/applications"
-
-    install -d "${pkgdir}/usr/share/antergos/${_pkgname}"
-    cp -R data/. "${pkgdir}/usr/share/antergos/${_pkgname}"
+    install -d "${pkgdir}/usr/share/antergos/welcome/data"
+    cp -R data/. "${pkgdir}/usr/share/antergos/welcome/data"
 }
