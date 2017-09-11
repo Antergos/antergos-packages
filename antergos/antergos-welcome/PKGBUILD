@@ -8,8 +8,7 @@ pkgdesc='Welcome screen for Antergos Linux'
 arch=(any)
 license=(GPL)
 url="https://github.com/Antergos/welcome"
-depends=('python-gobject' 'python-dbus' 'webkit2gtk' 'python-simplejson' 'notification-daemon')
-makedepends=('git')
+depends=('python-gobject' 'python-pydbus' 'webkit2gtk' 'python-simplejson' 'notification-daemon')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
 md5sums=('SKIP')
 
@@ -26,5 +25,6 @@ package() {
 
     install -d ${pkgdir}/usr/share/${pkgname}
     install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
+    install -Dm755 "${pkgname}d" "${pkgdir}/usr/bin/${pkgname}d"
     cp -R data/* "${pkgdir}/usr/share/${pkgname}/"
 }
