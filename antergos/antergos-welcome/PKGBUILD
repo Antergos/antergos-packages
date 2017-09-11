@@ -12,13 +12,13 @@ depends=('python-gobject' 'python-pydbus' 'webkit2gtk' 'python-simplejson' 'noti
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
 md5sums=('11383e4c438fa5356185fb622e26ff2d')
 
-# ANTBS METADATA
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='antergos'
-_monitored_repo='welcome'
-# END ANTBS METADATA
+## ANTBS METADATA
+#_is_monitored='True'
+#_monitored_service='github'
+#_monitored_type='releases'
+#_monitored_project='antergos'
+#_monitored_repo='welcome'
+## END ANTBS METADATA
 
 package() {
     cd "${srcdir}/${_pkgname}-${pkgver}"
@@ -29,15 +29,23 @@ package() {
     install -Dm755 bin/antergos-welcomed "${pkgdir}/usr/bin/antergos-welcomed"
 
     # Install d-bus setup files
-    install -m644 src/welcomed/dbus/com.antergos.welcome.service "${pkgdir}/usr/share/dbus-1/system-services"
-    install -m644 src/welcomed/dbus/com.antergos.welcome.conf "${pkgdir}/etc/dbus-1/system.d"
-    install -m644 src/welcomed/dbus/com.antergos.welcome.policy "${pkgdir}/usr/share/polkit-1/actions"
+    install -d "${pkgdir}/usr/share/dbus-1/system-services"
+    install -m644 src/welcomed/dbus/com.antergos.welcome.service \
+        "${pkgdir}/usr/share/dbus-1/system-services"
+    install -d "${pkgdir}/etc/dbus-1/system.d"
+    install -m644 src/welcomed/dbus/com.antergos.welcome.conf \
+        "${pkgdir}/etc/dbus-1/system.d"
+    install -d "${pkgdir}/usr/share/polkit-1/actions"
+    install -m644 src/welcomed/dbus/com.antergos.welcome.policy \
+        "${pkgdir}/usr/share/polkit-1/actions"
 
     # Install antergos-welcome (client app)
     install -d "${pkgdir}/usr/share/antergos/welcome"
     cp src/*.py "${pkgdir}/usr/share/antergos/welcome"
-    install -Dm755 bin/antergos-welcome "${pkgdir}/usr/bin/antergos-welcome"
-    install -Dm644 antergos-welcome.desktop "${pkgdir}/usr/share/applications"
+    install -Dm755 bin/antergos-welcome \
+        "${pkgdir}/usr/bin/antergos-welcome"
+    install -Dm644 antergos-welcome.desktop \
+        "${pkgdir}/usr/share/applications"
     install -d "${pkgdir}/usr/share/antergos/welcome/data"
     cp -R data/. "${pkgdir}/usr/share/antergos/welcome/data"
 }
