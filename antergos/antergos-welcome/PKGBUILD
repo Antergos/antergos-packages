@@ -21,10 +21,13 @@ _monitored_repo='welcome'
 # END ANTBS METADATA
 
 package() {
-    cd ${srcdir}/${_pkgname}-${pkgver}
+    cd "${srcdir}/${_pkgname}-${pkgver}"
 
-    install -d ${pkgdir}/usr/share/${pkgname}
     install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
     install -Dm755 "${pkgname}d" "${pkgdir}/usr/bin/${pkgname}d"
-    cp -R data/* "${pkgdir}/usr/share/${pkgname}/"
+
+    install -Dm644 antergos-welcome.desktop "${pkgdir}/usr/share/applications"
+
+    install -d "${pkgdir}/usr/share/antergos/${_pkgname}"
+    cp -R data/. "${pkgdir}/usr/share/antergos/${_pkgname}"
 }
