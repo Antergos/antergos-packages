@@ -10,7 +10,7 @@ license=(GPL)
 url="https://github.com/Antergos/welcome"
 depends=('python-gobject' 'python-pydbus' 'webkit2gtk' 'python-simplejson' 'notification-daemon')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('f875b03380b3cf179e671b8e02356482')
+md5sums=('11383e4c438fa5356185fb622e26ff2d')
 
 # ANTBS METADATA
 _is_monitored='True'
