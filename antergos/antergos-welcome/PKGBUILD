@@ -2,8 +2,8 @@
 
 pkgname=antergos-welcome
 _pkgname=welcome
-pkgver=0.2
-pkgrel=2
+pkgver=0.3
+pkgrel=1
 pkgdesc='Welcome screen for Antergos Linux'
 arch=(any)
 license=(GPL)
@@ -27,6 +27,11 @@ package() {
     install -d "${pkgdir}/usr/share/antergos/welcomed"
     cp -R src/welcomed/. "${pkgdir}/usr/share/antergos/welcomed"
     install -Dm755 bin/antergos-welcomed "${pkgdir}/usr/bin/antergos-welcomed"
+
+    # Install antergos-welcomed service file
+    install -d "${pkgdir}/usr/lib/systemd/system"
+    install -m644 dbus/welcomed.service \
+        "${pkgdir}/usr/lib/systemd/system/welcomed.service"
 
     # Install d-bus setup files
     install -d "${pkgdir}/usr/share/dbus-1/system-services"
