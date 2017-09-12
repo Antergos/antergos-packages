@@ -30,13 +30,13 @@ package() {
 
     # Install d-bus setup files
     install -d "${pkgdir}/usr/share/dbus-1/system-services"
-    install -m644 src/welcomed/dbus/com.antergos.welcome.service \
-        "${pkgdir}/usr/share/dbus-1/system-services/com.antergos-welcome.service"
+    install -m644 dbus/com.antergos.welcome.service \
+        "${pkgdir}/usr/share/dbus-1/system-services/com.antergos.welcome.service"
     install -d "${pkgdir}/etc/dbus-1/system.d"
-    install -m644 src/welcomed/dbus/com.antergos.welcome.conf \
+    install -m644 dbus/com.antergos.welcome.conf \
         "${pkgdir}/etc/dbus-1/system.d/com.antergos.welcome.conf"
     install -d "${pkgdir}/usr/share/polkit-1/actions"
-    install -m644 src/welcomed/dbus/com.antergos.welcome.policy \
+    install -m644 dbus/com.antergos.welcome.policy \
         "${pkgdir}/usr/share/polkit-1/actions/com.antergos.welcome.policy"
 
     # Install antergos-welcome (client app)
