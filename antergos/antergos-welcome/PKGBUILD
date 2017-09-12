@@ -3,14 +3,14 @@
 pkgname=antergos-welcome
 _pkgname=welcome
 pkgver=0.3
-pkgrel=1
+pkgrel=2
 pkgdesc='Welcome screen for Antergos Linux'
 arch=(any)
 license=(GPL)
 url="https://github.com/Antergos/welcome"
 depends=('python-gobject' 'python-pydbus' 'webkit2gtk' 'python-simplejson' 'notification-daemon')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('11383e4c438fa5356185fb622e26ff2d')
+md5sums=('1ac26c90274e9b9bcf2f0784eb11c615')
 
 ## ANTBS METADATA
 #_is_monitored='True'

@@ -1,7 +1,7 @@
-# Maintainer: Gustau Castells <karasu@antergos.com>
+# Maintainer: Antergos devs <devs@antergos.com>
 
 pkgname=aki
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="Antergos Kernel Installer"
 url="http://www.antergos.com"
