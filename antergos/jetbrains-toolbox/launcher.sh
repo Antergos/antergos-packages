@@ -47,11 +47,16 @@ copy_lastest_installed_version_file() {
 }
 
 
+run_toolbox() {
+	exec "${toolbox_system_dir}/jetbrains-toolbox" --disable-seccomp-filter-sandbox "$@"
+}
+
+
 
 if [[ 'true' = "${is_first_run}" ]]; then
 	setup_toolbox_user_directory
 	copy_lastest_installed_version_file
-	exec "${toolbox_system_dir}/jetbrains-toolbox" "$@"
+	run_toolbox
 
 elif ! [[ -h "${toolbox_user_dir}/bin" ]]; then
 	move_binary_and_create_symlink
@@ -59,9 +64,9 @@ elif ! [[ -h "${toolbox_user_dir}/bin" ]]; then
 elif ! versions_match; then
 	remove_symlink_to_binary
 	copy_lastest_installed_version_file
-	exec "${toolbox_system_dir}/jetbrains-toolbox" "$@"
+	run_toolbox
 fi
 
 export LD_LIBRARY_PATH="/usr/lib/openssl-1.0:$LD_LIBRARY_PATH"
-exec "${toolbox_user_dir}/bin/jetbrains-toolbox" "$@"
+exec "${toolbox_user_dir}/bin/jetbrains-toolbox" --disable-seccomp-filter-sandbox "$@"
 
