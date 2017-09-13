@@ -25,7 +25,8 @@ sha256sums=($(wget -q "${source}.sha256" && cat "${pkgname}-${pkgver}.tar.gz.sha
 			'ec837e9d12f010957cf274bb846bc758619d041fb07dfde716ef6f4a4b5dd0a7'
 			'1d583206859c21ba3d8898f0dffbaf3f6ae88c0e4ebeeb4868cc7e71aaf3895a'
 			'9e3784dc0bc10c0d7db7c01fa8874b4048ecb1d21fa2a82d4ff17c53cfacf70c'
-			'f4e69d2d91272f25025d8ae2227b36e50e0bc3697e2bd8f2143abfe675925598')
+			'596f364fe536c8c68c3d85b64c1e2ca61a62a1688525d19768a332f50f542bac'
+)
 
 # BEGIN ANTBS METADATA
 _autosums='True'
