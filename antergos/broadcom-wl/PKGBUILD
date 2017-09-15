@@ -1,4 +1,5 @@
-# Maintainer: Raimar Bühmann ( raimar [at] buehmann [dot] de )
+# Maintainer: Antergos Devs <devs@antergos.com>
+# Contributor: Raimar Bühmann ( raimar [at] buehmann [dot] de )
 # Contributor: Johannes Löthberg <johannes@kyriasis.com>
 # Contributor: Armin K. <krejzi at email dot com>
 # Contributor: Austin ( doorknob60 [at] gmail [dot] com )
@@ -7,7 +8,8 @@
 pkgname=broadcom-wl
 pkgver=6.30.223.271
 pkgrel=6
-
+_kernmajor="4.12"
+_kernver="4.12.13-1-ARCH"
 pkgdesc='Broadcom 802.11abgn hybrid Linux networking device driver'
 url='https://www.broadcom.com/support/802.11'
 arch=('x86_64')
@@ -36,8 +38,8 @@ sha256sums=('b4aca51ac5ed20cb79057437be7baf3650563b7a9d5efc515f0b9b34fbb9dc32'
 
 install=install
 
-_kernmajor="$(pacman -Q linux | sed -r 's/linux ([0-9]*.[0-9]*).*/\1/')"
-_kernver="$(</usr/lib/modules/extramodules-"$_kernmajor"-ARCH/version)"
+#_kernmajor="$(pacman -Q linux | sed -r 's/linux ([0-9]*.[0-9]*).*/\1/')"
+#_kernver="$(</usr/lib/modules/extramodules-"$_kernmajor"-ARCH/version)"
 
 prepare() {
   patch -p1 -i license.patch
