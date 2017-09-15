@@ -8,4 +8,3 @@
  
  #ifdef quote_str
  #undef quote_str
-
