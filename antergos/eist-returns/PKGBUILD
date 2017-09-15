@@ -1,0 +1,29 @@
+# Maintainer: Piotr Miller <nwg.piotr@gmail.com>
+
+pkgname=('eist-returns')
+pkgver=0.0.2
+pkgrel=4
+pkgdesc="Arcade-puzzle game"
+arch=('i686' 'x86_64')
+url="https://github.com/nwg-piotr/EistReturns"
+license=('GPL3')
+depends=('java-runtime=8' 'java-openjfx' 'ffmpeg2.8' 'gstreamer' 'libxtst' 'qt5-base' 'webkit2gtk')
+source=("https://github.com/nwg-piotr/EistReturns/raw/master/arch/eist-returns.jar"
+"https://github.com/nwg-piotr/EistReturns/raw/master/arch/eist-returns.png"
+"https://github.com/nwg-piotr/EistReturns/raw/master/arch/eist-returns.desktop"
+"https://github.com/nwg-piotr/EistReturns/raw/master/arch/optirun-eist-returns.desktop")
+md5sums=('abfd3885a45e2f3bfba9675f5d0c342b'
+         '5ce6928eb681ed62b1028b17f7f372b6'
+         'fc5226f8fcb27c5e2bed7ac68872613f'
+         '62846857f23cf3b276f7af53a311f78a')
+
+package() {
+    install -D -m 755 eist-returns.jar \
+        "$pkgdir"/usr/share/java/eist-returns/eist-returns.jar
+    install -D -m 755 eist-returns.desktop \
+        "$pkgdir"/usr/share/applications/eist-returns.desktop
+    install -D -m 755 optirun-eist-returns.desktop \
+        "$pkgdir"/usr/share/applications/optirun-eist-returns.desktop
+    install -D -m 644 eist-returns.png \
+        "$pkgdir"/usr/share/eist-returns/eist-returns.png
+}
