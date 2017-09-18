@@ -2,7 +2,7 @@
 
 pkgname=antergos-deepin-setup
 pkgver=0.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Setup configuration for Antergos Deepin"
 url="http://github.com/Antergos/antergos-desktop/deepin"
 arch=('any')
@@ -11,7 +11,6 @@ depends=('antergos-desktop'')
 install=${pkgname}.install
 
 # ANTBS METADATA
-_is_metapkg='yes'
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='releases'
