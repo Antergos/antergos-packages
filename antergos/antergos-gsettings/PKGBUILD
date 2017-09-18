@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-gsettings
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc="Setup configuration for Antergos GTK3 Desktop Environments"
 url="http://www.antergos.com"
@@ -9,22 +9,40 @@ arch=('any')
 license=('GPL3')
 depends=('gsettings-desktop-schemas' 'dconf')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('SKIP')
+md5sums=('')
 
 # ANTBS METADATA
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='antergos'
-_monitored_repo='antergos-gsettings'
+#_is_monitored='True'
+#_monitored_service='github'
+#_monitored_type='releases'
+#_monitored_project='antergos'
+#_monitored_repo='antergos-gsettings'
 # END ANTBS METADATA
 
 package() {
     cd "${srcdir}/${pkgname}-${pkgver}"
 
-    install -Dm644 90_antergos_gnome.gschema.override "${pkgdir}/usr/share/glib-2.0/schemas/90_antergos_gnome.gschema.override"
-    install -Dm644 90_antergos_cinnamon.gschema.override "${pkgdir}/usr/share/glib-2.0/schemas/90_antergos_cinnamon.gschema.override"
-    install -Dm644 90_antergos_mate.gschema.override "${pkgdir}/usr/share/glib-2.0/schemas/90_antergos_mate.gschema.override"
-    install -Dm644 90_antergos_mate_mintmenu.gschema.override "${pkgdir}/usr/share/glib-2.0/schemas/90_antergos_mate_mintmenu.gschema.override"
-    install -Dm644 92_antergos_deepin.gschema.override "${pkgdir}/usr/share/glib-2.0/schemas/92_antergos_deepin.gschema.override"
+    install -d "${pkgdir}/usr/share/antergos/schemas/gnome"
+    install -Dm644 gnome/90_antergos_gnome.gschema.override \
+        "${pkgdir}/usr/share/antergos/schemas/gnome/90_antergos_gnome.gschema.override"
+
+    install -d "${pkgdir}/usr/share/antergos/schemas/cinnamon"
+    install -Dm644 cinnamon/90_antergos_cinnamon.gschema.override \
+        "${pkgdir}/usr/share/antergos/schemas/cinnamon/90_antergos_cinnamon.gschema.override"
+
+    install -d "${pkgdir}/usr/share/antergos/schemas/mate"
+    install -Dm644 mate/90_antergos_mate.gschema.override \
+        "${pkgdir}/usr/share/antergos/schemas/mate/90_antergos_mate.gschema.override"
+    install -Dm644 mate/90_antergos_mate_mintmenu.gschema.override \
+        "${pkgdir}/usr/share/antergos/schemas/mate/90_antergos_mate_mintmenu.gschema.override"
+
+    install -d "${pkgdir}/usr/share/antergos/schemas/deepin"
+    install -Dm644 deepin/92_antergos_deepin.gschema.override \
+        "${pkgdir}/usr/share/antergos/schemas/deepin/92_antergos_deepin.gschema.override"
+
+    install -d "${pkgdir}/usr/share/antergos/schemas/sonar"
+    install -Dm644 92_antergos_sonar.gschema.override \
+        "${pkgdir}/usr/share/antergos/schemas/sonar/92_antergos_sonar.gschema.override"
+    install -Dm644 92_antergos_sonar_mate.gschema.override \
+        "${pkgdir}/usr/share/antergos/schemas/sonar/92_antergos_sonar_mate.gschema.override"
 }
