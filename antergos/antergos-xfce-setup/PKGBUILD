@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-xfce-setup
-pkgver=0.5
+pkgver=0.6
 pkgrel=2
 pkgdesc="Setup configuration for Antergos XFCE"
 url="http://github.com/Antergos/antergos-desktop/xfce"
