@@ -3,7 +3,7 @@
 
 pkgname=zfs
 pkgver=0.7.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
 depends=("spl=${pkgver}" "zfs-utils=${pkgver}" "dkms" "linux-headers" "linux<4.13")
