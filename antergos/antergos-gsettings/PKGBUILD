@@ -2,7 +2,7 @@
 
 pkgname=antergos-gsettings
 pkgver=1.3
-pkgrel=2
+pkgrel=3
 pkgdesc="Setup configuration for Antergos GTK3 Desktop Environments"
 url="http://www.antergos.com"
 arch=('any')
