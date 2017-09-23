@@ -4,7 +4,7 @@
 
 pkgname="antergos-kernel-manager"
 _pkgname="Antergos-Kernel-Manager"
-pkgver=1.3
+pkgver=1.4
 pkgrel=1
 pkgdesc='An easy kernel manager for everyone'
 url='https://github.com/keeganmilsten/Antergos-Kernel-Manager'
