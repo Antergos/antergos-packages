@@ -3,12 +3,15 @@
 
 pkgname=pluma
 pkgver=1.18.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A powerful text editor for the MATE Desktop"
 url="https://mate-desktop.org"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('desktop-file-utils' 'enchant' 'gtk3' 'gtksourceview3' 'iso-codes' 'libsm' 'zenity' 'libpeas')
+depends=(
+	'desktop-file-utils' 'enchant' 'gtk3' 'gtksourceview3' 'iso-codes'
+	'libsm' 'zenity' 'libpeas' 'mate-desktop'
+)
 makedepends=('wget' 'mate-common' 'yelp-tools' 'python2' 'python' 'gobject-introspection')
 optdepends=('yelp: for reading MATE help documents')
 groups=('mate-extra')
