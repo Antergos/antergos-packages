@@ -1,25 +1,30 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-enlightenment-setup
+_pkgname=antergos-desktop-settings
 pkgver=1.0
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Enlightenment"
-url="http://github.com/Antergos/antergos-desktop/enlightenment"
+url="http://github.com/Antergos/antergos-desktop-settings/enlightenment"
 arch=('any')
 license=('GPL2')
-depends=('antergos-desktop' 'enlightenment' 'connman' 'ttf-bitstream-vera' 'ttf-dejavu')
-install=${pkgname}.install
+depends=('enlightenment' 'connman' 'ttf-bitstream-vera' 'ttf-dejavu')
+replaces=('antergos-desktop' 'antergos-gsettings')
+source=("https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
+md5sums=('3f0a10ba60e22b5d0dcce8f05bb111d3')
 
 # ANTBS METADATA
-_is_metapkg='yes'
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='antergos'
-_monitored_repo='antergos-desktop'
+_monitored_repo='antergos-desktop-settings'
 # END ANTBS METADATA
 
 package() {
-    true
-}
+    cd "${srcdir}/${_pkgname}-${pkgver}/enlightenment/skel"
 
+    for file in $(find . -type f); do
+        install -Dm644 ${file#./} "${pkgdir}/etc/skel/${file#./}"
+    done
+}

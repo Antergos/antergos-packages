@@ -1,17 +1,42 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-mate-setup
-pkgver=0.1
+_pkgname=antergos-desktop-settings
+pkgver=1.0
 pkgrel=1
-pkgdesc="Setup configuration for Antergos MATE"
-url="http://github.com/Antergos/antergos-desktop/mate"
+pkgdesc='Setup configuration for Antergos Mate'
+url='http://github.com/Antergos/antergos-desktop-settings/plasma'
 arch=('any')
-license=('GPL2')
-depends=('antergos-desktop')
+license=('GPL3')
+depends=('mate-desktop' 'gsettings-desktop-schemas' 'dconf')
+replaces=('antergos-desktop' 'antergos-gsettings')
+source=("https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
+md5sums=('3f0a10ba60e22b5d0dcce8f05bb111d3')
 install=${pkgname}.install
 
-_is_metapkg='yes'
+# ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='antergos-desktop-settings'
+# END ANTBS METADATA
 
 package() {
-    true
+    cd "${srcdir}/${_pkgname}-${pkgver}/mate"
+
+    for file in $(find skel/. -type f); do
+        install -Dm644 ${file} "${pkgdir}/etc/${file}"
+    done
+
+    for file in $(find icons/. -type f); do
+        install -Dm644 ${file} "${pkgdir}/usr/share/${file}"
+    done
+
+    install -d "${pkgdir}/usr/share/glib-2.0/schemas"
+
+    install -Dm644 gnome/schemas/90_antergos_mate.gschema.override \
+        "${pkgdir}/usr/share/glib-2.0/schemas/90_antergos_mate.gschema.override"
+    install -Dm644 gnome/schemas/90_antergos_mate_mintmenu.gschema.override \
+        "${pkgdir}/usr/share/glib-2.0/schemas/90_antergos_mate_mintmenu.gschema.override"
 }

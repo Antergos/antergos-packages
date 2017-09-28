@@ -1,20 +1,7 @@
-do_antergos_setup() {
-	if [[ -n "${SUDO_USER}" ]]; then
-		_ANT_USER="${SUDO_USER}"
-	elif [[ -n "${HOME}" ]]; then
-		_ANT_USER="${HOME#/home/}"
-	else
-		echo "Error: Unable to determine current user."
-		exit 1
-	fi
-	
-	[[ -n "${_ANT_USER}" ]] && /usr/bin/antergos-desktop plasma "${_ANT_USER}" "${1}"
-}
-
 post_install() {
-	do_antergos_setup
+    /usr/bin/sed -i 's|archlinux|antergos|g' /etc/xdg/kcm-about-distrorc
 }
 
 post_upgrade() {
-	do_antergos_setup 'no-overwrite'
+    /usr/bin/sed -i 's|archlinux|antergos|g' /etc/xdg/kcm-about-distrorc
 }
