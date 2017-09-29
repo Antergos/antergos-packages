@@ -2,14 +2,15 @@
 
 pkgname=antergos-prime
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc='GPU-switching for Hybrid-GPUs'
 arch=('any')
 url='https://github.com/konstantingoretzki/AntergosPrime'
 license=('GPL3')
 groups=()
-depends=('bash' 'sddm' 'systemd' 'xorg-server')
+depends=('bash' 'sddm' 'systemd' 'xorg-server' 'xf86-video-intel')
 makedepends=('git')
+conflicts=('xf86-video-nouveau')
 source=("${pkgname}-${pkgver}.zip::https://github.com/antergos/${pkgname}/archive/master.zip")
 md5sums=('f2d8007f4ab5623cd4b17629277f92b7')
 
