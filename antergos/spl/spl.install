@@ -1,26 +1,3 @@
-# _PKGVER="<PKGVER>"
-# _KERNVER="<KERNVER>"
-
-# _KERNVER_STR="$(pacman -Q linux)"
-# _KERNVER="${_KERNVER_STR/linux }-ARCH"
-# [[ "${_KERNVER}" =~ ^\d\.\d+\.-\d-ARCH$ ]] || { 
-#	_LAST="${_KERNVER:(-7)}"
-#	_FIRST="${_KERNVER%-?-ARCH}"
-#	_KERNVER="${_FIRST}.0${_LAST}"
-# }
-
-# check_initramfs() {
-#	echo '>>> Updating module dependencies. Please wait ...'
-
-#	dkms add -k "${_KERNVER}" "spl/${_PKGVER}"
-#	dkms install -k "${_KERNVER}" "spl/${_PKGVER}"
-#	modprobe -a spl
-
-#	echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'
-
-#	mkinitcpio -p linux
-# }
-
 check_hostid() {
 	# Check /etc/hostid to see if it set to the sentinel value, see
 	# https://wiki.archlinux.org/index.php/ZFS for more information.
@@ -36,22 +13,15 @@ check_hostid() {
 
 post_install() {
 	check_hostid
-	# check_initramfs
-}
-
-post_remove() {
-	true
-#	dkms remove "spl/${_PKGVER}" --all
-
-#	if (grep -v '#' /etc/mkinitcpio.conf | grep zfs >/dev/null); then
-#		echo '>>> The ZFS packages have been removed, but "zfs" remains in the "hooks"'
-#		echo '>>> list in mkinitcpio.conf! You will need to remove "zfs" from the '
-#		echo '>>> "hooks" list and then regenerate the initial ramdisk.'
-#	fi
 }
 
 post_upgrade() {
 	post_install
+}
+
+post_remove() {
+    pkgver="0.7.1"
+	dkms remove "spl/${pkgver}" --all
 }
 
 

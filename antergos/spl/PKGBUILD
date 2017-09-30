@@ -3,31 +3,30 @@
 
 pkgname=spl
 pkgver=0.7.1
-pkgrel=4
+pkgrel=5
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
 makedepends=("git")
-depends=("dkms" "spl-utils=${pkgver}" "linux-headers")
-provides=("spl-dkms")
+depends=("spl-utils=${pkgver}" "dkms" "linux-headers" "linux")
+provides=("spl-dkms=${pkgver}")
 conflicts=("spl-dkms")
 install=spl.install
 arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
 _tag='spl-0.7.1'
-source=("https://github.com/zfsonlinux/spl/archive/${_tag}.zip")
+source=("https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip")
 md5sums=('f893c5cad2c04df5712c808afffa780a')
-install=spl.install
 
 build() {
-	cd "${srcdir}/${pkgname}-${_tag}"
-	./autogen.sh
-	./configure \
-		--prefix=/usr \
-		--libdir=/usr/lib \
-		--sbindir=/usr/bin \
-		--with-config=user
-	make
+    cd "${srcdir}/${pkgname}-${_tag}"
+    ./autogen.sh
+    ./configure \
+        --prefix=/usr \
+        --libdir=/usr/lib \
+        --sbindir=/usr/bin \
+        --with-config=user
+    make
 }
 
 package() {
@@ -38,6 +37,6 @@ package() {
 
 	cd "${dkmsdir}"
 	./autogen.sh
-	scripts/dkms.mkconf -v ${pkgver} -f dkms.conf -n spl
+	scripts/dkms.mkconf -v ${pkgver} -f dkms.conf -n ${pkgname}
 	chmod g-w,o-w -R .
 }
