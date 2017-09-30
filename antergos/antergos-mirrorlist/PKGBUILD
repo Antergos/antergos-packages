@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=antergos-mirrorlist
-pkgver=20170902
-pkgrel=2
+pkgver=20170930
+pkgrel=1
 pkgdesc="Antergos mirrorlist for use by pacman"
 arch=('any')
 groups=('antergos-base')
@@ -11,12 +11,10 @@ license=('GPL')
 depends=('antergos-alerts')
 backup=(etc/pacman.d/antergos-mirrorlist)
 source=(antergos-mirrorlist)
-md5sums=('8ea1bcab1ca1e09b5f54250c0c3554fa')
+md5sums=('7a974cec7fd52767baf1166ede9374c5')
 
 package() {
-	mkdir -p $pkgdir/etc/pacman.d
-	install -m644 $srcdir/antergos-mirrorlist $pkgdir/etc/pacman.d/
+	mkdir -p "${pkgdir}/etc/pacman.d"
+	install -Dm644 "${srcdir}/antergos-mirrorlist" \
+        "${pkgdir}/etc/pacman.d/antergos-mirrorlist"
 }
-
-
-

@@ -1,25 +1,17 @@
-###                                        ###
 ##                                          ##
 #       Antergos Repository Mirrorlist       #
 ##                                          ##
-###                                        ###
 
-
-###                              ###
 ##                                ##
 #    Automated Mirror Selection    #
 ##                                ##
-###                              ###
 
 Server = http://mirrors.antergos.com/$repo/$arch
-Server = http://sourceforge.net/projects/antergos/files/mirror/$repo/$arch
+#Server = http://sourceforge.net/projects/antergos/files/mirror/$repo/$arch
 
-
-###                              ###
 ##                                ##
 #     Manual Mirror Selection      #
 ##                                ##
-###                              ###
 
 # Bulgaria
 Server = http://mirror.host.ag/antergos/$repo/$arch
@@ -78,4 +70,3 @@ Server = http://mirrors.tuxns.net/antergos/$repo/$arch
 Server = http://mirror.umd.edu/antergos/$repo/$arch
 Server = http://mirrors.acm.wpi.edu/antergos/$repo/$arch
 Server = http://repo.antergos.info/$repo/$arch
-
