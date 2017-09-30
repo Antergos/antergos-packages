@@ -3,9 +3,10 @@
 
 pkgname=zfs
 pkgver=0.7.1
-pkgrel=5
+pkgrel=6
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
+makedepends=("git")
 depends=("spl=${pkgver}" "zfs-utils=${pkgver}" "dkms" "linux-headers" "linux")
 provides=("zfs-dkms=${pkgver}")
 conflicts=("zfs-git" "zfs-dkms")
@@ -18,19 +19,20 @@ source=("https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip")
 md5sums=('1a2b2fe26c3b0b11fd76c9cfdf6b8da8')
 
 build() {
-	cd "${srcdir}/${pkgname}-${_tag}"
-	./autogen.sh
-	./configure --prefix=/usr \
-		--sysconfdir=/etc \
-		--bindir=/usr/bin \
-		--sbindir=/usr/bin \
-		--libdir=/usr/lib \
-		--datadir=/usr/share \
-		--includedir=/usr/include \
-		--with-udevdir=/usr/lib/udev \
-		--libexecdir=/usr/lib/zfs \
-		--with-config=user
-	make
+    cd "${srcdir}/${pkgname}-${_tag}"
+    ./autogen.sh
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --bindir=/usr/bin \
+        --sbindir=/usr/bin \
+        --libdir=/usr/lib \
+        --datadir=/usr/share \
+        --includedir=/usr/include \
+        --with-udevdir=/usr/lib/udev \
+        --libexecdir=/usr/lib/zfs \
+        --with-config=user
+    make
 }
 
 package() {
@@ -41,6 +43,6 @@ package() {
 
 	cd "${dkmsdir}"
 	./autogen.sh
-	scripts/dkms.mkconf -v ${pkgver} -f dkms.conf -n zfs
+	scripts/dkms.mkconf -v ${pkgver} -f dkms.conf -n ${pkgname}
 	chmod g-w,o-w -R .
 }

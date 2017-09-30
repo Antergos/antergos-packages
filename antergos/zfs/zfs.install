@@ -1,65 +1,30 @@
-# _PKGVER="<PKGVER>"
-# _KERNVER="<KERNVER>"
-
-# _KERNVER_STR="$(pacman -Q linux)"
-# _KERNVER="${_KERNVER_STR/linux }-ARCH"
-# [[ "${_KERNVER}" =~ ^\d\.\d+\.-\d-ARCH$ ]] || { 
-#	_LAST="${_KERNVER:(-7)}"
-#	_FIRST="${_KERNVER%-?-ARCH}"
-#	_KERNVER="${_FIRST}.0${_LAST}"
-# }
-
-# _OPTS='--no-pager --no-legend'
-# _UNIT_FILES="$(systemctl ${_OPTS} list-unit-files 'zfs-*' | cut -d ' ' -f 1 | tr '\n' ' ')"
-
-
-# systemd_unit_presets() {
-#	for unit in ${_UNIT_FILES}; do
-#		systemctl --preset-mode=enable-only preset "${unit}"
-#	done
-# }
-
 systemd_units_reset() {
-	systemctl preset --preset-mode=enable-only \
-		zfs-import-cache \
-		zfs-import-scan \
-		zfs-mount \
-		zfs-share \
-		zfs-zed \
-		zfs.target
+    systemctl preset --preset-mode=enable-only \
+        zfs-import-cache \
+        zfs-import-scan \
+        zfs-mount \
+        zfs-share \
+        zfs-zed \
+        zfs.target
 }
-
-# check_initramfs() {
-#	echo '>>> Updating module dependencies. Please wait ...'
-#	
-#	dkms add -k "${_KERNVER}" "zfs/${_PKGVER}"
-#	dkms install -k "${_KERNVER}" "zfs/${_PKGVER}"
-#	modprobe -a zfs
-
-#	echo '>>> Generating initial ramdisk, using mkinitcpio. Please wait...'
-
-#	mkinitcpio -p linux
-# }
 
 post_install() {
-	# check_initramfs
-	# systemd_unit_presets
-	systemd_units_reset
-}
-
-post_remove() {
-	true
-#	dkms remove "zfs/${_PKGVER}" --all
-
-#	if (grep -v '#' /etc/mkinitcpio.conf | grep zfs >/dev/null); then
-#		echo '>>> The ZFS packages have been removed, but "zfs" remains in the "hooks"'
-#		echo '>>> list in mkinitcpio.conf! You will need to remove "zfs" from the '
-#		echo '>>> "hooks" list and then regenerate the initial ramdisk.'
-#	fi
+    systemd_units_reset
 }
 
 post_upgrade() {
 	post_install
+}
+
+post_remove() {
+    pkgver="0.7.1"
+    dkms remove "zfs/${pkgver}" --all
+
+    if (grep -v '#' /etc/mkinitcpio.conf | grep zfs >/dev/null); then
+        echo '>>> The ZFS packages have been removed, but "zfs" remains in the "hooks"'
+        echo '>>> list in mkinitcpio.conf! You will need to remove "zfs" from the '
+        echo '>>> "hooks" list and then regenerate the initial ramdisk.'
+    fi
 }
 
 
