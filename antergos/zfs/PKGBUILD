@@ -2,8 +2,8 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-pkgver=0.7.1
-pkgrel=6
+pkgver=0.7.2
+pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
 makedepends=("git")
@@ -14,9 +14,20 @@ install=zfs.install
 arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag='zfs-0.7.1'
+_tag='zfs-0.7.2'
 source=("https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip")
-md5sums=('1a2b2fe26c3b0b11fd76c9cfdf6b8da8')
+md5sums=('79754aa2fe3f1fc8a0caff15725d5e8d')
+
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='zfsonlinux'
+_monitored_repo='zfs'
+_monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
+# END ANTBS METADATA
+
 
 build() {
     cd "${srcdir}/${pkgname}-${_tag}"

@@ -2,8 +2,8 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl-utils
-pkgver=0.7.1
-pkgrel=4
+pkgver=0.7.2
+pkgrel=1
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
 groups=("system" "zfs")
@@ -13,9 +13,19 @@ conflicts=("spl-utils-dkms")
 arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag="spl-0.7.1"
+_tag="spl-0.7.2"
 source=("https://github.com/zfsonlinux/spl/archive/${_tag}.zip")
-md5sums=('f893c5cad2c04df5712c808afffa780a')
+md5sums=('acecdc2b3b1e064082b718fc9251c2d5')
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='zfsonlinux'
+_monitored_repo='spl'
+_monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
+# END ANTBS METADATA
+
 
 build() {
 	cd "${srcdir}/spl-${_tag}"
