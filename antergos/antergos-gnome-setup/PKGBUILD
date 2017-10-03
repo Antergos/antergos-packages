@@ -3,7 +3,7 @@
 pkgname=antergos-gnome-setup
 _pkgname=antergos-desktop-settings
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Setup configuration for Antergos Gnome"
 url="http://github.com/Antergos/antergos-desktop-settings/gnome"
 arch=('any')
