@@ -3,7 +3,7 @@
 pkgname=antergos-openbox-setup
 _pkgname=antergos-desktop-settings
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 pkgdesc='Setup configuration for Antergos Openbox'
 url='http://github.com/Antergos/antergos-desktop-settings/openbox'
 arch=('any')
@@ -23,7 +23,8 @@ _monitored_repo='antergos-desktop-settings'
 package() {
     cd "${srcdir}/${_pkgname}-${pkgver}/openbox"
 
-    install -Dm644 etc/oblogout.conf "${pkgdir}/etc/oblogout.conf"
+    # FIXME
+    install -Dm644 etc/oblogout.conf "${pkgdir}/etc/oblogout.conf.numix"
 
     for file in $(find usr/share/themes/Numix/oblogout/. -type f); do
         install -Dm644 ${file} \
