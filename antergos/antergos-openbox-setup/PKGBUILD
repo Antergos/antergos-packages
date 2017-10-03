@@ -12,13 +12,13 @@ depends=('openbox' 'openbox-menu' 'compton' 'plank-theme-numix' 'lxmenu-data' 'o
 source=("https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
 md5sums=('3f0a10ba60e22b5d0dcce8f05bb111d3')
 
-# ANTBS METADATA
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='antergos'
-_monitored_repo='antergos-desktop-settings'
-# END ANTBS METADATA
+## ANTBS METADATA
+#_is_monitored='True'
+#_monitored_service='github'
+#_monitored_type='releases'
+#_monitored_project='antergos'
+#_monitored_repo='antergos-desktop-settings'
+## END ANTBS METADATA
 
 package() {
     cd "${srcdir}/${_pkgname}-${pkgver}/openbox"
