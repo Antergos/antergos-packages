@@ -4,7 +4,7 @@
 pkgname=(pamac pamac-tray-appindicator)
 pkgver=6.0.3
 _pkgver=6.0.3
-pkgrel=1
+pkgrel=2
 pkgdesc='A GTK3 frontend for libalpm'
 arch=('i686' 'x86_64')
 url='https://github.com/manjaro/pamac'
