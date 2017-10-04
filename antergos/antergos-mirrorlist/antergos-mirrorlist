@@ -69,4 +69,5 @@ Server = http://mirror.us.leaseweb.net/antergos/$repo/$arch
 Server = http://mirrors.tuxns.net/antergos/$repo/$arch
 Server = http://mirror.umd.edu/antergos/$repo/$arch
 Server = http://mirrors.acm.wpi.edu/antergos/$repo/$arch
+Server = http://mirrors.servercentral.com/antergos/$repo/$arch
 Server = http://repo.antergos.info/$repo/$arch
