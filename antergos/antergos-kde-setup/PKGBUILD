@@ -3,7 +3,7 @@
 pkgname=antergos-kde-setup
 _pkgname=antergos-desktop-settings
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Setup configuration for Antergos KDE Plasma'
 url='http://github.com/Antergos/antergos-desktop-settings/plasma'
 arch=('any')
@@ -15,7 +15,7 @@ depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clement
     'kwrited' 'milou' 'nm-connection-editor' 'numix-frost-themes' 'numix-icon-theme-square' 'okular' 'oxygen' 'pamac-tray-appindicator'
     'plasma-desktop' 'plasma-nm' 'plasma-pa' 'plasma-workspace' 'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve-gtk2' 'qtcurve-qt4'
     'qtcurve-kde' 'qtcurve-utils' 'spectacle' 'systemsettings' 'transmission-qt' 'user-manager'	'vlc' 'xdg-user-dirs')
-replaces=('antergos-desktop' 'antergos-gsettings')
+#replaces=('antergos-desktop' 'antergos-gsettings')
 source=("https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
 md5sums=('3f0a10ba60e22b5d0dcce8f05bb111d3')
 install=${pkgname}.install
