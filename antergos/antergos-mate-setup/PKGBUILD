@@ -3,13 +3,13 @@
 pkgname=antergos-mate-setup
 _pkgname=antergos-desktop-settings
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Setup configuration for Antergos Mate'
 url='http://github.com/Antergos/antergos-desktop-settings/plasma'
 arch=('any')
 license=('GPL3')
 depends=('mate-desktop' 'gsettings-desktop-schemas' 'dconf')
-replaces=('antergos-desktop' 'antergos-gsettings')
+#replaces=('antergos-desktop' 'antergos-gsettings')
 source=("https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
 md5sums=('3f0a10ba60e22b5d0dcce8f05bb111d3')
 install=${pkgname}.install
