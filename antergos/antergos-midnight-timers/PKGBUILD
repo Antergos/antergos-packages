@@ -1,0 +1,21 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=antergos-midnight-timers
+pkgver=1.0
+pkgrel=1
+pkgdesc='Timers to avoid system slowdown at midnight'
+url='http://github.com/Antergos/antergos-midnight-timers'
+arch=('any')
+license=('GPL3')
+depends=('shadow' 'man-db' 'logrotate' 'mlocate')
+source=(${pkgname}-${pkgver}.zip::"https://github.com/Antergos/${pkgname}/archive/master.zip")
+md5sums=('65997f1a86ecfb014df66a33cc762f9f')
+
+package() {
+    cd "${srcdir}/${pkgname}-master"
+
+    for filename in *.timer; do
+        install -Dm644 ${filename} \
+            "${pkgdir}/etc/systemd/system/${filename}"
+    done
+}
