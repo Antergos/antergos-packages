@@ -3,7 +3,7 @@
 pkgname=antergos-openbox-setup
 _pkgname=antergos-desktop-settings
 pkgver=1.0
-pkgrel=3
+pkgrel=4
 pkgdesc='Setup configuration for Antergos Openbox'
 url='http://github.com/Antergos/antergos-desktop-settings/openbox'
 arch=('any')
