@@ -3,7 +3,7 @@
 
 pkgname=mate-utils
 pkgver=1.18.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Common MATE utilities for viewing disk usage, logs, and fonts, taking screenshots, managing dictionaries, and searching files"
 url="https://mate-desktop.org"
 arch=('i686' 'x86_64')
