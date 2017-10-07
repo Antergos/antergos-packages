@@ -3,7 +3,7 @@
 # Contributor: Christopher Krooß <didi2002 at web.de>
 
 pkgname=gnome-shell-extension-dash-to-dock
-pkgver=60
+pkgver=61
 pkgrel=1
 epoch=1
 pkgdesc='A gnome-shell extension that transforms the dash into an intellihide dock.'
@@ -14,7 +14,7 @@ groups=('gnome-shell-extensions')
 depends=('dconf' 'gnome-shell')
 makedepends=('gnome-common' 'intltool')
 source=("$pkgname::https://github.com/micheleg/dash-to-dock/archive/extensions.gnome.org-v${pkgver}.tar.gz")
-md5sums=('d8c696461279cd710f4c364e166e84d1')
+md5sums=('bbe447c440ae7b3a7028f44e0fc66b3a')
 
 _archivename="dash-to-dock-extensions.gnome.org-v${pkgver}"
 
