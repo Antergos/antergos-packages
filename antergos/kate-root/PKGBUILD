@@ -1,5 +1,6 @@
-# Maintainer: Felix Yan <felixonmars@archlinux.org>
-# Maintainer: Antonio Rojas <arojas@archlinux.org>
+# Maintainer: Antergos Devs <devs@antergos.com>
+# Contributor: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=('kate-root')
@@ -8,12 +9,14 @@ pkgver=17.08.1
 pkgrel=1
 arch=('x86_64')
 license=('GPL' 'LGPL' 'FDL')
-makedepends=('extra-cmake-modules' 'kdoctools' 'python' 'plasma-framework' 'knewstuff' 'ktexteditor'
-             'threadweaver' 'kitemmodels' 'kactivities')
+makedepends=(
+    'extra-cmake-modules' 'kdoctools' 'python' 'plasma-framework' 'knewstuff'
+    'ktexteditor' 'threadweaver' 'kitemmodels' 'kactivities')
 source=("https://download.kde.org/stable/applications/${pkgver}/src/${_pkgname}-${pkgver}.tar.xz"
 	kate-root.patch)
-sha256sums=('34eee6c384e2c2776c7d0ab65e7217e730cdbdecb82578c9dc90380cb82affd2'
-            'dedb32281d4cc271c982147e2ce9da3a3e75373838712fc65209b8fcdd720033')
+sha256sums=(
+    '14b4efb33e5acaa908f00411cd8f9f564e164d90435fd132646b47635ed2e17c'
+    'dedb32281d4cc271c982147e2ce9da3a3e75373838712fc65209b8fcdd720033')
 options=(!emptydirs)
 
 pkgdesc="Advanced Text Editor"
@@ -24,29 +27,28 @@ conflicts=('kdesdk-kate' 'kate')
 provides=('kdesdk-kate' 'kate')
 optdepends=('konsole: open a terminal in Kate')
 
-
 prepare() {
-  mkdir -p build
+    mkdir -p build
 
-  cd ${_pkgname}-${pkgver}/kate
-  patch -Np1 -i "${srcdir}/kate-root.patch"
+    cd ${_pkgname}-${pkgver}/kate
+    patch -Np1 -i "${srcdir}/kate-root.patch"
 }
 
 build() {
-  cd build
-  cmake ../${_pkgname}-${pkgver} \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DKDE_INSTALL_LIBDIR=lib \
-    -DSYSCONF_INSTALL_DIR=/etc \
-    -DBUILD_TESTING=OFF
-  make
+    cd build
+    cmake ../${_pkgname}-${pkgver} \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DKDE_INSTALL_LIBDIR=lib \
+        -DSYSCONF_INSTALL_DIR=/etc \
+        -DBUILD_TESTING=OFF
+    make
 }
 
 package() {
-  cd build
-  make DESTDIR="${pkgdir}" install
+    cd build
+    make DESTDIR="${pkgdir}" install
 
-  find "$pkgdir" -type f -name '*kwrite*' -exec rm {} \;
-  rm -r "$pkgdir"/usr/share/doc/HTML/*/kwrite
+    find "$pkgdir" -type f -name '*kwrite*' -exec rm {} \;
+    rm -r "$pkgdir"/usr/share/doc/HTML/*/kwrite
 }
