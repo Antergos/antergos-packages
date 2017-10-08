@@ -3,7 +3,7 @@
 pkgname=antergos-kde-setup
 _pkgname=antergos-desktop-settings
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 pkgdesc='Setup configuration for Antergos KDE Plasma'
 url='http://github.com/Antergos/antergos-desktop-settings/plasma'
 arch=('any')
@@ -35,9 +35,10 @@ package() {
         install -Dm644 ${file} "${pkgdir}/etc/${file}"
     done
 
-    for file in $(find icons/. -type f); do
-        install -Dm644 ${file} "${pkgdir}/usr/share/${file}"
-    done
+# FIXME: Files already in other icon packages
+#    for file in $(find icons/. -type f); do
+#        install -Dm644 ${file} "${pkgdir}/usr/share/${file}"
+#    done
 
     install -Dm644 antergos-logo.svg \
         "${pkgdir}/usr/share/about-distro/antergos-logo.svg"
