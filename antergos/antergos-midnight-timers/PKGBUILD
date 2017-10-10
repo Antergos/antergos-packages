@@ -2,7 +2,7 @@
 
 pkgname=antergos-midnight-timers
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 pkgdesc='Timers to avoid system slowdown at midnight'
 url='http://github.com/Antergos/antergos-midnight-timers'
 arch=('any')

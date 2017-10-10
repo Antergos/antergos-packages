@@ -1,7 +1,9 @@
 post_install() {
-    systemctl daemon-reload
+    echo ">>> Systemd local configuration changed."
+    echo "    Please either invoke `sudo systemctl daemon-reload` or reboot, for changes to take effect."
 }
 
 post_upgrade() {
-    systemctl daemon-reload
+    echo ">>> Systemd local configuration changed."
+    echo "    Please either invoke `sudo systemctl daemon-reload` or reboot, for changes to take effect."
 }
