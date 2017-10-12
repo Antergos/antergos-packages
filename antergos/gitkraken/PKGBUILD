@@ -13,7 +13,10 @@ url="https://www.gitkraken.com/"
 provides=('gitkraken')
 arch=('x86_64')
 license=('custom')
-depends=('gtk2' 'nss' 'libxtst' 'libgnome-keyring' 'gconf' 'alsa-lib' 'libcurl-openssl-1.0' 'libxss' 'rtmpdump')
+depends=(
+	'gtk2' 'nss' 'libxtst' 'libgnome-keyring' 'gconf' 'alsa-lib' 'libcurl-openssl-1.0'
+	'libxss' 'rtmpdump' 'libcurl-gnutls'
+)
 optdepends=('git-lfs: git-lfs support')
 makedepends=()
 backup=()
