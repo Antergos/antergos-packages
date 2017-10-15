@@ -74,6 +74,7 @@ package_pamac-dev() {
 
 
 	_cd_srcdir
+	cd build
 	DESTDIR="${pkgdir}" ninja install
 
 	# Enable applicable systemd timers
