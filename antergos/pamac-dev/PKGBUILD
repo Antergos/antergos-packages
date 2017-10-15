@@ -2,9 +2,9 @@
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=(pamac-dev pamac-tray-appindicator-dev)
-pkgver=6.0.1
-_pkgver=6.0.1
-pkgrel=2
+pkgver=6.1.1
+_pkgver=6.1.1
+pkgrel=1
 _gitcommit="master"
 pkgdesc='A GTK3 frontend for libalpm'
 arch=('i686' 'x86_64')
@@ -15,7 +15,7 @@ depends=(
 	'libnotify' 'desktop-file-utils' 'pacman>=5.0' 'pacman<5.1' 'gnutls'
 	'appstream-glib' 'archlinux-appstream-data'
 )
-makedepends=('gettext' 'itstool' 'vala' 'git' 'libappindicator-gtk3')
+makedepends=('gettext' 'itstool' 'vala' 'git' 'libappindicator-gtk3' 'meson')
 backup=('etc/pamac.conf')
 provides=('pamac')
 conflicts=('pamac' 'pamac-aur')
@@ -42,7 +42,7 @@ pkgver() {
 
 	_tag="$(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=1))"
 
-	printf "%s.git+%s" "${_tag/v}" "$(git rev-list --count HEAD)"
+	printf "%s.git+%s" "${_tag,,/v}" "$(git rev-list --count HEAD)"
 }
 
 
@@ -51,22 +51,23 @@ prepare() {
 
 	# adjust version string
 	sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" src/manager_window.vala 
-	# don't install systemd timers for manjaro's pacman-mirrors script
-	sed -i '/pamac-mirrorlist/d' Makefile
 
 	# patches here
+	# https://github.com/manjaro/pamac/issues/338
+	sed -i 's|remove (ref iter)|remove (iter)|g' src/preferences_dialog.vala
 }
 
 build() {
 	_cd_srcdir
 
-	make all
+	mkdir -p build && cd build
+
+	meson --prefix=/usr --sysconfdir=/etc --libdir=lib -Denable-appindicator=true ..
+	ninja
 }
 
 package_pamac-dev() {
 	optdepends=(
-		'polkit-gnome: needed for authentification in Cinnamon, Gnome'
-		'lxsession: needed for authentification in Xfce, LXDE etc.'
 		'pamac-dev-tray-appindicator: tray icon for KDE'
 	)
 	conflicts=('pamac')
@@ -75,7 +76,15 @@ package_pamac-dev() {
 
 
 	_cd_srcdir
-	make prefix="${pkgdir}/usr" sysconfdir="${pkgdir}/etc" install
+	DESTDIR="${pkgdir}" ninja install
+
+	# Enable applicable systemd timers
+	mkdir -p "${pkgdir}/etc/systemd/system/multi-user.target.wants"
+	ln -sf /usr/lib/systemd/system/pamac-cleancache.timer "${pkgdir}/etc/systemd/system/multi-user.target.wants"
+
+	# Remove pamac-tray-appindicator
+	rm "${pkgdir}/usr/bin/pamac-tray-appindicator"
+	rm -f "${pkgdir}/etc/xdg/autostart/pamac-tray-appindicator.desktop"
 }
 
 package_pamac-tray-appindicator-dev() {
@@ -83,10 +92,11 @@ package_pamac-tray-appindicator-dev() {
 	depends=('pamac-dev' 'libappindicator-gtk3')
 	conflicts=('pamac-tray-appindicator')
 	provides=('pamac-tray-appindicator')
+	backup=()
 
 	_cd_srcdir
-	make use_appindicator=true
-	make prefix="${pkgdir}/usr" sysconfdir="${pkgdir}/etc" install_pamac-tray-appindicator
+	install -Dm755 src/pamac-tray-appindicator "${pkgdir}/usr/bin/pamac-tray-appindicator"
+	install -Dm644 ../data/applications/pamac-tray-appindicator.desktop "${pkgdir}/etc/xdg/autostart/pamac-tray-appindicator.desktop"
 }
 
 

@@ -4,7 +4,7 @@
 pkgname=(pamac pamac-tray-appindicator)
 pkgver=6.1.1
 _pkgver=6.1.1
-pkgrel=2
+pkgrel=1
 pkgdesc='A GTK3 frontend for libalpm'
 arch=('i686' 'x86_64')
 url='https://github.com/manjaro/pamac'
@@ -14,13 +14,13 @@ depends=(
 	'libnotify' 'desktop-file-utils' 'pacman>=5.0' 'pacman<5.1' 'gnutls'
 	'appstream-glib' 'archlinux-appstream-data'
 )
-makedepends=('gettext' 'itstool' 'vala' 'git' 'libappindicator-gtk3')
+makedepends=('gettext' 'itstool' 'vala' 'git' 'libappindicator-gtk3' 'meson')
 backup=('etc/pamac.conf')
 conflicts=('pamac-dev')
 source=(
 	"pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz"
 )
-md5sums=('98869851a3b7010ab45798a057953541')
+md5sums=('4388a83d0ec16da61e1274e587d57266')
 
 
 # BEGIN ANTBS METADATA
@@ -37,22 +37,22 @@ prepare() {
 
 	# adjust version string
 	sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" src/manager_window.vala 
-	# don't install systemd timers for manjaro's pacman-mirrors script
-	sed -i '/pamac-mirrorlist/d' Makefile
 
 	# patches here
+	# https://github.com/manjaro/pamac/issues/338
+	sed -i 's|remove (ref iter)|remove (iter)|g' src/preferences_dialog.vala
 }
 
 build() {
 	cd "${srcdir}/pamac-${pkgver}"
+	mkdir -p build && cd build
 
-	make all
+	meson --prefix=/usr --sysconfdir=/etc --libdir=lib -Denable-appindicator=true ..
+	ninja
 }
 
 package_pamac() {
 	optdepends=(
-		'polkit-gnome: needed for authentification in Cinnamon, Gnome'
-		'lxsession: needed for authentification in Xfce, LXDE etc.'
 		'pamac-dev-tray-appindicator: tray icon for KDE'
 	)
 	conflicts=('pamac')
@@ -60,17 +60,26 @@ package_pamac() {
 	backup=('etc/pamac.conf')
 
 
-	cd "${srcdir}/pamac-${pkgver}"
-	make prefix="${pkgdir}/usr" sysconfdir="${pkgdir}/etc" install
+	cd "${srcdir}/pamac-${pkgver}/build"
+	DESTDIR="${pkgdir}" ninja install
+
+	# Enable applicable systemd timers
+	mkdir -p "${pkgdir}/etc/systemd/system/multi-user.target.wants"
+	ln -sf /usr/lib/systemd/system/pamac-cleancache.timer "${pkgdir}/etc/systemd/system/multi-user.target.wants"
+
+	# Remove pamac-tray-appindicator
+	rm "${pkgdir}/usr/bin/pamac-tray-appindicator"
+	rm -f "${pkgdir}/etc/xdg/autostart/pamac-tray-appindicator.desktop"
 }
 
 package_pamac-tray-appindicator() {
 	pkgdesc='Tray icon using appindicator for improved KDE support.'
 	depends=('pamac' 'libappindicator-gtk3')
 	conflicts=('pamac-tray-appindicator-dev')
+	backup=()
 
-	cd "${srcdir}/pamac-${pkgver}"
-	make use_appindicator=true
-	make prefix="${pkgdir}/usr" sysconfdir="${pkgdir}/etc" install_pamac-tray-appindicator
+	cd "${srcdir}/pamac-${pkgver}/build"
+	install -Dm755 src/pamac-tray-appindicator "${pkgdir}/usr/bin/pamac-tray-appindicator"
+	install -Dm644 ../data/applications/pamac-tray-appindicator.desktop "${pkgdir}/etc/xdg/autostart/pamac-tray-appindicator.desktop"
 }
 
