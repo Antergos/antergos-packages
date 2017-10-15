@@ -53,8 +53,6 @@ prepare() {
 	sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" src/manager_window.vala 
 
 	# patches here
-	# https://github.com/manjaro/pamac/issues/338
-	sed -i 's|remove (ref iter)|remove (iter)|g' src/preferences_dialog.vala
 }
 
 build() {
