@@ -2,7 +2,7 @@
 
 pkgname=antergos-deepin-setup
 _pkgname=antergos-desktop-settings
-pkgver=1.0
+pkgver=1.1
 pkgrel=2
 pkgdesc="Setup configuration for Antergos Deepin"
 url="http://github.com/Antergos/antergos-desktop-settings/deepin"
