@@ -2,15 +2,15 @@
 
 pkgname=antergos-openbox-setup
 _pkgname=antergos-desktop-settings
-pkgver=1.0
-pkgrel=5
+pkgver=1.1
+pkgrel=1
 pkgdesc='Setup configuration for Antergos Openbox'
 url='http://github.com/Antergos/antergos-desktop-settings/openbox'
 arch=('any')
 license=('GPL3')
 depends=('openbox' 'openbox-menu' 'compton' 'plank-theme-numix' 'lxmenu-data' 'obkey' 'oblogout')
 source=("https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('3f0a10ba60e22b5d0dcce8f05bb111d3')
+md5sums=('cdcbf2b260c544c0534b13b81fd8328d')
 
 ## ANTBS METADATA
 #_is_monitored='True'
