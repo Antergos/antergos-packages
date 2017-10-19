@@ -11,7 +11,7 @@ license=('GPL3')
 depends=('xfwm4')
 #replaces=('antergos-desktop' 'antergos-gsettings')
 source=("https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('3f0a10ba60e22b5d0dcce8f05bb111d3')
+md5sums=('cdcbf2b260c544c0534b13b81fd8328d')
 
 # ANTBS METADATA
 #_is_monitored='True'
