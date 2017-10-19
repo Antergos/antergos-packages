@@ -2,7 +2,7 @@
 
 pkgname=antergos-cinnamon-setup
 _pkgname=antergos-desktop-settings
-pkgver=1.0
+pkgver=1.1
 pkgrel=2
 pkgdesc="Setup configuration for Antergos Cinnamon"
 url="http://github.com/Antergos/antergos-desktop-settings/cinnamon"
