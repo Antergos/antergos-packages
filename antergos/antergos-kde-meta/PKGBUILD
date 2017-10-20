@@ -1,0 +1,16 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=antergos-kde-meta
+pkgver=1.0
+pkgrel=1
+pkgdesc='Meta package for Antergos KDE Plasma'
+url='http://www.antergos.com'
+arch=('any')
+license=('GPL3')
+depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clementine' 'dolphin' 'dolphin-plugins' 'dvd+rw-tools' 'ffmpegthumbs'
+    'gwenview' 'k3b' 'kate' 'kcalc' 'kdeconnect' 'kdegraphics-thumbnailers' 'kde-gtk-config' 'kdelibs4support' 'kdenetwork-kopete'
+    'kde-servicemenus-rootactions' 'kdesudo' 'kdeutils-sweeper' 'kdialog' 'kfaenza-icon-theme' 'kfind' 'khelpcenter' 'kinfocenter'
+    'kipi-plugins' 'kmenuedit' 'konsole' 'kscreen' 'ksshaskpass' 'ksysguard' 'kwalletmanager' 'kwallet-pam' 'kwayland-integration' 'kwin'
+    'kwrited' 'milou' 'nm-connection-editor' 'numix-frost-themes' 'numix-icon-theme-square' 'okular' 'oxygen' 'pamac-tray-appindicator'
+    'plasma-desktop' 'plasma-nm' 'plasma-pa' 'plasma-workspace' 'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve-gtk2' 'qtcurve-qt4'
+    'qtcurve-kde' 'qtcurve-utils' 'spectacle' 'systemsettings' 'transmission-qt' 'user-manager'	'vlc' 'xdg-user-dirs')
