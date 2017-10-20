@@ -3,30 +3,31 @@
 pkgname=antergos-gnome-setup
 _pkgname=antergos-desktop-settings
 pkgver=1.1
-pkgrel=4
+pkgrel=5
 pkgdesc="Setup configuration for Antergos Gnome"
 url="http://github.com/Antergos/antergos-desktop-settings/gnome"
 arch=('any')
 license=('GPL2')
 depends=('gsettings-desktop-schemas' 'dconf')
-#replaces=('antergos-desktop' 'antergos-gsettings')
 source=("https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
 md5sums=('3f0a10ba60e22b5d0dcce8f05bb111d3')
 install=${pkgname}.install
 
 # ANTBS METADATA
-_is_monitored='True'
-_monitored_service='github'
-_monitored_type='releases'
-_monitored_project='antergos'
-_monitored_repo='antergos-desktop-settings'
+#_is_monitored='True'
+#_monitored_service='github'
+#_monitored_type='releases'
+#_monitored_project='antergos'
+#_monitored_repo='antergos-desktop-settings'
 # END ANTBS METADATA
 
 package() {
     cd "${srcdir}/${_pkgname}-${pkgver}"
 
-    install -d "${pkgdir}/usr/share/glib-2.0/schemas"
-
     install -Dm644 gnome/schemas/90_antergos_gnome.gschema.override \
         "${pkgdir}/usr/share/glib-2.0/schemas/90_antergos_gnome.gschema.override"
+
+    for file in $(find skel/. -type f); do
+        install -Dm644 ${file#./} "${pkgdir}/usr/share/antergos/gnome/${file}"
+    done
 }
