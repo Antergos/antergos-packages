@@ -15,8 +15,8 @@ depends=('gtk3' 'libxkbfile' 'python2' 'glib2' 'libgsystem' 'libpulse'
 makedepends=('intltool' 'gnome-common')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/${pkgname}/archive/${pkgver}.tar.gz"
 		'config.patch')
-md5sums=('776448c29d43989a7432c23c32497e3f'
-         '4e82d86d4c008e89c7681279146e4292')
+md5sums=('a12c4a8cf30f4cde2a3d946c08cd8a16'
+         'bd5b5f24e04e6cd8cfa701bf67fc36f5')
 
 
 # BEGIN ANTBS METADATA
