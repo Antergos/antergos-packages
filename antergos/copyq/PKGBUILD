@@ -4,7 +4,7 @@
 pkgname=copyq
 _realname=CopyQ
 pkgver=3.1.2
-pkgrel=3
+pkgrel=1
 pkgdesc='Clipboard manager with searchable and editable history.'
 url='https://github.com/hluk/CopyQ'
 groups=('tools')
@@ -13,7 +13,7 @@ makedepends=('cmake')
 license=('GPL3')
 arch=('i686' 'x86_64')
 source=("https://github.com/hluk/${_realname}/archive/v${pkgver}.tar.gz")
-md5sums=('f5b1466e33b0b4f3426fe14d0033db25')
+md5sums=('fef762f28d1572b0ca7544936e7a6a90')
 
 
 # BEGIN ANTBS METADATA
