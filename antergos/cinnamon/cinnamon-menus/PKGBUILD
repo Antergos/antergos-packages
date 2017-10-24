@@ -2,7 +2,7 @@
 # Contributor: Alexandre Filgueira <alexfilgueira@antergos.com>
 
 pkgname=cinnamon-menus
-pkgver=3.4.0
+pkgver=3.6.0
 pkgrel=1
 pkgdesc="Cinnamon menu specifications"
 url="http://www.linuxmint.com"
