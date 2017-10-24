@@ -11,23 +11,21 @@ url='https://github.com/linuxmint/cinnamon-control-center'
 arch=('i686' 'x86_64')
 groups=('cinnamon')
 depends=('cinnamon-settings-daemon' 'cinnamon-translations' 'cinnamon-menus'
-		 'libgnomekbd' 'network-manager-applet')
+		 'libgnomekbd' 'network-manager-applet' 'gnome-online-accounts')
 optdepends=('gnome-color-manager: for color management tasks')
 makedepends=('intltool' 'gnome-common' 'docbook-xsl')
 license=('GPL')
 options=('!emptydirs')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-control-center/archive/$pkgver.tar.gz")
-md5sums=('b7750bd99216b00a151193192ec0ec23')
+md5sums=('db6d3450a8ccdab3182295efb1f2e99b')
 
 
 # BEGIN ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='linuxmint'
 _monitored_repo='cinnamon-control-center'
-
 # END ANTBS METADATA
 
 
