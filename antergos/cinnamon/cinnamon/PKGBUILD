@@ -30,8 +30,8 @@ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/Cinnamon/arch
 		"themes.tar.gz::https://github.com/linuxmint/cinnamon-themes/archive/${_themes_commit}.tar.gz"
 		'set_wheel.patch'
 		'default-theme.patch')
-md5sums=('ff46d1565e3b79b82f4b0dc4ea16dde5'
-         '4bd2617ccab64f4e96d5c1e069615c27'
+md5sums=('8145c9b5aaf72b632bca438eaa2b7d27'
+         '221fbaafe534eaa8b91ce4f644aac389'
          '68adf4662e44e23c9165f2d1573b818b'
          '089b7ec2aa9e2617e6fac026e9f04de8')
 
@@ -79,7 +79,8 @@ build() {
 		--localstatedir=/var \
 		--disable-static \
 		--disable-schemas-compile \
-		--enable-compile-warnings=yes
+		--enable-compile-warnings=yes \
+		--disable-gtk-doc
 
 	make
 }
@@ -96,4 +97,3 @@ package() {
 	mkdir -p "${pkgdir}/etc/xdg/menus/applications-merged"
 }
 
-# -*- mode: bash;-*-
