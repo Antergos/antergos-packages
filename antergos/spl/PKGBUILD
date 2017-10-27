@@ -2,7 +2,7 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl
-pkgver=0.7.2
+pkgver=0.7.3
 pkgrel=1
 pkgdesc="Solaris Porting Layer kernel modules."
 license=('GPL')
@@ -14,9 +14,9 @@ install=spl.install
 arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag='spl-0.7.2'
+_tag='spl-0.7.3'
 source=("https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip")
-md5sums=('acecdc2b3b1e064082b718fc9251c2d5')
+md5sums=('9d95353a3410b0bd6a7ecdc21fe770a4')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
