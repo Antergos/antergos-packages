@@ -2,15 +2,15 @@
 
 pkgname=cnchi
 _pkgname=Cnchi
-pkgver=0.14.370
+pkgver=0.14.400
 pkgrel=1
 pkgdesc='A modern, flexible system installer for Linux'
 arch=('any')
 license=('GPL3')
 url='https://github.com/Antergos/Cnchi'
 depends=('python' 'pyalpm' 'python-gobject' 'python-dbus' 'python-cairo' 'python-requests'
-		'python-parted' 'webkit2gtk' 'upower' 'python-mako' 'iso-codes' 'gptfdisk'
-		'python-bugsnag' 'upower')
+        'python-parted' 'webkit2gtk' 'upower' 'python-mako' 'iso-codes' 'gptfdisk'
+        'python-bugsnag' 'upower')
 makedepends=('transifex-client')
 conflicts=('cnchi-dev')
 source=("${_pkgname}-${pkgver}.zip::https://github.com/antergos/cnchi/archive/${pkgver}.zip")
@@ -27,37 +27,35 @@ _monitored_repo='cnchi'
 
 
 build() {
-	cd "${srcdir}/${_pkgname}-${pkgver}"
+    cd "${srcdir}/${_pkgname}-${pkgver}"
 
-	# Grab latest translations from Transifex
-	# tx pull
+    # Grab latest translations from Transifex
+    # tx pull
 }
 
 
 package() {
-	cd "${srcdir}/${_pkgname}-${pkgver}"
+    cd "${srcdir}/${_pkgname}-${pkgver}"
 
-	install -d ${pkgdir}/usr/share/{cnchi,locale}
-	install -Dm755 "bin/${pkgname}" "${pkgdir}/usr/bin/cnchi"
-	install -Dm755 "${pkgname}.desktop" "${pkgdir}/usr/share/applications/cnchi.desktop"
-	install -Dm644 data/images/antergos/antergos-icon.png "${pkgdir}/usr/share/pixmaps/cnchi.png"
+    install -d ${pkgdir}/usr/share/{cnchi,locale}
+    install -Dm755 "bin/${pkgname}" "${pkgdir}/usr/bin/cnchi"
+    install -Dm755 "${pkgname}.desktop" "${pkgdir}/usr/share/applications/cnchi.desktop"
+    install -Dm644 data/images/antergos/antergos-icon.png "${pkgdir}/usr/share/pixmaps/cnchi.png"
 
-	# TODO: This should be included in Cnchi's src code as a separate file (as both files are needed to run cnchi)
-	sed -r -i 's|\/usr.+ -v|pkexec /usr/share/cnchi/bin/cnchi -s bugsnag|g' "${pkgdir}/usr/bin/cnchi"
+    # TODO: This should be included in Cnchi's src code as a separate file (as both files are needed to run cnchi)
+    sed -r -i 's|\/usr.+ -v|pkexec /usr/share/cnchi/bin/cnchi -s bugsnag|g' "${pkgdir}/usr/bin/cnchi"
 
-	for i in cnchi bin data scripts ui; do
-		cp -R ${i} "${pkgdir}/usr/share/cnchi/"
-	done
+    for i in cnchi bin data scripts ui; do
+    	cp -R ${i} "${pkgdir}/usr/share/cnchi/"
+    done
 
-	for files in po/*; do
-		if [ -f "$files" ] && [ "$files" != 'po/cnchi.pot' ]; then
-			STRING_PO=`echo ${files#*/}`
-			STRING=`echo ${STRING_PO%.po}`
-			mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
-			msgfmt $files -o ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/cnchi.mo
-		 	echo "${STRING} installed..."
-		fi
-	done
+    for files in po/*; do
+        if [ -f "$files" ] && [ "$files" != 'po/cnchi.pot' ]; then
+            STRING_PO=`echo ${files#*/}`
+            STRING=`echo ${STRING_PO%.po}`
+            mkdir -p ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES
+            msgfmt $files -o ${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/cnchi.mo
+            echo "${STRING} installed..."
+        fi
+    done
 }
-
-
