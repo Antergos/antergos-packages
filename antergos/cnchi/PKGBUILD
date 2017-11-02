@@ -2,8 +2,8 @@
 
 pkgname=cnchi
 _pkgname=Cnchi
-pkgver=0.14.400
-pkgrel=2
+pkgver=0.14.404
+pkgrel=1
 pkgdesc='A modern, flexible system installer for Linux'
 arch=('any')
 license=('GPL3')
@@ -46,7 +46,7 @@ package() {
     sed -r -i 's|\/usr.+ -v|pkexec /usr/share/cnchi/bin/cnchi -s bugsnag|g' "${pkgdir}/usr/bin/cnchi"
 
     for i in src bin data scripts ui; do
-    	cp -R ${i} "${pkgdir}/usr/share/cnchi/"
+        cp -R ${i} "${pkgdir}/usr/share/cnchi/"
     done
 
     for files in po/*; do
