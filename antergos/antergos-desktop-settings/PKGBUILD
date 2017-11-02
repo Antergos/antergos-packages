@@ -2,7 +2,7 @@
 
 pkgname=antergos-desktop-settings
 pkgver=1.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Setup configuration for Antergos Desktops"
 url="http://github.com/Antergos/antergos-desktop-settings"
 arch=('any')
@@ -25,11 +25,11 @@ package() {
 
     # Install schemas
     for file in $(find schemas/. -type f); do
-        install -Dm644 ${file#./} "${pkgdir}/usr/share/glib-2.0/schemas/${file}"
+        install -Dm644 ${file#./} "${pkgdir}/usr/share/glib-2.0/schemas/${file#schemas/./}"
     done
     
     # Install skel
     for file in $(find skel/. -type f); do
-        install -Dm644 ${file#./} "${pkgdir}/etc/skel/${file}"
+        install -Dm644 ${file#./} "${pkgdir}/etc/skel/${file#skel/./}"
     done
 }
