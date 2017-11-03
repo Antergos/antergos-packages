@@ -2,7 +2,7 @@
 
 pkgname=antergos-desktop-settings
 pkgver=1.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Setup configuration for Antergos Desktops"
 url="http://github.com/Antergos/antergos-desktop-settings"
 arch=('any')
@@ -32,4 +32,7 @@ package() {
     for file in $(find skel/. -type f); do
         install -Dm644 ${file#./} "${pkgdir}/etc/skel/${file#skel/./}"
     done
+
+    # Cinnamon needs .themes dir
+    install -d "${pkgdir}/etc/skel/.themes"
 }
