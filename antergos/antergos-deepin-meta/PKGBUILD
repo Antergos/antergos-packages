@@ -1,0 +1,15 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=antergos-deepin-meta
+pkgver=1.0
+pkgrel=1
+pkgdesc='Meta package for Antergos Deepin'
+url='http://www.antergos.com'
+arch=('any')
+license=('GPL3')
+depends=('antergos-wallpapers-deepin' 'adwaita-icon-theme' 'brasero' 'deepin'
+    'deepin-extra' 'deepin-cogl' 'deepin-mutter' 'deepin-polkit-agent' 'dtkwm'
+    'gedit' 'gnome-calculator' 'gnome-disk-utility' 'gnome-font-viewer'
+    'gnome-software' 'gtk-theme-paper' 'gtk-theme-adapta'
+    'network-manager-applet' 'networkmanager-openvpn' 'noto-fonts'
+    'noto-fonts-cjk' 'noto-fonts-emoji' 'pamac' 'unicode-character-database')
