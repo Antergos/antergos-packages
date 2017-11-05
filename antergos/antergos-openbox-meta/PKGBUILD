@@ -1,0 +1,19 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=antergos-openbox-meta
+pkgver=1.0
+pkgrel=1
+pkgdesc='Meta package for Antergos Openbox'
+url='http://www.antergos.com'
+arch=('any')
+license=('GPL3')
+depends=('arandr' 'conky' 'conky-manager' 'file-roller' 'galculator' 'gmrun'
+    'gnome-disk-utility' 'gnome-mplayer' 'gpicview' 'gsimplecal' 'gvfs-google'
+    'gvfs-mtp' 'gvfs-smb' 'kalu' 'lxappearance-obconf-gtk3' 'lxinput-gtk3'
+    'lxmenu-data' 'lxtask-gtk3' 'lxsession' 'lxterminal' 'mousepad' 'nitrogen'
+    'network-manager-applet' 'networkmanager-openvpn' 'networkmanager-pptp'
+    'notify-osd' 'obconf' 'obkey' 'oblogout' 'oblogout-numix-theme' 'obmenu'
+    'openbox' 'openbox-menu' 'parcellite' 'pcmanfm' 'plank' 'plank-theme-numix'
+    'polkit-gnome' 'pragha' 'python-pysmbc' 'python2-xdg' 'qt5ct' 'scrot'
+    'tint2' 'transmission-gtk' 'udiskie' 'volumeicon' 'waldorf-ui-theme'
+    'xdg-user-dirs-gtk' 'xfburn')
