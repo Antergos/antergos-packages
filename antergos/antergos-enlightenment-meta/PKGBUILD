@@ -1,0 +1,12 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=antergos-enlightement-meta
+pkgver=1.0
+pkgrel=1
+pkgdesc='Meta package for Antergos Enlightenment'
+url='http://www.antergos.com'
+arch=('any')
+license=('GPL3')
+depends=('ark' 'emotion_generic_players' 'enlightenment' 'connman' 'econnman'
+    'kalu' 'qt5ct' 'rage' 'terminology' 'ttf-dejavu' 'ttf-bitstream-vera'
+    'udisks2' 'xdg-user-dirs-gtk' 'vlc')
