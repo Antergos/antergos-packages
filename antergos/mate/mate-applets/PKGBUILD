@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-applets
-pkgver=1.18.1
+pkgver=1.18.2
 pkgrel=2
 pkgdesc="Applets for MATE panel"
 arch=('i686' 'x86_64')
