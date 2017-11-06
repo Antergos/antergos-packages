@@ -2,15 +2,18 @@
 
 pkgname=antergos-mate-meta
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Meta package for Antergos Mate'
 url='http://www.antergos.com'
 arch=('any')
 license=('GPL3')
-depends=('atril' 'caja' 'caja-gksu' 'caja-open-terminal' 'engrampa' 'eom' 'gksu'
-    'gnome-keyring' 'gvfs-google' 'gvfs-mtp' 'gvfs-smb' 'mate' 'mate-applets'
-    'mate-media' 'mate-mint-menu' 'mate-power-manager' 'mate-screensaver'
-    'mate-system-monitor' 'mate-terminal' 'mate-utils' 'mozo'
-    'network-manager-applet' 'networkmanager-openvpn' 'networkmanager-pptp'
-    'pamac' 'pluma' 'pragha' 'python-pysmbc' 'totem' 'transmission-gtk'
-    'xdg-user-dirs-gtk' 'xfburn')
+depends=('atril' 'brisk-menu' 'caja' 'caja-gksu' 'caja-open-terminal' 'engrampa'
+    'eom' 'gksu' 'gnome-keyring' 'gvfs-google' 'gvfs-mtp' 'gvfs-smb' 'libmatekbd'
+    'libmatemixer' 'marco' 'mate-applets' 'mate-media' 'mate-mint-menu'
+    'mate-power-manager' 'mate-screensaver' 'mate-backgrounds' 'mate-control-center'
+    'mate-desktop' 'mate-menus' 'mate-notification-daemon' 'mate-panel'
+    'mate-session-manager' 'mate-settings-daemon' 'mate-themes' 'mate-user-guide'
+    'mate-icon-theme' 'mate-polkit' 'mate-system-monitor' 'mate-terminal'
+    'mate-utils' 'mozo' 'network-manager-applet' 'networkmanager-openvpn'
+    'networkmanager-pptp' 'pamac' 'pluma' 'pragha' 'python-pysmbc' 'totem'
+    'transmission-gtk' 'xdg-user-dirs-gtk' 'xfburn')
