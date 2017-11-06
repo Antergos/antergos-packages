@@ -11,7 +11,9 @@ depends=('evince' 'file-roller' 'gamin' 'gnome-calculator' 'gnome-disk-utility'
     'gnome-keyring' 'gtk-engine-murrine' 'gvfs-google' 'gvfs-mtp' 'mousepad'
     'network-manager-applet' 'networkmanager-openvpn' 'networkmanager-pptp'
     'pamac' 'parole' 'python-pysmbc' 'polkit-gnome' 'pragha' 'qt5ct' 'ristretto'
-    'thunar-archive-plugin' 'thunar-volman' 'transmission-gtk' 'tumbler'
-    'xdg-user-dirs-gtk' 'xfce4' 'xfburn' 'xfce4-battery-plugin'
-    'xfce4-datetime-plugin' 'xfce4-notifyd' 'xfce4-pulseaudio-plugin'
-    'xfce4-screenshooter' 'xfce4-taskmanager')
+    'thunar' 'thunar-archive-plugin' 'thunar-volman' 'transmission-gtk' 'tumbler'
+    'xdg-user-dirs-gtk' 'exo' 'garcon' 'gtk-xfce-engine' 'xfce4-appfinder'
+    'xfce4-panel' 'xfce4-power-manager' 'xfce4-session' 'xfce4-settings'
+    'xfce4-terminal' 'xfconf' 'xfdesktop' 'xfwm4' 'xfwm4-themes' 'xfburn'
+    'xfce4-battery-plugin' 'xfce4-datetime-plugin' 'xfce4-notifyd'
+    'xfce4-pulseaudio-plugin' 'xfce4-screenshooter' 'xfce4-taskmanager')
