@@ -3,7 +3,7 @@
 # Contributor: Patrick McCarty <pnorcks at gmail dot com>
 
 pkgname=transifex-client
-pkgver=0.12.4
+pkgver=0.12.5
 pkgrel=1
 pkgdesc='Command-line tool for managing translations with Transifex.'
 arch=('any')
