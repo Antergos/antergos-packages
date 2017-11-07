@@ -22,4 +22,5 @@ depends=('antergos-wallpapers-deepin' 'adwaita-icon-theme' 'brasero'
     'deepin-polkit-agent' 'dtkwm' 'gedit' 'gnome-calculator' 'gnome-disk-utility'
     'gnome-font-viewer' 'gnome-software' 'gtk-theme-paper' 'gtk-theme-adapta'
     'network-manager-applet' 'networkmanager-openvpn' 'noto-fonts'
-    'noto-fonts-cjk' 'noto-fonts-emoji' 'pamac' 'unicode-character-database')
+    'noto-fonts-cjk' 'noto-fonts-emoji' 'pamac' 'unicode-character-database'
+    'xdg-desktop-portal-gtk')
