@@ -1,0 +1,22 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=antergos-budgie-meta
+pkgver=1.0
+pkgrel=1
+pkgdesc='Meta package for Antergos Budgie'
+url='http://www.antergos.com'
+arch=('any')
+license=('GPL3')
+depends=('antergos-gnome-defaults-list' 'baobab' 'brasero' 'budgie-desktop'
+    'evince' 'eog' 'file-roller' 'gedit' 'gnome-backgrounds' 'gnome-calculator'
+    'gnome-calendar' 'gnome-contacts' 'gnome-control-center' 'gnome-documents'
+    'gnome-disk-utility' 'gnome-font-viewer' 'gnome-keyring' 'gnome-logs'
+    'gnome-maps' 'gnome-music' 'gnome-photos' 'gnome-screenshot' 'gnome-shell'
+    'gnome-shell-extensions' 'gnome-shell-extension-dash-to-dock'
+    'gnome-shell-extension-status-menu-buttons' 'gnome-sound-recorder'
+    'gnome-system-monitor' 'gnome-terminal' 'gnome-themes-standard'
+    'gnome-tweak-tool' 'gnome-weather' 'gvfs-google' 'gvfs-mtp' 'gvfs-smb'
+    'hicolor-icon-theme' 'libgnome-keyring' 'nautilus' 'network-manager-applet'
+    'networkmanager-openvpn' 'networkmanager-pptp' 'pamac' 'polari'
+    'python-pysmbc' 'qt5ct' 'seahorse' 'totem' 'transmission-gtk'
+    'xdg-user-dirs-gtk' 'xscreensaver')
