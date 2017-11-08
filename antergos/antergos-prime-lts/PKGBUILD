@@ -1,0 +1,57 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+
+pkgname=antergos-prime-lts
+pkgver=0.1
+pkgrel=1
+pkgdesc='GPU-switching for Hybrid-GPUs'
+arch=('any')
+url='https://github.com/konstantingoretzki/AntergosPrime'
+license=('GPL3')
+groups=()
+depends=('bash' 'bbswitch' 'nvidia-lts' 'sddm' 'systemd' 'xorg-server' 'xf86-video-intel')
+makedepends=('git')
+conflicts=('xf86-video-nouveau')
+source=("${pkgname}-${pkgver}.zip::https://github.com/antergos/${pkgname}/archive/master.zip")
+md5sums=('f2d8007f4ab5623cd4b17629277f92b7')
+install=${pkgname}.install
+
+package() {
+    cd "${srcdir}/${pkgname}-master"
+
+    install -d ${pkgdir}/etc/prime
+
+    install -Dm644 xorg.conf \
+        ${pkgdir}/etc/prime/xorg.conf
+
+    install -Dm644 20-intel.conf \
+        ${pkgdir}/etc/prime/20-intel.conf
+
+    install -Dm644 nvidia-optimus.sh \
+        ${pkgdir}/etc/prime/nvidia-optimus.sh
+
+    install -Dm644 display_setup.desktop \
+        ${pkgdir}/etc/prime/display_setup.desktop
+
+    install -Dm644 Xsetup \
+        ${pkgdir}/etc/prime/Xsetup
+
+    install -Dm644 Xsetup_intel \
+        ${pkgdir}/etc/prime/Xsetup_intel
+
+    install -Dm644 prime.service \
+        ${pkgdir}/etc/systemd/system/prime.service
+
+    install -Dm755 prime-select \
+        ${pkgdir}/usr/bin/prime-select
+
+    install -Dm755 gpumanager \
+        ${pkgdir}/usr/bin/gpumanager
+
+    install -Dm644 99-bumblebee-nvidia-dev.rules \
+        ${pkgdir}/etc/udev/rules.d/99-bumblebee-nvidia-dev.rules
+
+    install -Dm644 nvidia.conf \
+        ${pkgdir}/etc/modprobe.d/nvidia.conf
+
+   echo ">>> Use 'prime-select intel' and 'prime-select nvidia' to switch GPUs"
+}
