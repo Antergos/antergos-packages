@@ -2,17 +2,18 @@
 
 pkgname=antergos-prime
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc='GPU-switching for Hybrid-GPUs'
 arch=('any')
 url='https://github.com/konstantingoretzki/AntergosPrime'
 license=('GPL3')
 groups=()
-depends=('bash' 'sddm' 'systemd' 'xorg-server' 'xf86-video-intel')
+depends=('bash' 'bbswitch' 'nvidia' 'sddm' 'systemd' 'xorg-server' 'xf86-video-intel')
 makedepends=('git')
 conflicts=('xf86-video-nouveau')
 source=("${pkgname}-${pkgver}.zip::https://github.com/antergos/${pkgname}/archive/master.zip")
 md5sums=('f2d8007f4ab5623cd4b17629277f92b7')
+install=${pkgname}.install
 
 package() {
     cd "${srcdir}/${pkgname}-master"
@@ -51,4 +52,6 @@ package() {
 
     install -Dm644 nvidia.conf \
         ${pkgdir}/etc/modprobe.d/nvidia.conf
+
+   echo ">>> Use 'prime-select intel' and 'prime-select nvidia' to switch GPUs"
 }
