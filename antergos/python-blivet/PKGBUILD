@@ -1,0 +1,22 @@
+# Maintainer: Christian Hesse <mail@eworm.de>
+# Contributor: Anatol Pomozov <anatol.pomozov@gmail.com>
+
+pkgname=python-blivet
+pkgver=1.13
+_tag="blivet-${pkgver}"
+pkgrel=3
+pkgdesc='a python module for management of a system storage configuration'
+arch=('any')
+license=('LGPL2.1')
+url='http://fedoraproject.org/wiki/Blivet'
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/rhinstaller/blivet/archive/blivet-${pkgver}.tar.gz")
+sha256sums=('c3700ef547e435c26accacca8b88bea1c171118251aeff41a5471e953d784d04')
+pkgdesc='a python module for management of a system storage configuration - python 3.x pkg'
+depends=('multipath-tools' 'mpathconf' 'mdadm' 'libblockdev' 'libselinux' 'python-six' 'python-pyudev' 'hawkey' 'python-parted' 
+'python-kickstart')
+
+package() {
+        cd "${srcdir}/blivet-${_tag}/"
+
+        python setup.py install --root="${pkgdir}/" --optimize=1
+}
