@@ -9,7 +9,8 @@ pkgrel=1
 pkgdesc='a python library that is used for reading and writing kickstart files - python 3.x pkg'
 arch=(any)
 license=(GPL)
-conflicts=(python-pykickstart)
+conflicts=("python-pykickstart")
+provides=("python-pykickstart=${pkgver}-${pkgrel}")
 url='http://fedoraproject.org/wiki/Pykickstart'
 makedepends=(python urlgrabber)
 source=("pykickstart-${pkgver}.tar.gz::https://github.com/rhinstaller/pykickstart/archive/${_tag}.tar.gz")
