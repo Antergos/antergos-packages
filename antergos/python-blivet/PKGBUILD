@@ -2,15 +2,16 @@
 # Contributor: Anatol Pomozov <anatol.pomozov@gmail.com>
 
 pkgname=python-blivet
-pkgver=1.13
+pkgver=2.1.11
 _tag="blivet-${pkgver}"
 pkgrel=3
 pkgdesc='a python module for management of a system storage configuration'
 arch=('any')
 license=('LGPL2.1')
 url='http://fedoraproject.org/wiki/Blivet'
-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/rhinstaller/blivet/archive/blivet-${pkgver}.tar.gz")
-sha256sums=('c3700ef547e435c26accacca8b88bea1c171118251aeff41a5471e953d784d04')
+#source=("${pkgname}-${pkgver}.tar.gz::https://github.com/rhinstaller/blivet/archive/blivet-${pkgver}.tar.gz")
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/storaged-project/blivet/archive/blivet-${pkgver}.tar.gz")
+sha256sums=('3d79b001843f8b6775ee6ea511c47e8b969787fa88e51cd0868bebf45b6b3c97')
 pkgdesc='a python module for management of a system storage configuration - python 3.x pkg'
 depends=('multipath-tools' 'mpathconf' 'mdadm' 'libblockdev' 'libselinux' 'python-six' 'python-pyudev' 'hawkey' 'python-parted' 
 'python-kickstart')
