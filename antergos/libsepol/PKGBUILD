@@ -1,0 +1,31 @@
+# Maintainer: Nicolas Iooss (nicolas <dot> iooss <at> m4x <dot> org)
+# Contributor: Timothée Ravier <tim@siosm.fr>
+# Contributor: Nicky726 (Nicky726 <at> gmail <dot> com)
+# Contributor: Sergej Pupykin (pupykin <dot> s+arch <at> gmail <dot> com)
+
+pkgname=libsepol
+pkgver=2.7
+pkgrel=1
+pkgdesc="SELinux binary policy manipulation library"
+arch=('x86_64')
+url='http://userspace.selinuxproject.org'
+license=('LGPL2.1')
+groups=('selinux')
+makedepends=('flex')
+depends=('glibc')
+options=(staticlibs)
+conflicts=("selinux-usr-${pkgname}")
+provides=("selinux-usr-${pkgname}=${pkgver}-${pkgrel}")
+source=("https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20170804/${pkgname}-${pkgver}.tar.gz")
+sha256sums=('d69d3bd8ec901a3bd5adf2be2fb47fb1a685ed73066ab482e7e505371a48f9e7')
+
+build() {
+  cd "${pkgname}-${pkgver}"
+  make
+}
+
+package() {
+  cd "${pkgname}-${pkgver}"
+  make DESTDIR="${pkgdir}" SHLIBDIR="${pkgdir}"/usr/lib install
+}
+
