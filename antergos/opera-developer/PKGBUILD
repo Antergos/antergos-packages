@@ -20,8 +20,8 @@ md5sums=('b9cc878cf1d97b3aaeb8edd433fbc8a1')
 _is_monitored='True'
 _monitored_service='http'
 _monitored_type='file'
-_monitored_file_url='https://blogs.opera.com/desktop/changelog-for-50'
-_monitored_version_url='https://blogs.opera.com/desktop/changelog-for-50'
+_monitored_file_url='https://blogs.opera.com/desktop/changelog-for-51'
+_monitored_version_url='https://blogs.opera.com/desktop/changelog-for-51'
 _monitored_version_pattern='/(\d\d\.\d\.\d{4}\.\d+)(?=\s*((&#8211;)|(–))\s*\d{4}-\d{2}-\d{2})/'
 # END ANTBS METADATA
 
