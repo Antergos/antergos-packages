@@ -1,0 +1,36 @@
+post_install() {
+  echo ">>> Configuring Mariadb..."
+  mariadb_setup
+  echo ">>> Configuring Apache... "
+  apache_setup
+  echo ">>> Configuring PHP..."
+  php_setup
+  #echo ">>> Run mysql_secure_installation"
+}
+
+post_upgrade() {
+}
+
+mariadb_setup() {
+  mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+  systemctl enable mysqld
+}
+
+apache_setup() {
+  # Allow site virtualization
+  echo "IncludeOptional conf/sites-enabled/*.conf" >> /etc/httpd/conf/httpd.conf
+  echo "IncludeOptional conf/mods-enabled/*.conf" >> /etc/httpd/conf/httpd.conf
+
+  # Create config directories
+  if [ ! -d /etc/httpd/conf/sites-available ]; then
+    mkdir -p /etc/httpd/conf/sites-available
+  fi
+  if [ ! -d /etc/httpd/conf/sites-enabled ]; then
+    mkdir -p /etc/httpd/conf/sites-enabled
+  fi
+  if [ ! -d /etc/httpd/conf/mods-enabled ]; then
+    mkdir -p /etc/httpd/conf/mods-enabled
+  fi
+
+  # 
+}

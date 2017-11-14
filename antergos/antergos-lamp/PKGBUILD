@@ -1,0 +1,15 @@
+# Maintainer: Antergos Devs <devs@antergos.com>
+
+pkgname=antergos-lamp
+pkgver=1.0
+pkgrel=1
+pkgdesc='Antergos meta package that installs LAMP'
+url='http://www.antergos.com'
+arch=('any')
+license=('GPL3')
+depends=('apache' 'php' 'php-apache' 'mariadb' 'phpmyadmin' 'php-mcrypt')
+install=${pkgname}.install
+source=('a2ensite' 'a2dissite')
+sha256sum=(
+    '722763a666bc4eae091d76cec10b9776aea452b39f9091d803dc68ff91f191ef'
+)
