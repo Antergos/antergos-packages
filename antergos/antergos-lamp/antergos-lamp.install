@@ -1,36 +1,60 @@
 post_install() {
-  echo ">>> Configuring Mariadb..."
-  mariadb_setup
-  echo ">>> Configuring Apache... "
-  apache_setup
-  echo ">>> Configuring PHP..."
-  php_setup
-  #echo ">>> Run mysql_secure_installation"
+    echo ">>> Configuring Mariadb..."
+    mariadb_setup
+    echo ">>> Configuring Apache... "
+    apache_setup
+    echo ">>> Configuring PHP..."
+    php_setup
+    echo ">>> Run 'sudo mysql_secure_installation' if this is a production server!"
 }
 
 post_upgrade() {
 }
 
 mariadb_setup() {
-  mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-  systemctl enable mysqld
+    mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+    echo ">>> Run 'sudo systemctl enable mysqld' to start the mysql server at boot"
 }
 
 apache_setup() {
-  # Allow site virtualization
-  echo "IncludeOptional conf/sites-enabled/*.conf" >> /etc/httpd/conf/httpd.conf
-  echo "IncludeOptional conf/mods-enabled/*.conf" >> /etc/httpd/conf/httpd.conf
+    # Allow site virtualization
+    echo "IncludeOptional conf/sites-enabled/*.conf" >> /etc/httpd/conf/httpd.conf
+    echo "IncludeOptional conf/mods-enabled/*.conf" >> /etc/httpd/conf/httpd.conf
 
-  # Create config directories
-  if [ ! -d /etc/httpd/conf/sites-available ]; then
-    mkdir -p /etc/httpd/conf/sites-available
-  fi
-  if [ ! -d /etc/httpd/conf/sites-enabled ]; then
-    mkdir -p /etc/httpd/conf/sites-enabled
-  fi
-  if [ ! -d /etc/httpd/conf/mods-enabled ]; then
-    mkdir -p /etc/httpd/conf/mods-enabled
-  fi
+    # Create config directories
+    if [ ! -d /etc/httpd/conf/sites-available ]; then
+        mkdir -p /etc/httpd/conf/sites-available
+    fi
+    if [ ! -d /etc/httpd/conf/sites-enabled ]; then
+        mkdir -p /etc/httpd/conf/sites-enabled
+    fi
+    if [ ! -d /etc/httpd/conf/mods-enabled ]; then
+        mkdir -p /etc/httpd/conf/mods-enabled
+    fi
 
-  # 
+    # Enable localhost site setup
+    a2ensite localhost
+
+    echo ">>> Run 'systemctl enable httpd' to start the Apache service at boot"
+}
+
+php_setup() {
+    # Comment mpm_event_module (just in case)
+    if [ -f /etc/httpd/conf/httpd.conf ]; then
+        sed -i 's/LoadModule mpm_event_module/#LoadModule mpm_event_module/g' /etc/httpd/conf/httpd.conf
+    fi
+
+    # Activate extensions
+    sed -i 's/;extension=mysql.so/extension=mysql.so/g' /etc/php/php.ini
+    sed -i 's/;extension=mcrypt.so/extension=mcrypt.so/g' /etc/php/php.ini
+    sed -i 's/;extension=mssql.so/extension=mssql.so/g' /etc/php/php.ini
+    sed -i 's/;extension=mysqli.so/extension=mysqli.so/g' /etc/php/php.ini
+    sed -i 's/;extension=openssl.so/extension=openssl.so/g' /etc/php/php.ini
+    sed -i 's/;extension=iconv.so/extension=iconv.so/g' /etc/php/php.ini
+    sed -i 's/;extension=imap.so/extension=imap.so/g' /etc/php/php.ini
+    sed -i 's/;extension=zip.so/extension=zip.so/g' /etc/php/php.ini
+    sed -i 's/;extension=bz2.so/extension=bz2.so/g' /etc/php/php.ini
+
+
+
 }

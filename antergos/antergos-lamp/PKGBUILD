@@ -9,7 +9,23 @@ arch=('any')
 license=('GPL3')
 depends=('apache' 'php' 'php-apache' 'mariadb' 'phpmyadmin' 'php-mcrypt')
 install=${pkgname}.install
-source=('a2ensite' 'a2dissite')
+source=('a2ensite' 'a2dissite' 'localhost.conf' 'php.conf')
 sha256sum=(
     '722763a666bc4eae091d76cec10b9776aea452b39f9091d803dc68ff91f191ef'
+    'd3f6fc33e312299151eb312131041f6baff5561cc15b2751dc18f6e822063f1d'
+    '3cd55577bba7ef30c6caff660a077cd493953c9ad4329436c9529ab9229aa70a'
+    '98282a425b527982b29f64f7fef9475838f3866c51cadafb4bbdbbfa3b6c964a'
 )
+
+package() {
+    # Install a2ensite and a2dissite scripts
+    install -Dm755 a2ensite ${pkgdir}/usr/bin/a2ensite
+    install -Dm755 a2dissite ${pkgdir}/usr/bin/a2dissite
+
+    # Install localhost.conf in /etc/httpd/conf/sites-available/
+    install -Dm644 localhost.conf \
+        ${pkgdir}/etc/httpd/conf/sites-available/localhost.conf
+
+    # Install php.conf to load php module
+    install -Dm644 php.conf ${pkgdir}/etc/httpd/conf/mods-enabled/php.conf
+}
