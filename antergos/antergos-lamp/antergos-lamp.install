@@ -45,16 +45,19 @@ php_setup() {
     fi
 
     # Activate extensions
-    sed -i 's/;extension=mysql.so/extension=mysql.so/g' /etc/php/php.ini
-    sed -i 's/;extension=mcrypt.so/extension=mcrypt.so/g' /etc/php/php.ini
-    sed -i 's/;extension=mssql.so/extension=mssql.so/g' /etc/php/php.ini
-    sed -i 's/;extension=mysqli.so/extension=mysqli.so/g' /etc/php/php.ini
-    sed -i 's/;extension=openssl.so/extension=openssl.so/g' /etc/php/php.ini
-    sed -i 's/;extension=iconv.so/extension=iconv.so/g' /etc/php/php.ini
-    sed -i 's/;extension=imap.so/extension=imap.so/g' /etc/php/php.ini
-    sed -i 's/;extension=zip.so/extension=zip.so/g' /etc/php/php.ini
-    sed -i 's/;extension=bz2.so/extension=bz2.so/g' /etc/php/php.ini
+    if [ -f /etc/php/php.ini ]; then
+        sed -i 's/;extension=mysql.so/extension=mysql.so/g' /etc/php/php.ini
+        sed -i 's/;extension=mcrypt.so/extension=mcrypt.so/g' /etc/php/php.ini
+        sed -i 's/;extension=mssql.so/extension=mssql.so/g' /etc/php/php.ini
+        sed -i 's/;extension=mysqli.so/extension=mysqli.so/g' /etc/php/php.ini
+        sed -i 's/;extension=openssl.so/extension=openssl.so/g' /etc/php/php.ini
+        sed -i 's/;extension=iconv.so/extension=iconv.so/g' /etc/php/php.ini
+        sed -i 's/;extension=imap.so/extension=imap.so/g' /etc/php/php.ini
+        sed -i 's/;extension=zip.so/extension=zip.so/g' /etc/php/php.ini
+        sed -i 's/;extension=bz2.so/extension=bz2.so/g' /etc/php/php.ini
 
-
-
+        # Add PhpMyAdmin system path (/etc/webapps/ and /usr/share/webapps/)
+        # to make sure PHP can access and read files under those directories
+        echo 'include_path=".:/usr/share/pear/:/usr/share/webapps/:/etc/webapps/"' >> /etc/php/php.ini
+    fi
 }

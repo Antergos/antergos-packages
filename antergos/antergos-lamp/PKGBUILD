@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-lamp
-pkgver=1.0
+pkgver=0.1
 pkgrel=1
 pkgdesc='Antergos meta package that installs LAMP'
 url='http://www.antergos.com'
