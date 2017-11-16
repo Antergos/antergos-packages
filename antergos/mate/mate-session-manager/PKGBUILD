@@ -6,7 +6,7 @@ pkgver=1.18.2
 pkgrel=1
 pkgdesc="The MATE Session Handler"
 url="https://mate-desktop.org"
-arch=('i686' 'x86_64')
+arch=('x86_64')
 license=('GPL' 'LGPL')
 depends=('dbus-glib' 'gtk3' 'libsm' 'libxtst' 'mate-desktop'
 		 'mate-polkit' 'mate-settings-daemon' 'ttf-dejavu' 'xdg-user-dirs')

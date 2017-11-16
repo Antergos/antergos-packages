@@ -6,7 +6,7 @@ pkgname=slimjet
 pkgver=15.1.2.0
 pkgrel=1
 pkgdesc="Fast, smart and powerful browser based on Blink"
-arch=('i686' 'x86_64')
+arch=('x86_64')
 url="http://www.slimjet.com"
 license=('custom:slimjet')
 depends=('alsa-lib' 'desktop-file-utils' 'flac' 'gconf' 'gtk2' 'harfbuzz' 'harfbuzz-icu'
@@ -17,9 +17,7 @@ optdepends=('kdebase-kdialog: needed for file dialogs in KDE'
 provides=('slimjet')
 options=('!emptydirs' '!strip')
 groups=('browser')
-source_i686=("${pkgname}_i386.deb::http://www.slimjet.com/release/${pkgname}_i386.deb")
 source_x86_64=("${pkgname}_amd64.deb::http://www.slimjet.com/release/${pkgname}_amd64.deb")
-md5sums_i686=('c8391c12c7045e5f79816af21d350b72')
 md5sums_x86_64=('d004029ad512c39076ab85fdce5ad87c')
 
 

@@ -6,7 +6,7 @@ pkgver=1.18.1
 pkgrel=1
 pkgdesc='MATE document viewer'
 url='https://mate-desktop.org'
-arch=('i686' 'x86_64')
+arch=('x86_64')
 license=('GPL')
 depends=('gtk3' 'libgxps' 'libsecret' 'libsm' 'libspectre' 'mathjax' 'poppler-glib' 'webkit2gtk'
 		'zlib' 'gsfonts' 'djvulibre' 't1lib' 'libarchive')

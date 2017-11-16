@@ -7,7 +7,7 @@ _pkgver=1.9
 _commit='dc45413df71a8e5364e52f845417a56aa6706c57'
 pkgrel=2
 pkgdesc="Query ALPM and AUR"
-arch=('i686' 'x86_64')
+arch=('x86_64')
 url="https://github.com/archlinuxfr/package-query/"
 license=('GPL')
 depends=('pacman>=4.2' 'curl' 'yajl>=2.0')

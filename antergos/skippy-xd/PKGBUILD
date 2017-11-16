@@ -8,7 +8,7 @@ url="http://code.google.com/p/skippy-xd/"
 license=('GPL')
 depends=('libxinerama' 'libxcomposite' 'libxdamage' 'libxft' 'xorg-server' 'giflib')
 makedepends=('git')
-arch=('i686' 'x86_64')
+arch=('x86_64')
 source=("git://github.com/penguinpowernz/skippy-xd.git")
 md5sums=('SKIP')
 

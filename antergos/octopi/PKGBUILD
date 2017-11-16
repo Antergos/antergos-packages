@@ -6,7 +6,7 @@ pkgver=0.8.1
 pkgrel=2
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 #_gitcommit="master"
-arch=('i686' 'x86_64')
+arch=('x86_64')
 url="https://github.com/aarnt/octopi"
 license=('GPL2')
 install="octopi.install"

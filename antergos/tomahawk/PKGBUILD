@@ -8,7 +8,7 @@ pkgver=0.8.4
 _pkgver=${pkgver}
 pkgrel=6
 pkgdesc='A Music Player App written in C++/Qt'
-arch=('i686' 'x86_64')
+arch=('x86_64')
 url='http://tomahawk-player.org/'
 license=('GPL3')
 # NOTE: The phonon VLC backend supposedly supports networking better than the gstreamer backend.

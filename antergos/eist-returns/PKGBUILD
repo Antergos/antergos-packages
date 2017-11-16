@@ -4,7 +4,7 @@ pkgname=('eist-returns')
 pkgver=0.0.4
 pkgrel=1
 pkgdesc="Arcade-puzzle game"
-arch=('i686' 'x86_64')
+arch=('x86_64')
 url="https://github.com/nwg-piotr/EistReturns"
 license=('GPL3')
 depends=('java-runtime=8' 'java-openjfx' 'ffmpeg2.8' 'gstreamer' 'libxtst' 'qt5-base' 'webkit2gtk')
