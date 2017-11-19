@@ -6,7 +6,7 @@
 
 pkgname=cinnamon
 pkgver=3.6.3
-pkgrel=2
+pkgrel=1
 pkgdesc='Linux Desktop featuring a traditional layout built using modern technologies.'
 arch=('x86_64')
 url='http://cinnamon.linuxmint.com/'
