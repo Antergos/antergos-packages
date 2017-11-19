@@ -6,7 +6,7 @@
 
 pkgname=cinnamon
 pkgver=3.6.3
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux Desktop featuring a traditional layout built using modern technologies.'
 arch=('x86_64')
 url='http://cinnamon.linuxmint.com/'
@@ -29,11 +29,14 @@ _themes_commit='e43a0d1ca2542308ef62f59cc1499769b20f48c9'
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/Cinnamon/archive/${pkgver}.tar.gz"
 		"themes.tar.gz::https://github.com/linuxmint/cinnamon-themes/archive/${_themes_commit}.tar.gz"
 		'set_wheel.patch'
-		'default-theme.patch')
-md5sums=('8145c9b5aaf72b632bca438eaa2b7d27'
+		'default-theme.patch'
+		'https://github.com/linuxmint/Cinnamon/commit/e648f1e66e4523cacc059f1082302c0a6841c9c4.patch'
+)
+md5sums=('1e369afcf3d66c7283b2afcec9efcd4c'
          '221fbaafe534eaa8b91ce4f644aac389'
          '68adf4662e44e23c9165f2d1573b818b'
-         '089b7ec2aa9e2617e6fac026e9f04de8')
+         '089b7ec2aa9e2617e6fac026e9f04de8'
+         '0297ecf5cda1fbb415d0a646d87c8a4a')
 
 
 # BEGIN ANTBS METADATA
@@ -53,6 +56,9 @@ prepare() {
 
 	# Set default theme to 'Linux Mint'
 	patch -Np1 -i ../default-theme.patch
+
+	# Fix display bug in clock applet
+	patch -Np1 -i ../e648f1e66e4523cacc059f1082302c0a6841c9c4.patch
 
 	# Python2 fix
 	find -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
