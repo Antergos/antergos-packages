@@ -3,7 +3,7 @@
 # Contributor: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgname=cinnamon-session
-pkgver=3.6.0
+pkgver=3.6.1
 pkgrel=1
 pkgdesc="The Cinnamon Session Handler"
 arch=('x86_64')
