@@ -1,15 +1,15 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-desktop-settings
-pkgver=1.3
-pkgrel=2
+pkgver=1.4
+pkgrel=1
 pkgdesc="Setup configuration for Antergos Desktops"
 url="http://github.com/Antergos/antergos-desktop-settings"
 arch=('any')
 license=('GPL2')
 depends=('gsettings-desktop-schemas' 'dconf')
 source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('3f0a10ba60e22b5d0dcce8f05bb111d3')
+md5sums=('5d5ee1fda6acb9cbc89f4b62c1efa713')
 install=${pkgname}.install
 
 ## ANTBS METADATA
@@ -37,10 +37,11 @@ package() {
     install -d "${pkgdir}/etc/skel/.themes"
 
     # Openbox (these two need 755)
-    install -Dm755 "${pkgdir}/etc/skel/.config/openbox/pipemenus/obpipemenu-places" \
-       ${pkgdir}/etc/skel/.config/openbox/pipemenus/obpipemenu-places
+    install -Dm755 "skel/.config/openbox/pipemenus/obpipemenu-places" \
+        ${pkgdir}/etc/skel/.config/openbox/pipemenus/obpipemenu-places
 
-obrecent.sh
+    install -Dm755 "skel/.config/openbox/pipemenus/obrecent.sh" \
+        ${pkgdir}/etc/skel/.config/openbox/pipemenus/obrecent.sh
 
 
 }
