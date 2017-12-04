@@ -31,7 +31,7 @@ _monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
 # END ANTBS METADATA
 
 prepare() {
-	cd "${srcdir}/${pkgname}-${_tag}"
+	cd "${srcdir}/spl-${_tag}"
 
 	# Linux 4.14
 	patch -Np1 -i ../linux-4.14.patch
