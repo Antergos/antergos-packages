@@ -68,7 +68,7 @@ prepare() {
 
 	# https://crbug.com/710701
 	local _chrome_build_hash=$(
-		curl -s https://chromium.googlesource.com/chromium/src.git/+/$pkgver?format=TEXT | base64 -d | grep -Po '^parent \K[0-9a-f]{40}$'
+		curl -s https://chromium.googlesource.com/chromium/src.git/+/$_chromium?format=TEXT | base64 -d | grep -Po '^parent \K[0-9a-f]{40}$'
 	)
 
 	if [[ -z $_chrome_build_hash ]]; then
