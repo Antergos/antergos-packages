@@ -3,9 +3,9 @@
 # Contributor: TZ86
 
 pkgname=vivaldi
-pkgver=1.12.955.36
-# https://update.vivaldi.com/update/1.0/relnotes/1.12.955.36.html
-_chromium=61.0.3163.91 # https://omahaproxy.appspot.com
+pkgver=1.13.1008.34
+# https://update.vivaldi.com/update/1.0/relnotes/1.13.1008.34.html
+_chromium=62.0.3202.94 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
@@ -18,7 +18,7 @@ depends=('gtk3' 'nss' 'libxtst' 'gconf' 'libxss' 'freetype2' 'ttf-font' 'nspr'
 makedepends=(
 	'w3m' 'libexif' 'libpulse' 'libxss' 'ninja' 'pciutils' 'python2' 'xdg-utils' 'nodejs'
 	'opus' 'gperf' 'yasm' 'mesa' 'harfbuzz-icu' 'libwebp' 'libxslt' 'libxml2' 're2' 'minizip'
-	'snappy'
+	'snappy' 'clang'
 )
 provides=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 conflicts=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
@@ -30,21 +30,17 @@ source=(
 	"https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
-	"chromium-blink-gcc7.patch::${_archgit_url}/chromium-blink-gcc7.patch?h=packages/chromium"
-	"chromium-gn-bootstrap-r14.patch::${_archgit_url}/chromium-gn-bootstrap-r14.patch?h=packages/chromium"
-	"chromium-gcc-r1.patch::${_archgit_url}/chromium-gcc-r1.patch?h=packages/chromium"
-	"chromium-atk-r1.patch::${_archgit_url}/chromium-atk-r1.patch?h=packages/chromium"
 	"breakpad-use-ucontext_t.patch::${_archgit_url}/breakpad-use-ucontext_t.patch?h=packages/chromium"
+	"crc32c-string-view-check.patch::${_archgit_url}/crc32c-string-view-check.patch?h=packages/chromium"
+	"chromium-gn-bootstrap-r17.patch::${_archgit_url}/chromium-gn-bootstrap-r17.patch?h=packages/chromium"
 )
-md5sums=('43f4546f8621129034d1fdd477378c4e'
-         '17da9d08bbdf787046f2aa5586230b99'
-         '182ef0314172f82ec09bf56462faad46'
+md5sums=('90d0191a3837ce5c45c8743db88383c4'
+         '98cf7b6eca255e2422f96094eccc1887'
+         '2ce9a63d54ae18fdd096b7fc6206b872'
          'd50d8f0a6940791eabc41c4f64e6a3cf'
-         '034bc28a6988f3d6d1e7f291ec95365c'
-         '22440a6f0c5660e90866d131a40fb0af'
-         'ab7416d1494bb6a0a96fb72c9388580d'
-         '5b5a3ad8970846d3cead13249a101283'
-         '4dbc4cd98731f133a3f6e0f47625ad08')
+         '4dbc4cd98731f133a3f6e0f47625ad08'
+         'd1359f1c4cc42c9f74a862361d736ef1'
+         '1e9f37377b470e26dc0fa609c1cdad9e')
 
 # Possible replacements are listed in build/linux/unbundle/replace_gn_files.py
 # Keys are the names in the above script; values are the dependencies in Arch
@@ -52,7 +48,7 @@ declare -rgA _system_libs=(
   [flac]=flac
   #[freetype]=freetype2      # https://crbug.com/pdfium/733
   [harfbuzz-ng]=harfbuzz-icu
-  #[icu]=icu                 # Enable again when upstream supports ICU 59
+  #[icu]=icu                 # https://crbug.com/772655
   [libdrm]=
   [libjpeg]=libjpeg
   #[libpng]=libpng           # https://crbug.com/752403#c10
@@ -70,16 +66,29 @@ declare -rgA _system_libs=(
 prepare() {
 	cd "$srcdir/chromium-$_chromium"
 
-	# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=853347
-	patch -Np1 -i ../../chromium-blink-gcc7.patch
+	# https://crbug.com/710701
+	local _chrome_build_hash=$(
+		curl -s https://chromium.googlesource.com/chromium/src.git/+/$pkgver?format=TEXT | base64 -d | grep -Po '^parent \K[0-9a-f]{40}$'
+	)
+
+	if [[ -z $_chrome_build_hash ]]; then
+		error "Unable to fetch Chrome build hash."
+		return 1
+	fi
+
+	echo "LASTCHANGE=$_chrome_build_hash-" >build/util/LASTCHANGE
 
 	# Fix build with glibc 2.26
 	patch -Np1 -i ../breakpad-use-ucontext_t.patch
+	
+	# Fix incorrect inclusion of <string_view> in modes other than >= C++17
+	patch -Np1 -d third_party/crc32c/src <../crc32c-string-view-check.patch
 
 	# Fixes from Gentoo
-	patch -Np1 -i ../chromium-gcc-r1.patch
-	patch -Np1 -i ../chromium-gn-bootstrap-r14.patch
-	patch -Np1 -i ../chromium-atk-r1.patch
+	patch -Np1 -i ../chromium-gn-bootstrap-r17.patch
+	
+	# Remove compiler flag not supported by our system clang
+	sed -i '/"-Wno-enum-compare-switch",/d' build/config/compiler/BUILD.gn
 
 	# Use Python 2
 	find . -name '*.py' -exec sed -i -r 's|/usr/bin/python$|&2|g' {} +
@@ -116,6 +125,11 @@ build() {
 	export TMPDIR="$srcdir/temp"
 	mkdir -p "$TMPDIR"
 
+	export CC=clang
+	export CXX=clang++
+	export AR=ar
+	export NM=nm
+
 	local args=(
 		'clang_use_chrome_plugins=false'
 		'fieldtrial_testing_like_official_build=true'
@@ -136,7 +150,9 @@ build() {
 		'use_custom_libcxx=false'
 		'fatal_linker_warnings=false'
 		'treat_warnings_as_errors=false'
-		'is_clang=false'
+		'is_clang=true'
+		'custom_toolchain="//build/toolchain/linux/unbundle:default"'
+		'host_toolchain="//build/toolchain/linux/unbundle:default"'
 		'is_component_build=true'
 		'is_debug=false'
 		'symbol_level=0'
