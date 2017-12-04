@@ -3,16 +3,16 @@
 
 pkgname=peek
 pkgver=1.2.1
-pkgrel=3
+pkgrel=1
 pkgdesc='An animated GIF recorder.'
 arch=('x86_64')
 url='https://github.com/phw/peek'
 groups=('tools')
 license=('GPL3')
-depends=('gtk3' 'ffmpeg' 'imagemagick' 'libkeybinder3')
+depends=('gtk3' 'ffmpeg' 'libkeybinder3')
 makedepends=('cmake' 'vala' 'gettext')
-source=("${pkgname}-${pkgver}.zip::https://github.com/phw/peek/archive/v${pkgver}.zip")
-md5sums=('c0cf63d4fc91f026497b8f42f4c08017')
+source=("${pkgname}-${pkgver}.zip::https://github.com/phw/peek/archive/${pkgver}.zip")
+md5sums=('cc3885639aa5dd15d64518d4a4b03045')
 
 
 # BEGIN ANTBS METADATA
