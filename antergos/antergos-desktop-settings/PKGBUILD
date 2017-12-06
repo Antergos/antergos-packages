@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-desktop-settings
-pkgver=1.4
+pkgver=1.5
 pkgrel=1
 pkgdesc="Setup configuration for Antergos Desktops"
 url="http://github.com/Antergos/antergos-desktop-settings"
@@ -9,7 +9,7 @@ arch=('any')
 license=('GPL2')
 depends=('gsettings-desktop-schemas' 'dconf')
 source=("https://github.com/Antergos/${pkgname}/archive/${pkgver}.tar.gz")
-md5sums=('5d5ee1fda6acb9cbc89f4b62c1efa713')
+md5sums=('7a4458fc1d1c4a61fe179dad3d75f502')
 install=${pkgname}.install
 
 ## ANTBS METADATA
