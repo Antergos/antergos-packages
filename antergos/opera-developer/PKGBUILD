@@ -3,7 +3,7 @@
 
 pkgname=opera-developer
 pkgver=51.0.2796.0
-pkgrel=1
+pkgrel=2
 pkgdesc='A fast and secure web browser and Internet suite - developer stream'
 arch=('x86_64')
 url='http://www.opera.com/browser/'
