@@ -15,9 +15,8 @@ source=("https://github.com/resin-io/etcher/releases/download/v${pkgver}/etcher-
 options=("!strip")
 sha256sums=('bf2e986e5200fd8b3202247ab4fac40f1a2b82ef12b6751838ac10f7c0d90b7f')
 
-
- package() {
- cd "${pkgdir}"
- tar xf "${srcdir}/data.tar.xz"
- }
+package() {
+cd "${pkgdir}"
+tar xf "${srcdir}/data.tar.xz"
+}
 
