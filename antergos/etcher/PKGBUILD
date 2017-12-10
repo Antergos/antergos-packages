@@ -2,7 +2,7 @@
 # Original Contributor: Andrew Stubbs <andrew.stubbs@gmail.com>
 
 pkgname=etcher
-pkgver=1.1.2
+pkgver=1.2.0
 pkgrel=1
 pkgdesc="Burn images to SD cards & USB drives, safe & easy"
 arch=('x86_64')
@@ -10,13 +10,13 @@ url="http://www.etcher.io/"
 license=('apache')
 depends=('gtk2' 'libxtst' 'libxss' 'gconf' 'nss' 'alsa-lib')
 optdepends=('libnotify: for notifications'
-            'speech-dispatcher: for text-to-speech')
+	    'speech-dispatcher: for text-to-speech')
 source=("https://github.com/resin-io/etcher/releases/download/v${pkgver}/etcher-electron_${pkgver}_amd64.deb")
 options=("!strip")
-sha256sums=('45ab555e470b382120923730e607e7a951da4f6d8a4320f0f08a960f8254942b')
+sha256sums=('bf2e986e5200fd8b3202247ab4fac40f1a2b82ef12b6751838ac10f7c0d90b7f')
 
 package() {
-    cd "${pkgdir}"
-    tar xf "${srcdir}/data.tar.xz"
+cd "${pkgdir}"
+tar xf "${srcdir}/data.tar.xz"
 }
 
