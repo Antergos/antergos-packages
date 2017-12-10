@@ -13,7 +13,7 @@ optdepends=('libnotify: for notifications'
 	    'speech-dispatcher: for text-to-speech')
 source=("https://github.com/resin-io/etcher/releases/download/v${pkgver}/etcher-electron_${pkgver}_amd64.deb")
 options=("!strip")
-sha256sums_x86_64=('bf2e986e5200fd8b3202247ab4fac40f1a2b82ef12b6751838ac10f7c0d90b7f')
+sha256sums=('bf2e986e5200fd8b3202247ab4fac40f1a2b82ef12b6751838ac10f7c0d90b7f')
 
 
  package() {
