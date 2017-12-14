@@ -2,8 +2,8 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl-utils
-pkgver=0.7.3
-pkgrel=2
+pkgver=0.7.4
+pkgrel=1
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
 groups=("system" "zfs")
@@ -13,13 +13,9 @@ conflicts=("spl-utils-dkms")
 arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag="spl-0.7.3"
-source=(
-	"https://github.com/zfsonlinux/spl/archive/${_tag}.zip"
-	'linux-4.14.patch::https://github.com/zfsonlinux/spl/commit/ed19bccfb651843fa208232b3a2d3d22a4152bc8.patch'
-)
-md5sums=('9d95353a3410b0bd6a7ecdc21fe770a4'
-         'd3e6375f67bcd1be2d04d18dbe5f8fc9')
+_tag="spl-0.7.4"
+source=("https://github.com/zfsonlinux/spl/archive/${_tag}.zip")
+md5sums=('8137446b2a39670395874f1941dfe961')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
@@ -31,25 +27,23 @@ _monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
 # END ANTBS METADATA
 
 prepare() {
-	cd "${srcdir}/spl-${_tag}"
+    cd "${srcdir}/spl-${_tag}"
 
-	# Linux 4.14
-	patch -Np1 -i ../linux-4.14.patch
+    # Linux 4.14
+    #patch -Np1 -i ../linux-4.14.patch
 }
 
 build() {
-	cd "${srcdir}/spl-${_tag}"
-	./autogen.sh
-	./configure --prefix=/usr \
-		--libdir=/usr/lib \
-		--sbindir=/usr/bin \
-		--with-config=user
-	make
+    cd "${srcdir}/spl-${_tag}"
+    ./autogen.sh
+    ./configure --prefix=/usr \
+        --libdir=/usr/lib \
+        --sbindir=/usr/bin \
+        --with-config=user
+    make
 }
 
 package() {
-	cd "${srcdir}/spl-${_tag}"
-	make DESTDIR="${pkgdir}" install
+    cd "${srcdir}/spl-${_tag}"
+    make DESTDIR="${pkgdir}" install
 }
-
-
