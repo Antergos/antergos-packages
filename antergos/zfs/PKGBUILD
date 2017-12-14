@@ -2,10 +2,11 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-pkgver=0.7.3
+pkgver=0.7.4
 pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
+groups=("system" "zfs")
 makedepends=("git")
 depends=("spl=${pkgver}" "zfs-utils=${pkgver}" "dkms" "linux-headers" "linux")
 provides=("zfs-dkms=${pkgver}")
@@ -14,9 +15,9 @@ install=zfs.install
 arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag='zfs-0.7.3'
+_tag='zfs-0.7.4'
 source=("https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip")
-md5sums=('1b48d06f95321ddcbeba16887ebace0f')
+md5sums=('7f5fdf31a3d4a2280341469acb1a709d')
 
 
 # BEGIN ANTBS METADATA
@@ -47,13 +48,13 @@ build() {
 }
 
 package() {
-	dkmsdir="${pkgdir}/usr/src/zfs-${pkgver}"
-	install -d "${dkmsdir}"
+    dkmsdir="${pkgdir}/usr/src/zfs-${pkgver}"
+    install -d "${dkmsdir}"
 
-	cp -a "${srcdir}/${pkgname}-${_tag}"/. ${dkmsdir}
+    cp -a "${srcdir}/${pkgname}-${_tag}"/. ${dkmsdir}
 
-	cd "${dkmsdir}"
-	./autogen.sh
-	scripts/dkms.mkconf -v ${pkgver} -f dkms.conf -n ${pkgname}
-	chmod g-w,o-w -R .
+    cd "${dkmsdir}"
+    ./autogen.sh
+    scripts/dkms.mkconf -v ${pkgver} -f dkms.conf -n ${pkgname}
+    chmod g-w,o-w -R .
 }
