@@ -2,9 +2,10 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl
-pkgver=0.7.3
-pkgrel=2
+pkgver=0.7.4
+pkgrel=1
 pkgdesc="Solaris Porting Layer kernel modules."
+groups=("system" "zfs")
 license=('GPL')
 makedepends=("git")
 depends=("spl-utils=${pkgver}" "dkms" "linux-headers" "linux")
@@ -14,13 +15,9 @@ install=spl.install
 arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag='spl-0.7.3'
-source=(
-	"https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip"
-	'linux-4.14.patch::https://github.com/zfsonlinux/spl/commit/ed19bccfb651843fa208232b3a2d3d22a4152bc8.patch'
-)
-md5sums=('9d95353a3410b0bd6a7ecdc21fe770a4'
-         'd3e6375f67bcd1be2d04d18dbe5f8fc9')
+_tag='spl-0.7.4'
+source=("https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip")
+md5sums=('8137446b2a39670395874f1941dfe961')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
@@ -32,10 +29,7 @@ _monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
 # END ANTBS METADATA
 
 prepare() {
-	cd "${srcdir}/${pkgname}-${_tag}"
-
-	# Linux 4.14
-	patch -Np1 -i ../linux-4.14.patch
+    cd "${srcdir}/${pkgname}-${_tag}"
 }
 
 build() {
@@ -50,13 +44,13 @@ build() {
 }
 
 package() {
-	dkmsdir="${pkgdir}/usr/src/spl-${pkgver}"
-	install -d "${dkmsdir}"
+    dkmsdir="${pkgdir}/usr/src/spl-${pkgver}"
+    install -d "${dkmsdir}"
 
-	cp -a "${srcdir}/${pkgname}-${_tag}"/. ${dkmsdir}
+    cp -a "${srcdir}/${pkgname}-${_tag}"/. ${dkmsdir}
 
-	cd "${dkmsdir}"
-	./autogen.sh
-	scripts/dkms.mkconf -v ${pkgver} -f dkms.conf -n ${pkgname}
-	chmod g-w,o-w -R .
+    cd "${dkmsdir}"
+    ./autogen.sh
+    scripts/dkms.mkconf -v ${pkgver} -f dkms.conf -n ${pkgname}
+    chmod g-w,o-w -R .
 }
