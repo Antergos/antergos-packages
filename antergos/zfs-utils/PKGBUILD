@@ -2,22 +2,22 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs-utils
-pkgver=0.7.3
+pkgver=0.7.4
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
 url="http://zfsonlinux.org/"
 license=('CDDL')
 arch=("x86_64")
-groups=("system")
+groups=("system" "zfs")
 depends=("spl=${pkgver}")
 conflicts=("zfs-utils-dkms-git")
 _commit=''
-_tag='zfs-0.7.3'
+_tag='zfs-0.7.4'
 source=("https://github.com/zfsonlinux/zfs/archive/${_tag}.zip"
 	"zfs-utils.bash-completion-r1"
 	"zfs-utils.initcpio.install"
 	"zfs-utils.initcpio.hook")
-md5sums=('1b48d06f95321ddcbeba16887ebace0f'
+md5sums=('7f5fdf31a3d4a2280341469acb1a709d'
          '9ddb0c8a94861f929d0fa741fdc49950'
          '73527e326fbbd1bc3d4331bbba0af5a8'
          '2d4dd00dd671598c26b5d054bd63d6f5')
@@ -33,30 +33,30 @@ _monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
 
 
 build() {
-	cd "${srcdir}/zfs-${_tag}"
-	./autogen.sh
-	./configure --prefix=/usr \
-		--sysconfdir=/etc \
-		--sbindir=/usr/bin \
-		--with-mounthelperdir=/usr/bin \
-		--libdir=/usr/lib \
-		--datadir=/usr/share \
-		--includedir=/usr/include \
-		--with-udevdir=/usr/lib/udev \
-		--libexecdir=/usr/lib/zfs \
-		--with-config=user
-	make
+    cd "${srcdir}/zfs-${_tag}"
+    ./autogen.sh
+    ./configure --prefix=/usr \
+        --sysconfdir=/etc \
+        --sbindir=/usr/bin \
+        --with-mounthelperdir=/usr/bin \
+        --libdir=/usr/lib \
+        --datadir=/usr/share \
+        --includedir=/usr/include \
+        --with-udevdir=/usr/lib/udev \
+        --libexecdir=/usr/lib/zfs \
+        --with-config=user
+    make
 }
 
 package() {
-	cd "${srcdir}/zfs-${_tag}"
-	make DESTDIR="${pkgdir}" install
+    cd "${srcdir}/zfs-${_tag}"
+    make DESTDIR="${pkgdir}" install
 
-	# Remove uneeded files
-	rm -r "${pkgdir}"/etc/init.d
-	rm -r "${pkgdir}"/usr/lib/dracut
+    # Remove uneeded files
+    rm -r "${pkgdir}"/etc/init.d
+    rm -r "${pkgdir}"/usr/lib/dracut
 
-	install -D -m644 "${srcdir}"/zfs-utils.initcpio.hook "${pkgdir}"/usr/lib/initcpio/hooks/zfs
-	install -D -m644 "${srcdir}"/zfs-utils.initcpio.install "${pkgdir}"/usr/lib/initcpio/install/zfs
-	install -D -m644 "${srcdir}"/zfs-utils.bash-completion-r1 "${pkgdir}"/usr/share/bash-completion/completions/zfs
+    install -D -m644 "${srcdir}"/zfs-utils.initcpio.hook "${pkgdir}"/usr/lib/initcpio/hooks/zfs
+    install -D -m644 "${srcdir}"/zfs-utils.initcpio.install "${pkgdir}"/usr/lib/initcpio/install/zfs
+    install -D -m644 "${srcdir}"/zfs-utils.bash-completion-r1 "${pkgdir}"/usr/share/bash-completion/completions/zfs
 }
