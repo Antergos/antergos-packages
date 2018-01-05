@@ -4,7 +4,7 @@
 
 pkgname=brave
 _pkgname='browser-laptop'
-pkgver=0.19.70dev
+pkgver=0.19.80dev
 pkgrel=1
 pkgdesc='Web browser that blocks ads and trackers by default.'
 arch=('x86_64')
