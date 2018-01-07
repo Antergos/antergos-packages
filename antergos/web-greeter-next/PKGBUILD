@@ -21,7 +21,7 @@ groups=('system')
 
 
 package() {
-	cd "${srcdir}/${_pkgname}-${_pkgver}"
+	cd "${srcdir}/${_pkgname}-${pkgver}"
 
 	make -j1 \
 		DESTDIR="${pkgdir}" \
