@@ -1,7 +1,7 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=nvidia-installer
-pkgver=1.12
+pkgver=1.13
 pkgrel=1
 pkgdesc="Script to setup nvidia drivers in Antergos"
 url="http://www.antergos.com"
@@ -15,5 +15,3 @@ package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
   install -Dm755 ${pkgname} ${pkgdir}/usr/bin/${pkgname}
 }
-
-
