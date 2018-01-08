@@ -36,7 +36,7 @@ package() {
 	cp --no-preserve=ownership antergos-backgrounds-4-3.xml "${_bg_path}"
 	sed -i 's|gnome-wp-list|cinnamon-wp-list|g' "${_bg_path}"
 
-	ln -sr /usr/share/antergos-wallpapers /usr/share/backgrounds/antergos-wallpapers
+	ln -sr "${pkgdir}/usr/share/antergos-wallpapers" "${pkgdir}/usr/share/backgrounds/antergos-wallpapers"
 }
 
 
