@@ -3,7 +3,7 @@
 pkgname=antergos-wallpapers
 _pkgname=wallpapers
 pkgver=0.7
-pkgrel=2
+pkgrel=3
 pkgdesc='Default wallpapers for Antergos Linux'
 arch=('any')
 url='http://www.antergos.com'
@@ -35,6 +35,8 @@ package() {
 	install -d "${pkgdir}/usr/share/cinnamon-background-properties"
 	cp --no-preserve=ownership antergos-backgrounds-4-3.xml "${_bg_path}"
 	sed -i 's|gnome-wp-list|cinnamon-wp-list|g' "${_bg_path}"
+
+	ln -sr /usr/share/antergos-wallpapers /usr/share/backgrounds/antergos-wallpapers
 }
 
 
