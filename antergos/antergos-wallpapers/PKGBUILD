@@ -37,7 +37,7 @@ package() {
 	sed -i 's|gnome-wp-list|cinnamon-wp-list|g' "${_bg_path}"
 
 	mkdir -p "${pkgdir}/usr/share/backgrounds"
-	ln -sr "${pkgdir}/usr/share/antergos-wallpapers" "${pkgdir}/usr/share/backgrounds/antergos-wallpapers"
+	ln -sr "${pkgdir}/usr/share/antergos/wallpapers" "${pkgdir}/usr/share/backgrounds/antergos"
 }
 
 
