@@ -3,30 +3,27 @@
 _pkgname=web-greeter
 pkgname=web-greeter-next
 _pkgver=master
-pkgver=3.0.0rc1
-pkgrel=2
+pkgver=3.0.0rc2
+pkgrel=1
 pkgdesc='A modern, visually appealing greeter for LightDM.'
 arch=('any')
 url='https://github.com/antergos/web-greeter'
 license=('GPL3')
-depends=('lightdm' 'python-whither' 'python-gobject' 'accountsservice' 'antergos-wallpapers')
+depends=('lightdm' 'python-whither' 'python-gobject' 'accountsservice')
 optdepends=('at-spi2-core: a11y support')
 makedepends=('zip')
 provides=('lightdm-greeter' 'lightdm-webkit2-greeter')
 replaces=('lightdm-webkit2-greeter-next')
 backup=("etc/lightdm/${_pkgname}.yml")
 source=("http://github.com/Antergos/${_pkgname}/archive/${pkgver}.zip")
-md5sums=('f2da729bc31f1030a2ce7715bbbe476f')
+md5sums=('1412739063d325ef91ecfc8e2897f774')
 groups=('system')
 
 
 package() {
 	cd "${srcdir}/${_pkgname}-${pkgver}"
 
-	make -j1 \
-		DESTDIR="${pkgdir}" \
-		background_images_dir=/usr/share/antergos/wallpapers \
-		install
+	make DESTDIR="${pkgdir}" install
 }
 
 
