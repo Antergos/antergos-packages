@@ -7,7 +7,7 @@ pkgname=dbeaver-ce
 pkgver=4.3.2
 pkgrel=1
 pkgdesc="DBeaver Community Edition is free and open source universal database tool for developers and database administrators."
-arch=('i686' 'x86_64')
+arch=('x86_64')
 url="http://dbeaver.com/"
 license=("GPL")
 depends=(
@@ -17,28 +17,21 @@ depends=(
 )
 install=dbeaver-ce.install
 source=(
+    https://github.com/dbeaver/dbeaver/releases/download/${pkgver}/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz
     dbeaver-ce.desktop
     dbeaver-ce.install
 )
-source_i686=(https://github.com/dbeaver/dbeaver/releases/download/4.3.2/dbeaver-ce-4.3.2-linux.gtk.x86.tar.gz)
-source_x86_64=(https://github.com/dbeaver/dbeaver/releases/download/${pkgver}/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz)
 
-sha256sums=('64617581229a03d5a690a9995fa7cacb574bc17a028392c98589cccbb31f5c3c'
+sha256sums=('7ad0bbca914aba53c9abd8c6e3a0e0439cd592b4318380b1a017b2de4ae7f16a'
+            '64617581229a03d5a690a9995fa7cacb574bc17a028392c98589cccbb31f5c3c'
             '0c2a75baa39459fa56159e982d9f28c966837561bd52dffd24bac87b8d65555f')
-sha256sums_i686=('ff482ba2064cfd693922b8f4109c722a26365f53d7a141b601cc585b29f7481e')
-sha256sums_x86_64=('7ad0bbca914aba53c9abd8c6e3a0e0439cd592b4318380b1a017b2de4ae7f16a')
 
-noextract=("dbeaver-ce-${pkgver}-linux.gtk.x86.tar.gz"
-           "dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz")
+noextract=("dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz")
 
 prepare() {
     mkdir -p $srcdir/$pkgname
     cd $srcdir/$pkgname
-    if [ "$CARCH" = "x86_64" ]; then
-        tar -xf "$srcdir/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz"
-    else
-        tar -xf "$srcdir/dbeaver-ce-${pkgver}-linux.gtk.x86.tar.gz"
-    fi
+    tar -xf "$srcdir/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz"
 }
 
 package() {

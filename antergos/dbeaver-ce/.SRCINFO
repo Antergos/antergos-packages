@@ -4,22 +4,18 @@ pkgbase = dbeaver-ce
 	pkgrel = 1
 	url = http://dbeaver.com/
 	install = dbeaver-ce.install
-	arch = i686
 	arch = x86_64
 	license = GPL
 	depends = jre9-openjdk
 	depends = gtk2
 	depends = gtk-update-icon-cache
-	noextract = dbeaver-ce-4.3.2-linux.gtk.x86.tar.gz
 	noextract = dbeaver-ce-4.3.2-linux.gtk.x86_64.tar.gz
+	source = https://github.com/dbeaver/dbeaver/releases/download/4.3.2/dbeaver-ce-4.3.2-linux.gtk.x86_64.tar.gz
 	source = dbeaver-ce.desktop
 	source = dbeaver-ce.install
+	sha256sums = 7ad0bbca914aba53c9abd8c6e3a0e0439cd592b4318380b1a017b2de4ae7f16a
 	sha256sums = 64617581229a03d5a690a9995fa7cacb574bc17a028392c98589cccbb31f5c3c
 	sha256sums = 0c2a75baa39459fa56159e982d9f28c966837561bd52dffd24bac87b8d65555f
-	source_i686 = https://github.com/dbeaver/dbeaver/releases/download/4.3.2/dbeaver-ce-4.3.2-linux.gtk.x86.tar.gz
-	sha256sums_i686 = ff482ba2064cfd693922b8f4109c722a26365f53d7a141b601cc585b29f7481e
-	source_x86_64 = https://github.com/dbeaver/dbeaver/releases/download/4.3.2/dbeaver-ce-4.3.2-linux.gtk.x86_64.tar.gz
-	sha256sums_x86_64 = 7ad0bbca914aba53c9abd8c6e3a0e0439cd592b4318380b1a017b2de4ae7f16a
 
 pkgname = dbeaver-ce
 
