@@ -1,7 +1,7 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=tldr-python-client
-pkgver=0.4.1
+pkgver=0.4.2
 pkgrel=1
 pkgdesc='Command line client for tldr, a collection of simplified and community-driven man pages.'
 url='https://github.com/tldr-pages/tldr-python-client'
