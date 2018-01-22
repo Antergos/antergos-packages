@@ -20,7 +20,7 @@ md5sums=('8137446b2a39670395874f1941dfe961')
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='releases'
+_monitored_type='tags'
 _monitored_project='zfsonlinux'
 _monitored_repo='spl'
 _monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
