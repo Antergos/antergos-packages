@@ -2,7 +2,7 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl-utils
-pkgver=0.7.4
+pkgver=0.7.5
 pkgrel=1
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
@@ -13,9 +13,9 @@ conflicts=("spl-utils-dkms")
 arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag="spl-0.7.4"
+_tag="spl-${pkgver}"
 source=("https://github.com/zfsonlinux/spl/archive/${_tag}.zip")
-md5sums=('8137446b2a39670395874f1941dfe961')
+md5sums=('0fbfeef12ad6bc76182735c7cbc98d16')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

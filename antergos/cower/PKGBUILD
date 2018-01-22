@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=cower
-pkgver=0
+pkgver=17
 pkgrel=1
 pkgdesc='A simple AUR agent with a pretentious name'
 arch=('x86_64')

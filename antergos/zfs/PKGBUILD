@@ -2,7 +2,7 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-pkgver=0.7.4
+pkgver=0.7.5
 pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
@@ -15,9 +15,9 @@ install=zfs.install
 arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag='zfs-0.7.4'
+_tag="zfs-${pkgver}"
 source=("https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip")
-md5sums=('7f5fdf31a3d4a2280341469acb1a709d')
+md5sums=('a139afdab5e37e2a0112811148150c3f')
 
 
 # BEGIN ANTBS METADATA
