@@ -1,6 +1,6 @@
 pkgbase = dbeaver-ce
 	pkgdesc = DBeaver Community Edition is free and open source universal database tool for developers and database administrators.
-	pkgver = 4.3.2
+	pkgver = 4.3.3.1
 	pkgrel = 1
 	url = http://dbeaver.com/
 	install = dbeaver-ce.install
@@ -9,11 +9,11 @@ pkgbase = dbeaver-ce
 	depends = jre9-openjdk
 	depends = gtk2
 	depends = gtk-update-icon-cache
-	noextract = dbeaver-ce-4.3.2-linux.gtk.x86_64.tar.gz
-	source = https://github.com/dbeaver/dbeaver/releases/download/4.3.2/dbeaver-ce-4.3.2-linux.gtk.x86_64.tar.gz
+	noextract = dbeaver-ce-4.3.3.1-linux.gtk.x86_64.tar.gz
+	source = https://github.com/dbeaver/dbeaver/releases/download/4.3.3.1/dbeaver-ce-4.3.3.1-linux.gtk.x86_64.tar.gz
 	source = dbeaver-ce.desktop
 	source = dbeaver-ce.install
-	sha256sums = 7ad0bbca914aba53c9abd8c6e3a0e0439cd592b4318380b1a017b2de4ae7f16a
+	sha256sums = c5f3676c484c9ccd28e87c3cfe51621077b45e00ec9c06236acc97cddec39d8e
 	sha256sums = 64617581229a03d5a690a9995fa7cacb574bc17a028392c98589cccbb31f5c3c
 	sha256sums = 0c2a75baa39459fa56159e982d9f28c966837561bd52dffd24bac87b8d65555f
 
