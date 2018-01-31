@@ -1,14 +1,14 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-deepin-meta
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc='Meta package for Antergos Deepin'
 url='http://www.antergos.com'
 arch=('any')
 license=('GPL3')
 depends=('antergos-wallpapers-deepin' 'adwaita-icon-theme' 'brasero'
-    'deepin-account-faces' 'deepin-api' 'deepin-artwork-themes'
+    'deepin-account-faces' 'deepin-api' 'deepin-desktop-schemas'
     'deepin-boot-maker' 'deepin-calendar' 'deepin-clone' 'deepin-control-center'
     'deepin-daemon' 'deepin-desktop-base' 'deepin-desktop-schemas' 'deepin-dock'
     'deepin-file-manager' 'deepin-grub2-themes' 'deepin-gtk-theme' 'deepin-help'
