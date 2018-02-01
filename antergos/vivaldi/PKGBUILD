@@ -24,7 +24,7 @@ depends=('gtk3' 'nss' 'libxtst' 'gconf' 'libxss' 'freetype2' 'ttf-font' 'nspr'
 makedepends=(
 	'w3m' 'libexif' 'libpulse' 'libxss' 'ninja' 'pciutils' 'python2' 'xdg-utils' 'nodejs'
 	'opus' 'gperf' 'yasm' 'mesa' 'harfbuzz-icu' 'libwebp' 'libxslt' 'libxml2' 're2' 'minizip'
-	'snappy' 'clang'
+	'snappy' 'clang' 'lld'
 )
 provides=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 conflicts=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
