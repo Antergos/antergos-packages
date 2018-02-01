@@ -2,7 +2,7 @@
 # Contributor: Philipp Wolfer <ph.wolfer@gmail.com>
 
 pkgname=peek
-pkgver=1.2.1
+pkgver=1.2.2
 pkgrel=1
 pkgdesc='An animated GIF recorder.'
 arch=('x86_64')
