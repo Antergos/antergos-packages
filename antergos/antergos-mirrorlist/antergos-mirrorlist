@@ -1,17 +1,10 @@
-##                                          ##
-#       Antergos Repository Mirrorlist       #
-##                                          ##
+## Antergos Repository Mirrorlist
 
-##                                ##
-#    Automated Mirror Selection    #
-##                                ##
+# Automated Mirror Selection
 
 Server = http://mirrors.antergos.com/$repo/$arch
-#Server = http://sourceforge.net/projects/antergos/files/mirror/$repo/$arch
 
-##                                ##
-#     Manual Mirror Selection      #
-##                                ##
+# Manual Mirror Selection
 
 # Bulgaria
 Server = http://mirror.host.ag/antergos/$repo/$arch
@@ -51,6 +44,7 @@ Server = http://mirror.antergos.jp/$repo/$arch
 Server = http://mirror.nl.leaseweb.net/antergos/$repo/$arch
 Server = http://ftp1.nluug.nl/os/Linux/distr/antergos/$repo/$arch
 Server = http://ftp2.nluug.nl/os/Linux/distr/antergos/$repo/$arch
+Server = http://mirror.neostrada.nl/antergos/$repo/$arch
 
 # Portugal
 Server = http://glua.ua.pt/pub/antergos/$repo/$arch
