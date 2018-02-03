@@ -4,7 +4,7 @@
 pkgname=(pamac-dev pamac-tray-appindicator-dev)
 pkgver=6.2.4
 _pkgver=6.2.4
-pkgrel=1
+pkgrel=2
 _gitcommit="master"
 pkgdesc='A GTK3 frontend for libalpm'
 arch=('x86_64')
