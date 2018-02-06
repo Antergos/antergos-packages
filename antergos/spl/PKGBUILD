@@ -2,7 +2,7 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl
-pkgver=0.7.5
+pkgver=0.7.6
 pkgrel=1
 pkgdesc="Solaris Porting Layer kernel modules."
 groups=("system" "zfs")
