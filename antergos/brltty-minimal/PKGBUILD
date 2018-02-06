@@ -5,7 +5,7 @@
 # Contributor: Giovanni Scafora <giovanni@archlinux.org>
 
 pkgname=brltty-minimal
-pkgver=5.5
+pkgver=5.6
 pkgrel=1
 pkgdesc='Braille display driver for Linux/Unix'
 arch=('x86_64')
