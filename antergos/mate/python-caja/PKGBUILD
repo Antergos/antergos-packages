@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=python-caja
-pkgver=1.18.1
+pkgver=1.20.0
 pkgrel=1
 pkgdesc="Python binding for Caja. Enables support for property page and menu item extensions that are written in Python"
 url="https://mate-desktop.org"
