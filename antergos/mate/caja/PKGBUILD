@@ -10,7 +10,7 @@ arch=('x86_64')
 license=('GPL')
 depends=('exempi' 'gtk3' 'gvfs' 'libexif' 'python-gobject' 'libxt' 'mate-desktop'
 		'startup-notification' 'libnotify')
-makedepends=('wget' 'gobject-introspection' 'mate-common')
+makedepends=('wget' 'gobject-introspection' 'mate-common' 'intltool')
 optdepends=('gstreamer: automatic media playback when mouseover'
 			'gvfs-smb: To connect to Samba/Windows shares')
 groups=('mate')
@@ -31,7 +31,6 @@ build() {
 		--prefix=/usr \
 		--libexecdir=/usr/lib/${pkgname} \
 		--enable-introspection \
-		--disable-static \
 		--disable-update-mimedb
 	make
 }
@@ -41,4 +40,3 @@ package() {
 	make DESTDIR="${pkgdir}" install
 }
 
-# -*- mode: bash;-*-

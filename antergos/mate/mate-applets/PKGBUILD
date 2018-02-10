@@ -3,7 +3,7 @@
 
 pkgname=mate-applets
 pkgver=1.20.0
-pkgrel=2
+pkgrel=1
 pkgdesc="Applets for MATE panel"
 arch=('x86_64')
 url="https://mate-desktop.org"
@@ -28,7 +28,6 @@ _monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 
 prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
-	grep -RZl 'env python' | xargs -0 -l sed -i 's/env python/env python2/'
 }
 
 build() {
@@ -48,4 +47,3 @@ package() {
 	make DESTDIR="${pkgdir}" install
 }
 
-# -*- mode: bash;-*-
