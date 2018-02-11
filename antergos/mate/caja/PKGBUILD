@@ -30,6 +30,8 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--libexecdir=/usr/lib/${pkgname} \
+		--bindir=/usr/bin \
+		--sbindir=/usr/bin \
 		--enable-introspection \
 		--disable-update-mimedb
 	make
