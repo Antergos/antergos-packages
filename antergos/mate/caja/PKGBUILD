@@ -27,11 +27,10 @@ _monitored_match_pattern='/^\d\.\d[02468]\.\d+$/'
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
+	export PATH="/usr/bin:${PATH}"
 	./configure \
 		--prefix=/usr \
 		--libexecdir=/usr/lib/${pkgname} \
-		--bindir=/usr/bin \
-		--sbindir=/usr/bin \
 		--enable-introspection \
 		--disable-update-mimedb
 	make
