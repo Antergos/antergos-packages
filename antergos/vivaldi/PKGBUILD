@@ -41,7 +41,6 @@ source=(
 	"$(_from_arch_pkg chromium-skia-harmony.patch)"
 	"$(_from_arch_pkg chromium-memcpy-r0.patch)"
 	"$(_from_arch_pkg chromium-clang-r2.patch)"
-	"$(_from_arch_pkg chromium-exclude_unwind_tables.patch)"
 	"$(_from_arch_pkg chromium-widevine.patch)"
 )
 md5sums=('28adb245d47e78bd908164a746d82b29'
@@ -53,7 +52,6 @@ md5sums=('28adb245d47e78bd908164a746d82b29'
          '254061cb349cff714230b7cca83b0a4c'
          'cb40c4153943f9eb5e38e90ba2f8b382'
          '27dbd1479d469346d1ffe27c7e7c0011'
-         '3e30a8e6629c931a640d65d4ab02b939'
          '95535a28e5041183ef715c7daa476732')
 
 # Possible replacements are listed in build/linux/unbundle/replace_gn_files.py
@@ -100,9 +98,6 @@ prepare() {
 	fi
 
 	echo "LASTCHANGE=$_chrome_build_hash-" >build/util/LASTCHANGE
-
-	# https://chromium-review.googlesource.com/c/chromium/src/+/712575
-	patch -Np1 -i ../chromium-exclude_unwind_tables.patch
 
 	# https://crbug.com/772655
 	patch -Np1 -i ../'chromium-use-fromUTF8-for-UnicodeString-construction.patch'
