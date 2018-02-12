@@ -81,7 +81,7 @@ declare -rgA _system_libs=(
 declare -rga _unwanted_bundled_libs=(
   ${!_system_libs[@]}
   ${_system_libs[libjpeg]+libjpeg_turbo}
-  freetype
+  #freetype
   harfbuzz-ng
 )
 depends+=(${_system_libs[@]} freetype2 harfbuzz)
@@ -139,13 +139,14 @@ prepare() {
 	# *should* do what the remove_bundled_libraries.py script does, with the
 	# added benefit of not having to list all the remaining libraries
 	local _lib
-	for _lib in "${_unwanted_bundled_libs[@]}"; do
-	find -type f -path "*third_party/$_lib/*" \
-		\! -path "*third_party/$_lib/chromium/*" \
-		\! -path "*third_party/$_lib/google/*" \
-		\! -path "*base/third_party/icu/*" \
-		\! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
-		-delete
+	for _lib in "${_unwanted_bundled_libs[@]}"
+	do
+		find -type f -path "*third_party/$_lib/*" \
+			\! -path "*third_party/$_lib/chromium/*" \
+			\! -path "*third_party/$_lib/google/*" \
+			\! -path "*base/third_party/icu/*" \
+			\! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
+			-delete
 	done
 
 	python2 build/linux/unbundle/replace_gn_files.py --system-libraries "${!_system_libs[@]}"
