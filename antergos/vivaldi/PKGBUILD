@@ -79,7 +79,7 @@ declare -rgA _system_libs=(
 declare -rga _unwanted_bundled_libs=(
   ${!_system_libs[@]}
   ${_system_libs[libjpeg]+libjpeg_turbo}
-  #freetype
+  freetype
   harfbuzz-ng
 )
 depends+=(${_system_libs[@]} freetype2 harfbuzz)
@@ -190,6 +190,8 @@ build() {
 		'enable_swiftshader=false'
 		'enable_nacl=false'
 		'enable_widevine=true'
+		'use_system_freetype=true'
+		'use_system_harfbuzz=true'
 	)
 
 	python2 tools/gn/bootstrap/bootstrap.py --gn-gen-args "${args[*]}"
