@@ -3,12 +3,12 @@
 
 pkgname=scudcloud
 pkgver=1.65
-pkgrel=4
+pkgrel=5
 pkgdesc="A non official open-source Linux desktop client app for Slack."
 arch=('any')
 url="https://github.com/raelgc/scudcloud"
 license=('MIT')
-depends=('python-setuptools' 'python-dbus' 'python-pyqt5' 'hunspell-en')
+depends=('python-setuptools' 'python-dbus' 'python-pyqt5' 'hunspell-en' 'qt5-webkit')
 groups=('messaging')
 source=("https://github.com/raelgc/scudcloud/archive/v${pkgver}.tar.gz")
 md5sums=('284166e674342c98683e018a3c09ccab')
