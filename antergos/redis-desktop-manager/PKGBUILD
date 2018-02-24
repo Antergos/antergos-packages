@@ -3,16 +3,18 @@
 
 pkgname=redis-desktop-manager
 pkgver=0.9.0.3
-pkgrel=3
+pkgrel=1
 pkgdesc='Cross-platform GUI management tool for Redis'
 arch=('x86_64')
 url='http://redisdesktop.com/'
 license=('LGPLv2.1')
 depends=('qt5-base' 'qt5-imageformats' 'qt5-tools' 'qt5-declarative' 'qt5-quickcontrols'
-		'qt5-graphicaleffects' 'qt5-svg' 'libssh2')
+		'qt5-graphicaleffects' 'qt5-svg' 'libssh2' 'qt5-charts')
 makedepends=('git' 'python2')
 conflicts=('redis-desktop-manager-bin')
-source=("${pkgname}-${pkgver}::git+https://github.com/uglide/RedisDesktopManager.git#tag=${pkgver/%.1/-1}"
+_tag="${pkgver}"
+[[ 7 = "${#pkgver}" ]] && _tag="$(echo ${pkgver} | sed -r 's/\.([0-9]+)$/-\1/')"
+source=("${pkgname}-${pkgver}::git+https://github.com/uglide/RedisDesktopManager.git#tag=${_tag}"
 		'rdm.sh'
 		'rdm.desktop')
 md5sums=('SKIP'
