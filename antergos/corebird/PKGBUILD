@@ -2,7 +2,7 @@
 # Contributor: Carlos Silva <r3pek@r3pek.org>
 
 pkgname=corebird
-pkgver=1.7.3
+pkgver=1.7.4
 pkgrel=1
 pkgdesc='Native Gtk+ Twitter Client'
 arch=('x86_64')
