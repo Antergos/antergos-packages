@@ -16,7 +16,7 @@ md5sums=('11c7dd7ded5db6b81cfabd28f233b9d0')
 
 
 package() {
-	local _gemdir="$(ruby -rubygems -e"puts Gem.default_dir")"
+	local _gemdir="$(ruby -e"puts Gem.default_dir")"
 	gem install --no-user-install --ignore-dependencies -i "$pkgdir$_gemdir" -n "$pkgdir/usr/bin" "$_pkgname-$pkgver.gem"
 	install -D "$pkgdir$_gemdir/gems/$_pkgname-$pkgver/MIT-LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
