@@ -1,7 +1,8 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme-square
-pkgver=0.r83_9
+_pkgver=18-02-16
+pkgver="${_pkgver//-/.}"
 pkgrel=1
 epoch=1
 pkgdesc="Square icon expansion theme from the Numix project"
@@ -11,29 +12,19 @@ license=('GPL3')
 depends=('numix-icon-theme')
 replaces=('numix-icon-theme-square-kde')
 conflicts=('numix-icon-theme-square-git')
-options=('!strip')
-install="${pkgname}.install"
-source=('git+http://github.com/numixproject/numix-icon-theme-square.git'
+source=("https://github.com/numixproject/numix-icon-theme-square/archive/${_pkgver}.tar.gz"
 		'https://github.com/numixproject/numix-icon-theme-square/pull/5.patch')
-md5sums=('SKIP'
+md5sums=('77dcc69e2da381ab9d8f44b08987fed3'
          '94bea0f075e8dd0dc9bf1d0f8bacded8')
 
 
 # BEGIN ANTBS METADATA
-_is_monitored='True'
+_is_monitored='False'
 _monitored_service='github'
-_monitored_type='commits'
+_monitored_type='releases'
 _monitored_project='numixproject'
 _monitored_repo='numix-icon-theme-square'
 # END ANTBS METADATA
-
-
-pkgver() {
-	cd "${srcdir}/${pkgname}"
-
-	printf "0.r83_%s" "$(git rev-list --count HEAD)"
-}
-
 
 
 package() {
