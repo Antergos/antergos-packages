@@ -28,7 +28,7 @@ _monitored_repo='numix-icon-theme-square'
 
 
 package() {
-	cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 
 	# https://github.com/numixproject/numix-icon-theme-square/pull/5
 	patch -Np1 -i ../5.patch
