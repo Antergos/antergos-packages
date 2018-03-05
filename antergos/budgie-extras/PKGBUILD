@@ -1,0 +1,27 @@
+# Maintainer: Antergos devs <devs@antergos.com>
+# Original Maintainer: Jonas Strassel <info@jonas-strassel.de>
+
+pkgname=budgie-extras
+pkgver=0.4.2
+pkgrel=1
+pkgdesc="Additional Budgie Desktop enhancements for the user experience (ubuntubudgie)"
+arch=('x86_64')
+license=('GPL3')
+depends=('budgie-desktop' 'xorg-xprop' 'xorg-xinput' 'xorg-xrandr' 'xdotool' 'wmctrl' 'xprintidle') 
+makedepends=('gobject-introspection' 'meson' 'ninja' 'vala')
+source=("https://github.com/UbuntuBudgie/budgie-extras/releases/download/v0.4.2/${pkgname}-${pkgver}.tar.xz")
+sha256sums=('07acb4dc01802d17c174febff73b8dbe9f5282b2d7b8397465bcad749a727bbe')
+url="https://github.com/UbuntuBudgie/budgie-extras"
+
+build() {
+    cd "${pkgname}-${pkgver}"
+    mkdir -p build
+    cd build
+    meson --prefix /usr --buildtype=plain ..
+    ninja
+}
+
+package() {
+    cd "${pkgname}-${pkgver}/build"
+    DESTDIR="${pkgdir}" ninja install
+}
