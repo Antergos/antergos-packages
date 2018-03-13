@@ -1,8 +1,0 @@
-NAME="Antergos Linux"
-PRETTY_NAME="Antergos Linux"
-ID="antergos"
-ID_LIKE="arch"
-ANSI_COLOR="0;36"
-HOME_URL="https://www.antergos.com/"
-SUPPORT_URL="https://forum.antergos.com/"
-BUG_REPORT_URL="https://bugs.antergos.com/"
