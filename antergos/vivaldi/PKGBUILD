@@ -3,9 +3,10 @@
 # Contributor: TZ86
 
 _archgit_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
+_archgit_commit='1512b44bbd90e88e5b8b129bf229be3fbd77bac9'
 
 _from_arch_pkg() {
-	echo "${1}::${_archgit_url}/${1}?h=packages/chromium"
+	echo "${1}::${_archgit_url}/${1}?h=packages/chromium&id=${_archgit_commit}"
 }
 
 pkgname=vivaldi
