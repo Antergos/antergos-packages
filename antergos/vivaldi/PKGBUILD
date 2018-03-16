@@ -9,9 +9,9 @@ _from_arch_pkg() {
 }
 
 pkgname=vivaldi
-pkgver=1.14.1077.41
-# https://update.vivaldi.com/update/1.0/relnotes/1.14.1077.41.html
-_chromium=64.0.3282.119 # https://omahaproxy.appspot.com
+pkgver=1.14.1077.55
+# https://update.vivaldi.com/update/1.0/relnotes/1.14.1077.55.html
+_chromium=64.0.3282.189 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
@@ -33,7 +33,7 @@ noextract=('chrome.rpm')
 
 source=(
 	"https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.x86_64.rpm"
-	"https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
+	"https://chromium.googlesource.com/chromium/src/+archive/$_chromium.tar.gz"
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
 	"$(_from_arch_pkg chromium-use-fromUTF8-for-UnicodeString-construction.patch)"
@@ -85,7 +85,7 @@ declare -rga _unwanted_bundled_libs=(
 depends+=(${_system_libs[@]} freetype2 harfbuzz)
 
 prepare() {
-	cd "$srcdir/chromium-$_chromium"
+	cd "$srcdir/$_chromium"
 
 	# https://crbug.com/710701
 	local _chrome_build_hash=$(
@@ -148,7 +148,7 @@ prepare() {
 }
 
 build() {
-	cd "$srcdir/chromium-$_chromium"
+	cd "$srcdir/$_chromium"
 
 	export PATH="$srcdir/python2-path:$PATH"
 	export HOME="$srcdir"
