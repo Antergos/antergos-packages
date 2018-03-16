@@ -30,36 +30,24 @@ makedepends=(
 provides=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 conflicts=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 replaces=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
-noextract=('chrome.rpm')
+noextract=('chrome.rpm' "$_chromium.tar.gz")
 
 source=(
 	"https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.x86_64.rpm"
 	"https://chromium.googlesource.com/chromium/src/+archive/$_chromium.tar.gz"
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
-	"$(_from_arch_pkg chromium-use-fromUTF8-for-UnicodeString-construction.patch)"
-	"$(_from_arch_pkg chromium-omnibox-unescape-fragment.patch)"
-	"$(_from_arch_pkg chromium-skia-harmony.patch)"
-	"$(_from_arch_pkg chromium-memcpy-r0.patch)"
-	"$(_from_arch_pkg chromium-clang-r2.patch)"
-	"$(_from_arch_pkg chromium-widevine.patch)"
 )
 md5sums=('28adb245d47e78bd908164a746d82b29'
          '5b72bcaba2ad920c524cd92a7a6125fe'
          '69e278a4237dafab7578cdeb4af11775'
-         'd50d8f0a6940791eabc41c4f64e6a3cf'
-         '40ff364c3a581e5f7ec4a84d785ab6a4'
-         'e42a8b91ea55b4765b9b2b9e2437a9d0'
-         '254061cb349cff714230b7cca83b0a4c'
-         'cb40c4153943f9eb5e38e90ba2f8b382'
-         '27dbd1479d469346d1ffe27c7e7c0011'
-         '95535a28e5041183ef715c7daa476732')
+         'd50d8f0a6940791eabc41c4f64e6a3cf')
 
 # Possible replacements are listed in build/linux/unbundle/replace_gn_files.py
 # Keys are the names in the above script; values are the dependencies in Arch
 declare -rgA _system_libs=(
   #[ffmpeg]=ffmpeg            # https://crbug.com/731766
-  [flac]=flac
+  #[flac]=flac
   #[fontconfig]=fontconfig    # Enable for M65
   #[freetype]=freetype2       # Using 'use_system_freetype=true' until M65
   #[harfbuzz-ng]=harfbuzz     # Using 'use_system_harfbuzz=true' until M65
@@ -86,7 +74,10 @@ declare -rga _unwanted_bundled_libs=(
 depends+=(${_system_libs[@]} freetype2 harfbuzz)
 
 prepare() {
-	cd "$srcdir/src-$_chromium"
+	mkdir -p "$srcdir/$_chromium"
+	tar -xf "$srcdir/$_chromium.tar.gz" -C "$srcdir/$_chromium"
+
+	cd "$srcdir/$_chromium"
 
 	# https://crbug.com/710701
 	local _chrome_build_hash=$(
@@ -99,19 +90,6 @@ prepare() {
 	fi
 
 	echo "LASTCHANGE=$_chrome_build_hash-" >build/util/LASTCHANGE
-
-	# https://crbug.com/772655
-	patch -Np1 -i ../'chromium-use-fromUTF8-for-UnicodeString-construction.patch'
-
-	# https://crbug.com/789163
-	patch -Np1 -i ../chromium-omnibox-unescape-fragment.patch
-
-	# https://crbug.com/skia/6663#c10
-	patch -Np4 -i ../chromium-skia-harmony.patch
-
-	# Fixes from Gentoo
-	patch -Np1 -i ../chromium-memcpy-r0.patch
-	patch -Np1 -i ../chromium-clang-r2.patch
 
 	# Remove compiler flags not supported by our system clang
 	sed -i \
@@ -149,7 +127,7 @@ prepare() {
 }
 
 build() {
-	cd "$srcdir/src-$_chromium"
+	cd "$srcdir/$_chromium"
 
 	export PATH="$srcdir/python2-path:$PATH"
 	export HOME="$srcdir"
