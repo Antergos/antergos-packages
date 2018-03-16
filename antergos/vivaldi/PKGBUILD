@@ -86,7 +86,7 @@ declare -rga _unwanted_bundled_libs=(
 depends+=(${_system_libs[@]} freetype2 harfbuzz)
 
 prepare() {
-	cd "$srcdir/$_chromium"
+	cd "$srcdir/src-$_chromium"
 
 	# https://crbug.com/710701
 	local _chrome_build_hash=$(
@@ -149,7 +149,7 @@ prepare() {
 }
 
 build() {
-	cd "$srcdir/$_chromium"
+	cd "$srcdir/src-$_chromium"
 
 	export PATH="$srcdir/python2-path:$PATH"
 	export HOME="$srcdir"
