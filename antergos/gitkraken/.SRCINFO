@@ -1,6 +1,6 @@
 pkgbase = gitkraken
 	pkgdesc = The intuitive, fast, and beautiful cross-platform Git client.
-	pkgver = 3.4.0
+	pkgver = 3.4.1
 	pkgrel = 1
 	url = https://www.gitkraken.com/
 	arch = x86_64
@@ -11,21 +11,21 @@ pkgbase = gitkraken
 	depends = libgnome-keyring
 	depends = gconf
 	depends = alsa-lib
-	depends = libcurl-openssl-1.0
+	depends = libcurl-gnutls
 	depends = libxss
 	depends = rtmpdump
 	optdepends = git-lfs: git-lfs support
 	provides = gitkraken
-	source = gitkraken-3.4.0.tar.gz::https://release.gitkraken.com/linux/v3.4.0.tar.gz
+	source = gitkraken-3.4.1.tar.gz::https://release.gitkraken.com/linux/v3.4.1.tar.gz
 	source = GitKraken.desktop
 	source = gitkraken.png
 	source = eula.html
-	source = gitkraken-launcher
-	sha256sums = 220f3b2ee176362e5ec46227a4d56d3c1cf5e3ab245a20222d03e337f22c6f40
+	source = gitkraken.sh
+	sha256sums = a20f375d83bb5e6825b1f01af085b24cca88c7bc2d3eccac7a1df229dda958a2
 	sha256sums = c001122608370bc43d6cfefd8e217f337a07f544c351179e816983635f8ff45d
 	sha256sums = a2b3551f83bcbe56da961615f066bb736cd15d98e41c93b3b4add0d56606d902
-	sha256sums = 9566342308bf35b56e626fa1b0d716eb16991712cc43b617c4f0d95e005311d1
-	sha256sums = 6130330390309394823f7b4f234423f7f111c5e4ef20706ea185f57a2f9bc5b0
+	sha256sums = 438fdcad5ba083aad1fe9a53b9ac05f61598b79b329478505d37ca72f166b2c8
+	sha256sums = 0346815a2d43887c2f7715384043ee9674c30eebd2d6cc4d9c788238cb8ce87e
 
 pkgname = gitkraken
 
