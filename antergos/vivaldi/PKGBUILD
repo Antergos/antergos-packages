@@ -3,16 +3,15 @@
 # Contributor: TZ86
 
 _archgit_url='https://git.archlinux.org/svntogit/packages.git/plain/trunk'
-_archgit_commit='1512b44bbd90e88e5b8b129bf229be3fbd77bac9'
 
 _from_arch_pkg() {
-	echo "${1}::${_archgit_url}/${1}?h=packages/chromium&id=${_archgit_commit}"
+	echo "${1}::${_archgit_url}/${1}?h=packages/chromium"
 }
 
 pkgname=vivaldi
 pkgver=1.14.1077.55
 # https://update.vivaldi.com/update/1.0/relnotes/1.14.1077.55.html
-_chromium=64.0.3282.189 # https://omahaproxy.appspot.com
+_chromium=65.0.3325.146 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
@@ -30,28 +29,39 @@ makedepends=(
 provides=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 conflicts=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
 replaces=('vivaldi-ffmpeg-codecs' 'vivaldi-widevine')
-noextract=('chrome.rpm' "$_chromium.tar.gz")
+noextract=('chrome.rpm')
 
 source=(
 	"https://downloads.vivaldi.com/stable/vivaldi-stable-${pkgver}-1.x86_64.rpm"
-	"https://chromium.googlesource.com/chromium/src/+archive/$_chromium.tar.gz"
+	"https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
+	"$(_from_arch_pkg chromium-stdint.patch)"
+	"$(_from_arch_pkg chromium-math.h-r0.patch)"
+	"$(_from_arch_pkg chromium-skia-harmony.patch)"
+	"$(_from_arch_pkg chromium-clang-r2.patch)"
+	"$(_from_arch_pkg chromium-widevine.patch)"
+
 )
-md5sums=('28adb245d47e78bd908164a746d82b29'
-         '5b72bcaba2ad920c524cd92a7a6125fe'
-         '69e278a4237dafab7578cdeb4af11775'
-         'd50d8f0a6940791eabc41c4f64e6a3cf')
+md5sums=('89bd2fe0c52fda03aa0039f8b76e252c'
+         '16770a0fb204e39135f78c3c67b911f5'
+         '0a684a6dd5495ae19361f1c870985502'
+         'd50d8f0a6940791eabc41c4f64e6a3cf'
+         '9d6eab4a8302b23a991ddc8682ecaaab'
+         '01f7422efc71c1dd9255b5d9f72a36ec'
+         '254061cb349cff714230b7cca83b0a4c'
+         '27dbd1479d469346d1ffe27c7e7c0011'
+         '95535a28e5041183ef715c7daa476732')
 
 # Possible replacements are listed in build/linux/unbundle/replace_gn_files.py
 # Keys are the names in the above script; values are the dependencies in Arch
 declare -rgA _system_libs=(
   #[ffmpeg]=ffmpeg            # https://crbug.com/731766
-  #[flac]=flac
+  [flac]=flac
   #[fontconfig]=fontconfig    # Enable for M65
   #[freetype]=freetype2       # Using 'use_system_freetype=true' until M65
   #[harfbuzz-ng]=harfbuzz     # Using 'use_system_harfbuzz=true' until M65
-  #[icu]=icu
+  [icu]=icu
   [libdrm]=''
   [libjpeg]=libjpeg
   #[libpng]=libpng            # https://crbug.com/752403#c10
@@ -74,10 +84,7 @@ declare -rga _unwanted_bundled_libs=(
 depends+=(${_system_libs[@]} freetype2 harfbuzz)
 
 prepare() {
-	mkdir -p "$srcdir/$_chromium"
-	tar -xf "$srcdir/$_chromium.tar.gz" -C "$srcdir/$_chromium"
-
-	cd "$srcdir/$_chromium"
+	cd "$srcdir/chromium-$_chromium"
 
 	# https://crbug.com/710701
 	local _chrome_build_hash=$(
@@ -91,12 +98,23 @@ prepare() {
 
 	echo "LASTCHANGE=$_chrome_build_hash-" >build/util/LASTCHANGE
 
+
+	patch -Np1 -i ../chromium-stdint.patch
+	patch -Np1 -i ../chromium-math.h-r0.patch
+	patch -Np4 -i ../chromium-skia-harmony.patch
+	patch -Np1 -i ../chromium-clang-r2.patch
+	patch -Np1 -i ../chromium-widevine.patch
+
 	# Remove compiler flags not supported by our system clang
 	sed -i \
 		-e '/"-Wno-enum-compare-switch"/d' \
 		-e '/"-Wno-null-pointer-arithmetic"/d' \
 		-e '/"-Wno-tautological-unsigned-zero-compare"/d' \
 		-e '/"-Wno-tautological-constant-compare"/d' build/config/compiler/BUILD.gn
+
+	# chromium 46 gives an error about a missing file
+	# workaround create empty
+	touch chrome/test/data/webui/i18n_process_css_test.html
 
 	# Use Python 2
 	find . -name '*.py' -exec sed -i -r 's|/usr/bin/python$|&2|g' {} +
@@ -127,7 +145,7 @@ prepare() {
 }
 
 build() {
-	cd "$srcdir/$_chromium"
+	cd "$srcdir/chromium-$_chromium"
 
 	export PATH="$srcdir/python2-path:$PATH"
 	export HOME="$srcdir"
