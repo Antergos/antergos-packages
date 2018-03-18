@@ -3,21 +3,21 @@
 # Contributor: Roman Timushev <romikt@gmail.com>
 
 pkgname=antergos-gnome-defaults-list
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
 pkgdesc="default file associations for GNOME environment"
 arch=('any')
 url="http://www.antergos.com"
 license=('GPL3')
 conflicts=('gnome-defaults-list')
-source=(defaults.list)
-sha256sums=('f27412ac87cd017bbef90e92200e05c989ceed4ab9aad4efa7ad1d615d5c261e')
+source=(mimeapps.list)
+sha256sums=('ce243c025ebdb7aef19006a42b2ccbbce1aa77bdc706a5947477907298e12fbd')
 
 package() {
-  install -d "$pkgdir/etc/gnome"
-  install -d "$pkgdir/usr/share/applications"
-  cp $srcdir/defaults.list $pkgdir/etc/gnome/defaults.list
-  ln -s "/etc/gnome/defaults.list" "$pkgdir/usr/share/applications/"
+  install -d "${pkgdir}/etc/gnome"
+  install -d "${pkgdir}/usr/share/applications"
+  cp ${srcdir}/mimeapps.list ${pkgdir}/etc/gnome/mimeapps.list
+  ln -s "/etc/gnome/mimeapps.list" "${pkgdir}/usr/share/applications/"
 }
 
 # vim:set ts=2 sw=2 et:
