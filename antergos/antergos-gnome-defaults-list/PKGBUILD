@@ -4,13 +4,14 @@
 
 pkgname=antergos-gnome-defaults-list
 pkgver=1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="default file associations for GNOME environment"
 arch=('any')
 url="http://www.antergos.com"
 license=('GPL3')
 conflicts=('gnome-defaults-list')
 source=(mimeapps.list)
+backup=('etc/gnome/mimeapps.list')
 sha256sums=('ce243c025ebdb7aef19006a42b2ccbbce1aa77bdc706a5947477907298e12fbd')
 
 package() {
