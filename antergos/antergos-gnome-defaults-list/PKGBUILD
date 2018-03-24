@@ -4,7 +4,7 @@
 
 pkgname=antergos-gnome-defaults-list
 pkgver=1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="default file associations for GNOME environment"
 arch=('any')
 url="http://www.antergos.com"
@@ -20,6 +20,4 @@ package() {
   cp ${srcdir}/mimeapps.list ${pkgdir}/etc/gnome/mimeapps.list
   ln -s "/etc/gnome/mimeapps.list" "${pkgdir}/usr/share/applications/"
 }
-
-# vim:set ts=2 sw=2 et:
 
