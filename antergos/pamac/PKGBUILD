@@ -4,7 +4,7 @@
 pkgname=(pamac pamac-tray-appindicator)
 pkgver=6.2.5
 _pkgver=6.2.5
-pkgrel=1
+pkgrel=2
 pkgdesc='A GTK3 frontend for libalpm'
 arch=('x86_64')
 url='https://github.com/manjaro/pamac'
@@ -19,10 +19,10 @@ backup=('etc/pamac.conf')
 conflicts=('pamac-dev')
 source=(
 	"pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz"
-	'https://patch-diff.githubusercontent.com/raw/manjaro/pamac/pull/369.patch'
+	 "git-$pkgver-$pkgrel.patch::https://github.com/manjaro/pamac/compare/v$_pkgver...6ea4709.patch"
 )
-md5sums=('a6c90b8fc686be4702eda5ae5a5863a1'
-         'b0ce8a76d50eb58cbf6542db868ca4f5')
+md5sums=('e7abead3fe49ff827bf6bdc2f60e2eb8'
+         '54c8eb052f125f15baf09746a800a3a8')
 
 
 # BEGIN ANTBS METADATA
@@ -42,7 +42,7 @@ prepare() {
 
 	# patches here
 	# https://github.com/manjaro/pamac/pull/369
-	patch -Np1 -i ../../369.patch
+	patch -Np1 -i ../../"git-$pkgver-$pkgrel.patch"
 }
 
 build() {
