@@ -1,7 +1,7 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=jetbrains-toolbox
-pkgver=1.7.3593
+pkgver=1.8.3678
 pkgrel=1
 epoch=2
 pkgdesc="One-stop access to all your coding tools from JetBrains."
