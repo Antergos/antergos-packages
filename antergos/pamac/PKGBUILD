@@ -2,8 +2,8 @@
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=(pamac pamac-tray-appindicator)
-pkgver=6.2.6
-_pkgver=6.2.6
+pkgver=6.2.7
+_pkgver=6.2.7
 pkgrel=2
 pkgdesc='A GTK3 frontend for libalpm'
 arch=('x86_64')
