@@ -4,7 +4,7 @@
 pkgname=(pamac pamac-tray-appindicator)
 pkgver=6.2.7
 _pkgver=6.2.7
-pkgrel=2
+pkgrel=1
 pkgdesc='A GTK3 frontend for libalpm'
 arch=('x86_64')
 url='https://github.com/manjaro/pamac'
@@ -21,8 +21,8 @@ source=(
 	"pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz"
 	"git-$pkgver-$pkgrel.patch::https://github.com/manjaro/pamac/compare/v$_pkgver...afd343e.patch"
 )
-md5sums=('765c5b6ade6b5d3dc1f9141ae558ff99'
-         '3cb45dff242c98f2c519d18e418192ce')
+md5sums=('22508eb520f23a923078e01d6e6ad21a'
+         'd41d8cd98f00b204e9800998ecf8427e')
 
 
 # BEGIN ANTBS METADATA
