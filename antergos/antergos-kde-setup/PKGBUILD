@@ -2,7 +2,7 @@
 
 pkgname=antergos-kde-setup
 _pkgname=antergos-desktop-settings
-pkgver=1.6
+pkgver=1.7
 pkgrel=4
 pkgdesc='Setup configuration for Antergos KDE Plasma'
 url='http://github.com/Antergos/antergos-desktop-settings/plasma'
