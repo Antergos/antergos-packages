@@ -3,13 +3,14 @@
 
 pkgname=b43-firmware
 pkgver=6.30.163.46
-pkgrel=7
-pkgdesc="Firmware for Broadcom B43 wireless networking chips"
+pkgrel=8
+pkgdesc="Firmware for Broadcom B43 wireless networking chips - latest release"
 arch=("any")
 url="https://wireless.wiki.kernel.org/en/users/Drivers/b43"
-license=("GPL")
+license=("unknown")
 depends=("linux>=3.2")
 makedepends=("b43-fwcutter>=018")
+conflicts=(b43-firmware-classic)
 options=(!emptydirs)
 source=(http://www.lwfinger.com/${pkgname}/broadcom-wl-${pkgver}.tar.bz2)
 sha1sums=('237d29a7701429054f5c82c000ef2d9aa6f2c3db')
@@ -22,8 +23,5 @@ package() {
 
 	# Application
 	b43-fwcutter -w "${pkgdir}"/usr/lib/firmware/ broadcom-wl-${pkgver}.wl_apsta.o
-
-	# Messages
-	#msg "You should add 'b43' to the 'MODULES' array of your '/etc/rc.conf' file."
 }
 
