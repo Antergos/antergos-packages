@@ -3,7 +3,7 @@
 
 pkgname=corebird
 pkgver=1.7.4
-pkgrel=1
+pkgrel=2
 pkgdesc='Native Gtk+ Twitter Client'
 arch=('x86_64')
 license=('GPL')
