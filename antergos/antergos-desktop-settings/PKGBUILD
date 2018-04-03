@@ -1,8 +1,8 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-desktop-settings
-pkgver=1.6
-pkgrel=2
+pkgver=1.7
+pkgrel=1
 pkgdesc="Setup configuration for Antergos Desktops"
 url="http://github.com/Antergos/antergos-desktop-settings"
 arch=('any')
@@ -42,6 +42,5 @@ package() {
 
     install -Dm755 "skel/.config/openbox/pipemenus/obrecent.sh" \
         ${pkgdir}/etc/skel/.config/openbox/pipemenus/obrecent.sh
-
 
 }
