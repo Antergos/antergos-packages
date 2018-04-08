@@ -102,25 +102,25 @@ prepare() {
 	echo "LASTCHANGE=$_chrome_build_hash-" >build/util/LASTCHANGE
 
 
- 	 # Enable support for the Widevine CDM plugin
-	 # libwidevinecdm.so is not included, but can be copied over from Chrome
- 	 # (Version string doesn't seem to matter so let's go with "Pinkie Pie")
-	 sed "s/@WIDEVINE_VERSION@/Pinkie Pie/" ../chromium-widevine.patch |
-   	 patch -Np1
+	# Enable support for the Widevine CDM plugin
+	# libwidevinecdm.so is not included, but can be copied over from Chrome
+	# (Version string doesn't seem to matter so let's go with "Pinkie Pie")
+	sed "s/@WIDEVINE_VERSION@/Pinkie Pie/" ../chromium-widevine.patch |
+	patch -Np1
+		
+	# https://crbug.com/822820
+	patch -Np1 -i ../fix-crash-in-is_cfi-true-builds-with-unbundled-ICU.patch
 	
-  	 # https://crbug.com/822820
-  	 patch -Np1 -i ../fix-crash-in-is_cfi-true-builds-with-unbundled-ICU.patch
-
- 	 # https://crbug.com/skia/6663#c10
-  	 patch -Np4 -i ../chromium-skia-harmony.patch
+	# https://crbug.com/skia/6663#c10
+	patch -Np4 -i ../chromium-skia-harmony.patch
+		
+	# Fixes from Gentoo
+	patch -Np1 -i ../chromium-clang-r2.patch
+	patch -Np1 -i ../chromium-math.h-r0.patch
+	patch -Np1 -i ../chromium-stdint.patch
 	
-  	 # Fixes from Gentoo
-  	 patch -Np1 -i ../chromium-clang-r2.patch
-  	 patch -Np1 -i ../chromium-math.h-r0.patch
-  	 patch -Np1 -i ../chromium-stdint.patch
-	
-	 # Remove compiler flags not supported by our system clang
-	 sed -i \
+	# Remove compiler flags not supported by our system clang
+	sed -i \
 		-e '/"-Wno-enum-compare-switch"/d' \
 		-e '/"-Wno-null-pointer-arithmetic"/d' \
 		-e '/"-Wno-tautological-unsigned-zero-compare"/d' \
