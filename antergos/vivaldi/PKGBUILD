@@ -9,10 +9,10 @@ _from_arch_pkg() {
 }
 
 pkgname=vivaldi
-pkgver=1.14.1077.55
-# https://update.vivaldi.com/update/1.0/relnotes/1.14.1077.55.html
-_chromium=65.0.3325.146 # https://omahaproxy.appspot.com
-pkgrel=1
+pkgver=1.14.1077.60
+# https://update.vivaldi.com/update/1.0/relnotes/1.14.1077.60.html
+_chromium=65.0.3325.181 # https://omahaproxy.appspot.com
+pkgrel=2
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
 url="https://vivaldi.com"
@@ -36,21 +36,24 @@ source=(
 	"https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
-	"$(_from_arch_pkg chromium-stdint.patch)"
-	"$(_from_arch_pkg chromium-math.h-r0.patch)"
+	"$(_from_arch_pkg fix-crash-in-is_cfi-true-builds-with-unbundled-ICU.patch)"
 	"$(_from_arch_pkg chromium-skia-harmony.patch)"
 	"$(_from_arch_pkg chromium-clang-r2.patch)"
-	"$(_from_arch_pkg chromium-widevine.patch)"
+	"$(_from_arch_pkg chromium-math.h-r0.patch)"
+     	"$(_from_arch_pkg chromium-stdint.patch)"
+        "$(_from_arch_pkg chromium-widevine.patch)"
+
 
 )
-md5sums=('89bd2fe0c52fda03aa0039f8b76e252c'
-         '16770a0fb204e39135f78c3c67b911f5'
-         '0a684a6dd5495ae19361f1c870985502'
+md5sums=('63563bd6de21459f3c9bafe579277192'
+         '717988367527423b897712ec0e25a5dd'
+         '0e194b102a468958f71eef594510131b'
          'd50d8f0a6940791eabc41c4f64e6a3cf'
-         '9d6eab4a8302b23a991ddc8682ecaaab'
-         '01f7422efc71c1dd9255b5d9f72a36ec'
+         'a9e07c22ce941c58e8885405c082ea50'
          '254061cb349cff714230b7cca83b0a4c'
          '27dbd1479d469346d1ffe27c7e7c0011'
+         '01f7422efc71c1dd9255b5d9f72a36ec'
+         '9d6eab4a8302b23a991ddc8682ecaaab'
          '95535a28e5041183ef715c7daa476732')
 
 # Possible replacements are listed in build/linux/unbundle/replace_gn_files.py
@@ -99,12 +102,14 @@ prepare() {
 	echo "LASTCHANGE=$_chrome_build_hash-" >build/util/LASTCHANGE
 
 
-	patch -Np1 -i ../chromium-stdint.patch
+	patch -Np1 -i ../fix-crash-in-is_cfi-true-builds-with-unbundled-ICU.patch
+	patch -Np1 -i ../chromium-skia-harmony.patch
+	patch -Np4 -i ../chromium-clang-r2.patch
 	patch -Np1 -i ../chromium-math.h-r0.patch
-	patch -Np4 -i ../chromium-skia-harmony.patch
-	patch -Np1 -i ../chromium-clang-r2.patch
+	patch -Np1 -i ../chromium-stdint.patch
 	patch -Np1 -i ../chromium-widevine.patch
-	
+
+
 	# Remove compiler flags not supported by our system clang
 	sed -i \
 		-e '/"-Wno-enum-compare-switch"/d' \
@@ -113,9 +118,8 @@ prepare() {
 		-e '/"-Wno-tautological-constant-compare"/d' build/config/compiler/BUILD.gn
 
 	# chromium 46 gives an error about a missing file
- 	# workaround create empty
+	# workaround create empty
 	touch chrome/test/data/webui/i18n_process_css_test.html
-
 
 	# Use Python 2
 	find . -name '*.py' -exec sed -i -r 's|/usr/bin/python$|&2|g' {} +
