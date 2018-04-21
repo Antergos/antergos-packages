@@ -1,7 +1,17 @@
-post_install() {
-    /usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas
-}
-
 post_upgrade() {
-    /usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas
+	if [[ -e /home/antergos || -e /var/tmp/antergos/.chromium-flags-removed ]]; then
+		return
+	fi
+
+	if [[ -e /etc/skel/.config/chromium-flags.conf ]]; then
+		sed -ri 's%user-data-dir=.+antergos.+%\d%g' /etc/skel/.config/chromium-flags.conf
+	fi
+
+	for file in /home/*/.config/chromium-flags.conf
+	do
+		sed -ri 's%user-data-dir=.+antergos.+%\d%g' "${file}"
+	done
+
+	mkdir -p /var/tmp/antergos
+	touch /var/tmp/antergos/.chromium-flags-removed
 }
