@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=python-xapp
-pkgver=1.0.1
-pkgrel=1
+pkgver=1.2.01.0.1
+pkgrel=11
 pkgdesc='Python Xapp library'
 arch=('any')
 license=('GPL2')
