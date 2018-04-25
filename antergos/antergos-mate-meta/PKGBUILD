@@ -1,14 +1,14 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-mate-meta
-pkgver=1.0
-pkgrel=2
+pkgver=1.1
+pkgrel=1
 pkgdesc='Meta package for Antergos Mate'
 url='http://www.antergos.com'
 arch=('any')
 license=('GPL3')
 depends=('atril' 'brisk-menu' 'caja' 'caja-gksu' 'caja-open-terminal' 'engrampa'
-    'eom' 'gksu' 'gnome-keyring' 'gvfs-google' 'gvfs-mtp' 'gvfs-smb' 'libmatekbd'
+    'eom' 'gnome-keyring' 'gvfs-google' 'gvfs-mtp' 'gvfs-smb' 'libmatekbd'
     'libmatemixer' 'marco' 'mate-applets' 'mate-media' 'mate-mint-menu'
     'mate-power-manager' 'mate-screensaver' 'mate-backgrounds' 'mate-control-center'
     'mate-desktop' 'mate-menus' 'mate-notification-daemon' 'mate-panel'
