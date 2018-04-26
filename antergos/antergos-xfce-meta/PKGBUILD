@@ -1,15 +1,15 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-xfce-meta
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc='Meta package for Antergos Xfce'
 url='http://www.antergos.com'
 arch=('any')
 license=('GPL3')
 depends=('evince' 'file-roller' 'gamin' 'gnome-calculator' 'gnome-disk-utility'
-    'gnome-keyring' 'gtk-engine-murrine' 'gvfs-google' 'gvfs-mtp' 'mousepad'
-    'network-manager-applet' 'networkmanager-openvpn' 'networkmanager-pptp'
+    'gnome-keyring' 'gnome-screensaver' 'gtk-engine-murrine' 'gvfs-google' 'gvfs-mtp'
+    'mousepad' 'network-manager-applet' 'networkmanager-openvpn' 'networkmanager-pptp'
     'pamac' 'parole' 'python-pysmbc' 'polkit-gnome' 'pragha' 'qt5ct' 'ristretto'
     'thunar' 'thunar-archive-plugin' 'thunar-volman' 'transmission-gtk' 'tumbler'
     'xdg-user-dirs-gtk' 'exo' 'garcon' 'gtk-xfce-engine' 'xcursor-breeze'
