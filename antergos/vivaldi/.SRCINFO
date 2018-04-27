@@ -1,7 +1,7 @@
 pkgbase = vivaldi
 	pkgdesc = An advanced browser made with the power user in mind.
-	pkgver = 1.14.1077.60
-	pkgrel = 2
+	pkgver = 1.15.1147.36
+	pkgrel = 1
 	url = https://vivaldi.com
 	arch = x86_64
 	groups = browser
@@ -61,25 +61,21 @@ pkgbase = vivaldi
 	noextract = chrome.rpm
 	options = !strip
 	options = !zipman
-	source = https://downloads.vivaldi.com/stable/vivaldi-stable-1.14.1077.60-1.x86_64.rpm
-	source = https://commondatastorage.googleapis.com/chromium-browser-official/chromium-65.0.3325.181.tar.xz
+	source = https://downloads.vivaldi.com/stable/vivaldi-stable-1.15.1147.36-1.x86_64.rpm
+	source = https://commondatastorage.googleapis.com/chromium-browser-official/chromium-66.0.3359.139.tar.xz
 	source = chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 	source = chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html
 	source = fix-crash-in-is_cfi-true-builds-with-unbundled-ICU.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/fix-crash-in-is_cfi-true-builds-with-unbundled-ICU.patch?h=packages/chromium
+	source = fix-frame-buttons-rendering-too-large-when-using-OSX.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/fix-frame-buttons-rendering-too-large-when-using-OSX.patch?h=packages/chromium
 	source = chromium-skia-harmony.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-skia-harmony.patch?h=packages/chromium
-	source = chromium-clang-r2.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-clang-r2.patch?h=packages/chromium
-	source = chromium-math.h-r0.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-math.h-r0.patch?h=packages/chromium
-	source = chromium-stdint.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-stdint.patch?h=packages/chromium
 	source = chromium-widevine.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-widevine.patch?h=packages/chromium
-	md5sums = 63563bd6de21459f3c9bafe579277192
-	md5sums = 717988367527423b897712ec0e25a5dd
-	md5sums = 0e194b102a468958f71eef594510131b
+	md5sums = c7d271f76140c891b1b6e96ae4b3b71c
+	md5sums = b6318ddd70f1b31f71511cbd49603c7c
+	md5sums = aff080a985d0d20473ccec3a4e485560
 	md5sums = d50d8f0a6940791eabc41c4f64e6a3cf
 	md5sums = a9e07c22ce941c58e8885405c082ea50
+	md5sums = 6bf54d3ceeec5f13ba68b0ef74db9e20
 	md5sums = 254061cb349cff714230b7cca83b0a4c
-	md5sums = 27dbd1479d469346d1ffe27c7e7c0011
-	md5sums = 01f7422efc71c1dd9255b5d9f72a36ec
-	md5sums = 9d6eab4a8302b23a991ddc8682ecaaab
 	md5sums = 95535a28e5041183ef715c7daa476732
 
 pkgname = vivaldi
