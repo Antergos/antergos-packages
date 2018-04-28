@@ -2,7 +2,7 @@
 
 pkgname=antergos-mate-meta
 pkgver=1.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Meta package for Antergos Mate'
 url='http://www.antergos.com'
 arch=('any')
