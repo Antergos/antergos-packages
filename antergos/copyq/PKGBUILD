@@ -3,7 +3,7 @@
 
 pkgname=copyq
 _realname=CopyQ
-pkgver=3.3.1
+pkgver=3.4.0
 pkgrel=1
 pkgdesc='Clipboard manager with searchable and editable history.'
 url='https://github.com/hluk/CopyQ'
