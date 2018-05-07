@@ -3,7 +3,7 @@
 
 pkgname=python-xcpf
 _pkgname=python3-xcpf
-pkgver=2017.8
+pkgver=2018
 pkgrel=1
 pkgdesc="Xyne's common Pacman functions, for internal use."
 arch=('any')
@@ -14,7 +14,7 @@ replaces=('python3-xcpf')
 conflicts=('python3-xcpf')
 provides=('python3-xcpf')
 source=("http://xyne.archlinux.ca/projects/python3-xcpf/src/python3-xcpf-${pkgver}.tar.xz")
-md5sums=('5570c2c5e2c00c45592569aa2db814cb')
+md5sums=('2afbb9dd0458a9e35259f6266dd859e2')
 
 package () {
 	cd "$srcdir/$_pkgname-$pkgver"
