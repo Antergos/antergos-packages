@@ -13,7 +13,7 @@ pkgname=vivaldi
 pkgver=1.15.1147.36
 # https://update.vivaldi.com/update/1.0/relnotes/1.15.1147.36.html
 _chromium=66.0.3359.139 # https://omahaproxy.appspot.com
-pkgrel=2
+pkgrel=3
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
 url="https://vivaldi.com"
@@ -45,14 +45,14 @@ source=(
 
 
 )
-md5sums=('c7d271f76140c891b1b6e96ae4b3b71c'
-         'b6318ddd70f1b31f71511cbd49603c7c'
-         'aff080a985d0d20473ccec3a4e485560'
-         'd50d8f0a6940791eabc41c4f64e6a3cf'
-         'a9e07c22ce941c58e8885405c082ea50'
-         '6bf54d3ceeec5f13ba68b0ef74db9e20'
-         '254061cb349cff714230b7cca83b0a4c'
-         '95535a28e5041183ef715c7daa476732')
+md5sums=('c7d271f76140c891b1b6e96ae4b3b71c' 
+	'b6318ddd70f1b31f71511cbd49603c7c' 
+	'3d06df0bcdb32ab37b89466dd4c0132b' 
+	'65c1f3c6893b31db816d594ba5591956' 
+	'a9e07c22ce941c58e8885405c082ea50' 
+	'6bf54d3ceeec5f13ba68b0ef74db9e20' 
+	'254061cb349cff714230b7cca83b0a4c' 
+	'95535a28e5041183ef715c7daa476732')
 
 
 # Possible replacements are listed in build/linux/unbundle/replace_gn_files.py
@@ -260,6 +260,5 @@ package() {
 	# ALPM Hooks
 	mkdir -p "${pkgdir}/usr/share/libalpm"/{hooks,scripts}
 	cp "${srcdir}"/../*.hook "${pkgdir}/usr/share/libalpm/hooks"
-	install -Dm755 "${srcdir}"/../vivaldi-widevine-helper "${pkgdir}/usr/share/libalpm/scripts/vivaldi-widevine-helper"
+	install -Dm755 "${srcdir}/../vivaldi-widevine-helper" "${pkgdir}/usr/share/libalpm/scripts/vivaldi-widevine-helper"
 }
-
