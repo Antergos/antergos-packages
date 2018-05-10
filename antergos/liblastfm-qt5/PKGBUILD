@@ -5,8 +5,8 @@
 
 pkgname=liblastfm-qt5
 _pkgname=liblastfm
-pkgver=1.1.0
-pkgrel=4
+pkgver=1.1.0.r637
+pkgrel=2
 pkgdesc="A Qt5 C++ library for the Last.fm webservices"
 arch=('x86_64')
 url='https://github.com/lastfm/liblastfm/'
@@ -18,10 +18,10 @@ conflicts=('liblastfm')
 source=(${_pkgname}::"git+https://github.com/lastfm/${_pkgname}.git")
 md5sums=('SKIP')
 
-pkgver() {
-	cd "${_pkgname}"
-	printf "%s.r%s" "${pkgver}" "$(git rev-list --count HEAD)"
-}
+#pkgver() {
+#	cd "${_pkgname}"
+#	printf "%s.r%s" "${pkgver}" "$(git rev-list --count HEAD)"
+#}
 
 prepare() {
   rm -rf "build"
