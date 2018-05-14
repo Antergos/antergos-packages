@@ -3,7 +3,7 @@
 pkgname=antergos-wallpapers-extra
 _pkgname=wallpapers-extra
 pkgver=0.4
-pkgrel=1
+pkgrel=2
 pkgdesc='Extra wallpapers contributed by the Antergos User Community'
 arch=('any')
 url='https://antergos.com'
@@ -12,13 +12,11 @@ source=("https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
 sha256sums=('3fb887692db09a15f87f3e8cebeee2ebf98acce6d51693dabf3e0780688e73db')
 
 # ANTBS METADATA
-
 _is_monitored='True'
 _monitored_service='github'
 _monitored_type='releases'
 _monitored_project='antergos'
 _monitored_repo='wallpapers-extra'
-
 # END ANTBS METADATA
 
 package() {
