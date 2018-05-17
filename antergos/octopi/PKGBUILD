@@ -1,125 +1,111 @@
-# Maintainer: Antergos Developers <dev@antergos.com>
+# Maintainer: Antergos devs <devs@antergos.com>
+# AUR Maintainer: Jameson Pugh <imntreal@gmail.com>
 
-pkgname=octopi
-pkgdesc="A powerful Qt5 Pacman frontend."
-pkgver=0.8.1
-pkgrel=2
+pkgbase=octopi
+pkgname=('octopi')
+pkgver=0.8.5
+pkgrel=3
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
-#_gitcommit="master"
+_gitcommit="52e111f5ab53b5b60ac06ca1cd47c70e0aced435"
 arch=('x86_64')
-url="https://github.com/aarnt/octopi"
+url="http://octopiproject.wordpress.com"
 license=('GPL2')
-install="octopi.install"
-makedepends=('qt5-declarative' 'qt4' 'knotifications' 'libnotify')
-depends=('qt5-base' 'qt5-declarative' 'xterm' 'gksu')
+makedepends=('qt5-declarative' 'git' 'knotifications' 'alpm_octopi_utils' 'qtermwidget')
+pkgdesc="A powerful Pacman frontend using Qt5 libs"
+depends=('qt5-declarative' 'alpm_octopi_utils' 'qtermwidget' 'libnotify' 'knotifications' 'xterm')
 optdepends=('kdesu: for KDE'
-            'xfce4-notifyd: for notifications in XFCE'
-            'gist: for SysInfo report'
-            'pacaur: for AUR support'
-            'yaourt: for AUR support')
-conflicts=('oktopi-git' 'octopi-notifier-qt4' 'octopi-cachecleaner' 'octopi-repoeditor' 'octopi-notifier')
-replaces=('octopi-notifier-qt4' 'octopi-cachecleaner' 'octopi-repoeditor' 'octopi-notifier')
+			'gksu: for XFCE, Gnome, LXDE, Cinnamon'
+			'lxqt-sudo: for LXQT'
+			'gnome-keyring: for password management'
+			'gist: for SysInfo report'
+			'pacaur: for AUR support'
+			'yaourt: for AUR support'
+			'pacmanlogviewer: to view pacman log files')
+conflicts=('octopi-git')
 if [ "${_gitcommit}" != "" ]; then
-  source=("octopi-${_gitcommit}.tar.gz::https://github.com/aarnt/octopi/archive/${_gitcommit}.tar.gz")
+    source=("octopi-${pkgver}-${pkgrel}.tar.gz::https://github.com/aarnt/octopi/archive/${_gitcommit}.tar.gz")
 else
-  source=("octopi-${pkgver}.tar.gz::https://github.com/aarnt/octopi/archive/v${pkgver}.tar.gz")
+    source=("https://github.com/aarnt/${pkgname}/archive/v${pkgver}.tar.gz")
 fi
-source+=('octopi-repoeditor.desktop')
-sha256sums=('e01c6d959e5663797771b95b47951e3ad11a9abbc7cbb009f1f835404c5ff43e'
-            'd2b2aaf515b096dd75dfe62e45e1d16c0d365d7342960cc36e4d19a0ee2f3e00')
+sha256sums=('fda4b2c532d8f398ea03bfaf44fa86ab3a1d9611e652b313807a3193ad5a7e56')
 
-            
 prepare() {
+    if [ "${_gitcommit}" != "" ]; then
+        cd "${srcdir}/${pkgbase}-${_gitcommit}"
+    else
+        cd "${srcdir}/${pkgbase}-${pkgver}"
+    fi
 
-if [[ ${_gitcommit} != "" ]]; then
-    _SRC_DIR="${srcdir}"/"${pkgname}-${_gitcommit}"
-else
-    _SRC_DIR="${srcdir}"/"${pkgname}-${pkgver}"
-fi
-
-  cd "${_SRC_DIR}"
-
-  # sed version
-  sed -i -e "s|0.8.1|${pkgver}-${pkgrel}|g" src/strconstants.h
+	# sed version
+    sed -i -e "s|0.9.0 (dev)|${pkgver}-${pkgrel}|g" src/strconstants.h
+    # enable the kstatus switch, disable if you wish to build without Plasma/knotifications support
+    sed -e "s|DEFINES += ALPM_BACKEND #KSTATUS|DEFINES += ALPM_BACKEND KSTATUS|" -i notifier/octopi-notifier/octopi-notifier.pro
 }
 
 build() {
+    if [ "${_gitcommit}" != "" ]; then
+        cd "${srcdir}/${pkgbase}-${_gitcommit}"
+    else
+        cd "${srcdir}/${pkgbase}-${pkgver}"
+    fi
 
-if [[ ${_gitcommit} != "" ]]; then
-    _SRC_DIR="${srcdir}"/"${pkgname}-${_gitcommit}"
-else
-    _SRC_DIR="${srcdir}"/"${pkgname}-${pkgver}"
-fi
+    msg "Building octopi..."
+    qmake-qt5 octopi.pro
+    make
 
-  cd "${_SRC_DIR}"
+    cd notifier/pacmanhelper
+    qmake-qt5 QMAKE_CFLAGS_RELEASE="${CFLAGS}" QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" QMAKE_LFLAGS_RELEASE="${LDFLAGS}" pacmanhelper.pro
+    make
+    
+    cd ../../notifier/octopi-notifier
+    qmake-qt5 QMAKE_CFLAGS_RELEASE="${CFLAGS}" QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" QMAKE_LFLAGS_RELEASE="${LDFLAGS}" octopi-notifier.pro
+    make
+    
+    cd ../../repoeditor
+    qmake-qt5 QMAKE_CFLAGS_RELEASE="${CFLAGS}" QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" QMAKE_LFLAGS_RELEASE="${LDFLAGS}" octopi-repoeditor.pro
+    make
 
-  qmake-qt5 octopi.pro
-  make
-
-  cd "${_SRC_DIR}/notifier/pacmanhelper"
-  msg "Building pacmanhelper..."
-  qmake-qt5 pacmanhelper.pro
-  make
-
-  cd "${_SRC_DIR}/notifier/octopi-notifier"
-  msg "Building octopi-notifier..."
-  qmake-qt5 octopi-notifier.pro
-  make
-
-  cd "${_SRC_DIR}/repoeditor"
-  msg "Building octopi-repoeditor..."
-  qmake-qt5 octopi-repoeditor.pro
-  make
-
-  cd "${_SRC_DIR}/cachecleaner"
-  msg "Building octopi-cachecleaner..."
-  qmake-qt5 octopi-cachecleaner.pro
-  make
+    cd ../cachecleaner
+    qmake-qt5 QMAKE_CFLAGS_RELEASE="${CFLAGS}" QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" QMAKE_LFLAGS_RELEASE="${LDFLAGS}" octopi-cachecleaner.pro
+    make
 }
 
 package() {
+    if [ "${_gitcommit}" != "" ]; then
+        cd "${srcdir}/${pkgbase}-${_gitcommit}"
+    else
+        cd "${srcdir}/${pkgbase}-${pkgver}"
+    fi
 
-if [[ ${_gitcommit} != "" ]]; then
-    _SRC_DIR="${srcdir}"/"${pkgname}-${_gitcommit}"
-else
-    _SRC_DIR="${srcdir}"/"${pkgname}-${pkgver}"
-fi
-  
-  cd "${_SRC_DIR}"
- 
-	install -D -m755 "${_SRC_DIR}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
-	install -D -m644 "${_SRC_DIR}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
-	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_green.png" "${pkgdir}/usr/share/icons/${pkgname}.png"
-	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_green.png" "${pkgdir}/usr/share/icons/gnome/32x32/apps/${pkgname}.png"
-	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_red.png" "${pkgdir}/usr/share/icons/${pkgname}_red.png"
-	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_yellow.png" "${pkgdir}/usr/share/icons/${pkgname}_yellow.png"
-  
-  #Pacmanhelper service files
-  install -D -m755 "${_SRC_DIR}/notifier/bin/pacmanhelper" "${pkgdir}/usr/lib/octopi/pacmanhelper"
+    install -D -m755 "bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
+    install -D -m644 "${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+    install -D -m644 "resources/images/${pkgname}_green.png" "${pkgdir}/usr/share/icons/${pkgname}.png"
+    install -D -m644 "resources/images/${pkgname}_green.png" "${pkgdir}/usr/share/icons/gnome/32x32/apps/${pkgname}.png"
+    install -D -m644 "resources/images/${pkgname}_red.png" "${pkgdir}/usr/share/icons/${pkgname}_red.png"
+    install -D -m644 "resources/images/${pkgname}_yellow.png" "${pkgdir}/usr/share/icons/${pkgname}_yellow.png"
 
-	#speedup files
-	install -D -m755 "${_SRC_DIR}/speedup/speedup-octopi.sh" "${pkgdir}/usr/bin/speedup-octopi.sh"
-	install -D -m644 "${_SRC_DIR}/speedup/${pkgname}.service" "${pkgdir}/usr/lib/systemd/system/${pkgname}.service"
+    #speedup files
+    install -D -m755 "speedup/speedup-octopi.sh" "${pkgdir}/usr/bin/speedup-octopi.sh"
+    install -D -m644 "speedup/${pkgname}.service" "${pkgdir}/usr/lib/systemd/system/${pkgname}.service"
 
-  install -D -m644 "${_SRC_DIR}/notifier/pacmanhelper/polkit/org.octopi.pacman.policy" "${pkgdir}/usr/share/polkit-1/actions/org.octopi.pacman.policy"
-  install -D -m644 "${_SRC_DIR}/notifier/pacmanhelper/polkit/org.octopi.pacmanhelper.conf" "${pkgdir}/etc/dbus-1/system.d/org.octopi.pacmanhelper.conf"
-  install -D -m644 "${_SRC_DIR}/notifier/pacmanhelper/polkit/org.octopi.pacmanhelper.xml" "${pkgdir}/usr/share/dbus-1/interfaces/org.octopi.pacmanhelper.xml"
-  install -D -m644 "${_SRC_DIR}/notifier/pacmanhelper/polkit/org.octopi.pacmanhelper.service" "${pkgdir}/usr/share/dbus-1/system-services/org.octopi.pacmanhelper.service"
-  
-  #Octopi-notifier file
-  install -D -m755 "${_SRC_DIR}/notifier/bin/octopi-notifier" "${pkgdir}/usr/bin/octopi-notifier"
-  install -D -m644 "${_SRC_DIR}/octopi-notifier.desktop" "${pkgdir}/usr/share/applications/octopi-notifier.desktop"
-  install -D -m644 "${_SRC_DIR}/octopi-notifier.desktop" "${pkgdir}/etc/xdg/autostart/octopi-notifier.desktop"
-  
-  #Octopi-repoeditor
-  install -D -m755 "${_SRC_DIR}/repoeditor/bin/octopi-repoeditor" "${pkgdir}/usr/bin/octopi-repoeditor"
-  install -D -m644 "${srcdir}/${pkgname}-repoeditor.desktop" "${pkgdir}/usr/share/applications/${pkgname}-repoeditor.desktop"
-	install -D -m644 "${_SRC_DIR}/resources/images/${pkgname}_red.png" "${pkgdir}/usr/share/icons/${pkgname}.png"
-	
-	#Octopi-cachecleaner file
-  install -D -m755 "${_SRC_DIR}/cachecleaner/bin/octopi-cachecleaner" "${pkgdir}/usr/bin/octopi-cachecleaner"
-  install -D -m644 "${_SRC_DIR}/cachecleaner/octopi-cachecleaner.desktop" "${pkgdir}/usr/share/applications/octopi-cachecleaner.desktop"
+    # pcmanhelper
+    install -Dm755 "notifier/bin/pacmanhelper" "${pkgdir}/usr/lib/octopi/pacmanhelper"
+    install -Dm644 "notifier/pacmanhelper/polkit/org.octopi.pacman.policy" "${pkgdir}/usr/share/polkit-1/actions/org.octopi.pacman.policy"
+    install -Dm644 "notifier/pacmanhelper/polkit/org.octopi.pacmanhelper.conf" "${pkgdir}/etc/dbus-1/system.d/org.octopi.pacmanhelper.conf"
+    install -Dm644 "notifier/pacmanhelper/polkit/org.octopi.pacmanhelper.xml" "${pkgdir}/usr/share/dbus-1/interfaces/org.octopi.pacmanhelper.xml"
+    install -Dm644 "notifier/pacmanhelper/polkit/org.octopi.pacmanhelper.service" "${pkgdir}/usr/share/dbus-1/system-services/org.octopi.pacmanhelper.service"
+
+    # notifier
+    install -D -m755 "notifier/bin/octopi-notifier" "${pkgdir}/usr/bin/octopi-notifier"
+    install -D -m644 "notifier/octopi-notifier/octopi-notifier.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+    install -D -m644 "notifier/octopi-notifier/octopi-notifier.desktop" "${pkgdir}/etc/xdg/autostart/${pkgname}.desktop"
+
+    # repoeditor
+    install -D -m755 "repoeditor/bin/octopi-repoeditor" "${pkgdir}/usr/bin/octopi-repoeditor"
+    #install -D -m644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+    #install -D -m644 "resources/images/${pkgbase}_red.png" "${pkgdir}/usr/share/icons/${pkgname}.png"
+
+    # cachecleaner files
+    install -D -m755 "cachecleaner/bin/octopi-cachecleaner" "${pkgdir}/usr/bin/octopi-cachecleaner"
+    #install -D -m644 "cachecleaner/$pkgname.desktop" "${pkgdir}/usr/share/applications/$pkgname.desktop"
 }
-
-
-# -*- mode: bash; tab-width: 4; indent-tabs-mode: t -*-

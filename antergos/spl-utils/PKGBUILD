@@ -2,7 +2,7 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl-utils
-pkgver=0.7.8
+pkgver=0.7.9
 pkgrel=1
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."

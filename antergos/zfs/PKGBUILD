@@ -2,7 +2,7 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-pkgver=0.7.8
+pkgver=0.7.9
 pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')

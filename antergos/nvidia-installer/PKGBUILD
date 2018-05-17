@@ -1,7 +1,7 @@
 # Maintainer: Gustau Castells <karasu@antergos.com>
 
 pkgname=nvidia-installer
-pkgver=1.15
+pkgver=1.16
 pkgrel=1
 pkgdesc="Script to setup nvidia drivers in Antergos"
 url="http://www.antergos.com"
