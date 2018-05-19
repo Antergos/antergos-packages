@@ -2,7 +2,7 @@
 # AUR Maintainer: Sean Enck <enckse@gmail.com>
 # AUR Maintainer: Sherlock Holo <sherlockya(at)gmail.com>
 pkgname=python-telegram-bot
-pkgver=10.1.010.0.1
+pkgver=10.1.0
 pkgrel=11
 pkgdesc="A Python wrapper around the Telegram Bot API"
 url="https://github.com/python-telegram-bot/python-telegram-bot"
@@ -13,7 +13,7 @@ optdepends=('python-ujson: Ultra fast JSON parsing'
 license=('LGPL3')
 arch=('any')
 source=("https://github.com/python-telegram-bot/python-telegram-bot/releases/download/v${pkgver}/python-telegram-bot-${pkgver}.tar.gz")
-sha256sums=('580390d75a63706647962556bab69c7313bee1438411288c37f545e421498e6c')
+sha256sums=('ca2f8a44ddef7271477e16f4986647fa90ef4df5b55a7953e53b9c9d2672f639')
 
 # ANTBS METADATA
 _is_monitored='True'
