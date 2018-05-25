@@ -2,7 +2,7 @@
 
 pkgname=antergos-desktop-settings
 pkgver=1.10
-pkgrel=1
+pkgrel=2
 pkgdesc="Setup configuration for Antergos Desktops"
 url="http://github.com/Antergos/antergos-desktop-settings"
 arch=('any')
