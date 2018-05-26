@@ -7,7 +7,7 @@
 
 pkgname=broadcom-wl
 pkgver=6.30.223.271
-pkgrel=6
+pkgrel=7
 _kernmajor="4.12"
 _kernver="4.12.13-1-ARCH"
 pkgdesc='Broadcom 802.11abgn hybrid Linux networking device driver'
