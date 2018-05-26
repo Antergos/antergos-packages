@@ -31,7 +31,6 @@ Server = http://www.mirrorservice.org/sites/repo.antergos.com/$repo/$arch
 
 # Germany
 Server = http://mirror.de.leaseweb.net/antergos/$repo/$arch
-Server = http://antergos-mirror-a.alpix.eu/$repo/$arch
 Server = http://mirror.alpix.eu/antergos/$repo/$arch
 
 # Greece
