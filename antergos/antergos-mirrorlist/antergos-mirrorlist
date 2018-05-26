@@ -37,7 +37,7 @@ Server = http://mirror.alpix.eu/antergos/$repo/$arch
 Server = http://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
 
 # Hungary
-http://mirror.infotronik.hu/mirrors/pub/antergos/$repo/$arch
+Server = http://mirror.infotronik.hu/mirrors/pub/antergos/$repo/$arch
 
 # Japan
 Server = http://mirror.antergos.jp/$repo/$arch
