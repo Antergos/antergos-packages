@@ -1,4 +1,5 @@
-# Maintainer: Tim Kleinschmidt <tim.kleinschmidt@gmail.com>
+# Maintainer: Antergos devs <devs@antergos.com>
+# AUR Maintainer: Tim Kleinschmidt <tim.kleinschmidt@gmail.com>
 # Contributor: Marcin Wieczorek <marcin@marcin.co>
 # Contributor: Jean-Pier Brochu <jeanpier.brochu@gmail.com>
 # Contributor: Samuel Littley <samuel@samuellittley.me>
@@ -6,7 +7,7 @@
 # Contributor: Victor Hugo Souza <vhbsouza@gmail.com>
 
 pkgname=gitkraken
-pkgrel=1
+pkgrel=2
 pkgver=3.6.0
 pkgdesc="The intuitive, fast, and beautiful cross-platform Git client."
 url="https://www.gitkraken.com/"
