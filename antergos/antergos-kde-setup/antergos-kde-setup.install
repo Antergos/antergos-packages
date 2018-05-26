@@ -1,7 +1,0 @@
-post_install() {
-    /usr/bin/sed -i 's|archlinux|antergos|g' /etc/xdg/kcm-about-distrorc
-}
-
-post_upgrade() {
-    /usr/bin/sed -i 's|archlinux|antergos|g' /etc/xdg/kcm-about-distrorc
-}
