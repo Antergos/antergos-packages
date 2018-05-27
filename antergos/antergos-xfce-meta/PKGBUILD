@@ -2,7 +2,7 @@
 
 pkgname=antergos-xfce-meta
 pkgver=1.2
-pkgrel=1
+pkgrel=2
 pkgdesc='Meta package for Antergos Xfce'
 url='http://www.antergos.com'
 arch=('any')
