@@ -2,7 +2,7 @@
 
 pkgname=antergos-deepin-meta
 pkgver=1.2
-pkgrel=1
+pkgrel=2
 pkgdesc='Meta package for Antergos Deepin'
 url='http://www.antergos.com'
 arch=('any')
