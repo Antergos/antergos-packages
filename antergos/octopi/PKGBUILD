@@ -6,7 +6,7 @@ pkgname=('octopi')
 pkgver=0.8.5
 pkgrel=4
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
-_gitcommit="52e111f5ab53b5b60ac06ca1cd47c70e0aced435"
+_gitcommit="c413caadd11883ffcebf13ce515fb17bc23ebd27"
 arch=('x86_64')
 url="http://octopiproject.wordpress.com"
 license=('GPL2')
@@ -27,7 +27,9 @@ if [ "${_gitcommit}" != "" ]; then
 else
     source=("https://github.com/aarnt/${pkgname}/archive/v${pkgver}.tar.gz")
 fi
-sha256sums=('fda4b2c532d8f398ea03bfaf44fa86ab3a1d9611e652b313807a3193ad5a7e56')
+source+=(https://github.com/manjaro/packages-community/blob/9b69b357916e85855dc55015661e18047395688b/octopi/qt511.patch)
+sha256sums=('13400ad5235331c7add1b0fa10a164b9b12a92c23e13dddea976935a9a259c92'
+            '2d36c7ccc0235361bf105903281d05fe883559b6b34e550620faf9466aad9877')
 
 prepare() {
     if [ "${_gitcommit}" != "" ]; then
@@ -40,6 +42,8 @@ prepare() {
     sed -i -e "s|0.9.0 (dev)|${pkgver}-${pkgrel}|g" src/strconstants.h
     # enable the kstatus switch, disable if you wish to build without Plasma/knotifications support
     sed -e "s|DEFINES += ALPM_BACKEND #KSTATUS|DEFINES += ALPM_BACKEND KSTATUS|" -i notifier/octopi-notifier/octopi-notifier.pro
+    
+    patch -p1 -i $srcdir/qt511.patch
 }
 
 build() {
