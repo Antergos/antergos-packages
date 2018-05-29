@@ -3,7 +3,7 @@
 # Contributor: Rafael Fontenelle <rafaelff@gnome.org>
 
 pkgname=chrome-gnome-shell
-pkgver=9
+pkgver=10.1
 pkgrel=1
 pkgdesc="Native integration of extensions.gnome.org with GNOME Shell for Chromium-based browsers."
 arch=('any')
