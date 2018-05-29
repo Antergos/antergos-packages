@@ -4,7 +4,7 @@
 pkgbase=octopi
 pkgname=('octopi')
 pkgver=0.8.5
-pkgrel=3
+pkgrel=4
 # This is the release package so the below _gitcommit variable should (usually) be commented out.
 _gitcommit="52e111f5ab53b5b60ac06ca1cd47c70e0aced435"
 arch=('x86_64')
