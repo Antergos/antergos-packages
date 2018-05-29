@@ -27,7 +27,7 @@ if [ "${_gitcommit}" != "" ]; then
 else
     source=("https://github.com/aarnt/${pkgname}/archive/v${pkgver}.tar.gz")
 fi
-source+=(https://github.com/manjaro/packages-community/blob/9b69b357916e85855dc55015661e18047395688b/octopi/qt511.patch)
+source+=(https://raw.githubusercontent.com/manjaro/packages-community/9b69b357916e85855dc55015661e18047395688b/octopi/qt511.patch)
 sha256sums=('13400ad5235331c7add1b0fa10a164b9b12a92c23e13dddea976935a9a259c92'
             '2d36c7ccc0235361bf105903281d05fe883559b6b34e550620faf9466aad9877')
 
