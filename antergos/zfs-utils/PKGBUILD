@@ -3,7 +3,7 @@
 
 pkgname=zfs-utils
 pkgver=0.7.9
-pkgrel=1
+pkgrel=2
 pkgdesc="Kernel module support files for the Zettabyte File System."
 url="http://zfsonlinux.org/"
 license=('CDDL')
