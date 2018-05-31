@@ -1,0 +1,25 @@
+# Maintainer: python-maxminddb
+pkgbase=('python-maxminddb')
+pkgname=('python-maxminddb')
+_module='maxminddb'
+pkgver='1.4.0'
+pkgrel=1
+pkgdesc="Reader for the MaxMind DB format"
+url="http://www.maxmind.com/"
+depends=('python')
+makedepends=('python-setuptools')
+license=('Apache')
+arch=('any')
+source=("https://files.pythonhosted.org/packages/source/m/maxminddb/maxminddb-${pkgver}.tar.gz")
+md5sums=('a7f2696838ba27ab74e95b2243f7dc16')
+
+build() {
+    cd "${srcdir}/${_module}-${pkgver}"
+    python setup.py build
+}
+
+package() {
+    depends+=()
+    cd "${srcdir}/${_module}-${pkgver}"
+    python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
+}
