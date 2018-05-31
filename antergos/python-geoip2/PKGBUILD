@@ -1,0 +1,24 @@
+# Maintainer: Antergos devs <devs@antergos.com>
+pkgbase=('python-geoip2')
+pkgname=('python-geoip2')
+_module='geoip2'
+pkgver='2.9.0'
+pkgrel=1
+pkgdesc="MaxMind GeoIP2 API"
+url="http://www.maxmind.com/"
+depends=('python')
+makedepends=('python-setuptools')
+license=('Apache')
+arch=('any')
+source=("https://files.pythonhosted.org/packages/source/g/geoip2/geoip2-${pkgver}.tar.gz")
+md5sums=('42a806b0e7933f984d3a00f74cd59732')
+
+build() {
+    cd "${srcdir}/${_module}-${pkgver}"
+    python setup.py build
+}
+
+package() {
+    cd "${srcdir}/${_module}-${pkgver}"
+    python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
+}
