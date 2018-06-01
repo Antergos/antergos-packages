@@ -3,7 +3,7 @@
 pkgname=antergos-wallpapers-extra
 _pkgname=wallpapers-extra
 pkgver=0.4
-pkgrel=2
+pkgrel=3
 pkgdesc='Extra wallpapers contributed by the Antergos User Community'
 arch=('any')
 url='https://antergos.com'
