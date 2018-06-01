@@ -4,7 +4,7 @@
 # Contributor: David Manouchehri <d@32t.ca>
 
 pkgname=dropbox
-pkgver=45.4.92
+pkgver=50.4.71
 pkgrel=1
 pkgdesc="A free service that lets you bring your photos, docs, and videos anywhere and share them easily."
 arch=("x86_64")
@@ -13,7 +13,7 @@ license=(custom)
 depends=("dbus-glib" "libsm" "libxslt")
 conflicts=("dropbox-experimental")
 groups=('cloud-storage')
-options=('!strip' '!upx')
+options=('!strip')
 install="dropbox.install"
 source=("https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86_64-${pkgver}.tar.gz"
         "dropbox.png"
@@ -21,7 +21,7 @@ source=("https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x
         "terms.txt"
         "dropbox.service"
         "dropbox@.service")
-md5sums=('1b17a957cea2fa6a823a144c2a89e9e5'
+md5sums=('a4d148d04d42bd9571c3a39f1efeb14e'
          '2be5a57e477adf82a7d9b7fe77f22086'
          'f3350cc0fb7b5f4fb6f2c0adda7e1260'
          '9e140f8de1bab8f26165068bb2c5e8b4'
