@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=pacaur
-pkgver=4.7.10
+pkgver=4.7.90
 pkgrel=2
 pkgdesc='An AUR helper that minimizes user interaction'
 arch=('any')
