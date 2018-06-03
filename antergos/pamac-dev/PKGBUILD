@@ -2,9 +2,9 @@
 # Contributor: Guillaume Benoit <guillaume@manjaro.org>
 
 pkgname=(pamac-dev pamac-tray-appindicator-dev)
-pkgver=6.2.4
-_pkgver=6.2.4
-pkgrel=2
+pkgver=6.4.0
+_pkgver=6.4.0
+pkgrel=1
 _gitcommit="master"
 pkgdesc='A GTK3 frontend for libalpm'
 arch=('x86_64')
@@ -12,7 +12,7 @@ url='https://github.com/manjaro/pamac'
 license=('GPL3')
 depends=(
 	'glib2' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'vte3' 'gtk3'
-	'libnotify' 'desktop-file-utils' 'pacman>=5.0' 'pacman<5.1' 'gnutls'
+	'libnotify' 'desktop-file-utils' 'pacman' 'gnutls'
 	'appstream-glib' 'archlinux-appstream-data'
 )
 makedepends=('gettext' 'itstool' 'vala' 'git' 'libappindicator-gtk3' 'meson')
