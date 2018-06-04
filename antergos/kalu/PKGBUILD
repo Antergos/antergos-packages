@@ -9,7 +9,7 @@ license=('GPL3+')
 depends=('dbus' 'polkit' 'gtk3' 'pacman>=5.0' 'curl' 'libnotify'
          'notification-daemon')
 makedepends=('perl' 'groff')
-source=(http://jjacky.com/$pkgname/$pkgname-$pkgver.tar.gz)
+source=(http://jjacky.com/$pkgname/$pkgname-$pkgver.tar.xz)
 install=kalu.install
 sha256sums=('1e46881644da18db52d2d8f1676b3f4e509be511cd93a9c61b80eb65e7da50e4')
 
