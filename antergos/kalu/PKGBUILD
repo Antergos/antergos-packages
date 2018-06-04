@@ -1,7 +1,7 @@
 # Maintainer: jjacky
 pkgname=kalu
 pkgver=4.3.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Upgrade notifier w/ AUR support, watched (AUR) packages, news"
 arch=('x86_64')
 url="http://jjacky.com/kalu"
