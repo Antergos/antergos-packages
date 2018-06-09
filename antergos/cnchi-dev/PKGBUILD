@@ -9,8 +9,8 @@ arch=(any)
 license=(GPL)
 url="https://github.com/Antergos/Cnchi"
 conflicts=(cnchi)
-depends=(iso-codes encfs gptfdisk python pyalpm python-cairo python-dbus
-         python-geoip2 python-gobject python-mako python-maxminddb
+depends=(iso-codes encfs geoip2-database gptfdisk python pyalpm python-cairo
+         python-dbus python-geoip2 python-gobject python-mako python-maxminddb
          python-parted python-requests upower webkitgtk)
 makedepends=(python git)
 source=("cnchi.tar")
