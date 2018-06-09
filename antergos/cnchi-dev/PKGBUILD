@@ -1,18 +1,20 @@
 #Maintainer: Alex Filgueira <alexfilgueira@antergos.com>
 
-_pkgname=cnchi
 pkgname=cnchi-dev
+_pkgname=cnchi
 pkgver=0.16.0
 pkgrel=1
 pkgdesc='Antergos Installer - Development Version'
-arch=(any)
-license=(GPL)
+arch=('any')
+license=('GPL3')
 url="https://github.com/Antergos/Cnchi"
-conflicts=(cnchi)
-depends=(iso-codes encfs geoip2-database gptfdisk python pyalpm python-cairo
-         python-dbus python-geoip2 python-gobject python-mako python-maxminddb
-         python-parted python-requests upower webkitgtk)
+depends=('iso-codes' 'geoip2-database' 'gptfdisk' 'python' 'pyalpm'
+         'python-bugsnag' 'python-cairo' 'python-dbus' 'python-geoip2'
+         'python-gobject' 'python-mako' 'python-maxminddb' 'python-parted'
+         'python-requests' 'upower' 'webkit2gtk')
 makedepends=(python git)
+makedepends=('python' 'git' 'transifex-client')
+conflicts=('cnchi')
 source=("cnchi.tar")
 #source=("cnchi::git+http://github.com/antergos/cnchi.git")
 md5sums=('SKIP')
