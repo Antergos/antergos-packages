@@ -15,16 +15,9 @@ depends=('iso-codes' 'geoip2-database' 'gptfdisk' 'python' 'pyalpm'
 makedepends=(python git)
 makedepends=('python' 'git' 'transifex-client')
 conflicts=('cnchi')
-source=("cnchi.tar")
-#source=("cnchi::git+http://github.com/antergos/cnchi.git")
+source=("cnchi::git+http://github.com/antergos/cnchi.git")
 md5sums=('SKIP')
 
-prepare() {
-    if [[ -d ${srcdir}/${_pkgname} ]]; then
-        rm -rf ${srcdir}/${_pkgname}
-        git clone http://github.com/antergos/cnchi.git cnchi
-    fi
-}
 
 pkgver() {
     if [[ -d /pkg ]]; then
@@ -33,15 +26,6 @@ pkgver() {
         cd cnchi
     fi
     python cnchi/info.py
-}
-
-build ()
-{
-    if [[ -d /pkg ]]; then
-        cd ${srcdir}/${_pkgname}
-    else
-        cd cnchi
-    fi
 }
 
 package() {
