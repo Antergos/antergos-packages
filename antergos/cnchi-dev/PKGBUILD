@@ -25,7 +25,7 @@ pkgver() {
     else
         cd cnchi
     fi
-    python cnchi/info.py
+    python src/info.py
 }
 
 package() {
@@ -36,11 +36,11 @@ package() {
     fi
 
     install -d ${pkgdir}/usr/share/locale/
-    install -d ${pkgdir}/usr/share/cnchi/cnchi
+    install -d ${pkgdir}/usr/share/cnchi/src
     install -Dm755 bin/${_pkgname} "${pkgdir}/usr/bin/cnchi"
     install -Dm755 "scripts/testing.sh" "${pkgdir}/usr/bin/cnchi-dev"
 
-    for i in data scripts cnchi ui; do
+    for i in data scripts src ui; do
         cp -R ${i} "${pkgdir}/usr/share/cnchi/"
     done
 
