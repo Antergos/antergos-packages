@@ -3,7 +3,7 @@
 
 pkgname=aurman
 pkgver=2.10
-pkgrel=1
+pkgrel=2
 pkgdesc="aurman AUR helper with almost pacman syntax"
 arch=('any')
 url="https://github.com/polygamma/aurman"
