@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=marco
-pkgver=1.20.1
+pkgver=1.20.2
 pkgrel=2
 pkgdesc="A window manager for MATE"
 url="https://mate-desktop.org"
