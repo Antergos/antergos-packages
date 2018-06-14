@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-calc
-pkgver=1.20.1
+pkgver=1.20.2
 pkgrel=1
 pkgdesc='Calculator for MATE'
 arch=('x86_64')
