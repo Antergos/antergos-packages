@@ -2,7 +2,7 @@
 # AUR Maintainer: Peter Reschenhofer <peter.reschenhofer@gmail.com>
 pkgname=gocryptfs
 pkgver=1.5
-pkgrel=2
+pkgrel=3
 pkgdesc="Encrypted overlay filesystem written in Go."
 arch=('x86_64')
 url="https://github.com/rfjakob/gocryptfs"
