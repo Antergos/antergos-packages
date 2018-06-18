@@ -8,7 +8,7 @@ pkgdesc="aurman AUR helper with almost pacman syntax"
 arch=('any')
 url="https://github.com/polygamma/aurman"
 license=('MIT')
-depends=('python' 'expac' 'python-requests' 'python-regex' 'pacman>=5.1')
+depends=('python' 'expac' 'git' 'python-requests' 'python-regex' 'pacman>=5.1')
 source=("${pkgname}-${pkgver}.zip::https://github.com/polygamma/${pkgname}/archive/${pkgver}.zip")
 md5sums=('SKIP')
 
