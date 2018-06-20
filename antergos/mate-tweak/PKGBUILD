@@ -27,8 +27,8 @@ source=(
 	"$pkgname-$pkgver.tar.gz::https://github.com/ubuntu-mate/$pkgname/archive/$pkgver.tar.gz"
 	"https://launchpad.net/ubuntu/+archive/primary/+files/ubuntu-mate-settings_$_umsver.tar.xz"
 )
-md5sums=('cee338f5ab399ce4ac7bb93ff01c9930'
-         '5b94ce4befe4954b8e780707b8cf7510')
+md5sums=('4cfc6ee6c78ea9efddd84b1dddfcddae'
+         'd9cee49b44737bab5235679f5798a352')
 
 prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"

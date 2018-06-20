@@ -23,8 +23,8 @@ pkgbase = mate-tweak
 	optdepends = topmenu-gtk: for Mutiny panel layout
 	source = mate-tweak-18.04.16.tar.gz::https://github.com/ubuntu-mate/mate-tweak/archive/18.04.16.tar.gz
 	source = https://launchpad.net/ubuntu/+archive/primary/+files/ubuntu-mate-settings_18.04.17.tar.xz
-	md5sums = cee338f5ab399ce4ac7bb93ff01c9930
-	md5sums = 5b94ce4befe4954b8e780707b8cf7510
+	md5sums = 4cfc6ee6c78ea9efddd84b1dddfcddae
+	md5sums = d9cee49b44737bab5235679f5798a352
 
 pkgname = mate-tweak
 
