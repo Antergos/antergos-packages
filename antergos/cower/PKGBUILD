@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=cower
-pkgver=17
+pkgver=18
 pkgrel=1
 pkgdesc='A simple AUR agent with a pretentious name'
 arch=('x86_64')
@@ -10,7 +10,7 @@ license=('MIT')
 depends=('curl' 'openssl' 'pacman' 'yajl')
 makedepends=('perl')
 source=("https://github.com/falconindy/$pkgname/archive/$pkgver.tar.gz")
-md5sums=('ce76b1dc1bd984983f14d752c6b08d74')
+md5sums=('94e537c61ce49602cd759b8dbf8226d6')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
