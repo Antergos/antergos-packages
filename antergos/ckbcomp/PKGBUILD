@@ -12,7 +12,7 @@ source=("http://ftp.de.debian.org/debian/pool/main/c/console-setup/console-setup
 md5sums=('de599a6bc7a0478288e3180377c4ac05')
 
 package() {
-	cd console-setup-${pkgver}
+	cd console-setup
 	install -d ${pkgdir}/usr/bin/
 	install -m755 Keyboard/ckbcomp ${pkgdir}/usr/bin/
 }
