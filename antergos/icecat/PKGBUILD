@@ -6,7 +6,7 @@
 # Contributor: Muhammad 'MJ' Jassim <UnbreakableMJ@gmail.com> 
 
 pkgname=icecat
-pkgver=52.3.0
+pkgver=52.6.0
 pkgrel=1
 pkgdesc="GNU version of the Firefox browser."
 arch=('x86_64')
@@ -24,11 +24,11 @@ install=icecat.install
 source=(	icecat.desktop
 		icecat-safe.desktop
 		vendor.js)
-source_x86_64=("https://mirrors.kernel.org/gnu/gnuzilla/${pkgver}/${pkgname}-${pkgver}.en-US.linux-x86_64.tar.bz2")
+source_x86_64=("https://mirrors.kernel.org/gnu/gnuzilla/${pkgver}/${pkgname}-${pkgver}.en-US.gnulinux-x86_64.tar.bz2")
 md5sums=('e81ad01dbc16ba28bf92ba4b7c309ca7'
          'd93fe402b87cd000a869e1fd6badc6c9'
          '0d053487907de4376d67d8f499c5502b')
-md5sums_x86_64=('fd04b97bbe14c7f7f962bf1631267fdd')
+md5sums_x86_64=('97994d4a7562e51e4ede1b64f6dc95b3')
 
 
 package () {
