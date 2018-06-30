@@ -2,13 +2,13 @@
 # AUR Maintainer: Jonni Westphalen <jonny.westphalen@googlemail.com>
 
 pkgname=aurman
-pkgver=2.12
+pkgver=2.15
 pkgrel=1
 pkgdesc="aurman AUR helper with almost pacman syntax"
 arch=('any')
 url="https://github.com/polygamma/aurman"
 license=('MIT')
-depends=('python' 'expac' 'git' 'python-requests' 'python-regex' 'pacman>=5.1')
+depends=('python' 'expac' 'python-requests' 'git' 'python-regex' 'pyalpm')
 source=("${pkgname}-${pkgver}.zip::https://github.com/polygamma/${pkgname}/archive/${pkgver}.zip")
 md5sums=('SKIP')
 
