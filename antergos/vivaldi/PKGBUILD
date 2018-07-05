@@ -10,9 +10,9 @@ _from_arch_pkg() {
 }
 
 pkgname=vivaldi
-pkgver=1.15.1147.42
+pkgver=1.15.1147.47
 # https://update.vivaldi.com/update/1.0/relnotes/1.15.1147.42.html
-_chromium=66.0.3359.139 # https://omahaproxy.appspot.com
+_chromium=67.0.3396.87 # https://omahaproxy.appspot.com
 pkgrel=3
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
@@ -37,22 +37,25 @@ source=(
 	"https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
-	"$(_from_arch_pkg fix-crash-in-is_cfi-true-builds-with-unbundled-ICU.patch)"
-	"$(_from_arch_pkg fix-frame-buttons-rendering-too-large-when-using-OSX.patch)"
-	"$(_from_arch_pkg chromium-skia-harmony.patch)"
-        "$(_from_arch_pkg chromium-widevine.patch)"
-
-
+	"$(_from_arch_pkg remove-dependency-on-ffmpeg-internals-for-start-time.patch)"
+	"$(_from_arch_pkg x11-fix-mixup-between-DIP-pixel-coordinates.patch)"
+	"$(_from_arch_pkg chromium-ffmpeg-r1.patch)"
+        "$(_from_arch_pkg chromium-widevine-r2.patch)"
+	"$(_from_arch_pkg chromium-disable_xml_catalogs.patch)"
+        "$(_from_arch_pkg chromium-skia-harmony.patch)"
 
 )
-md5sums=('7f803ff3a583e5c18e6535b4f04ac99f'
-         'b6318ddd70f1b31f71511cbd49603c7c'
-         '13c5681f2d834e17fdbde06414fc8dab'
+md5sums=('b1ae86cd116b1db8aa7c964377ef3e60'
+         '65a8b027e184cb1364ad8f37c0a644f0'
+         '62deb9a89a19abc4489c1c00789c215a'
          '65c1f3c6893b31db816d594ba5591956'
-         'a9e07c22ce941c58e8885405c082ea50'
-         '6bf54d3ceeec5f13ba68b0ef74db9e20'
-         '254061cb349cff714230b7cca83b0a4c'
-         '95535a28e5041183ef715c7daa476732')
+         '608934cfc9ef00c1b16d8eb315053f4d'
+         '053ece2216346c5ee090703fd6230402'
+         'ab9a977ec1c0d0951093db24d855a3be'
+         '56ebefbdfafb2d7ede199a4257d514d4'
+         '55b7f919e3ce2fc432eded14b3586c21'
+         '254061cb349cff714230b7cca83b0a4c')
+
 
 
 
@@ -101,25 +104,23 @@ prepare() {
 
 	echo "LASTCHANGE=$_chrome_build_hash-" >build/util/LASTCHANGE
 
-
-  # Enable support for the Widevine CDM plugin
-  # libwidevinecdm.so is not included, but can be copied over from Chrome
-  # (Version string doesn't seem to matter so let's go with "Pinkie Pie")
-  sed "s/@WIDEVINE_VERSION@/Pinkie Pie/" ../chromium-widevine.patch |
-    patch -Np1
-
   # Work around broken screen sharing in Google Meet
   # https://crbug.com/829916#c16
   sed -i 's/"Chromium/"Chrome/' chrome/common/chrome_content_client_constants.cc
 
-  # https://crbug.com/822820
-  patch -Np1 -i ../fix-crash-in-is_cfi-true-builds-with-unbundled-ICU.patch
+  # https://crbug.com/731766
+  patch -Np1 -i ../remove-dependency-on-ffmpeg-internals-for-start-time.patch
 
-  # https://crbug.com/821881
-  patch -Np1 -i ../fix-frame-buttons-rendering-too-large-when-using-OSX.patch
+  # https://crbug.com/707721
+  patch -Np1 -i ../x11-fix-mixup-between-DIP-pixel-coordinates.patch
 
   # https://crbug.com/skia/6663#c10
   patch -Np4 -i ../chromium-skia-harmony.patch
+
+  # Fixes from Gentoo
+  patch -Np1 -i ../chromium-ffmpeg-r1.patch
+  patch -Np1 -i ../chromium-widevine-r2.patch
+  patch -Np1 -i ../chromium-disable_xml_catalogs.patch
 	
 	# Remove compiler flags not supported by our system clang
 	sed -i \
