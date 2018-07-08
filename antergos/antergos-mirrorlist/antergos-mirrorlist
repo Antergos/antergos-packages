@@ -8,6 +8,7 @@ Server = http://mirrors.antergos.com/$repo/$arch
 
 # Bulgaria
 Server = http://mirror.host.ag/antergos/$repo/$arch
+Server = https://mirrors.itbox.bg/antergos/$repo/$arch
 
 # Canada
 Server = http://wynsrv.antergos.info/antergos/$repo/$arch
@@ -37,7 +38,7 @@ Server = http://mirror.alpix.eu/antergos/$repo/$arch
 Server = http://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
 
 # Hungary
-Server = http://mirror.infotronik.hu/mirrors/pub/antergos/$repo/$arch
+Server = https://quantum-mirror.hu/mirrors/pub/antergos/$repo/$arch
 
 # Japan
 Server = http://mirror.antergos.jp/$repo/$arch
