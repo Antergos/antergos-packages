@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-common-meta
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc='Common meta package for all Antergos Desktops'
 url='http://www.antergos.com'
