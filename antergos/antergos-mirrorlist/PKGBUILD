@@ -1,7 +1,7 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=antergos-mirrorlist
-pkgver=20180708
+pkgver=20180729
 pkgrel=1
 pkgdesc="Antergos mirrorlist for use by pacman"
 arch=('any')
