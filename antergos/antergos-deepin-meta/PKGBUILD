@@ -1,8 +1,8 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-deepin-meta
-pkgver=1.2
-pkgrel=2
+pkgver=1.4
+pkgrel=1
 pkgdesc='Meta package for Antergos Deepin'
 url='http://www.antergos.com'
 arch=('any')
@@ -11,13 +11,13 @@ depends=('antergos-wallpapers-deepin' 'adwaita-icon-theme' 'brasero'
     'deepin-account-faces' 'deepin-api' 'deepin-desktop-schemas'
     'deepin-boot-maker' 'deepin-calendar' 'deepin-clone' 'deepin-control-center'
     'deepin-daemon' 'deepin-desktop-base' 'deepin-desktop-schemas' 'deepin-dock'
-    'deepin-file-manager' 'deepin-grub2-themes' 'deepin-gtk-theme' 'deepin-help'
+    'deepin-file-manager' 'deepin-grub2-themes' 'deepin-gtk-theme'
     'deepin-image-viewer' 'deepin-launcher' 'deepin-manual' 'deepin-menu'
     'deepin-movie' 'deepin-music' 'deepin-notifications' 'deepin-picker'
     'deepin-qt5dxcb-plugin' 'deepin-qt5integration' 'deepin-screen-recorder'
     'deepin-screenshot' 'deepin-session-ui' 'deepin-shortcut-viewer'
     'deepin-sound-theme' 'deepin-system-monitor' 'deepin-terminal'
-    'deepin-voice-recorder' 'deepin-wallpapers' 'deepin-wallpapers-extra'
+    'deepin-voice-recorder' 'deepin-wallpapers'
     'startdde' 'deepin-cogl' 'deepin-mutter'
     'deepin-polkit-agent' 'dtkwm' 'gedit' 'gnome-calculator' 'gnome-disk-utility'
     'gnome-font-viewer' 'gnome-software' 'gtk-theme-paper' 'gtk-theme-adapta'

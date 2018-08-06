@@ -2,7 +2,7 @@
 
 pkgname=antergos-kde-meta
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 pkgdesc='Meta package for Antergos KDE Plasma'
 url='http://www.antergos.com'
 arch=('any')
@@ -14,3 +14,4 @@ depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'breeze-kde4' 'cdrdao' 'clement
     'kwrited' 'milou' 'nm-connection-editor' 'numix-frost-themes' 'numix-icon-theme-square' 'okular' 'oxygen' 'pamac-tray-appindicator'
     'plasma-desktop' 'plasma-nm' 'plasma-pa' 'plasma-workspace' 'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve-gtk2' 'qtcurve-qt4'
     'qtcurve-kde' 'qtcurve-utils' 'spectacle' 'systemsettings' 'transmission-qt' 'user-manager'	'vlc' 'xdg-user-dirs')
+replaces=('antergos-kde-setup')

@@ -1,0 +1,28 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+
+pkgname=antergos-alpm-hooks
+pkgver=1.0
+pkgrel=1
+pkgdesc='Antergos alpm hooks'
+arch=('any')
+depends=('pacman' 'libnotify')
+groups=('antergos-base')
+url="https://antergos.com/"
+license=('GPL3')
+source=("${pkgname}-${pkgver}.zip::https://github.com/Antergos/${pkgname}/archive/v${pkgver}.zip")
+md5sums=('74fff43fecb30200e2415a12b2bace40')
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='antergos'
+_monitored_repo='antergos-alpm-hooks'
+# END ANTBS METADATA
+
+package() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    make DESTDIR="${pkgdir}" install
+}
+
+

@@ -1,0 +1,30 @@
+# Maintainer: manuel (see forum.antergos.com)
+
+pkgname=reflector-antergos
+pkgver=1.36
+pkgrel=1
+pkgdesc="Ranks Antergos mirrors, similar idea with package 'reflector' that ranks Arch mirrors."
+arch=('any')
+license=('GPL')
+depends=('bash' 'wget' 'time')
+url="https://github.com/manuel-192/antergos-reflector"
+source=(
+  "$url/raw/master/reflector-antergos-$pkgver"
+  "$url/raw/master/reflector-antergos.completion"
+  "$url/raw/master/reflector-antergos.timer"
+  "$url/raw/master/reflector-antergos.service"
+)
+sha512sums=(
+  '5eaafb91158ccc3f3a050570a6365a3e9f64704f1419bc094eb7fa9a52572d0b568a4517ebd74c502deddb56cde981d722a7a4dacab6497fc77d49f55854bbad'
+  '5b790320b0faa6d3be8001cb6d278cd5f4e05c0b3ae4e4253b74b04d027bd2297313a22aa75e57a19cc3fb1cbfee7fc013432669fc5bffd2a9ff1312f44508c2'
+  '02da4e4469438394d48632396416b908605cb9834a69bdf422fed4f7bb0d2f599423f0c72ba6d62b8caa10415e1b88a832e4a8002afe24f2f7acd1bce779b966'
+  '72b65bd76edb78b3ef8110d9f517e3ca6b5a6b89df1aa01cf52e328c986a110d091851b9d49c7444750463ce27c3175186ea6bab03023840c2bbfce8fff418c3'
+)
+
+package() {
+  cd $srcdir
+  install -Dm555 reflector-antergos-$pkgver    $pkgdir/usr/bin/reflector-antergos
+  install -Dm444 reflector-antergos.completion $pkgdir/usr/share/bash-completion/completions/reflector-antergos
+  install -Dm644 reflector-antergos.timer      $pkgdir/etc/systemd/system/reflector-antergos.timer
+  install -Dm644 reflector-antergos.service    $pkgdir/etc/systemd/system/reflector-antergos.service
+}
