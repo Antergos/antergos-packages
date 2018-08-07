@@ -1,0 +1,24 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Doug Newgard <scimmia at archlinux dot info>
+
+pkgname=chromium-widevine
+pkgdesc='A browser plugin designed for the viewing of premium video content'
+pkgver=1.4.8.1000
+pkgrel=1
+epoch=1
+arch=('x86_64')
+url='http://www.google.com/chrome'
+license=('custom:chrome')
+options=('!strip')
+depends=("chromium")
+source=('chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html')
+source_x86_64=("https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm")
+md5sums=('d50d8f0a6940791eabc41c4f64e6a3cf')
+md5sums_x86_64=('98e75c8da1a51a6891e92f3782160b97')
+
+
+package() {
+  install -Dm644 opt/google/chrome/libwidevinecdm.so -t "$pkgdir/usr/lib/chromium/"
+  install -Dm644 chrome-eula_text.html "$pkgdir/usr/share/licenses/$pkgname/eula_text.html"
+}
+
