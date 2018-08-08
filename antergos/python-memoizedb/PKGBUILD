@@ -3,7 +3,7 @@
 pkgname=python-memoizedb
 _pkgname=python3-memoizedb
 pkgver=2017.3.30
-pkgrel=1
+pkgrel=2
 pkgdesc='Generic data retrieval memoizer that uses an sqlite database to cache data.'
 arch=(any)
 license=(GPL)
