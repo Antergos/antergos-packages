@@ -2,7 +2,7 @@
 pkgbase=('python-maxminddb')
 pkgname=('python-maxminddb')
 _module='maxminddb'
-pkgver='1.4.0'
+pkgver='1.4.1'
 pkgrel=1
 pkgdesc="Reader for the MaxMind DB format"
 url="http://www.maxmind.com/"
@@ -11,7 +11,7 @@ makedepends=('python-setuptools')
 license=('Apache')
 arch=('any')
 source=("https://files.pythonhosted.org/packages/source/m/maxminddb/maxminddb-${pkgver}.tar.gz")
-md5sums=('a7f2696838ba27ab74e95b2243f7dc16')
+sha256sums=('df1451bcd848199905ac0de4631b3d02d6a655ad28ba5e5a4ca29a23358db712')
 
 build() {
     cd "${srcdir}/${_module}-${pkgver}"
