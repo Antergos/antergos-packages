@@ -3,7 +3,7 @@
 pkgname=python-bugsnag
 _pkgname=bugsnag-python
 pkgver=2.5.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Bugsnag Notifier for Python"
 url="https://github.com/bugsnag/bugsnag-python"
 arch=('any')

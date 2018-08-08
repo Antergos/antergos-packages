@@ -2,7 +2,7 @@
 # Contributor: Anatol Pomozov <anatol.pomozov@gmail.com>
 
 pkgname=python-blivet
-pkgver=2.1.11
+pkgver=3.1.0
 _tag="blivet-${pkgver}"
 pkgrel=3
 pkgdesc='a python module for management of a system storage configuration'
