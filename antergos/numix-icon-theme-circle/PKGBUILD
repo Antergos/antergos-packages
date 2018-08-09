@@ -1,8 +1,8 @@
 # Maintainer: Antergos devs <devs@antergos.com>
 
 pkgname=numix-icon-theme-circle
-_pkgver=18-02-16
-pkgver="${_pkgver//-/.}"
+pkgver=18.8.1
+_pkgver=18.08.01
 pkgrel=1
 pkgdesc='Circle icon theme from the Numix project'
 arch=('any')
@@ -13,7 +13,7 @@ makedepends=('git')
 provides=('numix-circle-icon-theme' 'numix-circle-light-icon-theme' 'numix-icon-theme-circle')
 conflicts=('numix-circle-icon-theme' 'numix-circle-light-icon-theme' 'numix-circle-icon-theme-git')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/numixproject/${pkgname}/archive/${_pkgver}.tar.gz")
-md5sums=('8a20dc000e3c649b615c48b3d6b558f5')
+sha256sums=('7ee208fa6521133a0f4b0fa98c40a91f13e9cecb4ede5a83ab8632cead1c24b0')
 
 package() {
   cd ${pkgname}-${_pkgver}
