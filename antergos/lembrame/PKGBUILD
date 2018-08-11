@@ -1,16 +1,16 @@
 # Maintainer: Alexandre Filgueira <alexfilgueira@antergos.com
 
 pkgname=lembrame
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc="A tool to synchronize your Gnome Settings to be later used in an Antergos installation"
 url="https://www.antergos.com/"
 arch=(x86_64)
 license=(GPL)
-depends=(gjs gtk3 python python-libnacl pacman dconf)
+depends=(gjs gtk3 python python-libnacl pacman dconf gtk-update-icon-cache)
 makedepends=(gobject-introspection meson)
 source=("https://github.com/Antergos/lembrame/archive/v${pkgver}.tar.gz")
-sha256sums=('f1c7e57f9ec59d0a6527f01a1f93e6ecf2811372c0b2e0df54e478152bdddf9a')
+sha256sums=('7c282671472930fb795cdc05146832cc29100487b4c7f7cbab14a9ac81fdd9a4')
 
 
 prepare() {
