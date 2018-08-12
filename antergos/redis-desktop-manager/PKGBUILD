@@ -41,6 +41,7 @@ prepare() {
 	cd 3rdparty/gbreakpad
 	touch README
 	git clone --depth 1 -v https://chromium.googlesource.com/linux-syscall-support src/third_party/lss
+}
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
