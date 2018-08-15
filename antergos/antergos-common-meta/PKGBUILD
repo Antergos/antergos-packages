@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-common-meta
-pkgver=1.2
+pkgver=1.3
 pkgrel=1
 pkgdesc='Common meta package for all Antergos Desktops'
 url='http://www.antergos.com'
@@ -10,9 +10,7 @@ license=('GPL3')
 depends=('accountsservice' 'antergos-wallpapers' 'antergos-desktop-settings'
     'cdrtools' 'dconf-editor' 'ffmpegthumbnailer' 'gst-libav' 'gst-plugins-bad'
     'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-ugly' 'gstreamer-vaapi'
-    'hunspell-de' 'hunspell-en' 'hunspell-es_any' 'hunspell-fr' 'hunspell-he'
-    'hunspell-it' 'hunspell-ro' 'hunspell-el' 'hunspell-hu' 'hunspell-nl'
-    'hunspell-pl' 'libdvdcss' 'lightdm' 'lightdm-webkit2-greeter' 'light-locker'
+    'libdvdcss' 'lightdm' 'lightdm-webkit2-greeter' 'light-locker'
     'light-locker-settings' 'mesa' 'mesa-vdpau' 'numix-frost-themes'
     'numix-icon-theme' 'numix-icon-theme-square' 'pavucontrol' 'pulseaudio'
     'pulseaudio-alsa' 'pulseaudio-bluetooth' 'qt5-styleplugins'
