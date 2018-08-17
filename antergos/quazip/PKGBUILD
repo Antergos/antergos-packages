@@ -6,7 +6,7 @@
 
 pkgname=quazip
 pkgver=0.7.6
-pkgrel=1
+pkgrel=2
 pkgdesc="C++ wrapper for the Gilles Vollant's ZIP/UNZIP C package"
 url="https://stachenov.github.io/quazip/"
 license=('LGPL')
@@ -16,6 +16,14 @@ makedepends=('cmake')
 provides=('quazip-qt5')
 source=($pkgname-$pkgver.tar.gz::https://github.com/stachenov/$pkgname/archive/$pkgver.tar.gz)
 sha256sums=('4118a830a375a81211956611cc34b1b5b4ddc108c126287b91b40c2493046b70')
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='stachenov'
+_monitored_repo='quazip'
+# END ANTBS METADATA
 
 prepare() {
   # Fix cmake module install dir
