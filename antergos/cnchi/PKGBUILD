@@ -2,8 +2,8 @@
 
 pkgname=cnchi
 _pkgname=Cnchi
-pkgver=0.14.426
-pkgrel=5
+pkgver=0.14.474
+pkgrel=1
 pkgdesc='A modern, flexible system installer for Linux'
 arch=('any')
 license=('GPL3')
@@ -14,8 +14,8 @@ depends=('iso-codes' 'geoip2-database' 'gptfdisk' 'python' 'pyalpm'
          'python-requests' 'upower' 'webkit2gtk')
 makedepends=('transifex-client')
 conflicts=('cnchi-dev')
-source=("${_pkgname}-${pkgver}.zip::https://github.com/antergos/cnchi/archive/${pkgver}.zip")
-md5sums=('96f959b8e078517786aa952702a5f7bb')
+source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
+sha256sums=('1855147030680fd3cc054eefdbcad95bb5b8eb2345bea3b5228fc19bbf412784')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
@@ -49,7 +49,7 @@ package() {
         cp -R ${i} "${pkgdir}/usr/share/cnchi/"
     done
 
-    for files in po/*; do
+    for files in po/*.po; do
         if [ -f "$files" ] && [ "$files" != 'po/cnchi.pot' ]; then
             STRING_PO=`echo ${files#*/}`
             STRING=`echo ${STRING_PO%.po}`
