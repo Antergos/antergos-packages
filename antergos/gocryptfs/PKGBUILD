@@ -1,7 +1,7 @@
 # Maintainer: Antergos devs <devs@antergos.com>
 # AUR Maintainer: Peter Reschenhofer <peter.reschenhofer@gmail.com>
 pkgname=gocryptfs
-pkgver=1.5
+pkgver=1.6
 pkgrel=3
 pkgdesc="Encrypted overlay filesystem written in Go."
 arch=('x86_64')
