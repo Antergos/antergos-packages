@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-deepin-meta
-pkgver=1.4
+pkgver=1.5
 pkgrel=1
 pkgdesc='Meta package for Antergos Deepin'
 url='http://www.antergos.com'
@@ -13,7 +13,7 @@ depends=('antergos-wallpapers-deepin' 'adwaita-icon-theme' 'brasero'
     'deepin-daemon' 'deepin-desktop-base' 'deepin-desktop-schemas' 'deepin-dock'
     'deepin-file-manager' 'deepin-grub2-themes' 'deepin-gtk-theme'
     'deepin-image-viewer' 'deepin-launcher' 'deepin-manual' 'deepin-menu'
-    'deepin-movie' 'deepin-music' 'deepin-notifications' 'deepin-picker'
+    'deepin-movie' 'deepin-music' 'deepin-picker'
     'deepin-qt5dxcb-plugin' 'deepin-qt5integration' 'deepin-screen-recorder'
     'deepin-screenshot' 'deepin-session-ui' 'deepin-shortcut-viewer'
     'deepin-sound-theme' 'deepin-system-monitor' 'deepin-terminal'
