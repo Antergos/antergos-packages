@@ -1,6 +1,6 @@
 pkgbase = vivaldi
 	pkgdesc = An advanced browser made with the power user in mind.
-	pkgver = 1.15.1147.47
+	pkgver = 1.15.1147.64
 	pkgrel = 3
 	url = https://vivaldi.com
 	arch = x86_64
@@ -61,25 +61,34 @@ pkgbase = vivaldi
 	noextract = chrome.rpm
 	options = !strip
 	options = !zipman
-	source = https://downloads.vivaldi.com/stable/vivaldi-stable-1.15.1147.47-1.x86_64.rpm
-	source = https://commondatastorage.googleapis.com/chromium-browser-official/chromium-67.0.3396.87.tar.xz
+	source = https://downloads.vivaldi.com/stable/vivaldi-stable-1.15.1147.64-1.x86_64.rpm
+	source = https://commondatastorage.googleapis.com/chromium-browser-official/chromium-68.0.3440.106.tar.xz
 	source = chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 	source = chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html
-	source = remove-dependency-on-ffmpeg-internals-for-start-time.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/remove-dependency-on-ffmpeg-internals-for-start-time.patch?h=packages/chromium
 	source = x11-fix-mixup-between-DIP-pixel-coordinates.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/x11-fix-mixup-between-DIP-pixel-coordinates.patch?h=packages/chromium
+	source = blink-disable-XML-catalogs-at-runtime.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/blink-disable-XML-catalogs-at-runtime.patch?h=packages/chromium
+	source = fix-cfi-icall-failure-with-use_system_libjpeg-true.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/fix-cfi-icall-failure-with-use_system_libjpeg-true.patch?h=packages/chromium
+	source = only-disable-cfi-icall-when-use_system_libjpeg-true.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/only-disable-cfi-icall-when-use_system_libjpeg-true.patch?h=packages/chromium
+	source = chromium-cors-string-r0.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-cors-string-r0.patch?h=packages/chromium
 	source = chromium-ffmpeg-r1.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-ffmpeg-r1.patch?h=packages/chromium
 	source = chromium-widevine-r2.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-widevine-r2.patch?h=packages/chromium
-	source = chromium-disable_xml_catalogs.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-disable_xml_catalogs.patch?h=packages/chromium
+	source = chromium-libjpeg-r0.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-libjpeg-r0.patch?h=packages/chromium
+	source = chromium-libwebp-shim-r0.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-libwebp-shim-r0.patch?h=packages/chromium
 	source = chromium-skia-harmony.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-skia-harmony.patch?h=packages/chromium
-	md5sums = b1ae86cd116b1db8aa7c964377ef3e60
-	md5sums = 65a8b027e184cb1364ad8f37c0a644f0
-	md5sums = 62deb9a89a19abc4489c1c00789c215a
-	md5sums = 65c1f3c6893b31db816d594ba5591956
-	md5sums = 608934cfc9ef00c1b16d8eb315053f4d
+	md5sums = 7ebefebb5262284f9cea553e650f0534
+	md5sums = 45f1c943546c008051ec39df51aa20c0
+	md5sums = 63a59a953b874e70d931807f50f23622
+	md5sums = a2bf9d56aff00882b591edc55cbd6676
 	md5sums = 053ece2216346c5ee090703fd6230402
+	md5sums = ce00e976bcef638a96f723487f78892d
+	md5sums = 7d208ab5982df74e56bfca6bfb3c5c16
+	md5sums = adf54dfc2f529b24558b3dcfd79db5f7
+	md5sums = 9a2749a7dfd460b43666eabf8f28d13a
 	md5sums = ab9a977ec1c0d0951093db24d855a3be
 	md5sums = 56ebefbdfafb2d7ede199a4257d514d4
-	md5sums = 55b7f919e3ce2fc432eded14b3586c21
+	md5sums = 5fbfcbedbe9bcaca240a675836c81769
+	md5sums = 1e113cab22b9c247713f57a1af2b744b
 	md5sums = 254061cb349cff714230b7cca83b0a4c
 
 pkgname = vivaldi
+
