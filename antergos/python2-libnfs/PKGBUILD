@@ -3,7 +3,7 @@
 pkgname=python2-libnfs
 _pkgname=libnfs-python
 pkgver=1.0.4
-pkgrel=1
+pkgrel=2
 pkgdesc="NFS client for python2"
 arch=('any')
 url="https://github.com/sahlberg/libnfs-python"

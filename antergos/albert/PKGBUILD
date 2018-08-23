@@ -2,7 +2,7 @@
 # AUR Maintainer: Manuel Schneider  <manuelschneid3r at googles mail>
 pkgname=albert
 pkgver=0.14.21
-pkgrel=1
+pkgrel=2
 pkgdesc="A sophisticated standalone keyboard launcher."
 arch=('x86_64')
 url="https://github.com/albertlauncher"

@@ -3,8 +3,7 @@
 # Contributor: Anatol Pomozov <anatol.pomozov@gmail.com>
 
 pkgname=python-kickstart
-pkgver=3.3
-_tag=r${pkgver}-1
+pkgver=3.15
 pkgrel=1
 pkgdesc='a python library that is used for reading and writing kickstart files - python 3.x pkg'
 arch=(any)
@@ -13,12 +12,12 @@ conflicts=("python-pykickstart")
 provides=("python-pykickstart=${pkgver}-${pkgrel}")
 url='http://fedoraproject.org/wiki/Pykickstart'
 makedepends=(python urlgrabber)
-source=("pykickstart-${pkgver}.tar.gz::https://github.com/rhinstaller/pykickstart/archive/${_tag}.tar.gz")
-sha256sums=('054a506dd26e3573717effcd4f5b1d4d74e59ce666c57844559ecaa3ca32329c')
+source=("pykickstart-${pkgver}.tar.gz::https://github.com/rhinstaller/pykickstart/archive/r${pkgver}.tar.gz")
+sha256sums=('94ae268c3f9fbe4da80401af4abc9c75101801a83b90020abf73a4e2beff85f4')
 depends=('python' 'python-requests' 'urlgrabber')
 
 package() {
-	cd pykickstart-${_tag}
+	cd pykickstart-r${pkgver}
 
 	python3 setup.py install --root="${pkgdir}" --optimize=1
 

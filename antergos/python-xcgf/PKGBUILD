@@ -3,7 +3,7 @@
 
 pkgname=python-xcgf
 pkgver=2017.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Xyne's common general functions, for internal use."
 arch=('any')
 license=('GPL')

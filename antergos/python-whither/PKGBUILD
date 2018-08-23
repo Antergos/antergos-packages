@@ -3,7 +3,7 @@
 pkgname=python-whither
 _module="${pkgname#*-}"
 pkgver=0.3.2
-pkgrel=1
+pkgrel=2
 pkgdesc='Desktop application SDK for creating Universal Linux Applications.'
 url="https://github.com/antergos/whither"
 depends=('python-pyqt5' 'qt5-webengine' 'python-ruamel-yaml')

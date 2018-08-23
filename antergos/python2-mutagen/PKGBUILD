@@ -2,7 +2,7 @@
 
 pkgname='python2-mutagen'
 pkgver=1.38
-pkgrel=1
+pkgrel=2
 pkgdesc='Read and write audio tags for many formats'
 url='https://github.com/quodlibet/mutagen'
 depends=('python2')

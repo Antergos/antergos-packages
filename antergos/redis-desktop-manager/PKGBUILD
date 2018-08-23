@@ -34,29 +34,29 @@ _monitored_repo='RedisDesktopManager'
 prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	git submodule update --init --recursive
-	git submodule add https://chromium.googlesource.com/linux-syscall-support 3rdparty/linux-syscall-support
 
 	python2 build/utils/set_version.py "${_tag}" > src/version.h
 	python2 build/utils/set_version.py "${_tag}" > 3rdparty/crashreporter/src/version.h
 
-	_lssdir='3rdparty/gbreakpad/src/third_party/lss/'
-	mkdir "${_lssdir}"
-	cp 3rdparty/linux-syscall-support/linux_syscall_support.h "${_lssdir}"
 	cd 3rdparty/gbreakpad
 	touch README
+	git clone --depth 1 -v https://chromium.googlesource.com/linux-syscall-support src/third_party/lss
 }
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	rm -rf bin
 
-	cd 3rdparty/crashreporter
-	qmake-qt5 CONFIG+=release DESTDIR="${srcdir}/${pkgname}-${pkgver}/bin/linux/release" QMAKE_LFLAGS_RPATH=""
-	make
+#	cd 3rdparty/crashreporter
+#	qmake-qt5 CONFIG+=release DESTDIR="${srcdir}/${pkgname}-${pkgver}/bin/linux/release" QMAKE_LFLAGS_RPATH=""
+#	make
 
 	cd "${srcdir}/${pkgname}-${pkgver}/3rdparty/gbreakpad"
 	./configure
 	make
+
+	cd "${srcdir}/${pkgname}-${pkgver}/3rdparty/qredisclient/3rdparty/qsshclient"
+	sed -i 's|LIBS += /usr/local/lib/libssh2.a|LIBS += /usr/lib/libssh2.so|g' 3rdparty/3rdparty.pri
 
 	cd "${srcdir}/${pkgname}-${pkgver}/src"
 	qmake-qt5 && make
@@ -71,7 +71,7 @@ package() {
 
 	install -Dm644 "${srcdir}/${pkgname}-${pkgver}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 	install -Dm755 "${_instdir}/rdm" "${_bindir}/rdm"
-	install -Dm755 "${_instdir}/crashreporter" "${_bindir}/crashreporter"
+	# install -Dm755 "${_instdir}/crashreporter" "${_bindir}/crashreporter"
 	install -Dm755 "${srcdir}/rdm.sh" "${_bindir}/rdm.sh"
 	install -Dm644 "${srcdir}/${pkgname}-${pkgver}/src/resources/rdm.png" "${pkgdir}/usr/share/pixmaps/rdm.png"
 	install -Dm644 "${srcdir}/rdm.desktop" "${pkgdir}/usr/share/applications/rdm.desktop"

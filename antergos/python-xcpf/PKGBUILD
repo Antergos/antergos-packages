@@ -1,10 +1,10 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
-# Contributor: Xyne <ac xunilhcra enyx, backwards>
+# AUR Maintainer: Xyne <ac xunilhcra enyx, backwards>
 
 pkgname=python-xcpf
 _pkgname=python3-xcpf
-pkgver=2018
-pkgrel=2
+pkgver=2018.8
+pkgrel=1
 pkgdesc="Xyne's common Pacman functions, for internal use."
 arch=('any')
 license=('GPL')
@@ -14,7 +14,7 @@ replaces=('python3-xcpf')
 conflicts=('python3-xcpf')
 provides=('python3-xcpf')
 source=("http://xyne.archlinux.ca/projects/python3-xcpf/src/python3-xcpf-${pkgver}.tar.xz")
-md5sums=('2afbb9dd0458a9e35259f6266dd859e2')
+sha256sums=('7bcc62af32a63e756ff36904bbef23f4cc9216a66eaa0b00d586b3b0087e6cb8')
 
 package () {
 	cd "$srcdir/$_pkgname-$pkgver"

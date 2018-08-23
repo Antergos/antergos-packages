@@ -5,25 +5,26 @@
 
 pkgname=dolphin-root
 _pkgname=dolphin
-pkgver=17.08.1
+pkgver=18.08.0
 pkgrel=1
-pkgdesc="File Manager"
-arch=(x86_64)
+pkgdesc="KDE File Manager"
+arch=('x86_64')
 url="https://kde.org/applications/system/dolphin/"
 license=(LGPL)
-depends=(baloo-widgets knewstuff kio-extras kuiserver kcmutils)
-makedepends=(extra-cmake-modules kdoctools python)
+depends=('baloo-widgets' 'knewstuff' 'kio-extras' 'kcmutils' 'kparts' 'kinit')
+makedepends=('extra-cmake-modules' 'kdoctools')
 optdepends=('kde-cli-tools: for editing file type options'
     'ffmpegthumbs: video thumbnails'
     'ruby: installing new service menus from KDE Store'
     'kdegraphics-thumbnailers: PDF and PS thumbnails'
-    'konsole: terminal panel')
-conflicts=('kdebase-dolphin<15.08' dolphin)
-provides=(kdebase-dolphin dolphin)
-groups=(kde-applications kdebase)
+    'konsole: terminal panel'
+    'purpose: share context menu')
+conflicts=('kdebase-dolphin<15.08' 'dolphin')
+provides=('kdebase-dolphin' 'dolphin')
+groups=('kde-applications' 'kdebase')
 source=("https://download.kde.org/stable/applications/$pkgver/src/$_pkgname-$pkgver.tar.xz"
 	dolphin-root.patch)
-sha256sums=('78e4afe337b17b768fa6e615b2493cfdc2b46731ca127c76ae459b3a00de6911'
+sha256sums=('5efb4c5dc304a6d179915b6553ad0f5232dc4e6b38a9d4dbd80a72a5351e6fe4'
             'b4969d7367d1304f460862946fa44ce46bc429dac2c48d09a8559d6ab98ca8d2')
 
 prepare() {

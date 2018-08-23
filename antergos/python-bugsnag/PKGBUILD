@@ -2,15 +2,15 @@
 
 pkgname=python-bugsnag
 _pkgname=bugsnag-python
-pkgver=2.5.0
+pkgver=3.4.2
 pkgrel=1
 pkgdesc="Bugsnag Notifier for Python"
 url="https://github.com/bugsnag/bugsnag-python"
 arch=('any')
 license=('custom')
 depends=('python' 'python-setuptools')
-source=("${pkgname}-${pkgver}::https://github.com/bugsnag/bugsnag-python/archive/v${pkgver}.tar.gz")
-sha256sums=('2a14a0de5ecf79f9af546404f34b4d6ff9878ed9030995ba6b9b01b746f261f3')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/bugsnag/bugsnag-python/archive/v${pkgver}.tar.gz")
+sha256sums=('b11908b43aff2bb73898c0e5217a8de1a73313aff5a50d579c840ac03a445ea0')
 
 build() {
 	cd "${srcdir}"/${_pkgname}-${pkgver}
