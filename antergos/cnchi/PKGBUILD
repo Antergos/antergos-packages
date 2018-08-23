@@ -2,7 +2,7 @@
 
 pkgname=cnchi
 _pkgname=Cnchi
-pkgver=0.14.474
+pkgver=0.14.475
 pkgrel=1
 pkgdesc='A modern, flexible system installer for Linux'
 arch=('any')
@@ -15,7 +15,7 @@ depends=('iso-codes' 'geoip2-database' 'gptfdisk' 'python' 'pyalpm'
 makedepends=('transifex-client')
 conflicts=('cnchi-dev')
 source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
-sha256sums=('1855147030680fd3cc054eefdbcad95bb5b8eb2345bea3b5228fc19bbf412784')
+sha256sums=('a7e2869f1c3b4ea1a44e016dac78e107b45401435f877c6e789fb04b7b565fe3')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
@@ -59,3 +59,4 @@ package() {
         fi
     done
 }
+
