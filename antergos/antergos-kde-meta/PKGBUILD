@@ -7,11 +7,11 @@ pkgdesc='Meta package for Antergos KDE Plasma'
 url='http://www.antergos.com'
 arch=('any')
 license=('GPL3')
-depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'cdrdao' 'clementine' 'dolphin' 'dolphin-plugins' 'dvd+rw-tools' 'ffmpegthumbs'
+depends=('ark' 'aspell-en' 'breeze' 'breeze-gtk' 'cdrdao' 'dolphin' 'dolphin-plugins' 'dvd+rw-tools' 'ffmpegthumbs'
     'gwenview' 'k3b' 'kate' 'kcalc' 'kdeconnect' 'kdegraphics-thumbnailers' 'kde-gtk-config' 'kdelibs4support' 'kopete'
-    'kde-servicemenus-rootactions' 'kdesudo' 'sweeper' 'kdialog' 'kfaenza-icon-theme' 'kfind' 'khelpcenter' 'kinfocenter'
+    'kde-servicemenus-rootactions' 'sweeper' 'kdialog' 'kfaenza-icon-theme' 'kfind' 'khelpcenter' 'kinfocenter'
     'kipi-plugins' 'kmenuedit' 'konsole' 'kscreen' 'ksshaskpass' 'ksysguard' 'kwalletmanager' 'kwallet-pam' 'kwayland-integration' 'kwin'
     'kwrited' 'milou' 'nm-connection-editor' 'numix-frost-themes' 'numix-icon-theme-square' 'okular' 'oxygen' 'pamac-tray-appindicator'
-    'plasma-desktop' 'plasma-nm' 'plasma-pa' 'plasma-workspace' 'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve-gtk2' 'qtcurve-qt5'
+    'plasma-desktop' 'plasma-nm' 'plasma-pa' 'plasma-workspace' 'plasma-workspace-wallpapers' 'powerdevil' 'qtcurve-gtk2'
     'qtcurve-kde' 'qtcurve-utils' 'spectacle' 'systemsettings' 'transmission-qt' 'user-manager'	'vlc' 'xdg-user-dirs')
 replaces=('antergos-kde-setup')
