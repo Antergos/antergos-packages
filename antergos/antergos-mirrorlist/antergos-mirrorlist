@@ -11,28 +11,28 @@ Server = http://mirror.host.ag/antergos/$repo/$arch
 Server = https://mirrors.itbox.bg/antergos/$repo/$arch
 
 # China
-Server = http://mirrors.ustc.edu.cn/antergos/$repo/$arch
-Server = http://mirrors.tuna.tsinghua.edu.cn/antergos/$repo/$arch
+Server = https://mirrors.ustc.edu.cn/antergos/$repo/$arch
+Server = https://mirrors.tuna.tsinghua.edu.cn/antergos/$repo/$arch
 
 # Czech Republic
-Server = http://mirrors.nic.cz/antergos/$repo/$arch
+Server = https://mirrors.nic.cz/antergos/$repo/$arch
 
 # Denmark
-Server = http://mirrors.dotsrc.org/antergos/$repo/$arch
+Server = https://mirrors.dotsrc.org/antergos/$repo/$arch
 
 # France
 Server = http://cinnarch.polymorf.fr/$repo/$arch
-Server = http://eu.mirrors.coltondrg.com/antergos/$repo/$arch
+Server = https://eu.mirrors.coltondrg.com/antergos/$repo/$arch
 
 # England
-Server = http://www.mirrorservice.org/sites/repo.antergos.com/$repo/$arch
+Server = https://www.mirrorservice.org/sites/repo.antergos.com/$repo/$arch
 
 # Germany
-Server = http://mirror.de.leaseweb.net/antergos/$repo/$arch
-Server = http://mirror.alpix.eu/antergos/$repo/$arch
+Server = https://mirror.de.leaseweb.net/antergos/$repo/$arch
+Server = https://mirror.alpix.eu/antergos/$repo/$arch
 
 # Greece
-Server = http://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
+Server = https://ftp.cc.uoc.gr/mirrors/linux/antergos/$repo/$arch
 
 # Hungary
 Server = https://quantum-mirror.hu/mirrors/pub/antergos/$repo/$arch
@@ -41,27 +41,27 @@ Server = https://quantum-mirror.hu/mirrors/pub/antergos/$repo/$arch
 Server = http://mirror.antergos.jp/$repo/$arch
 
 # Netherlands
-Server = http://mirror.nl.leaseweb.net/antergos/$repo/$arch
-Server = http://ftp1.nluug.nl/os/Linux/distr/antergos/$repo/$arch
-Server = http://ftp2.nluug.nl/os/Linux/distr/antergos/$repo/$arch
-Server = http://mirror.neostrada.nl/antergos/$repo/$arch
+Server = https://mirror.nl.leaseweb.net/antergos/$repo/$arch
+Server = https://ftp1.nluug.nl/os/Linux/distr/antergos/$repo/$arch
+Server = https://ftp2.nluug.nl/os/Linux/distr/antergos/$repo/$arch
+Server = https://mirror.neostrada.nl/antergos/$repo/$arch
 
 # Portugal
-Server = http://glua.ua.pt/pub/antergos/$repo/$arch
+Server = https://glua.ua.pt/pub/antergos/$repo/$arch
 
 # Russia
-Server = http://mirror.yandex.ru/mirrors/cinnarch/$repo/$arch
+Server = https://mirror.yandex.ru/mirrors/cinnarch/$repo/$arch
 
 # Spain
 Server = http://softlibre.unizar.es/cinnarch/$repo/$arch
 
 # Sweden
-Server = http://ftp.acc.umu.se/mirror/antergos.com/$repo/$arch
+Server = https://ftp.acc.umu.se/mirror/antergos.com/$repo/$arch
 
 # USA
-Server = http://mirror.us.leaseweb.net/antergos/$repo/$arch
-Server = http://mirror.umd.edu/antergos/$repo/$arch
-Server = http://mirrors.acm.wpi.edu/antergos/$repo/$arch
-Server = http://mirrors.servercentral.com/antergos/$repo/$arch
-Server = http://antergos.mirror.constant.com/$repo/$arch
-Server = http://repo.antergos.info/$repo/$arch
+Server = https://mirror.us.leaseweb.net/antergos/$repo/$arch
+Server = https://mirror.umd.edu/antergos/$repo/$arch
+Server = https://mirrors.acm.wpi.edu/antergos/$repo/$arch
+Server = https://mirrors.servercentral.com/antergos/$repo/$arch
+Server = https://antergos.mirror.constant.com/$repo/$arch
+Server = https://repo.antergos.info/$repo/$arch
