@@ -3,7 +3,7 @@
 pkgname=cnchi-dev
 _pkgname=Cnchi
 pkgver=0.15.283
-pkgrel=2
+pkgrel=3
 pkgdesc='Antergos Installer - Development Version'
 arch=('any')
 license=('GPL3')
@@ -12,7 +12,7 @@ depends=('iso-codes' 'geoip2-database' 'gptfdisk' 'python' 'pyalpm' 'python-bugs
          'python-cairo' 'python-chardet' 'python-dbus' 'python-defusedxml' 
          'python-feedparser' 'python-geoip2' 'python-gobject' 'python-idna'
          'python-libnacl' 'python-mako' 'python-maxminddb' 'python-parted'
-         'python-requests' 'upower' 'webkit2gtk')
+         'python-requests' 'upower' 'webkit2gtk' 'python-urllib3' 'pyalpm')
 makedepends=('transifex-client')
 conflicts=('cnchi')
 source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
