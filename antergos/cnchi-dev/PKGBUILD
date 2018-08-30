@@ -2,21 +2,21 @@
 
 pkgname=cnchi-dev
 _pkgname=Cnchi
-pkgver=0.16.277
-pkgrel=2
+pkgver=0.15.283
+pkgrel=1
 pkgdesc='Antergos Installer - Development Version'
 arch=('any')
 license=('GPL3')
 url="https://github.com/Antergos/Cnchi"
-depends=('iso-codes' 'geoip2-database' 'gptfdisk' 'python' 'pyalpm'
-         'python-bugsnag' 'python-cairo' 'python-dbus' 'python-defusedxml' 
-         'python-feedparser' 'python-geoip2' 'python-gobject' 'python-libnacl'
-         'python-mako' 'python-maxminddb' 'python-parted' 'python-requests'
-         'upower' 'webkit2gtk')
+depends=('iso-codes' 'geoip2-database' 'gptfdisk' 'python' 'pyalpm' 'python-bugsnag'
+         'python-cairo' 'python-chardet' 'python-dbus' 'python-defusedxml' 
+         'python-feedparser' 'python-geoip2' 'python-gobject' 'python-idna'
+         'python-libnacl' 'python-mako' 'python-maxminddb' 'python-parted'
+         'python-requests' 'upower' 'webkit2gtk')
 makedepends=('transifex-client')
 conflicts=('cnchi')
 source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
-sha256sums=('a6ff0a48bfab78095613ae38cf39e925e21f0acce8f4b3d4c684a9602e1145ca')
+sha256sums=('fb854a7025587eead1c3278c099904788243050597edfb0432e4d177ba621b45')
 
 package() {
     cd "${srcdir}/${_pkgname}-${pkgver}"
