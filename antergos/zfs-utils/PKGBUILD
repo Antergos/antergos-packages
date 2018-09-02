@@ -37,7 +37,7 @@ _monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
 # END ANTBS METADATA
 
 prepare() {
-	cd "${srcdir}/${pkgname}-${_tag}"
+	cd "${srcdir}/zfs-${_tag}"
 
 	# https://github.com/zfsonlinux/zfs/pull/7792
 	patch -Np1 -i ../7792.patch
