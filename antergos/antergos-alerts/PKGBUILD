@@ -1,7 +1,7 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=antergos-alerts
-pkgver=17.11.18
+pkgver=18.9.3
 pkgrel=1
 pkgdesc='Notifies users when new antergos alerts are issued.'
 arch=('any')
