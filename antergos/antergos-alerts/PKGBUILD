@@ -26,15 +26,15 @@ package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 
-#	for fpath in po/*; do
-#		if [[ -f "${fpath}" ]] && [[ "${fpath}" != 'po/ANTERGOS_NOTIFY.pot' ]]; then
-#			STRING_PO=`echo ${fpath#*/}`
-#			STRING=`echo ${STRING_PO%.po}`
-#			mkdir -p "${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES"
-#			msgfmt "${fpath}" -o "${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/ANTERGOS_NOTIFY.mo"
-#			echo "${STRING} installed..."
-#		fi
-#	done
+	for fpath in po/*; do
+		if [[ -f "${fpath}" ]] && [[ "${fpath}" != 'po/ANTERGOS_NOTIFY.pot' ]]; then
+			STRING_PO=`echo ${fpath#*/}`
+			STRING=`echo ${STRING_PO%.po}`
+			mkdir -p "${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES"
+			msgfmt "${fpath}" -o "${pkgdir}/usr/share/locale/${STRING}/LC_MESSAGES/ANTERGOS_NOTIFY.mo"
+			echo "${STRING} installed..."
+		fi
+	done
 }
 
 
