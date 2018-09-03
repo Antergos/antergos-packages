@@ -9,7 +9,7 @@ pkgdesc='Command-line tool for managing translations with Transifex.'
 arch=('any')
 url='https://github.com/transifex/transifex-client'
 license=('GPL2')
-depends=('python' 'python-distribute' 'python-urllib3')
+depends=('python' 'python-distribute' 'python-urllib3' 'python-slugify' 'python-requests' 'python-six')
 source=("https://github.com/transifex/transifex-client/archive/${pkgver}.tar.gz")
 md5sums=('2efd81e5a46fedda5adea78f3009d1a1')
 
