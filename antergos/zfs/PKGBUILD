@@ -55,18 +55,19 @@ build() {
         --includedir=/usr/include \
         --with-udevdir=/usr/lib/udev \
         --libexecdir=/usr/lib/zfs \
-        --with-config=user
+        --with-config=user \
+        --with-spl="/usr/src/spl-${_pkgver}"
     make
 }
 
 package() {
-    dkmsdir="${pkgdir}/usr/src/zfs-${pkgver}"
+    dkmsdir="${pkgdir}/usr/src/zfs-${_pkgver}"
     install -d "${dkmsdir}"
 
     cp -a "${srcdir}/${pkgname}-${_tag}"/. ${dkmsdir}
 
     cd "${dkmsdir}"
     ./autogen.sh
-    scripts/dkms.mkconf -v ${pkgver} -f dkms.conf -n ${pkgname}
+    scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n ${pkgname}
     chmod g-w,o-w -R .
 }
