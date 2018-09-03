@@ -55,7 +55,8 @@ build() {
         --includedir=/usr/include \
         --with-udevdir=/usr/lib/udev \
         --libexecdir=/usr/lib/zfs \
-        --with-config=user
+        --with-config=user \
+        --with-spl="/usr/src/spl-${_pkgver}"
     make
 }
 
