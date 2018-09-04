@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=antergos-alpm-hooks
-pkgver=1.0
-pkgrel=1
+pkgver=1.11.0
+pkgrel=11
 pkgdesc='Antergos alpm hooks'
 arch=('any')
 depends=('pacman' 'libnotify')
