@@ -1,7 +1,7 @@
 # Maintainer: Antergos devs <devs@antergos.com>
 # AUR Maintainer: Jguer <joaogg3@gmail.com>
 pkgname=yay
-pkgver=8.1101
+pkgver=8.1110
 pkgrel=11
 pkgdesc="Yet another yogurt. Pacman wrapper and AUR helper written in go."
 arch=('x86_64')
