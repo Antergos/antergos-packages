@@ -2,16 +2,16 @@
 
 pkgname=python-parted
 pkgver=3.11.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Python module for the parted library which can be used for manipulating partition tables."
-url="https://github.com/rhinstaller/pyparted"
+url="https://github.com/dcantrell/pyparted"
 arch=('x86_64')
 license=('GPL2')
 depends=('python' 'parted>=3.1' 'e2fsprogs')
 provides=('pyparted')
 conflicts=('pyparted')
 replaces=('pyparted')
-source=("https://github.com/rhinstaller/pyparted/archive/v${pkgver}.tar.gz")
+source=("https://github.com/dcantrell/pyparted/archive/v${pkgver}.tar.gz")
 sha256sums=('983b5123742d0124b640eafbeee9c5413d23b5ada29fb0adb34c5940a4f43664')
 
 build() {
