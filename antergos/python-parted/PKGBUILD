@@ -2,7 +2,7 @@
 
 pkgname=python-parted
 pkgver=3.11.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Python module for the parted library which can be used for manipulating partition tables."
 url="https://github.com/dcantrell/pyparted"
 arch=('x86_64')
