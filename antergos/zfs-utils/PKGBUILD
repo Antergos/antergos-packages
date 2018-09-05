@@ -2,25 +2,30 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs-utils
-pkgver=0.7.9
-pkgrel=2
+_pkgver=0.7.10
+pkgver=0.7.10git+7ec2b1c
+pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
 url="http://zfsonlinux.org/"
 license=('CDDL')
 arch=("x86_64")
 groups=("system" "zfs")
-depends=("spl=${pkgver}")
+depends=("spl>=${pkgver%+*}")
 conflicts=("zfs-utils-dkms-git")
 _commit=''
-_tag="zfs-${pkgver}"
-source=("https://github.com/zfsonlinux/zfs/archive/${_tag}.zip"
+_tag="zfs-${_pkgver%.*}-release"
+source=(
+	"https://github.com/zfsonlinux/zfs/archive/${_tag}.zip"
 	"zfs-utils.bash-completion-r1"
 	"zfs-utils.initcpio.install"
-	"zfs-utils.initcpio.hook")
-md5sums=('a139afdab5e37e2a0112811148150c3f'
+	"zfs-utils.initcpio.hook"
+	'https://github.com/zfsonlinux/zfs/pull/7792.patch'
+)
+md5sums=('04f159a66d89e79fe83c1ac3ce416f62'
          '9ddb0c8a94861f929d0fa741fdc49950'
          '73527e326fbbd1bc3d4331bbba0af5a8'
-         '2d4dd00dd671598c26b5d054bd63d6f5')
+         '2d4dd00dd671598c26b5d054bd63d6f5'
+         'ba16bec6f8d473f1f0dd3076f7a3ace0')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
@@ -31,6 +36,12 @@ _monitored_repo='zfs'
 _monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
 # END ANTBS METADATA
 
+prepare() {
+	cd "${srcdir}/zfs-${_tag}"
+
+	# https://github.com/zfsonlinux/zfs/pull/7792
+	patch -Np1 -i ../7792.patch
+}
 
 build() {
     cd "${srcdir}/zfs-${_tag}"
@@ -44,7 +55,8 @@ build() {
         --includedir=/usr/include \
         --with-udevdir=/usr/lib/udev \
         --libexecdir=/usr/lib/zfs \
-        --with-config=user
+        --with-config=user \
+        --with-spl="/usr/src/spl-${_pkgver}"
     make
 }
 

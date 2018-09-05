@@ -2,22 +2,27 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-pkgver=0.7.9
-pkgrel=2
+_pkgver=0.7.10
+pkgver=0.7.10git+7ec2b1c
+pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
 groups=("system" "zfs")
 makedepends=("git")
-depends=("spl=${pkgver}" "zfs-utils=${pkgver}" "dkms" "linux-headers" "linux")
+depends=("spl>=${pkgver%+*}" "zfs-utils>=${pkgver%+*}" "dkms" "linux-headers" "linux>4.18")
 provides=("zfs-dkms=${pkgver}")
 conflicts=("zfs-git" "zfs-dkms")
 install=zfs.install
 arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag="zfs-${pkgver}"
-source=("https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip")
-md5sums=('a139afdab5e37e2a0112811148150c3f')
+_tag="zfs-${_pkgver%.*}-release"
+source=(
+	"https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip"
+	'https://github.com/zfsonlinux/zfs/pull/7792.patch'
+)
+md5sums=('04f159a66d89e79fe83c1ac3ce416f62'
+         'ba16bec6f8d473f1f0dd3076f7a3ace0')
 
 
 # BEGIN ANTBS METADATA
@@ -29,6 +34,13 @@ _monitored_repo='zfs'
 _monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
 # END ANTBS METADATA
 
+
+prepare() {
+	cd "${srcdir}/${pkgname}-${_tag}"
+
+	# https://github.com/zfsonlinux/zfs/pull/7792
+	patch -Np1 -i ../7792.patch
+}
 
 build() {
     cd "${srcdir}/${pkgname}-${_tag}"
@@ -43,18 +55,19 @@ build() {
         --includedir=/usr/include \
         --with-udevdir=/usr/lib/udev \
         --libexecdir=/usr/lib/zfs \
-        --with-config=user
+        --with-config=user \
+        --with-spl="/usr/src/spl-${_pkgver}"
     make
 }
 
 package() {
-    dkmsdir="${pkgdir}/usr/src/zfs-${pkgver}"
+    dkmsdir="${pkgdir}/usr/src/zfs-${_pkgver}"
     install -d "${dkmsdir}"
 
     cp -a "${srcdir}/${pkgname}-${_tag}"/. ${dkmsdir}
 
     cd "${dkmsdir}"
     ./autogen.sh
-    scripts/dkms.mkconf -v ${pkgver} -f dkms.conf -n ${pkgname}
+    scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n ${pkgname}
     chmod g-w,o-w -R .
 }
