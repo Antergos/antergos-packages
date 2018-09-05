@@ -68,5 +68,5 @@ elif ! versions_match; then
 fi
 
 export LD_LIBRARY_PATH="/usr/lib/openssl-1.0:$LD_LIBRARY_PATH"
-exec "${toolbox_user_dir}/bin/jetbrains-toolbox" --disable-seccomp-filter-sandbox "$@"
+exec "${toolbox_user_dir}/bin/jetbrains-toolbox" "$@"
 
