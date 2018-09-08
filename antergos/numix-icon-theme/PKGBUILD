@@ -33,7 +33,7 @@ build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
 	patch_navigation_icons() {
-		cd "${srcdir}/${pkgname}"
+		cd "${srcdir}/${pkgname}-${pkgver}"
 		_regex='(gtk-)*go(to)*-*(\w|-)+\.svg'
 		for _icon in ${1}/${2}/actions/**
 		do
