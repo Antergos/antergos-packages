@@ -1,10 +1,9 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme-square
-_pkgver=18.08.01
-pkgver=18.8.1
+pkgver=18.08.29
 pkgrel=1
-epoch=1
+epoch=2
 pkgdesc="Square icon expansion theme from the Numix project"
 arch=('any')
 url='http://numixproject.org/'
@@ -12,11 +11,19 @@ license=('GPL3')
 depends=('numix-icon-theme')
 replaces=('numix-icon-theme-square-kde')
 conflicts=('numix-icon-theme-square-git')
-source=("https://github.com/numixproject/${pkgname}/archive/${_pkgver}.tar.gz")
-sha256sums=('0b047ffd39a23fef74413a0978dc3070a750d7951185caea8ca8d3042086a6ef')
+source=("https://github.com/numixproject/${pkgname}/archive/${pkgver}.tar.gz")
+sha256sums=('04337fc558a4b7718cdc8de80fc93c87aa40178f3cff8a2d20b5af15b60105ce')
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='numixproject'
+_monitored_repo='numix-icon-theme-square'
+# END ANTBS METADATA
 
 package() {
-	cd "${srcdir}/${pkgname}-${_pkgver}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 
 	sed -i 's|Inherits=Numix|Inherits=Numix,Adwaita,gnome,hicolor|g;
 			s|Name=Numix Square|Name=Numix-Square|g' Numix-Square/index.theme

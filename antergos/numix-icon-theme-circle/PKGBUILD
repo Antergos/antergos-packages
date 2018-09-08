@@ -1,9 +1,9 @@
 # Maintainer: Antergos devs <devs@antergos.com>
 
 pkgname=numix-icon-theme-circle
-pkgver=18.8.1
-_pkgver=18.08.01
+pkgver=18.08.29
 pkgrel=1
+epoch=1
 pkgdesc='Circle icon theme from the Numix project'
 arch=('any')
 url='http://numixproject.org/'
@@ -12,11 +12,19 @@ depends=('numix-icon-theme')
 makedepends=('git')
 provides=('numix-circle-icon-theme' 'numix-circle-light-icon-theme' 'numix-icon-theme-circle')
 conflicts=('numix-circle-icon-theme' 'numix-circle-light-icon-theme' 'numix-circle-icon-theme-git')
-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/numixproject/${pkgname}/archive/${_pkgver}.tar.gz")
-sha256sums=('7ee208fa6521133a0f4b0fa98c40a91f13e9cecb4ede5a83ab8632cead1c24b0')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/numixproject/${pkgname}/archive/${pkgver}.tar.gz")
+sha256sums=('1e9779e38696986c2a03770c34e7e59a5ec2875fcf6592cbdfe68b3e074ccbeb')
+
+# BEGIN ANTBS METADATA
+_is_monitored='True'
+_monitored_service='github'
+_monitored_type='releases'
+_monitored_project='numixproject'
+_monitored_repo='numix-icon-theme-circle'
+# END ANTBS METADATA
 
 package() {
-  cd ${pkgname}-${_pkgver}
+  cd ${pkgname}-${pkgver}
 
   install -dm 755 "${pkgdir}"/usr/share/icons
   cp -dr --no-preserve='ownership' Numix-Circle{,-Light} "${pkgdir}"/usr/share/icons/

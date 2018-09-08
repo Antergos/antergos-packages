@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme
-pkgver=0.r1899
+pkgver=18.07.17
 pkgrel=1
 epoch=1
 pkgdesc="Base icon theme from the Numix project"
@@ -12,10 +12,10 @@ depends=('adwaita-icon-theme')
 makedepends=('git')
 options=('!strip')
 install="${pkgname}.install"
-source=('git+http://github.com/numixproject/numix-icon-theme.git'
+source=("${pkgname}-${pkgver}.tar.gz::http://github.com/numixproject/numix-icon-theme/archive/${pkgver}.tar.gz"
 		'antergos-ball-for-dark-themes.svg'
 		'antergos-ball-for-light-themes.svg')
-md5sums=('SKIP'
+md5sums=('e38b15d0698efbeb722346e479edb29f'
          'b53a44445cf8db72d38c13c93cb42abe'
          '7285681ca2f956a4b4c3c0898c895eb8')
 
@@ -23,20 +23,14 @@ md5sums=('SKIP'
 # BEGIN ANTBS METADATA
 _is_monitored='True'
 _monitored_service='github'
-_monitored_type='commits'
+_monitored_type='releases'
 _monitored_project='numixproject'
 _monitored_repo='numix-icon-theme'
 # END ANTBS METADATA
 
 
-pkgver() {
-	cd "${srcdir}/${pkgname}"
-	printf "0.r%s" "$(git rev-list --count HEAD)"
-}
-
-
 build() {
-	cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 
 	patch_navigation_icons() {
 		cd "${srcdir}/${pkgname}"
@@ -81,7 +75,6 @@ build() {
 		return 0
 	}
 
-
 	for size in 16 22 24
 	do
 		( patch_navigation_icons Numix ${size} )
@@ -100,12 +93,10 @@ build() {
 
 
 package() {
-	cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 
 	install -dm 755 "${pkgdir}/usr/share/icons"
 	cp -r Numix "${pkgdir}/usr/share/icons"
 	cp -r Numix-Light "${pkgdir}/usr/share/icons"
 }
-
-# -*- mode:bash; -*-
 
