@@ -2,7 +2,7 @@
 
 pkgname=cnchi-dev
 _pkgname=Cnchi
-pkgver=0.15.309
+pkgver=0.15.347
 pkgrel=1
 pkgdesc='Antergos Installer - Development Version'
 arch=('any')
@@ -16,7 +16,7 @@ depends=('iso-codes' 'geoip2-database' 'gptfdisk' 'python' 'pyalpm' 'python-bugs
 makedepends=('transifex-client')
 conflicts=('cnchi')
 source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
-sha256sums=('3c1a81e10f7b00b507a4b96f2ffcfe42eac59802da8dc8e00ce64594a6721354')
+sha256sums=('b7f07a80e2fa1d55b4b0d90e93c4247fe20ba735c151f952913c3d996fa8a053')
 
 package() {
     cd "${srcdir}/${_pkgname}-${pkgver}"
