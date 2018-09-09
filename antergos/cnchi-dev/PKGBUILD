@@ -3,7 +3,7 @@
 pkgname=cnchi-dev
 _pkgname=Cnchi
 pkgver=0.15.347
-pkgrel=1
+pkgrel=2
 pkgdesc='Antergos Installer - Development Version'
 arch=('any')
 license=('GPL3')
