@@ -2,8 +2,8 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs-utils
-_pkgver=0.7.10
-pkgver=0.7.10
+_pkgver=0.7.11
+pkgver=0.7.11
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
 url="http://zfsonlinux.org/"
