@@ -2,7 +2,7 @@
 # Contributor: Vyacheslav Konovalov <vyachkonovalov@gmail.com>
 
 pkgname=redis-desktop-manager
-pkgver=0.9.6
+pkgver=0.9.7
 pkgrel=2
 pkgdesc='Cross-platform GUI management tool for Redis'
 arch=('x86_64')
