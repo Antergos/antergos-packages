@@ -10,9 +10,9 @@ _from_arch_pkg() {
 }
 
 pkgname=vivaldi
-pkgver=1.15.1147.64
-# https://update.vivaldi.com/update/1.0/relnotes/1.15.1147.64.html
-_chromium=68.0.3440.106 # https://omahaproxy.appspot.com
+pkgver=2.0.1309.29
+# https://update.vivaldi.com/update/1.0/relnotes/2.0.1309.29.html
+_chromium=69.0.3497.100 # https://omahaproxy.appspot.com
 pkgrel=5
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
@@ -37,33 +37,21 @@ source=(
 	"https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
-	"$(_from_arch_pkg x11-fix-mixup-between-DIP-pixel-coordinates.patch)"
-	"$(_from_arch_pkg blink-disable-XML-catalogs-at-runtime.patch)"
 	"$(_from_arch_pkg fix-cfi-icall-failure-with-use_system_libjpeg-true.patch)"
         "$(_from_arch_pkg only-disable-cfi-icall-when-use_system_libjpeg-true.patch)"
-	"$(_from_arch_pkg chromium-cors-string-r0.patch)"
-	"$(_from_arch_pkg chromium-ffmpeg-r1.patch)"
         "$(_from_arch_pkg chromium-widevine-r2.patch)"
-	"$(_from_arch_pkg chromium-libjpeg-r0.patch)"
-	"$(_from_arch_pkg chromium-libwebp-shim-r0.patch)"
+	"$(_from_arch_pkg chromium-system-icu.patch)"
         "$(_from_arch_pkg chromium-skia-harmony.patch)"
-
 )
-md5sums=('7ebefebb5262284f9cea553e650f0534'
-         '45f1c943546c008051ec39df51aa20c0'
-         '63a59a953b874e70d931807f50f23622'
-         'a2bf9d56aff00882b591edc55cbd6676'
-         '053ece2216346c5ee090703fd6230402'
-         'ce00e976bcef638a96f723487f78892d'
+md5sums=('ddfb5ef1739c08e9455069fa131493a1'
+         '1779724693bdcf7b4e01ea1133abdde2'
+         '164bf5a4f7ab11b58051e357d1b7365e'
+         'd6815a943c234068183bcc30c3ee194b'
          '7d208ab5982df74e56bfca6bfb3c5c16'
          'adf54dfc2f529b24558b3dcfd79db5f7'
-         '9a2749a7dfd460b43666eabf8f28d13a'
-         'ab9a977ec1c0d0951093db24d855a3be'
          '56ebefbdfafb2d7ede199a4257d514d4'
-         '5fbfcbedbe9bcaca240a675836c81769'
-         '1e113cab22b9c247713f57a1af2b744b'
+         'caff61182595798a5c00913cb5ed9355'
          '254061cb349cff714230b7cca83b0a4c')
-
 
 
 
@@ -117,12 +105,6 @@ prepare() {
   # https://crbug.com/829916#c16
   sed -i 's/"Chromium/"Chrome/' chrome/common/chrome_content_client_constants.cc
 
-  # https://crbug.com/707721
-  patch -Np1 -i ../x11-fix-mixup-between-DIP-pixel-coordinates.patch
-
-  # https://crbug.com/736026
-  patch -Np1 -i ../blink-disable-XML-catalogs-at-runtime.patch
-
   # https://crbug.com/866290
   patch -Np1 -i ../fix-cfi-icall-failure-with-use_system_libjpeg-true.patch
   patch -Np1 -i ../only-disable-cfi-icall-when-use_system_libjpeg-true.patch
@@ -131,11 +113,10 @@ prepare() {
   patch -Np4 -i ../chromium-skia-harmony.patch
 
   # Fixes from Gentoo
-  patch -Np1 -i ../chromium-cors-string-r0.patch
-  patch -Np1 -i ../chromium-ffmpeg-r1.patch
-  patch -Np1 -i ../chromium-libjpeg-r0.patch
-  patch -Np1 -i ../chromium-libwebp-shim-r0.patch
   patch -Np1 -i ../chromium-widevine-r2.patch
+
+  # https://bugs.gentoo.org/661880#c21
+  patch -Np1 -i ../chromium-system-icu.patch
 	
 	# Remove compiler flags not supported by our system clang
 	sed -i \
