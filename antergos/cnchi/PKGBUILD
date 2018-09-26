@@ -3,19 +3,20 @@
 pkgname=cnchi
 _pkgname=Cnchi
 pkgver=0.16.2
-pkgrel=1
+pkgrel=2
 pkgdesc='A modern, flexible system installer for Linux'
 arch=('any')
 license=('GPL3')
 url='https://github.com/Antergos/Cnchi'
 depends=('iso-codes' 'geoip2-database' 'gptfdisk' 'python' 'pyalpm'
-         'python-bugsnag' 'python-cairo' 'python-dbus' 'python-geoip2'
-         'python-gobject' 'python-mako' 'python-maxminddb' 'python-parted'
-         'python-requests' 'upower' 'webkit2gtk')
+         'python-bugsnag' 'python-cairo' 'python-chardet' 'python-dbus'
+         'python-feedparser' 'python-geoip2' 'python-gobject' 'python-idna'
+         'python-libnacl' 'python-mako' 'python-maxminddb' 'python-parted'
+         'python-requests' 'upower' 'python-urllib3' 'pyalpm')
 makedepends=('transifex-client')
 conflicts=('cnchi-dev')
 source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/Antergos/${_pkgname}/archive/${pkgver}.tar.gz")
-sha256sums=('82b046c0eec7d958010cc1299486793f479a8f7b1bfa79f8947e3d98c4d38a8b')
+sha256sums=('93318ec3b13908638c7c2ea502bd388fc016b6eddc1cd048d8803007c041587a')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
