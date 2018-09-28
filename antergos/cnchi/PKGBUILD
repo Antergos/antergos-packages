@@ -2,7 +2,7 @@
 
 pkgname=cnchi
 _pkgname=Cnchi
-pkgver=0.16.3
+pkgver=0.16.8
 pkgrel=2
 pkgdesc='A modern, flexible system installer for Linux'
 arch=('any')
