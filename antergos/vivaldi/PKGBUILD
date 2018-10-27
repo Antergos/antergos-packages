@@ -13,7 +13,7 @@ pkgname=vivaldi
 pkgver=2.1.1337.36
 # https://update.vivaldi.com/update/1.0/relnotes/2.1.1337.36.html
 _chromium=70.0.3538.77 # https://omahaproxy.appspot.com
-pkgrel=1
+pkgrel=2
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
 url="https://vivaldi.com"
