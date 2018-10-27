@@ -38,8 +38,8 @@ source=(
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
 	"$(_from_arch_pkg include-stdint.h-in-pdfium_mem_buffer_file_write.h.patch)"
-	"$(_from_arch_pkg     chromium-harfbuzz-r0.patch)"
-	"$(_from_arch_pkg  chromium-widevine-r2.patch)"
+	"$(_from_arch_pkg chromium-harfbuzz-r0.patch)"
+	"$(_from_arch_pkg chromium-widevine-r2.patch)"
 	"$(_from_arch_pkg chromium-system-icu.patch)"
 	"$(_from_arch_pkg chromium-skia-harmony.patch)"
 
@@ -83,13 +83,6 @@ _unwanted_bundled_libs=(
 )
 depends+=(${_system_libs[@]})
 
-# Google API keys (see https://www.chromium.org/developers/how-tos/api-keys)
-# Note: These are for Arch Linux use ONLY. For your own distribution, please
-# get your own set of keys.
-_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
-_google_default_client_id=413772536636.apps.googleusercontent.com
-_google_default_client_secret=0ZChLK6AxeA3Isu96MkwqDR4
-
 prepare() {
 	cd "$srcdir/chromium-$_chromium"
 
@@ -110,33 +103,49 @@ prepare() {
   patch -Np4 -i ../chromium-skia-harmony.patch
 
   # Fixes from Gentoo
-  patch -Np1 -i ../chromium-harfbuzz-r0.patch
+  patch -Np1 -i ../chromium-harfbuzz-r0.patch  
   patch -Np1 -i ../chromium-widevine-r2.patch
 
   # https://bugs.gentoo.org/661880#c21
   patch -Np1 -i ../chromium-system-icu.patch
+	
+	# Remove compiler flags not supported by our system clang
+	sed -i \
+		-e '/"-Wno-enum-compare-switch"/d' \
+		-e '/"-Wno-null-pointer-arithmetic"/d' \
+		-e '/"-Wno-tautological-unsigned-zero-compare"/d' \
+		-e '/"-Wno-tautological-constant-compare"/d' build/config/compiler/BUILD.gn
 
-  # Force script incompatible with Python 3 to use /usr/bin/python2
-  sed -i '1s|python$|&2|' third_party/dom_distiller_js/protoc_plugins/*.py
+	# chromium 46 gives an error about a missing file
+	# workaround create empty
+	touch chrome/test/data/webui/i18n_process_css_test.html
 
-  mkdir -p third_party/node/linux/node-linux-x64/bin
-  ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
+	# Use Python 2
+	find . -name '*.py' -exec sed -i -r 's|/usr/bin/python$|&2|g' {} +
 
-  # Remove bundled libraries for which we will use the system copies; this
-  # *should* do what the remove_bundled_libraries.py script does, with the
-  # added benefit of not having to list all the remaining libraries
-  local _lib
-  for _lib in ${_unwanted_bundled_libs[@]}; do
-    find "third_party/$_lib" -type f \
-      \! -path "third_party/$_lib/chromium/*" \
-      \! -path "third_party/$_lib/google/*" \
-      \! -path 'third_party/yasm/run_yasm.py' \
-      \! -regex '.*\.\(gn\|gni\|isolate\)' \
-      -delete
-  done
+	# There are still a lot of relative calls which need a workaround
+	[[ -d "$srcdir/python2-path" ]] && rm -rf "$srcdir/python2-path"
+	mkdir "$srcdir/python2-path"
+	ln -s /usr/bin/python2 "$srcdir/python2-path/python"
 
-  python2 build/linux/unbundle/replace_gn_files.py \
-    --system-libraries "${!_system_libs[@]}"
+	mkdir -p third_party/node/linux/node-linux-x64/bin
+	ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
+
+	# Remove bundled libraries for which we will use the system copies; this
+	# *should* do what the remove_bundled_libraries.py script does, with the
+	# added benefit of not having to list all the remaining libraries
+	local _lib
+	for _lib in "${_unwanted_bundled_libs[@]}"
+	do
+		find -type f -path "*third_party/$_lib/*" \
+			\! -path "*third_party/$_lib/chromium/*" \
+			\! -path "*third_party/$_lib/google/*" \
+			\! -path "*base/third_party/icu/*" \
+			\! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
+			-delete
+	done
+
+	python2 build/linux/unbundle/replace_gn_files.py --system-libraries "${!_system_libs[@]}"
 }
 
 build() {
