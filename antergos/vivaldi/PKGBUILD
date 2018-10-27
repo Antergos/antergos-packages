@@ -10,9 +10,9 @@ _from_arch_pkg() {
 }
 
 pkgname=vivaldi
-pkgver=2.0.1309.29
-# https://update.vivaldi.com/update/1.0/relnotes/2.0.1309.29.html
-_chromium=69.0.3497.100 # https://omahaproxy.appspot.com
+pkgver=2.1.1337.36
+# https://update.vivaldi.com/update/1.0/relnotes/2.1.1337.36.html
+_chromium=70.0.3538.77 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
@@ -37,124 +37,106 @@ source=(
 	"https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
-	"$(_from_arch_pkg fix-cfi-icall-failure-with-use_system_libjpeg-true.patch)"
-        "$(_from_arch_pkg only-disable-cfi-icall-when-use_system_libjpeg-true.patch)"
-        "$(_from_arch_pkg chromium-widevine-r2.patch)"
+	"$(_from_arch_pkg include-stdint.h-in-pdfium_mem_buffer_file_write.h.patch)"
+	"$(_from_arch_pkg     chromium-harfbuzz-r0.patch)"
+	"$(_from_arch_pkg  chromium-widevine-r2.patch)"
 	"$(_from_arch_pkg chromium-system-icu.patch)"
-        "$(_from_arch_pkg chromium-skia-harmony.patch)"
+	"$(_from_arch_pkg chromium-skia-harmony.patch)"
+
 )
-md5sums=('ddfb5ef1739c08e9455069fa131493a1'
-         '1779724693bdcf7b4e01ea1133abdde2'
-         '164bf5a4f7ab11b58051e357d1b7365e'
-         'd6815a943c234068183bcc30c3ee194b'
-         '7d208ab5982df74e56bfca6bfb3c5c16'
-         'adf54dfc2f529b24558b3dcfd79db5f7'
+md5sums=('3839ee739791023c227d88ec2be54b32'
+         'a246a9c95308d8918db963731e553e70'
+         '9cb1cfda43025a85d4826d7358ed0284'
+         '253fd2d60c6a9348a13f06a819a14906'
+         '6a9fd8e67d1cc37be22e79662668128a'
+         '2c394971c9d86d3184b6e50f1195b794'
          '56ebefbdfafb2d7ede199a4257d514d4'
          'caff61182595798a5c00913cb5ed9355'
          '254061cb349cff714230b7cca83b0a4c')
 
 
-
-
 # Possible replacements are listed in build/linux/unbundle/replace_gn_files.py
 # Keys are the names in the above script; values are the dependencies in Arch
-declare -rgA _system_libs=(
-  #[ffmpeg]=ffmpeg            # https://crbug.com/731766
+declare -gA _system_libs=(
+  [ffmpeg]=ffmpeg
   [flac]=flac
-  #[fontconfig]=fontconfig    # Enable for M65
-  #[freetype]=freetype2       # Using 'use_system_freetype=true' until M65
-  #[harfbuzz-ng]=harfbuzz     # Using 'use_system_harfbuzz=true' until M65
+  [fontconfig]=fontconfig
+  [freetype]=freetype2
+  [harfbuzz-ng]=harfbuzz
   [icu]=icu
-  [libdrm]=''
+  [libdrm]=
   [libjpeg]=libjpeg
   #[libpng]=libpng            # https://crbug.com/752403#c10
-  #[libvpx]=libvpx            # https://bugs.gentoo.org/611394
+  #[libvpx]=libvpx            # needs unreleased libvpx
   [libwebp]=libwebp
-  #[libxml]=libxml2           # https://crbug.com/736026
+  [libxml]=libxml2
   [libxslt]=libxslt
   [opus]=opus
   [re2]=re2
   [snappy]=snappy
-  [yasm]=''
+  [yasm]=
   [zlib]=minizip
 )
-declare -rga _unwanted_bundled_libs=(
+_unwanted_bundled_libs=(
   ${!_system_libs[@]}
   ${_system_libs[libjpeg]+libjpeg_turbo}
-  freetype
-  harfbuzz-ng
 )
-depends+=(${_system_libs[@]} freetype2 harfbuzz)
+depends+=(${_system_libs[@]})
+
+# Google API keys (see https://www.chromium.org/developers/how-tos/api-keys)
+# Note: These are for Arch Linux use ONLY. For your own distribution, please
+# get your own set of keys.
+_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
+_google_default_client_id=413772536636.apps.googleusercontent.com
+_google_default_client_secret=0ZChLK6AxeA3Isu96MkwqDR4
 
 prepare() {
 	cd "$srcdir/chromium-$_chromium"
 
-	# https://crbug.com/710701
-	local _chrome_build_hash=$(
-		curl -s https://chromium.googlesource.com/chromium/src.git/+/$_chromium?format=TEXT | base64 -d | grep -Po '^parent \K[0-9a-f]{40}$'
-	)
+  # Allow building against system libraries in official builds
+  sed -i 's/OFFICIAL_BUILD/GOOGLE_CHROME_BUILD/' \
+    tools/generate_shim_headers/generate_shim_headers.py
 
-	if [[ -z $_chrome_build_hash ]]; then
-		error "Unable to fetch Chrome build hash."
-		return 1
-	fi
+  # https://crbug.com/893950
+  sed -i -e 's/\<xmlMalloc\>/malloc/' -e 's/\<xmlFree\>/free/' \
+    third_party/blink/renderer/core/xml/*.cc \
+    third_party/blink/renderer/core/xml/parser/xml_document_parser.cc \
+    third_party/libxml/chromium/libxml_utils.cc
 
-	echo "LASTCHANGE=$_chrome_build_hash-" >build/util/LASTCHANGE
-
-  # Work around broken screen sharing in Google Meet
-  # https://crbug.com/829916#c16
-  sed -i 's/"Chromium/"Chrome/' chrome/common/chrome_content_client_constants.cc
-
-  # https://crbug.com/866290
-  patch -Np1 -i ../fix-cfi-icall-failure-with-use_system_libjpeg-true.patch
-  patch -Np1 -i ../only-disable-cfi-icall-when-use_system_libjpeg-true.patch
+  # https://crbug.com/879900
+  patch -Np1 -i ../include-stdint.h-in-pdfium_mem_buffer_file_write.h.patch
 
   # https://crbug.com/skia/6663#c10
   patch -Np4 -i ../chromium-skia-harmony.patch
 
   # Fixes from Gentoo
+  patch -Np1 -i ../chromium-harfbuzz-r0.patch
   patch -Np1 -i ../chromium-widevine-r2.patch
 
   # https://bugs.gentoo.org/661880#c21
   patch -Np1 -i ../chromium-system-icu.patch
-	
-	# Remove compiler flags not supported by our system clang
-	sed -i \
-		-e '/"-Wno-enum-compare-switch"/d' \
-		-e '/"-Wno-null-pointer-arithmetic"/d' \
-		-e '/"-Wno-tautological-unsigned-zero-compare"/d' \
-		-e '/"-Wno-tautological-constant-compare"/d' build/config/compiler/BUILD.gn
 
-	# chromium 46 gives an error about a missing file
-	# workaround create empty
-	touch chrome/test/data/webui/i18n_process_css_test.html
+  # Force script incompatible with Python 3 to use /usr/bin/python2
+  sed -i '1s|python$|&2|' third_party/dom_distiller_js/protoc_plugins/*.py
 
-	# Use Python 2
-	find . -name '*.py' -exec sed -i -r 's|/usr/bin/python$|&2|g' {} +
+  mkdir -p third_party/node/linux/node-linux-x64/bin
+  ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
 
-	# There are still a lot of relative calls which need a workaround
-	[[ -d "$srcdir/python2-path" ]] && rm -rf "$srcdir/python2-path"
-	mkdir "$srcdir/python2-path"
-	ln -s /usr/bin/python2 "$srcdir/python2-path/python"
+  # Remove bundled libraries for which we will use the system copies; this
+  # *should* do what the remove_bundled_libraries.py script does, with the
+  # added benefit of not having to list all the remaining libraries
+  local _lib
+  for _lib in ${_unwanted_bundled_libs[@]}; do
+    find "third_party/$_lib" -type f \
+      \! -path "third_party/$_lib/chromium/*" \
+      \! -path "third_party/$_lib/google/*" \
+      \! -path 'third_party/yasm/run_yasm.py' \
+      \! -regex '.*\.\(gn\|gni\|isolate\)' \
+      -delete
+  done
 
-	mkdir -p third_party/node/linux/node-linux-x64/bin
-	ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
-
-	# Remove bundled libraries for which we will use the system copies; this
-	# *should* do what the remove_bundled_libraries.py script does, with the
-	# added benefit of not having to list all the remaining libraries
-	local _lib
-	for _lib in "${_unwanted_bundled_libs[@]}"
-	do
-		find -type f -path "*third_party/$_lib/*" \
-			\! -path "*third_party/$_lib/chromium/*" \
-			\! -path "*third_party/$_lib/google/*" \
-			\! -path "*base/third_party/icu/*" \
-			\! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
-			-delete
-	done
-
-	python2 build/linux/unbundle/replace_gn_files.py --system-libraries "${!_system_libs[@]}"
+  python2 build/linux/unbundle/replace_gn_files.py \
+    --system-libraries "${!_system_libs[@]}"
 }
 
 build() {
