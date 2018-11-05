@@ -1,6 +1,6 @@
 pkgbase = gitkraken
 	pkgdesc = The intuitive, fast, and beautiful cross-platform Git client.
-	pkgver = 4.0.3
+	pkgver = 4.0.6
 	pkgrel = 1
 	url = https://www.gitkraken.com/
 	arch = x86_64
@@ -16,7 +16,7 @@ pkgbase = gitkraken
 	depends = rtmpdump
 	optdepends = git-lfs: git-lfs support
 	provides = gitkraken
-	source = gitkraken-4.0.3.tar.gz::https://release.gitkraken.com/linux/GitKraken-v4.0.3.tar.gz
+	source = gitkraken-4.0.6.tar.gz::https://release.gitkraken.com/linux/GitKraken-v4.0.6.tar.gz
 	source = GitKraken.desktop
 	source = gitkraken.png
 	source = eula.html
