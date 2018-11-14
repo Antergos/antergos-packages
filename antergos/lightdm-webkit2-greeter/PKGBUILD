@@ -16,7 +16,7 @@ replaces=('lightdm-webkit-theme-antergos')
 install=greeter.install
 backup=("etc/lightdm/${pkgname}.conf")
 source=("http://github.com/Antergos/${_pkgname}/archive/${pkgver}.zip")
-md5sums=('d4f329f6f02b4842dffeed1869d21d84')
+md5sums=('634c6080144169c7529291bf1c8a1429')
 groups=('system')
 
 
