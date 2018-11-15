@@ -2,7 +2,7 @@
 # Contributor: Nate Simon <aurpkg (at natesimon.net)>
 
 pkgname=xplayer-plparser
-pkgver=master.mint19
+pkgver=1.0.2
 pkgrel=1
 pkgdesc="Playlist parser for the XApps Project's xplayer."
 arch=('x86_64')
@@ -18,7 +18,7 @@ md5sums=('586fe3e544a4ebf0d450861ac65efb49')
 
 
 # BEGIN ANTBS METADATA
-_is_monitored='True'
+_is_monitored='False'
 _monitored_service='github'
 _monitored_type='tags'
 _monitored_project='linuxmint'
