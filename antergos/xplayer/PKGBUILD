@@ -30,9 +30,7 @@ _monitored_repo='xplayer'
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 
-	sed -i 's/PYTHON=python/PYTHON=python2/g' py-compile
-
-	./autogen.sh \
+	CFLAGS="${CFLAGS} -w" ./autogen.sh \
 		--prefix="/usr" \
 		--localstatedir="/var" \
 		--libexecdir="/usr/lib/${pkgname}"
