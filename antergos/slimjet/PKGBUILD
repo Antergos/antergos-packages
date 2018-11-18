@@ -18,8 +18,6 @@ provides=('slimjet')
 options=('!emptydirs' '!strip')
 groups=('browser')
 source_x86_64=("${pkgname}_amd64.deb::http://www.slimjet.com/release/${pkgname}_amd64.deb")
-source=('LICENSE')
-md5sums=('e2f3d75bbf4ea8cef106adb30c6b4c83')
 md5sums_x86_64=('ee562e8460ba154a81cfa3405a594198')
 
 
@@ -57,7 +55,7 @@ package() {
 
     add_license_note() {
     mkdir "$pkgdir/usr/share/licenses/"
-    install  "/$srcdir/LICENSE" "$pkgdir/usr/share/licenses/${pkgname}"
+    install  "../LICENSE" "$pkgdir/usr/share/licenses/${pkgname}"
     }
 
     # Arch has  libudev.so.1, slimjet wants .0
@@ -79,5 +77,4 @@ package() {
                        "$pkgdir"/usr/share/icons/hicolor/$i/apps/flashpeak-slimjet.png
     done
 }
-
 
