@@ -18,6 +18,8 @@ provides=('slimjet')
 options=('!emptydirs' '!strip')
 groups=('browser')
 source_x86_64=("${pkgname}_amd64.deb::http://www.slimjet.com/release/${pkgname}_amd64.deb")
+source=('LICENSE')
+md5sums=('e2f3d75bbf4ea8cef106adb30c6b4c83')
 md5sums_x86_64=('ee562e8460ba154a81cfa3405a594198')
 
 
