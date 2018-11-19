@@ -2,8 +2,8 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=spl
-_pkgver=0.7.11
-pkgver=0.7.11
+_pkgver=0.7.12
+pkgver=0.7.12
 pkgrel=1
 pkgdesc="Solaris Porting Layer kernel modules."
 groups=("system" "zfs")
@@ -20,7 +20,7 @@ _tag="spl-${_pkgver}"
 source=(
 	"https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip"
 )
-md5sums=('9c87b505cf1000fae9c43eba4d89e141')
+md5sums=('ba3e634ef2f8218b9101e6b733f768ad')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

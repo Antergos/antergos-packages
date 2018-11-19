@@ -2,8 +2,8 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-_pkgver=0.7.11
-pkgver=0.7.11
+_pkgver=0.7.12
+pkgver=0.7.12
 pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
@@ -20,7 +20,7 @@ _tag="zfs-${_pkgver}"
 source=(
 	"https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip"
 )
-md5sums=('f0afbc265d63b3cd4a8459df4da5a44e')
+md5sums=('bb1b4076abac5e17aa9b6759683839dc')
 
 
 # BEGIN ANTBS METADATA
