@@ -1,17 +1,18 @@
 # Maintainer: Antergos Develepors <dev@antergos.com>
 # Contributor: Michael Herold <arch@michaeljherold.com>
+# Contributor: Aoibhinn Nic Aoidh <oibind@pm.me>
 
 pkgname=scudcloud
 pkgver=1.65
-pkgrel=5
+pkgrel=6
 pkgdesc="A non official open-source Linux desktop client app for Slack."
 arch=('any')
 url="https://github.com/raelgc/scudcloud"
 license=('MIT')
-depends=('python-setuptools' 'python-dbus' 'python-pyqt5' 'hunspell-en' 'qt5-webkit')
+depends=('python-setuptools' 'python-dbus' 'python-pyqt5' 'python-jsmin' 'hunspell-en_US' 'qt5-webkit')
 groups=('messaging')
 source=("https://github.com/raelgc/scudcloud/archive/v${pkgver}.tar.gz")
-md5sums=('284166e674342c98683e018a3c09ccab')
+md5sums=('44c5994e93a3329a15c8a6440a4fd25c')
 
 
 # BEGIN ANTBS METADATA
