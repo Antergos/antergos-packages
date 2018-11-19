@@ -1,0 +1,21 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+# Contributor: Aoibhinn Nic Aoidh <oibind@pm.me>
+
+pkgname=python-jsmin
+_pkgname='jsmin'
+pkgver=2.2.2
+pkgrel=1
+pkgdesc='Javascript minifier.'
+url='https://github.com/tikitu/jsmin/'
+arch=('any')
+license=('MIT')
+depends=('python')
+makedepends=('python-setuptools')
+source=("https://github.com/tikitu/${_pkgname}/archive/release-${pkgver}.tar.gz")
+md5sums=('4813c3e28a01d31545bb8db09de86cac')
+
+package() {
+	cd "${srcdir}/${_pkgname}-release-${pkgver}"
+	python setup.py install --root="${pkgdir}" --optimize=1
+}
+

@@ -1,0 +1,14 @@
+pkgbase = python-jsmin
+	pkgdesc = Javascript minifier.
+	pkgver = 2.2.2
+	pkgrel = 1
+	url = https://github.com/tikitu/jsmin/
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python
+	source = https://github.com/tikitu/jsmin/archive/release-2.2.2.tar.gz
+	md5sums = 4813c3e28a01d31545bb8db09de86cac
+
+pkgname = python-jsmin
+
