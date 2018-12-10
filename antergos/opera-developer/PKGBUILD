@@ -12,7 +12,7 @@ depends=('alsa-lib' 'nss' 'gtk2' 'gconf' 'libxss' 'libxtst' 'desktop-file-utils'
 optdepends=('ffmpeg: HTML5 H264 and mp3 playback')
 groups=('browser')
 options=(!strip)
-source=("http://ftp.opera.com/ftp/pub/${pkgname}/${pkgver}/linux/${pkgname}_${pkgver}_amd64.deb")
+source=("https://download1.operacdn.com/pub/${pkgname}/${pkgver}/linux/${pkgname}_${pkgver}_amd64.deb")
 md5sums=('e62c70bda516cc5e915aaec5673a016e')
 
 
