@@ -47,16 +47,19 @@ build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	rm -rf bin
 
-#	cd 3rdparty/crashreporter
-#	qmake-qt5 CONFIG+=release DESTDIR="${srcdir}/${pkgname}-${pkgver}/bin/linux/release" QMAKE_LFLAGS_RPATH=""
-#	make
+	cd 3rdparty/crashreporter
+	sed -ie 's/(APP_NAME)/("RedisDesktopManager")/g' src/main.cpp
+	sed -ie "s/(APP_VERSION)/(\"${_pkgver}\")/g" src/main.cpp
+	sed -ie 's/(CRASH_SERVER_URL)/("\/crash-report")/g' src/main.cpp
+	qmake CONFIG+=release DESTDIR="$srcdir/rdm/bin/linux/release" QMAKE_LFLAGS_RPATH=""
+	make
 
 	cd "${srcdir}/${pkgname}-${pkgver}/3rdparty/gbreakpad"
 	./configure
 	make
 
-	cd "${srcdir}/${pkgname}-${pkgver}/3rdparty/qredisclient/3rdparty/qsshclient"
-	sed -i 's|LIBS += /usr/local/lib/libssh2.a|LIBS += /usr/lib/libssh2.so|g' 3rdparty/3rdparty.pri
+	#cd "${srcdir}/${pkgname}-${pkgver}/3rdparty/qredisclient/3rdparty/qsshclient"
+	#sed -i 's|LIBS += /usr/local/lib/libssh2.a|LIBS += /usr/lib/libssh2.so|g' 3rdparty/3rdparty.pri
 
 	cd "${srcdir}/${pkgname}-${pkgver}/src"
 	qmake-qt5 && make
