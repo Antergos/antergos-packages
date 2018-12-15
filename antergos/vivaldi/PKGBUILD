@@ -41,7 +41,7 @@ source=(
 	"$(_from_arch_pkg chromium-widevine.patch)"
 	"$(_from_arch_pkg chromium-system-icu.patch)"
 	"$(_from_arch_pkg chromium-skia-harmony.patch)"
-	"http://www.slackware.com/~alien/slackbuilds/chromium/build/patches/gn_bootstrap_remove_sysroot-options.patch"
+	"gn_bootstrap_remove_sysroot-options.patch"
 
 )
 md5sums=('01a350d45d4c222d4a8c8813c6e6cd68'
