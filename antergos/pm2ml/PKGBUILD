@@ -2,31 +2,33 @@
 # Contributor: Xyne <ac xunilhcra enyx, backwards>
 
 pkgname=pm2ml
-pkgver=2016.8
+pkgver=2017.12
 pkgrel=1
 pkgdesc='Generate metalinks for downloading Pacman packages and databases.'
 arch=('any')
 license=('GPL')
 url='http://xyne.archlinux.ca/projects/pm2ml'
 depends=('python' 'pyalpm' 'python-xcpf' 'python-xcgf')
-optdepends=( 'reflector: Reflector support'
-			'python3-aur: AUR support'
-			'aria2: ppl script support.')
+optdepends=('reflector: Reflector support'
+            'python3-aur: AUR support'
+            'aria2: ppl script support.')
 backup=('etc/ppl.conf')
 source=("http://xyne.archlinux.ca/projects/pm2ml/src/pm2ml-${pkgver}.tar.xz")
-md5sums=('a8f118a749fcba8edbb79fba3cae6dd7')
+sha512sums=(
+  cc54a48882c35362b675d1deffc1a05631b35c8fe40ce5a192d3bed69daab01b26c76a71b29d8606ed36d6eb592eb474411a67510cb1dab351fa837c7dde57e9
+)
 
 package () {
-	cd "$srcdir/$pkgname-$pkgver"
-	python setup.py install --prefix=/usr --root="$pkgdir" --optimize=1
-	install -Dm755 "$pkgname" "$pkgdir/usr/bin/$pkgname"
+  cd "$srcdir/$pkgname-$pkgver"
+  python setup.py install --prefix=/usr --root="$pkgdir" --optimize=1
+  install -Dm755 "$pkgname" "$pkgdir/usr/bin/$pkgname"
 
-	for foo_ in ppl pplsyu ppls
-	do
-		install -Dm755 "$foo_" "$pkgdir/usr/bin/$foo_"
-	done
+  for foo_ in ppl pplsyu ppls
+  do
+    install -Dm755 "$foo_" "$pkgdir/usr/bin/$foo_"
+  done
 
-	install -Dm644 "ppl.conf" "$pkgdir/etc/ppl.conf"
+  install -Dm644 "ppl.conf" "$pkgdir/etc/ppl.conf"
 }
 
 
