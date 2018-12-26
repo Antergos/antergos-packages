@@ -7,7 +7,7 @@ _pkgver=6.4.0
 pkgrel=1
 pkgdesc='A GTK3 frontend for libalpm'
 arch=('x86_64')
-url='https://github.com/manjaro/pamac'
+url='https://gitlab.com/manjaro/pamac'
 license=('GPL3')
 depends=(
 	'glib2' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'vte3' 'gtk3'
@@ -25,7 +25,7 @@ md5sums=('b74bcc2fb669da6693fa67e23d1f67f2')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
-_monitored_service='github'
+_monitored_service='gitlab'
 _monitored_type='releases'
 _monitored_project='manjaro'
 _monitored_repo='pamac'
