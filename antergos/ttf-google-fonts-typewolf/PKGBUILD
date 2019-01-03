@@ -1,8 +1,8 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 
 pkgname=ttf-google-fonts-typewolf
-_commit='2e2caa23045987a4dfd6f072d611e5da720b484c'
-pkgver=17.11.git+2e2caa2
+_commit='94dff3eaa9301b6640cccc63c56d6ff33d82882c'
+pkgver=17.11.git+94dff3e
 pkgrel=1
 pkgdesc="Typewolf's curated collection of the 40 best fonts from the Google Fonts project."
 arch=('any')
@@ -36,6 +36,7 @@ provides=(
 	'ttf-libre-franklin'
 	'ttf-lora'
 	'ttf-merriweather'
+	'ttf-merriweather-sans'
 	'ttf-montserrat'
 	'ttf-neuton'
 	'ttf-old-standard'
