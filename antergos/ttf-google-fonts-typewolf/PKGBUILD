@@ -25,7 +25,6 @@ provides=(
 	'ttf-cormorant'
 	'ttf-crimson-text'
 	'ttf-domine'
-	'ttf-font'
 	'ttf-eczar'
 	'ttf-fira-sans'
 	'ttf-gentium-basic'
