@@ -27,7 +27,7 @@ md5sums=('b74bcc2fb669da6693fa67e23d1f67f2')
 _is_monitored='True'
 _monitored_service='gitlab'
 _monitored_type='releases'
-_monitored_project='pamac'
+_monitored_project='applications/pamac'
 _monitored_repo='pamac'
 # END ANTBS METADATA
 
