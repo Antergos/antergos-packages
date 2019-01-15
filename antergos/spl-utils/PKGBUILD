@@ -4,7 +4,7 @@
 pkgname=spl-utils
 _pkgver=0.7.12
 pkgver=0.7.12
-pkgrel=1
+pkgrel=2
 license=('CDDL')
 pkgdesc="Kernel module support files for the Solaris Porting Layer."
 groups=("system" "zfs")
@@ -17,8 +17,10 @@ _commit=''
 _tag="spl-${_pkgver}"
 source=(
 	"https://github.com/zfsonlinux/spl/archive/${_tag}.zip"
+	'linux420.patch::https://github.com/zfsonlinux/spl/commit/cd1b28e0cfa923db988611df28958f7b84b53530.patch'
 )
-md5sums=('9c87b505cf1000fae9c43eba4d89e141')
+md5sums=('ba3e634ef2f8218b9101e6b733f768ad'
+         'ac96639d00032b749cf756cde3803b4d')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
@@ -31,6 +33,7 @@ _monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
 
 prepare() {
     cd "${srcdir}/spl-${_tag}"
+    patch -Np1 -i ../linux420.patch
 }
 
 build() {
