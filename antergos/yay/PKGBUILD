@@ -2,7 +2,7 @@
 # AUR Maintainer: Jguer <joaogg3@gmail.com>
 pkgname=yay
 pkgver=9.0.1
-pkgrel=13
+pkgrel=14
 pkgdesc="Yet another yogurt. Pacman wrapper and AUR helper written in go."
 arch=('x86_64')
 url="https://github.com/Jguer/yay"
@@ -11,7 +11,7 @@ depends=('pacman>=5.1' 'sudo' 'git')
 makedepends=('go')
 conflicts=('yay-bin' 'yay-git')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/Jguer/${pkgname}/archive/v${pkgver}.tar.gz")
-sha1sums=('10137d441ecbd84b4e4e29ffdc9b46993e47571d')
+sha1sums=('20fd9482ae6c086475266e795d0d0d5cca190b99')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
@@ -23,10 +23,10 @@ _monitored_repo='yay'
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
-  make VERSION=$pkgver
+  make VERSION=$pkgver DESTDIR="$pkgdir" PREFIX=/usr
 }
 
 package() {
   cd "$srcdir/$pkgname-$pkgver"
-  make VERSION=$pkgver DESTDIR="$pkgdir" install
+  make VERSION=$pkgver DESTDIR="$pkgdir" PREFIX=/usr install
 }
