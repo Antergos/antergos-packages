@@ -31,7 +31,7 @@ _monitored_repo='pamac'
 
 
 prepare() {
-	cd "${srcdir}/pamac-${pkgver}"
+	cd "${srcdir}/pamac-v${pkgver}"
 
 	# adjust version string
 	sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" src/version.vala
@@ -40,7 +40,7 @@ prepare() {
 }
 
 build() {
-	cd "${srcdir}/pamac-${pkgver}"
+	cd "${srcdir}/pamac-v${pkgver}"
 	mkdir -p build && cd build
 
 	meson --prefix=/usr --sysconfdir=/etc --libdir=lib -Denable-appindicator=true ..
@@ -57,7 +57,7 @@ package_pamac() {
 	install='pamac.install'
 
 
-	cd "${srcdir}/pamac-${pkgver}/build"
+	cd "${srcdir}/pamac-v${pkgver}/build"
 	DESTDIR="${pkgdir}" ninja install
 
 	# Remove pamac-tray-appindicator
@@ -71,7 +71,7 @@ package_pamac-tray-appindicator() {
 	conflicts=('pamac-tray-appindicator-dev')
 	backup=()
 
-	cd "${srcdir}/pamac-${pkgver}/build"
+	cd "${srcdir}/pamac-v${pkgver}/build"
 	install -Dm755 src/pamac-tray-appindicator "${pkgdir}/usr/bin/pamac-tray-appindicator"
 	install -Dm644 ../data/applications/pamac-tray-appindicator.desktop "${pkgdir}/etc/xdg/autostart/pamac-tray-appindicator.desktop"
 }
