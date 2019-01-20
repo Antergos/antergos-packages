@@ -6,6 +6,9 @@ post_install() {
 
 	for home_dir in /home/*
 	do
+		if [ $home_dir = "/home/lost+found" ]; then
+    			continue
+		fi
 		autostart="${home_dir}/.config/autostart/jetbrains-toolbox.desktop"
 		local_share="${home_dir}/.local/share/applications/jetbrains-toolbox.desktop"
 
