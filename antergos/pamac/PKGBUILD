@@ -7,20 +7,18 @@ _pkgver=7.3.4
 pkgrel=1
 pkgdesc='A GTK3 frontend for libalpm'
 arch=('x86_64')
-url='https://gitlab.com/manjaro/pamac'
+url='https://gitlab.manjaro.org/applications/pamac'
 license=('GPL3')
-depends=(
-	'glib2' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'vte3' 'gtk3'
-	'libnotify' 'desktop-file-utils' 'pacman>=5.0' 'gnutls'
-	'appstream-glib' 'archlinux-appstream-data'
-)
-makedepends=('gettext' 'itstool' 'vala' 'git' 'libappindicator-gtk3' 'meson')
+depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'vte3>=0.38' 'gtk3>=3.22'
+         'libnotify' 'desktop-file-utils' 'pacman>=5.1' 'pacman<5.2' 'gnutls>=3.4'
+         'appstream-glib' 'archlinux-appstream-data' 'pacman-mirrors>=4.9.1' 'git')
+makedepends=('gettext' 'meson' 'vala>=0.36.6' 'libappindicator-gtk3' 'gobject-introspection')
 backup=('etc/pamac.conf')
 conflicts=('pamac-dev')
 source=(
-	"pamac-$_pkgver.tar.gz::$url/archive/v$_pkgver.tar.gz"
+	"pamac-$_pkgver.tar.gz::$url/-/archive/v$_pkgver/$pkgname-v$_pkgver.tar.gz"
 )
-md5sums=('b74bcc2fb669da6693fa67e23d1f67f2')
+md5sums=('889b99e5e9c904f68e23afac08af8369')
 
 
 # BEGIN ANTBS METADATA
@@ -36,7 +34,7 @@ prepare() {
 	cd "${srcdir}/pamac-${pkgver}"
 
 	# adjust version string
-	sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" src/manager_window.vala 
+	sed -i -e "s|\"$_pkgver\"|\"$pkgver-$pkgrel\"|g" src/version.vala
 
 	# patches here
 }
@@ -56,14 +54,11 @@ package_pamac() {
 	conflicts=('pamac')
 	provides=('pamac')
 	backup=('etc/pamac.conf')
+	install='pamac.install'
 
 
 	cd "${srcdir}/pamac-${pkgver}/build"
 	DESTDIR="${pkgdir}" ninja install
-
-	# Enable applicable systemd timers
-	mkdir -p "${pkgdir}/etc/systemd/system/multi-user.target.wants"
-	ln -sf /usr/lib/systemd/system/pamac-cleancache.timer "${pkgdir}/etc/systemd/system/multi-user.target.wants"
 
 	# Remove pamac-tray-appindicator
 	rm "${pkgdir}/usr/bin/pamac-tray-appindicator"
