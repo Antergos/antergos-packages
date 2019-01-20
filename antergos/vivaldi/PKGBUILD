@@ -10,8 +10,8 @@ _from_arch_pkg() {
 }
 
 pkgname=vivaldi
-pkgver=2.2.1388.34
-# https://update.vivaldi.com/update/1.0/relnotes/2.2.1388.34.html
+pkgver=2.2.1388.37
+# https://update.vivaldi.com/update/1.0/relnotes/2.2.1388.37.html
 _chromium=71.0.3578.98 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
@@ -44,7 +44,7 @@ source=(
 	"gn_bootstrap_remove_sysroot-options.patch"
 
 )
-md5sums=('01a350d45d4c222d4a8c8813c6e6cd68'
+md5sums=('d99a5e4a838e6b433c19801e5c0293b3'
          'd0f3540a8d6966d7ec04892738060635'
          '90f4c696357da96926c8724365bdce0d'
          '371dceb58bb3d99c90a614c0132b6d15'
@@ -253,4 +253,5 @@ package() {
 	(cd "${srcdir}" \
 		&& cp ../*.hook "${pkgdir}/usr/share/libalpm/hooks" \
 		&& install -Dm755 ../vivaldi-widevine-helper "${pkgdir}/usr/share/libalpm/scripts/vivaldi-widevine-helper")
+
 }
