@@ -2,7 +2,7 @@
 # Contributor: Martin Wimpress <code@flexion.org>
 
 pkgname=mate-panel
-pkgver=1.20.2
+pkgver=1.20.4
 pkgrel=1
 pkgdesc="Desktop panel for MATE"
 url="https://mate-desktop.org"
