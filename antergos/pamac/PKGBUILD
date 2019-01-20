@@ -11,7 +11,7 @@ url='https://gitlab.manjaro.org/applications/pamac'
 license=('GPL3')
 depends=('glib2>=2.42' 'json-glib' 'libsoup' 'dbus-glib' 'polkit' 'vte3>=0.38' 'gtk3>=3.22'
          'libnotify' 'desktop-file-utils' 'pacman>=5.1' 'pacman<5.2' 'gnutls>=3.4'
-         'appstream-glib' 'archlinux-appstream-data' 'pacman-mirrors>=4.9.1' 'git')
+         'appstream-glib' 'archlinux-appstream-data' 'git')
 makedepends=('gettext' 'meson' 'vala>=0.36.6' 'libappindicator-gtk3' 'gobject-introspection')
 backup=('etc/pamac.conf')
 conflicts=('pamac-dev')
