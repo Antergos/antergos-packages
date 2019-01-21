@@ -4,12 +4,12 @@
 pkgname=spl
 _pkgver=0.7.12
 pkgver=0.7.12
-pkgrel=2
+pkgrel=3
 pkgdesc="Solaris Porting Layer kernel modules."
 groups=("system" "zfs")
 license=('GPL')
 makedepends=("git")
-depends=("spl-utils>=${pkgver%+*}" "dkms" "linux-headers" "linux<=4.20" "lsb-release")
+depends=("spl-utils>=${pkgver%+*}" "dkms" "linux-headers" "linux<5.0" "lsb-release")
 provides=("spl-dkms=${pkgver}")
 conflicts=("spl-dkms")
 install=spl.install

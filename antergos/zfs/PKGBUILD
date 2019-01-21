@@ -4,12 +4,12 @@
 pkgname=zfs
 _pkgver=0.7.12
 pkgver=0.7.12
-pkgrel=2
+pkgrel=3
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
 groups=("system" "zfs")
 makedepends=("git")
-depends=("spl>=${pkgver%+*}" "zfs-utils>=${pkgver%+*}" "dkms" "linux-headers" "linux<=4.20")
+depends=("spl>=${pkgver%+*}" "zfs-utils>=${pkgver%+*}" "dkms" "linux-headers" "linux<5.0")
 provides=("zfs-dkms=${pkgver}")
 conflicts=("zfs-git" "zfs-dkms")
 install=zfs.install
