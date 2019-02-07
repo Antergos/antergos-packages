@@ -43,8 +43,8 @@ source=(
 	"$(_from_arch_pkg chromium-skia-harmony.patch)"
 
 )
-md5sums=('01a350d45d4c222d4a8c8813c6e6cd68'
-         'd0f3540a8d6966d7ec04892738060635'
+md5sums=('006fc23bea3d91607ef04b3cac47dde9'
+         '01063af98aab58322b6559b5249a70f7'
          '06360e1beb78ed3880ea02379a5b8803'
          'd99cea8176642c48c98ac0a7170b6b95'
          '0f4f67f5d4b36eb804b2c76e220a93c8'
@@ -97,7 +97,7 @@ prepare() {
 
 
   # https://crbug.com/skia/6663#c10
-  patch -Np4 -i ../chromium-skia-harmony.patch
+  patch -Np0 -i ../chromium-skia-harmony.patch
 
   # Fixes from Gentoo  
   patch -Np1 -i ../chromium-widevine.patch
