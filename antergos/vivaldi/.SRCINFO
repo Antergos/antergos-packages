@@ -1,6 +1,6 @@
 pkgbase = vivaldi
 	pkgdesc = An advanced browser made with the power user in mind.
-	pkgver = 2.2.1388.37
+	pkgver = 2.3.1440.41
 	pkgrel = 1
 	url = https://vivaldi.com
 	arch = x86_64
@@ -63,23 +63,22 @@ pkgbase = vivaldi
 	noextract = chrome.rpm
 	options = !strip
 	options = !zipman
-	source = https://downloads.vivaldi.com/stable/vivaldi-stable-2.2.1388.37-1.x86_64.rpm
-	source = https://commondatastorage.googleapis.com/chromium-browser-official/chromium-71.0.3578.98.tar.xz
+	source = https://downloads.vivaldi.com/stable/vivaldi-stable-2.3.1440.41-1.x86_64.rpm
+	source = https://commondatastorage.googleapis.com/chromium-browser-official/chromium-72.0.3626.96.tar.xz
 	source = chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 	source = chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html
-	source = chromium-harfbuzz-r0.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-harfbuzz-r0.patch?h=packages/chromium
+	source = chromium-webrtc-missing-header.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-webrtc-missing-header.patch?h=packages/chromium
 	source = chromium-widevine.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-widevine.patch?h=packages/chromium
 	source = chromium-system-icu.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-system-icu.patch?h=packages/chromium
 	source = chromium-skia-harmony.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/chromium-skia-harmony.patch?h=packages/chromium
-	source = gn_bootstrap_remove_sysroot-options.patch
-	md5sums = d99a5e4a838e6b433c19801e5c0293b3
-	md5sums = d0f3540a8d6966d7ec04892738060635
-	md5sums = 90f4c696357da96926c8724365bdce0d
-	md5sums = 371dceb58bb3d99c90a614c0132b6d15
-	md5sums = 2c394971c9d86d3184b6e50f1195b794
+	md5sums = 006fc23bea3d91607ef04b3cac47dde9
+	md5sums = 01063af98aab58322b6559b5249a70f7
+	md5sums = 06360e1beb78ed3880ea02379a5b8803
+	md5sums = d99cea8176642c48c98ac0a7170b6b95
+	md5sums = 0f4f67f5d4b36eb804b2c76e220a93c8
 	md5sums = c12ebe37255561ec13a55a911d586380
-	md5sums = caff61182595798a5c00913cb5ed9355
-	md5sums = 254061cb349cff714230b7cca83b0a4c
-	md5sums = bcf26f68ff40f578c649ad8e296e0d56
+	md5sums = 8ed00802bb023e9be48dfb625285b0ef
+	md5sums = 1260cfc8dbb887edd44997a7f9d5224b
 
 pkgname = vivaldi
+
