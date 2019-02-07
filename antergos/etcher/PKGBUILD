@@ -1,5 +1,5 @@
 # Maintainer: Antergos Devs
-# Original Contributor: Andrew Stubbs
+# Original Contributors: Håvard Pettersson, Andrew Stubbs
 # Contributor: killajoe <archlinux@kamprad.net>
 
 pkgname=etcher
