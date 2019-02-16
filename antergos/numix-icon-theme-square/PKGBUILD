@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=numix-icon-theme-square
-pkgver=18.08.29
+pkgver=19.02.07 
 pkgrel=1
 epoch=2
 pkgdesc="Square icon expansion theme from the Numix project"
@@ -12,7 +12,7 @@ depends=('numix-icon-theme')
 replaces=('numix-icon-theme-square-kde')
 conflicts=('numix-icon-theme-square-git')
 source=("https://github.com/numixproject/${pkgname}/archive/${pkgver}.tar.gz")
-sha256sums=('04337fc558a4b7718cdc8de80fc93c87aa40178f3cff8a2d20b5af15b60105ce')
+sha256sums=('6c06bec3f941d75be4123944b059dd84c8df2e17cbbc7f6bbae931685dd2a828')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

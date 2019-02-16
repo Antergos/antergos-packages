@@ -1,7 +1,7 @@
 # Maintainer: Antergos devs <devs@antergos.com>
 
 pkgname=numix-icon-theme-circle
-pkgver=18.08.29
+pkgver=19.02.07
 pkgrel=1
 epoch=1
 pkgdesc='Circle icon theme from the Numix project'
@@ -13,7 +13,7 @@ makedepends=('git')
 provides=('numix-circle-icon-theme' 'numix-circle-light-icon-theme' 'numix-icon-theme-circle')
 conflicts=('numix-circle-icon-theme' 'numix-circle-light-icon-theme' 'numix-circle-icon-theme-git')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/numixproject/${pkgname}/archive/${pkgver}.tar.gz")
-sha256sums=('1e9779e38696986c2a03770c34e7e59a5ec2875fcf6592cbdfe68b3e074ccbeb')
+sha256sums=('64ea91d809ea7918dc180e8f4eeeda96099ba1e7c15d46aa2b565b1f85a91ca3')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
