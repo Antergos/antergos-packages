@@ -20,7 +20,7 @@ post_upgrade() {
 }
 
 post_remove() {
-    pkgver="0.7.1"
+    pkgver="0.7.13"
 	dkms remove "spl/${pkgver}" --all
 }
 

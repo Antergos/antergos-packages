@@ -4,12 +4,12 @@
 pkgname=spl
 _pkgver=0.7.13
 pkgver=0.7.13
-pkgrel=3
+pkgrel=2
 pkgdesc="Solaris Porting Layer kernel modules."
 groups=("system" "zfs")
 license=('GPL')
 makedepends=("git")
-depends=("spl-utils>=${pkgver%+*}" "dkms" "linux-headers" "linux<5.0" "lsb-release")
+depends=("spl-utils>=${pkgver%+*}" "dkms" "linux-headers" "linux<5.1" "lsb-release")
 provides=("spl-dkms=${pkgver}")
 conflicts=("spl-dkms")
 install=spl.install
@@ -20,7 +20,7 @@ _tag="spl-${_pkgver}"
 source=(
 	"https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip"
 )
-md5sums=('ba3e634ef2f8218b9101e6b733f768ad')
+md5sums=('d33ecece67d08ea7c0b2103458aaad60')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'

@@ -17,7 +17,7 @@ post_upgrade() {
 }
 
 post_remove() {
-    pkgver="0.7.1"
+    pkgver="0.7.13"
     dkms remove "zfs/${pkgver}" --all
 
     if (grep -v '#' /etc/mkinitcpio.conf | grep zfs >/dev/null); then
