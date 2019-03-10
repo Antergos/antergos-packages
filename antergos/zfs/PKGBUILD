@@ -2,14 +2,14 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-_pkgver=0.7.12
-pkgver=0.7.12
-pkgrel=3
+_pkgver=0.7.13
+pkgver=0.7.13
+pkgrel=2
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
 groups=("system" "zfs")
 makedepends=("git")
-depends=("spl>=${pkgver%+*}" "zfs-utils>=${pkgver%+*}" "dkms" "linux-headers" "linux<5.0")
+depends=("spl>=${pkgver%+*}" "zfs-utils>=${pkgver%+*}" "dkms" "linux-headers" "linux<5.1")
 provides=("zfs-dkms=${pkgver}")
 conflicts=("zfs-git" "zfs-dkms")
 install=zfs.install
@@ -19,10 +19,8 @@ _commit=''
 _tag="zfs-${_pkgver}"
 source=(
 	"https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip"
-	'linux420.patch::https://github.com/zfsonlinux/zfs/pull/8227.patch'
 )
-md5sums=('bb1b4076abac5e17aa9b6759683839dc'
-         '6500e4f3abd3a54c96362b057f1a9867')
+md5sums=('750624cc3f76cb1c6d81b25c21a75d32')
 
 
 # BEGIN ANTBS METADATA
@@ -37,7 +35,6 @@ _monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
 
 prepare() {
 	cd "${srcdir}/${pkgname}-${_tag}"
-	patch -Np1 -i ../linux420.patch
 }
 
 build() {

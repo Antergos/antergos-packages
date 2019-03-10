@@ -2,8 +2,8 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs-utils
-_pkgver=0.7.12
-pkgver=0.7.12
+_pkgver=0.7.13
+pkgver=0.7.13
 pkgrel=2
 pkgdesc="Kernel module support files for the Zettabyte File System."
 url="http://zfsonlinux.org/"
@@ -19,13 +19,11 @@ source=(
 	"zfs-utils.bash-completion-r1"
 	"zfs-utils.initcpio.install"
 	"zfs-utils.initcpio.hook"
-	'linux420.patch::https://github.com/zfsonlinux/zfs/pull/8227.patch'
 )
-md5sums=('bb1b4076abac5e17aa9b6759683839dc'
+md5sums=('750624cc3f76cb1c6d81b25c21a75d32'
          '9ddb0c8a94861f929d0fa741fdc49950'
          '73527e326fbbd1bc3d4331bbba0af5a8'
-         '2d4dd00dd671598c26b5d054bd63d6f5'
-         '6500e4f3abd3a54c96362b057f1a9867')
+         '2d4dd00dd671598c26b5d054bd63d6f5')
 
 # BEGIN ANTBS METADATA
 _is_monitored='True'
@@ -38,7 +36,6 @@ _monitored_match_pattern='/(?<=zfs-|spl-)\S+/'
 
 prepare() {
 	cd "${srcdir}/zfs-${_tag}"
-	patch -Np1 -i ../linux420.patch
 }
 
 build() {

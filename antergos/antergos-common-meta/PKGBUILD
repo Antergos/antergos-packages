@@ -1,7 +1,7 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-common-meta
-pkgver=1.3
+pkgver=1.4
 pkgrel=1
 pkgdesc='Common meta package for all Antergos Desktops'
 url='http://www.antergos.com'
@@ -16,7 +16,7 @@ depends=('accountsservice' 'antergos-wallpapers' 'antergos-desktop-settings'
     'pulseaudio-alsa' 'pulseaudio-bluetooth' 'qt5-styleplugins'
     'ttf-bitstream-vera' 'ttf-dejavu' 'ttf-liberation' 'upower'
     'xf86-input-libinput' 'xf86-video-fbdev' 'xf86-video-vesa'
-    'xorg-bdftopcf' 'xorg-iceauth' 'xorg-luit' 'xorg-mkfontdir'
+    'xorg-bdftopcf' 'xorg-iceauth' 'xorg-luit' 'xorg-mkfontscale'
     'xorg-mkfontscale'  'xorg-sessreg'  'xorg-setxkbmap' 'xorg-smproxy'
     'xorg-x11perf' 'xorg-xauth' 'xorg-xbacklight' 'xorg-xcmsdb'
     'xorg-xcursorgen' 'xorg-xdpyinfo' 'xorg-xdriinfo' 'xorg-xev'
