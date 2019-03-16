@@ -4,10 +4,10 @@
 # Contributor: killajoe <archlinux@kamprad.net>
 
 pkgname=gnome-shell-extension-dash-to-dock
+_pkgname=dash-to-dock-extensions.gnome.org-v
 pkgver=65
 pkgrel=1
-epoch=1
-pkgdesc='A gnome-shell extension that transforms the dash into an intellihide dock.'
+pkgdesc="Move the dash out of the overview transforming it in a dock"
 arch=('any')
 url="https://micheleg.github.io/dash-to-dock/"
 license=('GPL')
@@ -16,21 +16,14 @@ makedepends=('intltool' 'gettext')
 source=("https://github.com/micheleg/dash-to-dock/archive/extensions.gnome.org-v${pkgver}.tar.gz")
 sha256sums=('335a4f06ad076ec1129b018ed342e14c60da6d4501b98828dc21846d749d1507')
 
-_archivename="dash-to-dock-extensions.gnome.org-v${pkgver}"
-
-
 build() {
-	cd "${srcdir}/${_archivename}"
-	make
+  cd "${srcdir}"/${_pkgname}${pkgver}
+  make
 }
 
 package() {
-	cd "${srcdir}/${_archivename}"
-	# mkdir -p "${pkgdir}/usr/share/gnome-shell/extensions" "${pkgdir}/usr/share/glib-2.0/schemas/"
-	make VERSION=${pkgver}
-	make DESTDIR="${pkgdir}" install
-	# install -m644 "schemas/org.gnome.shell.extensions.dash-to-dock.gschema.xml" \
-		# "${pkgdir}/usr/share/glib-2.0/schemas/org.gnome.shell.extensions.dash-to-dock.gschema.xml"
+  cd "${srcdir}"/${_pkgname}${pkgver}
+  make DESTDIR="${pkgdir}" VERSION="${pkgver}" install
 }
 
 
