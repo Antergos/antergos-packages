@@ -10,9 +10,9 @@ _from_arch_pkg() {
 }
 
 pkgname=vivaldi
-pkgver=2.3.1440.41
-# https://update.vivaldi.com/update/1.0/relnotes/2.3.1440.41.html
-_chromium=72.0.3626.96 # https://omahaproxy.appspot.com
+pkgver=2.3.1440.60
+# https://update.vivaldi.com/update/1.0/relnotes/2.3.1440.60.html
+_chromium=72.0.3626.121 # https://omahaproxy.appspot.com
 pkgrel=1
 pkgdesc='An advanced browser made with the power user in mind.'
 groups=('browser')
@@ -37,20 +37,30 @@ source=(
 	"https://commondatastorage.googleapis.com/chromium-browser-official/chromium-$_chromium.tar.xz"
 	"chrome.rpm::https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 	'chrome-eula_text.html::https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html'
+        chromium-drirc-disable-10bpc-color-configs.conf
+	"$(_from_arch_pkg chromium-enable-mojo-video-decoders-by-default.patch)"
+	"$(_from_arch_pkg chromium-vaapi-fix-the-VA_CHECK_VERSION.patch)"
+	"$(_from_arch_pkg chromium-vaapi-relax-the-version-check-for-VA-API.patch)"
+	"$(_from_arch_pkg chromium-vaapi.patch)"
 	"$(_from_arch_pkg chromium-webrtc-missing-header.patch)"
 	"$(_from_arch_pkg chromium-widevine.patch)"
 	"$(_from_arch_pkg chromium-system-icu.patch)"
 	"$(_from_arch_pkg chromium-skia-harmony.patch)"
-
 )
-md5sums=('006fc23bea3d91607ef04b3cac47dde9'
-         '01063af98aab58322b6559b5249a70f7'
-         '06360e1beb78ed3880ea02379a5b8803'
-         'd99cea8176642c48c98ac0a7170b6b95'
+md5sums=('62303233492f2c0ad80bc7cbbcc7a048'
+         'c9b2cd5509e257501d21ed4b5db4b4c2'
+         'c31d5811a8569ad8126ee7911b3b33a1'
+         '10fefbd0dd4ebc948b864b533c621fc1'
+         'bac4af3ab52348e4e3eff5ab00ec9228'
+         'c5577a46032a9dc60e491cd1f6782508'
+         '150096ab5c39177e47b6395909f7c433'
+         '71a580a9eb60bbf4d67038d022770d99'
+         'f6fa80f245a136ad6a578af0a87c886d'
          '0f4f67f5d4b36eb804b2c76e220a93c8'
          'c12ebe37255561ec13a55a911d586380'
          '8ed00802bb023e9be48dfb625285b0ef'
          '1260cfc8dbb887edd44997a7f9d5224b')
+
 
 
 
@@ -96,18 +106,24 @@ prepare() {
     third_party/libxml/chromium/libxml_utils.cc
 
 
+  # Enable VAAPI on Linux
+  patch -Np1 -i ../chromium-vaapi.patch
+  patch -Np1 -i ../chromium-vaapi-relax-the-version-check-for-VA-API.patch
+  patch -Np1 -i ../chromium-enable-mojo-video-decoders-by-default.patch
+  patch -Np1 -i ../chromium-vaapi-fix-the-VA_CHECK_VERSION.patch
+
+  # Load Widevine CDM if available
+  patch -Np1 -i ../chromium-widevine.patch
+
   # https://crbug.com/skia/6663#c10
   patch -Np0 -i ../chromium-skia-harmony.patch
 
-  # Fixes from Gentoo  
-  patch -Np1 -i ../chromium-widevine.patch
+  # https://webrtc.googlesource.com/src.git/+/3e70781361ed
+  patch -Np0 -i ../chromium-webrtc-missing-header.patch
 
   # https://bugs.gentoo.org/661880#c21
   patch -Np1 -i ../chromium-system-icu.patch
 
-  # https://webrtc.googlesource.com/src.git/+/3e70781361ed
-  patch -Np0 -i ../chromium-webrtc-missing-header.patch
-	
 	# Remove compiler flags not supported by our system clang
 	sed -i \
 		-e '/"-Wno-enum-compare-switch"/d' \
@@ -230,6 +246,10 @@ package() {
 		| sed -rne 's/.*(<html lang.*>.*html>).*/\1/p' \
 		| w3m -I 'utf-8' -T 'text/html' \
 		> "$pkgdir/usr/share/licenses/$pkgname/eula.txt"
+
+	# disable-10bpc-color-configs
+	install -Dm644 ../chromium-drirc-disable-10bpc-color-configs.conf \
+	"$pkgdir/usr/share/drirc.d/10-$pkgname.conf"
 
 	# Install ffmpeg codec
 	(cd "$srcdir/chromium-$_chromium" \

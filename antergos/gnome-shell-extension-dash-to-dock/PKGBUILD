@@ -1,36 +1,32 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
-# Contributor: Janne Haapsaari <haaja@iki.fi>
-# Contributor: Christopher Krooß <didi2002 at web.de>
+# Original Maintainer: drakkan
+# Contributor: XZS 
+# Contributor: Carl George
+# Contributor: Janne Haapsaari
+# Contributor: Christopher Krooß
+# Contributor: killajoe <archlinux@kamprad.net>
 
 pkgname=gnome-shell-extension-dash-to-dock
-pkgver=64
+_pkgname=dash-to-dock-extensions.gnome.org-v
+pkgver=65
 pkgrel=1
-epoch=1
-pkgdesc='A gnome-shell extension that transforms the dash into an intellihide dock.'
+pkgdesc="Move the dash out of the overview transforming it in a dock"
 arch=('any')
-url='https://github.com/micheleg/dash-to-dock'
+url="https://micheleg.github.io/dash-to-dock/"
 license=('GPL')
-groups=('gnome-shell-extensions')
-depends=('dconf' 'gnome-shell')
-makedepends=('gnome-common' 'intltool')
-source=("$pkgname::https://github.com/micheleg/dash-to-dock/archive/extensions.gnome.org-v${pkgver}.tar.gz")
-md5sums=('91646396b4c11826adb25459d4a82edd')
-
-_archivename="dash-to-dock-extensions.gnome.org-v${pkgver}"
-
+depends=('gnome-shell')
+makedepends=('intltool' 'gettext')
+source=("https://github.com/micheleg/dash-to-dock/archive/extensions.gnome.org-v${pkgver}.tar.gz")
+sha256sums=('335a4f06ad076ec1129b018ed342e14c60da6d4501b98828dc21846d749d1507')
 
 build() {
-	cd "${srcdir}/${_archivename}"
-	make
+  cd "${srcdir}"/${_pkgname}${pkgver}
+  make
 }
 
 package() {
-	cd "${srcdir}/${_archivename}"
-	# mkdir -p "${pkgdir}/usr/share/gnome-shell/extensions" "${pkgdir}/usr/share/glib-2.0/schemas/"
-	make VERSION=${pkgver}
-	make DESTDIR="${pkgdir}" install
-	# install -m644 "schemas/org.gnome.shell.extensions.dash-to-dock.gschema.xml" \
-		# "${pkgdir}/usr/share/glib-2.0/schemas/org.gnome.shell.extensions.dash-to-dock.gschema.xml"
+  cd "${srcdir}"/${_pkgname}${pkgver}
+  make DESTDIR="${pkgdir}" VERSION="${pkgver}" install
 }
 
 
