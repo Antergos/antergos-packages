@@ -2,7 +2,7 @@
 
 pkgname=antergos-common-meta
 pkgver=1.4
-pkgrel=1
+pkgrel=2
 pkgdesc='Common meta package for all Antergos Desktops'
 url='http://www.antergos.com'
 arch=('any')
@@ -26,3 +26,4 @@ depends=('accountsservice' 'antergos-wallpapers' 'antergos-desktop-settings'
     'xorg-xrefresh' 'xorg-xset' 'xorg-xsetroot' 'xorg-xvinfo' 'xorg-xwd'
     'xorg-xwininfo' 'xorg-xwud' 'xorg-font-util' 'xorg-fonts-encodings'
     'xorg-server' 'xorg-xinit' 'xorg-xkill')
+
