@@ -1,8 +1,8 @@
 # Maintainer: Antergos Devs <devs@antergos.com>
 
 pkgname=antergos-common-meta
-pkgver=1.4
-pkgrel=2
+pkgver=1.5
+pkgrel=1
 pkgdesc='Common meta package for all Antergos Desktops'
 url='http://www.antergos.com'
 arch=('any')
@@ -13,7 +13,7 @@ depends=('accountsservice' 'antergos-wallpapers' 'antergos-desktop-settings'
     'libdvdcss' 'lightdm' 'lightdm-webkit2-greeter' 'light-locker'
     'light-locker-settings' 'mesa' 'mesa-vdpau' 'numix-frost-themes'
     'numix-icon-theme' 'numix-icon-theme-square' 'pavucontrol' 'pulseaudio'
-    'pulseaudio-alsa' 'pulseaudio-bluetooth' 'qt5-styleplugins'
+    'pulseaudio-alsa' 'pulseaudio-bluetooth' 'qt5ct'
     'ttf-bitstream-vera' 'ttf-dejavu' 'ttf-liberation' 'upower'
     'xf86-input-libinput' 'xf86-video-fbdev' 'xf86-video-vesa'
     'xorg-bdftopcf' 'xorg-iceauth' 'xorg-luit' 'xorg-mkfontscale'
@@ -26,4 +26,5 @@ depends=('accountsservice' 'antergos-wallpapers' 'antergos-desktop-settings'
     'xorg-xrefresh' 'xorg-xset' 'xorg-xsetroot' 'xorg-xvinfo' 'xorg-xwd'
     'xorg-xwininfo' 'xorg-xwud' 'xorg-font-util' 'xorg-fonts-encodings'
     'xorg-server' 'xorg-xinit' 'xorg-xkill')
+
 
