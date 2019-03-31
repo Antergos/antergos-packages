@@ -18,7 +18,7 @@ conflicts=('pamac-dev')
 source=(
 	"pamac-$_pkgver.tar.gz::$url/-/archive/v$_pkgver/$pkgname-v$_pkgver.tar.gz"
 )
-md5sums=('889b99e5e9c904f68e23afac08af8369')
+md5sums=('1381432f6a69a693e3e960d82233e08d')
 
 
 # BEGIN ANTBS METADATA
