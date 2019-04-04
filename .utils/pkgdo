@@ -155,7 +155,7 @@ def _run_command(all: bool, group: str, pkgs: list, cmd: list) -> None:
         paths = [path for pkg, path in PATHS.items()]
 
     elif group:
-        paths = [path for path in GROUPS[group]]
+        paths = [p.path for p in GROUPS[group]]
 
     elif pkgs:
         paths = [PATHS[p] for p in pkgs]
@@ -164,16 +164,22 @@ def _run_command(all: bool, group: str, pkgs: list, cmd: list) -> None:
         path: set(os.listdir(path)) for path in paths
         if 'updpkgsums' not in cmd or not _has_autosums(os.path.join(path, 'PKGBUILD'))
     }
+    
+    print(paths)
 
     for path, contents in paths.items():
-        subprocess.run(cmd, cwd=path, universal_newlines=True)
+        if 'mv' == cmd[0]:
+            if os.path.exists(f'{path}/PKGBUILD'):
+                os.rename(f'{path}/PKGBUILD', f'{path}/PKGBUILD.inactive')
+        else:
+            subprocess.run(cmd, cwd=path, universal_newlines=True)
 
         new_contents = set(os.listdir(path))
 
         if contents == new_contents:
             continue
 
-        to_remove = [f for f in new_contents - contents if f not in ['PKGBUILD', '.SRCINFO']]
+        to_remove = [f for f in new_contents - contents if f not in ['PKGBUILD', 'PKGBUILD.inactive', '.SRCINFO']]
 
         for item in to_remove:
             os.remove(os.path.join(path, item))
@@ -227,6 +233,14 @@ def updpkgsums(all, group, packages):
 def update(all, group, packages):
     _run_command(all, group, packages, ['updpkgsums'])
     _run_command(all, group, packages, ['mksrcinfo'])
+
+
+@do.command(help='Remove package(s) from the repo.')
+@click.option('-g', '--group', type=GROUPS_CHOICE, help='Remove all packages in group.')
+@click.argument('packages', nargs=-1)
+def remove(group, packages):
+    _run_command(False, group, packages, ['mv'])
+
 
 
 if __name__ == '__main__':
