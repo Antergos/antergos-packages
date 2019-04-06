@@ -1,0 +1,44 @@
+# Maintainer: Antergos Developers <dev@antergos.com>
+
+pkgname=wavebox
+pkgver=4.9.3
+pkgrel=1
+pkgdesc='New home for cloud apps bringing Gmail, Outlook, O365, Trello, Slack, & over 1000 other apps into a configurable desktop client.'
+url="https://wavebox.io/"
+_repourl="https://github.com/wavebox/waveboxapp"
+arch=('x86_64')
+license=('MPL2')
+provides=('wavebox-bin')
+depends=('c-ares' 'ffmpeg' 'gtk3' 'http-parser' 'libevent' 'libnghttp2'
+		'libxslt' 'libxss' 'minizip' 'nss' 're2' 'snappy')
+optdepends=('ttf-ms-fonts')
+groups=('')
+source=(
+	"${_repourl}/releases/download/v${pkgver}/Wavebox_${pkgver//./_}_linux_${CARCH}.tar.gz"
+	wavebox.desktop
+)
+sha256sums=()
+
+# BEGIN ANTBS METADATA
+_autosums='False'
+_is_monitored='True'
+_monitored_service='github'
+_monitored_project='wavebox'
+_monitored_repo='waveboxapp'
+# END ANTBS METADATA
+
+
+package() {
+	cd ${srcdir}/Wavebox-linux-x64
+
+	mkdir -p "${pkgdir}/usr/bin"
+	mkdir -p "${pkgdir}/usr/share/wavebox"
+	mkdir -p "${pkgdir}/usr/share/applications"
+
+	cp --preserve=mode -R ./* "${pkgdir}/usr/share/wavebox"
+	install -m644 "${srcdir}/wavebox.desktop" "${pkgdir}/usr/share/applications/wavebox.desktop"
+	ln -s "/usr/share/wavebox/Wavebox" "${pkgdir}/usr/bin/wavebox"
+
+	chmod 644 "${pkgdir}/usr/share/wavebox/wavebox_icon.png"
+}
+
