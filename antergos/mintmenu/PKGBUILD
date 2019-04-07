@@ -1,6 +1,6 @@
 # Maintainer: Antergos Developers <dev@antergos.com>
 # Original Maintainer: Solomon Choina <shlomochoina at gmail com>
-# Contributer: killajoe <archlinux@kamprad.net>
+# Contributor: killajoe <archlinux@kamprad.net>
 
 pkgname=mintmenu
 pkgver=5.9.0
