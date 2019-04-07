@@ -6,7 +6,7 @@
 
 _pkgname=mintmenu
 pkgname=mate-mint-menu
-pkgver=5.7.0alpha2
+pkgver=5.9.0
 pkgrel=1
 pkgdesc="Linux Mint Menu for MATE"
 arch=('any')
@@ -17,16 +17,11 @@ depends=('python2-gobject' 'python2-xdg' 'xdg-utils' 'mozo' 'mate-panel>=1.16.0'
 		'python2-keybinder2' 'python2-xlib' 'gksu' 'python2-six')
 optdepends=('mate-screensaver: lock screen button'
 			'pamac: package manager button')
-# "http://packages.linuxmint.com/pool/main/m/mintmenu/mintmenu_${pkgver}.tar.xz"
-source=("${pkgname}-${pkgver}.zip::https://github.com/linuxmint/mintmenu/archive/master.zip"
+source=("${pkgname}-${pkgver}.zip::https://github.com/linuxmint/mintmenu/archive/${pkgver}.zip"
 		'http://github.com/linuxmint/mint-translations/archive/master.tar.gz'
-		'antergos_compat.patch'
-		"gtk3-port.patch::https://github.com/linuxmint/mintmenu/pull/162.patch"
 		'removescript')
-md5sums=('d9d329e1ec19dcd7809bcf8487f9f22c'
-         'c20125e503fa22fdf86412cc03c303a4'
-         '504d2ca0b4771146ee03c5137fc7b80b'
-         '2aa3bf3f34743b6bd8737b3722c4a567'
+md5sums=('55ffe154c4e732187230b4c7e22de467'
+         '707898b4f0573920c15dc8c59d09afe6'
          'bcdbc95fc35331f1f5e13a86b9d770f0')
 
 
@@ -46,7 +41,6 @@ package() {
 
 	#cd "$srcdir/${_pkgname}"
 	cd "$srcdir/${_pkgname}-master"
-	patch -Np1 -i "${srcdir}/gtk3-port.patch"
 
 	# Disable the software-manager entry under Places
 	sed -i "351s/true/false/" usr/share/glib-2.0/schemas/com.linuxmint.mintmenu.gschema.xml
@@ -55,7 +49,7 @@ package() {
 
 
 	#cd "$srcdir/${_pkgname}"
-	cd "$srcdir/${_pkgname}-master"
+	cd "$srcdir/${_pkgname}-${pkgver}"
 	cp -R usr "$pkgdir/"
 	install -m755 "$srcdir/removescript" "$pkgdir/usr/lib/linuxmint/mintMenu/"
 	cd "$pkgdir"/usr/lib/linuxmint/mintMenu
