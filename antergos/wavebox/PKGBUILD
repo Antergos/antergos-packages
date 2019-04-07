@@ -25,6 +25,7 @@ _is_monitored='True'
 _monitored_service='github'
 _monitored_project='wavebox'
 _monitored_repo='waveboxapp'
+_monitored_type='releases'
 # END ANTBS METADATA
 
 
