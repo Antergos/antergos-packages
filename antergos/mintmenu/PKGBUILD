@@ -15,7 +15,7 @@ optdepends=('mint-translations: translations files'
             'pamac: package manager button'
 )
 source=("${url}/archive/${pkgver}.tar.gz" 
-        'arch-compat.patch')
+        'antergos-compat.patch')
 sha256sums=('c2d2a2e7a84a07c0277440b6ee82e96c4575b6e9c5b2bbdc6dcd2779db13a51a'
             '5bc384c52d437cf00b3824e7cf783de080841f1a34c6f85db0328b13e72c983f')
 
