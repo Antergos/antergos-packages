@@ -2,13 +2,14 @@
 
 pkgname=wavebox
 pkgver=4.9.3
-pkgrel=1
+pkgrel=2
 pkgdesc='New home for cloud apps bringing Gmail, Outlook, O365, Trello, Slack, & over 1000 other apps into a configurable desktop client.'
 url="https://wavebox.io/"
 _repourl="https://github.com/wavebox/waveboxapp"
 arch=('x86_64')
 license=('MPL2')
 provides=('wavebox-bin')
+replaces=('wavebox-bin')
 depends=('c-ares' 'ffmpeg' 'gtk3' 'http-parser' 'libevent' 'libnghttp2'
 		'libxslt' 'libxss' 'minizip' 'nss' 're2' 'snappy')
 optdepends=('ttf-ms-fonts')
