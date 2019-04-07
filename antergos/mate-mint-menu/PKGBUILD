@@ -40,7 +40,7 @@ package() {
 	done
 
 	#cd "$srcdir/${_pkgname}"
-	cd "$srcdir/${_pkgname}-master"
+	cd "$srcdir/${_pkgname}-${pkgver}"
 
 	# Disable the software-manager entry under Places
 	sed -i "351s/true/false/" usr/share/glib-2.0/schemas/com.linuxmint.mintmenu.gschema.xml
