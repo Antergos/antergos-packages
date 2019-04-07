@@ -13,8 +13,8 @@ arch=('any')
 url="http://github.com/linuxmint/mintmenu"
 license=('GPL2')
 options=('!strip')
-depends=('python2-gobject' 'python2-xdg' 'xdg-utils' 'mozo' 'mate-panel>=1.16.0'
-		'python2-keybinder2' 'python2-xlib' 'gksu' 'python2-six')
+depends=('python2-gobject' 'python2-xdg' 'xdg-utils' 'mozo' 'mate-panel'
+		'python2-xlib' 'python2-six' 'mate-menus')
 optdepends=('mate-screensaver: lock screen button'
 			'pamac: package manager button')
 source=("${pkgname}-${pkgver}.zip::https://github.com/linuxmint/mintmenu/archive/${pkgver}.zip"
