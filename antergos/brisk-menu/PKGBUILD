@@ -34,7 +34,6 @@ build() {
 	ninja -C build
 }
 
-
 package() {
 	cd "${srcdir}/${pkgname}-${_commit}/build"
 
