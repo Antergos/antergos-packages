@@ -18,8 +18,10 @@ _post_install_upgrade() {
 		
 		if ! [[ -e "${_home_dir}/.config/autostart/dropbox.desktop" ]] && [[ -d "${_home_dir}/.config/autostart" ]]; then
 			cp --no-preserve=ownership /usr/share/applications/dropbox.desktop "${_home_dir}/.config/autostart/"
-			chattr +i "${_home_dir}/.config/autostart/dropbox.desktop"
 		fi
+
+		chattr +i "${_home_dir}/.config/autostart/dropbox.desktop"
+
 	done
 }
 
