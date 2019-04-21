@@ -23,7 +23,7 @@ source=(
 	"terms.txt"
 	"dropbox.service"
 	"dropbox@.service"
-	"dropbox-filesystem-fix::https://github.com/dark/dropbox-filesystem-fix.git"
+	"dropbox-filesystem-fix.tar.gz::https://github.com/dark/dropbox-filesystem-fix/archive/72f4d04852d5002d9ba29b3f77fbacb2c12d1432.tar.gz"
 	"arch_paths.patch"
 )
 md5sums=('ece1b8555234454689c31ff8b1843b69'
@@ -32,13 +32,13 @@ md5sums=('ece1b8555234454689c31ff8b1843b69'
          '9e140f8de1bab8f26165068bb2c5e8b4'
          '3340737d21431f94d387117d1e679882'
          '10dfc9f40a08baec98af8682ebf2b6b5'
-         'd55949876d122495696d6117fae7bde4'
+         'f41071f69e6f10c62fa40470ece02363'
          '7275dd87e1643f1bf28e3c8d24711a80')
 
 #https://www.dropbox.com/release_notes/rss.xml
 
 build() {
-  cd "${srcdir}/dropbox-filesystem-fix"
+  cd "${srcdir}"/dropbox-filesystem-fix-*
   patch -p1 < ../arch_paths.patch
   make
 }
@@ -59,6 +59,6 @@ package() {
 	rm -f "$pkgdir"/opt/dropbox/library.zip
 	ln -s dropbox "$pkgdir"/opt/dropbox/library.zip
 	
-	install -Dm755 "$srcdir/dropbox-filesystem-fix"/libdropbox_fs_fix.so "$pkgdir"/usr/local/lib/libdropbox_fs_fix.so
-	install -Dm755 "$srcdir/dropbox-filesystem-fix"/dropbox_start.py "$pkgdir"/usr/local/bin/dropbox
+	install -Dm755 "$srcdir"/dropbox-filesystem-fix-*/libdropbox_fs_fix.so "$pkgdir"/usr/local/lib/libdropbox_fs_fix.so
+	install -Dm755 "$srcdir"/dropbox-filesystem-fix-*/dropbox_start.py "$pkgdir"/usr/local/bin/dropbox
 }
