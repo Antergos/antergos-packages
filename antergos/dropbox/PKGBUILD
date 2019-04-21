@@ -4,31 +4,44 @@
 # Contributor: David Manouchehri <d@32t.ca>
 
 pkgname=dropbox
-pkgver=62.4.103
+pkgver=70.4.93
 pkgrel=1
 pkgdesc="A free service that lets you bring your photos, docs, and videos anywhere and share them easily."
 arch=("x86_64")
 url="http://www.dropbox.com"
 license=(custom)
 depends=("dbus-glib" "libsm" "libxslt")
-conflicts=("dropbox-experimental")
+conflicts=("dropbox-experimental" 'dropbox-fix2')
+provides=('dropbox-fix2')
 groups=('cloud-storage')
 options=('!strip')
 install="dropbox.install"
-source=("https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86_64-${pkgver}.tar.gz"
-        "dropbox.png"
-        "dropbox.desktop"
-        "terms.txt"
-        "dropbox.service"
-        "dropbox@.service")
-md5sums=('03141e628e888d31e52129324e41a92d'
+source=(
+	"https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86_64-${pkgver}.tar.gz"
+	"dropbox.png"
+	"dropbox.desktop"
+	"terms.txt"
+	"dropbox.service"
+	"dropbox@.service"
+	"dropbox-filesystem-fix::https://github.com/dark/dropbox-filesystem-fix.git"
+	"arch_paths.patch"
+)
+md5sums=('ece1b8555234454689c31ff8b1843b69'
          '2be5a57e477adf82a7d9b7fe77f22086'
          'f3350cc0fb7b5f4fb6f2c0adda7e1260'
          '9e140f8de1bab8f26165068bb2c5e8b4'
          '3340737d21431f94d387117d1e679882'
-         '10dfc9f40a08baec98af8682ebf2b6b5')
+         '10dfc9f40a08baec98af8682ebf2b6b5'
+         'd55949876d122495696d6117fae7bde4'
+         '7275dd87e1643f1bf28e3c8d24711a80')
 
 #https://www.dropbox.com/release_notes/rss.xml
+
+build() {
+  cd "${srcdir}/dropbox-filesystem-fix"
+  patch -p1 < ../arch_paths.patch
+  make
+}
 
 package() {
 	install -d "$pkgdir"/opt
@@ -45,4 +58,7 @@ package() {
 
 	rm -f "$pkgdir"/opt/dropbox/library.zip
 	ln -s dropbox "$pkgdir"/opt/dropbox/library.zip
+	
+	install -Dm755 "$srcdir/dropbox-filesystem-fix"/libdropbox_fs_fix.so "$pkgdir"/usr/local/lib/libdropbox_fs_fix.so
+	install -Dm755 "$srcdir/dropbox-filesystem-fix"/dropbox_start.py "$pkgdir"/usr/local/bin/dropbox
 }
