@@ -2,25 +2,26 @@
 # Contributor: isiachi <isiachi@rhyeworld.it>
 
 pkgname=zfs
-_pkgver=0.7.13
-pkgver=0.7.13
-pkgrel=2
+_pkgver=0.8.0rc5
+pkgver=0.8.0rc5
+pkgrel=1
 pkgdesc="Kernel modules for the Zettabyte File System."
 license=('CDDL')
 groups=("system" "zfs")
 makedepends=("git")
-depends=("spl>=${pkgver%+*}" "zfs-utils>=${pkgver%+*}" "dkms" "linux-headers" "linux<5.1")
-provides=("zfs-dkms=${pkgver}")
-conflicts=("zfs-git" "zfs-dkms")
+depends=("zfs-utils>=${pkgver%+*}" "dkms" "linux-headers" "linux<5.2")
+provides=("zfs-dkms")
+replaces=("spl" "spl-dkms")
+conflicts=("zfs-git" "zfs-dkms" "spl-git" "spl-dkms")
 install=zfs.install
 arch=("x86_64")
 url="http://zfsonlinux.org/"
 _commit=''
-_tag="zfs-${_pkgver}"
+_tag="zfs-${_pkgver/rc5/-rc5}"
 source=(
 	"https://github.com/zfsonlinux/${pkgname}/archive/${_tag}.zip"
 )
-md5sums=('750624cc3f76cb1c6d81b25c21a75d32')
+md5sums=('8341bf06845e0a71b2555affc125b756')
 
 
 # BEGIN ANTBS METADATA
@@ -40,19 +41,6 @@ prepare() {
 build() {
     cd "${srcdir}/${pkgname}-${_tag}"
     ./autogen.sh
-    ./configure \
-        --prefix=/usr \
-        --sysconfdir=/etc \
-        --bindir=/usr/bin \
-        --sbindir=/usr/bin \
-        --libdir=/usr/lib \
-        --datadir=/usr/share \
-        --includedir=/usr/include \
-        --with-udevdir=/usr/lib/udev \
-        --libexecdir=/usr/lib/zfs \
-        --with-config=user \
-        --with-spl="/usr/src/spl-${_pkgver}"
-    make
 }
 
 package() {
@@ -62,7 +50,6 @@ package() {
     cp -a "${srcdir}/${pkgname}-${_tag}"/. ${dkmsdir}
 
     cd "${dkmsdir}"
-    ./autogen.sh
     scripts/dkms.mkconf -v ${_pkgver} -f dkms.conf -n ${pkgname}
     chmod g-w,o-w -R .
 }
