@@ -7,7 +7,7 @@ pkgdesc='Meta package for Antergos Xfce'
 url='http://www.antergos.com'
 arch=('any')
 license=('GPL3')
-depends=('catfish' 'evince' 'file-roller' 'gamin' 'gnome-calculator' 'gnome-disk-utility'
+depends=('catfish' 'evince' 'file-roller' 'gvfs' 'gnome-calculator' 'gnome-disk-utility'
     'gnome-keyring' 'gnome-screensaver' 'gtk-engine-murrine' 'gvfs-google' 'gvfs-mtp'
     'mousepad' 'network-manager-applet' 'networkmanager-openvpn' 'networkmanager-pptp'
     'pamac' 'parole' 'python-pysmbc' 'polkit-gnome' 'pragha' 'qt5ct' 'ristretto'
